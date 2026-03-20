@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מלוה ולוה - פרק ד</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">מלוה ולוה - פרק ד</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ד)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    נשך וריבית
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    האיסורים הכרוכים בהלוואה בריבית והעוברים בהם
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    השבת ריבית של תורה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מלווה בריבית שמת והניח את הריבית ליורשיו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    תקנת חכמים שלא לקבל ריבית מוחזרת
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שטר שכתוב בו ריבית
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-7" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-7-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    חומרת איסור ריבית
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-8" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-8-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הלוואת בניו ובני ביתו בריבית
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-9" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ט
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-9-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    היתר ריבית בתלמידי חכמים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-10" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה י
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-10-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    המלוה את חבירו ומצא בידו יותר מעות ממה שסוכם
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-11" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יא-יב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-11-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    החזר הלוואה כשהמטבע השתנה או נפסל
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-12" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-12-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מחילה בריבית
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-13" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-13-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    קרוב לשכר ורחוק מהפסד בנכסי יתומים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">מלוה ולוה</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק ד</h1>
+            </div>
+
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">פרקים ד-י מרכזים את כל דיני הריבית (מלבד ההלכות שתיקנו חכמים במתעסק ברכוש חבירו, הנידונות באריכות בהלכות שלוחין ושותפין פרק ח). פרקנו הוא הראשון בעניין זה וחלקו הראשון (א-ז) עוסק ביסודות דיני הריבית, מקורה, חומרתה וחובת השבתה. שאר הפרק (ח-יד) עוסק בעיקר במקרים בהם הריבית באה ללא מרכיב הנשך, כלומר כשיש מחילה מצד הלווה או כשהריבית היא לטובת ישות שאינה המלווה עצמו.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה א מביאה את מסקנת סוגית הגמרא, שהלאוים השונים "נשך" ו"ריבית" האמורים במקרא, אף שהם לאווים שונים, הרי הם מכוונים לאותו מעשה. הלכה ב מונה את העוברים על האיסור, ובתוכם המלווה, הלווה, העדים ,הערב והסופר, ואת האיסורים המסויימים עליהם כל אחד מהם עובר. הלכה ג מתייחסת בעקיפין לחובת ההשבה של הריבית ולהשלכה שלה על עונש מלקות (דיני השבת הריבית יובאו ביתר הרחבה בפרק ו). הלכה ד עוסקת בהשבת ריבית ע"י בני המלווה. מכיוון שממונית הריבית, בניגוד לגזל, עוברת בירושה לבנים, יש חובת השבה רק כדי לשומר על כבוד האב, במקרה בו הדבר רלוונטי. עוד בעניין השבה עוסקת הלכה ה בתקנתו של רבי שלא לקבל ריבית מושבת מהמלווה בכדי שלא לנעול דלת בפני שבים. הראשונים נחלקו מה גדר התקנה, האם היא מוגבלת לזמנו של רבי, ואם לא, האם היא אמורה דווקא במלווה ריבית שמחייתו בכך או לחילופין שבא מעצמו לעשות תשובה או שחפץ להחזיר חפץ מסויים שניתן כריבית.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ו עוסקת אף היא בזמן שלאחר ההלוואה בריבית, אך לפני הפירעון. מדובר בשטר של ריבית והשאלה היא האם גובים בו את חלק הקרן. התנאים נחלקו בכך והלכה כדעה שניתן לגבות את הקרן. על רקע זה נחלקו הראשונים האם ניתן לגבות את הקרן רק כשהקרן והריבית כתובים כאחד (כי אחרת העדים יודעים שעל ריבית חתמו ופסולים), או שאדרבא, מדובר דווקא בכגון שהקרן נכתבת באופן מובדל מהריבית (כדי שלא יהיה חשש שבית הדין יגבה גם את הריבית בטעות). עוד נידון היחס בין מאמר חכמים שיש לקרוע שטר שכתוב בו ריבית לבין ההלכה הפסוקה שניתן לגבות בו את הקרן. הלכה ז מסיימת את החלק הראשון של הפרק בביאור חומרת איסור הריבית וקרבתו לכפירה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ח עוסקת באב המלווה לבניו בריבית כדי לחנכם ו"להטעימם טעם ריבית". מעיקר הדין הדבר מותר אם משום שמדובר בבנים הסמוכים על שולחן אביהם (אותה ישות ממונית) או משום שבגלל הקרבה המשפחתית יש להניח שהצדדים מוחלים זה לזה. אמנם להלכה הדבר אסור כיוון שהוא מרגיל לאיסור ריבית. עוד בעניין מחילה עוסקת הלכה ט בהיתר של תלמידי חכמים ללוות בריבית זה מזה, כיוון שחזקה שהם נותנים זה לזה במתנה ואינם מקפידים זה על זה כיוון שהם יודעים את חומרת איסור הריבית. להלכה הסתייגו הראשנים מדין זה. לדעה אחת הוא אינו נוהג להלכה כלל, ואף לדעות נוספות ההיתר מוגבל לדבר מועט, לצורך מאכל ומשקה, או דווקא כשלא הוזכרה הריבית לפני ההלוואה (ריבית מאוחרת).</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">אגב הדיון במחילה, דנה הלכה י בלווה שמצא שהמלווה מסר לידיו מעות רבות מכפי שדובר. הגמרא פוסקת שאם מדובר באופן כזה שסביר שמוסר המעות הוסיף בכוונה, יכול הלווה להבין שהיא ניתנה לו במתנה. מקרה זה כשלעצמו אינו שייך ישירות להלכות ריבית, אך המקרה ההפוך, לווה שהחזיר למלווה עם תוספת, מעלה שאלה האם מדובר בריבית מאוחרת. אכן נחלקו הראשונים האם מותר למלווה לקבל מתנה שכזו מהלווה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות יא-יב עוסקות במקרה בו בגלל שינויים מוניטריים, השתנה המטבע (בפיחות או ייסוף משקל או שנפסל כליל) בין שעת ההלוואה לשעת הפרעון. בעניין זה הבהירו הראשונים שיש לחלק בין הלוואה רגילה בה לכל הדעות מותר ללווה לשלם במטבע הישן, לבין מכר או הלוואה בה הותנה שיש להחזיר במטבע שאינו פסול. במקרה האחרון נחלקו האמוראים האם מותר לשלם במטבע פסול אם הוא עדיין יוצא במקום (נגיש) כלשהו. עוד נתבאר בגמרא, שאם חל ייסוף של יותר מחומש במשקל המטבע, יש להתחשב בכך ולהפחית את סכום ההחזר. יש מהראשונים שהבינו שהפחתה זו היא מחשש ריבית, שיקבל המלווה יותר ממה שנתן, אך במקרה של פיחות, אפילו משמעותי, מחזיר הלווה את אותו הסכום. לעומתם יש שהבינו שהמצב סימטרי, וכשם שיש לדאוג שהלווה לא יפסיד מייסוף המטבע יש לדאוג לכך שהמלווה לא יפסיד מפיחותו.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">כהמשך לעניין המחילה בריבית עוסקת הלכה יג בנושא הנתון במחלוקת בין הראשונים, האם יכול הלווה למחול למלווה על השבת ריבית קצוצה. לדעת הרמב"ם מחילת הלווה מועילה, בדומה למחילת נגזלן לגזלן. לעומתו, לדעת ראשונים אחרים, אין מחילה מועילה, כיוון שחלק מחובת ההשבה מטרתה כפרת המלווה, והיא הכרחית גם אם הלווה לא חפץ לקבל את הריבית המושבת. הפרק מסיים בהלכה יד העוסקת בדברי הגמרא שמותר לשמר נכסי יתומים קטנים על ידי נתינתם "קרוב לשכר ורחוק מהפסד", דבר האסור באופן כללי. הראשונים נחלקו האם היתר דומה נוהג בכל ריבית מדרבנן, או דווקא בסוג כזה של ריבית. עוד דנו הראשונים האם דווקא בנכסי יתומים הדבר מותר או בכל דבר מצווה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">כדרך שאסור להלוות כך אסור ללוות ברבית שנאמר לא תשיך לאחיך מפי השמועה למדו שזו אזהרה ללוה כלומר לא תנשך לאחיך, וכן אסור להתעסק בין לוה ומלוה ברבית, וכל מי שהיה ערב או סופר או עד ביניהן ה"ז עובר בלא תעשה, שנאמר לא תשימון עליו נשך זו אזהרה אף לעדים ולערב ולסופר, הא למדת שהמלוה בריבית עובר על ששה לאוין: לא תהיה לו כנושה, את כספך לא תתן לו בנשך, ובמרבית לא תתן אכלך, אל תקח מאתו נשך ותרבית, לא תשימון עליו נשך, ולפני עור לא תתן מכשול, והלוה עובר בשנים, לא תשיך לאחיך, ולפני עור לא תתן מכשול, ערב ועדים וכיוצא בהן אין עוברין אלא משום לא תשימון עליו נשך, וכל מי שהיה סרסור בין שניהם או שסייע אחד מהן או הורהו עובר משום לפני עור לא תתן מכשול.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הניח להם אביהם מעות של רבית אף על פי שהן יודעין שהן של רבית אינן חייבים להחזיר, הניח להם פרה וטלית של ריבית וכל דבר המסויים חייבים להחזיר מפני כבוד אביהן, בד"א כשעשה תשובה ולא הספיק להחזיר עד שמת אבל אם לא עשה תשובה אין חוששין לכבודו ואפילו דבר המסויים אין מחזירין.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הגזלנין ומלוה בריבית שהחזירו אין מקבלין מהן כדי לפתוח להן דרך לתשובה, וכל המקבל מהן אין רוח חכמים נוחה הימנו, אם היתה גזילה קיימת והרבית דבר המסויים והרי הוא בעצמו מקבלין מהן.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">אסור לאדם להלוות בניו ובני ביתו ברבית אף על פי שאינו מקפיד ומתנה הוא שנותן להן ה"ז אסור שמא ירגילם בדבר זה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">תלמידי חכמים שהלוו זה את זה ונתן לו יתר על מה שהלוה ממנו הרי זה מותר שהדבר ידוע שלא נתן לו אלא מתנה שהרי הן יודעין חומר איסור הרבית.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">המלוה את חבירו ומצא הלוה יותר [או שהחזיר לו חובו ומצא המלוה יותר] אם בכדי שהדעת טועה חייב להחזיר ואם לאו מתנה הוא שנתן לו או גזילה היתה לו בידו והבליע לו בחשבון או אחר צוה להבליע לו, בכמה הדעת טועה באחד ובשנים או בחמשה או בעשרה שמא מנה חמשה חמשה או עשרה עשרה, וכן אם מצא יתר מנין החמישיות או מנין העשיריות אחד אחד חייב להחזיר לו שמא האחדים שהיה מונה בהן החמשיות או העשיריות נתערבו עמהם.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">המלוה את חבירו על המטבע וכן הכותב לאשתו בכתובתה מטבע ידוע ופירש משקלו והוסיפו על משקלו אם הוזלו הפירות מחמת התוספת מנכה לו שיעור התוספת ואפילו הוסיפו עליו כל שהוא, ואם לא הוזלו מחמת התוספת אינו מנכה לו אלא נותן לו ממטבע היוצא באותה שעה, בד"א בשהוסיפו עליו עד חמישיתו כגון שהיה משקלו ד' ועשאו ה' אבל אם הוסיפו לו יותר על חמישיתו מנכה לו כל התוספת אף על פי שלא הוזלו הפירות וה"ה למלוה על המטבע ופחתו ממנו.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">המלוה את חבירו על המטבע ונפסל אם יכול להוציאו במדינה אחרת ויש לו דרך לאותה מדינה נותן לו ממטבע שהלוהו ואומר לו לך והוציאו במקום פלוני, ואם אין לו דרך לשם נותן לו ממטבע היוצא באותה שעה, וכן בכתובה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הורו מקצת הגאונים שהלוה שמחל למלוה ברבית שלקח ממנו או שעתיד ליקח אף על פי שקנו מידו שמחל או נתן מתנה אינו מועיל כלום שכל רבית שבעולם מחילה היא אבל התורה לא מחלה ואסרה מחילה זו ולפיכך אין המחילה מועלת ברבית אפילו ברבית של דבריהם, יראה לי שאין הוראה זו נכונה אלא מאחר שאומרים למלוה להחזיר לו וידע המלוה שדבר איסור עשה ויש לו ליטול ממנו אם רצה למחול מוחל כדרך שמוחל הגזל, ובפירוש אמרו חכמים שהגזלנין ומלוי ברבית שהחזירו אין מקבלין מהן מכלל שהמחילה מועלת. הורו מקצת הגאונים וכו' ולפיכך אין המחילה מועלת ברבית אפילו ברבית של דבריהם יראה לי שאין הוראה זו נכונה. א"א חיי ראשי הוראת הגאונים נכונה היא, אם כן מלוי ברבית יעשו כן להתיר להם הרבית, והגזלנין ומלוי ברבית שהחזירו בדרך תשובה אין מקבלים מהן כדי להדריכם בתשובה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">נכסי יתומים מותר ליתן אותם לאדם נאמן שיש לו נכסים טובים קרוב לשכר ורחוק להפסד, כיצד אומר לו תהיה נושא ונותן בהן אם יש שם ריוח תן להם חלקן מן הריוח ואם יש שם הפסד תפסיד אתה לבדך שזה אבק רבית הוא וכל אבק רבית אינה אסורה אלא מדבריהם ובנכסי יתומים לא גזרו.</p>
+                
+            </div>
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    נשך ומרבית אחד הוא שנאמר את כספך לא תתן לו בנשך ובמרבית לא תתן אכלך ולהלן הוא אומר נשך כסף נשך אוכל נשך כל דבר אשר ישך, ולמה נקרא שמו נשך מפני שהוא נושך שמצער את חבירו ואוכל את בשרו ולמה חלקן הכתוב לעבור עליו בשני לאוין.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נשך וריבית</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">איסור ריבית מכונה במקרא בד"כ "נשך". בפסוקים בויקרא פרק כה אנו מוצאים, חוץ מהביטוי "נשך" גם את הביטוי "תרבית או "מרבית". המשנה (ס:) מתייחסת לשני הביטויים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איזהו נשך ואיזהו תרבית?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איזהו נשך: המלוה סלע בחמשה דינרין, סאתים חטין בשלש - אסור, מפני שהוא נושך.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואיזהו תרבית - המרבה בפירות...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה מפרשת "נשך" כמקרה הקלאסי של ריבית, בו הלווה מתחייב להחזיר יותר מאשר מה שקיבל, ומסבירה שטעם התורה שאסרה זאת הוא "מפני שהוא נושך". כלומר, בגלל הנזק שהמלווה מסובב ללווה בכך שהוא גורם לו להפסיד כסף. לעומת זה, כהדגמה למקרה של "תרבית" מביאה המשנה מקרה של ריבית שאסורה מדברי סופרים (פסיקה על דבר שעוד לא יצא השער שלו כאשר אין ממנו למוכר, עי' פרק ט).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בניגוד לנשך, הקרוי על שם הנזק שנגרם ללווה, ה"תרבית" מתייחסת לרווח של המלווה. מתוך כך שהמשנה אינה מביאה שני איסורים מדאורייתא, שהאחד הוא נשך והשני רבית, קובע רבא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: אי אתה מוצא לא נשך בלא תרבית ולא תרבית בלא נשך, ולא חלקן הכתוב אלא לעבור עליו בשני לאוין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בכל ריבית מהתורה קיימים בסופו של דבר שני האלמנטים- נזק ללווה ורווח למלווה. והתורה משתמשת בשתי מילים שונות רק כדי להדגיש שהעובר על האיסור עובר במעשה אחד על שני לאוין שונים<sup id="ref21"><a href="#fn21">[21]</a></sup>.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">האיסורים הכרוכים בהלוואה בריבית והעוברים בהם</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (עה:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואלו עוברין בלא תעשה: המלוה והלוה והערב והעדים,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>חכמים</strong> אומרים: אף הסופר,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>עוברים משום לא תתן ומשום אל תקח מאתו, ומשום לא תהיה לו כנושה, ומשום לא תשימון עליו נשך, ומשום ולפני עור לא תתן מכשול ויראת מאלהיך אני ה'.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מפרש אביי-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אביי</strong>: מלוה עובר בכולן, לוה עובר משום לא תשיך לאחיך ולאחיך לא תשיך, ולפני עור לא תתן מכשול, ערב והעדים אין עוברין אלא משום לא תשימון עליו נשך.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הפסוק "לא תשיך לאחיך... לנכרי תשיך ולאחיך לא תשיך" מתפרש כאמור כלפי הלווה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י (ס: ד"ה "תלמוד לומר") מסביר שלו היו הדברים אמורים כלפי המלווה היה כתוב "לא תִשוֹך" כלומר אל תנשוך את חברך. לעומת זה, "תשיך" היא לשון הפעיל, כלומר הפעולה פועלת על העושה אותה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם לעומת זה אומר שההבנה שהאזהרה היא על הלווה נלמדת "מפי השמועה", ומשמע שפירוש הפסוק הפשוט לפיו היא שהאיסור הוא על המלווה (ולכן "לא תשיך לאחיך" ולא מאחיך).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפסוק בשמות "...לא תהיה לו כנושה, לא תשימון עליו נשך" מתפרשת המעבר מלשון יחיד המדבר למלווה ללשון רבים, כמתייחסת לא רק למלווה אלא לכל המעורבים ביצירת ובגביית הריבית, קרי העדים והערב, ולדעת חכמים, אף הסופר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמו כן קיים האיסור הכללי של החטאת האחר- "בפני עיוור לא תתן מכשול", עליו עוברים רק הלווה והמלווה המחטיאים זה את זה, שהחטא של כל אחד מהם תלוי בשיתוף פעולה של השני.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אף על פי שהמלוה והלוה עוברין על כל אלו הלאוין אין לוקין עליו מפני שניתן להשבון, שכל המלוה בריבית אם היתה ריבית קצוצה שהיא אסורה מן התורה הרי זו יוצאה בדיינין ומוציאין אותה מן המלוה ומחזירין ללוה, ואם מת המלוה אין מוציאין מיד הבנים.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השבת ריבית של תורה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' פרק ו הלכות א-ב ובמה שכתבנו שם.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מלווה בריבית שמת והניח את הריבית ליורשיו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בניגוד לגזל, חיוב השבת ריבית אינו בגלל שמעות הריבית אינן שייכות למלווה אלא מתוך החובה של המלווה לתקן את מעשיו (עי' בתחילת פרק ו במה שכתבנו שם). לכן מעיקר הדין אם מת המלווה פטורים בניו מעיקר חובת השבה. בסוגיית הגמרא (סב.) מובאת ברייתא בנושא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הניח להם אביהם מעות של רבית, אף על פי שיודעים שהן של רבית - אינן חייבין להחזירן...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הניח להן אביהם פרה וטלית וכל דבר המסוים - חייבין להחזיר מפני כבוד אביהם.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא מחלקת בין מעות לבין דבר מסויים, שהוא חפץ מזוהה שרואיו יכולים לקשר אותו עם מקורו, ואותו כן חייבים הבנים להשיב ללווה מפני כבוד אביהם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא דנה בדבר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והני, מפני כבוד אביהם מי מיחייבי? קרי כאן ונשיא בעמך לא תאר - בעושה מעשה עמך! –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כדאמר <strong>רבי פנחס</strong> משמיה ד<strong>רבא</strong>: בשעשה תשובה, הכא נמי - בשעשה תשובה. –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי עשה תשובה, מאי בעי גביה? –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שלא הספיק להחזיר עד שמת.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא עומדת על כך שאם מטרת ההשבה היא שמירה על כבוד האב, יש לפרש שהברייתא עוסקת רק באב שעשה תשובה ולא הספיק להחזיר את החפץ עד שמת, כיוון שאם לא כך, אין צורך לשמור על כבודו בעניין זה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קסא ו) פוסק כדברי הברייתא והגמרא.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תקנת חכמים שלא לקבל ריבית מוחזרת</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית הגמרא בבבא קמא (צד:) מובאת ברייתא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: הגזלנין ומלוי ברבית שהחזירו - אין מקבלין מהן, והמקבל מהן - אין רוח חכמים נוחה הימנו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ועוד ברייתא המביאה את הרקע לעניין</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבי יוחנן</strong>: בימי <strong>רבי</strong> נשנית משנה זו; דתניא: מעשה באדם אחד שבקש לעשות תשובה, א"ל אשתו: ריקה, אם אתה עושה תשובה, אפילו אבנט אינו שלך! ונמנע ולא עשה תשובה;</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>באותה שעה אמרו: הגזלנין ומלוי רביות שהחזירו - אין מקבלין מהם, והמקבל מהם - אין רוח חכמים נוחה הימנו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מחלק רב נחמן-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר רב נחמן: בשאין גזילה קיימת... והא אבנט, דגזילה קיימת היא! מאי אבנט? דמי אבנט.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם מדובר על גזילה שעדיין קיימת בעינה, מותר לכתחילה לקבל אותה מהגזלן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לאור העובדה שהמשניות והסוגיות מלאות במקרים בהם גובים דמי גזילה מגזלנים, התלבטו הראשונים לגבי גדרה של תקנת חכמים שלא לקבל מהגזלן וממלווה הריבית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבינו תם (שם תוס' ד"ה "בימי") מבין שהתקנה מוגבלת לזמנו של רבי בלבד. כך ברורות לפיו המשניות העוסקות בגביה של הגזילה מגזלנים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ר"י (שם) מפרש שהתקנה מוגבלת לאנשים שרוב עסקיהם בגזילה או בריבית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרא"ש (סי' ב) כותב שהתקנה מתייחסת דווקא לגזלנים או מלווי ריבית שבאו מעצמם לעשות תשובה, אך אם בי"ד מחייבים אותם מותר לקבל מהם תמיד. כך גם משמע מלשון הרמב"ם. הרמב"ם מוסיף עוד, על פי דברי רב נחמן, שאם ניתן כריבית חפץ מסויים, מותר לקבלו ממלווה הריבית שבא לשוב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הטור (קסא) משלב את שיטת הרמב"ם ושיטת ר"י, וכותב שהתקנה מתייחסת למלווה בריבית שרוב עסקיו בכך ושבא לעשות תשובה מעצמו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קסא ז) כותב כדברי הטור ומוסיף, שמותר לקבל ממלווה בריבית חפץ מסויים.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    שטר שכתוב בו ריבית בין קצוצה בין של דבריהם גובה את הקרן ואינו גובה את הרבית, קדם וגבה הכל מוציאין ממנו הרבית קצוצה, אבל אבק ריבית שהוא מדבריהם אינו גובה מן הלוה למלוה ואין מחזירין אותו מן המלוה ללוה.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שטר שכתוב בו ריבית</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (עב.) מובאת ברייתא ובה מחלוקת תנאים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: שטר שכתוב בו רבית - קונסין אותו, ואינו גובה לא את הקרן ולא את הרבית, דברי <strong>רבי מאיר</strong>.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>חכמים</strong> אומרים: גובה את הקרן ואינו גובה את הרבית.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>במאי קמיפלגי?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רבי מאיר סבר: קנסינן התירא משום איסורא, ורבנן סברי: לא קנסינן התירא משום איסורא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבי מאיר קונס את ההיתר משום האיסור ולכן סובר שכל השטר פסול. מולו חכמים סוברים שאף שלא ניתן לגבות את חלק הריבית, את החלק של הקרן כן ניתן לגבות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים פסקו כחכמים והקשו כיצד חכמים מכשירים את השטר, והרי העדים החתומים על ריבית הם רשעים ופסולים מלהעיד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ן מסביר שהשטר אינו מחלק בין קרן לבין ריבית, אלא כולל הכל ביחד, ולכן העדים החתומים לא ידעו שמדובר בריבית. ועתה יש לבית הדין עדות על כך שחלק ידוע מהסכום הוא ריבית, וחכמים אומרים שניתן לגבות את חלק הקרן בעזרת השטר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זה, מרש"י משמע שבשטר כתובים לחוד הקרן והריבית, והתוספות מסבירים מדוע בכל זאת העדים לא פסולים, אם מכיוון שמדובר בריבית דרבנן, או משום שלא ידעו שהדבר אסור (חשבו שרק הלווה והמלווה עוברים באיסור לא ידעו שאף הם עצמם עוברים<sup id="ref22"><a href="#fn22">[22]</a></sup>). התוספות אינם מקבלים את האפשרות שמעלה הרמב"ן, משום שאם הקרן והריבית אינם מופרדים, יש לחשוש שיגבו גם את הריבית בטעות ויש לפסול את השטר מצד זה אף לשיטת חכמים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לסיכום, נמצא, שהיתרם של חכמים לגבות את הקרן אמור לרמב"ן רק במקרה בו הקרן והריבית אינם נפרדים (שאל"כ העדים פסולים), ולתוספות רק במקרה בו הקרן והריבית נפרדים (שאל"כ חוששים שתיגבה הריבית בטעות).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד מצינו בתוספתא (ב"מ ה כג)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המוצא שטר רבית יקרענה בא לפני בית דין יקרעוהו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבן שמעון בן גמליאל</strong> אומר הכל כמנהג המדינה</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הפוסקים נחלקו מה היחס בין הציווי לקרוע את השטר לבין היכולת לגבות בו (אליבא דחכמים). אפשרות פשוטה היא שהציווי לקרוע את השטר הוא רק לפי שיטת ר' מאיר הפוסלו מכל וכל. אפשרות אחרת, שמביאים הרשב"א והרמב"ן, היא שכל מה שהתירו חכמים זה לגבות מנכסים בני חורין, ולכן ניתן לקרוע את השטר<sup id="ref23"><a href="#fn23">[23]</a></sup>. אפשרות שלישית כותב הרמב"ן מדעת עצמו, והיא ששני הדברים נכונים- מצד אחד יש איסור להשהות את השטר ואם מישהו מצאו יש חובה לקורעו אך מצד בי"ד חייבים לכבדו ולגבות בו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קסא יא) פוסק שאם הריבית נפרדת מהקרן ניתן לגבות בשטר את הקרן<sup id="ref24"><a href="#fn24">[24]</a></sup>, ואינו מתייחס לפסול העדים. בהמשך הוא כותב כתוספות (ושלא כרמב"ן), שאם הריבית והקרן מעורבים, כל השטר פסול.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמ"א (שם) כותב כשיטת הרמב"ן, שלמרות שניתן לגבות בשטר, חובה לקורעו.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-7" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    כל הכותב שטר רבית ה"ז ככותב ומעיד עליו עדים שכפר בה' אלהי ישראל, וכן כל הלוה ומלוה ברבית בינן לבין עצמן הרי הן ככופרים בה' אלהי ישראל וכפרו ביציאת מצרים שנאמר את כספך לא תתן לו בנשך וגו' אני ה' אלהיכם אשר הוצאתי אתכם מארץ מצרים.
+                </div>
+                
+
+                
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חומרת איסור ריבית</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגית הגמרא (עא.) מובאת ברייתא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תניא, אמר <strong>רבי יוסי</strong>: בא וראה סמיות עיניהם של מלוי ברבית: אדם קורא לחבירו רשע - יורד עמו לחייו. והם מביאין עדים ולבלר וקולמוס ודיו, וכותבין וחותמין: פלוני זה כפר באלהי ישראל.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלווי ריבית, גם אם הם אנשים שהיו מקפידים אם היו מכנים אותם רשעים, אינם נמנעים מלכתוב שטר ריבית המהווה הכרזה רשמית על כך שהם כופרים באלוהי ישראל אשר אסר לנו את הריבית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד לגבי חומרת האיסור נאמר (סא:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: למה לי דכתב רחמנא יציאת מצרים ברבית...? אמר הקדוש ברוך הוא: אני הוא שהבחנתי במצרים בין טפה של בכור לטפה שאינה של בכור - אני הוא שעתיד ליפרע ממי שתולה מעותיו בנכרי ומלוה אותם לישראל ברבית...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ע"י כך שהקב"ה הבדיל בין מצרי שהוא בכור, שנהרג במכת בכורות, למצרי שאינו בכור, נודעה ביציאת מצרים ידיעתו המוחלטת בכל פרטי המציאות. לכן, אף שניתן להסתיר הלוואה בריבית מעיני הבריות, לפני ה' הדברים גלויים וידועים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד בתוספתא (ב"מ ו, יז) נאמר בעניין מלווי ריבית</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ר' שמעון בן לעזר</strong> או' יתר על מה שמרויחין הן מתחייבין שהן עושין את התורה פליסטיר ואת משה טפיש ואומרין אילו היה משה יודע שכך היו מרויחין לא היה כותב.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מימרה זו מציגה מזווית נוספת את הקשר בין הלוואה בריבית לבין כפירה בה'. בניגוד לאיסורים אחרים, שהעובר עליהם מחמת שיצרו תקפו וכדומה יודע שהוא עובר על התורה, הריבית מסתווית כחלק מהמערכת העסקית הנורמטיבית, עד שהעבריין משכנע את עצמו שהוא אינו פועל בעצם כנגד התורה. כך יקשה עליו לשוב בתשובה ו"יתר על מה שמרויחין, מתחייבין".</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-8" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+
+                
+
+                
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הלוואת בניו ובני ביתו בריבית</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (עה.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יהודה</strong> אמר <strong>רב</strong>: מותר לו לאדם להלוות בניו ובני ביתו ברבית כדי להטעימן טעם רבית.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ולאו מילתא היא, משום דאתי למיסרך.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב יהודה מתיר לאדם להלוות לבניו בריבית בכדי לגרום להם להרגיש את הצער שיש לאדם הלווה ריבית ובכך לחנכם שלא ילוו בריבית (רש"י). עם זאת הגמרא מעירה שאין הלכה כך, כדי שלא יבואו מתוך כך<sup id="ref25"><a href="#fn25">[25]</a></sup> להתרגל לריבית ולעבור על האיסור ממש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בשאלה מדוע מלכתחילה אין איסור בדבר נחלקו הראשונים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י במסכת שבת (קמט:) כותב שמדובר בבניו הסמוכים לשולחנו, ולכן כיוון שבלאו הכי כל הכסף של האב, מותר מעיקר הדין להלוותם בריבית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם מבין שמדובר אפילו בבניו הגדולים ובכל זאת מותר מכיוון ש"אינו מקפיד ומתנה הוא שנותן להם"<sup id="ref26"><a href="#fn26">[26]</a></sup>. וכך כתב בטור (קס).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קס ח) כותב עפ"י הגמרא שאסור לאדם להלוות לבניו ולבני ביתו בריבית, ואינו מחלק בין בנים הסמוכים לשולחנו לבין בנים שאינם סמוכים.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-9" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+
+                
+
+                
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היתר ריבית בתלמידי חכמים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (עה.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יהודה</strong> אמר <strong>שמואל</strong>: בני חבורה המקפידין זה על זה - עוברין משום מדה, ומשום משקל, ומשום מנין, ומשום לוין ופורעין ביום טוב, וכדברי הלל אף משום רבית</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אנשי קבוצה הנוטלים מזונות זה מזה, אם הם מקפידים להחזיר זה לזה מזונות כפי הכמות והסוג שנטלו, יש כאן איסור ריבית של סאה בסאה על פי דעת הלל (ע' לקמן פרק י' בדין סאה בסאה באופן כללי, ובפרט במחלוקת הלל וחכמים). משמע מהדברים, שבני חבורה שאינם מקפידים זה על זה, החולקים ביניהם מזונות, אין בהם בעיה של סאה בסאה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ובהמשך, עוד הלכה של רב יהודה בשם שמואל-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואמר <strong>רב יהודה</strong> אמר <strong>שמואל</strong>: תלמידי חכמים מותרים ללוות זה מזה ברבית. מאי טעמא - מידע ידעי דרבית אסורה, ומתנה הוא דיהבו אהדדי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ודוגמה לכך שתלמידי חכמים מותרים ללוות זה מזה בריבית-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>שמואל</strong> ל<strong>אבוה בר איהי</strong>: הלויני מאה פלפלין במאה ועשרין פלפלין, ואריך.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בגדרי ההיתר ואף בשאלה האם היתר זה נוהג להלכה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב עמרם גאון (מובא ברמב"ן) מבין שההסתיגות של הגמרא מההיתר של אב להלוות לבניו ("משום דאתי למיסרך", ר' בהלכה הקודמת) אמור גם ביחס לדין זה. לכן להלכה אסור לתלמידי חכמים להלוות זה לזה בריבית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים רבים פוסקים היתר זה להלכה אך מגבילים אותו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התוספות (ד"ה "מתנה") הרמב"ן ועוד ראשונים, פוסקים שהדברים אמורים דווקא בדבר מועט, שהלווה יודע בליבו שהיה נותן במתנה גם ללא קשר להלוואה. כך כותב גם הר"ן ומוסיף שמדובר דווקא בענייני מאכל ומשתה כמו הדוגמה של הפלפלים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם פוסק את המימרה כפשוטה ומתיר לתלמידי חכמים ללוות בריבית זה מזה לאו דווקא בדבר מועט. עם זאת, נראה מלשונו שההיתר אמור רק אם לא סוכם מראש על החזר הגדול מההלוואה והלווה מדעתו הוסיף בשעת ההחזרה. כלומר, ההיתר בתלמידי חכמים הוא רק כאשר מדובר בריבית מאוחרת ולא בריבית קצוצה המתנה את ההלוואה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהבנת מקרה הדוגמה יש גם כן כמה דעות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י מבין ש"אריך", הכוונה שהדבר מותר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, הרמב"ן מבין שזהו המשך המשפט שאמר שמואל, כלומר, הלווה אומר מיוזמתו שכאשר יחזיר את ההלוואה יחזיר בתוספת ("אריך") משום שהוא מחזיר ברוחב לב ואינו מקפיד על הכמות<sup id="ref27"><a href="#fn27">[27]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קס יז) כותב כדברי הרמב"ם, שמדובר בריבית מאוחרת בלבד. עם זאת השו"ע כותב שמדובר בדבר מאכל דווקא ובשיעור תוספת של לא יותר מחומש, כיוון שדווקא אז יש מקום לומר שהתוספת אינה ריבית אלא מתנה בעלמא. הרמ"א מוסיף כדעת הראשונים שאפילו אם היה תנאי לפני ההלוואה מותר, ומוסיף כדברי רב עמרם גאון שהלכה למעשה יש להמנע מהיתר זה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-10" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+
+                
+
+                
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המלוה את חבירו ומצא בידו יותר מעות ממה שסוכם</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (סג:-סד.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב נחמן</strong>: האי מאן דאוזיף פשיטי מחבריה ואשכח ביה טופיינא, אי בכדי שהדעת טועה - מיחייב לאהדוריה ליה, ואי לאו - מתנה בעלמא הוא דיהיב ליה. –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>היכי דמי בכדי שהדעת טועה? –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב אחא</strong> <strong>בריה דרב יוסף</strong>: בעישורייתא וחומשייתא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב אחא בריה דרבא</strong> ל<strong>רב אשי</strong>: ואי איניש תקיפא הוא דלא יהיב מתנה, מאי? –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: דלמא מיגזל גזליה, ואבלע ליה בחשבון...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואי איניש דאתי מעלמא, דלא שקיל וטרי בהדיה, מאי? –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: דלמא איניש אחרינא גזליה, ואמר ליה: כי יזיף פלוני פשיטי מינך - אבלע ליה בחשבון.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי הגירסה שלפנינו ("אוזיף מחבריה") מדובר על אדם שלווה מעות מחבירו, ומצא שחבירו נתן לו יותר ועתה נשאלת השאלה האם המלווה טעה במניין, ויש להחזיר לו את השיעור היתר, או שמא יש לתלות שנתן המלווה במתנה ע"י הבלעה בחשבון. רב נחמן אומר שניתן להבדיל ע"י מספר המעות העודף. אם המספר מתחלק בעשר או בחמש, יש לתלות שמנה נותן המעות עשר עשר או חמש חמש וטעה במניין ("בכדי שהדעת טועה"), אך אם יש מעה או שתים עודפות כנראה שבכוונה הבליע לו בחשבון והרי הם של המקבל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מברר רב אשי שניתן לתלות שהמעות הם מתנה מכוונת אפילו אם מדובר באדם שאינו נדיב ואפילו אם מדובר באנשים שאין להם היכרות מוקדמת, כיוון שיכול להיות שנותן המעות או מישהו אחר גזל את מקבל המעות שלא מדעתו ועתה הוא מנצל את המצב בכדי להשיב את הגזילה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה בו ניתן לתלות שהמעות הם מתנה אך נותן המעות מגיע לאחר מעשה ואומר שטעה, רוב הראשונים, ובכללם המאירי והרא"ש (סי יב) סוברים שיש להחזיר לו. לעומתם בהגהות מרדכי (מובא בב"י רלב) כותב שלא צריך להחזיר לו, אלא יש לתלות שנתן במתנה ועתה התחרט.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד דנו הראשונים האם מדובר רק על לווה שקיבל מעות ממלווה בתחילת ההלוואה, או גם ממלווה שמקבל מעות כהחזר הלוואה מהלווה. הרמב"ם והטור (חו"מ רלב) כותבים שדברי רב נחמן אמורים בשני המקרים<sup id="ref28"><a href="#fn28">[28]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (חו"מ רלב ב) פוסק כטור וכרמב"ם שהדברים אמורים בין בהלוואה ובין בפירעון ואינו מתייחס למקרה בו הנותן טוען לאחר מעשה שהוסיף בטעות.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-11" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יב</h2>
+
+                
+
+                
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החזר הלוואה כשהמטבע השתנה או נפסל</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא קמא צז.) מובאת מחלוקת האמוראים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איתמר: המלוה את חבירו על המטבע ונפסלה המטבע,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב</strong> אמר: נותן לו מטבע היוצא באותה שעה,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>שמואל</strong> אמר: יכול לומר לו לך הוציאו במישן.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"נפסלה המטבע" הכוונה שבעקבות החלטה מוניטרית של השלטון, עברו להשתמש במטבעות אחרים השונים מהמטבע בשעת יצירת החוב. האמוראים נחלקו בשאלה האם ניתן להחזיר חוב במטבע הישן שנפסל. רב אומר שלא, ושמואל אומר שאם ניתן עדיין להוציאו במקום אחר ("מישן") יכול לשלם לו מהמטבע הישן<sup id="ref29"><a href="#fn29">[29]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו מהו המקרה של "מלוה את חבירו על המטבע"-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י אומר שנחלקו רב ושמואל דווקא אם הלווה פרקמטיא (מיטלטלין) תמורת מטבע, או במילים אחרות מכר פרקמטיא בהקפה תמורת כך וכך כסף מסוג מסויים, ועתה בשעת התשלום המטבע עליה דובר כבר אינה קיימת. לעומת זה, אם מדובר בהלואה רגילה, לדעת הכל ההחזר הוא לפי המטבע שקיבל הלווה, אפילו אם אין אפשרות להוציאו<sup id="ref30"><a href="#fn30">[30]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התוספות (צז. ד"ה "המלוה") חולקים ומסבירים שמדובר בין במלווה ובין במוכר, ובלבד שיציין שההחזר הוא במעות היוצאות, ועל זה נחלקו רב ושמואל מה נחשבות מעות היוצאות. אמנם אם הלווה סתם, מסכימים התוספות עם רש"י, שמחזיר לו מטבע כפי שנתן לו, ואעפ"י שעתה נפסל לגמרי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם הרמב"ם אינו מחלק בין מילווה למכירה וכותב שמדובר בכגון שפירש את סוג המטבע ואת משקלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במחלוקת רב ושמואל פסקו רוב הראשונים כשמואל. הראב"ד לעומ"ז פסק כרב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (צז:-צח.) נידון מקרה קרוב, כאשר המטבע לא נפסל אלא השתנה כך שעתה נוסף על משקלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בעא מיניה <strong>רבא</strong> מ<strong>רב חסדא</strong>: המלוה את חבירו על המטבע, והוסיפו עליו, מהו?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו: נותן לו מטבע היוצא באותה שעה...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והא קא זיילין פירי! אמר <strong>רב אשי</strong>: חזינן, אי מחמת טיבעא זיל - מנכינן ליה, ואי מחמת תרעא זיל - לא מנכינן ליה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והא קא שבח לענין נסכא!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא, כי הא ד<strong>רב פפא</strong> ו<strong>רב הונא בריה דרב יהושע</strong> עבדי עובדא בזוזי דאגרדמיס טייעא עד י' בתמניא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב חסדא פוסק שהלווה צריך להחזיר במטבע החדש, הכבד יותר. רב אשי מעיר שאם ברור שהגדלת משקל המטבע גרר שינוי של המחירים (כלומר, שעתה ניתן לקנות באותו מטבע יותר פירות, ונמצא שהמלווה יכול לקנות בהחזר יותר ממה שהיה יכול במעות המקוריות שהלווה), יש להקטין את ההחזר בהתאם. עוד בעיה שקיימת בתשלום במעות החדשות היא שערך המתכת היקרה של המטבע גדול ביחס למטבע הישנה, ושוב נמצא שהמלווה קיבל יותר משנתן. ביחס לפער זה מובא שרב פפא ורב הונא פסקו שעד 20% (ייסוף בו מטבע השוקלת 8 עוברת לשקול 10) עדיין שריר פסקו של רב חסדא ומחזיר מהמטבע החדשה והגדולה יותר. בהפרש גדול יותר יש להפחית את השיעור המתאים מההחזר<sup id="ref31"><a href="#fn31">[31]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים מה הדין כאשר המטבע לא נתווספה אלא הפוך, פחתה. לדעת רוב הראשונים ובתוכם הרי"ף (לה. מדפיו) והרא"ש (סי' יב), הדין שווה בין בפיחות ובין בייסוף, שכן כשם שיש לדאוג לכך שהלווה לא יחזיר יותר מהראוי, כן יש לוודא שהמלווה לא יקבל פחות מהראוי לו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, הראב"ד (מובא ברא"ש, שם) פוסק שהאמור בגמרא מתייחס רק למקרה של ייסוף המטבע ומפני חשש ריבית. לעומ"ז, אם נפחת משקל המטבע כיוון שאין בעיה של ריבית, אין מוסיפים להחזר אפילו אם המשקל השתנה ביותר משיעור של 20%.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, כל הדינים הנ"ל, במקרה בו המטבע נפסל או השתנה אמורים רק ב"מלווה על המטבע". לעומ"ז, בהלוואה סתם, בה לא נתפרש סוג המטבע, מוסכם על הכל שניתן להחזיר במטבע הישן שנפסל, או במשקל שהיה בשעת ההלוואה לפני הייסוף. בטעם הדבר דנים התוספות (צז. ד"ה "המלוה", בעמוד ב) השואלים מדוע הגוזל מטבע והוציאו מחזיר מטבע היוצא בשעת ההחזר, ולעומתו הלווה מטבע בסתם מחזיר מטבע כשעת ההלוואה. התוספות מסבירים שמטבע שנפסל דומה לסחורה שנפחת ערכה, ומשווים לדין המלווה סאה חיטים והוזלו, שמשיב לו הלווה סאה חיטים למרות שהם שווים פחות<sup id="ref32"><a href="#fn32">[32]</a></sup>. המאירי ורבינו יונתן (לד: מדפי הרי"ף) מסבירים שמכיוון שגם ללא ההלוואה היה המלווה "נתקע" עם מטבע פסול, ראוי שיחזיר לו הלווה את אותו המטבע שהיה בידו של המלווה מלכתחילה אף אם נפסל בינתיים<sup id="ref33"><a href="#fn33">[33]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (חו"מ עד ז) פוסק כשמואל במלווה על המטבע ונפסל והרמ"א (שם) מוסיף שבהלוואה סתם, כאשר לא הותנה דבר, ניתן להחזיר במטבע הישן אפילו אם נפסל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעניין המלווה על מטבע ונתווסף פסק השו"ע (יו"ד קסה א) כמסקנת הגמרא שאם שיעור הייסוף הוא עד 20%, ניתן להחזיר במטבע החדש הכבד יותר מבלי לקזז מהסכום. עוד פוסק השו"ע כרוב הראשונים, שאין הבדל בדין זה בין ייסוף לבין פיחות. הר"י מיגא</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-12" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
+
+                
+
+                
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מחילה בריבית</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בשו"ת הר"י מיגאש (קכח) דן במוכר סחורה בהמתנת דמים וביוקר (דבר האסור משום רבית, כפי שיתבאר בפרקים הבאים), ועתה, מכיוון שמדובר בריבית, ואין הלוקח מוכן לשלם את התוספת הבאה בשל המתנת מעות, רוצה המוכר לבטל את העיסקה ולקבל את הסחורה בחזרה. הר"י מיגאש פוסק שאם תוספת המתנת המעות גדולה משתות (שישית), כיוון שזהו שיעור שאונאה חוזרת בו, הרי שמדובר במיקח טעות ומקבל המוכר את הסחורה בחזרה. לעומת זה, אם התוספת קטנה משתות מצד אחד אין המיקח בטל כי בפחות משתות יש מחילה, אך מצד שני הקונה חייב לשלם רק את השווי הריאלי של הסחורה, ללא תוספות המתנת המעות. הר"י מיגאש מסביר שאעפ"י שהדעת נותנת שכפי שמחל המוכר על פחות משתות ולכן מוכן שלא לקבלה, כך גם מחל הקונה על שיעור זה ומוכן לשלמו, בכל זאת אין הקונה משלם את תוספת המתנת המעות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>...לענין המכירה בהמתנה שהיא רבית <strong>ולא תועיל בה מחילה</strong> הנה נתחייב שאפי' היה התוספת פחות משתות אסור הוא להחזיר לו (אלא) עד הסך שהיתה סחורתו ראוי נמכרת במדודים.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריטב"א (סא.) בשם רבו הרא"ה, מסביר מדוע אם לווה אדם בריבית קצוצה, והוא מוחל על ההחזר שאמור המלווה להחזיר לו (שהרי ריבית קצוצה יוצאה בבי"ד), אין מחילתו מועילה לפטור את המלווה מלהחזיר את הכסף-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וטעם הדברים אומר מורי נ"ר דתביעת רבית לא הויא כשאר תביעות בגזל ואונאה וכיוצא בהן דאית ליה על חבריה שיעבוד ממון, אלא <strong>חיוב הוא שחייב הכתוב להחזיר איסור שבלע</strong>, תדע דהא רבי יוחנן סבר דרבית קצוצה אינה יוצאה בדיינין, וגם לדברי הכל אם מת בניו פטורין אלא בדבר המסויים מפני כבוד אביהם בלבד, ואלו בגזל ואונאה בניו חייבים כשהניח אחריות נכסים, ובודאי דטעמא כדאמרן דחיובא דרמא עליה רחמנא הוא וכענין חוב למ"ד פריעת בעל חוב מצוה ושעבודא לאו דאורייתא, אלא דהתם איכא דין ממון לחברו ומהניא מחילה אבל הכא <strong>לשמים הוא חייב וכיון שכן לא תועיל לו מחילת חברו</strong>, וכן עיקר</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אין חיוב ממוני להשיב ריבית, שכן בסופו של דבר הריבית נלקחה בהסכמתו של הלווה, אלא השבת הריבית היא תיקון העוון ונועדה לכפרתו של המלווה. לכן, גם אם הלווה מוחל את השבת הריבית, מוציאים בי"ד את הריבית מהמלווה ונותנים ללווה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם בהלכה שלפנינו מביא דעה זו אך חולק עליה וסובר שהלווה יכול למחול על החזר הריבית ואף יכול להתחייב מראש שימחל על השבת הריבית. טעמו העיקרי של הרמב"ם מדין תקנת השבים. על פי דין זה, תיקנו חכמים שמי שעיקר פרנסתו מריבית ובא לשוב, לא יזדקק להשיב את הריבית, וזאת כדי לעודד מלווי ריבית לחזור בתשובה. הרמב"ם מבין שתקנת חכמים זו היא ציווי על הלווה שימחל למלווה. ממילא נמצא שיש בכוחו של הלווה למחול<sup id="ref34"><a href="#fn34">[34]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קס ה) פוסק כרמב"ם, שמחילת הלווה אינה מתירה את הריבית מתחילתה, אך מאפשרת לפטור את המלווה מהשבה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-13" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
+
+                
+
+                
+                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קרוב לשכר ורחוק מהפסד בנכסי יתומים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (ע.) דנה בטיפול בנכסי יתומים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב ענן</strong> אמר <strong>שמואל</strong>: מעות של יתומים מותר להלוותן ברבית.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב נחמן</strong>: משום דיתמי נינהו ספינא להו איסורא? יתמי דאכלי דלאו דידהו ליזלו בתר שבקייהו!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב ענן אומר בשם שמואל שמותר להלוות מעות של יתומים (המסורות ביד ממונה כדי לדאוג ליתומים ולשמור על הכסף עד שיגדלו) בריבית, כדי לשמור על ערכם ולהרבותם עבור היתומים. רב נחמן חולק נמרצות וטוען שלא יתכן להתיר איסור ריבית רק משום מצוות הצדקה ליתומים. בהמשך מובאות דרכים ספציפיות בהן נהגו גדולי האמוראים על מנת לשמר את מעות היתומים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבה בר שילא</strong> אמר <strong>רב חסדא</strong>, ואמרי לה אמר <strong>רבה בר יוסף בר חמא</strong> אמר <strong>רב ששת</strong>: מעות של יתומים מותר להלוותן קרוב לשכר ורחוק להפסד...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא פוסקת שניתן לתת מעות של יתומים באופן הקרוב לשכר ורחוק מהפסד. עקרונית, סוג כזה של עסקה אסור מדרבנן כיוון שהוא דומה לריבית (עי' בפרק הבא הל' ח), ורק ביחס ליתומים התירו לעשות כך מכח מצוות צדקה<sup id="ref35"><a href="#fn35">[35]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים בהיקף ההיתר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרא"ש (סי' נ) כותב בשם הגאונים, שבכל ריבית דרבנן הקלו ביתומים, ולאו דווקא בנתינת מעות קרוב לשכר ורחוק מהפסד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו הרשב"א (בחידושיו) כותב שההיתר אינו בכל ריבית דרבנן, אלא מוגבל לנתינת מעות קרוב לשכר ורחוק מהפסד. בחידושיו (חלק ד רלב) מסביר הרשב"א שסוג זה של איסור ריבית קל יותר מסוגים אחרים של ריבית מדרבנן, משום שאין בו הפסד אמיתי של הלווה (=המקבל), שכן הוא נותן חלקים מרווח שקודם לא היה שלו, ואף כשיש הפסד הוא מפסיד, במקרה הגרוע ביותר, רק את המעות שקיבל להתעסק בהן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון הרמב"ם ניתן להבין כשיטת הרא"ש, ואכן כך מבין הבית יוסף.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרא"ש (בתשובה, חלק יג' סי' יז) והטור (קס) מרחיבים את ההיתר לצורך יתומים לכל צורך מצווה, כגון כסף המיועד לתמיכה בעניים או לתמיכה בלומדי תורה או לקניית ספר תורה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קס יח) פוסק כרא"ש כנגד הרשב"א, שבכל ריבית דרבנן הקלו ביתומים, ובנוסף מביא להלכה את דברי הטור שלא רק לצורך יתומים אלא לכל צורך מצווה ניתן להלוות בריבית דרבנן.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn21" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref21" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^21</a> 
+                        העוול באיסור הנשך ברור וקשור לדינים כמו גזל והיזק. פחות מובן מאליו מדוע הריבית, כלומר הפקת הרווח, היא לאו בפני עצמו (אכן, הרמב"ם בספר המצוות, ל"ת רלה, כותב שאכן אין הבדל כלל והכפלת הלאו היא רק לחומרת העבירה). אפשר להציע שהלוואה בריבית, מלבד מה שהיא גורמת נזק ללווה, היא גם חילול ומעשה הפוך למצוות ההלוואה. על פי דרך זו, אפשר שלשון "תרבית" נאמרה דווקא בהלוואת אוכל (ולא כסף) מפני שבמיוחד במקרה כזה, בו הלווה זקוק להלוואה לצריכה מיידית ולא להשקעה, מצוות ההלוואה מתבקשת, וחילולה באמצעות ריבית היא עוון נוסף מלבד הנזק שנגרם ללווה.
+                    </li>
+                    
+                    <li id="fn22" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref22" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^22</a> 
+                        עי' לעיל, הלכה ב.
+                    </li>
+                    
+                    <li id="fn23" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref23" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^23</a> 
+                        שטר מאפשר גביה גם מנדל"ן משועבד שהחייב כבר מכר לאחר.
+                    </li>
+                    
+                    <li id="fn24" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref24" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^24</a> 
+                        אפילו מנכסים משועבדים (שו"ע חו"מ נב א)
+                    </li>
+                    
+                    <li id="fn25" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref25" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^25</a> 
+                        האב או הבנים.
+                    </li>
+                    
+                    <li id="fn26" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref26" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^26</a> 
+                        ומתוך כך הקשר להלכה הבאה- היתר תלמידי חכמים ללוות זה לזה בריבית.
+                    </li>
+                    
+                    <li id="fn27" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref27" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^27</a> 
+                        על פי הבנת הרמב"ן, ההיתר הוא דווקא אם התוספת שסוכמה מוצהרת כמתנה לא מחייבת. לעומת זאת רש"י מבין שאפילו אם התוספת סוכמה בניסוח שיכול היה לשמש ריבית קצוצה בהקשר אחר, הדבר מותר משום שמדובר בת"ח שיודעים חומרת איסור ריבית ומתכוונים למתנה בעלמא.
+                    </li>
+                    
+                    <li id="fn28" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref28" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^28</a> 
+                        במקרה השני גם אם התוספת היתה במתנה, יכולה להיות בעיה של ריבית מאוחרת, שהיא טובת הנאה שנותן הלווה למלווה מרצונו לאחר ההלוואה. ועי' בהמשך (פרק ה' הל' יא-יג) שיש האומרים שאם הלווה אינו מציין שמה שמוסיף הוא בגלל ההלואה אין בעיה של ריבית מאוחרת.
+                    </li>
+                    
+                    <li id="fn29" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref29" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^29</a> 
+                        בהמשך מסביר רב נחמן ששמואל מתכוון רק במקרה בו יש למקבל המעות אפשרות להגיע למקום בו עדיין ניתן להוציא את המטבע.
+                    </li>
+                    
+                    <li id="fn30" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref30" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^30</a> 
+                        התוספות מסבירים שסברתו של רש"י (אותה אין הם מקבלים) היא שהמוכר לחבירו מציין באופן טבעי שיתן לו חבירו סכום כך וכך, וכוונתו למטבע היוצא. המאירי מסביר אחרת את החילוק. לדבריו כאשר מדובר במכר של פרקמטיא, טוען המוכר שלו היתה הפרקמטיא עתה בידו היה מוכרה במטבע היוצא. לעומת זאת, בהלוואה אומר הלווה שהחזר במטבע הישנה שנפסלה אינו מרע את מצבו של המלווה ביחס למה שהיה לפני שהלווה. באופן דומה במקצת אפשר גם להציע שטעמו של רש"י לחלק בין מילווה לבין מכר הוא שהמוכר דבר מה ברור שכוונתו לקבל תמורתו משהו ברמת נזילות גבוהה יותר מאשר החפץ אותו מכר, ולכן אף מבלי לציין דבר ברור שהוא מצפה למטבע היוצא.
+                    </li>
+                    
+                    <li id="fn31" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref31" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^31</a> 
+                        המפרשים מסבירים שהפרש של פחות מ20% עדיין אינו נחשב להפרש בהקשר זה או בגלל שהוצאות ההתכה של המטבע והפיכתה לחומר גלם הוא בערך כשיעור זה (רא"ש) או משום שממילא מצויים הפרשים בשיעור זה בין מטבעות שונים בעלי אותו שם (ראב"ד). כך או כך, חשוב לציין שהסוגיה והטעמים הנ"ל רלוונטים רק במטבע של מתכת יקרה שערכה קשור לשווי המתכת. מטבע שיש לה משמעות סמלית כמטבעות ושטרות של ימינו, דינם שונה בתכלית.
+                    </li>
+                    
+                    <li id="fn32" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref32" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^32</a> 
+                        עי' לקמן פרק י הלכה ד.
+                    </li>
+                    
+                    <li id="fn33" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref33" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^33</a> 
+                        על רקע סברה זו, נראה שאם המטבע הוחלף ע"י השלטון באופן המאפשר לאנשים להגיע עם מטבע ישן ולהחליפו בחדש, יאלץ הלווה לשלם במטבע החדש גם בהלוואה שאינה "על המטבע", משום שאלמלא ההלוואה היה המלווה הולך ומחליף את כספו במטבע החדש.
+                    </li>
+                    
+                    <li id="fn34" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref34" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^34</a> 
+                        הרמב"ם משווה מחילה על ריבית מושֵבת למחילה על גזל מושב, מכך נראה סביר שהרמב"ם חולק על ההבנה שהביא הריטב"א בשם הרא"ה. לדעת הרמב"ם חובת השבת הריבית היא ביסודה חובה ממונית משום שההסכמה שהסכים הלווה מלכתחילה היתה מתוך אילוץ.
+                    </li>
+                    
+                    <li id="fn35" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref35" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^35</a> 
+                        לעניין ההגדרה המדוייקת של קרוב לשכר ורחוק להפסד עי' בפרק הבא הלכה ח במה שנכתוב שם.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

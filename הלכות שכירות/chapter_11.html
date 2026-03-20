@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הלכות שכירות - פרק יא</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">הלכות שכירות - פרק יא</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק יא)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א-ב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    עשין ולאוין בהלנת שכר
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-1-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שכר גר תושב, עכו"ם ושכירות בהמה וכלים
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-1-3" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    זמן הגביה וזמן האיסור
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    בל תלין בקבלן
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    דין בל תלין כששוכר הפועלים אינו המשלם
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-3-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    תנאים לחיוב בל תלין- תביעת השכיר, זמינות המעות וזהות המשלם.
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-3-3" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    המחהו אצל חנווני\שולחני, האם חוזר בו?
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    איסור "בל תשהא"
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שכיר בזמנו נשבע ונוטל
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-5-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שכיר שתבע את המעסיק לאחר זמנו, והמעסיק טוען שכבר שילם
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-5-3" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מתי שכיר נשבע ונוטל אף לאחר זמנו
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-5-4" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    במקרה בו שכרו ללא עדים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מחלוקת בין המעסיק לשכיר על גובה השכר שסוכם
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-7" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-7-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מחלוקת בין בעל הבית לבין אומן על גובה השכר שסוכם
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-8" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ט
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-8-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    גלגול שבועה ושידול לשבועה בשבועת שכיר
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">הלכות שכירות</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק יא</h1>
+            </div>
+
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">פרק יא מוקדש כולו לחיוב לתת שכר שכיר בזמנו ולאיסור הלנת שכר. התנאים נחלקו האם יש הבדל בדינים אלה בין שכר אדם לבין המשכיר בהמה וכלים, וכמו כן נחלקו האם יש הבדל בין ישראל לבין גוי. להלכה נפסק שאין הבדל בין שכר אדם לבין שכר בהמה וכלים, ובגוי יש רק מצוות עשה לתת שכרו בזמנו ואין איסור לאו. בנוסף לאיסור, המצויין בהלכה א, עליו עובר המעסיק אם לא נתן שכר השכיר בזמנו, מפרטת הלכה ב עוד איסורים עליהם עובר הכובש שכר שכיר, שהוא הנמנע מלתת לו את שכרו מתוך שרוצה שלא לשלם לו כלל. בהמשך (הלכה ה) קיימת גם התייחסות לנמנע מלשלם לעובד במשך זמן ארוך, העובר על איסור מדרבנן. עוד מבואר בהלכה ב שהזמן הראוי לשלם לשכיר משתנה משכיר לשכיר. בעוד שלשכיר יום ניתן לשלם כל הלילה, לשכיר לילה מותר לשלם כל היום שלמחרת. סוגים אחרים של שכיר מקבלים את שכרם כל אותו היום או הלילה בו יצאו ממלאכתם.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ג עוסקת בשאלה האם באומן קבלן, המקבל שכר על תוצאת מלאכתו, יש איסור הלנת שכר. בגמרא מתבאר שהדבר תלוי בשאלה האם אומן קונה בשבח כלי (עי' בפרק הקודם). אם אומן קונה בשבח כלי הרי שהוא מוכרו מחדש ללקוח ולכן אין עוברים בו על הלנת שכר. לעומת זה, אם אין אומן קונה בשבח כלי, אם הלקוח מאחר לשלם לו, הרי הוא עובר על איסור הלנת שכר.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכה ד מתבאים שלושה דינים. האחד- שאם השכיר עובד אצל מישהו שלא שכרו באופן ישיר, אין מעסיק זה עובר על איסור הלנת שכר. השני- שאין המעסיק עובר על האיסור אלא אם כן הוא נמנע בפועל מלתת את השכר, למרות שהשכיר ביקש ממנו לשלם, ויש בידו את הכסף. הדין השלישי הוא שאם קיים הסכם עם השכיר שהאחרון יקבל את שכרו דרך סחורה מצד שלישי, והמעסיק ישלם לאותו צד שלישי, אין עובר המעסיק על איסור בל תלין אם הוא מתמהמה מלשלם לו.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">מהלכה ו ואילך עוסק הפרק במחלוקות שונות שעלולות להתגלע בין המעסיק לבין המועסק בנוגע לשאלות האם שולם השכר ומה גובה השכר. ראשית, נידונה תקנת חכמים, שבמקרה בו שכיר טוען שהמעסיק עדיין לא שילם לו, אף אם המעסיק טוען כנגדו שכבר שילם, יכול השכיר להישבע וליטול. יש שהסבירו שטעם התקנה העיקרי הוא משום שאין לסמוך על דברי המעסיק, שהוא טרוד בפועליו, ויש שהסבירו שטעם התקנה העיקרי הוא כדי למנוע מצב בו שכיר יצא מעבודתו ללא תשלום, והטיעון של טירדת המעסיק נצרך רק בכדי להסביר מדוע השכיר הוא שנשבע ולא המעסיק.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">תקנת "שכיר נשבע ונוטל" מסוייגת בשני אופנים. ראשית, מדובר בכגון שהתביעה היא דווקא בזמן הראוי לתשלום, לעומת זה, אם תבעו לאחר זמנו יש מקום לסמוך על דברי המעסיק שבוודאי נתן את ליבו לבל יעבור על איסור הלנת שכר, וכמו כן טענת השכיר מעורערת ע"י כך שחיכה עד עתה. תנאי שני הוא ששכיר נשבע ונוטל רק אם יש עדים על עצם השכירות, אך אם לא, יש למעסיק מיגו, שיכול היה לטעון שמעולם לא שכרו.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ז ממשיכה ומדברת על מקרה בו המחלוקת בין השכיר לבין המעסיק אינה בשאלה האם שולם השכר, אלא בשאלה כמה שכר נקצץ. במקרה זה סוברים חלק מהפוסקים שלא תוקנה שום תקנה, והדין שווה לכל טענה אחרת, שאם עוד לא שילם המעסיק הרי הוא מודה במקצת (ונשבע שבועת התורה ונפטר), ואם כבר שילם ("הילך") אינו נשבע והמוציא מחברו עליו הראיה. פוסקים אחרים סוברים שגם כאן תיקנו חכמים תקנה מיוחדת לטובת השכיר, אך כיוון שסביר שהמעסיק זוכר היטב את גובה קציצת השכר, יכול הוא להישבע ולהיפטר, במקום שהשכיר ישבע ויטול. בהלכה ח מובאת דעתו הייחודית של הרמב"ם המחלקת בין שכיר לבין אומן, במקרה של מחלוקת על גובה השכר שסוכם. בניגוד לשכיר בו תיקנו חכמים שיישבע המעסיק, באומן סובר הרמב"ם שלא תיקנו זאת. כמו כן, הלכה מיוחדת באומן שאין בשכיר היא שכל עוד החפץ מצוי אצל האומן, יש בידו מיגו לטעון שלקוחה היא בידו.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ט מסיימת בציון הקלות מיוחדות הנהוגות בשבועת שכיר, שמטרתן לעודד אותו להישבע וליטול את שכרו. ראשית, אין מגלגלים שבועות אחרות על שכיר הנשבע, ושנית אין מסתירים ממנו את האפשרות שלו להישבע וליטול, אלא אדרבא, מעודדים אותו במפורש להישבע.</p>
+                
+            </div>
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מצות עשה ליתן שכר השכיר בזמנו שנאמר ביומו תתן שכרו וגו', ואם איחרו לאחר זמנו עובר בל"ת שנאמר ולא תבוא עליו השמש ואין לוקין עליו שהרי הוא חייב לשלם, אחד שכר האדם ואחד שכר הבהמה ואחד שכר הכלים חייב ליתן בזמנו ואם איחר לאחר זמן עובר בל"ת, וגר תושב יש בו משום ביומו תתן שכרו ואם איחרו אינו עובר בל"ת.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    כל הכובש שכר שכיר כאילו נטל נפשו ממנו שנאמר ואליו הוא נושא את נפשו, ועובר בארבע אזהרות ועשה עובר משום בל תעשוק ומשום בל תגזול ומשום לא תלין פעולת שכיר ומשום לא תבא עליו השמש ומשום ביומו תתן שכרו, אי זהו זמנו שכיר יום גובה כל הלילה ועליו נאמר לא תלין פעולת שכיר אתך עד בקר, ושכיר לילה גובה כל היום ועליו נאמר ביומו תתן שכרו, ושכיר שעות של יום גובה כל היום ושכיר שעות של לילה גובה כל הלילה, שכיר שבת שכיר חדש שכיר שנה שכיר שבוע יצא ביום גובה כל היום יצא בלילה גובה כל (אותו) הלילה.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עשין ולאוין בהלנת שכר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (קי:) מביאה <strong>ברייתא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: מנין לשכיר יום שגובה כל הלילה - תלמוד לומר לא תלין פעלת שכיר אתך עד בקר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומנין לשכיר לילה שגובה כל היום - שנאמר ביומו תתן שכרו ["ולא תבוא עליו השמש"].</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפסוקים מתוארים תרחישים שונים (ובמידת מה, סותרים) לעיכוב שכר שכיר. בפרשת קדושים העיכוב מתואר כהלנה "עד בוקר", ואילו בפרשת כי תצא האיסור הוא לעכב את שכר השכיר עד ביאת השמש. הברייתא (וביתר ביאור, הגמרא) מסבירה ששכירות משתלמת רק בסופה, ולכן חובת התשלום נוצרת רק עם סיום העבודה (עבור שכיר יום, עם תום היום ועבור שכיר לילה עם תום הלילה). בנוסף, הדעת נותנת שאין עוברים על איסור הלנת שכר מיד עם תחילת חובת התשלום.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מתוך כך מוסבר שהפסוקים מתארים מקרים שונים- לשכיר יום מותר לשלם במשך כל הלילה שאחרי יום עבודתו ואם עבר הלילה ("עד בוקר") ולא שילמו לו, עבר בעל הבית על איסור תורה. לעומת זאת, לשכיר לילה מותר לשלם במשך כל היום ולכן אם לא שילם בעל הבית עם תום אותו יום (ביאת שמש), עובר באיסור תורה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מקשה על כך מברייתא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>כל</strong> הכובש שכר שכיר עובר בחמשה שמות הללו, וְעשֵׂה: משום בל תעשק את רעך, ומשום בל תגזל, ומשום בל תעשק שכיר עני, ומשום בל תלין, ומשום ביומו תתן שכרו, ומשום לא תבא עליו השמש</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי פשטה של ברייתא זו, <strong>כל</strong> מי שעובר על איסור הלנת שכר, נאמרו בו כל חמש מצוות הלא תעשה וביטל את העשה של "ביומו תתן שכרו", בין בשכיר לילה ובין בשכיר יום. בהתאמה, מסביר <strong>רב חסדא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שֵם שכירות בעלמא</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כוונת הברייתא היא שכל האיסורים הנקובים כלולים בכובש שכר שכיר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> בהלכה א כותב שהמאחר מתן שכר שכיר לאחר זמנו עובר בעשה ("ביומו תתן שכרו") ובלאו ("לא תבוא עליו השמש"). לעומת זאת, בהלכה ב' כותב הרמב"ם שהכובש שכר שכיר עובר בכל ארבעת הלאוין והעשה שמונה הברייתא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>כסף משנה</strong> מסביר שהרמב"ם מעמיד את הברייתא במי שכובש שכר שכיר, כלומר, אינו רוצה לשלם כלל, או שמתכוון לצערו, והוא עובר בכל האיסורים שנאמרו בדין זה, אך מי שמתאחר בתשלום עובר רק על לאו אחד ואליו התייחס ר' חסדא ואת דינו מבאר הרמב"ם בהלכה א.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שלט א-ב) כותב כדברי הרמב"ם.</p>
+                    
+                </div>
+                
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שכר גר תושב, עכו"ם ושכירות בהמה וכלים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (קיא.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אחד שכר אדם ואחד שכר בהמה ואחד שכר כלים - יש בו משום ביומו תתן שכרו, ויש בו משום לא תלין פעלת שכיר אתך עד בקר...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>גֵר תושב - יש בו משום ביומו תתן שכרו ואין בו משום לא תלין פעולת שכיר אתך עד בקר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כל הלאוים שנאמרו בהלנת שכר אמורים ביחס לשכיר יהודי, בין אם מדובר בעבודתו שלו, ובין בהשכרת בהמתו או כליו. לעומת זאת, בגר תושב (אינו יהודי שקיבל עליו שבע מצוות בני נח) קיימת מצוות העשה "ביומו תתן שכרו", אך לא הלאווים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מציינת שדעת המשנה היא כדעת <strong>ר' ישמעאל</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנא דבי <strong>רבי ישמעאל</strong>: אחד שכר אדם ואחד שכר בהמה ואחד שכר כלים - יש בו משום ביומו תתן שכרו ומשום לא תלין. גר תושב יש בו משום ביומו תתן שכרו ואין בו משום בל תלין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד מתבאר שדעת ר' ישמעאל עומדת בין שתי שיטות קצה -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>"מאחיך" - פרט לאחרים, "גרך" - זה גר צדק, "בשעריך" - זה אוכל נבילות. אין לי אלא שכר אדם, מנין לרבות בהמה וכלים - תלמוד לומר בארצך, כל שבארצך. וכולן עוברים בכל השמות הללו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מכאן אמרו: אחד שכר אדם ואחד שכר בהמה ואחד שכר כלים - יש בו משום ביומו תתן שכרו ויש בהן משום בל תלין פעלת שכיר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יוסי ברבי יהודה</strong> אומר: גר תושב יש בו משום ביומו תתן שכרו<sup id="ref243"><a href="#fn243">[243]</a></sup> ואין בו משום לא תלין. בהמה וכלים אין בהן אלא משום בל תעשק בלבד.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת <strong>חכמים</strong> (תנא קמא שבברייתא), אין שום הבדל בדין הלנת שכר, בין שכיר מישראל לשכיר גר תושב, ובין שכר אדם לשכר בהמה וכלים. מן העבר השני סובר <strong>רבי יוסי</strong> שגר תושב אין בו אלא מצוות עשה לתת שכרו ביומו (ולפי נוסחים מסויימים גם "לא תעשק"), ואילו הלנת שכר בהמה וכלים שונה מהותית ויש בה רק איסור עושק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה כיצד השיטות השונות נובעות מהפסוקים בפרשת קדושים ובפרשת כי תצא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהפירוט "לֹא תַעֲשֹׁק שָׂכִיר עָנִי וְאֶבְיוֹן <strong>מֵאַחֶיךָ אוֹ מִגֵּרְךָ אֲשֶׁר בְּאַרְצְךָ בִּשְׁעָרֶיךָ</strong>" נובע שגם שכיר שהוא גר תושב נכלל בדין זה וגם שכר בהמה וכלים ("בארצך- כל שבארצך"). חכמים מקישים בין שתי הפרשיות ומסיקים שכל האיסורים אמורים בגר ובשכר בהמה וכלים<sup id="ref244"><a href="#fn244">[244]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם לומדים רבי ישמעאל ור' יוסי מהפסוק "לֹא תַעֲשֹׁק אֶת <strong>רֵעֲךָ</strong>...לֹא תָלִין פְּעֻלַּת שָׂכִיר אִתְּךָ עַד בֹּקֶר", שלאדם מישראל ("רעך") יש מעמד מיוחד בדין הלנת שכר שכיר. את ההרחבה לגר תושב הם משאירים בהקשר של הפסוקים בכי תצא המלמדים על מצוות עשה של "ביומו תתן שכרו" ועל איסור העושק הכללי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה עוד שרבי ישמעאל לומד שהמילה "אתך" שבפסוק ("לֹא תָלִין פְּעֻלַּת שָׂכִיר <strong>אִתְּךָ</strong> עַד בֹּקֶר") מכוונת לפעולתו של השכיר שפעל עם בעל הבית. מכאן לומד ר' ישמעאל שאין מדובר רק בשכר אדם אלא גם בשכר בהמה וכלים שעבדו אצל בעל הבית ופעולתם היתה איתו. לעומתו ממעט ר' יוסי שכר בהמה וכלים וטעמו בפסוק מובא בברייתא בשם <strong>ר' חנניא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תני <strong>רבי חנניא</strong>: אמר קרא ולא תבא עליו השמש כי עני הוא - מי שהן באין לידי עניות ועשירות,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יצאו בהמה וכלים שאינן באין לידי עניות ועשירות<sup id="ref245"><a href="#fn245">[245]</a></sup>.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם ורוב הראשונים פסקו כר' ישמעאל שכשיטתו נכתבה המשנה, ולכן שכר בהמה וכלים נכלל באיסור בל תלין. לעניין שכר קרקעות נחלקו הדעות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המדרש ב<strong>ספרא</strong> (קדושים פרשה ב) לומד מהפסוק שאף שכר קרקעות נכלל באיסור-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא תלין פעולת שכיר אתך עד בוקר, אין לי אלא שכר האדם שכר הבהמה והכלים מנין?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>שכר הקרקעות</strong> מנין?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תלמוד לומר לא תלין פעולת כל דבר</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כדברים אלה נראה שפסק ה<strong>יראים</strong> (סי' קכו). לעומתו, ה<strong>רמ"ה</strong> (מובא בטור שלט) למד מלשון המדרש המצוטט בגמרא "כל אשר בארצך", ולא ארצך, כלומר, שכר קרקעות אינן בכלל איסור בל תלין<sup id="ref246"><a href="#fn246">[246]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שלט א) מביא את שיטת הרמ"ה בתור "יש מי שאומר".</p>
+                    
+                </div>
+                
+                <div id="topic-1-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">זמן הגביה וזמן האיסור</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (קי:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שכיר יום גובה כל הלילה, שכיר לילה גובה כל היום, שכיר שעות גובה כל הלילה וכל היום.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שכיר שבת, שכיר חדש, שכיר שנה, שכיר שבוע, יצא ביום - גובה כל היום, יצא בלילה - גובה כל הלילה וכל היום</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה מציינת את הזמן בו ראוי ומותר לשלם לשכיר, ומחלקת בין ארבעה סוגי שכירים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שכיר שעבד במשך כל היום, הגובה את שכרו במשך כל הלילה הבא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שכיר שעבד כל הלילה, הגובה את שכרו במשך כל היום הבא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שכיר שנשכר לשעות (ולא יום או לילה שלמים), הגובה את שכרו כל הלילה וכל היום (עי' בהמשך).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שכיר לתקופה ארוכה יותר מיום, הגובה בזמן שבין סיום השכירות לבין השקיעה הסמוכה לו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קיא.) נחלקו האמוראים, והגמרא דנה ביחס בין מחלוקתם לבין המשנה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב</strong>: שכיר שעות דיום - גובה כל היום, שכיר שעות דלילה - גובה כל הלילה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>שמואל</strong> אמר: שכיר שעות דיום - גובה כל היום, ושכיר שעות דלילה - גובה כל הלילה וכל היום.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנן: שכיר שעות גובה כל הלילה וכל היום, תיובתא דרב!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לך רב: לצדדין קתני- שכיר שעות דיום - גובה כל היום, שכיר שעות דלילה - גובה כל הלילה</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנן: היה שכיר שבת, שכיר חדש, שכיר שנה, שכיר שבוע, יוצא ביום - גובה כל היום, יוצא בלילה - גובה כל הלילה וכל היום!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב ושמואל נחלקו בזמן הגביה בשכיר לשעות. <strong>שמואל</strong> סובר שהדין אחיד- שכיר שעות גובה עד תום היממה בה סיים לעבוד, כלומר, עד שקיעת השמש ותחילת היום הבא, בין אם סיים לעבוד ביום ובין אם סיים לעבוד בלילה. לעומת זאת, לדעת <strong>רב</strong> שכיר שעות ביום, גובה עד תום אותו היום (עד השקיעה) ושכיר שעות בלילה גובה עד סוף אותו הלילה (עד הזריחה)<sup id="ref247"><a href="#fn247">[247]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהמשנה משמע כדברי שמואל, שהרי המשנה אומרת ששכיר שעות גובה כל הלילה וכל היום<sup id="ref248"><a href="#fn248">[248]</a></sup>. כמו כן, המשנה קובעת ששכיר לתקופה ארוכה גובה במשך כל היממה בה סיים לעבוד, עד השקיעה הקרובה. לכן מסביר רב שמדובר במחלוקת תנאים, והמשנה היא כשיטת <strong>רבי שמעון</strong>, בעוד רב עצמו סובר כ<strong>רבי יהודה</strong>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לך רב: תנאי היא; דתניא:</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שכיר שעות דיום - גובה כל היום, שכיר שעות דלילה - גובה כל הלילה, דברי <strong>רבי יהודה</strong>.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי שמעון</strong> אומר: שכיר שעות דיום - גובה כל היום, שכיר שעות דלילה - גובה כל הלילה וכל היום.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בפסיקת ההלכה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>סמ"ג</strong> (לאוין קפא) פוסק כשמואל, שהלכה כמותו בדיני ממונות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, רוב הראשונים, ובכללם ה<strong>רי"ף</strong> (סח. מדפיו), ה<strong>רא"ש</strong> (סי' מג) וה<strong>רמב"ם</strong> פסקו כרב. הרי"ף מסביר שיש לפסוק כרב כי הלנת שכר היא דבר של איסור ולא של ממון<sup id="ref249"><a href="#fn249">[249]</a></sup>, והלכה כרב באיסורי. הרא"ש מוסיף עוד, שיש לפסוק כרב גם משום שדבריו כרבי יהודה שהלכה כמותו מול ר' שמעון.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד נידונה בגמרא השאלה האם איסור הלנת שכר הוא איסור נקודתי או מתמשך. בעניין זה מובאת <strong>ברייתא</strong> (קי:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ממשמע שנאמר לא תלין פעלת שכיר אתך איני יודע שעד בקר? מה תלמוד לומר עד בקר?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מלמד <strong>שאינו עובר אלא עד בקר ראשון בלבד</strong>.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, על איסור הלנת שכר עוברים בנקודת הזמן הראשונה בה תם זמן הגביה של השכיר. על כל יום שעובר מכאן ואילך אין עוברים על האיסור. לגמרא ברור שגם אם אין עוברים על האיסור במלואו, המעכב שכר שכיר, גם מעבר לזמן האיסור, עובר על איסור כלשהו, גם אם אין זה איסור תורה מובהק-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מכאן ואילך מאי? - אמר <strong>רב</strong>: עובר משום בל תשהא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יוסף</strong> מאי קראה – "אל תאמר לרעך לך ושוב ומחר אתן ויש אתך" (משלי ג כח).</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם מסביר, שאיסור "בל תשהא" הוא כינוי לאיסור מדרבנן<sup id="ref250"><a href="#fn250">[250]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (קיא.) מתייחס <strong>רבה בר רב הונא</strong> למקרים בהם נהוג שהמועד בו עוברים על בל תלין הוא זמן רב יותר לאחר סוף זמן השכירות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבה בר רב הונא</strong>: הני שוקאי דסורא לא עברי משום בל תלין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מידע ידעי דעל יומא דשוקא סמיכי, אבל משום בל תשהא - ודאי עובר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר במקום בו הפועלים השכירים יודעים שבד"כ יש מעות למעסיק רק לאחר יום השוק. הראשונים נחלקו במשמעות ההלכתית של דברי רבה ב"ר הונא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> כותב שכיוון שהפועלים נשכרו על דעת לשלם להם רק ביום השוק, אין זמן התשלום שלה מגיע לפני כן, ולכן אפילו אם יש ביד המעסיק מעות, אין הוא עובר על שום איסור עד לאחר יום השוק. גם לאחר יום השוק אם אין הוא משלם, אין הוא עובר על איסור לא תלין, אלא על האיסור מדרבנן של בל תשהא, וזאת משום שאין עוברים על איסור לא תלין אלא "עד בוקר ראשון בלבד".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> חולק ומסביר שכיוון שלא הוסכם בפירוש שמועד התשלום הוא לאחר יום השוק, עובר המעסיק בבל תשהא אם יש בידו מעות ותבעו הפועל לפני יום השוק. עם זאת, על איסור לא תלין עובר המעסיק רק אם חלף יום השוק ועדיין לא שילם<sup id="ref251"><a href="#fn251">[251]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שלט ג-ה) פוסק כרב, וכראשונים המחילים את דברי רב גם על שכיר לתקופה ארוכה. על סמך אותה הדרך מעיר ה<strong>רמ"א</strong> (שם ג) ששכירי יום היוצאים ממלאכתם קצת לפני השקיעה, עוברים בהם על האיסור מיד עם השקיעה. לעניין שכירים היודעים שישלמו להם רק ביום השוק, פוסק ה<strong>שו"ע</strong> (שלט ט) כדעת רש"י.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    נתן טליתו לאומן וגמרה והודיעו אפילו איחרו עשרה ימים כל זמן שהכלי ביד האומן אינו עובר, נתנה בחצי היום כיון ששקעה עליו חמה עובר משום בל תלין שהקבלנות כשכירות היא וחייב ליתן לו בזמנו.
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בל תלין בקבלן</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קיב.) נשאל <strong>רב ששת</strong> בשאלה האם קבלן, המחוייב כלפי הלקוח להשלמתה של מלאכה מסויימת (בניגוד לשכיר המחוייב לעבוד אצל המעסיק זמן נקוב, בין יעשה הרבה ובין מעט), עובר בבל תלין-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בעו מיניה מ<strong>רב ששת</strong>: קבלנות עובר עליו משום בל תלין או אין עובר משום בל תלין?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אומן קונה בשבח כלי - והלואה היא, או אין אומן קונה בשבח כלי ושכירות היא? –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר להו רב ששת: עובר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא תולה את התשובה בשאלה האם אומן קונה בשבח כלי (עי' לעיל פרק י הלכה ד). אם אומן קונה בשבח כלי, מסירת הכלי ללקוח נחשבת כמכירה, ועל איחור בתשלום למוכר אין עוברים בבל תלין. לעומת זאת, אם אומן אינו קונה בשבח כלי, התשלום לאומן ניתן רק על עבודתו, ובזה דומה הוא לשכיר ויש מקום לומר שעוברים בו בבל תלין. רב ששת עונה שאכן יש בל תלין בקבלן והגמרא מנסה להוכיח זאת מ<strong>ברייתא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הנותן טליתו לאומן, גמרה והודיעו - אפילו מכאן ועד עשרה ימים אינו עובר משום בל תלין, נתנה לו בחצי היום - מששקעה עליו חמה עובר משום בל תלין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">זמן התשלום לאומן על טלית שתיקן האומן מתחיל מהרגע בו מסר האומן את הטלית המתוקנת לידי הלקוח. אם הטלית נמסרה ללקוח ביום וזה לא שילם עד ששקעה החמה, עובר הלקוח בבל תלין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא פורכת הוכחה זו ומעמידה את הברייתא במקרה בו האומן קיבל טלית קשה לרככה ומקבל שכר על פי כמות העבודה שהוא משקיע בה (מעה על כל מכה שהוא מכה בה לרככה). כלומר, אין מדובר בקבלן, אלא בשכיר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שנתבאר לעיל (פרק י הלכה ד) חלקו ראשונים האם אומן קונה בשבח כלי או לא, ונראה שהראשונים הפוסקים שאומן קונה בשבח כלי יסברו שיש בל תלין בקבלן רק בכגון שמקבל כסף לפי העבודה ולא לפי התפוקה (שאז, כאמור, הוא אינו באמת קבלן, אלא שכיר).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> (שם) פוסק שאומן אינו קונה בשבח כלי, ולכן יש בו איסור בל תלין, כפשט הברייתא. כך גם פוסק ה<strong>שו"ע</strong> (שלט ו).</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    האומר לשלוחו צא ושכור לי פועלים, אמר להם שכרכם על בעה"ב שניהם אינן עוברין משום בל תלין זה לפי שלא שכרן וזה לפי שאין פעולתן אצלו ואם לא אמר להם שכרכם על בעל הבית השליח עובר, אין השוכר עובר אלא בזמן שתבעו השכיר ולא נתן לו אבל אם לא תבעו או שתבעו ולא היה לו מה יתן לו או שהמחהו אצל אחר וקבל ה"ז פטור.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין בל תלין כששוכר הפועלים אינו המשלם</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קי:) מובאת <strong>ברייתא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>האומר לחבירו צא שכור לי פועלים - שניהן אין עוברין משום בל תלין, זה - לפי שלא שכרן, וזה לפי שאין פעולתו אצלו</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל (פרק ט הלכה ג) התבאר שכאשר אדם שוכר פועלים לעבוד בשדה של אדם אחר, נחשבים הם כפועלים שלו לכל דבר ועליו לשלם להם מכיסו על פי התעריף שציין בפניהם (במקביל, זכאי הוא לקבל אח"כ החזר מבעל השדה בו עבדו, על פי מידת ההנאה שנגרמה לבעל השדה). לעומת זאת, אם השוכר אומר לפועלים ששכרם על בעל הבית, אין בעל הבית מחוייב לשלם להם לפי השער שציין בפניהם השוכר, וזאת משום שבעל הבית משלם להם על ההנאה שגרמו לו בעבודתם (כדין המהנה את חבירו), והשוכר כלל אינו מחוייב להם, כיוון שאמר להם מראש ששכרם על בעל הבית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא מלמדת שבמקרה השני לא בעל הבית ולא השוכר מתחייבים בבל תלין על עיכוב שכר הפועלים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>נימוקי יוסף</strong> (סז: מדפי הרי"ף) כותב שדברי הברייתא נסמכים על הכתוב "לא תלין פעולת <strong>שכיר אתך</strong>...". ממנו נלמד שהפועל חייב להיות שכיר של בעל הבית, כך שהסכם השכירות יהיה מולו ("שכיר"), וגם עושה מלאכה לטובתו ("אתך").</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שלט ז) פוסק כדברי הברייתא.</p>
+                    
+                </div>
+                
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תנאים לחיוב בל תלין- תביעת השכיר, זמינות המעות וזהות המשלם.</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (קיא.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אימתי - בזמן שתבעו, לא תבעו - אינו עובר עליו</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המחהו אצל חנוני או אצל שולחני - אינו עובר עליו</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קיב.) מובאת <strong>ברייתא</strong> ובה המקור לדין זה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא תלין פעלת שכיר יכול אפילו לא תבעו - תלמוד לומר "אתך"- לדעתך.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יכול אפילו אין לו - תלמוד לומר "אתך"- שיש אתך.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יכול אפילו המחהו אצל חנוני ואצל שולחני - תלמוד לומר "אתך"- ולא שהמחהו אצל חנוני ואצל שולחני.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא לומדת את הפסוק "לא תלין פעולת שכיר <strong>אתך</strong>" באופן שהמילה "אתך" מתייחסת לתשלום ומסיקה ממילה זו שלושה דינים (שנים מתוכם נמנו במשנה)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המעסיק עובר על בל תלין רק אם תבעו השכיר בזמנו ולא שילם לו. הדבר נלמד מהמילה "אתך"- לדעתך. פירוש, צריך שמאחורי עיכוב המעות תהיה מחשבת זדון של המעסיק המעדיפה השארת הכסף <strong>איתו</strong> מנתינה לשכיר התובעו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המעסיק עובר על בל תלין רק אם יש בידו מעות ובכל זאת הוא אינו משלם. גם דין זה נלמד מהמילה "אתך" המורה על השארת כסף הקיים אצל המעסיק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם המחה המעסיק אצל חנווני\שולחני, כלומר ביקש מהם לתת לשכיר פירות או מעות, והוא, המעסיק, ישלם להם אח"כ והסכימו הם והסכים השכיר, אין עובר המעסיק על בל תלין ("אתך"- שהמעות צריכים להגיע ממך ולא מאחר). דין זה אמור אפילו אם עדיין לא שילם המעסיק דבר לחנווני\שולחני.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הדין השלישי, לקמן יידונו הפרטים בנוגע לאופי ההתחייבות בין השלושה- המעסיק השכיר והחנווני, ואפשרותם של השכיר או החנווני לחזור בהם.</p>
+                    
+                </div>
+                
+                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המחהו אצל חנווני\שולחני, האם חוזר בו?</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוגע למקרה בו המחה אצל חנווני\שולחני, נחלקו האמוראים (שם)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איבעיא להו: חוזר או אינו חוזר?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב ששת</strong> אמר: אינו חוזר, ו<strong>רבה</strong> אמר: חוזר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר רבה: מנא אמינא לה - מדקתני: אינו עובר עליו, מעבר הוא דלא עבר, - הא מיהדר - הדר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ורב ששת אמר: מאי אינו עובר - אינו בתורת לעבור.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב</strong><strong>ה</strong> סובר שאם התחרט השכיר, והחנווני לא נתן לו את התמורה שסוכמה, יכול הוא לחזור אצל המעסיק ולבקש את התשלום ישירות ממנו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו סובר <strong>רב ששת</strong>, שמהרגע בו הוסכם שהשכיר יקבל פירות אצל החנווני והחנווני יקבל החזר מהמעסיק, אין אחד הצדדים יכל לחזור בו ושוב אין לשכיר תביעה כלפי המעסיק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הפוסקים פסקו להלכה כרבה, אך נחלקו בהבנת המחלוקת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (שם ד"ה "חוזר") מציעים כמה הסברים למחלוקת רב ששת ורבה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי הסבר אחד, מדובר בכגון שהשולחני מסרב לתת את מה שהתחייב, ועתה חלוקים האמוראים האם השכיר תובע את השולחני, או שתביעתו חוזרת על המעסיק. על פי דרך זו מסבירים התוס' שהמחלוקת היא האם השולחני יכול לחזור בו, כיוון שסוף סוף לא נעשה קניין, או שמא אינו יכול לחזור בו, כדין ערב המתחייב לשלם אף ללא קניין. רבה סובר שהשולחני יכול לחזור בו, וממילא לא סביר שהשכיר מחל למעסיק על התשלום, כיוון שאין אדם מוחל למישהו שחייב לו ומסתמך על אחר שאינו חייב לו. לעומת זאת, רב ששת סובר שהשולחני אינו יכול לחזור בו, ולכן אפשר שהשכיר באמת מחל למעסיק מכיוון שהחנווני מחוייב לו באופן מוחלט.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסבר אחר הוא שבאמת, לכ"ע במקום בו החנווני ממאן לשלם, חוזר השכיר על המעסיק, כיוון שבוודאי שלא וויתר על זכויותיו בכגון דא. במקרה הנידון כאן החנווני מוכן לשלם, אלא שהשכיר עצמו שינה את דעתו, ועתה מעדיף לקבל מעות מהמעסיק ולא מזון מהחנווני.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסבר שלישי הוא שכלל אין מדובר בשאלה האם וויתר השכיר על חובותיו של המעסיק כלפיו במידה כלשהי, ובוודאי שכולם מודים שבכל זמן שירצה השכיר, חוזר ותובע את המעסיק, בין אם החנווני חפץ לשלם לו ובין אם לא. המחלוקת היא ביחס לאיסור בל תלין והיא אמורה במקרה בו עוד בתוך זמן התשלום חזר בו השכיר מהסכמתו ליטול מהחנווני. לדעת רב ששת, כיוון שזמן מסויים ניתן המעסיק מחובת התשלום הישירה לשכיר, שוב אינו עובר על בל תלין. לדעת רבה, כיון שסוף סוף חזרו דברים לכפי שהיו לפני שהמחהו אצל החנווני, וכיוון שתום זמן הגביה, בו עוברים על איסור בל תלין, עוד לא הגיע, חוזר המצב לקדמותו, ושוב יתחייב המעסיק בבל תלין אם לא ישלם לשכיר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חשוב להדגיש שעל פי שני ההסברים האחרונים, יכול השכיר לחזור בו אפילו אם החנווני אינו יכול לחזור בו, וכן פסק ה<strong>טור</strong> (שלט).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף</strong> (סח. מדפיו) תומך בהסבר הראשון, אך מוסיף שמחלוקת האמוראים היא דווקא בכגון שהחנווני אינו חייב למעסיק כלום (אלא המעסיק מבקשו לתת פירות לשכיר ואת תמורתם יקבל בהקפה), אך אם חייב החנווני למעסיק מלפני כן, חל הדין לפיו ניתן להעביר חוב ב"מעמד שלושתם"<sup id="ref252"><a href="#fn252">[252]</a></sup> ולכן אין החנווני יכול לחזור בו, ומתוך שאין החנווני יכול לחזור בו אף אין השכיר יכול לחזור בו, כל עוד יכול החנווני לעמוד בהתחייבותו<sup id="ref253"><a href="#fn253">[253]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שלט י) כותב כדברי רבה וכפירוש התוספות והטור, לפיהם השכיר יכול לחזור בו אף אם החנווני אינו חוזר בו.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המשהה שכר שכיר עד אחר זמנו אף על פי שכבר עבר בעשה ול"ת ה"ז חייב ליתן מיד, וכל עת שישהה עובר על לאו של דבריהם שנאמר אל תאמר לרעך לך ושוב.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור "בל תשהא"</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' לעיל בעמוד 172, "זמן הגביה וזמן האיסור".</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    כל שכיר ששכרו בעדים ותבעו בזמנו ואמר בעל הבית נתתי לך שכרך והשכיר אומר לא נטלתי כלום תקנו חכמים שישבע השכיר בנקיטת חפץ ויטול כדין כל נשבע ונוטל מפני שבעל הבית טרוד בפועליו וזה השכיר נושא נפשו לזה, אפילו היה השכיר קטן השכיר נשבע ונוטל, שכרו שלא בעדים מתוך שיכול לומר לא היו דברים מעולם ולא שכרתיך נאמן לומר שכרתיך ונתתי לך שכרך וישבע בעל הבית היסת שנתן או שבועת התורה אם הודה במקצת כשאר הטענות, היה לו עד אחד ששכרו אינו מועיל לו כלום וכן אם תבעו אחר זמנו אף על פי ששכרו בעדים המוציא מחבירו עליו הראייה, ואם לא הביא ראייה ישבע בעל הבית היסת, הביא ראייה שתבעו כל זמנו ה"ז נשבע ונוטל כל אותו היום של תביעה, כיצד היה עושה עמו ביום שני עד הערב זמנו כל ליל שלישי וביום השלישי אינו נשבע ונוטל, ואם הביא עדים שהיה תובעו כל ליל שלישי ה"ז נשבע ונוטל כל יום שלישי אבל מליל רביעי והלאה המוציא מחבירו עליו הראייה, וכן אם הביא עדים שהיה תובעו והולך עד יום ה' ה"ז נשבע ונוטל כל יום ה'. אפילו היה השכיר קטן השכיר נשבע ונוטל. א"א אין הדעת מסכמת על זה שנמסור שבועה לקטן אלא ישבע בעל הבית ואף על פי שאין תביעת קטן כלום.
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שכיר בזמנו נשבע ונוטל</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדרך כלל, כאשר אדם תובע את חבירו ללא ראיה, וחבירו כופר בכל, הדין הוא שהמוציא מחבירו עליו הראיה<sup id="ref254"><a href="#fn254">[254]</a></sup>. ב<strong>משנה</strong> (ב"מ קיא.) מוצגת תקנה יוצאת דופן, לפיה אם שכיר תובע (ללא הבאת ראיה נוספת) את המעסיק וטוען שלא קיבל את שכרו, והמעסיק טוען שכבר שילם לו, נשבע השכיר על נכונות תביעתו ונוטל מהמעסיק-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שכיר בזמנו - נשבע ונוטל, עבר זמנו - אינו נשבע ונוטל.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם יש עדים שתבעו (בזמנו) - הרי זה נשבע ונוטל.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה מגבילה תקנה זו ל"זמנו" של השכיר. כלומר, מדובר דווקא בשכיר התובע את המעסיק לפני שמגיע הזמן בו עובר הלה על "בל תלין", והמעסיק טוען ששילם לו מכבר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין זה מובא גם במשנה בשבועות (מד:) כמחלוקת תנאים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>השכיר כיצד?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו: תן לי שכרי שיש לי בידך, הוא אומר: נתתי, והלה אומר: לא נטלתי - הוא נשבע ונוטל</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יהודה</strong> אומר: עד שתהא שם מקצת הודאה,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כיצד? אמר לו: תן לי שכרי חמשים דינר שיש לי בידך, והוא אומר: התקבלת דינר זהב [דינר זהב = 25 דינר].</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת <strong>רבי יהודה</strong> השכיר נשבע ונוטל רק במקרה בו המעסיק מודה במקצת, כגון שהשכיר טוען שהמעסיק לא שילם לו דבר, בעוד שהלה טוען שכבר שילם חלק. במקרה זה חובת השבועה מן התורה, מדין מודה במקצת, חלה על המעסיק, והעבירוה חכמים, לדעת ר' יהודה, לשכיר (<strong>רש"י</strong>).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ב"מ קיב:) דנה בטעם הדין-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שבועה דבעל הבית היא ועקרוה רבנן לשבועה דבעל הבית ושדיוה אשכיר, משום כדי חייו דשכיר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומשום כדי חייו דשכיר מפסדנא ליה לבעל הבית?...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא, בעל הבית טרוד בפועלים הוא. –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי ניתב ליה בלא שבועה! –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כדי להפיס דעתו של בעל הבית.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מעלה שני טעמים לתקנה. הראשון הוא שחכמים איפשרו לשכיר להישבע וליטול משום "כדי חייו של שכיר", כלומר, מתוך דאגה לפרנסתו הדחוקה של השכיר<sup id="ref255"><a href="#fn255">[255]</a></sup>. טיעון אחר הוא ש"בעל הבית טרוד בפועלים". בסוף דבריה אף מציעה הגמרא שיטול השכיר ללא שבועה כלל, ומסבירה שתפקידה של שבועת השכיר הוא "להפיס דעתו של בעל הבית".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם ה<strong>ירושלמי</strong> (שבועות פ' ז הל' א) מתייחס לטעם התקנה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר' אבין</strong> על ידי שבעל הבית עסקיו מרובין תיקנו בשכיר לישבע וליטול,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ודכוותה תיקנו בבעל הבית שאם עבר זמנו שלא ישבע ויטול.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בהבנת טעם התקנה ששכיר נשבע ונוטל -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (שבועות מה. ד"ה "וניתב") מסבירים שדין זה דומה לדין בו אדם תובע את חבירו- "מנה לי בידך" והלה משיב "איני יודע אם החזרתיו" (ב"ק קיח. במשנה). במקרה זה הדין הוא שהתובע נוטל מהנתבע ללא שבועה. גם בנידון דנן, כיוון שהמעסיק טרוד, אנו מתייחסים לטענתו כ"איני יודע אם פרעתי", למרות שהוא טוען בוודאות ששילם לפועל. ההבדל הוא שכאן מחייבים את השכיר בשבועה בכדי להפיס את דעתו של המעסיק, שסוף סוף טוען בתוקף ששילם. על פי דרך זו, טעם התקנה המרכזי אינו טובת השכיר ("כדי חייו של שכיר") אלא מצבו הפסיכולוגי של המעסיק ("בעה"ב טרוד בפועליו").</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זה, ה<strong>רי"ף</strong> (שבועות כה: מדפיו), ה<strong>רמב"ן</strong> (שבועות מה.), ה<strong>רשב"א</strong> (שם) וה<strong>ריטב"א</strong> (שם), פרשו שעיקר התקנה נתקנה לטובתו של השכיר, בכדי למנוע מצב בו שכיר יצא מעבודתו ריקם. לטעם של "בעה"ב טרוד בפועליו" חשיבות משנית והוא נצרך רק בכדי להסביר מדוע לא חייבו את המעסיק להישבע ולהיפטר<sup id="ref256"><a href="#fn256">[256]</a></sup>, והעדיפו שהשכיר ישבע ויטול. סמך לפירוש זה ניתן למצוא בדברי הירושלמי (שהובאו לעיל), לפיהם תיקנו חכמים תקנה כפולה- תיקנו לשכיר שיישבע ויטול, בכדי למנוע מצב בו בגלל טרדת בעל הבית לא יקבל השכיר את שכרו, ולעומת זה, לטובת בעל הבית ("ודכוותה תיקנו..."), תיקנו שזכות זו של השכיר תוגבל רק לתביעה בזמנו. הסבר זה עולה בקנה אחד עם שיטת הרי"ף, לפיו התקנה היא לטובת השכיר, ולכן הגבלתה בזמן נובעת מאיזון בין טובת השכיר לבין טובת המעסיק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (פט ב) כותב את דין השכיר הנשבע ונוטל על פי שיטת ת"ק במשנה.</p>
+                    
+                </div>
+                
+                <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שכיר שתבע את המעסיק לאחר זמנו, והמעסיק טוען שכבר שילם</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא ממשיכה ומבררת מדוע תיקנו חכמים את התקנה המתוארת במשנה רק אם השכיר תבע בזמנו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי, אפילו עבר זמנו נמי! ...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חזקה אין בעל הבית עובר משום בל תלין. –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והא אמרת בעל הבית טרוד בפועליו הוא! –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הני מילי מקמיה דלימטייה זמן חיוביה, אבל מטא זמן חיוביה - רמי אנפשיה ומידכר. –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכי שכיר עובר משום בל תגזל? –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>התם תרי חזקי, הכא חדא חזקה – גבי בעל הבית איכא תרי חזקי: חדא דאין בעל הבית עובר משום בל תלין, וחדא דאין שכיר משהא שכרו. והכא - חדא חזקה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בתוך זמן התשלום המעסיק טרוד בפועליו ולעיתים מתוך בלבול אומר ששילם למרות שאין הדבר נכון. עדיין, בסמוך לסוף זמן התשלום (בו עוברים על בל תלין) כיוון שההשלכה של אי תשלום היא עבירה על איסור תורה, המעסיק חושב ומדקדק עם עצמו האם שילם או לא, ואם עתה, לאחר סוף זמן התשלום, הוא טוען ששילם, יש להאמינו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לחזקה זו, שאין המעסיק מניח לעצמו לחטוא בהלנת שכר בגלל טירדה ושיכחה, מצטרפת עוד חזקה- "אין שכיר משהה שכרו". כלומר, קרוב לוודאי שהשכיר לא המתין, ותבע את בעל הבית עוד בתוך זמן התשלום<sup id="ref257"><a href="#fn257">[257]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השילוב של שתי חזקות אלה גובר על חזקה התומכת בגירסתו של הפועל- שאין השכיר עובר על לא תגזול (ע"י תביעת שכרו פעמיים), ולכן פועל התובע לאחר זמנו אינו נשבע ונוטל אלא המוציא מחבירו עליו הראיה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי ה<strong>ירושלמי</strong> (הובאו גם לעיל), יכול להשתמע הסבר שונה לגבי הטעם שבעטיו שכיר נשבע ונוטל רק בזמנו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר' אבין</strong> על ידי שבעל הבית עסקיו מרובין תיקנו בשכיר לישבע וליטול,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ודכוותה תיקנו</strong> בבעל הבית שאם עבר זמנו שלא ישבע ויטול.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שנתבאר בנושא הקודם, משמע מדברים אלו שהגבלת הדין רק לתביעה בזמנו היא תקנה משלימה, שבאה לצמצם את התקנה הראשונה (שכיר נשבע ונוטל), בכדי לא לפגוע במעסיקים יתר על המידה.</p>
+                    
+                </div>
+                
+                <div id="topic-5-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מתי שכיר נשבע ונוטל אף לאחר זמנו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, המשנה (קיא.) קובעת שלמרות שבאופן רגיל שכיר שתבע את בעל הבית לאחר זמנו אינו נשבע ונוטל, "אם יש עדים שתבעו הרי זה נשבע ונוטל" אפילו אם תבעו לאחר זמנו. הגמרא (ב"מ קיג.) דנה בדברי המשנה -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבי אסי</strong>: שתבעו בזמנו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ודלמא לבתר הכי פרע!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אביי</strong>: שתבעו כל זמנו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ולעולם?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב חמא בר עוקבא</strong>: כנגד אותו היום של תביעה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהגמרא עולה שטעם דברי המשנה, שאם יש עדים שתבעו בזמנו נשבע ונוטל, הם משום שעדות כזו מורה על כך שבודאי לא שילם בעל הבית לשכיר את שכרו בזמנו. לכן דין שכיר נשבע ונוטל מועבר ללאחר זמנו. לגמרא ברור שבכל אופן הזמן בו יכול השכיר להישבע וליטול לאחר זמנו מוגבל, ולכן היא שואלת "ולעולם?", ועונה, שאכן הזמן מוגבל- כנגד יום התביעה בלבד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ירושלמי</strong> (שבועות פ' ז הל' א) נחלקו האמוראים בעניין זה:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תני <strong>ר' חייה</strong> אם יש עדים שתבעו בזמנו אפילו לאחר שנה נשבע ונוטל</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר</strong><strong>'</strong><strong> יוסי</strong> אין לו אלא אותו היום בלבד.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעוד <strong>ר' יוסי</strong> מבטא את עמדת הבבלי, שהתקנה מוגבלת תמיד בזמן, <strong>ר' חייה</strong> סובר שאם יש עדים שתבעו בזמנו, שוב אין התקנה מוגבלת בזמן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו במחלוקת הדומה למחלוקת האמוראים בירושלמי-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים פרשו את דברי הבבלי כפשוטם, הבינו שזמן התקנה מוגבל תמיד, וכמו כן הבינו ש"כנגד אותו היום של תביעה" הכוונה ליום לאחר זמנו של השכיר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, <strong>בעל המאור</strong> (ב"מ סח: מדפי הרי"ף) מסביר את דברי ר' חמא בר עוקבא "כנגד אותו היום של תביעה" ברוח שיטת ר' חייה בירושלמי (אף שאינו מביאו כסמך לדבריו), וכותב שאם יש עדים שתבעו כל זמנו ואמר לו שנתן, יכול השכיר להישבע וליטול אפילו לאחר זמן רב. בעל המאור מסביר שבמקרה זה החזקות שבד"כ לא מאפשרות לשכיר להישבע וליטול לאחר זמנו מתערערות- השכיר תבע בזמנו כנדרש, ולכן אין ריעותא בטענתו, וכמו כן סביר שבעל הבית לא דיקדק עם עצמו לפני שעבר הזמן אלא נמשך אחר הטענה שטען מול השכיר בראשונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (פט ג) כותב כדברי רב חמא בר עוקבא בבבלי, ופוסק כשיטת ר' יוסי בירושלמי וכשיטת רוב הראשונים, שאף אם תבעו כל זמנו ולא נתן לו, התקנה מוגבלת בזמן של תקופה אחת (יום או לילה) לאחר המועד האחרון בו תבע.</p>
+                    
+                </div>
+                
+                <div id="topic-5-4" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">במקרה בו שכרו ללא עדים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסוגיה בשבועות (מה:) מסייגת את זכותו של השכיר להישבע וליטול-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב נחמן</strong> אמר <strong>שמואל</strong>: לא שנו אלא ששכרו בעדים, אבל שכרו שלא בעדים, מתוך שיכול לומר לו לא שכרתיך מעולם, יכול לומר לו שכרתיך ונתתי לך שכרך.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב נחמן</strong> מעמיד את המשנה במקרה בו השכיר נשכר בעדים. לעומת זה, כאשר אין עדים על עצם העובדה שהשכיר נשכר לבעל הבית, הדבר מאפשר, עקרונית, למעסיק לכפור בכך ששכרו. מתוך יכולת זו, יכול לומר לו "שכרתיך ונתתי לך שכרך" ואין השכיר נשבע ונוטל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים הצביעו על בעייתיות כפולה במיגו זה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן הרגיל, מיגו מלמד על כך שאדם אינו משקר במודע, משום שלו היה רוצה לשקר היה טוען טענה כדאית יותר. ברם, בנידון דנן ההנחה היא שהמעסיק אינו משקר, אלא מכיוון שהוא טרוד בפועליו נדמה לו ששילם לשכיר והוא חושב שאמת הוא טוען.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם אילו היה המעסיק חשוד בשקר מודע קשה לומר את המיגו בנידון דנן, משום שמדובר ב"מיגו דהעזה". פירוש- גם אדם המבקש לשקר יימנע מלשקר שקר בוטה, כמו לומר לשכיר שמעולם לא שכרו, ויעדיף לשקר שקר פחות בוטה, כמו לומר לשכיר שכבר שילם לו<sup id="ref258"><a href="#fn258">[258]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> מתייחס לבעיה הראשונה ומתרץ שהמעסיק אינו טוען בתום לב גמור. הוא אינו זוכר (או לפחות אינו בטוח בצדקתו) ומעדיף לשקר ולומר שהוא בטוח שכבר שילם. לכן דין מיגו שייך גם כאן. באופן דומה מתרץ גם ה<strong>ריטב"א</strong>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי השאלה השניה עלו בפוסקים כמה תשובות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong> מביא את דברי הרמב"ן דלעיל ועל בסיסם מתרץ בשם <strong>רבינו יונה</strong> את השאלה השניה. לדבריו, כיוון שתום ליבו של המעסיק אינו גמור, טענתו כלפי השכיר שוודאי שילם לו אף היא כרוכה בהעזה מסויימת, ולכן יכול להשתמש בטענה האלטרנטיבית במיגו, על אף שהיא כרוכה ביותר העזה<sup id="ref259"><a href="#fn259">[259]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> מתרץ בשם רבו ה<strong>רא"ה</strong> באופן אחר, שיש לו השלכה הלכתית משמעותית. לדעת הרא"ה אם אין עדים ששכרו, השכיר אמנם אינו יכול ליטול בשבועה, אך המעסיק חייב עדיין להישבע שבועת התורה (ולא רק שבועת היסת!) בכדי להיפטר<sup id="ref260"><a href="#fn260">[260]</a></sup>. לכן, הטענה האלטרנטיבית שקולה לטענה שאמר בפועל, וניתן להשתמש בה בהקשר של מיגו- אם היה טוען שלא שכרו מעולם, היה פטור משבועה, אף שבטענה יש העזה, לעומת זאת, הטענה שאמר בפועל, ששכרו ושילם שכרו, אינה כרוכה בהעזה, אך כן כרוכה בשבועה<sup id="ref261"><a href="#fn261">[261]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מסביר שאם המעסיק בטוח ששילם, הרי הוא מתייחס לטענתו של השכיר כאל שקר גמור וזדוני. על רקע זה הוא מוכן גם כן לשקר ולהעיז פניו בפני השכיר (שלדעתו של המעסיק היה הראשון שהעיז פנים). מאחר שמבחינה פסיכולוגית הופכת טענת לא שכרתיך ללגיטימית, ניתן להשתמש בה בהקשר של מיגו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים רבים מביאים גם את דעתו של <strong>ר' האי גאון</strong>, המסביר שמפאת הדאגה לשכיר, תיקנו חכמים לטובתו תקנה הנוטה מעיקר הדין, ולכן בכל מצב בו יש מקום להחזיק את הדין לראשיתו, אפילו בגלל טעם קל כמו מיגו שבהקשר אחר לא ניתן לאומרו, ביטלו תקנתם והחזירו את הדין לראשיתו<sup id="ref262"><a href="#fn262">[262]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד נחלקו הראשונים מה הדין כאשר יש רק עד אחד ששכרו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' ישעיה</strong> (מובא בטור) סובר שבמקרה זה השכיר נשבע ונוטל כאילו היה מדובר בשני עדים המעידים ששכרו<sup id="ref263"><a href="#fn263">[263]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> (מובא ב<strong>טור</strong> שם) סובר שבמקרה זה אמנם אין השכיר נשבע ונוטל, אך המעסיק נשבע שבועת התורה בכדי להיפטר<sup id="ref264"><a href="#fn264">[264]</a></sup>. כדבריו מצדד ה<strong>טור</strong> (שם).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>רמב"ם </strong>כותב בפירוש שאם שכרו בעד אחד הרי זה כאילו שכרו ללא עדים כלל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (פט ג) כתב כדברי הרמב"ם, שרק אם שכרו בשני עדים נשבע השכיר ונוטל, ואם לא נשבע בעל הבית היסת ונפטר. לעומתו כתב ה<strong>רמ"א</strong> כדברי הרמ"ה והטור, שאם יש עד אחד ששכרו, נשבע בעל הבית שבועת התורה ונפטר.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    בעה"ב אומר שתים קצצתי לך והשכיר אומר שלש קצצת לי לא תקנו חכמים שישבע השכיר כאן אלא המוציא מחבירו עליו הראייה, ואם לא הביא ראיה אף על פי שכבר נתן לו שתים או שאמר לו הילך הרי בעל הבית נשבע בנקיטת חפץ ודבר זה תקנת חכמים הוא כדי שלא ילך השכיר בפחי נפש, בד"א בששכרו בעדים ולא ידעו כמה פסק לו ותבעו בזמנו אבל אם שכרו שלא בעדים או שתבעו אחר זמנו ישבע בעה"ב היסת שלא קצץ לו אלא מה שכבר נתן לו או שלא נשאר לו אצלו אלא זה שאמר לו הילך כדין כל הטענות.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מחלוקת בין המעסיק לשכיר על גובה השכר שסוכם</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בשבועות (מה:) מובאת <strong>ברייתא</strong> כהנְגָדה לדין השכיר הנשבע ונוטל-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תניא: אומן אומר שתים קצצת לי, והלה אומר לא קצצתי לך אלא אחת - <strong>המוציא מחבירו עליו הראיה</strong>!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה שההבדל נעוץ בכך ש</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>קציצה ודאי מידכר דכיר ליה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בניגוד לשאלה <strong>האם</strong> המעסיק שילם או לא, בה אין לסמוך על דעת השכיר, שהרי הוא טרוד בפועליו, לגבי השאלה <strong>כמה</strong> סוכם, אין טרדת הפועלים משפיעה על זכרונו של המעסיק<sup id="ref265"><a href="#fn265">[265]</a></sup> ויש לסמוך על דבריו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהתאמה, נשנית בהמשך <strong>ברייתא</strong> המרחיבה את דין המשנה, ממנה משתמע שתקנת חכמים ששכיר נשבע ונוטל שייכת רק במחלוקת על עצם נתינת השכר אך לא על גובהו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אשכחיה <strong>רב ששת</strong> ל<strong>רבה בר שמואל</strong>, אמר ליה: תני מר מידי בשכיר? אמר ליה: אין, תנינא:</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שכיר בזמנו נשבע ונוטל, כיצד?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בזמן שאמר לו: שכרתני ולא נתת לי שכרי, והלה אומר: שכרתיך ונתתי לך שכרך,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אבל אמר לו: שתים קצצת לי, והלה אומר: לא קצצתי לך אלא אחת - <strong>המוציא מחבירו עליו הראיה</strong></blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (מו.) נשמעת הלכה מפי <strong>שמואל</strong>, שלכאורה סותרת את המקורות הנ"ל-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר</strong><strong>'</strong><strong> ירמיה בר אבא</strong>, שלחו ליה מבי <strong>רב</strong> ל<strong>שמואל</strong>:</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ילמדנו רבינו, אומן אומר שתים קצצת לי, והלה אומר לא קצצתי לך אלא אחת, מי נשבע?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר להן: בזו <strong>ישבע בעל הבית</strong> ויפסיד אומן, קציצה ודאי מידכר דכירי אינשי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדומה לדברי הברייתא, שמואל סובר שלגבי גובה קציצת השכר ניתן לסמוך על זכרונו של המעסיק. אמנם בניגוד  לדברי הברייתא, שפסקה בפשטות שהמוציא מחברו עליו הראיה, גם לשואלי השאלה וגם לשמואל, ברור שאחד הצדדים צריך להישבע! בשלב השאלה עדיין קיימת האפשרות שיהיה זה השכיר, כדין שכיר הנשבע ונוטל, אך בשלב התשובה מכריע שמואל שהמעסיק הוא הנשבע ונפטר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב נחמן</strong> מבאר את דברי הברייתות באופן שיעלה בקנה אחד עם דברי שמואל-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב נחמן</strong>: לצדדין קתני, <strong>או</strong> מביא ראיה ויטול, <strong>או</strong> ישבע בעל הבית ויפסיד אומן</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם) מביאה <strong>ברייתא</strong> נוספת ממנה משמע שגם במחלוקת על קציצת השכר נוהג דין שכיר נשבע ונוטל-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מיתיבי: הנותן טליתו לאומן, אומן אומר קצצת לי שתים, והלה אומר לא קצצתי לך אלא אחת,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כל זמן שטלית ביד אומן - על בעה"ב להביא ראיה,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נתנה לו, בזמנו - נשבע ונוטל, עבר זמנו – המוציא עליו הראיה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, הברייתא אומרת, שגם במחלוקת לגבי קציצה, כל זמן שהשכיר תובע בזמנו (זמן התשלום הצמוד למועד מסירת הטלית המתוקנת), נשבע ונוטל!</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב נחמן בר יצחק</strong> מתרץ שברייתא זו, הגורסת ששכיר נשבע ונוטל אף במחלוקת על גובה השכר היא כשיטת ר' יהודה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב נחמן בר יצחק</strong>: הא מני? ר' יהודה היא, דאמר: כל זמן ששבועה נוטה אצל בעה"ב, שכיר נשבע ונוטל...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: בהא קמיפלגי, רבי יהודה סבר: בדאורייתא עבדו ליה תקנתא לשכיר, ובדרבנן הואי תקנתא, ותקנתא לתקנתא לא עבדינן; ורבנן סברי: בדרבנן נמי עבדינן תקנתא לשכיר, וקציצה מידכר דכיר</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לדעת ר' יהודה, תקנת חכמים להיטיב עם השכיר היא שבכל מצב בו המעסיק מודה במקצת ומתוך כך מתחייב שבועה מהתורה, תיקנו חכמים שבמקום שהוא יישבע ויפטר, יישבע השכיר ויטול. לכן, גם במקום בו המחלוקת היא על גובה השכר, כיוון שהמעסיק נחשב כמודה במקצת, חובת השבועה מוטלת עליו מהתורה, ולטובת השכיר העבירו חכמים את השבועה אליו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זה, לפי חכמים, תקנת חכמים אינה נסמכת על מצב דאורייתא, ובכל מקרה שקלו לגופו אם ראוי לתקן שישבע השכיר ויפטר או לא. במקרה בו המחלוקת היא על מתן השכר, מתוך שהמעסיק עלול לשיכחה בזה, תיקנו שישבע השכיר ויטול, אך במחלוקת לגבי גובה השכר, מכיוון שסביר שהמעסיק זוכר היטב, לא תיקנו שהשכיר ישבע ויטול.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לכל הפוסקים ברור שהלכה כחכמים במחלוקתם על ר' יהודה, ברם נחלקו בשאלה האם תקנת חכמים לטובת השכיר בכלל קיימת במצב בו המחלוקת עם המעסיק היא על קציצת השכר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ר"י מיגאש</strong> (שבועות מה. ד"ה "הני") כותב שחכמים תיקנו שבועה כעין דאורייתא (בנקיטת חפץ) על המעסיק במקום בו המחלוקת היא על גובה קציצת השכר. כלומר, גם במקום בו המעסיק פטור משבועת מודה במקצת מן התורה (למשל, אם כבר נתן לו את דמי השכר לשיטתו, שאז הם נחלקים רק על תשלום ההפרש) תקנו חכמים לטובת השכיר שישבע המעסיק שבועה כעין של תורה ויפטר. בשיטה זו עומדים גם ה<strong>רמב"ם</strong>, ה<strong>רמב"ן</strong> (במלחמות ה') וראשונים נוספים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, <strong>בעל המאור</strong> (שבועות כו: מדפי הרי"ף) סובר שכאשר המחלוקת בין המעסיק לשכיר היא על גובה השכר, לא תיקנו חכמים שום תקנה. לכן, אם המצב עונה לקריטריונים של מודה במקצת (כגון שעוד לא ניתן חלק הכסף עליו שני הצדדים מודים) נשבע המעסיק שבועת מודה במקצת מהתורה, אך אם כבר נתן לו את חלק השכר ששניהם מסכימים עליו, אינו נשבע עוד, ופטור (בשבועת היסת) כדין כל הנתבע ללא ראיה וכופר בכל. מדברי ה<strong>תוספות</strong> (שבועות מה. ד"ה "אפילו") נראה שכך גם דעתם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">יצויין שמחלוקת זו מקבילה בדיוק למחלוקת הראשונים באשר לטעם דין שכיר נשבע ונוטל (עי' לעיל בנושא "שכיר בזמנו נשבע ונוטל")- השיטה הסוברת שמדובר בתקנת חכמים לטובת השכיר הכוללת שבועה שתוקנה מעיקרה על המעסיק והועברה לשכיר במקום בו המעסיק אינו זוכר טוב, מתאימה לשיטת הר"י מיגאש וסיעתו, לפיה במקום בו סביר שהמעסיק זוכר נכון, הוחזרה התקנה למקומה והשבועה חלה על המעסיק. לעומת זאת, השיטה הסוברת שטעם התקנה הוא התייחסות לדברי המעסיק כאמירת "איני יודע", מתאימה לשיטת בעל המאור וסיעתו, לפיהם כאשר המעסיק כן זוכר (בגובה השכר שקצץ), בטלה התקנה מעיקרה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (פט ד) פסק כדברי הר"י מיגאש וסיעתו, וה<strong>ש"ך</strong> (שם ס"ק ט) חלק ופסק כדברי בעל המאור וסיעתו, שבמחלוקת על גובה השכר קיימת רק שבועת מודה במקצת דאורייתא ותו לא.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-7" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    הנותן טליתו לאומן אומן אומר ב' קצצת לי והלה אומר לא קצצתי אלא אחד כל זמן שהטלית ביד האומן אם יכול לטעון שהיא לקוחה בידו הרי האומן נשבע בנקיטת חפץ ונוטל, ויכול לטעון שהיא בשכרו עד כדי דמיה, ואם יצאת טלית מתחת ידו או שאין לו בה חזקה ואינו יכול לטעון שהיא לקוחה בידו המוציא מחבירו עליו הראייה ואם לא הביא ראייה ישבע בעל הטלית היסת או שבועת התורה אם הודה במקצת כדין כל הטענות שאין זה כדין השכיר.
+                </div>
+                
+
+                
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מחלוקת בין בעל הבית לבין אומן על גובה השכר שסוכם</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן כללי ישנה חזקה שמיטלטלין שתחת ידו של אדם, שלו הם. לכן אדם הטוען לבעלות על חפץ הנמצא תחת יד חבירו, עליו הראיה, וכל עוד לא הביא ראיה אין מוציאים את החפץ מתחת יד מי שמחזיקו. ה<strong>גמרא</strong> בבבא בתרא (מה.) דנה בשאלה האם גם בטוען כלפי אומן הדין כך. כלומר, האם לאומן יש חזקה שמה שנמצא תחת ידיו הוא שלו, או שמא, מכיוון שאנשים רבים נותנים לו חפציהם לתיקון, אם נמצא תחת ידו חפץ מעין זה, אין חזקה שהוא שלו. על פי הדרך האחרונה, במקרה בו אדם מספר שנתן חפץ לאומן לתיקון ותובע אותו בחזרה, והאומן משיב שמכרו לו, אין לאומן חזקה וניתן להוציא את החפץ מתחת ידו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מלמדת, שלעיתים יש לאומן חזקה, וזאת במקרה בו נמסר לו החפץ שלא בעדים, ואף אין הטוען רואה את החפץ בידיו. במקרה זה, מתוך שיכול האומן לטעון שהחפץ מעולם לא היה אצלו, יכול לטעון שקנה את החפץ ועתה הוא שלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהקשר זה מובאת (מה:) הברייתא (שצוטטה לעיל מסוגיית שבועות) -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הנותן טליתו לאומן, אומן אומר: שתים קצצת לי, והלה אומר: לא קצצתי לך אלא אחת, כל זמן שהטלית ביד אומן - על בעה"ב להביא ראיה, נתנה לו בזמנו - נשבע ונוטל, עבר זמנו - המוציא מחבירו עליו הראיה</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מתרכזת בחלקה הראשון של הברייתא, ומניחה שמדובר בכגון שאין עדי מסירה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ה"ד? אי דאיכא עדים, ליחזי עדים מאי קאמרי! אלא לאו <strong>דליכא עדים</strong>, וקתני: אומן מהימן <strong>מיגו דאי בעי א"ל לקוחה היא בידי, מהימן נמי אאגריה!</strong>... והוא <strong>דלא ראה</strong>.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, רק אם הטלית לא נראתה ביד האומן כלל, יש לאומן מיגו ש"לא היו דברים מעולם", ולכן נאמן במיגו זה על טענתו ביחס לגובה השכר שסוכם. בעז"ה יתבאר דין זה בפירוט במקומו בהלכות טוען ונטען, פרק ט הלכה א-ב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מתייחס לדין במקרה שאינו מוזכר בברייתא- כאשר אין לאומן מיגו (כי יש עדי מסירה, או שהחפץ נראה מלפנים בידיו של האומן). הרמב"ם כותב שבכגון דא חובת האומן להביא ראיה לטענתו על גובה השכר, ואם אינו מביא ראיה, נשבע הלקוח היסת בלבד, משלם כדבריו ונוטל את טליתו. הרמב"ם כותב שזה משום ש"אין זה כדין השכיר", בו כתב לעיל שבמחלוקת עם המעסיק על גובה השכר צריך המעסיק להישבע שבועה כעין דאורייתא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המפרשים התחבטו בהבנת חילוק זה בין שכיר לאומן, מה גם שלא מצאו לו מקור בגמרא ובדברי הראשונים שלפני הרמב"ם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>בית יוסף</strong> (פט ד"ה "ומה שכתב רבינו ואם אין לו ראיה") מבין שלדעת הרמב"ם, בניגוד לשכיר, בו בכדי להגן על פרנסתו תיקנו חכמים שבמחלוקת עם המעסיק על גובה השכר ישבע המעסיק שבועה חמורה, באומן לא תיקנו זאת ונותר הדין שהלקוח נשבע שבועת היסת בלבד. הבית יוסף מציע שטעם חילוק זה הוא שבעוד שהשכיר זקוק לשכרו דבר יום ביומו, ואם לא קבלנו לא יהיה לו ממה לחיות, האומן מקבל את הדמים לעיתים לא קצובות ואם לא יקבל, כנראה לא יגרם מזה נזק מיידי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>יד פשוטה</strong> הסביר בפשטות, שכל האמור בהלכה זו מתייחס למצב בו הטלית עדיין ביד האומן בשעת התביעה, וזה נחשב קודם זמן התשלום (עי' לעיל הל' ג), ובזה לא תיקנו חכמים את תקנתם. לעומת זה, אם כבר החזיר האומן את הטלית ללקוח, שווה דינו בדיוק לדין השכיר, ולכן אם מדובר בתוך זמן התשלום ומתעוררת מחלוקת על גובה התשלום שסוכם, נשבע הלקוח שבועה כעין דאורייתא. כדברים אלה עולה מדברי ה<strong>גר"א</strong> (ס"ק יז).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">להלכה פסק ה<strong>שו"ע</strong> (פט ה) שאם הטלית תחת יד האומן ויש לאומן מיגו, נשבע האומן ונוטל, ואם אין לאומן מיגו, נשבע הלקוח שבועה כעין דאוריתא ונוטל.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-8" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    שכיר הבא להשבע אין מחמירין עליו ואין מגלגלין עליו כלל אלא נשבע שלא נטל ויטול, ולכל הנשבעין אין מקילין חוץ מן השכיר שמקילין עליו ופותחין לו תחלה ואומרים לו אל תצער עצמך השבע וטול, אפילו היה שכרו פרוטה אחת ובעה"ב אומר נתתיה לא יטול אלא בשבועה, וכן כל הנשבע ונוטל אפילו לא יטעון אלא פרוטה אחת לא יטול אותה אלא בשבועה כעין של תורה.
+                </div>
+                
+
+                
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גלגול שבועה ושידול לשבועה בשבועת שכיר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בשבועות (מח:-מט.) עוסקת בדין גלגול שבועה, לפיו אם ראובן מתחייב לשמעון שבועה, יכול שמעון להשביעו גם על תביעות נוספות שהיו ביניהם בעבר ושלא היתה יכולת בידו להשביע את ראובן עליהם כשלעצמם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האמוראים חלקו בשאלת גילגול שבועה בשבועת שכיר הנבע ונוטל-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב</strong><strong> הונא</strong>: לכל מגלגלין, חוץ משכיר שאין מגלגלין</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב חסדא</strong> אמר: לכל אין מקילין, חוץ משכיר דמקילין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מאי בינייהו? איכא בינייהו: לפתוח לו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המפרשים חלקו בביאור דברי האמוראים ובטעם ההבדל הקיים בין שבועת שכיר לבין שאר השבועות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שהאמוראים חלוקים גם בנוגע למקרה הכללי וגם בנוגע לשבועת השכיר. <strong>רב הונא</strong> סובר שבדרך כלל מגלגלים ביה"ד שבועה, כלומר, פותחים ואומרים לתובע שעתה הוא יכול לגלגל שבועה נוספת על הנשבע, ובשכיר אין עושים זאת, אך אם המעסיק תובע מעצמו גלגול שבועה, שומעים לו, ונשבע השכיר גם על הדבר הנוסף. לעומתו, <strong>רב חסדא</strong> סובר שבד"כ "אין מקילים" ביה"ד, כלומר, מקבלים את טענת התובע החפץ בגלגול שבועה (אך אין פותחים לו אם לא העלה זאת מעצמו), ובשכיר אפילו אם המעסיק העלה את עניין גלגול השבועה מעצמו, אין שומעים לו ואין מגלגלים על השכיר שבועה נוספת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י מתייחס גם לטעם ההבדל, וכותב ששבועת שכיר אינה מעיקר הדין, אלא רק כדי להפיס דעתו של בעל הבית (עי' לעיל בנושא "שכיר בזמנו נשבע ונוטל", בשיטת התוספות), ולכן יש להקל בגילגול שבועות נוספות על גבה. לטעם זה מסכים גם <strong>ר"י</strong> (תוס' ד"ה "לכל").</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> מפרש שכל האמוראים מסכימים שיש לשכיר את הזכות שלא יגלגלו עליו שבועות אחרות (כלומר הלשונות "אין מגלגלין" ו"מקילים" מכוונות לאותה ההלכה העקרונית). ההבדלים הקלים בלשון מלמדים על מחלוקת שהיא רק בדרך בה מוטל על ביה"ד לנהוג. לדעת ר' הונא בית הדין אינו חייב לגלות לשכיר את זכותו זו שלא להישבע על גילגול, ואילו לדעת רב חסדא בית הדין צריך ליידע את השכיר על זכותו להיפטר משבועות גילגול.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ר"י מיגאש</strong> מסביר שרב הונא ורב חסדא התייחסו לשתי קולות שונות שהקלו בשכיר. לדעת רב הונא אין מגלגלים שבועה על שכיר, וזאת בכדי שלא ימנע מלהישבע וליטול וילך לביתו בפחי נפש, ונמצאת תכלית התקנה<sup id="ref266"><a href="#fn266">[266]</a></sup> בטלה. לעומת זאת, רב חסדא אומר שאם במצב הרגיל אל לו לבית הדין ללמד את הנתבע כל מיני טענות שיאפשרו לו להיפטר אף ללא שבועה<sup id="ref267"><a href="#fn267">[267]</a></sup>, בשכיר יש לבית הדין לטעון עבור השכיר כל מה שניתן בכדי שיוכל לקבל את שכרו אף ללא שבועה, וזאת מאותו הטעם- שמא יימנע מלהישבע. מהגמרא משמע שרב חסדא בוודאי מודה לרב הונא לעניין זה שאין מגלגלים על השכיר שבועות נוספות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong><sup id="ref268"><a href="#fn268">[268]</a></sup> מבין באופן דומה לר"י מיגאש אך בהבדל קטן. כמו הר"י מיגאש סובר הרמב"ם שרב הונא אומר שאין מגלגלים על השכיר שבועה אחרת, ורב חסדא מסכים לדבר. רב חסדא מוסיף על רב הונא שאף שבד"כ אין על בית הדין ללמד את המידיינים טענות, בשכיר על בית הדין להודיע לשכיר על זכותו להישבע וליטול, ואף לשדל אותו לכך (זו הכוונה "לפתוח לו").</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כל הראשונים שהבינו שרב חסדא ור' הונא חלוקים זה על זה, פסקו כרב הונא, שהוא רבו של רב חסדא. הרמב"ם, שהבין שאין מחלוקת, פסק כשניהם, מה שבא לידי ביטוי בכך שלשון ההלכה שלפנינו מורכב מדבריהם של שני האמוראים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(פט ו) כתב כדברי הרמב"ם להלכה.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn243" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref243" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^243</a> 
+                        בתוספתא (י, ד) נאמר שלר' יוסי בר' יהודה עובר בגר תושב אף על בל תעשק. כלומר, מדובר במידרג חיובים- שכר אדם מישראל, נמוך ממנו שכר אדם של גר תושב, ונמוך הימנו שכר בהמה וכלים (לכאורה, בין של ישראל ובין של גר תושב).
+                    </li>
+                    
+                    <li id="fn244" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref244" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^244</a> 
+                        ראוי להרחיב את הדיבור על ההבדלים בין שתי הפרשיות ומתוכם גם על ההבנות השונות בדין הלנת שכר כפי שהן משתקפות במחלוקת התנאים. הפסוק בפרשת כי תצא מציג את איסור הלנת השכר כאיסור מובהק בין אדם לחברו. השכיר מוצג כאדם עני ("לא תעשֹׁק שכיר עני ואביון...") הזקוק נואשות לשכרו והנפגע מעיכובו. אף החטא כלפי שמיא מוצג כתוצאה עקיפה של החטא כלפי השכיר- "ולא יקרא עליך אל ד' והיה בך חטא". לעומת זאת, בפרשת קדושים הנימה של העוולה החברתית פחות מודגשת, ומה שבולט הוא שהתורה מתייחסת לשכר בשם "פעולה". ראוי להעיר כי השימוש בתורה בשורש זה נדיר למדי (6 פעמים בלבד) ומתייחס לרוב למעשי ה' (ר' למשל, שמות טו יז, במדבר כג כג. יצויין כי גם בנביאים מצינו שם "פעולה" כשם נרדף לשכר, למשל, בישעיהו פרק מ "הִנֵּה שְׂכָרוֹ אִתּוֹ וּפְעֻלָּתוֹ לְפָנָיו" ובירמיהו פרק כב "בְּרֵעֵהוּ יַעֲבֹד חִנָּם וּפֹעֲלוֹ לֹא יִתֶּן לוֹ", אך נראה שאלו הדים לפסוקים שבפרשת קדושים). השימוש בלשון "פעולה" (שיכולה להתכוון לעבודה עצמה ולא רק לשכרה) וציון הזמן "עד בוקר", אף היו עלולים להביא קורא נאיבי שאינו מצוייד בידע המוקדם בדבר המשמעות ההלכתית של הפסוק בפרשת קדושים להבנה שמדובר באיסור להשאיר את השכיר עצמו אצל בעל הבית לזמן ארוך יתר על המידה עד שיישן את לילו עד הבוקר בביתו של בעל הבית כאחד עבדיו בני ביתו. איסור הלנת שכר מוצג בצורה כזו בכדי לבטא פן נוסף- הפן של שיעבוד השכיר כעבד. כאשר המעסיק אינו משלם לשכיר בזמן נמצא שהשכיר עבד ללא שכר, כעבד. לאיסור זה קיים גם מימד של חטא בין אדם למקום, כפי שמבואר בפרשת בהר "כִּי עֲבָדַי הֵם אֲשֶׁר הוֹצֵאתִי אֹתָם מֵאֶרֶץ מִצְרָיִם לֹא יִמָּכְרוּ מִמְכֶּרֶת עָבֶד: לֹא תִרְדֶּה בוֹ בְּפָרֶךְ וְיָרֵאתָ מֵאֱלֹהֶיךָ". נראה שזו המשמעות העמוקה של המדרש המובא בסוגייתנו (קיב.)- "ואליו הוא נשא את נפשו - כל הכובש שכר שכיר כאילו נוטל נפשו ממנו".במחלוקת התנאים נראה ששיטת חכמים נוטה להבין את מכלול איסור הלנת השכר על פי הפסוקים בדברים. לכן, אין הבדל בין שכר אדם לבין שכר בהמה וכלים, שסוף סוף בעליהם מתפרנסים מהם, וכמו כן אין הבדל בין יהודי לבין גר תושב, שסוף סוף מצווה להחיותו (רמב"ם זכיה ג יא). מן העבר השני, שיטת ר' יוסי מדגישה את הפן המובלט בפרשת קדושים. לפיכך קיים לפיו הבדל מובהק בין שכר אדם לבין שכר בהמה וכלים, שכן אצל האחרונים לא האדם עצמו נוּצל אלא רק זכויותיו הממוניות. כמו כן קיים הבדל לעניין זה בין יהודי לגר תושב, שאין איסור להשתעבד בו כעבד ממש.שיטת ר' ישמעאל עומדת בתווך בין שתי השיטות הנ"ל, ומרחיבה את האיסור לשכר בהמה וכלים לא מתוך ההכללה שבכי תצא של "כל שבארצך" אלא מתוך לימוד של לשון הפסוק בקדושים "כל שפעולתו אתך". מדרך לימוד זו נראה שמעבר לעוול הממוני הבסיסי (הבא לידי ביטוי במצוות העשה ביומו תתן שכרו), יסוד האיסור לדידו של ר' ישמעאל הוא גזל. כלומר, מי שמקבל עבודת אדם או שירות אחר (בהמה, כלים) ולא נותן תמורה בזמן, נחשב כגוזל את עבודת חבירו. אם ישלם לאחר תום הזמן ייחשב כמשיב גזילה, אך מכל מקום אם לא שילם בזמן נחשב כגזלן. מכיוון שהדגש הוא על גזילה של מלאכת חבירו, אין מקום לחלק בין שכר אדם לבין שכר בהמה וכלים. מכל מקום יש מקום לחלק בין ישראל לגוי, כפי שאכן פסקו ראשונים רבים, שגזל גוי אסור רק מדרבנן.
+                    </li>
+                    
+                    <li id="fn245" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref245" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^245</a> 
+                        קושיה בסיסית הבוקעת ועולה מדברי ר' חנניא היא שאכן בהמה וכלים אינם באים לידי עניות, אך בעליהם, שלא קיבלו תמורה לשכירותם באים באים לידי עניות! על פי מה שנתבאר בשיטת ר' יוסי ברבי יהודה בהערה 244 ניתן לתרץ שכיוון שמהות האיסור הוא השעבוד של האדם ולא רק העוולה הממונית כלפיו, ברור שכוונת ר' חנניא היא שהתייחסות הפסוק לעני מציגה מצב בו בעל הבית מזלזל בו ורואה היתר לעצמו לרדות בו ולא לכבד את צלם אלוקים שבו. אלמנט זה חסר בבהמה וכלים שלא נופל בהם שם עניות ועשירות.
+                    </li>
+                    
+                    <li id="fn246" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref246" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^246</a> 
+                        ניתן להציע ששאלה הכללת קרקע באיסור בל תלין תלויה בצדדי הבנת האיסור השונים שהועלו לעיל (הערה 244). לפי ההבנה שמדובר בעושק בעל אופי ממוני- פגיעה בפרנסתו של המשכיר, אכן אין סברה לחלק בין בהמה לכלים לבין קרקע, שכן המשכירם מתפרנס מהם באותה מידה. לעומת זאת, לפי ההבנה שמדובר על שיעבוד של האדם או של רכושו, שיש לה מימד של גזילה, קיים הבדל בין קרקע, הנמצאת בחזקת בעליה תמיד, לבין מטלטלין הנמצאים באמת תחת רשות השוכר, ולכן כבישת מתן שכרם משול לגזילתם.
+                    </li>
+                    
+                    <li id="fn247" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref247" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^247</a> 
+                        על פי המוצע בהערה 244 ניתן להציע שמחלוקתם של רב ושמואל היא סביב היסוד הממוני\איסורי באיסור הלנת שכר- לדעת שמואל היסוד העיקרי לאיסור הוא החובה הממונית לתת לשכיר את שכרו ולמנוע מצב בו השכיר יזדקק לשכרו ולא יהיה זה בידו. התורה מניחה ששכיר יום עובד כל היום ומוציא את שכרו באכילה שתיה וכד' במשך הלילה. בשכיר לילה המצב הפוך. כלומר, בהנחה של תקציב מאוזן, שכיר יום שלא שילמו לו עד תחילת היום הבא נאלץ לקצץ בהוצאותיו או ללוות, וכנ"ל כמובן, בשכיר לילה שלא שילמו לו עד תחילת הלילה הבא. לפיכך, בשכיר שעות ההתייחסות הבסיסית היא לשכיר העובד בכל יממה מספר שעות ומהן הוא מוצא את פרנסתו לכל היממה. במקרה כזה העקה הכלכלית תתחיל להיות מורגשת כחלוף יממה ממועד התשלום האחרון. על כן יש לקבוע, שרירותית מועד ביממה שיהווה את מועד התשלום האחרון, ובאופן טבעי מועד זה נבחר להיות סוף היום- השקיעה.לעומת זאת, לדעת רב היסוד העיקרי של איסור הלנת שכר הוא עצם השיעבוד של הפועל הבא לידי ביטוי בכך שנהנים ממלאכתו אך לא משלמים לו, לשעבוד זה יש משמעות איסורית ולא רק ממונית. לכן, מעיקר הדין היה ראוי לעבור על האיסור מיד עם תום זמן השכירות. אמנם מכיוון שמעשית אין ביטוי לשעבוד עד שיחלוף זמן (שאינו כהרף עין), בו המעסיק יכול יספיק לשלם ובכל זאת הוא נמנע מכך, קבעה התורה את הזמן בו עוברים על האיסור כעוגן הזמן ביממה (שקיעה\זריחה) הסמוך ביותר לתום זמן השכירות. קביעה זו זהה לשכיר יום, לשכיר לילה ולשכיר שעות.
+                    </li>
+                    
+                    <li id="fn248" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref248" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^248</a> 
+                        כפי שהגמרא מסבירה, דיוק זה מדברי המשנה אינו מחייב משום שניתן להסביר ש"כל הלילה וכל היום" מתייחס לשני מקרים שונים ("לצדדים קתני")- שכיר שעות בלילה- כל הלילה, ושכיר שעות ביום- כל היום.
+                    </li>
+                    
+                    <li id="fn249" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref249" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^249</a> 
+                        עי' בהערה 244.
+                    </li>
+                    
+                    <li id="fn250" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref250" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^250</a> 
+                        נראה שכוונת הדברים היא שחכמים הקפידו הקפדה יתרה על בעל בית שאינו משלם ביחס לחייב רגיל שאינו פורע את חובו למרות שיש תחת ידו. מהפסוק שמביא רב יוסף משמע שסיבת הקפדתם היתרה היא העינוי הפסיכולוגי הנגרם לפועל החוזר שוב ושוב ובכל פעם נדחה בתאנות שונות.
+                    </li>
+                    
+                    <li id="fn251" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref251" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^251</a> 
+                        משמע שרש"י והמאירי חלוקים בהבנת ההלכה שעל בל תלין עוברים רק בבוקר הראשון. לדעת רש"י הבוקר הראשון הוא נקודת הזמן הראשונה לאחר תום תקופת השכירות. לעומת זאת, לדעת המאירי, "הבוקר הראשון" הוא ביטוי לתום מועד הגביה, אפילו אם הא מרוחק בזמן מתום השכירות. על פי המתבאר לעיל בהערה 244 וביתר שאת בהערה 247, אפשר להציע שמחלוקת האמוראים העקרונית נתגלגלה כאן למחלוקת בין הראשונים- לדעת רש"י, בדומה למה שהצענו בשיטת רב, האיסור מתבסס בעיקר על ניצול עבודתו של השכיר, שיש לה אלמנט של שעבוד האדם, ולכן עוברים עליו מיד עם נקודת הזמן הראשונה לאחר תום השכירות. לעומת זאת, לדעת המאירי מהות האיסור היא העושק הממוני (כשמואל) ולכן "הבוקר הראשון" הוא תום זמן מועד התשלום, בין אם זה קרוב לזמן המלאכה או רחוק ממנה.
+                    </li>
+                    
+                    <li id="fn252" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref252" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^252</a> 
+                        "אמר רב הונא אמר רב: מנה לי בידך תנהו לו לפלוני, במעמד שלשתן – קנה" (גיטין יג.). וכן ברמב"ם (זכיה ג ג)- "האומר לחבירו מנה שיש לי בידך תנהו לזה קנה, א ואין אחד מהן יכול לחזור בו"
+                    </li>
+                    
+                    <li id="fn253" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref253" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^253</a> 
+                        כך מביא הרמב"ן בשם רבינו תם, ומוסיף עוד, בשם רב האי גאון, שאם נתרשל השכיר ולא גבה מהחנווני ימים רבים עד שהֵעֱני וכבר לא היה ניתן לגבות ממנו, אינו חוזר על בעל הבית, כיוון שפשע בכך שלא גבה ממנו מיד.
+                    </li>
+                    
+                    <li id="fn254" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref254" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^254</a> 
+                        בשלב מאוחר יחסית, תיקנו חכמים במקרים מסויימים, שהנתבע נשבע שבועת היסת ונפטר, אך הדין בסוגייתנו עוסק בשלב מוקדם עוד יותר.
+                    </li>
+                    
+                    <li id="fn255" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref255" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^255</a> 
+                        יש כאן הכרה בחוסר הסמטריה המוסרי (לא המשפטי!) בין השכיר לבין המעסיק. בעוד שאצל השכיר, טעות שבעקבותיה לא יקבל את שכרו תביא לנזק לצרכיו הבסיסיים ("כדי חייו"), אצל המעסיק, המעסיק מספר פועלים, טעות שבעקבותיה ישלם פעמיים תגרור הפסד כספי נקודתי שלא יגרור פגיעה ישירה בחייו של המעסיק.
+                    </li>
+                    
+                    <li id="fn256" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref256" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^256</a> 
+                        ניתן להסביר שהדבר נתקן לטובתו של המעסיק, שיימנע מלהישבע כיוון שאינו בטוח בעצמו, ויפסיד, וניתן להבין שהדבר נתקן לטובתו של השכיר, כיוון שהמעסיק עלול להישבע לשקר בשוגג, כיוון שהוא מתבלבל בין פועל זה לפועל אחר ובטוח שכבר שילם.
+                    </li>
+                    
+                    <li id="fn257" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref257" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^257</a> 
+                        הרא"ש בתוספותיו מסביר את החזקה- העובדה שהשכיר אינו טרוד, וזוכר יפה אם קיבל שכרו או לא, דווקא משחקת לידיו של המעסיק. זאת משום שוודאי הזכיר השכיר לבעל הבית את עניין שכרו מעלה הדבר את הסבירות שבעל הבית זוכר היטב אם שילם לו או לא.הסמ"ע (פט ס"ק י, ובפרישה) מעיר שמדברי הטור (פט) משתמעת הבנה שונה. לדעת הטור אם יש עדים שתבע השכיר את שכרו בסוף הזמן (ממש לפני הזמן בו עוברים על בל תלין), די בכך בכדי לרועע את חזקת אין שכר משהה שכרו ולכן אף אם תבעו ביום שלאחר זמנו נשבע ונוטל. מכאן מסיק הסמ"ע שהחזקה שאין שכיר משהה שכרו אומרת, שבתביעתו של שכיר שבא ותובע לאחר זמנו יש ריעותא, שאם תביעתו אמת, מדוע השהה אותה עד עתה.
+                    </li>
+                    
+                    <li id="fn258" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref258" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^258</a> 
+                        מדובר בשקר פחות בוטה מכמה סיבות- ראשית, פחות סביר שיימצאו עדים שיפריכו שקר כזה, שנית, מעסיק יכול לטעון שכבר שילם גם בשוגג, ולכן שקר שכזה אינו חושף אותו כרמאי בפני הפועל (או בפני הרשות, אם ייתפס).
+                    </li>
+                    
+                    <li id="fn259" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref259" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^259</a> 
+                        על פי כיוון חשיבה זה הסיק ר"י (מובא בטור פט) שאם טוען המעסיק שהוא חייב רק חלק (כלומר, מודה במקצת ואינו כופר בכל), כיוון שאין בטענה זו העזה המשתווה להעזה של טענה לא שכרתיך, הרי שאף אם שכרו ללא עדים אין אומרים מיגו, והשכיר נשבע ונוטל.
+                    </li>
+                    
+                    <li id="fn260" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref260" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^260</a> 
+                        פירוש זה, לפיו השבועה נשארת עדיין אצל המעסיק, מתאים לדעה שהוצגה לעיל, לפיה בשורשה של התקנה חוייב המעסיק בשבועה, ומפאת טרדתו העתיקו את השבועה ממנו אל השכיר.
+                    </li>
+                    
+                    <li id="fn261" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref261" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^261</a> 
+                        הריטב"א עצמו מסתייג מפירוש זה משום שבסוגיית הגמרא לומד רבא מדין שכרו בעדים, שבמפקיד אצל חבירו שלא בעדים יכול השומר להיפטר משבועת השומרים במיגו, שיכול לטעון שמעולם לא הפקיד אצלו. ואם כן, משמע שמיגו זה פוטר אף משבועה.
+                    </li>
+                    
+                    <li id="fn262" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref262" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^262</a> 
+                        ב"יד פשוטה" על הלכות אלו חידש תירוץ נוסף לשאלה. חכמים חששו שתקנתם, המיועדת למנוע מצב בו שכיר לא יקבל את שכרו ויגיע למצב כלכלי קשה, תביא לנזק, וזאת במצב בו מעסיקים, בכדי להגן על עצמם, יטענו שמעולם לא שכרו את הפועל הטוען מולם. במקרה כזה גם השכיר לא יקבל את שכרו, וגם המעסיק חוטא ומעיז פניו. לכן הגבילו חכמים מראש את תקנתם למקרים בהם תרחיש זה לא ייתכן, כגון ששכרו בעדים. עוד העלה (שם) את האפשרות שזהו עומק כוונת דברי ר' האי גאון.
+                    </li>
+                    
+                    <li id="fn263" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref263" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^263</a> 
+                        נראה שטעמו הוא משום שדי בעד אחד בכדי שטענת "לא שכרתיך" תהיה כרוכה בהעזה עצומה, וממילא ייפסל המיגו ויחזור דין שכיר נשבע ונוטל על כנו.
+                    </li>
+                    
+                    <li id="fn264" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref264" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^264</a> 
+                        הבית יוסף מסביר שסברתו של הרמ"ה היא שמתוך כך שאפילו אם היה המעסיק טוען "לא שכרתיך", היה העד האחד מחייבו שבועה (כי בכל מקום ששני עדים מחייבים ממון, עד אחד מחייב שבועה), הרי שכעת, השימוש בטענה זו כמיגו, כרוך באותה השבועה שהיה נשבע לו היה אומר את הטענה בפועל.
+                    </li>
+                    
+                    <li id="fn265" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref265" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^265</a> 
+                        ניתן להציע טעם לדברים- מתן התשלום לפועלים הוא פעולה חוזרת הדומה לעצמה בכל פועל ופועל. לכן, ייתכן שהמעסיק שילם לפועל אחד וחושב ששילם לפועל אחר. לעומתה, קציצת השכר, שנעשתה לפני שכירת הפועלים נעשתה באופן פרטני מול כל פועל ופועל, כל אחד לפי המלאכה שהוא עתיד לעשות ולפי התמקחות אישית של כל אחד. לכן סביר שהמעסיק זוכר את גובה הקציצה לא פחות טוב מאשר הפועל.
+                    </li>
+                    
+                    <li id="fn266" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref266" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^266</a> 
+                        עפ"י הר"י מיגאש טעם תקנת "שכיר נשבע ונוטל" כדי להגן על השכיר, שלא ילך לביתו בפחי נפש. ועי' לעיל בנושא "שכיר בזמנו נשבע ונוטל", שהתוס' וסיעתו הבינו את מהות התקנה באופן אחר.
+                    </li>
+                    
+                    <li id="fn267" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref267" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^267</a> 
+                        כמבואר ברמב"ם סנהדרין כא י.
+                    </li>
+                    
+                    <li id="fn268" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref268" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^268</a> 
+                        עפ"י הסבר הר"ן בשבועות לג. מדפי הרי"ף.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

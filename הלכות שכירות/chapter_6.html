@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הלכות שכירות - פרק ו</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">הלכות שכירות - פרק ו</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ו)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א-ב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    רשות השימוש הכלולה בהשכרת בית
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ג-ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    תיקוני בינוי המוטלים על המשכיר ותיקונים המוטלים על השוכר
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    קניין חצר בחצר שכורה או שיש לשוכר בית דריסת רגל בה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ו-ז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    סיום הסכם שכירות בית
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-4-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הודעה מראש על סיום שכירות חנות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הודעה על סיום ההסכם מצד השוכר
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ט-יא
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שינוי דמי השכירות ללא הודעה מוקדמת
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-6-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    משכיר הזקוק באופן פתאומי לבית
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">הלכות שכירות</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק ו</h1>
+            </div>
+
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק השישי עוסק בשכירות בתים ונחלק לשנים. החלק הראשון (א-ה) עוסק בגדר השימוש בבית, בדברים המוטלים על המשכיר לספקם, ובדברים שחובתו של השוכר לעשות משלו. החלק השני (ו-יא) עוסק בסיום השכירות ובפרט בשאלה האם ומתי יכול אחד הצדדים לסיים את השכירות באופן חד צדדי.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות א-ב עוסקות בשאלה מה כוללת שכירות בית, מבחינת רשות השימוש. העיקרון המנחה הבסיסי הוא שהולכים על פי המוסכמות הקבועות באותו מקום ובאותו זמן. עם זאת, במקום בו הדברים אינם ברורים, מנחים הפוסקים שיש ללכת על פי הדרך בה רוב בעלי בתים משתמשים בבתיהם. הלכות ג-ד עוסקות בתיקונים הנדרשים בבית. תיקונים המוגדרים כ"מעשה אומן" או "עיקר גדול בישיבת הבתים", כגון דברים הנוגעים למבנה, ליציבותו, לחלונות ודלתות וכו', כל אלה מוטלים על בעל הבית לעשותם. לעומת זאת, תיקונים שכל אדם עושה לעצמו, כגון מזוזה או שיפוצים פנימיים קטנים (זיפות הגג, צביעת הקירות וכד') מוטלים על השוכר. הראשונים חלקו האם חלוקה זו שייכת גם בשוכר בלשון "בית זה", או שמא לשון זו כוללת את הבית המסויים, יהיה מצבו אשר יהיה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ה דנה בשוכר בית ולידו חצר, ובחצר זבל מגללי בהמות מופקרים. המשנה קובעת שהזבל שייך למשכיר והראשונים נחלקו בהבנת המקרה. לדעה אחת מדובר בחצר שאינה מושכרת, ולו היתה מושכרת היתה קונה לשוכר כיוון ששכירות היא כקניין לזמן מוגבל. לדעה אחרת אף אם החצר מושכרת, היא מושכרת רק לצורך דיור, ולכן היא ממשכה לזכות למשכיר ולא לשוכר.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ו-ז עוסקות בשיעור הזמן המינימלי של שכירות שלא הוגדרה מראש, המשתנה על פי הצרכים הידועים של השוכר. עוד מתבארת זכותו של השוכר בית "סתם" ללא הגבלת זמן מוגדרת, לקבל התראה מספיקה לפני פינויו על ידי המשכיר. התראה זו היא משך הזמן שבו אפשרי לו למצוא בית אחר. הראשונים חלקו האם גם בשכירות שיש לה מועד סיום רשמי חייב המשכיר לתת מראש התראה על כך שחוזה השכירות לא יוארך. הלכה ח מציגה את הצד השני של המטבע ועוסקת בשוכר המעוניין לעזוב במפתיע. גם כאן נדרש השוכר לתת התראה מוקדמת בכדי לאפשר למשכיר למצוא שוכר חדש מבלי להפסיד כסף, אך במשך זמן ההתראה חלקו הפוסקים, האם הוא שווה למשך זמן ההתראה המתפרט בהלכות הקודמות, או שמא הוא קצר יותר, על פי העניין.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">ההלכות האחרונות בפרק עוסקות באפשרות לסיים את הסכם השכירות באופן חד צדדי כאשר חל אילוץ לאחד הצדדים. סוג אחד של אילוץ הוא שינוי במחירי הדיור, כאשר השכירות אינה במחיר קצוב לאורך זמן, אלא מתחדשת מאליה בכל תקופת זמן. במקרה שמחירי הדיור עלו יכול המשכיר לבקש שכר גבוה יותר, ואם אין השוכר מסכים, יכול השוכר להוציאו לאלתר, מכיוון ששהותו של שוכר זה בבית, במקום שוכר אחר עולה למשכיר ממון. בהתאמה, גם אם המחירים ירדו, יכול לשוכר לבקש הפחתה ואם לא יעתר לו המשכיר, מותר לו לצאת לאלתר, שהרי הוא מפסיד כסף משהותו בבית.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">סוג אחר של אילוצים הוא הזדקקות דחופה של המשכיר לבית בעקבות כך שביתו שלו נפל, או שזקוק לבית עבור בנו שהתחתן. במקרים אלה, אם השכירות אינה קצובת זמן, ניתן לסיים את הסכם השכירות לאלתר, ללא הודעה מוקדמת. הטעם הוא כמו בהלכות הקודמות, שלא הגיוני שזמן ההודעה מראש שתיקנו חכמים לטובת השוכר, יבוא על חשבון המשכיר. לעומת זאת, אם המשכיר מכר את הבית והבעלים החדש רוצה להוציא את השוכר, אינו יכול, כיוון שהמשכיר מכר לו את כל הזכויות שיש לו בבית, וכפי שהמשכיר הראשון אינו יכול להוציא את השוכר ללא התראה מוקדמת כדין, כך גם הקונה, הבא מכוחו. לגבי הוצאה של השוכר באמצע תקופת שכירות קצובת זמן, יש דעות שהדבר אפשרי במקרי חירום קיצוניים (אם המשכיר צריך ממון שלא יגווע ברעב או לצורך פדיון שבויים), מתוך הבנה שבהסכם השכירות יש תנאי בלתי מפורש שאם יווצרו תנאים כאלה השכירות תופסק באופן חד צדדי.</p>
+                
+            </div>
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המשכיר בית לחבירו בבירה גדולה משתמש בזיזיה ובכותליה עד ד' אמות ובתרבץ של חצר וברחבה שאחורי הבתים, ומקום שנהגו להשתמש בעובי הכותלים משתמש בעובי הכותלים ובכל אלו הדברים הולכין אחר מנהג המדינה והשמות הידועין להם כדרך שאמרנו בענין מקח וממכר.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המשכיר חצירו סתם לא השכיר הרפת שבה.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רשות השימוש הכלולה בהשכרת בית</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא בתרא ו.:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב נחמן</strong> אמר <strong>רבה בר אבוה</strong>: המשכיר בית לחבירו בבירה גדולה, משתמש בזיזיה ובכתליה עד ד' אמות, ובעובי הכותל במקום שנהגו, אבל בתרבץ אפדני לא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>רב נחמן</strong> דידיה אמר: אפילו בתרבץ אפדני, אבל רחבה שאחורי הבתים לא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>רבא</strong> אמר: אפילו רחבה שאחורי הבתים.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר בבית גדול המחולק לכמה יחידות מגורים. הבניין בנוי בהיקף סביב חצר הנקראת "תרבץ אפדני", והחלק שמההיקף החוצה, מאחורי הבתים, נקרא "רחבה שאחורי הבתים". האמוראים נחלקו באילו חלקים מהשטחים הציבוריים מותר לשוכר אחת מהיחידות להשתמש-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבה </strong><strong>בר</strong><strong> אבוה</strong> סובר שיכול להשתמש בכותל הבירה, על פי הדרך בה נהגו להשתמש בכתלים, עד ד' אמות, אך בחצר הפנימית אין רשות לדייר להשתמש, כיוון שהיא מיועדת לנוי\חקלאות זעירה ולא לשימושי הדיירים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב נחמן</strong> מתיר יותר וסובר שגם בחצר הפנימית יכול הדייר להשתמש, אך לא ברחבה, שאינה כלולה בדירת הבתים ובתשמישם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מתיר עוד יותר ואומר שניתן לדייר להשתמש גם ברחבה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים העלו כמה הבנות בדינים שלעיל-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי שיעור ארבע אמות, <strong>רש"י</strong> וה<strong>רי"ד</strong> (בפסקיו) כותבים שהכוונה לכותל החיצוני של הבית, שאינו מול הבית ממש (שאם מול הבית, פשיטא שמותר לו לדייר להשתמש), אלא ד' אמות ימינה ושמאלה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, <strong>רבינו תם</strong> (מובא בשטמ"ק) ו<strong>ר"ח</strong> (בשיטת הקדמונים) פירשו, שהכוונה לד' אמות בגובה, והטעם הוא שגובהו של אדם עד ד' אמות, ולכן עד גובה זה שייך להשתמש בכתלים כחלק מהדיור בבית. כך גם נראה שסובר ה<strong>ראב"ד</strong> (הובא בשטמ"ק), המסביר שכל המימרא עוסקת רק בשימוש בכתלים- כתלי הרחבה, כתלי החצר הפנימית, וכתלי הבית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד העירו ראשונים (ה<strong>ר"ן</strong>, <strong>רבינו יונה</strong><strong>,</strong> וכן ב<strong>טור</strong> סי' שיג) לגבי פירוש הלשון "מקום שנהגו", שהכוונה למקום שנהגו בעלי בתים להשתמש, כלומר, רואים כיצד היא דירתם של <strong>בעלי בתים</strong> בבניין, וכדוגמת זה מתירים לשוכר להשתמש<sup id="ref98"><a href="#fn98">[98]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בבבא מציעא (קב.) מובאת ברייתא העוסקת בשוכר ששכר כיריים או תנור העומדים בחצרו של בעל הבית ומדברת על הקניין שקונה רשותם של המשכיר והשוכר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>זבל היוצא מן התנור ומן הכירים והקולט מן האויר - הרי הוא שלו (=של המשכיר),</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ושברפת ושבחצר - של בעל הבית</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבינה שהזבל שברפת ושבחצר אינה של המשכיר, כיוון שלא הושכרו לו הרפת או החצר, אלא רק התנור או הכיריים העומדים בחצר. לאור זה שואלת הגמרא מדוע הדוגמה הכפולה, גם מחצר וגם מרפת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מתרצת שיש לגרוס "רפת שבחצר", ואין הברייתא מלמדת אותנו שאין השוכר קונה בנכס שלא שכר, אלא שזה ששכר את החצר לא אומר שאף הרפת שכורה לו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ר"י מיגאש</strong> (מובא בשטמ"ק ב"ב ו:), ובעקבותיו ה<strong>רמב"ם</strong>, מעירים שבכל הדינים הללו הולכים על פי "מנהג המדינה והשמות הידועין להם". כלומר, כל המשכיר דבר, כלול באותו דבר כל המכונה בשמו באותו מקום וזמן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שיג א-ב) כתב כדברי הרמב"ם להלכה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המשכיר בית לחבירו חייב להעמיד לו דלתות ולפתוח לו החלונות שנתקלקלו ולחזק את התקרה ולסמוך את הקורה שנשברה ולעשות נגר ומנעול וכל כיוצא באלו מדברים שהן מעשה אומן והם עיקר גדול בישיבת הבתים והחצרות, השוכר חייב לעשות מעקה ומזוזה ולתקן מקום המזוזה משלו, וכן אם רצה לעשות סולם או מרזב או להטיח גגו הרי זה עושה משל עצמו.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המשכיר עלייה לחבירו ונפחתה בארבעה או יתר חייב לתקן התקרה והמעזיבה שעליה שהמעזיבה חזוק התקרה היא.
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תיקוני בינוי המוטלים על המשכיר ותיקונים המוטלים על השוכר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל, בפרק ה, הלכות ו-ז, דובר במשכיר בית לחבירו ונפל הבית. הלכה זו מדברת במקרים בהם הבית קיים, אך זקוק לתיקון כזה או אחר. המשנה (ב"מ קא:) מחלקת בין דברים המוטלים על המשכיר, לבין דברים שהשוכר צריך לממן בעצמו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המשכיר בית לחבירו, המשכיר חייב בדלת, בנֵגר ובמנעול, ובכל דבר שמעשה אומן.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אבל דבר שאינו מעשה אומן - השוכר עושהו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה ברייתא המרחיבה עוד-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המשכיר בית לחבירו - משכיר חייב להעמיד לו דלתות, לפתוח לו חלונות, לחזק לו תקרה, לסמוך לו קורה. ושוכר חייב לעשות לו סולם, לעשות לו מעקה, לעשות לו מרזב, ולהטיח את גגו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המשכיר אחראי על כך שתהיינה דלתות תקינות ברות נעילה ("נגר"- בריח פנימי, "מנעול"- נעילה מבחוץ), חלונות, תקרה ושלד תקינים. השוכר חייב להוציא מכיסו כל דבר שאינו דורש אומן אלא הוא יכול לעשותו בעצמו (העמדת סולם, מעקה, תיקון מרזב ואיטום הגג).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלבד הקריטריון של "מעשה אומן" המוזכר במשנה, ה<strong>רמב"ם</strong> כותב קריטריון נוסף לכך שהמשכיר יהיה חייב בתיקון- שיהיה התיקון "עיקר גדול בישיבת הבתים והחצרות". דברים דומים כותב ה<strong>ראב"ד</strong> (הובא בשטמ"ק), ומסביר שהגדרת "בית" לדיור כוללת דברים אלה שהמשכיר חייב לעשות. מתוך כך פוסק הראב"ד שאפילו אם ידע השוכר בשעת השכירות שדברים אלה חסרים מהבית (למשל שאין דלת או שהחלונות חסומים), אין הדבר פוטר את המשכיר מלעשותם, מכיוון שמובן מאליו שדברים אלה נכללים בהגדרת בית דירה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בדבר היחס בין הלכה זו, לבין הנלמד בפרק הקודם (הל' ו-ז) לגבי המשכיר בית לחבירו ונפל הבית. כזכור, בעניין זה נפסק, שאם השכירות היתה בלשון "בית זה", אזי אין לשוכר על המשכיר מאומה, כיוון שלא התחייב המשכיר יותר מאשר לתת בית זה לשוכר. לעומת זאת, אם השכירות היתה בלשון "בית (סתם)", הכוונה לדיורין כלשהם, ולכן חייב המשכיר להעמיד ולהשכיר לשוכר בית חילופי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> משווה בין נפלת כל הבית לבין קלקול חלקי ולכן כותב שמשנתנו אמורה דווקא במשכיר לחבירו "בית סתם", שאז חייב הוא לדאוג לדיור תקין. אמנם, אם השכיר לו "בית זה", הרי שכוונת הדברים היא לבית הזה המסויים, יהיה מצבו העתידי אשר יהיה. לכן, אפילו אם נעשה בו קלקול משמעותי, כגון נפילת הדלת וכדומה, אין חייב המשכיר לתקן, בדיוק כשם שהדין אם נפל הבית כולו. לדברים אלה הסכים ה<strong>נימוק"י</strong> (נט. מדפי הרי"ף).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רא"ש</strong> בתשובה (כלל לה סי' ו) מחלק בין מצב בו נפל הבית כולו, לבין מצב בו הבית עומד על תילו, אלא שארע בו קילקול משמעותי, שאינו מאפשר לדור בו כראוי (דלת נפרצה, חלון נסתם, קורה נשברה וכדומה). בעוד שבמצב הראשון פקע הסכם השכירות, במקרה השני חייב המשכיר לממן את התיקונים הדרושים בבית<sup id="ref99"><a href="#fn99">[99]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שיד א-ב) כתב כדברי הרמב"ם. במחלוקת הרא"ש והריטב"א, פסק ה<strong>רמ"א</strong> (שם) כריטב"א, בעוד שהשו"ע (שיב יז) הביא את דברי הרא"ש כ"יש מי שאומר".</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    הזבל שבחצר הרי הוא של שוכר לפיכך הוא מטפל בו להוציאו ואם יש שם מנהג הולכין אחר המנהג, בד"א כשהיו הבהמות שעשו הזבל של שוכר אבל אם הבהמות של אחרים הזבל של בעל החצר שחצירו של אדם קונה שלא מדעתו אף על פי שהיא שכורה ביד אחרים. בד"א כשהיו וכו' עד שכורה ביד אחרים. א"א דבר זה אינו מחוור שהרי בגמרא העמידוה בחצר דמשכיר [ושוורים דאתו מעלמא פי' חצר דמשכיר] דלא אגירא לשוכר דאי אגירא ליה כדידיה דמי וקניא ליה מידי דהוה אשוכר את מקומו
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קניין חצר בחצר שכורה או שיש לשוכר בית דריסת רגל בה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ב"מ קא:) מדברת על הבעלות על הזבל המצטבר בחצר הבית המושכר כתוצאה מבהמות המטילות גלליהן שם או כתוצר לוואי של בישול-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המשכיר בית לחברו...הזבל של בעל הבית, ואין לשוכר אלא היוצא מן התנור ומן הכירים בלבד</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם קב.) מנסה להבין את הסיטואציה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>במאי עסקינן? אילימא בחצר דאגיר ליה לשוכר, ותורי דשוכר - אמאי של בעל הבית?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא בחצר דלא אגירא לשוכר, ותורי דמשכיר - פשיטא! –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא צריכא, בחצר דמשכיר, ותורי דאתו מעלמא קמו בה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מצד אחד, אם מדובר בחצר המושכרת לשוכר, והבהמות שייכות לשוכר, מדוע המשנה מזכה את הגללים לבעל הבית? מאידך, אם מדובר בחצר שאינה מושכרת (אלא רק הבית הסמוך לה), והבהמות שייכות לבעל החצר, פשוט שהגללים של בעל החצר!</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מתוך כך מגיעה הגמרא למסקנה שמדובר בבהמות שאינן לא של המשכיר ולא של השוכר, ובאו ממקום אחר, כך שבעליהן בוודאי מפקירים את הגללים, וחצרו של המשכיר קונה לו את הגללים אף שלא מדעתו, בהתאמה לדברי <strong>ר' יוסי ברבי חנינא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מסייע ליה ל<strong>רבי יוסי ברבי חנינא</strong>, דאמר רבי יוסי ברבי חנינא: חצרו של אדם קונה לו שלא מדעתו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בשאלה מהו מעמדה של החצר המדוברת-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים, ובכללם <strong>רש"י</strong>, ה<strong>ראב"ד</strong> (בהשגות) וה<strong>טור</strong> (שיג), מבינים שהגמרא מתלבטת בהעמדת המשנה בתוך מרחב פרמטרים כפול- הבהמות יכולות להיות של השוכר או של המשכיר, והחצר יכולה או לא יכולה להיות שכורה. אם החצר מושכרת, (או אפילו אם אינה מושכרת, אלא הבהמות שבה שייכות לשוכר של הבית אותו היא משמשת<sup id="ref100"><a href="#fn100">[100]</a></sup>), ברור שהזבל שייך לשוכר, ולא על כך דיברה המשנה. מאידך, אם החצר אינה מושכרת והבהמות שבה שייכות למשכיר, פשוט שהזבל שלו! לכן מתרצת הגמרא שמדובר <strong>בחצר שאינה מושכרת</strong> והבהמות שבה באו ממקום אחר, ובאה המשנה להשמיע לנו, שאעפ"י שלשוכר יש דריסת רגל בחצר בדרך לבית אותו שכר, אין החצר קונה לו כלל, אלא רק לבעליה, משכיר הבית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם מבין ה<strong>רמב"ם</strong> שהמשנה מדברת על אדם השוכר בית וחצר<sup id="ref101"><a href="#fn101">[101]</a></sup>. לפירושו, הגמרא מגיעה למסקנה שמדובר<strong> בחצר המושכרת</strong> <strong>לשוכר הבית</strong>, אך הבהמות אינן של השוכר, והמשנה משמיעה לנו שחצרו של המשכיר קונה לו שלא מדעתו, אפילו אם היא מושכרת לאחר<sup id="ref102"><a href="#fn102">[102]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בשורה התחתונה, לפנינו מחלוקת ראשונים, האם חצרו של אדם קונה לו כאשר היא מושכרת לאחר, שלדעת הרמב"ם כן, ולדעת שאר הראשונים לא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שיג ג) פוסק כרמב"ם, שחצר שכורה קונה למשכיר. בהמשך (ד) כותב השו"ע את דין המשנה, שהאפר היוצא מהתנור הכירה ששכרם, שייך לשוכר, וה<strong>רמ"א</strong> (שם) כותב שהדבר נכון אפילו אם אדם אחר בישל, והאפר לא היה שייך לשוכר מלכתחילה. ה<strong>גר"א</strong> מעיר שדבר זה הוא לפי שיטת הראשונים (החלוקה על הרמב"ם), לפיה כיוון ששכר את התנור, כל האפר שבו שלו<sup id="ref103"><a href="#fn103">[103]</a></sup>.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המשכיר בית או חצר או מרחץ או חנות או שאר המקומות עד זמן קצוב הרי זה כופהו לצאת בסוף זמנו ואינו ממתין לו אפילו שעה אחת, שכר לו בית סתם ללינה אין פחות מיום אחד, לשביתה אין פחות משני ימים, לנישואין אין פחות משלשים יום.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המשכיר בית לחבירו סתם אינו יכול להוציאו עד שיודיעו שלשים יום מקודם כדי לבקש מקום ולא יהיה מושלך בדרך ולסוף השלשים יצא, במה דברים אמורים בימות החמה אבל בימות הגשמים אינו יכול להוציאו מן החג ועד הפסח, קבע לו שלשים לפני החג אם נשאר מן השלשים יום אפילו יום אחד לאחר החג אינו יכול להוציאו עד מוצאי הפסח והוא שיודיעו ל' יום מקודם, במה דברים אמורים בעיירות אבל בכרכים אחד ימות החמה ואחד ימות הגשמים צריך להודיעו י"ב חדש מקודם, וכן בחנות בין בכרכים בין בעיירות צריך להודיעו י"ב חדש מקודם.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">סיום הסכם שכירות בית</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספתא</strong> (בבא מציעא פרק ח הלכה כח) עוסקת בשיעור הזמן המינימלי כאשר אדם שואל מחבירו נכס נדל"ן ואינו מפרש לכמה זמן שאל-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>השואל פונדק מחבירו ללינה אין פחות מיום אחד לשביתה אין פחות משני ימים לנישואין אין פחות משלשים</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקביל, נאמר במשנה (קא:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המשכיר בית לחבירו בימות הגשמים - אינו יכול להוציאו מן החג ועד הפסח. בימות החמה - שלשים יום.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ובכרכים, אחד ימות החמה ואחד ימות הגשמים - שנים עשר חדש.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ובחנויות, אחד עיירות ואחד כרכים - שנים עשר חדש.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבן שמעון בן גמליאל</strong> אומר: חנות של נחתומים ושל צבעים - שלש שנים.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הבנה אחת היא שהמשנה מדברת, כמו התוספתא, על משכי שכירות מינימליים במקרה שהצדדים לא סיכמו ביניהם על קציבת זמן השכירות. כך, השוכר בית סתם בימות הגשמים, שכר לכל העונה, השוכר בית סתם בימות החמה שכר לחודש, והשוכר בית סתם בעיר, שכר לשנים עשר חודש בין בחורף ובין בקיץ.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא דוחה אפשרות זו משום שההבדל בין ימות הגשמים לבין ימות החמה אינו מתפרש יפה לפי דרך זו. לכן מציע <strong>רב יהודה</strong> דרך אחרת לפרש את המשנה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יהודה</strong>: להודיע קתני. והכי קאמר: המשכיר בית לחבירו סתם - אין יכול להוציאו בימות הגשמים מחג ועד הפסח אלא אם כן הודיעו שלשים יום מעיקרא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong> המפרשת בהתאמה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תניא נמי הכי: כשאמרו שלשים וכשאמרו שנים עשר חדש - לא אמרו אלא להודיעו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכשם שמשכיר צריך להודיע - כך שוכר צריך להודיע</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המשנה אינה עוסקת במשך זמן השכירות במקרה בו זה לא צויין במפורש, אלא במשך הזמן שצריך לתת לשוכר בין התראה על סיום החוזה לבין פינויו מהבית<sup id="ref104"><a href="#fn104">[104]</a></sup>. על פי פירוש זה, המשנה פוסקת שהמשכיר הרוצה לפנות את השוכר בתקופת הגשמים (טו בתשרי עד טו בניסן) חייב להודיע לו על כוונתו זו לפחות שלושים יום בתוך תקופת החמה (כלומר, ב-טו באלול)<sup id="ref105"><a href="#fn105">[105]</a></sup>, מכאן ניתן ללמוד שהמשכיר יכול לפנות את השוכר בימות החמה בכפוף להודעה מראש של 30 יום<sup id="ref106"><a href="#fn106">[106]</a></sup>. כמו כן, בבתים שבערים, כיוון שקשה במיוחד למצוא בית חילופי, יש לתת התראה של 12 חודשים לפני הפינוי. לפי <strong>רשב"ג</strong>, עבור בתי עסק מסויימים יש לתת התראה 3 שנים לפני מועד הפינוי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים האם דין המשנה, שיש לתת התראה מספיק זמן מראש לפני פינוי, אמור דווקא בשכירות שאינה קצובת זמן, או אפילו בשכירות לזמן קצוב שנקבע מראש-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת ה<strong>רמב"</strong><strong>ם</strong>, ה<strong>רא"ש</strong> (סי' כד), ה<strong>רמב"ן</strong> ורוב הראשונים, דברי המשנה אמורים דווקא במקרה בו השכירות אינה קצובה בזמן. ניתן לדייק דבר זה מדברי הגמרא "הכי קאמר: המשכיר בית לחבירו <strong>סתם</strong> - אין יכול להוציאו". לעומת זה, במקרה בו השכירות קצובה בזמן מראש, ובתאריך מסויים היא מסתיימת, אין צורך בהודעה מוקדמת, וניתן לפנות את השוכר מיד עם תום התקופה הקצובה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, <strong>רש"י</strong> (קא: ד"ה "להודיע") מפרש שגם במקרה בו תוקף הסכם השכירות פג בתאריך מסויים, עדיין יש צורך בהודעה מוקדמת, המבהירה שתוקף ההסכם לא יוארך, ועל השוכר לפנות את הנכס.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שיב ד-ו, ח) פוסק כדברי המשנה על פי העמדת הגמרא, וכדברי הרמב"ם וסיעתו, הסוברים שדברי המשנה אמורים במשכיר סתם.</p>
+                    
+                </div>
+                
+                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הודעה מראש על סיום שכירות חנות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, המשנה פוסקת שאם הנכס השכור הוא חנות, אז בין בעיר ובין שלא בעיר, יש להודיע 12 חודשים מראש על הכוונה לסיים את הסכם השכירות. <strong>רשב"ג</strong> מוסיף שעבור חנויות של נחתומים וצבעים יש להקדים את ההודעה על הפינוי לפחות לשלוש שנים לפני הפינוי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך, הגמרא מבארת שטעמו של <strong>רשב"ג</strong> הוא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מפני שהקיפן מרובה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מבין שהכוונה היא שבעל העסק מוכר בהקפה, ולקוחותיו באים לשלם זמן רב לאחר מכן (עד שלוש שנים). אם העסק ייעזב, הלקוחות לא יוכלו למצוא את השוכר ששכן בו ולשלם לו. רש"י לומד מכך (בפירושו את המשנה), שגם בחנויות, הסיבה שיש להודיע לשוכר 12 חודש מראש, היא משום שלקוחותיו קונים בהקפה עד 12 חודש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>רמב"ם</strong> (בפיה"מ), <strong>רבינו יונתן</strong> וה<strong>מאירי</strong> מפרשים "היקף" במובן של מלאכה רבה, או במובן של שטח גדול. ומסבירים שבתי עסק של צבעים ונחתומים מאופיינים בכך שיש בהם מתקנים גדולים שבנויים כחלק מהבית, ולכן העתקתם מבית לבית כרוכה בטורח רב והם לא מתאימים לכל בית<sup id="ref107"><a href="#fn107">[107]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לא כתב את דברי רשב"ג להלכה, ובעקבותיו הלך ה<strong>שו"ע</strong>, אך ה<strong>טור</strong> כתבם וה<strong>רמ"א</strong> (שיב ו) פסקם להלכה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    כשם שהמשכיר חייב להודיעו כך השוכר חייב להודיעו מקודם ל' יום בעיירות, או מקודם שנים עשר חדש בכרכים כדי שיבקש שכן ולא ישאר ביתו פנוי, ואם לא הודיעו אינו יכול לצאת אלא יתן השכר.
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הודעה על סיום ההסכם מצד השוכר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>תוספתא</strong> (ב"מ ח כז):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כשם שאין השוכר רשיי לפנות עד שעה שיודיע כך אין המשכיר רשיי לפנות עד שעה שיודיע</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הדברים מובאים (בשינויי לשון) בגמרא (קא:) -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>...וכשם שמשכיר צריך להודיע - כך שוכר צריך להודיע,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המסבירה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דאמר ליה: אי אודעתן - הוה טרחנא ומותיבנא ביה איניש מעליא</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המשכיר יכול לטעון כלפי השוכר, שהוא זקוק לדעת זמן מה מראש על עזיבתו, בכדי שיהיה לו מספיק זמן למצוא שוכר חדש לשביעות רצונו. לכן, אם השוכר מבקש לעזוב, ולא הודיע למשכיר די זמן ראש על כוונתו, הוא חייב להמשיך ולשלם את דמי השכירות, עד שיהיה סיפק ביד המשכיר למצוא שוכר אחר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלקו הפוסקים עד כמה ישנה סימטריה בין השוכר לבין המשכיר בדין זה<sup id="ref108"><a href="#fn108">[108]</a></sup>, דהיינו, האם שיעור הזמן בו צריך השוכר להתריע מראש על עזיבה צריך להיות זהה לשיעור הזמן המקביל בו המשכיר חייב להודיע-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת <strong>ריב"ן</strong> (מובא בהגהות מיימוניות, אות ד) אין סימטריה, והשוכר רשאי לתת למשכיר התראה על עזיבה בטווח של שבועיים עד ארבעה "לפי העניין"<sup id="ref109"><a href="#fn109">[109]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רמב"ם</strong> מזכיר שיעורי זמן שווים בבתים- 30 יום בעיירות ו12 חודש בערים<sup id="ref110"><a href="#fn110">[110]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם אינו מזכיר את דין השוכר המבקש לעזוב חנות, וה<strong>בי</strong><strong>ת יוסף</strong> (שיב ז) מתלבט בדבר ומכריע שאפילו אם הטעם להתרעה של 12 חודשים מראש בחנות הוא משום שהשוכר חפץ להמתין עד שישלמו לו כל מי שנתן לו בהקפה, טעם שאינו שייך לכאורה בשוכר המודיע על עזיבה, עדיין צריכה להישמר סימטריה גם בדין החנויות, וכשם שהמשכיר צריך להודיע לשוכר חנות 12 חודשים מראש, כך גם השוכר חנות צריך להודיע על כוונתו לעזוב 12 חודשים מראש, וזאת משום שגם השוכר שיבוא במקומו ירצה לשהות שנה לפני המעבר בכדי לגבות את הקפותיו שלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שיב ז) מעתיק את דברי הרמב"ם להלכה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-יא</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אף על פי שאין המשכיר יכול להוציאו ולא השוכר יכול לצאת עד שיודיעו מקודם, אם הוקרו הבתים יש למשכיר להוסיף עליו ולומר לשוכר או השכר בשוה עד שתמצא או תצא, וכן אם הוזלו הבתים יש לשוכר לפחות השכר ולומר למשכיר או השכר לי כשער של עתה או הרי ביתך לפניך, נפל בית המשכיר שהיה דר בו הרי זה יש לו להוציא השוכר מביתו ואומר לו אינו בדין שתהיה אתה יושב בביתי עד שתמצא מקום ואני מושלך בדרך שאין אתה בעל זכות בבית זה יותר ממני.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    נתן הבית לבנו לישא בו אשה אם היה יודע שבנו נעשה חתן בזמן פלוני והיה אפשר לו להודיעו מקודם ולא הודיעו אינו יכול להוציאו, ואם עכשיו נזדמנה לו אשה והרי הוא נושאה מיד הרי זה יש לו להוציאו שאינו בדין שיהיה זה יושב בביתו ובן בעה"ב ישכור בית שיעשה בו חתונה.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מכר את הבית או נתנו או הורישו אין השני יכול להוציאו עד שיודיעו מקודם שלשים יום או מקודם שנים עשר חדש, שהרי השוכר אומר לו אין כחך יתר מכח זה שזכית בבית זה מחמתו.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שינוי דמי השכירות ללא הודעה מוקדמת</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (שם) מביאה את דברי <strong>רב אסי</strong>, המתמצת את דברי המשנה על פי ההבנה שהמשנה באה לקבוע את שיעור זמן ההודעה המוקדמת כאשר המשכיר רוצה לפנות את השוכר בימות הגשמים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב אסי</strong>:... אם נכנס יום אחד בימות הגשמים מהני שלשים יום - אינו יכול להוציאו מן החג ועד הפסח.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אותם שלושים יום שאמרו, שיש להקדים ולהודיע לפני ימות הגשמים, צריכים להיות ימים שלמים, ואם חסר מהם אפילו יום אחד, אין להוציא את השוכר באמצע ימות הגשמים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב הונא</strong> מעיר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב הונא</strong>: ואם בא לרבות בדמיה - מרבה. –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב נחמן</strong>: האי לנקטיה בכובסיה דלשבקיה לגלימא<sup id="ref111"><a href="#fn111">[111]</a></sup>! –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא צריכא, דאייקור בתי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב הונא</strong> אומר, שאמנם המשכיר אינו יכול לפנות את השוכר, אם לא הודיע לו מספיק זמן מראש, אך הוא יכול, גם ללא הודעה מראש, להעלות את שכר הדירה שהוא גובה ממנו. בכדי שלא יעשה המשכיר שימוש לרעה ביכולת זו, ויאלץ את השוכר להתפנות לאלתר על ידי קביעת דמי שכירות מופרזים, הגמרא מסייגת את דברי רב הונא, וקובעת שהעלאת דמי השכירות צריכה להיות פרופורציונית להתייקרות הדיור באופן כללי<sup id="ref112"><a href="#fn112">[112]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים רבים (<strong>רא"ש</strong> בתשובותיו א, ו, ה<strong>מאירי</strong> ד"ה "צריך שתדע", ה<strong>ריטב"א</strong> להלן) העירו שהאפשרות לשנות את המחיר קיימת רק בשכירות שאינה תחומה בזמן, שבה כל חודש וחודש<sup id="ref113"><a href="#fn113">[113]</a></sup>, שכירות חדשה היא וניתן לקבוע לה תעריף חדש. אמנם בשכירות תחומת זמן, בה הוסכם על דמים קצובים, אין יכולת לשנות חד צדדית את דמי השכירות, כיוון ששכירות דומה למכירה (ועי' בפרק ז הלכה א בדברי הרמב"ם ובמה שנבאר שם).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שנתבאר לעיל, קיימת סימטריה מסויימת בדינים אלה, וכפי שהמשכיר אינו יכול לפנות את השוכר מבלי להודיע לו על כך תקופה ידועה מראש, כך גם השוכר אינו יכול לעזוב את הבית ולהפסיק לשלם מבי להודיע על כך למשכיר תקופה ידועה מראש. בהתאמה, פסקו ה<strong>רמב"ם</strong>, ה<strong>מאירי</strong> ועוד ראשונים, שכשם שהמשכיר יכול להעלות את דמי השכירות ללא הודעה מוקדמת, אם התייקרו הבתים, כך גם השוכר יכול, ללא הודעה מוקדמת, להודיע שהוא משלם פחות, אם הוזלו הבתים, ואם אין המשכיר מסכים, מותר לו לעזוב לאלתר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נקודה בה נחלקו הראשונים בהסבר דברי רב הונא היא בשאלה האם דבריו מתייחסים לדברי רב אסי שלפניהם. כלומר, האם רב הונא קובע שיכול המשכיר להעלות את דמי השכירות גם במקרה עליו מדבר רב אסי, קרי, משכיר הנאלץ להמתין מלפנות את השוכר עד תום ימות הגשמים משום שלא הודיע מספיק זמן בתוך ימות החמה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב המפרשים מבינים שאכן דברי רב הונא אמורים גם במקרה הנ"ל, ויכול המשכיר להעלות את שכר הדירה שישלם השוכר לאורך ימות הגשמים (ובלבד שהדבר משקף את התייקרות השבתים הכללית).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>ריטב"א</strong> (ד"ה "לא צריכא") כותב שאין לפרש כך, וטעמו, שמכיוון שהשוכר אינו מפנה את הבית עד תום ימות הגשמים, הרי זה כאילו השכירו לזמן ידוע, ואם כן, אין המשכיר רשאי לשנות את דמי השכירות באמצע ימי השכירות. לכן מסביר הריטב"א שדברי רב הונא באים לידי ביטוי רק במקרה בו הודיע המשכיר לשוכר על פינויו בעוד 30 יום. במעמד זה יכול המשכיר לקבוע שכר דירה חדש אותו יגבה מהשוכר במהלך חודש זה<sup id="ref114"><a href="#fn114">[114]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שיב ט) פוסק שניתן למשכיר (לשוכר), לשנות את דמי השכירות לאלתר במקרה של עליה (ירידה) של מחיר השכירות. בהמשך (שם י) כותב השו"ע שכאשר מדובר בתקופת שכירות קצובה, אין יכולת ביד הצדדים לשנות את דמי השכירות עד תום התקופה.</p>
+                    
+                </div>
+                
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">משכיר הזקוק באופן פתאומי לבית</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך סוגיית הגמרא (שם), דנה הגמרא במקרים בהם המשכיר חפץ לפנות את השוכר מהבית באופן מיידי, בעקבות צורך דחוף שלו -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>פשיטא, נפל ליה ביתא - אמר ליה: לא עדיפת מינאי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>זבניה או אורתיה או יהביה במתנה - אמר ליה: לא עדיפת מגברא דאתית מיניה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כלליה לבריה, חזינן: אי הוה אפשר לאודועיה - איבעי ליה לאודועי, ואי לא - אמר ליה: לא עדיפת מינאי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נידונים כאן שלושה מקרים בהם יש למשכיר צורך דחוף לפינוי השוכר לאלתר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נפל ביתו של המשכיר וחפץ להוציא את השוכר כדי לגור במקומו. במקרה זה אומר המשכיר לשוכר- "אין אתה עדיף ממני". כלומר, אין מן הדין שימתין המשכיר לשוכר 30 יום או 12 חודשים (הזמן הדרוש להתראה מוקדמת על פינוי) כדי שלא ישאר האחרון ללא דיור, כאשר באותה שעה המשכיר עצמו חסר מקום לדור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הבעלות על הבית עברה לאחר, אם במכירה, מתנה או ירושה. והבעלים החדש חפץ להוציא את השוכר לאלתר. במקרה זה אומר השוכר למשכיר (החדש)- אין אתה טוב יותר מזה שקנית ממנו. וכפי שהוא לא יכול להוציאני לאלתר, כך גם אתה אינך יכול.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשכיר השיא את בנו וזקוק לאלתר לבית למגורי הזוג הצעיר. במקרה זה הדין תלוי בשאלה האם ידע המשכיר על הדבר מספיק זמן מראש ונמנע מלגלות את אוזנו של השוכר. אם לא ידע מראש, הדבר דומה לנפילת ביתו של המשכיר, ולכן יכול המשכיר לפנות את השוכר לאלתר. אמנם אם ידע מספיק זמן מראש ולא סיפר לשוכר, אינו יכול להוציא את השוכר עד שיעבור הזמן הקבוע לו בהלכה למצוא לו דיור חלופי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (בתשובה שם), ה<strong>ריטב"א </strong>וה<strong>מאירי</strong> (ד"ה "צריך שתדע") מסבירים שדברי הגמרא אמורים רק ביחס לאפשרות של המשכיר שלא להאריך את תקופת השכירות, ולפנות את השוכר לאלתר. לעומת זאת, אם השכירות קצובה בזמן, ובתוך הזמן נתעורר למשכיר צורך כלכלי דחוף לפנות את השוכר, אינו רשאי לפנותו כלל, משום שהשכירות היא מכירה לזמן מוגבל, וכשם שמוכר אינו יכול לחזור בו כך גם משכיר אינו יכול לסיים את העיסקה לפני הזמן שהוקצב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ירושלמי</strong> (פרק ח הל' ט) נחלקו האמוראים במקרה של משכיר הנצרך למכור את ביתו באופן שהשוכר לא יוכל להמשיך לגור בו -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המשכיר בית לחבירו וביקש למוכרו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר</strong><strong>'</strong><strong> אמי</strong> לא על דעת שזה ימות ברעב.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי זירא</strong> ו<strong>ר' הילא</strong> תריהון מרין מכל מקום קני לו. אלא דו אמר' ליה (=כך אומרים לו למוכר)- שיבקיה דשרי עד ימלא אנקלווסים דידיה<sup id="ref115"><a href="#fn115">[115]</a></sup> (=הנח לו עד שתשלם תקופתו).</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקרה זה, שונה מהמקרה השני שבבבלי בשתי נקודות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר על מכירה מתוך דוחק כלכלי גדול של בעל הבית, בה לשאלה האם השוכר ישאר בבית לאחר המכירה עד תום התקופה שקוצבת לו המשנה ישנה השלכה כלכלית משמעותית, אם מבחינת יכולתו למכור את הבית, או מבחינת יכולתו למכור במחיר סביר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמו כן, נראה שמדובר בכגון שחפץ המשכיר למכור ולפנות את השוכר אפילו בתוך זמנו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' אמי</strong> פוסק שבהסכם השכירות קיימת הסכמה בלתי מפורשת, שאם יזדקק המשכיר לנכס באופן דחוף, יהיה מותר לו לסיים את הסכם השכירות באופן חד צדדי ומיידי. לעומתו, <strong>ר' זירא</strong> ו<strong>ר' הילא</strong> סוברים שיכול בעל הבית למכור את ביתו רק באופן שיאפשר לשוכר לדור בבית עד תום תקופת השכירות. בהמשך הסוגיה<sup id="ref116"><a href="#fn116">[116]</a></sup> מסופר על מקרה קיצוני בו נהגו כר' אמי כאשר נצרך סכום גדול לפדיון יהודים מהשבי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בפסק ההלכה במקרי קיצון שכאלה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> (ד"ה "זבניה") וה<strong>עיטור</strong> (נ, א) כותבים שאין הלכה כר' אמי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מאידך, ה<strong>רא"ש</strong> (סי' כה) כותב שאף שהמשכיר אינו יכול להוציא את השוכר בתוך זמנו אף אם נפל בית המשכיר, "אם אין לו מה יאכל, יכול למוכרו אפילו בתוך הזמן"<sup id="ref117"><a href="#fn117">[117]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שיב א) פוסק שאפילו אם נפל ביתו של המשכיר ונותר מחוסר קורת גג, ואפילו אם הֶעני וזקוק מאד לכסף, אינו יכול להוציא את השוכר בתוך זמנו. ה<strong>ר</strong><strong>מ"א</strong> פוסק, עפ"י הירושלמי, שאם ביתו של המשכיר יוחלט לעולם לאחֵר אם לא יפדהו עתה, הרי זה "מצב חירום" המאפשר להוציא את השוכר לאלתר אפילו בתוך זמנו. <strong>ערוה"ש</strong> (שיב ג) כותב שהלכה כרמ"א רק אם כבר בשעת ההשכרה היה ידוע האילוץ, שאז ניתן לראות את הדבר כתנאי בלתי מפורש בהסכם השכירות (או כ"שכירות בטעות"), אך באילוץ שצץ רק לאחר מכן, לא ניתן להוציא את השוכר בתוך זמנו אפילו ב"מצב חירום".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (שם יא-יג) נפסק כדברי הגמרא (עי' לעיל) במקרים בהם רוצה המשכיר לפנות את השוכר בשכירות <strong>שאינה</strong> קצובת זמן, ללא התרעה מוקדמת, אם נפל ביתו שלו, אם זקוק לבית לצורך חתונת בנו או אם רוצה למכור את ביתו.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn98" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref98" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^98</a> 
+                        הביאתם לפרש כך העובדה שאם מנהג ידוע הוא לגבי רשות השימוש של שוכר, פשוט הוא שהולכים לפי מנהג זה, ואת זה לא היה צורך להשמיענו.
+                    </li>
+                    
+                    <li id="fn99" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref99" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^99</a> 
+                        נראה שהמחלוקת היא ביחס למשמעות של לשון "בית זה". על פי הריטב"א מדובר אך ורק בנתינת רשות לשימוש בנכס. השוכר נכנס תחת הבעלים בשימוש בבית, ולכן אם ארע קילקול, הוא צריך לשאת בעלויות התיקון, בדיוק כשם שהיה לו הוא היה בעל הנכס. בכך, לשיטתו, שונה לגמרי לשון "בית זה", שהיא נתינת רשות שימוש (פאסיביות מצד המשכיר, שרק צריך לפנות את הבית), מלשון "בית סתם", שהיא התחייבות (אקטיבית!) לספק שירותי דיור. מולו סובר הרא"ש שגם המשכיר "בית זה" מתחייב, בדומה למשכיר "בית סתם", לספק שירותי דיור (ובכך יחסי המשכיר-שוכר דומים יותר ליחסי אומן-בעה"ב מאשר ליחסי מוכר-קונה), אלא שלשון "בית זה" מסייגת התחייבות זו, באופן שלא יחייב את המשכיר לקנות בית אחר כדי לעמוד בהתחייבותו.
+                    </li>
+                    
+                    <li id="fn100" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref100" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^100</a> 
+                        הסברנו כריטב"א המפרש ש"בחצר דאגיר ליה לשוכר, ותורי דשוכר" הכוונה לומר "בחצר דאגיר ליה לשוכר, או תורי דשוכר", כלומר, ו' החיבור משמש במובן של "או", ומדובר בשתי אפשרויות- או שהחצר מושכרת (והבהמות באו מעלמא) או שהבהמות שייכות לשוכר.
+                    </li>
+                    
+                    <li id="fn101" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref101" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^101</a> 
+                        לכן בהמותיו של המשכיר וגם המשכיר עצמו כלל לא נמצאים שם. לפיכך הגמרא מציעה שהחצר מושכרת והבהמות של השוכר, או שהחצר אינה מושכרת והבהמות של בעל הבית, אך אינה מציעה בשום שלב שהחצר מושכרת והבהמות של בעל הבית. נראה שהגירסה שעמדה לפני הרמב"ם היא זו המובאת ברי"ף (נט. מדפיו)-"במאי עסקינן? אילימא בחצר דאגירא ליה לשוכר ותורי דשוכר אמאי של בעה"ב? אלא בחצר דמשכיר ותורי דאתו מעלמא וקיימי בהו".על פי גירסה זו, כלל לא נשקלת האפשרות שמדובר בחצר שאינה מושכרת ובבהמות המשכיר, ובאמת, אם המשנה מדברת על בית וחצר המושכרים שניהם, אין היגיון להעמיד את המשנה בחצר שאינה מושכרת, שאם כן, אף הבית אינו מושכר, ומה מקום למקרה זה במשנתנו?
+                    </li>
+                    
+                    <li id="fn102" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref102" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^102</a> 
+                        יתרון בולט של שיטת הרמב"ם (כפי שהסברנוה) הוא שברור כיצד הגמרא מוכיחה מהעמדתה את המשנה לדין שחצרו של אדם קונה לו שלא מדעתו, שרי החצר מושכרת, ובעליה המשכיר אינו שם כלל (וגם לא בהמותיו), ובכל זאת הזבל שבחצר שלו ולא של זה ששכר ממנו את החצר. לשיטת הראשונים האחרים ההוכחה היא מתוך כך שהמשנה מעניקה את הזבל למשכיר תמיד למרות שסביר שהוא אינו נמצא שם בכל עת לחזות בבהמות המטילות גלליהן ולקנות את הזבל לו מדעתו.
+                    </li>
+                    
+                    <li id="fn103" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref103" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^103</a> 
+                        לפי שיטת הרמב"ם האפר שבתנור שייך לשוכר רק אם הוא עצמו בישל, כיוון שהתנור "קונה" את האפר רק לבעליו, אפילו אם הוא שכור.
+                    </li>
+                    
+                    <li id="fn104" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref104" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^104</a> 
+                        פירוש זה כרוך בשינוי הפיסוק במשנה. על פי ההבנה הראשונה (שנדחתה) המילים "בימות הגשמים" נטפלות לפתיחה "המשכיר בית לחבירו", ומתארות את הזמן בו שכר. לעומת זאת, על פי ההבנה שלמסקנה, המילים "בימות הגשמים" נמשכות אחר ההמשך. כלומר, "המשכיר בית לחבירו", בכל זמן שלא יהיה, אם רוצה להוציאו "בימות הגשמים" הדין הוא כך וכך.
+                    </li>
+                    
+                    <li id="fn105" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref105" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^105</a> 
+                        רש"י מסביר שעל פי דרך זו יש לפסק את המשנה כך- "המשכיר בית לחבירו, בימות הגשמים אינו יכול להוציאו מן החג ועד הפסח בימות החמה שלשים יום". משפט זה הוא עניין אחד וכוונתו- המשכיר בית לחבירו וחפץ להוציאו בימות הגשמים, אינו יכול להוציאו אא"כ הודיעו שלושים יום בתוך ימות החמה. לפי פיסוק זה, המשנה אינה מדברת במפורש על החפץ לפנות את חבירו בימות החמה. ודינו של זה יילמד בהיקש (ועי' בהערה 106 שאכן הדברים נתונים במחלוקת).
+                    </li>
+                    
+                    <li id="fn106" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref106" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^106</a> 
+                        כך הסיק רש"י ורוב הראשונים משיעור 30 היום האמור במשנה ביחס למשכיר הרוצה לפנות את השוכר מהבית בתוך תקופת הגשמים. לעומתו, הראב"ד פוסק שבמקרה זה אינו חייב לתת לו התרעה מוקדמת אפילו של 30 יום, וזאת משום שקל למצוא בית חילופי בימות החמה.
+                    </li>
+                    
+                    <li id="fn107" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref107" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^107</a> 
+                        הרמב"ם עצמו אינו מסביר מדוע הדין בחנות רגילה (שאינה של נחתום או צבע) הדין שונה מאשר בבית. ניתן להציע, שהטעם לשיעור 12 חודש בחנויות הוא ששוק קטן יותר, בו יש פחות קונים ופחות מוכרים (כמו שכירות חנויות ביחס לשכירות בתים), מכיוון שהפעילות בו איטית יותר, יש בו פחות מבחר, והמחירים נוטים יותר לתנודתיות. ככל שיש לקונה\מוכר בשוק שכזה יותר אורך רוח כך שהוא אינו חייב לבצע את העיסקה תוך זמן קצר, כך יש לו יותר אפשרות לנצל הזדמנויות מבחינת המחיר שישלם ומבחינת תמורתו.אפשר, שבדברי הראשונים המסבירים "היקפן מרובה" במשמעות של בינוי והתאמה שצריכה לעבור חנות של נחתומים וצבעים, ניתן גם להסביר את עומק דברי רשב"ג עצמו על פי דרך זו, שהרי שוק המאפיות ומפעלי הצביעה הוא מצומצם עוד יותר (חנות רגילה לא תתאים לפעילויות אלה), ולכן קצב הפעילות הוא עוד יותר נמוך, וראוי לתת עד 3 שנים לשוכר למצוא הזדמנות ראויה לשכירות מקום חדש.
+                    </li>
+                    
+                    <li id="fn108" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref108" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^108</a> 
+                        אם נרצה, מחלוקתם היא במשמעות המילה "כשם" שבתוספתא.
+                    </li>
+                    
+                    <li id="fn109" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref109" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^109</a> 
+                        מה שבולט מדבריו היא העובדה שהוא מניח שהזמן לו מחוייב השוכר להודיע מראש על עזיבה קצר יותר מהזמן לו מחוייב המשכיר כלהקדים ולהודיע לשוכר על פינוי. אפשר שטעם הדבר הוא שבעוד שהסיכון לו חשוף המשכיר הוא הפסד כסף בגלל אי מציאה של שוכרים, הנזק שעלול להיגרם למשכיר הוא אובדן קורת גג.
+                    </li>
+                    
+                    <li id="fn110" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref110" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^110</a> 
+                        והטעם ברור- שכן מדובר באותו שוק, ולכן משך הזמן למציאת דירה אחרת להשכרה דומה למשך הזמן למציאת שוכר חדש.
+                    </li>
+                    
+                    <li id="fn111" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref111" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^111</a> 
+                        רש"י- "הרי הוא כאוחזו בביצים שלו עד שמניח לו טליתו"- ביטוי של הפעלת לחץ של אדם אחד על חבירו.
+                    </li>
+                    
+                    <li id="fn112" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref112" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^112</a> 
+                        רש"י מפרש "דאייקור בתי- שיהא הפסדו ניכר". כלומר, מדובר במצב בו ברור שאם היה המשכיר יכול למצוא שוכר אחר, היה יכול לגבות ממנו יותר ולהרוויח. במצב כזה, אם אין השוכר חפץ או יכול לשלם את המחיר הגבוה שדורש ממנו המשכיר, הרי שההודעה מראש, שמטרתה שמירה על רווחת השוכר, באה על חשבון רווחתו של המשכיר. בכזו סיטואציה לא תיקנו חז"ל את תקנתם, ויכול המשכיר להוציא את השוכר לאלתר. מצב זה דומה למצבים השונים שיידונו בהמשך, בהם המשכיר זקוק לבית באופן מיידי ואי פינוי השוכר יביא לו להפסדים.
+                    </li>
+                    
+                    <li id="fn113" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref113" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^113</a> 
+                        או אף פחות מזה, לפי הנהוג.
+                    </li>
+                    
+                    <li id="fn114" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref114" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^114</a> 
+                        נראה שטעמו של הריטב"א הוא שכיוון שהשכירות היא ממילא ללא הגבלת זמן, ומחודשת מחודש לחודש, אזי כמו שבכל חידוש של השכירות יכול המשכיר להעלות את דמי השכירות, כך יכול להעלות אותם כעת, בחודש האחרון עליו הוא מודיע לפני הפינוי. על פי עיקרון זה נראה עוד, שלדעת הריטב"א, במקרה בו יש צורך בהודעה של 12 חודשים לפני הפינוי (חנות או בית בעיר), יוכל המשכיר להעלות את השכר רק עם ההודעה על הפינוי. לאחר מכן נחשב הדבר כאילו קבע לו זמן של 12 חודש במחיר קצוב, ואינו יכול עוד לשנות את המחיר באמצע הזמן.
+                    </li>
+                    
+                    <li id="fn115" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref115" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^115</a> 
+                        במקום אחר בירושלמי (פסחים פרק ד) מובאת המחלוקת בלשון אחרת-רבי אבא בר כהנא בעא קומי רבי אימי המשכיר בית לחבירו ונצרך לדמיו א"ל לא עלה על דעת שימות ברעב. ר' זעירא רבי (הי)לא תריהון אמרין מיסתיוסיס באוני הוא ונקנית במקח
+                    </li>
+                    
+                    <li id="fn116" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref116" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^116</a> 
+                        בבבא מציעא:"אתא עובדא קומי רבי ניסי ולא קביל. מה פליג?! אמרי- ברתיה הוות ממשכנה גבי חד רומי, בגין כן הורי כרבי אימי" כלומר, בתו של המשכיר היתה שבויה ביד רומאי ואם לא היה משיג כסף לא היה יכול לפדותה. (ואחרים גרסו "ביתיה" במקום "ברתיה", ופירשו שביתו של המשכיר היה נחלט לרומאי אם לא היה פודהו).מקרה קיצוני דומה (ואפשר שמדובר על אותו מקרה) מתואר בסוגיה שבפסחים:"ביומוי דר' מנא הוות נימורת (=כמרים) בציפורין והוון בניהון מישכונין גבין מדאתאי מיזל לון אפיק ר' מנא כדון כהיא דר' אימי אמר לא דאנא סבר כדעתיה אלא בגין ציפרייא דלא יחלטון בניהון"
+                    </li>
+                    
+                    <li id="fn117" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref117" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^117</a> 
+                        הגר"א (שיב א"ק ג) מבאר שטעות סופר היא ברא"ש, וכוונתו הפוכה. כלומר- שאפילו אם אין לו מה שיאכל, אינו יכול להוציא את השוכר בתוך זמנו.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

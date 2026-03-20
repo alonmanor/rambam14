@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הלכות שאלה ופיקדון - פרק ה</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">הלכות שאלה ופיקדון - פרק ה</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ה)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    השומר על ממון שאין לו תובעים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שומר המציל עצמו בפיקדון
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שומר שנמנע מלקרוא לעזרה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שומר המסתפק למי להחזיר את הפיקדון
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-4-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    בכלי יקר וכלי זול
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שומר המערב פירות פיקדון מדודים עם פירותיו, כמה יחזיר
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ו-ז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שומר שאינו יודע כמה עליו להשיב למפקיד
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">הלכות שאלה ופיקדון</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק ה</h1>
+            </div>
+
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק החמישי עוסק במקרים בהם זהות המפקיד אינה מוגדרת (ממון שאין לו תובעים) או אינה מוכחת (לא ברור איזה פיקדון שייך למי), ובמקרים בהם תכולת הפיקדון אינה ידועה (עירב השומר פירות פיקדון עם פירותיו). אגב כך מובאות גם כמה הלכות העוסקות במקרים בהם נגנב הפיקדון.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה א פותחת בדין מי שהפקידו אצלו ממון של צדקה. מהגמרא עולה ששומר זה פטור אף אם פשע, אא"כ היה הממון קצוב לעניים. רוב המפרשים הבינו שבמקרה הרגיל מדובר בממון שאין לו תובעים ושומר מתחייב רק אם המפקיד נותן לו את הפיקדון מתוך כוונה לקבלו בחזרה. לכן, בצדקה הקצובה לעניים, כיוון שהיא מיועדת לעניים מסויימים נחשבים הם כמפקידים והשומר מחוייב כלפיהם. מפרשים אחרים הבינו שמדובר בשומר שלא טמן את המעות באדמה, ובמעות של צדקה הדבר הגיוני משום שבכל זמן יש סיכוי שהעני יזדקק להם. מפרשים אלה הסבירו שבמקרה בו הצדקה קצובה ידוע מתי העניין יזדקקו לכסף ולכן אין לשומר תירוץ מדוע לא קבר את המעות.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ב עוסקת בשומר שמסר בידו פיקדון יקר שהופקד אצלו לגנבים אנסים. בגמרא נאמר שאם השומר אינו אמיד וסביר שהגנבים באו בכדי לשדוד את הפיקדון, פטור השומר אף אם הביא להם את הפיקדון במו ידיו. הראשונים נחלקו האם מדובר בדין השווה לכל מוסר ממון חבירו, או שדווקא בשומר פטור כיוון שהמפקיד לוקח בחשבון שהשמירה על פיקדון יקר מעלה את הסיכון לפשיטה של גנבים, והשומר מראש לא לקח על עצמו אחריות לכך. עוד באותו עניין מלמדת הלכה ג שגם בגזלן חמוש, הנחשב בד"כ כאונס, אם יכול היה השומר לקרוא לעזרה ולמנוע את המעשה ולא עשה זאת, הרי הוא נחשב כפושע.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ד עוסקת בשומר שאינו זוכר איזה מהפיקדונות שעימו שייך למי מהמפקידים. דין זה נחלק בשני מישורים. ראשית, המפקידים עצמם אפשר שתובעים בטענות ודאי, שכל אחד מהם טוען שהפיקדון היקר שלו הוא ואפשר שאף להם לא ברור של מי כל אחד מהפיקדונות והם אינם יודעים לתבוע כל אחד את שלו. במקרה אחרון זה השומר ישלם רק כדי "לצאת יד שמים". עוד חילוק הוא ברמת הפשיעה של השומר. אם הפיקדונות הופקדו ב"כרך אחד", אין פשיעה בכך  שהשומר אינו זוכר מה של מי. לעומת זה, אם הופקדו בשני כרכים, היה עליו לזכור ופשע במה שלא עשה כן. הראשונים נחלקו מתי ראוי לצאת ידי שמים, האם דווקא כאשר השומר פשע (שתי כריכות), או שאפילו אם לא פשע (כריכה אחת), או שרק במקרה של גזילה יש עניין "לצאת ידי שמים". עוד נחלקו מהו גדר "כריכה אחת", האם מדובר כפשוטו, בהפקדה בחבילה אחת, או אף בשתי חבילות כאשר המפקידים הפקידו יחד זה בפני זה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ה עוסקת בשומר שעירב פירות פיקדון עם פירותיו ולכן צריך להעריך כמה מהפירות הם פיקדון. במקרים כאלה, כאשר מדובר בפירות ידועה הכמות בעת ההפקדה, חישוב ההחזר לוקח בחשבון פחת טבעי של הפירות עקב ריקבון, עכברים וכו'.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ו-ז עוסקת במקרים בהם הפיקדון אבד בפשיעה והמפקיד והשומר מתווכחים מה היה בדיוק בפיקדון. המפקיד אומר שהיו הרבה דינרים והשומר אומר שאינו יודע, ושמא היו מעט. הדיון בנושא נסוב סביב הדין הידוע, שהמודה במקצת חייב שבועה, וסביב וריאציה של אותו הדין- המודה במקצת ולגבי השאר אומר איני יודע, מתוך שאינו יכול להישבע, משלם. לדעה אחת בראשונים כיוון שהשומר מודה שהיה פיקדון, הרי הוא כמודה במקצת, ומתוך שאינו יודע להישבע, משלם כמו שטוען המפקיד. לדעה אחרת דין "מתוך שאינו יכול להישבע משלם" אמור דווקא במקרה בו יש מקום לחשוד שטענת "איני יודע" של הנתבע אינה נאמרת בתום לב (כמו בהלוואה), אך בנידון דנן, כאשר השומר לא יכול היה לדעת בדיוק כמה הופקד עימו, נשבע על מה שיודע ושאינו יודע השאר ונפטר. עוד נחלקו הראשונים מה הדין ב"שק צרור". כלומר, המפקיד הפקיד שק חתום והוא טוען שהכיל סחורה יקרה. מולו השומר אומר שאולי השק הכיל דברים זולים. בדין זה נחלקו הראשונים האם בכלל מדובר במודה במקצת (שהרי אין ההודאה ממין הטענה כטענו חיטים והודה לו בשעורים), או שכיוון שמודה בשק, נחשב הדבר כמודה במקצת.</p>
+                
+            </div>
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מי שהפקידו אצלו מעות של עניים או של פדיון שבויים ופשע בהם ונגנבו פטור שנאמר לשמור ולא לחלק לעניים והרי הוא ממון שאין לו תובעים, אפילו באו עליו גנבים וקדם והציל עצמו בממון שבויים פטור אין לך פדיון שבויים גדול מזה, בד"א בשאין זה הממון מופקד לעניי מקום זה או לשבויים [אלו] אבל אם היו לעניים אלו או לשבויים אלו והרי הוא קצוץ להן הרי זה הממון שיש לו תובעין וישלם אם פשע או ישבע שלא פשע כדרך כל השומרים.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השומר על ממון שאין לו תובעים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בבבא קמא (צג.) מביאה <strong>ברייתא</strong> הפוטרת שומר במקרים מסויימים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>"[כי יתן איש אל רעהו כסף או כלים] לשמור" - ולא לאבד, "לשמור" - ולא לקרוע, "לשמור" - ולא לחלק לעניים.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, פרשיית השומרים וחיוביהם נאמרת דווקא באדם שקיבל פיקדון לשומרו. אם קיבל את הפיקדון באופן שבעל הפיקדון מתנתק ממנו ואינו מצפה לראותו שוב, כגון אדם הנותן לחבירו חפץ כדי שיאבדו, או אפילו בכדי שיתן אותו לצדקה, אין השומר מתחייב אפילו אם פשע בפיקדון.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מתוך כך מסופר מעשה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא ארנקא דצדקה דאתי לפומבדיתא, אפקדה רב יוסף גבי ההוא גברא, פשע בה, אתו גנבי גנבוה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חייביה <strong>רב יוסף</strong>.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>אביי</strong>, והתניא: לשמור - ולא לחלק לעניים!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: עניי דפומבדיתא מיקץ קיץ להו, ולשמור הוא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש המעשה- אדם שהופקדו אצלו מעות שיועדו לעניי פומפדיתא, פשע בהם ונגבו. <strong>ר' יוסף</strong> חייב את אותו שומר, למרות דברי הברייתא דלעיל, וזאת משום ש"עניי דפומפדיתא מיקץ קיץ להו".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו מהו עניין "מיקץ קיץ"-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (שם ד"ה "קיץ") מסביר שמעות אלו היו קצובות לכל אחד מעניי פומפדיתא באופן ספציפי לכל שבוע ושבוע. לכן מדובר בממון שיש לו תובעים והוא נכלל במילה "לשמור". במילים אחרות, השומר שומר על הממון עבור כל עני, וכל עני בפני עצמו נחשב כמפקיד עצמו. ה<strong>מגיד משנה</strong> מדייק מדברי הרמב"ם "והרי הוא קצוץ להם", שאף דעתו כרש"י. גם ה<strong>מאירי</strong> פוסק כך, ומוסיף ששומר פטור על מעות צדקה דווקא במקרה בו קיבל השומר את המעות לחלקם לעניים, אך אם היה אמור להחזיר אותם לגבאי שהפקיד אצלו, נחשב הוא ככל שומר ואינו נפטר. ה<strong>מרדכי</strong> (רמז קא) מוסיף על כך ומחייב את השומר אפילו אם לא היה אמור להשיב את המעות לגבאי, אלא די בכך שהגבאי יבהיר לשומר שהוא שומר עבור הגבאי, ושאם יפשע יתחייב ישירות לגבאי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>רמ"ה</strong> (מובא בשטמ"ק) מסביר שטעם הפטור של השומר מעות לעניים הוא משום שבכל רגע יכולים לבוא עניים ולבקש כסף ולכן השומר אינו יכול לקבור את המעות, שהרי אז לא יהיו זמינות לכל עני. לכן, אם המעות מחולקות בזמנים קצובים ובכמויות קצובות, ברור מתי העניים יזדקקו לכסף ולכן מוטל על השומר לקבור את המעות ואם לא עשה זאת פשע. לפי שיטה זו, אם פשע השומר באופן אחר, או שיכול היה לשמור היטב באופן בו המעות עדיין זמינות, חייב בכל אופן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד מעשה בשומר על מעות צדקה מובא בסוגית הגמרא (ב"ק קיז:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דהוה מפקיד גביה ארנקא דפדיון שבויים,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>סליקו גנבי עילויה, שקלה יהבה ניהלייהו, אתא לקמיה ד<strong>רבא</strong>, פטריה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>אביי</strong>: והא מציל עצמו בממון חבירו הוא!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: אין לך פדיון שבויים גדול מזה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר בשומר שבכדי להציל את חייו נתן לשודדים מעות של פדיון שבויים שהיו עימו. <strong>אביי</strong> סבר שמדובר במציל עצמו בממון חבירו, שעליו להשיב את הממון, אך <strong>רבא</strong> סבר שהשומר פטור, כיוון שהמעות היו מיועדים לפדיון שבויים, כלומר, להצלת יהודים, והנה הוא הציל עצמו בהם והרי זה פדיון שבויים גם כן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקביל מצאנו במשנה (שקלים פרק ב משנה ה)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מותר שבוים לשבוים מותר שבוי לאותו שבוי</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כסף נאסף לפדיון שבויים ונותר ממנו ממון, שומרים אותו לפדיון שבויים. לעומת זה, כסף שנאסף לפדיונו של שבוי ספציפי ונותר ממנו סכום, שומרים את הסכום לאותו שבוי שישתמש בו אף לאחר שישתחרר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מצרף את דברי משנה זו עם הסוגיה בצג ע"א (שעניים שקצוב להם סכום הצדקה דינם שונה), ומתוך כך הוא מסיק שרבא, שהצדיק את הגבאי שהציל עצמו בממון פדיון שבויים, דיבר דווקא במקרה בו מעות פדיון השבויים לא היו מיוחדות לשבויים מסויימים, אך אם היו מיועדים לשבויים מסויימים, הרי נחשבים אותם שבויים כבעלי הפיקדון, והשומר חייב לשלם את שאיבד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שא ו) מעתיק את דברי הרמב"ם להלכה, ובמקום אחר (רצב ט) הוא פוסק שהמציל עצמו בממון פדיון שבוים (אם אין לו ממון אחר) פטור, אא"כ היה ממון המיועד לפדיון שבויים מסויימים.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המפקיד אצל חבירו ממון או כלים חשובין ובאו עליו גנבים וקדם ונתן להם הפקדון להציל עצמו אם היה אמוד שהוא בעל ממון חייב שחזקתו שבגללו באו הגנבים ונמצא זה מציל עצמו בממון חבירו, ואם אינו אמוד חזקתו שלא באו אלא לשם הפקדון ופטור וכן כל כיוצא בזה.
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר המציל עצמו בפיקדון</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין המציל עצמו בממון חבירו נצרך כאן לעניין הקדמה ועי' בפרק ח מהלכות חובל ומזיק ובדברינו שם. נביא כאן רק את יסוד הדין והוא, שהמראה ממון חבירו מתוך אונס בכדי להציל את גופו או את חייו פטור אך אם גם עשה מעשה ו"נשא ונתן ביד", חייב, שהרי הוא ככל גוזל ממון בכדי להציל עצמו, והמציל עצמו בממון חברו חייב. כמו כן, אם האנס יכול להגיע לממון בעצמו, ורק הכריח את היהודי לעשות כן עבורו, אפילו אם נשא ונתן ביד פטור, שהרי הממון נחשב כבר כאילו הוא ביד האנס.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בב"ק קיז: מסופר עוד-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דהוה מפקיד ליה כסא דכספא, סליקו גנבי עילויה, שקלה יהבה להו,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אתא לקמיה ד<strong>רבה</strong>- פטריה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א"ל <strong>אביי</strong>: האי מציל עצמו בממון חבירו הוא!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אמר <strong>רב אשי</strong>: חזינן, אי איניש אמיד הוא - אדעתא דידיה אתו, ואי לא - אדעתא דכספא אתו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר בשומר על כוס כסף, שבאו עליו גנבים והוציא את הכוס ונתן להם ובכך נסתלקו להם והלכו. <strong>רבה</strong> פטר את השומר, ו<strong>אביי</strong> תמה- הרי הוא מציל את עצמו בממון חבירו, ולא עוד אלא ש"נתן ונתן ביד" בו קימא לן הדין שחייב!</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב אשי</strong> מסביר שיש לחלק בין מקרים שונים- במקרה בו השומר הוא אדם אמיד, הגנבים באו כדי לקחת את ממונו, ולכן את נתן להם את הכוס- חייב. לעומת זה, במקרה בו אין מדובר באדם אמיד, יש להניח שהגנבים באו מראש בכדי לקחת את כוס הכסף ולכן השומר פטור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בטעם החילוק בין שומר אמיד לשומר שאינו אמיד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מפרש שאין מדובר דווקא באונס גופו (כלומר, הגנבים לא מאיימים להכותו או להורגו) אלא באונס ממונו (כלומר, שהגנבים דורשים ממנו שיביא להם ממון, ואם לא יביא, יקחו בכח). לפני שהספיקו הגנבים לקחת דבר מה בכח, קדם השומר והוציא את כוס הכסף כדי שיקחוה וילכו להם. הרמב"ם מסביר שאם השומר אינו אמיד, והגנבים באו בכדי לגנוב את כוס הכסף, הרי אין מדובר במציל עצמו בממון חבירו, אלא במי שנמנע מלהציל את ממון חבירו ע"י ממונו שלו. וכיוון שאין אדם מחויב להציל ממון חבירו ע"י ממון עצמו, פטור השומר<sup id="ref67"><a href="#fn67">[67]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינו יהונתן</strong> (בשטמ"ק) מפרש שאם באו הגנבים על אותה הכוס, הרי הם יודעים שהיא בבית, ואף אם לא יתנה להם יחפשו בכל הבית עד שימצאוה, ונמצא אם כן שלא הזיק השומר בפועל, ולכן למרות שנשא ונתן להם את הכוס בידו, פטור. לעומת זה, אם מדובר באדם אמיד, ולא באו הגנבים דווקא על הכוס, כיוון שהביא להם את הכוס, חייב, ככל נושא ונותן ביד לאנס, שחייב אפילו אם נאנס לעשות כן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בניגוד לפירושים אלה, לפיהם אין כאן דין מיוחד לשומר, אלא דין השומר כאן שווה לדין כל אדם המוסר ממון לאנס, ה<strong>רא"ש</strong> (סי' כח בפירושו הראשון) מעלה את האפשרות שיש כאן דין מיוחד בשומר. כלומר, אם השומר הוא אדם שאינו אמיד, כיוון שהעובדה שעתה הוא שומר על רכוש יקר מעלה את האפשרות שהוא ישדד, מראש לקח המפקיד אפשרות כזו בחשבון, שיבואו שודדים דווקא על ממון הפיקדון הזה, ומחל על כך. על פי דרך זו של הרא"ש, אם מדובר במוסר ממון חבירו שאינו מופקד איתו, אפילו אם באו השודדים לצורך ממון חבירו, אם נשא ונתן להם ביד, חייב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצב ח) מעתיק את לשון הרמב"ם להלכה, אך ה<strong>ש"ך</strong> (ס"ק כא) מבאר את דבריו על פי פירושו הראשון של הרא"ש.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המפקיד אצל חבירו כלים או פירות ובאו גנבים וגנבום בפניו ואילו היה צווח היו באין בני אדם ומצילין אותן הואיל ולא צווח הרי זה פושע וחייב לשלם וכן כל כיוצא בזה.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר שנמנע מלקרוא לעזרה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא מציעא דף צג:) מובא מעשה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איבו אפקיד כיתנא בי רוניא. אזל שבו שמטיה מיניה. לסוף הוכר הגנב. אתא לקמיה ד<strong>רב נחמן</strong>, חייביה... אמר <strong>רבא</strong>: התם גברי דפרמוסקא הוו קיימי, דאי רמא קלא הוו אתו ומצלין ליה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוניא שמר על כותנה עבור איבו, וגזלן חמוש ששמו שבו גזל את הכותנה. <strong>רב נחמן</strong> חייב את רוניא, ו<strong>רבא</strong> מבאר שאין הדבר משום שזהות הגנב ידועה ואנו דורשים שהשומר יעשה עימו דין, אלא משום שמראש כלל לא מדובר באונס, כיוון שלמרות שמדובר בליסטים מזויין, היו שם בשעת מעשה אנשי השלטון (פרמוסתקא), שלו היה רוניא מרים את קולו, היו עוזרים לו ומונעים את הגניבה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצא ח) פוסק כדברי הרמב"ם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד לגבי מאמצים מיוחדים שחייב השומר לעשות ומידת ההוצאה שהוא צריך להוציא עבורם, עי' בפרק ג מהלכות שכירות הלכה ו.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    שנים שהפקידו אצל אחד זה מאה וזה מאתים וכל אחד משניהם אומר אני הוא שהפקדתי המאתים והשומר אומר איני יודע ישבע כל אחד מהן שהפקיד מאתים ונוטל כדין כל נשבע ונוטל ויתן מאתים לזה ומאתים לזה ומפסיד מאה מביתו שהרי הוא פושע שהיה לו לכתוב שם כל אחד על כיס שלו, לפיכך אם הביאו לו השנים כאחד שלש מאות בכרך אחד ובאו ותבעו וכל אחד אומר המאתים שלי נותן מנה לזה ומנה לזה והשאר יהיה מונח אצלו עד לעולם או עד שיודה האחד לחבירו, שהרי הוא אומר להם כיון שראיתי שאין אתם מקפידין זה על זה והבאתם בכרך אחד לא הטרחתי עצמי לידע ולזכור תמיד מי בעל המאה ומי בעל המאתים, וכן אם הפקידו אצלו שני כלים אחד גדול ואחד קטן וכל אחד ואחד אומר אני הוא בעל הגדול והשומר אומר איני יודע ישבעו שניהם ויתן הגדול לאחד מהם ודמי הגדול לשני וישאר לו הקטן, ואם הביאום בכרך אחד כאחד נותן הקטן לאחד ודמי הקטן לשני והשאר יהיה מונח אצלו עד שיודה האחד לחבירו או עד לעולם, וכן מי שתבעוהו שנים זה אומר אני הוא בעל הפקדון וזה אומר אני הוא והשומר אומר אחד מכם הוא ואיני יודע מי הוא ישלם לשניהם, וכן שנים שהפקידו שתי בהמות אצל רועה ומתה אחת מהן ואינו יודע של מי היתה ישלם לשניהם, ואם הפקידו בעדרו שלא מדעתו מניח הבהמה ביניהם ומסתלק ותהיה מונחת עד שיודה האחד לחבירו או עד שירצו לחלוק אותה.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר המסתפק למי להחזיר את הפיקדון</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (בבא מציעא לז.) עוסקת במקרים בהם גזלן שבא להשיב אבידה, או שומר שבא להשיב פיקדון אינו יודע למי מבין שנים עליו להחזיר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לשנים: גזלתי לאחד מכם מנה, ואיני יודע איזה מכם. או: אביו של אחד מכם הפקיד לי מנה ואיני יודע איזה הוא - נותן לזה מנה ולזה מנה, שהודה מפי עצמו</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שנים שהפקידו אצל אחד, זה מנה וזה מאתים, זה אומר שלי מאתים וזה אומר שלי מאתים - נותן לזה מנה ולזה מנה, והשאר יהא מונח עד שיבא אליהו. אמר <strong>רבי יוסי</strong>: אם כן מה הפסיד הרמאי? - אלא, הכל יהא מונח עד שיבא אליהו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ברישא מדובר במקרים בהם אדם חייב רק לאחד מתוך שנים. הוא אינו יודע למי מהשנים הוא חייב ואף הם אינם יודעים זאת. למשל, אם אדם מודיע לשני אנשים שהוא יודע שגזל אחד מהם ואינו יודע איזה מהם ואף הם אינם יודעים, או ששומר מודיע לשני אנשים שאביו של אחד מהם (שכבר אינו בחיים) הפקיד אצלו, וכעת הוא אינו זוכר אביו של איזה משני האנשים היה זה. במקרים אלה פוסקת המשנה שצריך השומר\גזלן להשיב לשניהם, כדי שיצא שבוודאות האדם לו הוא חייב קיבל את שלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, בסיפא מדובר על שומר שהפקידו אצלו שני אנשים, האחד הפקיד 100 והשני 200. כל אחד מהאנשים טוען (טענת וודאי) שהוא זה שהפקיד את ה200, והשומר עצמו אינו זוכר מי היה בעל ה200 ומי היה בעל ה100. במקרה זה, בניגוד למקרה שברישא, אין השומר חייב להחזיר לכל אחד מהם 200, אלא מחזיר לכל אחד מהם 100, ואת ה100 העומד בספק מניחים עד שיפתר הספק. <strong>רבי יוסי</strong> מחמיר עוד יותר וסובר שאפילו המאה בה שניהם מודים צריכה להיות מונחת עד שיפתר הספק, וזאת בכדי להפעיל לחץ על הרמאי מבין השנים שיודה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מבררת את ההבדל בין הרישא לבין הסיפא- מדוע ברישא השומר צריך לשלם לכל אחד מהצדדים, בכדי שיהיה בטוח שהמפקיד קיבל בחזרה את הפיקדון, ואילו בסיפא השומר אינו מחוייב לשלם לכל אחד מהתובעים 200-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>:</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רישא נעשה כמי שהפקידו לו בשני כריכות, דהוה ליה למידק.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>סיפא - נעשה כמי שהפקידו לו בכרך אחד, דלא הוה ליה למידק,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כגון דאפקידו תרוייהו בהדי הדדי בחד זימנא, דאמר להו: אנת גופייכו לא קפדיתו אהדדי, אנא קפידנא?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מסביר שמדובר בהפקדות בעלות אופי שונה. ברישא מצופה שהשומר יזכור מי הוא שהפקיד אצלו ("שתי כריכות"), וכיוון שאינו זוכר, מוטל עליו לוודא שהמפקיד האמיתי יקבל את שלו, אפילו במחיר הפסד של השומר. לעומת זה, בסיפא מדובר במקרה כזה ("כרך אחד") בו לא מוטל על השומר לזכור מיהו שהפקיד את המאה ומיהו שהפקיד את המאתיים. במקרה זה אין השומר חייב לשאת בהפסד של הספק (כפי שיתבאר בהמשך, קיימות דעות שונות בביאור המצב של "כרך אחד" מול "שתי כריכות").</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד דנה הגמרא במקרה ברישא בו מדובר על גזלן המסתפק למי עליו להחזיר. הגמרא מביאה משנה (יבמות קיח:) המדברת על מקרה דומה, ונראית כסותרת את הנאמר במשנתנו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>גזל אחד מחמשה ואין יודע מאיזה גזל כל אחד אומר אותי גזל מניח גזילה ביניהן ומסתלק דברי <strong>רבי טרפון</strong>.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי עקיבא</strong> אומר אין זו דרך מוציאתו מידי עבירה עד שישלם גזילה לכל אחד ואחד.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דברי משנתנו, לפיהם הגזלן צריך להשיב לכל אחד מהנגזלים האפשריים, נראים כסותרים את דברי רבי טרפון, לפיהם אדם שגזל אחד מחמישה ואינו יודע מי מהם גזל, מניח את הגזילה ביניהם ואינו חייב לשלם לכל אחד ואחד מהם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מחלקת-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>התם דקא תבעי ליה, הכא - בבא לצאת ידי שמים</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאשר הגזלן נתבע על ידי הנגזלים האפשריים, אין בית דין מחייבים אותו יותר מאשר לשלם את הגזילה פעם אחת ("מניח ביניהם ומסתלק"). ברם, מלשונו של ר' עקיבא ("לא זו הדרך מוציאתו מידי עבירה") נלמד שכאשר הגזלן מעצמו רוצה לצאת ידי שמים, כלומר, שעבירת הגזילה שעשה תתכפר, הוא צריך לדאוג שהנגזל יקבל חזרה את הגזילה שנגזלה ממנו אפילו אם זה אומר לשלם לכל אחד ואחד מהנגזלים האפשריים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים התייחסו לשאלה כיצד יש לפרש את המשנה ואת ההלכות היוצאות ממנה, לאור שני החילוקים הנ"ל- בין "כרך אחד" ל"שתי כריכות", ובין חובת התשלומים הפורמלית לחובה של הבא לצאת ידי שמים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "התם") מסבירים ששני חילוקים אלה תקפים למסקנה. כלומר, המשנה כולה מדברת ב"בא לצאת ידי שמים". כאשר מצופה מהשומר לדעת בדיוק מי היה המפקיד ומה בדיוק הפקיד (כגון שהיה רק מפקיד אחד, או ששני מפקידים הפקידו ב"שתי כריכות") אזי אפילו אם אין הוא נתבע על ידי המפקידים (כמו במקרה שבמשנה בו האבות הם שהפקידו), מוטלת עליו החובה להחזיר לכל מפקיד אפשרי, אם רצונו לצאת ידי שמים. לעומת זה, אם לא מצופה מהשומר לדעת איזה מהמפקידים הפקיד מאתים ואיזה מאה (כגון שהפקידו ב"כריכה אחת"), אין נדרש ממנו להחזיר לשניהם מאתיים, אפילו אם שניהם תובעים אותו ואפילו לא כדי לצאת ידי שמים. התוספות מוסיפים, שבמקרה של "שתי כריכות" (בו היה על השומר לזכור מי המפקידים של כל פיקדון), אם תובעים המפקידים, חייב המפקיד לשלם לכל אחד מהם גם בדיני אדם<sup id="ref68"><a href="#fn68">[68]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סי' ח) אומר דברים דומים, אך חולק על דברי התוספות במקרה בו מדובר ב"כריכה אחת" (כך שהשומר לא פשע בכך שאינו יודע מי המפקיד של כל פיקדון) והמפקידים תובעים את השומר. כולם מודים שבדיני אדם אין לחייב את השומר, אך בעוד שהתוספות פוטרים אותו גם מדיני שמים, הרא"ש מחייבו אם בא לצאת ידי שמים, וזאת מתוך הבנה כוללת, לפיה כל אדם הנתבע תביעת ברי ואינו יודע לטעון כנגדה טענה וודאית (אלא מסתפק בעצמו האם התובע צודק או לא), ראוי לו שישלם אם רוצה לצאת ידי שמים<sup id="ref69"><a href="#fn69">[69]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> אינו מתייחס ל"בא לצאת ידי שמים", קרי, למצב בו השומר פשע (שאין ידועה לו זהות המפקידים על אף שהפיקדון הופקד ב"שתי כריכות") והמפקידים אינם תובעים את השומר, אלא הוא בא לצאת ידי שמים. כמו כן, הרמב"ם (גזלה ואבידה ד י) בבואו לפסוק את הרישא של משנתנו, כותב שב"גזלתי אחד מכם או אביו של אחד מכם ואיני יודע איזהו" חייב להחזיר לכל אחד מהם אם בא לצאת ידי שמים. בולטת העובדה שהרמב"ם <strong>לא</strong> כתב להלכה את המקרה של "אביו של אחד מכם <strong>הפקיד</strong> לי מנה ואיני יודע איזה הוא". מכל זה עולה הרושם שלדעת הרמב"ם, בניגוד לדעת התוספות והרא"ש, המושג של "בא לצאת ידי שמים" בהקשר של סוגייתנו מכוון רק להשבת גזל. עבור שומר, אעפ"י שפשע (בכך שלא זכר מי המפקיד), אין מקום לתשלום שמטרתו רק כדי לצאת ידי שמים<sup id="ref70"><a href="#fn70">[70]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (לז:) מקשה הגמרא על החילוק שמחלק רבא בין "כריכה אחת" לבין "שתי כריכות"-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רבינא</strong> ל<strong>רב אשי</strong>: ומי אמר רבא כל בשתי כריכות הוה ליה למידק? והאמר <strong>רבא</strong>, ואי תימא <strong>רב פפא</strong>: הכל מודים בשנים שהפקידו אצל רועה, שמניח רועה ביניהן ומסתלק! –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש, ידוע בשם רבא, שמודים ר"ע ור' טרפון, ששנים שהפקידו אצל רועה, ואין ידוע מי הפקיד מה (או שמתה אחת הבהמות), מניח הרועה ביניהם ומסתלק, ואינו חייב לשלם לזה ולזה מביתו. מתוך שהגמרא מניחה שהפקדת שתי בהמות אצל רועה נחשבת כ"שתי כריכות", קשה לרבא, שכן רבא טוען ששומר שהפקידו אצלו בשתי כריכות אמור לזכור של מי כל פיקדון, ואם אינו זוכר משלם מביתו! לכן מסבירה הגמרא,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: התם - כשהפקידו בעדרו של רועה שלא מדעתו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, הרועה אינו חיב לזכור איזו בהמה שיכת לאיזה מפקיד רק אם הפקידו בעדרו כשלא היה שם, כך שלא <strong>שכח</strong> את זהות המפקידים, אלא כלל <strong>לא ידע</strong> אותה מראש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לאור דברי המשנה והגמרא, נחלקו הראשונים בפירוש "שתי כריכות" מול "כריכה אחת"-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שבסיפא, במקרה בו השומר אינו אמור לזכור מי המפקיד של כל פיקדון ("כריכה אחת"), מדובר במקרה בו הפקידו שני המפקידים זה בפני זה<sup id="ref71"><a href="#fn71">[71]</a></sup>, כלומר, הם ידעו זה על זה ובכל זאת לא דאגו שיהיה על צרור הכסף של כל אחד מהם סימן זיהוי אישי. משום כך, הבין השומר שאם להם לא אכפת והם אינם חוששים זה מזה, אף לו אין צריך שיהיה אכפת ולכן לא טרח לזכור מי מהם הפקיד מה. לעומת זה, הפקדה ב"שתי כריכות" היא הפקדה בה המפקידים הפקידו בזמנים שונים, ולכן כל אחד מהם סמך על השומר שיזכור מה שייך למי. במקרה של שנים שהפקידו אצל רועה מסביר רש"י שהדמיון ל"שתי כריכות" נובע מכך שמפקידי בהמות, גם כאשר הם מפקידים זה בפני זה, סומכים הם על העובדה שהבהמות שונות זו מזו, ולכן הם מצפים מהשומר שיזכור איזו בהמה שייכת למי<sup id="ref72"><a href="#fn72">[72]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong>, לעומתו, מפרש ש"כריכה אחת" הכוונה, כפשוטו, למקרה בו המפקידים אכן הפקידו צרור כסף אחד<sup id="ref73"><a href="#fn73">[73]</a></sup>, ומכיוון שהפקידו בצרור אחד הבין השומר שלא עליו מוטל לזכור כיצד מתחלקת ביניהם תכולת הצרור. בהתאמה, "שתי כריכות" מתבאר כפשוטו והוא מקרה בו כל אחד מהמפקידים הפקיד צרור כסף נפרד, ולכן על השומר לזכור מה שייך למי<sup id="ref74"><a href="#fn74">[74]</a></sup>. ברור לפיכך, שבמקרה של שתי בהמות מצופה שהשומר יזכור איזו בהמה שייכת לאיזה מפקיד פשוט מפני שהבהמות אינן "אגודות" בכיסוי אחת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (ש א) מעתיק את לשון הרמב"ם, ומכאן משמע שהוא פוסק כמותו להלכה במחלוקתו עם רש"י לגבי הגדרת "כריכה אחת". אמנם, לאחר שכותב השו"ע את דין השומר שפשע ולא כתב את שם המפקיד על כל צרור, מוסיף בתוך לשון הרמב"ם משפט: "ואי אינהו לא תבעי ליה כל חד בברי, אם בא לצאת ידי שמים חייב אבל בדיני אדם, פטור". זוהי כמובן שיטת הרא"ש והתוספות. בהמשך, פוסק השו"ע כתוספות, שכאשר השומר לא פשע, אין כל חובה שישלם, אפילו לא כי לצאת ידי שמים. ה<strong>רמ"א</strong> מביא את שיטת הרא"ש, לפיה גם שומר שלא פשע כלל, ונתבע תביעת וודאי והוא מסתפק בדבר, ראוי שישלם לכל תובע כדי לצאת ידי שמים.</p>
+                    
+                </div>
+                
+                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בכלי יקר וכלי זול</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (שם, לז.) ממשיכה ומביאה עוד מקרה דומה מאד למקרה בו שני מפקידים מתווכחים מי הפקיד מאה ומי הפקיד מאתיים, אלא שבמקרה זה מדובר על כי מפקידים שהפקידו כלי זול וכלי יקר ושניהם טוענים שאת הגדול הפקידו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכן, שני כלים אחד יפה מנה ואחד יפה אלף זוז,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>זה אומר יפה שלי וזה אומר יפה שלי - נותן את הקטן לאחד מהן, ומתוך הגדול נותן דמי קטן לשני, והשאר יהא מונח עד שיבא אליהו,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבי יוסי</strong>: אם כן מה הפסיד הרמאי? אלא, הכל יהא מונח עד שיבא אליהו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (לז:) מסבירה מדוע המשנה היתה צריכה להדגים את מחלוקת חכמים ור' יוסי באמצעות שני המקרים- פיקדונות של מאה ומאתיים מחד, ופיקדונות של כלי יקר וכלי זול מאידך-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וצריכא, דאי אשמועינן הך קמייתא - בההיא קאמרי רבנן, משום דליכא פסידא. אבל בהא, דאיכא פסידא דגדול - אימא מודו ליה לרבי יוסי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואי אתמר בהא - בהא קאמר רבי יוסי, אבל בהך - אימא מודי להו לרבנן, צריכא</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, במקרה של הכלים, יש יתרון בשיטתו של ר' יוסי, כיוון שאפשר שבעליו (האמיתיים) של הכלי הגדול לא יפסיד, משום שאם תתברר צדקתו, יקבל את הכלי שלו בשלמותו, מה שאין כן לפי שיטת חכמים לפיה הוא כבר מקבל חלק מהכלי בתחילה, ונמצא שלעולם כבר לא יקבל את הכלי שלו ("איכא פסידא דגדול"). לכן המשנה בחרה להשמיענו שחכמים אומרים את דבריהם אפילו במקרה של הכלים, ור' יוסי אומר את דברו אפילו במקרה של המנה והמאתיים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בשאלה מהו אותו "פסידא" שיש לבעל הכלי הגדול (או היקר) יותר נחלקו הראשונים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מבין שעל פי שיטת חכמים, את הכלי עצמו שוברים ונותנים לאחד מהמפקידים האפשריים חלק ממנו, כך שישווה ערכו של אותו חלק לשוויו של הכלי השני, הזול. מכאן ההפסד שיש לבעל הכלי, שהרי אפילו אם יקבל את שאר הכלי, סוף סוף הוא מקבל לידו רק כלי שבור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong> חולק על הדברים ומסביר שעל פי חכמים יש למכור את הכלי היקר ולתת מערכו כשיעור הכלי הזול. ההפסד של בעל הכלי הגדול הוא רק בכך שאפילו אם תתגלה צדקתו, הוא עדיין צריך ללכת ולקנות כלי חדש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (ש ב) פוסק כרשב"א.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המפקיד פירות אצל חבירו הרי זה לא יערבם עם פירותיו, עבר ועירב יחשוב כמה היה הפקדון ויראה כמה חסר הכל ויחשוב חסרון הפקדון ויתן לו אחר שישבע, נסתפק מהן ולא ידע כמה נסתפק יוציא לו חסרונו לחטים ולאורז קלוף ארבעה קבין ומחצה לכל כור, לשעורים ולדוחן תשעה קבין לכל כור, לכוסמין ולזרע פשתן בגבעוליו ולאורז שאינו קלוף שלש סאין לכל כור, וכמדה הזאת לכל שנה ושנה, בד"א שמדד לו בימות הגורן והחזיר לו בימות הגורן, אבל מדד בימות הגורן והחזיר לו בימות הגשמים אינו מוציא לו חסרונו מפני שהן מותירות, וכן מוציא לו שתות ליין ושלשת לוגין שמן למאה לוגין לוג ומחצה שמרים ולוג ומחצה בלע, אם היה מזוקק אינו מוציא לו שמרים, ואם היו הקנקנים ישנים אינו מוציא לו בלע.
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר המערב פירות פיקדון מדודים עם פירותיו, כמה יחזיר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה (מ.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המפקיד פירות אצל חבירו - הרי זה יוציא לו חסרונות,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לחטים ולאורז - תשעה חצאי קבין לכור,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לשעורין ולדוחן - תשעה קבין לכור,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לכוסמין ולזרע פשתן - שלש סאין לכור, הכל לפי המדה והכל לפי הזמן.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבי יוחנן בן נורי</strong>: וכי מה אכפת להן לעכברין? והלא אוכלות בין מהרבה ובין מקמעה! אלא, אינו יוציא לו חסרונות אלא לכור אחד בלבד.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יהודה</strong> אומר: אם היתה מדה מרובה אינו מוציא לו חסרונות, מפני שמותירות.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יוציא לו שתות ליין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יהודה</strong> אומר: חומש.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יוציא לו שלשה לוגין שמן למאה, לוג ומחצה שמרים, לוג ומחצה בלע.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם היה שמן מזוקק - אינו יוציא לו שמרים, אם היו קנקנים ישנים - אינו יוציא לו בלע.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יהודה</strong> אומר: אף המוכר שמן מזוקק לחבירו כל ימות השנה, הרי זה מקבל עליו לוג ומחצה שמרים למאה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה עוסקת באדם שהופקדה עימו תבואה, פירות, יין או שמן, בכמות ידועה, והוא עירב את הפיקדון עם פירותיו שלו. כאשר הוא מחזיר את הפיקדון לבעליו הוא אינו יודע לזהות את הפיקדון ולכן עליו להחזיר על פי הכמות שהופקדה. מכיוון שפירות שמאוכסנים למשך זמן פוחתים והולכים, עליו להחזיר קצת פחות מאשר הכמות המקורית. המשנה מציינת את השיעור בו כור יבול נפחת לשנה, על פי סוגי היבול השונים, תוך שכמה דעות נאמרות בקשר לאופן החישוב- <strong>ר' יוחנן בן נורי</strong> אומר שפְּחת התבואה נובע מאכילת עכברים, ולכן אם יש כמות גדולה יותר מכור, החלק היחסי של הפחת קטֵן. <strong>ר' יהודה</strong> אומר שלעיתים לא רק שאין פחת, אלא יש תוספת ביבול, וזאת כאשר מודדים בעונה לחה, שאז הלחות שבאוויר מעלה את נפח התבואה, ויש לקחת דבר זה בחשבון כאשר מדובר בכמות גדולה של תבואה, שאז אכילת העכברים אינה חשובה (<strong>ברטנורא</strong>).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן דומה, גם משמן או מיין שעורבבו עם של השומר אין מחזירים את כל הכמות שהופקדה, שכן חלק מהכמות נבלע בקנקנים ("בֵּלע", אם הקנקנים חדשים), וכמו כן גם חלק מהכמות שהופקדה מראש היה שמרים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם) מוסיפה, שדברי משנה אמורים דווקא בשומר שעירב את היבול המופקד עם יבולו שלו, ואינו יודע כמה משלו יש שם, שכן אם עירב כמות ידועה של פיקדון עם כמות ידועה משלו, דרך משל כור של פיקדון עם שלושה כורים משלו, יחלק לפי אותו השיעור (רמנבע- שלושת רבעי) כאשר בא להשיב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים פסקו כשיטת חכמים במשנה, וכן פסק ה<strong>רמב"ם</strong>. הרמב"ם מוסיף עוד, מה שאיננו מפורש במשנה ובגמרא, שלכתחילה אסור לשומר לערב את הפיקדון עם פירותיו שלו, והמשנה מדברת על שומר שעבר ועירב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצב י-יג) פוסק כדברי הרמב"ם.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    הפקיד אצלו פירות שאינן מדודין ועירבן עם פירותיו ולא מדדן ה"ז פושע, בעל הפקדון אומר כך וכך היו והשומר אומר איני יודע ישלם בלא שבועה שהרי חייב עצמו בתשלומין ואינו יודע כמה הוא חייב ונמצא חייב שבועה שאינו יכול להשבע, וכזה הורו רבותי הרב ר' יוסף הלוי ורבו ז"ל, וכן כל שומר שנתחייב לשלם ואמר איני יודע כמה דמים אני חייב לשלם והבעלים אומרים אנו יודעין וכך וכך היה שוה יטלו בלא שבועה והוא שיטענו דבר שהן אמודין בו, ויש לשומר להחרים על מי שלקח ממנו יתר מן הראוי לו, ומנין שהדין כך הוא הגע עצמך שהפקיד אצלו כיס מלא זהובים ופשע בו הבעלים אומרים מאתים דינר היו והשומר אומר ודאי שהיה בו דינרים אבל איני יודע כמה היו נמצא זה כטוען מאתים והודה לו במקצת ואמר השאר איני יודע שהוא מחוייב שבועה ואינו יכול לישבע ומשלם כמו שיתבאר. נמצא מחוייב שבועה וכו' עד וכזה הורו רבותי. א"א ורבותי אין מורין כן לפי שאינו דומה לחמשין ידענא וחמשין לא ידענא דהתם הוה ליה למידע ואערומי הוא דמערים ותובע נמי טוען עליה ואמר מידע ידעת ודבר שבמניין קא טעין ליה ודבר שבמניין קא כפר ליה והוה ליה מחוייב שבועה שאינו יכול לישבע ומשלם אבל הני לאו הכי הוא והיינו טעמא דשק צרור דאמרינן עלה ישבע זה ויטול ולא אמרו יטול בלא שבועה עכ"ל.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מת אביו והניח לו שק צרור והפקידו אצל חבירו ופשע בו המפקיד אומר איני יודע מה היו בו שמא מרגליות היו בו וכן השומר אומר איני יודע כמה אני חייב לשלם שמא זכוכית היה מלא שורת הדין שאני אומר בטענה זו שישבע השומר בתקנת חכמים שאינו ברשותו ויכלול בשבועתו שאינו יודע בודאי שהיה בו יתר על שוה כך וכך וישלם מה שהודה בו וכן כל כיוצא בזה, מעשה באחד שהפקיד שק צרור אצל חבירו ופשע בו. המפקיד אומר חלי זהב ומרגליות וכיוצא בהן היו בו והשומר אומר איני יודע שמא סיגים או חול היו בו ואמרו חכמים ישבע בעל הפקדון ויטול והוא שיטעון דבר שהוא אמוד בו או אמוד להפקידו אצלו, ולמה נשבע כאן בעל הפקדון לפי שאין השומר מחוייב שבועה שאפילו הודה ואמר ברי לי שהיה מלא סיגים והמפקיד אומר מרגליות היו השומר נשבע היסת ונפטר כמו שטענו חטים והודה לו בשעורים וכן כל כיוצא בזה ובהלכות טוען ונטען יתבארו עיקרי הדברים.  מעשה באחד שהפקיד שק צרור אצל חבירו וכו' עד בה' טוען ונטען יתבארו עיקרי הדברים. א"א אין זה כלום שהרי היה שם שק ומטכסין והודה בשק וכפר במטכסין ועוד בדבריו בשק צרור למה נשבע בעל השק ונוטל לאו היינו אמרינן לגבי שוורים דקאמר ניזק ברי ומזיק שמא אכתי היינו דרבה בר נתן ותו לא מידי עכ"ל.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר שאינו יודע כמה עליו להשיב למפקיד</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפני שנביא את מחלוקת הראשונים הקשורה בהלכות שלפנינו, נעיין במקורות הרלוונטיים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה בשבועות עוסקת במקרים שונים בהם אדם לווה מחבירו על משכון, והמלווה איבד את המשכון-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המלוה את חבירו על המשכון ואבד המשכון,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו: סלע הלויתיך עליו ושקל היה שוה, והלה אומר: לא כי, אלא סלע הלויתני עליו וסלע היה שוה - פטור.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>סלע הלויתיך עליו ושקל היה שוה, והלה אומר: לא כי, אלא סלע הלויתני עליו ושלשה דינרים היה שוה - חייב.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>סלע הלויתני עליו ושתים היה שוה, והלה אומר: לא כי, אלא סלע הלויתיך עליו וסלע היה שוה - פטור.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>סלע הלויתני עליו ושתים היה שוה, והלה אומר: לא כי, אלא סלע הלויתיך עליו וחמשה דינרים היה שוה - חייב.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הדין העקרוני הוא שכיוון שהמלווה מתחייב ללווה בדמי משכונו שאיבד, יש לקזז את את שווי המשכון משווי החוב, וכמו כן, אם המשכון שווה יותר מהחוב, המלווה צריך לשלם ללווה את ההפרש. המשנה עוסקת במקרים בהם סכום ההלוואה הוא סלע (= שני שקלים = ארבעה דינרים), ושני הצדדים נחלקים בשאלה מהו שווי המשכון שאבד. המשנה מציינת ארבעה מקרים. בשני המקרים הראשונים טוען המלווה ששוויו של המשכון היה שקל, שהוא פחות משווי החוב (סלע), ולכן הוא מבקש את החזר יתרת החוב. אם הלווה משיב כנגדו ששווי המשכון הוא סלע, כשווי החוב, הדין הוא שהלווה פטור משבועה. לעומת זה, אם הוא משיב שאכן, שווי המשכון נמוך מסלע, אך הוא אינו כל כך נמוך כמו שטוען המלווה (שני דינרים = שקל), אלא קצת יותר יקר (שלושה דינרים), נחשב הוא כמודה במקצת ולכן מתחייב הוא להישבע שבועת התורה שאכן המשכון שווה רק שלושה דינרים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בשני המקרים האחרונים התביעה מתהפכת, והלווה טוען ששוויו של המשכון היה שני סלעים- פי שנים משווי החוב. לכן הוא תובע את ההפרש מהלווה. גם כאן הדין משתנה על פי תשובת המלווה. אם המלווה טוען שהמשכון היה שווה סלע, בדיוק כמו החוב, הרי הוא פטור משבועה. לעומת זה, אם המלווה מודה שהמשכון היה שווה יותר מהחוב, אך הוא טוען שהמשכון שווה חמישה דינרים, כיוון שהוא מודה במקצת, עליו להישבע, כנ"ל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין המובא בכמה מקומות בגמרא (ב"מ צח. וקטז:) בשם <strong>רבא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: מה לי בידך והלה אומר אין לך בידי אלא חמשים והשאר איני יודע מתוך שאינו יכול לישבע- משלם.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש- ידוע שהמודה במקצת חובו חייב שבועה מהתורה. רבא מתייחס למקרה בו טענתו של המודה במקצת היא טענת שמא, כלומר, הנתבע מודה בחלק מהתביעה (חמישים) והוא גם אינו יודע לומר בוודאות שהתובע טועה (לגבי החמישים האחרים). מתוך שאינו יכול להישבע שהוא חייב לתובע רק חמישים, פוסק רבא שהתובע נוטל את כל תביעתו (מאה) מבלי שיצטרך להישבע<sup id="ref75"><a href="#fn75">[75]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ירושלמי</strong> (ב"ק פ"ו הלכה ז)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חד בר נש אפקד גבי חבריה חד שק צרור ואירעו אונס</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אהן אמר סיגין הוה מלא ואהן הוה אמר מטקסין הוה מלא</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הרי זה נשבע ונוטל</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ופירושו- אדם הפקיד אצל חבירו חפצים בשק חתום, ואבדו החפצים באופן בו השומר מתחייב לשלם. המפקיד טען שבשק היו כלים בעלי ערך ("מטקסין") שעליהם צריך השומר לפצותו, אך השומר טען לעומתו שאינו מאמין למפקיד, ואולי היה מלא בדברים חסרי ערך ("סיגים"). הירושלמי פוסק שבמקרה זה נשבע המפקיד על דבריו וגובה את תביעתו מהשומר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ר"י מיגאש</strong> (ד"ה נקיטינן) לומד מהמשנה (מקור א) דין כללי בשומרים הכופרים בשוויו של הפיקדון שהופקד עימם ואבד. לדבריו, שומר שאיבד פיקדון, המודה בכך שהפיקדון הופקד עימו, אך טוען שהפיקדון זול יותר מהשווי אותו נוקב המפקיד, נחשב כמודה במקצת ולכן חייב להישבע שבועת התורה על הסכום שהפיקדון שווה, על פי דעתו<sup id="ref76"><a href="#fn76">[76]</a></sup>. הר"י מיגאש הולך צעד נוסף, וטוען שאם השומר רק אומר שהפיקדון היה זול ממה שטוען המפקיד, אך אינו יודע לנקוב בערך כלשהו, נחשב הוא כמודה במקצת שאינו יכול להישבע, ולכן משלם למפקיד <strong>מבלי שהמפקיד </strong><strong>יזדקק לה</strong><strong>ישבע כלל</strong><sup id="ref77"><a href="#fn77">[77]</a></sup>. פסק הר"י מיגאש מובא גם בדברי הרמב"ם שלפנינו. הירושלמי (מקור ג) קשה על שיטת הר"י מיגאש, שכן משמע מהירושלמי שלמרות שהשומר מודה שהוא חייב דבר מה (ולכן הוא "מודה במקצת"), ואינו יכול להישבע כמה הוא חייב (כי אינו יודע מה היה בשק), אין הוא משלם מבלי שישבע המפקיד תחילה. הר"י מיגאש חש בשאלה זו, ומסביר שכיוון שהמפקיד תובע כלים והנתבע טוען ש(אולי) היו בשק סיגים, הרי זה כ"טענו חיטים והודה לו בשעורים", והנתבע כלל אינו מתחייב שבועת מודה במקצת. אמנם, לו היו חלוקים ביניהם ב<strong>כמות</strong> הסחורה ולא ב<strong>מהותה</strong> (דרך משל, שהמפקיד אומר שכך וכך מטבעות היו בשק והשומר אומר שהיו בו פחות מטבעות), כיוון שהשומר מודה במקצת ואינו יודע כמה היה בדיוק, ישלם למפקיד מבלי שיזדקק המפקיד להישבע. דברי הר"י מיגאש באים לידי ביטוי במלואם בהלכות ה<strong>רמב"ם</strong> שלפנינו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (בבא קמא, פרק ו סי' טז) חולק על הבנת הר"י מיגאש. לדעתו דין "מתוך שאינו יכול להישבע- משלם", אמור רק במקרה בו הנתבע היה אמור לדעת את הסכום המדוייק, ולכן אי הידיעה שלו מרמזת על כך שהוא משקר. כך למשל, במקרה של רבא, בו מדובר בלווה המודה שהוא חייב חמישים ולגבי החמישים האחרים טוען שאינו יודע אם השיבם או לא, מצופה מאדם שידע כמה כסף לווה וכמה החזיר. לעומת זה, במקרה בו שומר כלל לא היה אמור לדעת את שווי הפיקדון שהופקד אצלו, כגון שהופקד בתוך שק וכדומה, טענתו שאינו יודע את השווי אינה מורה על רמאות<sup id="ref78"><a href="#fn78">[78]</a></sup>, ולכן <strong>התובע צריך להישבע</strong>. הרא"ש מסביר ששבועתו של התובע במקרה זה שייכת לשורה של מקרים בהם תיקנו חז"ל שהתובע נשבע ונוטל<sup id="ref79"><a href="#fn79">[79]</a></sup>, כמו למשל במקרה של מצית בית על תכולתו (שהוא עצמו אינו יודע מה יש בבית ולכן אינו יכול להישבע על כך), המשלם את תכולת הבית על פי הצהרת ושבועת הניזק<sup id="ref80"><a href="#fn80">[80]</a></sup>. הרא"ש מביא כסיוע את הירושלמי (מקור ג), ממנו משמע שאף אם הנתבע מודה במקצת ואינו יכול להישבע, צריך התובע להישבע בכדי ליטול. ה<strong>ראב"ד</strong> (בהגהות לפנינו) סובר כרא"ש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ללא קשר למחלוקת הראשונים הנ"ל, מעיר ה<strong>רשב"א</strong> (בשו"ת ח"א סי' אלף קלד) שאם המפקיד טוען שנגנב חלק מהפיקדון ומולו השומר טוען שלא ידוע לו כלל על גניבה, בזה נשבע השומר שאינו יודע ונפטר. מקרה זה שונה מהמקרה בו וודאי היתה גניבה והשומר טוען שאינו יודע כמה נגנב (למשל, שק צרור, מקור ג), כיוון שבמקרה של הרשב"א המחלוקת בין הצדדים היא על עצם השאלה האם בכלל נתחייב לו, והרי זה דומה לאומר לחבירו הפקדתי אצלך כסף והוא משיב לו שאינו יודע אם בכלל הפקיד אצלו, שנשבע הנתבע שאינו יודע, ונפטר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצח א-ב) מעתיק את לשון הרמב"ם<sup id="ref81"><a href="#fn81">[81]</a></sup>, וה<strong>רמ"א</strong> מוסיף את דברי הרשב"א.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn67" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref67" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^67</a> 
+                        ומדיני שומר פטור, כמובן, כי מדובר באונס.
+                    </li>
+                    
+                    <li id="fn68" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref68" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^68</a> 
+                        התוספות לומדים זאת מכך שהמשנה חייבה בדיני שמים דווקא במקרה בו המפקידים אינם תובעים את השומר ("אביו של אחד מכם הפקיד אצלי מנה..."), ומשמע שלו היו תובעים את השומר בטענות ברי, היה נאלץ לשלם להם גם בדיני אדם. הדבר ברור למדי גם מהדין שנלמד לעיל לפיו שומר שאינו יודע היכן הניח את הפיקדון נחשב כפושע ("כל לא ידענא פשיעותא היא"), ושומר השוכח את זהות הבעלים דומה לשומר השוכח היכן הפקיד את הפיקדון, כיוון ששניהם לא דאגו שהפיקדון יהיה זמין לדרישת בעליו.
+                    </li>
+                    
+                    <li id="fn69" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref69" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^69</a> 
+                        כך מבאר הר"ן על סוגייתנו את שיטת הרא"ש.
+                    </li>
+                    
+                    <li id="fn70" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref70" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^70</a> 
+                        אפשר שמפסקי הראשונים עולות דרכים שונות להבין מהו עניין "לצאת ידי שמים". התוספות האומרים שאם לא פשע השומר אינו צריך לשלם כדי לצאת ידי שמים, מבינים ש"לצאת ידי שמים" פירושו לכפר על עוול (פשיעה). מולם, הרא"ש, הסובר שאף השומר שלא פשע נותן לזה 200 ולזה 200 אם בא לצא ידי שמים, דעתו היא שאף אם לא חטא האדם, יש מקום "לצאת ידי שמים" במובן של להבטיח שאפילו בשגגה לא נעשה עוול על ידו. הפירוש המינימליסטי ביותר הוא של הרמב"ם המבין "לצאת ידי שמים" במובן המצומצם של כפרה על איסור גזל ע"י השבת הגזילה.
+                    </li>
+                    
+                    <li id="fn71" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref71" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^71</a> 
+                        גירסתו של רש"י היא, כמופיע לפנינו, "סיפא- נעשה כמי שהפקידו לו בכרך אחד", כלומר, בפועל הם הפקידו בשני צרורות, איש צרור כספו, אך כיוון שהפקידו זה בפני זה, נחשב הדבר בעיני השומר כאילו הפקידו בצרור אחד, ואין השומר מחוייב לזכור כיצד מתחלק אותו "צרור" ביניהם.
+                    </li>
+                    
+                    <li id="fn72" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref72" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^72</a> 
+                        זאת בניגוד לשנים המפקידים צרורות כסף זה בפני זה, שצרורות הכסף דומים זה לזה, ולכן, אם המפקידים מראים את חששם שדמיון צרורות הכסף לא יאפשר לשומר לזכור איזה צרור שייך לאיזה מפקיד, נחשבים הם כאילו הפקידו "בכרך אחד" ואין מוטל על השומר לזכור מה של מי.
+                    </li>
+                    
+                    <li id="fn73" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref73" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^73</a> 
+                        הגרסה לפי הרמב"ם היא "סיפא- שהפקידו לו בכרך אחד" (ללא המילים "נעשה כמי"). כלומר, מדובר בכגון שהפקידו שניהם בצרור אחד.
+                    </li>
+                    
+                    <li id="fn74" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref74" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^74</a> 
+                        המקרה בו יחלקו רש"י והרמב"ם בפועל הוא כאשר המפקידים הפקידו כל אחד את צרורו אך זה בפני זה. לפי הרמב"ם מוטל על השומר לכתוב על כל צרור של מי הוא, אך לפי רש"י, כיוון שהמפקידים היו מודעים לבעייתיות ולא דאגו שצרורם יהיה מזוהה, נראה שמחלו על כך ולקחו את האפשרות לבלבול על אחריותם.
+                    </li>
+                    
+                    <li id="fn75" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref75" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^75</a> 
+                        ועוד יתבארו הדברים בפירוט בהלכות טוען ונטען, הלכה ד, בעז"ה.
+                    </li>
+                    
+                    <li id="fn76" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref76" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^76</a> 
+                        ליתר דיוק, על פי הרמב"ם בפירושו את משנתנו, השומר נשבע שהפיקדון אינו יקר יותר מהסכום אותו הוא נוקב.
+                    </li>
+                    
+                    <li id="fn77" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref77" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^77</a> 
+                        כך הוא עיקר דין תורה לדעתו, אמנם בפועל, ככל תובע הנוטל, יזדקק המפקיד להישבע שבועת היסת.
+                    </li>
+                    
+                    <li id="fn78" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref78" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^78</a> 
+                        בין השאר, הרא"ש מביא ראיה מהגמרא בשבועות (מז.). הגמרא שם לומדת מהפסוק "שבועת ה' תהיה בין שניהם", "ביניהם- ולא בין היורשים", כלומר, אם טוען אדם כלפי חבירו "אבי הפקיד מנה אצל אביך", והנתבע מודה בחצי, ולגבי החצי השני אומר שהוא אינו יודע, אין הוא מתחייב שבועת מודה במקצת ולכן אין בו דין "מחוייב שבועה שאינו יכול להישבע ומשלם". על פי דרכו מסביר הרא"ש שכיוון שהלווה היה האב ואין מצופה מהבן שידע את כל מה שעל האב היה לדעת, לכן אין טענת "איני יודע" של הבן מורה על ניסיון לרמאות, ואין אומרים בכגון דא "מתוך שאינו יכול להישבע משלם".
+                    </li>
+                    
+                    <li id="fn79" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref79" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^79</a> 
+                        כיוון שהנתבע אינו יכול להישבע ולהיפטר, אם משום שהוא אינו יודע אם הוא חייב או לא (בעל בית הטרוד בפועלים רבים ולא יודע אם שילם לכולם), או משום שהוא רשע וחשוד על שבועה (גזלן, חובל בחבירו, רשע), ועוד מקרים (עי' במשנה שבועות מד:-מה.)
+                    </li>
+                    
+                    <li id="fn80" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref80" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^80</a> 
+                        "תקנת נגזל באש", עי' בהלכות נזקי ממון פרק יד הלכה יב.
+                    </li>
+                    
+                    <li id="fn81" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref81" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^81</a> 
+                        מאידך, בסימן צ סעיף י כותב השו"ע גם כראב"ד (ב"יש אומרים"), וצ"ע מדוע לא הביאו גם כאן.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

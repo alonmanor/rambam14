@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הלכות גניבה - פרק ט</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">הלכות גניבה - פרק ט</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ט)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    המקור לאיסור גניבת נפש
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-1-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    אין לוקין על גניבת נפש
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ב-ג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הצורך בשימוש בנגנב
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-2-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הכנסת הנגנב לרשות הגנב ומכירתו לאחרים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הגונב אשה ומוכר את עוּברהּ
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הגונב בן ביתו או תלמידו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    זהות הגנב והנגנב
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז-ט
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    דין הבא במחתרת- כללי
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-6-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    משמעות הביאה "במחתרת"
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-7" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה י-יב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-7-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מקרים בהם יש להניח שהגנב אינו מסכן את חיי העומד כנגדו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-8" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-8-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הצלת חייו של הבא במחתרת
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-8-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    פטור מתשלומין בבא במחתרת
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">הלכות גניבה</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק ט</h1>
+            </div>
+
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    כל הגונב נפש מישראל עובר בלא תעשה שנאמר "לא תגנוב", פסוק זה האמור בעשרת הדברים הוא אזהרה לגונב נפשות, וכן המוכרו עובר בלא תעשה שזה בכלל "לא ימכרו ממכרת עבד", ואין לוקין על שני לאוין אלו מפני שהוא לאו שניתן לאזהרת מיתת בית דין שנאמר כי ימצא איש גונב נפש וגו' ומיתתו בחנק.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המקור לאיסור גניבת נפש</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מכילתא</strong> דורשת על "לא תגנב" האמור בעשרת הדברות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"לא תגנוב" למה נאמר? לפי שהוא אומר "וגונב איש ומכרו..." עונש שמענו אזהרה מנין?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תלמוד לומר- לא תגנוב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרי זה אזהרה לגונב נפש;</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אתה אומר לגונב נפש או אינו אלא אזהרה לגונב ממון?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כשהוא אומר "לא תגנובו", הרי אזהרה לגונב ממון,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הא מה תלמוד לומר לא תגנוב?, בגונב נפשות הכתוב מדבר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, "לא תגנב" האמור בעשרת הדברות אינו עוסק בגניבת ממון אלא בגניבת נפשות, ועונשו מפורש בהמשך בפרשת משפטים, וגם בפרשת כי תצא בדברים. המכילתא ממשיכה ומסבירה שיש לפרש ש"לא תגנב" שבעשרת הדברות אמור בגונב נפשות כיוון שהאיסורים שסביבו- לא תנאף ולא תרצח, חייבים עליהם מיתת בית דין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (סנהדרין פו.) מבררת את מקור איסור גניבת נפש-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אזהרה לגונב נפש מנין?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יאשיה </strong>אמר: מ"לא תגנב" (שמות כ),</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יוחנן</strong> אמר מ"לא ימכרו ממכרת עבד" (ויקרא כה).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ולא פליגי, מר קא חשיב לאו דגניבה, ומר קא חשיב לאו דמכירה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש, כיוון שבכדי להתחייב בגניבת נפש יש צורך למכור (כמבואר בהלכה הבאה), נמצא שמי שמתחייב בגניבת נפש, מתחייב גם במכירת אחיו בדרך ממכרת עבד, שהיא איסור עצמאי, כמבואר בספר המצוות (ל"ת רנח), ובהלכות עבדים (א, ה)<sup id="ref117"><a href="#fn117">[117]</a></sup>.</p>
+                    
+                </div>
+                
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אין לוקין על גניבת נפש</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">יתבאר בעז"ה בדברינו על הרמב"ם הלכות סנהדרין, יח ב.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב-ג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אין הגנב חייב מיתת חנק עד שיגנוב את הישראל ויכניסנו לרשותו וישתמש בו וימכרנו לאחרים שנאמר והתעמר בו ומכרו, ואפילו לא נשתמש בו אלא בפחות משוה פרוטה כגון שנשען עליו או נסמך בו אף על פי שהנגנב ישן הרי זה נשתמש בו.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    גנבו ונשתמש בו ומכרו ועדיין הגנוב ברשות עצמו ולא הכניסו הגנב לרשותו פטור, גנבו והוציאו לרשותו ונשתמש בו ולא מכרו או מכרו קודם שישתמש בו או נשתמש בו ומכרו לאחד מקרוביו של גנוב כגון שמכרו לאביו או לאחיו הרי זה פטור שנאמר "גונב נפש מאחיו" עד שיבדילנו מאחיו ומקרוביו במכירה. וכן אם גנבו והוא ישן ונשתמש בו כשהוא ישן ומכרו ועדיין הוא ישן הרי זה פטור.
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הצורך בשימוש בנגנב</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפסוק בדברים נאמר</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">...וְהִתְעַמֶּר בּוֹ וּמְכָרוֹ...</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בפסוק מוזכרים שני דברים שעושה הגונב בנגנב, האחד הוא ההתעמרות והשני הוא המכירה. במפרשים ובפוסקים ניתן למצוא כמה הבנות לפסוק-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אונקלוס</strong> מתרגם "ויתגר ביה ויזבנניה", כלומר, הוא מפרש את ההתעמרות כלשון המורה על מסחר. באופן ברור עוד יותר נאמר ב<strong>תרגום יונתן</strong> "וְיַעֲבֵיד בֵּיהּ פְּרַקְמַטְיָא וְיִזְבְּנִינֵיהּ". לפי קריאה זו בפסוק, מדובר רק על מכירה, אלא שלשון התעמרות היא המהות- עשיית פרקמטיא מהנגנב, ולשון מכירה שאחריה היא המעשה בפועל של מכירתו לאחר. כן מפרש ה<strong>רשב"ם</strong> (דברים כא יד).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, הרס"ג ורב האי גאון...</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> וכמותו רוב הראשונים (עי' רש"י דברים כד,ז) הבינו שבפסוק מפורטים שני תנאים הכרחיים בכדי להתחייב על גניבת נפש. האחד הוא השימוש בנגנב, הנלמד מלשון ההתעמרות והשני היא מכירתו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> בסנהדרין (פה:) חלקו התנאים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגונב נפש מישראל אינו חייב עד שיכניסנו לרשותו,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יהודה</strong> אומר: עד שיכניסנו לרשותו וישתמש בו, שנאמר "והתעמר בו ומכרו"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה שאף תנא קמא מסכים שיש צורך שהגנב יעשה שימוש בנגנב, אלא שחלקו במשנה האם שימוש שאינו של שווה פרוטה נחשב כשימוש או לא. תנא קמא סובר שאף שימוש בנגנב בפחות משווה פרוטה מספיק בכדי לחייב את הגנב, ואילו <strong>רבי יהודה</strong> סובר שיש צורך בשימוש של שווה פרוטה לפחות<sup id="ref118"><a href="#fn118">[118]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מיד בהמשך מועלית שאלה:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעי <strong>רבי ירמיה</strong>: גנבו ומכרו ישן, מהו? מכר אשה לעוברה מהו?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">יש דרך עימור בכך, או אין דרך עימור בכך?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ותיפוק ליה דליכא עימור כלל!</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לא צריכא, ישן - דזגא עליה, אשה - דאוקמא באפי זיקא,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דרך עימור בכך או אין דרך עימור בכך, מאי? – תיקו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי ירמיה</strong> שואל על שני מקרים, האחד בו גנב ומכר את הנגנב בעודו ישן, והשתמש בו בכך שנסמך או שכב עליו, והשני, בו גנב ומכר עובר של אשה, ו"השתמש" בעובר (או בה) בכך שהעמיד את האשה מול הדלת לחסום את הרוח (ועובי העובר מועיל לו בזה).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בגרסת הגמרא, ובעקבות כך בהבנתה:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כנראה אינו גורס את המשפט "יש דרך עימור בכך, או אין דרך עימור בכך?"<sup id="ref119"><a href="#fn119">[119]</a></sup>. מתוך כך מבין הרמב"ם, ששאלותיו של רבי ירמיה אינן מנסות לברר את גדר השימוש הנדרש על מנת להתחייב בגניבת נפש, אלא את גדר המכירה הנדרשת, וזאת לאור הדרישה (עי' בנושא הבא) שהגנב יכניס את הנגנב לרשותו ואז יוציא מרשותו לרשות הקונה. פירוש, ברור ששימוש פעוט כמו העמדת מישהו בפני רוח או סמיכה עליו, נחשב שימוש<sup id="ref120"><a href="#fn120">[120]</a></sup>, רבי ירמיה מברר האם בשני המקרים מקרים הנ"ל, נחשבת גניבתו של הגנב כהכנסה לרשותו ומכירתו כהוצאה מרשותו לרשות הקונה ממנו. במקרה של הגונב את הישן ההכנסה לרשות הגנב מוטלת בספק<sup id="ref121"><a href="#fn121">[121]</a></sup>. ובמקרה של מכירת עובר ההוצאה מרשות הגנב מוטלת בספק<sup id="ref122"><a href="#fn122">[122]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, לשיטת <strong>רש"י</strong>, הגורס את שאלת הגמרא "יש דרך עימור בכך, או אין דרך עימור בכך?", נמצא ששאלתו של רבי ירמיה היא האם שימוש בישן ובעוּבר נחשב שימוש להתחייב עליו מיתה בגניבת נפש<sup id="ref123"><a href="#fn123">[123]</a></sup>. הגמרא נותרת בתיקו, ולפיכך להלכה, לפי רש"י (בניגוד מאשר לפי הרמב"ם), שימוש בנגנב שהוא אינו מודע לו אינו נחשב שימוש שיתחייב עליו הגנב מיתה.</p>
+                    
+                </div>
+                
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הכנסת הנגנב לרשות הגנב ומכירתו לאחרים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, כל התנאים ב<strong>משנה</strong> מודים, שבכדי שיתחייב הגנב, יש צורך "שיכניסנו לרשותו". כלומר, שיכניס את הנגנב לרשותו של הגנב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי המשמעות ההלכתית של הדרישה, המבוארת במשנה, שיכניס הגנב את הנגנב לרשותו, חלקו הראשונים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (פה: ד"ה "עד שיכניסנו") מתלבטים מה הדין אם הגביה הגנב את הנגנב בתוך חצרו של הנגנב, האם זו נחשבת הכנסה של הנגנב לרשותו? מצד אחת התוספות משווים לדין הגונב מיטלטלין, שדי לו בהגבהה עם כוונת גניבה בכדי שיתחייב בכפל, אפילו אם היה הדבר ברשות הבעלים. מאידך התוספות מזכירים את הדין (שנדון בו להלן), שאם מכר הגנב את הנגנב לאחיו של הנגנב, פטור כיוון שבמכירה זו החזיר את הנגנב לרשותו שלו. מדין זה לומדים התוספות, שדין הגונב נפש שונה מדין הגונב מיטלטלין בכך שכל עוד שהנגנב נמצא בסביבתו הטבעית (אצל אחיו), אין לקיחתו או אפילו הגבהתו נחשבת כהכנסה לרשות הגנב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מה שקשה לתוספות, פשוט ל<strong>רמב"ן</strong>. הרמב"ן (בפירושו על התורה, שמות כא,טז) כותב שאם הגביה הגנב את הנגנב על כתיפו, ומכרו לאחר, אפילו אם לא הוציאו ממקומו, חייב. הרמב"ן מנמק ש"לא תהא חצרו קונה לו יותר מידו".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם לגבי המקור לדין המשנה קיימת מחלוקת-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> על המשנה מסביר שדין המשנה, שאין הגנב מתחייב "עד שיכניסנו לרשותו" נלמד מהאמור בפרשת משפטים</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְגֹנֵב אִישׁ וּמְכָרוֹ <strong>וְנִמְצָא בְיָדוֹ</strong> מוֹת יוּמָת</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, ה"מציאה" שבפסוק היא דרישה שהנגנב יימצא בידו של הגנב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> בפירושו על התורה (שם) מעלה אפשרות אחרת להבנת הכתוב, המתאימה יותר לסדר גניבה-מכירה-מציאה המתואר בפסוק. לדברי הרמב"ן מציאה זו היא מציאת הנגנב בידיו של הקונה לאחר שמְכרוֹ לו הגנב. הרמב"ן מוסיף שהבנה זו בפסוק היא העומדת מאחורי הדין שבברייתא (תובא להלן), לפיו אם מכר הגנב את הנגנב אך עדיין לא הגיע הנגנב לרשותו של הקונה, אין הגנב חייב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ברייתא</strong> זו, המובאת בגמרא (שם) נאמר -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גנבו ולא מכרו, מכרו ועדיין ישנו ברשותו – פטור,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכרו לאביו או לאחיו, או לאחד מן הקרובים – חייב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסיפא של ברייתא זו מתבאר דינו של הגנב שמכר את הנגנב לבן משפחתו של הנגנב. הגמרא מגיעה מיד למסקנה, שיש להחליף את הלשון "חייב" ל"פטור", ומביאה את דברי <strong>רבי שמעון</strong> המסביר דין זה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי שמעון</strong> אומר: "(כי ימצא איש גנב נפש) מאחיו" - עד שיוציאנו מרשות אחיו</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המ"ם שבמילה "מאחיו" נדרשת לא כמסייגת את סוג האדם שחייבים על גניבתו, אלא כמתארת את הגניבה עצמה<sup id="ref124"><a href="#fn124">[124]</a></sup>- הגניבה היא הפרדה של האדם מאחיו, קרי, מסביבתו הטבעית, ובכדי שיתחייב הגנב, צריך הוא להוציא את הנגנב מסביבתו הטבעית, הכוללת את משפחתו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כותב כדברי הברייתא בתוספת מילה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גונב נפש מאחיו עד שיבדילנו מאחיו ומקרוביו <strong>במכירה</strong></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, הרמב"ם מבין שדין זה, שהמוכר את הנגנב לאחיו של הנגנב פטור, אמור דווקא לגבי המכירה, ואין לו השלכה לגבי השלב של תחילת הגניבה והכנסת הנגנב לרשותו של הגנב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, הובאו לעיל דברי התוספות, המסיקים מדין זה גם למעשה הגניבה עצמו, וטוענים שאם הגנב לא הוציא את הנגנב מסביבתו הטבעית, קרי, סביבת אחיו (גם אם הגביהו או לקחו וכיוצ"ב), אין זו גניבת נפש.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    וכן אם גנב אשה ומכרה לעובריה בלבד כגון שהתנה על הלוקח שזו השפחה לי ואין לך אלא הולדות הרי זה פטור.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגונב אשה ומוכר את עוּברהּ</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' בדברינו לעיל (עמוד 105) ובהסבר שיטת הרמב"ם (עי' הערה 121)<sup id="ref125"><a href="#fn125">[125]</a></sup>.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    הגונב את בנו או את אחיו הקטן וכן האפוטרופין שגנבו את היתומים שהן סמוכין אצלם ובעל הבית שגנב אחד מבני ביתו הסמוכין על שלחנו ומלמד תינוקות שגנב אחד מן הקטנים הלומדים אצלו אף על פי שנשתמש בו ומכרו פטור שנאמר ונמצא בידו פרט לאלו שהן מצויין בידו.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגונב בן ביתו או תלמידו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (שם פה:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגונב את בנו, <strong>רבי ישמעאל בנו של רבי יוחנן בן ברוקה</strong> מחייב,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ו<strong>חכמים</strong> פוטרין</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">טעמו של רבי יוחנן בן ברוקה מבואר בספרי (כי תצא פסקה רעג):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"מבני ישראל"- להביא הגונב את בנו ומוכרו שהוא חייב דברי רבי יוחנן בן ברוקה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המילים "מבני ישראל" שבפסוק, כוללות כל אחד מבני ישראל, ואפילו אם הוא בנו של הגנב<sup id="ref126"><a href="#fn126">[126]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (פו.) מתבררגם טעמם של ה<strong>חכמים</strong> הפוטרים את המוכר את בנו מהנאמר "וְגֹנֵב אִישׁ וּמְכָרוֹ <strong>וְנִמְצָא בְיָדוֹ</strong> מוֹת יוּמָת", שמדובר בכגון שבגלל הגניבה נמצא הנגנב בידו וברשותו של הגנב. לכן, אם מדובר על נגנב שבלאו הכי מצוי אצל הגנב, פטור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מסיק מדיק זה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר רבא: הלכך, הני מיקרי דרדקי ומתנו רבנן כמצויין בידן דמו, ופטירי</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, הרב הגונב את תלמידו ומוכרו פטור, כיוון שהתלמיד היה מצוי אצלו עוד מקודם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שטעם הדבר הוא כיוון שהתלמידים מצויים כל הזמן בבית הרב. מדבריו משמע שהגונב את תלמידו חייב גם אם מדובר בתלמיד מבוגר היושב בישיבה. כך גם ניתן להבין מהגמרא המדברת על "מיקרי דרדקי ומתנו רבנן", כלומר גם מלמדי תינוקות וגם המלמדים תלמידי חכמים. בטעם הדבר נראה שכיוון שהנגנב ממילא כבר היה בידו, כלומר ברשותו של הגנב, לא נחשב שגנבו<sup id="ref127"><a href="#fn127">[127]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מגביל את הפטור ל"מלמד תינוקות שגנב אחד מן הקטנים הלומדים אצלו". ומשמע לפיו שדווקא בגנבים כאלה שיש להם שררה על הנגנב עוד לפני שגנבוהו, כגון מלמדי תינוקות, או אפוטרופסין על יתומים, או אח גדול הגונב "את אחיו הקטן" (ולא הפוך!), דווקא בהם פטור הגנב כי הם כבר מצויים בידו. נראה שטעמו הוא מתוך ההבנה ש"נמצא בידו" אינו עניין של מקום כמו של מרות. הגנב מטיל על הנגנב את מרותו, ואז הנגנב נמצא בידו, שיעשה בו הגנב ככל חפצו. דווקא אם קיימים כבר מראש יחסי מרות בין הגנב לנגנב, נחשב שהנגנב כבר היה בידו ופטור עליו אם מוכרו.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אחד הגונב את הגדול או הגונב את הקטן בן יומו שכלו לו חדשיו בין זכר בין נקבה בין שהיה הגנב איש או אשה הרי אלו נהרגין שנאמר "גונב נפש" מכל מקום, ואחד הגונב את ישראל או שגנב גר או עבד משוחרר שנאמר "נפש מאחיו" ואלו בכלל אחינו בתורה ובמצות הן, אבל הגונב את העבד או מי שחציו עבד וחציו בן חורין פטור.
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">זהות הגנב והנגנב</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>מכילתא</strong> (משפטים - מסכתא דנזיקין פרשה ה):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"וגונב איש", אין לי אלא איש שגנב את האיש, גנב את האשה ואת הקטן מנין?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תלמוד לומר "כי ימצא איש גונב נפש מאחיו", להביא את שגנב את האשה ואת הקטן;</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אין לי אלא איש ואשה שגנבו את האיש והאיש שגנב את האשה ואת הקטן,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האשה שגנבה את חברתה ואת הקטן מנין?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תלמוד לומר "ומת הגנב ההוא", מכל מקום</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מהביטוי "נפש מאחיו" לומדים שהנגנב יכול להיות גם אשה וילד, ומהביטוי "ומת הגנב <strong>ההוא</strong>" לומדים שיהיה מי שיהיה הגנב, אם הוא האחראי למעשה ("ההוא") דינו מיתה גם אם הוא אשה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ספרי</strong> (פרשת כי תצא פיסקא רעג) לומד מהמילה "ההוא" לפטור את הגונב העבד (או חצי עבד)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ההוא", ולא הגונב את העבד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ההוא", ולא הגונב מי שחציו עבד וחציו בן חורים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדרש נוסף (<strong>מדרש תנאים</strong> לדברים פרק כד) לומד דין זה מהריבוי "מאחיו מבני ישראל"<sup id="ref128"><a href="#fn128">[128]</a></sup>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"מאחיו" להביא גר ועבד משוחרר שאלו בכלל אחינו בתורה ובמצות או יכול שאני מרבה את העבד ואת מי שחציו עבד וחציו בן חורין</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תלמוד לומר "מבני ישראל"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין הגונב מי שחציו עבד וחציו בן חורין נתון במחלוקת ב<strong>משנה</strong> (פה:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גנב מי שחציו עבד וחציו בן חורין - <strong>רבי יהודה</strong> מחייב, ו<strong>חכמים</strong> פוטרין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מבואר ששורש המחלוקת נעוץ בשאלה כיצד יש להבין את הביטוי "אחיך". <strong>רבי יהודה</strong> סובר שביטוי זה אינו כולל עבדים, כיוון שמבחינה לאומית/משפחתית הם אינם שייכים לעם ישראל, ואילו <strong>חכמים</strong> סוברים שכיוון שעבדים מחוייבים במצוות ברמה מסויימת, הביטוי "אחיך" אמור גם כלפיהם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהבנת הכתוב "מאחיו מבני ישראל" מבחינים גם חכמים וגם רבי יהודה בשלושה מיעוטים- "מאחיו", "בני ישראל", והמ"ם של "<strong>מ</strong>בני ישראל" (שניתן היה שלא לכותבה).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חכמים סוברים שבמיעוט הראשון אין בכדי למעט עבד, שכן אחינו הוא במצוות. שני המיעוטים האחרים ממעטים עבדים, וגם חציו עבד וחציו בן חורין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבי יהודה, לעומתם, רואה כאן שלושה מיעוטים ורק שני דברים שניתן למעט (האחד- עבד והשני חציו עבד וחציו בן חורין), לכן, על פי הכלל ש"אין מיעוט אחר מיעוט אלא לרבות" משמע שיש לרבות מישהו והוא- מי שחציו עבד וחציו בן חורין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong>, מצד אחד, פוסק כשיטת חכמים, שהגונב בין עבד ובין מי שחציו עבד וחציו בן חורין, פטור. אמנם מדברי הרמב"ם משמע שטעמו מתבסס דווקא על ההנחה הבסיסית של רבי יהודה, שהביטוי "אחיך" אינו כולל עבדים ואף לא את מי שחציו עבד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד כותב הרמב"ם בעקבות המכילתא, שהביטוי "גונב נפש" מתייחס לכל יהודי כולל נשים וקטנים.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ט</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    הבא במחתרת בין ביום בין בלילה אין לו דמים אלא אם הרגו בעל הבית או שאר האדם פטורין, ורשות יש לכל להרגו בין בחול בין בשבת בכל מיתה שיכולין להמיתו, שנאמר "אין לו דמים" (שמות כ"ב א').
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    ואחד הבא במחתרת או גנב שנמצא בתוך גגו של אדם או בתוך חצרו או בתוך קרפיפו בין ביום בין בלילה, ולמה נאמר במחתרת לפי שדרך רוב הגנבים לבוא במחתרת בלילה.  ואחד הבא במחתרת או גנב שנמצא בתוך גגו של אדם או בתוך חצרו או בתוך קרפיפו בין ביום בין בלילה. א"א איני נמנע מלכתוב את דעתי שנ"ל אף על פי שדרשו חכמים אם זרחה השמש עליו דרך משל אם ברור לך הדבר כשמש שלא בא על עסקי נפשות וכו' אעפ"כ אין מקרא יוצא מידי פשוטו ביום אינו רשאי להרגו שאין גנב בא ביום אלא להשמטה שומט ובורח מיד ואינו מתעכב לגנוב ממון גדול ולעמוד על בעליו להרגו אלא גנב בלילה מפני שגנב לילה יודע שבעל הבית בבית או בא להרוג או ליהרג אבל גנב יום אין בעל הבית מצוי בביתו ושמוטה בעלמא הוא וחיי ראשי כל מבין די לו בזה.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    ומפני מה התירה תורה דמו של גנב אף על פי שבא על עסקי ממון לפי שחזקתו שאם עמד בעל הבית בפניו ומנעו יהרגנו ונמצא זה הנכנס לבית חבירו לגנוב כרודף אחר חבירו להרגו ולפיכך יהרג בין שהיה גדול בין שהיה קטן בין זכר בין נקבה.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין הבא במחתרת- כללי</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בפרשיית הגנב שבפרשת משפטים (שמות כב א-ב):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אִם בַּמַּחְתֶּרֶת יִמָּצֵא הַגַּנָּב וְהֻכָּה וָמֵת אֵין לוֹ דָּמִים:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אִם זָרְחָה הַשֶּׁמֶשׁ עָלָיו דָּמִים לוֹ שַׁלֵּם יְשַׁלֵּם אִם אֵין לוֹ וְנִמְכַּר בִּגְנֵבָתוֹ:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המפרשים מסבירים את המילה "מחתרת" במובן של פריצה<sup id="ref129"><a href="#fn129">[129]</a></sup>. כלומר, מדובר במישהו הנכנס לבית בדרך שאינה הדרך הרגילה, האופיינית למישהו הבא ברשות, אלא בדרך האופיינית לפורץ. ועי' עוד בהמשך בנלמד מהמילה "מחתרת".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (סנהדרין עב.) פוסקת, על רקע פסוקים אלה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הבא במחתרת נידון על שם סופו<sup id="ref130"><a href="#fn130">[130]</a></sup></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ובגמרא מסביר <strong>רבא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>רבא</strong>: מאי טעמא דמחתרת?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חזקה אין אדם מעמיד עצמו על ממונו. והאי מימר אמר: אי אזילנא - קאי לאפאי ולא שביק לי, ואי קאי לאפאי - קטלינא ליה. והתורה אמרה: אם בא להורגך - השכם להורגו</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מכיוון שחזקה היא שאדם עשוי להתנגד ללקיחת ממונו, הרי שמי שבא לגנוב ממון, מוכן לעמוד מול התנגדותם של הבעלים ואף להרוג אותם במקרה הצורך. לכן התירה התורה להרוג את הבא במחתרת מדין רודף, שלא יבוא להרוג את בעל הבית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> מחדד את הסברו של רבא. לדבריו, הסיבה שרואים את הגנב כאילו בא להרוג היא משום שהגנב יודע שבעל הבית לא ימנע מלהרוג אותו בכדי להציל את ממונו. לכן הוא רואה את בעל הבית כסיכון לחייו שלו, ומוכן להרוג כדי לא להיהרג<sup id="ref131"><a href="#fn131">[131]</a></sup>.</p>
+                    
+                </div>
+                
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">משמעות הביאה "במחתרת"</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (עב:) מביאה שתי <strong>ברייתות</strong> דומות המתייחסות למילה "מחתרת" שבפסוק-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מחתרת, אין לי אלא מחתרת, גגו חצירו וקרפיפו מנין? תלמוד לומר ימצא הגנב  (שמות כ"ב) - מכל מקום. אם כן מה תלמוד לומר מחתרת - מפני שרוב גנבים מצויין במחתרת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תניא אידך: מחתרת אין לי אלא מחתרת. גגו חצירו וקרפיפו מנין? תלמוד לומר ימצא הגנב - מכל מקום. אם כן מה תלמוד לומר מחתרת - מחתרתו זו היא התראתו</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שתי הברייתות מסבירות שהתיאור שבפסוק- גנב העובר דרך חור שפרץ בקיר, אינו בדווקא, אלא גם גנב המנסה לחדור לבית ונמצא בחצר בית הנגנב או על גגו (כשהוא מנסה לחדור מהגג) דינו זהה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתות נבדלות זו מזו בהבנת הנלמד מהמילה "מחתרת". לדעת הברייתא האחת, הפסוק מתאר את המציאות השכיחה, שרוב גנבים דרכם לפרוץ דרך הקיר. לעומת זאת, לדעת הברייתא השניה, המילה מחתרת אינה תיאור מקום אלא תיאור אופי המעשה. כלומר, אם הגנב עוסק בפריצה מובהקת, מנוי וגמור עימו להיכנס לבית ולהרוג או ליהרג במקרה בו יתקל בהתנגדות. לעומת זאת, אם מצא פתח פתוח ונכנס שלא בפריצה, אין מעשיו מאופיינים בהחלטיות, ואפשר שאין דעתו להרוג אף אחד, אלא אם יתקל בהתנגדות, יברח.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מציין, שמעשית, אין הברייתות חלוקות זו על זו, שלדעת כולם הגנב הנכנס בין בדרך גניבה ובין שלא בדרך גניבה, יכול להיחשב כמסכן חיים וממילא רשות להורגו, וכל ההבדל בין שני סוגי הגנבים הוא האם ניתן להרוג את הגנב ללא התראה. דברים דומים כותב ה<strong>טור</strong> (חו"מ תכה), הפוסק שאם נכנס הגנב דרך פרצה פתוחה, ולא עסק בפריצה, אין להניח כדבר מובן מאליו שהוא מסכן את חייו של בעל הבית, ולכן אין להורגו כל עוד לא התברר שיש כאן סכנת חיים (למשל, על ידי התראה שבעקבותיה לא חזר בו הגנב וברח).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>רמב"ם</strong>, אינו כותב את דברי הברייתא השניה ואינו מחלק שום חילוק בין גנב הבא במחתרת לבין גנב החודר דרך חצר או גג. ה<strong>מגיד משנה</strong> מסביר בשתי אפשרויות- או שהרמב"ם מבין שהברייתות חלוקות זו על זו, ופוסק כראשונה, או שהרמב"ם מפרש את דברי הברייתא "מחתרתו היא התראתו" במובן רחב יותר, כך שכל מעשה גניבה, אפילו אינו כרוך בפריצה, מורה על מוכנותו של הגנב להרוג כל מי שיעמוד כנגדו, וממילא אין צורך בהתראה בשום סוג של גנב.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-7" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י-יב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    היה הדבר ברור לבעל הבית שזה הגנב בא עליו אינו הורגו ולא בא אלא על עסקי ממון אסור להרגו, ואם הרגו הרי זה הורג נפש, שנאמר "אם זרחה השמש עליו" (שמות כ"ב ב'), אם ברור לך הדבר כשמש שיש לו שלום עמך אל תהרגהו, לפיכך אב הבא במחתרת על בנו אינו נהרג שודאי שאינו הורגו, אבל הבן הבא על אביו נהרג.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    וכן הגנב שגנב ויצא או שלא גנב ומצאו יוצא מן המחתרת הואיל ופנה עורף ואינו רודף יש לו דמים, וכן אם הקיפוהו עדים או בני אדם אף על פי שעדיין הוא ברשות זה שבא עליו אינו נהרג, ואין צריך לומר אם בא לבית דין שאינו נהרג. וכן הגנב שגנב ויצא או שלא גנב ומצאו יוצא מן המחתרת הואיל ופנה עורף ואינו רודף יש לו דמים. א"א ויראה לי בורח רוצה לומר. וכן אם הקיפוהו עדים או בני אדם וכו'. א"א זה שאמרו במכילתא דר' ישמעאל שאם יש לו מושיעים שאינו ניתן ליהרג וקשיא לי מעשה דאבנר ועשאל (סנה' מ"ט), ומה שאמר אם הקיפוהו עדים יראה לי כי על דרך התרגום אמרו שתרגם אם עינא דסהדיא נפלת עלוהי ולא ידעתי מהו.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    וכן הבא במחתרת לתוך גנתו או לתוך שדהו או לתוך הדיר והסהר יש לו דמים, שחזקתו שבא על הממון בלבד לפי שאין רוב הבעלים מצויים במקומות אלו.
+                </div>
+                
+
+                
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מקרים בהם יש להניח שהגנב אינו מסכן את חיי העומד כנגדו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם עב:) מביאה שתי <strong>ברייתות</strong> העוסקות שתיהן בדרישת הפסוק "...אֵין לוֹ דָּמִים. אִם זָרְחָה הַשֶּׁמֶשׁ עָלָיו דָּמִים לוֹ..."-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אין לו דמים אם זרחה השמש עליו. וכי השמש עליו בלבד זרחה? אלא: אם ברור לך הדבר כשמש שאין לו שלום עמך - הרגהו, ואם לאו - אל תהרגהו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם זרחה השמש עליו דמים לו וכי השמש עליו בלבד זרחה, אלא: אם ברור לך כשמש שיש לו שלום עמך - אל תהרגהו, ואם לאו - הרגהו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שתי הברייתות דורשות את זריחת השמש שבפסוק כאלגוריה, אך חלוקות הן ביחס לפיסוק. לפי הברייתא הראשונה המשפט "אם זרחה השמש עליו" אמור כלפי מה שנאמר לפניו- "אין לו דמים". כלומר, בכדי שתהיה רשות להרוג את הגנב, צריכה להיות וודאות (שברור יהיה הדבר "כשמש") בכך שהוא מהווה סיכון חיים עבור מי שינסה להתנגד לו. לפיכך, במקרה של ספק- אין להרוג את הגנב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, לפי הברייתא השניה, המשפט "אם זרחה השמש עליו" אמור כלפי מה שלאחריו- "דמים לו". משמעות הפסוק לפי פיסוק זה היא שרק אם קיימת ודאות מוחלטת שאכן הגנב <strong>אינו</strong> מהווה סיכון לחייו של המתנגד לו, רק אז אסור להורגו, ולכן במקום בו יש ספק, מותר להרוג את הגנב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא פותרת את הסתירה בין הברייתות על ידי העמדתן במקרים שונים:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאן - באב על הבן, כאן - בבן על האב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם מדובר באב הבא במחתרת אצל בית בנו, כיוון שחזקה שהאב אוהב את בנו ולא יהרגנו אף אם יעמוד כנגדו, צריך הבן שתהיה לו ודאות גמורה שהאב מסכנו בכדי שיהיה מותר לו להורגו. לעומת זאת, בבן הבא במחתרת אצל בית אביו (וכל שכן אצל כל אדם), לא קיימת חזקה כזו ולכן מותר להרוג את הגנב אלא אם כן יש לבעל הבית וודאות גמורה שהגנב <strong>אינו</strong> מסכן את חייו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב</strong> ממשיך ומבאר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>רב</strong>: כל דאתי עלאי במחתרתא - קטילנא ליה, לבר מרב חנינא בר שילא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מאי טעמא? אילימא משום דצדיק הוא - הא קאתי במחתרתא!</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אלא משום דקים לי בגוויה דמרחם עלי כרחם אב על הבן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, רב מסביר על ידי דוגמה, שלא רק באב הבא במחתרת על הבן, אלא גם באיש אחר, כל עוד ברור לבעל הבית שהגנב אוהבו ולא יהרוג אותו, אסור לו להרוג את הגנב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>מכילתא דרבי ישמעאל</strong> (משפטים, מסכתא דנזיקין, יג) דן רבי ישמעאל בדברי הפסוק "אם זרחה השמש עליו"-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אם זרחה השמש", <strong>רבי ישמעאל</strong> אומר, אתה אומר לכך בא [או לא בא אלא] לחלק בין יום ללילה, לומר, אם הרגו ביום חייב, ובלילה יהא פטור?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תלמוד לומר "וְלַנַּעֲרָה לֹא תַעֲשֶׂה דָבָר [אֵין לַנַּעֲרָ חֵטְא מָוֶת כִּי כַּאֲשֶׁר יָקוּם אִישׁ עַל רֵעֵהוּ וּרְצָחוֹ נֶפֶשׁ כֵּן הַדָּבָר הַזֶּה כִּי בַשָּׂדֶה מְצָאָהּ צָעֲקָה הַנַּעֲרָ הַמְאֹרָשָׂה וְאֵין מוֹשִׁיעַ לָהּ]" (דברים כב כו-כז) וכי מה למדנו לרוצח מעתה?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אלא הרי זה בא ללמד ונמצא למד-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מה להלן לא חלק בו בין יום ללילה אף כאן לא תחלוק בו בין יום ללילה,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מה כאן אם קדמו והרגו פטור, אף להלן אם קדמה והרגתו פטורה,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומה להלן היו לה מושיעין הימנו והרגתו חייבת, אף כאן היו לו מושיעין הימנו והרגו חייב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מתוך ההשוואה שהורה משווה בין האונס נערה מאורסה במקום בו אין מי שיעזור לה לבין אדם הקם על רעהו לרוצחו נפש, לומד רבי ישמעאל שלוש הלכות המשותפות לשני המקרים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שלא חילק הכתוב בין יום לבין לילה בנערה מאורסה, כך אין מקום לחלק בין יום לבין לילה בבא במחתרת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם בנערה מאורסה, כמו בבא במחתרת, מותר להצילה בנפשו של הרודף.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם יש "מושיעים", כלומר, אנשים שנוכחותם מבטיחה את חיי בעל הבית/הנערה בדרך אחרת, שתחסוך את חיי הרודף, אין היתר להורגו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">את הנקודה השלישית ניתן גם להבין מתרגום <strong>אונקלוס</strong> בפרשיית הבא במחתרת-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אִם זָרְחָה הַשֶּׁמֶשׁ עָלָיו"- אם עינא דסהדיא נפלת עלוהי</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם קיימים עדים למעשה, כך שהגנב יפחד ולא ירצח את בעל הבית, הרי שהגנב אינו מהווה סיכון חיים לבעל הבית ולכן "דמים לו", ואין ליטול את חייו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי השאלה עד מתי מותר להרוג את הגנב הבא במחתרת, נחלקו הדעות בירושלמי (סנהדרין פרק ח הלכה ח)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תני <strong>רבי חייה</strong> במחתרת אין לו דמים, חוץ למחתרת יש לו דמים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תני <strong>רבי שמעון בן יוחי</strong> אפילו חוץ למחתרת אין לו דמים לפי שממונו של אדם חביב עליו כנפשו, חמי ליה אזיל בעי מיסב ממוניה מיניה וקאים עלוי וקטליה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב הונא</strong> אמר נטל את הכיס והפך את פניו לצאת והלך לו ועמד עליו והרגו אין ההורגו נהרג. מה טעמא דרב הונא? "כִּי יֵחַם לְבָבוֹ וְהִשִּׂיגוֹ"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי חייה</strong> אומר שהגנב שיצא כבר מן המחתרת וחוצה (לאחר שביצע זממו וגנב), אסור להורגו. לעומתו אומר <strong>רשב"י</strong> שאפילו אם כבר יצא הגנב, אם הרכוש הגנוב בידו, מותר להורגו משום שעדיין הוא מהווה סיכון חיים לבעל הבית אם יעמוד זה כנגדו וינסה לקחת את רכושו בחזרה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב הונא</strong> מוסיף עוד, שאם הגנב כבר ביצע את הגניבה ועתה הוא בשלבי עזיבת המקום, אין ההורגו חייב מיתה. רב הונא אינו מסיק את הדברים מסברה, כמו רשב"י, אלא מתוך היקש למקרה אחר בו פוטרת התורה את ההורג והוא גואל הדם שהרג את הרוצח בשוגג מחוץ לעיר המקלט בו נאמר "פֶּן יִרְדֹּף גֹּאֵל הַדָּם אַחֲרֵי הָרֹצֵחַ כִּי יֵחַם לְבָבוֹ וְהִשִּׂיגוֹ כִּי יִרְבֶּה הַדֶּרֶךְ וְהִכָּהוּ נָפֶשׁ וְלוֹ אֵין מִשְׁפַּט מָוֶת כִּי לֹא שֹׂנֵא הוּא לוֹ מִתְּמוֹל שִׁלְשׁוֹם" (דברים יט ו).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong>, בעוסקו בשאלה זו חילק את דבריו לשני מקרים. האחד "הגנב שגנב ויצא" והשני "שלא גנב ומצאו יוצא מן המחתרת". כלומר, או שכבר גנב וכבר הספיק לצאת לגמרי, או שלא גנב ונמצא בדרכו החוצה. בשני המקרים פוסק הרמב"ם ש"יש לו דמים" וההורגו נהרג ומטעים- "הואיל ופנה עורף ואינו רודף". נראה שהרמב"ם פסק כדברי <strong>רבי חייה</strong>, שהגנב שיצא מן המחתרת שוב אסור להורגו ולא כדברי <strong>רשב"י</strong>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד</strong> מוסיף שנראה כדברי הרמב"ם דווקא כאשר הגנב בורח. נראה שהראב"ד הבין שטעמו של הרמב"ם, שאין הגנב מהווה סיכון לחיי בעל הבית כי "פנה עורף ואינו רודף", אמור בשני המקרים (כלומר, גם גנב שיצא ובידו הגניבה). על זה קשה לראב"ד, שהרי סבירה טענתו של רשב"י, שעשוי בעל הבית לרדוף אחר הגנב, לנסות להחזיר את רכושו, ובכך יסכן את נפשו, וכי למה שנאמר ש"אם פנה עורף אינו רודף"? לכן לדעת הראב"ד הגנב אינו מהווה סיכון לחיי בעל הבית רק אם יוצא בדרך בריחה. באופן כזה ניכר שאין ברצונו להיכנס לעימות עם בעל הבית והוא לא מעלה על דעתו להורגו.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-8" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    כל גנב שיש לו דמים אם נפל עליו גל בשבת מפקחים עליו ואם שבר כלים בביאתו חייב בתשלומין, אבל מי שאין לו דמים ששבר כלים בביאתו פטור כמו שביארנו. בריך רחמנא דסייען.
+                </div>
+                
+
+                
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הצלת חייו של הבא במחתרת</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם עב:) מביאה <strong>ברייתא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"דמים לו", בין בחול בין בשבת,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אין לו דמים" - בין בחול בין בשבת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאשר אין להרוג את הבא במחתרת (עי' בהלכה הקודמת), אין הבדל בדבר זה בין חול לשבת. בהתאמה, כאשר מותר להרוג את הגנב, מותר לעשות זאת בין בחול ובין בשבת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה את הסיפא בפשטות- היה אפשר לומר שבשבת אין להרוג את הבא במחתרת כדרך שאין מבצעים בשבת מיתות בית דין. ובאה הברייתא ללמד שאין הדבר כך, אלא כיוון שהבא במחתרת מהווה סיכון חיים מיידי, יש להורגו גם בשבת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הרישא תמהה הגמרא מה צריכה הברייתא להשמיענו שאפילו בשבת אין להרוג את הבא במחתרת כשאינו מהווה סכנת חיים? הרי ברור הדבר שאם בחול אין להורגו כל שכן בשבת!</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על רקע זה מסביר <strong>רב ששת</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>רב ששת</strong>: לא נצרכא אלא לפקח עליו את הגל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדובר במקרה בו נפל על הגנב גל אבנים. מקרה כזה, באופן רגיל מהווה פיקוח נפש קלאסי בו ההלכה ברורה שיש לפנות את גל האבנים אפילו בשבת אם ישנו סיכוי כלשהו להציל את הנקבר תחתיו. כאשר מדובר בגנב הבא במחתרת באופן שאינו מהווה סיכון חיים, היתה הו"א שאין להרוג אותו באופן ישיר אך גם אין להשתדל בהצלתו תוך חילול שבת. על כן באה הברייתא ומשמיעה לנו שחובה לחלל שבת בהצלתו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> במקום לומד לאו מכלל הן וכותב שאם מדובר בבא במחתרת שמסכן את חיי העומד כנגדו (ולכן מותר להורגו), אין לחלל עליו שבת בפינוי גל האבנים, שכן נחשב הוא כאדם החייב מיתה משעת חתירתו ולכן מותר להורגו ואין חובה להצילו. כמו רש"י כתב גם כן ה<strong>רמ"ה</strong>, וכן רוב המפרשים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מעיר שאם הגנב כבר אינו מהווה סיכון חיים לאחרים, יש לחלל עליו שבת בפינוי הגל, שהרי דינו כרודף שפנה עורף, שיש לו דמים ואסור להורגו<sup id="ref132"><a href="#fn132">[132]</a></sup> (עי' לעיל). לכן, הוא מעמיד את דברי הגמרא ברודף שעדיין מהווה סכנה ("משתדל בעצמו בפקוחו ולבו על גנבתו")<sup id="ref133"><a href="#fn133">[133]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כתב רק את דברי הגמרא, שהבא במחתרת ש"יש לו דמים" (דהיינו, שאסור להורגו), "אם נפל עליו גל בשבת, מפקחין עליו" (=מפנים את הגל). הרמב"ם נמנע מלכתוב את הצד השני של המטבע, אותו הסיקו הראשונים האחרים, שאם מדובר בבא במחתרת ש"אין לו דמים" אין מחללים שבת על הצלתו<sup id="ref134"><a href="#fn134">[134]</a></sup>. לכן דברי הרמב"ם אינם מורים באופן חד משמעי כשיטת רש"י או כשיטת המאירי<sup id="ref135"><a href="#fn135">[135]</a></sup>.</p>
+                    
+                </div>
+                
+                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פטור מתשלומין בבא במחתרת</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' בדברינו לעיל בעמוד 46.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn117" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref117" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^117</a> 
+                        האיסור, כפי שכותב שם הרמב"ם הוא שעבד עברי "אינו נמכר בפרהסיא על אבן המקח ולא בסימטא כדרך שהעבדים נמכרין שנאמר לא ימכרו ממכרת עבד אינו נמכר אלא בצנעה ודרך כבוד". וכאן, שהנגנב נמכר בעל כרחו, ולא לזמן קצוב, נראה סביר שזו דרך ממכרת עבד (אפילו אם מכרו בצנעה) ועובר באיסור זה בנוסף על איסור הגניבה.
+                    </li>
+                    
+                    <li id="fn118" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref118" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^118</a> 
+                        ניתן להבין שהדרישה של רבי יהודה לשימוש שיש בו לפחות שווה פרוטה באה מהשוואתו את השימוש למכירה. כשם שמכירה בפחות משווה פרוטה אינה נחשבת למכירה אלא למתנה, כך גם השימוש בנגנב חייב להיות של שווה פרוטה.
+                    </li>
+                    
+                    <li id="fn119" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref119" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^119</a> 
+                        עי' בערוך לנר על אתר, וכך גם מופיע, ללא משפט זה, בפסיקתא זוטרתא (לקח טוב) דברים פרשת תצא דף מב עמוד א.
+                    </li>
+                    
+                    <li id="fn120" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref120" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^120</a> 
+                        כשיטת תנא קמא ששימוש יכול להיות אפילו פחות משווה פרוטה.
+                    </li>
+                    
+                    <li id="fn121" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref121" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^121</a> 
+                        ישנן שתי סברות מדוע ההכנסה לרשות הגנב וההוצאה מרשותו לרשות המוכר מוטלות בספק כאשר מדובר על נגנב ישן-אם מדובר בכגון שלא הגביהו ונשאו הגונב כלל (שאם הניעו היה מתעורר) הרי שחסר מעשה של הכנסה לרשותו.אפשרות נוספת היא שמדובר שאכן נשא הגנב את הישן והכניסו לביתו, אלא שיש להבין את מושג ההכנסה לרשות כאשר מדובר באדם, בצורה אחרת מאשר המיטלטלין. פירוש, אדם נמצא, עקרונית, תמיד ברשות עצמו בכל מקום שהוא. מה שיכול להיחשב הוצאה של אדם מרשותו והכנסה לרשות הנגב היא שנכפה על האדם להיות היכן שהוא לא רוצה להיות דהיינו, כליאה או חטיפה. הישן, כל עוד הוא ישן, אינו יכול לזוז. לכן, שייך לחקור בו האם כיוון שכשיתעורר ימצא עצמו חטוף וכלוא, הרי שאף עתה נחשב שהגנב הכניסו כבר לרשותו, או שמא כיוון שסוף סוף כעת הוא ישן ואינו מוגבל בתנועתו יותר מאשר לו לא היה חוטפו, הרי שעד שיתעורר, לא נחשב שהכניסו לרשותו. אפשרות זו גם מסבירה מדוע הרמב"ם (ורב ירמיה) מדבר על מקרה בו הגניבה והמכירה שאחריה ארעו כאשר הנגנב עדיין ישן, כיוון שלו היה מתעורר בין לבין היה מבין שהוא חטוף והיה נחשב הדבר להכנסה לרשות הגנב, ולאחר מכן, כיוון שהנגנב כבר אינו ברשות עצמו, נחשבת המכירה כשלעצמה כהכנסה לרשות הקונה.
+                    </li>
+                    
+                    <li id="fn122" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref122" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^122</a> 
+                        כיוון שסוף סוף, את האם הותיר הגנב ברשותו.
+                    </li>
+                    
+                    <li id="fn123" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref123" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^123</a> 
+                        המאפיין של מקרים אלה הוא שהם אינם מודעים לשימוש שעושים בהם, ושאלתו של רבי ירמיה, על פי דרך זו, היא האם השימוש שעושה הגנב בנגנב צריך להיות שימוש בו כאדם בעל תודעה, או שמספיק שימוש בגופו.
+                    </li>
+                    
+                    <li id="fn124" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref124" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^124</a> 
+                        דרך הבנה זו בפסוק נתמכת מהחזרה "מֵאֶחָיו מִבְּנֵי יִשְׂרָאֵל", הביטוי "מבני ישראל" מספיק בכדי לתאר את זהותו של הנגנב, ולכן הביטוי "מאחיו" נדרש כמתאר את מהות הגניבה- הפרדתו של הנגנב מאחיו.
+                    </li>
+                    
+                    <li id="fn125" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref125" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^125</a> 
+                        נוסיף כאן רק שהרמב"ם מדבר על מכירת האשה לוולדות, גם כשעתה אינה מעוברת, ומכאן ברור שלהבנתו הגמרא עוסקת בשאלה האם המכירה תקפה או לא ולא בשאלה האם שימוש בעובר נחשב שימוש.
+                    </li>
+                    
+                    <li id="fn126" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref126" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^126</a> 
+                        ניתן להסביר שרבי יוחנן בן ברוקה מבין שהעבירה שבגניבה היא בשעבוד אחד מבניו של ה', שעבדי ה' הם ולא עבדים לעבדים, ומימד זה קיים גם באב המוכר את בנו, כיוון שסוף סוף לא רק בנו הוא אלא גם בנו ועבדו של ממ"ה הקב"ה, ולכן חייב על מכירתו.
+                    </li>
+                    
+                    <li id="fn127" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref127" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^127</a> 
+                        לפי סברה זו, אפשר שלא רק האב הגונב את בנו פטור, אלא אף הבן הגונב את אביו, כל עוד הם מתגוררים באותו בית. והמשנה שדיברה על אב שגנב את בנו עסקה במקרה השכיח יותר.
+                    </li>
+                    
+                    <li id="fn128" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref128" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^128</a> 
+                        אפשר שמדרש זה אינו חלוק על הספרי, וכוונת הספרי שלומדים מ"ומת הגנב ההוא" מתייחס דווקא לגונב נפש מבני ישראל המתואר בתחילת הפסוק.
+                    </li>
+                    
+                    <li id="fn129" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref129" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^129</a> 
+                        עי' למשל בתרגום יונתן שתרגם "במחתרת"- "בַּחְרַכָּא דְכוֹתְלָא". כלומר, בחור שבכותל.
+                    </li>
+                    
+                    <li id="fn130" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref130" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^130</a> 
+                        המשנה משתמשת במינוח זהה לזה בו נעשה שימוש בדין בן סורר ומורה בו נאמר בן סורר ומורה נידון על שם סופו, ימות זכאי ואל ימות חייב. (סנהדרין עא:)
+                    </li>
+                    
+                    <li id="fn131" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref131" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^131</a> 
+                        על רקע הבחנה זו נשאלת השאלה מדוע אין בעל הבית נחשב רודף כלפי הגנב. הרמ"ה עונה שכיוון שבעל הבית לא עשה עדיין דבר, וגם לא יעשה דבר אלמלא יבוא הגנב לביתו, הרי שהוא אינו נחשב לרודף כלפי הגנב, ורק הגנב נחשב כרודף כלפיו. נמצא לפי דבריו, שלא בכל מקרה בו מתעצמים שנים זה כנגד זה להרוג איש את רעהו, נחשבים הם כרודפים זה לזה, ויש חשיבות לשאלה "מי התחיל".
+                    </li>
+                    
+                    <li id="fn132" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref132" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^132</a> 
+                        רבים הקשו על שיטת רש"י את השאלה שהנחתה את המאירי לפירושו שלו. כלומר, מדוע על רודף שנפל עליו גל אבנים וכבר אינו מהווה סיכון אין מחללים שבת.
+                    </li>
+                    
+                    <li id="fn133" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref133" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^133</a> 
+                        המאירי מוסיף פרט נוסף שצריך עיון בהבנתו- המאירי כותב שאם היה הגנב ספק חי ספק מת, אפילו אם אין הוא מהווה סיכון חיים, אין מחללים עליו שבת, אלא רק אם הוא בוודאי חי. במילים אחרות, מחללים עליו שבת בוודאי פיקוח נפש ולא בספק. דברים אלה צריכים עיון, שהרי לכאורה היה נראה לומר שאם הגנב הוא נפש הראויה להצלה, יש לחלל עליו שבת אפילו בספק פיקו"נ, ואם לא, אפילו בוודאי פיקו"נ אין לחלל.
+                    </li>
+                    
+                    <li id="fn134" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref134" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^134</a> 
+                        בשו"ת אחיעזר (חלק א סי' יח אות ב) דייק מהבחנה זו בדברי הרמב"ם, שגם בבא במחתרת המהווה סיכון חיים, אם לאחר שיפנו את האבנים לא יחזור הגנב להוות סיכון לחיי איש, יש לחלל שבת על הצלתו.
+                    </li>
+                    
+                    <li id="fn135" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref135" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^135</a> 
+                        כפי שמעירים בעל שו"ת אחיעזר הנ"ל, ועוד מפרשים, המחלוקת בין רש"י לבין המאירי (ואפשר שגם הרמב"ם) נעוץ בשאלה האם הבא במחתרת נהרג בעיקר כאמצעי מניעה- למנוע ממנו מלהרוג אדם אחר, או שבעיקר על שום העבירה שעשה בכך שבא במטרה לקחת נפשות. לפי המאירי האפשרות הראשונה היא הנכונה, ולכן כאשר אינו מהווה עוד סיכון, אין להורגו ויש להצילו. לעומת זאת, לפי רש"י, די בכך שבא על נפשות בתחילה בכדי להופכו ל"גברא קטילא", כלומר, לאדם החייב מיתה ואין להצילו. הסיבה שאם פנה עורף אין להורגו היא משום שהתברר למפרע שלא עבר בעבירה שהתכוון לעבור וממילא כבר אינו חייב מיתה.ניתן להציג מחלוקת זו כמחלוקת בהבנת לשון המשנה "הבא במחתרת נידון על שום סופו". למאירי הכוונה שהוא נהרג כדי שלא יבצע את מה שהוא רוצה לבצע בסופו של דבר. לעומת זאת רש"י מדגיש את המילה "נידון", המורה על כך שכבר בוצע פשע, אלא שחומרת העונש אינה הולמת את הפשע שכבר בוצע אלא את הפשע שעתיד להיות מבוצע אם לא יהרגו את הפושע בזמן. יש להעיר, שעל פי רש"י מובנת יותר ההשוואה שמשווה המשנה בלשונה בין הריגת בן סורר ומורה, שיש לו יותר צביון של עונש, לבין הריגת הבא במחתרת.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

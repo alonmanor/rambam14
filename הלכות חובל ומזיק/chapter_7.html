@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הלכות חובל ומזיק - פרק ז'</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">הלכות חובל ומזיק - פרק ז'</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ז')</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א-ג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    דין היזק שאינו ניכר, מדאורייתא ומדרבנן, במזיק ובבנו, בזדון ובשגגה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ד-ה
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    המפגל את זבח חברו
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-2-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    העושה מלאכה בפרת חטאת ובמי חטאת
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    המנסך יין חבירו לעבודה זרה – האם אדם אוסר דבר שאינו שלו
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-3-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    קים ליה בדרבה מיניה במנסך יין חבירו לעבודה זרה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז-ח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    גרמא וגרמי בנזקין
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-4-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הזורק כלי מראש הגג על גבי כרים וכסתות, והוזזו הכרים ונשבר הכלי
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ט
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    השורף שטר חוב של חברו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה י
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    המוכר שטר חוב לחברו וחזר ומחלו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-7" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יא
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-7-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    עבד שעשאו רבו אפותיקי לאחרים ושיחררו – דין המזיק שעבודו של חברו
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-7-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הדוחף מטבע חבירו לים, המאבד צורת מטבע חבירו והצורם אוזן פרת חבירו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-8" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-8-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הזורק כלי מראש הגג ואחר קדם ושברו במקל קודם שיגיע ארצה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-9" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יג-יד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-9-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הטוען שהזיק ברשות בעלים
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-9-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    ה"חוטף" לחברו מצווה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-10" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה טו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-10-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שמין לאדם המזיק
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-11" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה טז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-11-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    גביית דמי הנזק מאדם המזיק
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-12" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יז-יח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-12-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    עשו תקנת נגזל בניזק ודין המזיק דבר שהמעיט בערכו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-13" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יט
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-13-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מזיק המודה לניזק בטיב הדבר שהזיק, אך אינו יודע בכמותו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">הלכות חובל ומזיק</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק ז'</h1>
+            </div>
+
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק הבא עוסק בשלושה נושאים מרכזיים. ראשיתו של הפרק (א-ו) עוסק בהיזק שאינו ניכר. החלק הבא (ז-יב) עוסק בדיני הגרמי והגרמא. החלק האחרון (יג-יט) עוסק בדרך שומת הנזק ובטענות שונות שיכולות לעלות בין הניזק למזיק.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות א-ה דנות באופן ישיר בהיזק שאינו ניכר. היזק שאינו ניכר הוא היזק בו נפגעת היכולת של בעל החפץ הניזוק להשתמש בו, אך לא נשתנה דבר בחפץ עצמו. דוגמאות להיזק שכזה הן המטמא אוכלין של חבירו או המערב יין נסך ביין של חבירו ואוסרו. בסוג כזה של נזק קנסו חכמים את המזיק לשלם. מכיוון שמדובר בקנס, קנסו רק את המזיד, וכמו כן אם מת המזיק בלי לשלם, אין היורש נכנס תחתיו לתשלומין. אגב דין האוסר רכוש של חבירו, דנה הלכה ו בשאלה האם יכול אדם לאסור את יינו של חבירו על ידי ניסוכו.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">כאמור, אמצע הפרק עוסק בדיני הגרמי והגרמא. תחת כותרת זו נכללים נזקים שונים בהם אין האדם מזיק ישירות, אלא גורם לנזק באופן עקיף. בתלמוד אנו מוצאים כמה מקרים שהוגדרו במפורש כגרמי, ונתבאר שר' מאיר סובר שיש לחייב במקרים המוגדרים כגרמי. במקומות רבים אחרים אנו קוראים על גרמא, ועל כך ש"גרמא בנזיקין פטור". ראשונים רבים התייחסו לשאלת ההבדל בין גרמי לבין גרמא, ואף יש מבין הראשונים שלא חילקו בין השנים כלל, והבינו שר' מאיר מחייב בשניהם. כמו כן, חלק מן הראשונים סוברים שכל חיובי הגרמי הינם קנס מדרבנן, בדומה לדין היזק שאינו ניכר. אמנם הרמב"ם סבור שישנו הבדל בין גרמי לגרמא, וכמו כן במקום שחייב משום גרמי, מדובר בחיוב גמור מהתורה ולא בקנס.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ז-ח עוסקות בדוגמה הראשונה של גרמי- המסלק כרים מתחת לכלי בעת נפילתו, או המפיל כלי על כרים ואחר סילקם. בשני המקרים הללו המזיק נעזר בגורם נוסף לגרימת הנזק, אך כיוון שסוף סוף גם הוא שגרם לנזק, מחייבו הרמב"ם. אמנם, בחיובו של המפיל כלי על גבי כרים, היו שחלקו על הרמב"ם, כיוון שבשעת הזריקה לא היה המעשה מסוכן לכלי.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">דוגמה נוספת של נזק בגרמי נידונה בהלכה ט. השורף שטר של חבירו חייב למרות שלא הזיק את כספו של חבירו ממש, אלא רק גרם לו הפסד. הלכה י-יא עוסקת באדם שמכר שטר חוב לחברו ומחל על החוב ובכך הפסיד את חברו, ובאדם שעשה עבדו אפותיקי לגביית חוב ושיחררו, ובכך הפסיד את המלווה. בשני המקרים הללו חייב המוחל\משחרר, למרות שהפסיד את חברו רק בעקיפין.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכה יא מוזכרות עוד כמה דוגמאות לנזק גרמי- המגלגל מטבע של חבירו לים, במקום שניתן לדלותו, המאבד צורה ממטבע של חבירו, באופן שלא חיסר דבר מחומר המטבע, והצורם אוזן פרת חבירו ופוסלה בכך מלהיות ראויה לקרבן. בכל הדוגמאות הללו פוסק הרמב"ם לחיוב, אם כי ראשונים אחרים פוסקים לפטור בכמה מהמקרים הנ"ל, מסיבות שונות.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה יב דנה במקרה בו זרק אדם כלי מהגג, ולפני שהגיע זה לארץ, שברו חבירו במקל. יכולנו בטעות לסבור שישנו מקום להשוות בין מקרה זה למקרה המתואר בהלכה ח בו חייבים הזורק ומסלק הכרים. כמו ששם כל אחד מהם עשה דבר שאין בו די כשלעצמו בכדי לגרום את הנזק, ובכל זאת שניהם חייבים, אף כאן השובר את הכלי במקל נעזר בזורק בכדי להביא את הכלי למקום בו המקל יפגע בו וישברו, ולכן יש סברה לחייבו. הרמב"ם פוסק שאין הדברים דומים, כיוון שהכלי נחשב כבר כשבור, ולכן יש לפטור את השוברו במקל.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק מסתיים בטענות שונות שישנן בין המזיק לניזק. הלכה יג דנה במזיק שטוען שהניזק אמר לו להזיק. לטענה כזו אנו מאמינים רק כאשר יש יסוד שאכן כך היה, כגון שהיה זה שור המיועד להריגה וכו'. באותו הקשר נידון בהלכה יד דין ה"חוטף" לחבירו מצווה, המשלם לחבירו על כך. הלכות טו-טז חוזרות על דינים שפירט הרמב"ם גם בהלכות נזקי ממון והם, שהמזיק משלם רק את הפער שבין ערך השברים לערך החפץ שהזיק, וכמו כן, שגובים ממטלטלין תחילה ובהיעדר מטלטלין גובים מהקרקע הטובה ביותר של המזיק.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות יז-יח מדברות על המזיק ממון חבירו ואינו יודע מה הזיק. במקרה זה תיקנו חכמים שישבע הניזק ויטול כדבריו כל עוד הוא תובע דבר שהגיוני שאכן הוזק. בהקשר זה קיימת התייחסות למזיק שלא העריך נכונה את שווי החפץ שהזיק, וחשב שהוא שווה פחות משוויו האמיתי. במקרה זה חלקו הראשונים האם להתחשב בכך ולחייב את המזיק רק עד מה שחשב שערכו של החפץ אותו הזיק. לסיום דנה הלכה יט במקרה בו הניזק מודה למזיק באשר למהות הסחורה שהוזקה, אך אינו יודע בכמותה. על מקרה זה הרמב"ם מחיל דין מודה במקצת שאינו יודע בשאר, בו נוטל התובע ללא שבועה, ולעומתו הראב"ד טוען שהרי זה כדין כל תקנת נגזל בנזקין, שנוטל התובע רק בשבועה.</p>
+                
+            </div>
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>המזיק ממון חבירו היזק שאינו ניכר הואיל ולא נשתנה הדבר ולא נפסדה צורתו הרי זה פטור מן התשלומין דין תורה אבל מדברי סופרים אמרו הואיל והפחית דמיהן הרי זה חייב ומשלם מה שהפחית מדמיהן. </strong>
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>כיצד, הרי שטימא אוכלין טהורים של חבירו, או שדמע פירותיו, או עירב לו טיפת יין נסך בתוך יינו שהרי אסר עליו הכל, וכן כל כיוצא בזה, שמין מה שהפסיד ומשלם נזק שלם מן היפה שבנכסיו כדרך כל המזיקין. </strong>
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>ודבר זה קנס הוא שקנסו אותו חכמים כדי שלא יהיה כל אחד ואחד מן המשחיתים הולך ומטמא טהרותיו של חבירו ואומר פטור אני, לפיכך אם מת זה שהזיק היזק שאינו ניכר אין גובין הנזק מנכסיו, שלא קנסו חכמים אלא זה שעבר והזיק אבל היורש שלא עשה כלום לא קנסו אותו. וכן המזיק היזק שאינו ניכר בשגגה או באונס פטור, שלא קנסו אלא המתכוין להזיק מדעתו. </strong>
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין היזק שאינו ניכר, מדאורייתא ומדרבנן, במזיק ובבנו, בזדון ובשגגה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כותבת ה<strong>משנה</strong> (גיטין נב:):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"המטמא, והמדמע, והמנסך, בשוגג- פטור, במזיד- חייב"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אדם הגורם הפסד לחברו על ידי כך שטימא את טהרותיו, או עירב את תבואתו במעשר, (כך שהכל חייב שוב בהפרשה), או שאסר את יינו משום יין נסך, חייב לפצותו אם עשה זאת במזיד. נזקים אלה מיוחדים בכך שאין הנזק בא לידי ביטוי בשום שינוי פיזי בחפץ, וההפסד נגרם כתוצאה מהלכה הקשורה למעשה שנעשה בחפץ.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (נג.) נחלקו האמוראים בטעם הדין-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>חזקיה</strong> אומר ש<strong>היזק שאינו ניכר שמיה היזק</strong>. כלומר, מעיקר הדין גם המזיד וגם השוגג חייבים כי אין היזק זה שונה מכל היזק אחר שאדם גורם לחברו, עליו הוא חייב גם בשוגג (מדין 'אדם מועד לעולם'). אמנם במקרים אלו פטרו חכמים את המזיק בשוגג משום שחששו שמא לא ידווח המזיק על הנזק, מחשש להפסד, ואז לא ידע הניזק בנזק (כי אין זה היזק הניכר לעין) ויחטא בשימוש ביין נסך או באכילת טהרות בטומאה וכדומה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוחנן</strong> חולק וסובר ש<strong>היזק שאינו ניכר לא שמיה היזק</strong>. כלומר, מעיקר הדין אפילו במזיד צריך להיות פטור לגמרי כיוון שלא שינה שום דבר מוחשי בחפץ, וההפסד שבא לבעל החפץ לא נבע ישירות ממה שנעשה לחפץ, ונחשב הדבר לנזק עקיף בלבד ופטור עליו. ובכל זאת חכמים קנסו את המזיד לצרכי הרתעה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ב</strong><strong>גמרא</strong> בגיטין (מד:) אומר <strong>אביי</strong>, שהמטמא טהרותיו של חברו ומת, לא קנסו בנו תחתיו, שכן היזק שאינו ניכר לא שמיה היזק, ומדובר על קנס מדרבנן. את המזיק עצמו קנסו חכמים, ואילו את בנו לא קנסו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים פסקו כר' יוחנן, וכדברי אביי, וכן נפסק ב<strong>שו"ע</strong> (שפה א)</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ה</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>הכהנים שפגלו את הזבח במזיד חייבין לשלם בשוגג פטורין, וכן העושה מלאכה בפרת חטאת ובמי חטאת במזיד חייב לשלם בשוגג פטור. </strong>הכהנים שפגלו וכו' במזיד חייב לשלם וכו'. א"א זה שיבוש הוא שאפילו עשה מעשה בגופן למאן דאמר היזק שאינו ניכר לא שמיה היזק פטור מדיני אדם אפילו במזיד וקי"ל כוותיה וטעמא דמילתא משום דאין מתכוין להזיק אלא להנאתו הוא מתכוין משום הכי לא קנסו בו מזיד.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>הכניס פרה למרבק כדי שתינק ותדוש והסיח דעתו ממי חטאת פטור מדיני אדם וחייב בדיני שמים. </strong>
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המפגל את זבח חברו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בגיטין (נד.) כותבת:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכהנים שפגלו במקדש. מזידין- חייבין"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כהן שבכוונה פסל את הקרבן על ידי מחשבה ההופכת אותו לפיגול<sup id="ref75"><a href="#fn75">[75]</a></sup>, ובכך הצריך את בעל הקרבן להזדקק לקרבן אחר, אם עשה זאת במזיד, חייב לפצות את בעל הקרבן. דין זה שווה לדין המטמא, המדמע והמנסך המוזכר בהלכה הקודמת.</p>
+                    
+                </div>
+                
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">העושה מלאכה בפרת חטאת ובמי חטאת</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>תוספתא</strong> (בבא קמא ו יז):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"העושה מלאכה במי חטאת ובפרת חטאת של חבירו פטור מדיני אדם וחייב בדיני שמים"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מי שעושה מלאכה בפרה אדומה של חבירו או במי חטאת של חבירו ובכך פוסלם ומפחית את ערכם, חייב רק בדיני שמים, ואין בית דין מצריכו לשלם לחבירו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית ה<strong>גמרא</strong> בגיטין (נג.) הדנה בשאלת היזק שאינו ניכר, מובאת תוספתא זו כהוכחה שהיזק שאינו ניכר אינו נחשב להיזק, שהרי לו היה נחשב להיזק, היה צריך להיות חייב המזיק אף בדיני אדם ולא רק בדיני שמים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא דוחה את ההוכחה באומרה שניתן להעמיד את הברייתא במקרה בהם אפילו לפי הדעה שהיזק שאינו ניכר שמיה היזק יהיה פטור-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">את עשיית המלאכה בפרה האדומה יש להעמיד באופן שהיתה על ידי הכנסת עֵגלה כדי שתינק תוך כוונה שתוך כדי זה תדוש תבואה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">את עשיית המלאכה במי החטאת יש להעמיד במקרה בו שקל כנגדם (מלאכה שאינה פוסלתם כשלעצמה) ותוך כדי זה הסיח את דעתו מהם ופסלם (שכן מי חטאת נפסלים בהיסח הדעת)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר את ההעמדה- פסילת הפרה ומי החטאת נבעה ממחשבה של הפוסלן בלבד, ולכן נחשב הדבר גרמא (עי' לקמן בדברינו על הלכות ז-ח) ופטור המזיק אפילו לפי השיטה שהיזק שאינו ניכר נחשב היזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכיוון שהלכה כדעת ר' יוחנן, הסובר שהיזק שאינו ניכר לאו שמיה היזק, ומכיוון שההעמדות הובאו בגמרא בכדי להגן על הדעה שהיזק שאינו ניכר שמיה היזק, סובר ה<strong>ראב"ד</strong>, שאין צורך להעמיד העמדות אלה להלכה, ויש ללמוד את הברייתא כפשטה, שהעושה מלאכה, אפילו במזיד<sup id="ref76"><a href="#fn76">[76]</a></sup>, בפרת חטאת ובמי חטאת ופסלם, פטור מדיני אדם כיוון שמדובר בהיזק שאינו ניכר<sup id="ref77"><a href="#fn77">[77]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> חולק על הראב"ד ופוסק להלכה את ההעמדות שהעמידה הגמרא את דברי התוספתא. כלומר, לדעת הרמב"ם העושה מלאכה במזיד בפרת חטאת, פטור רק בדרכי הגרמא המתוארות לעיל (הכנסה לינק תוך מחשבה לדישה, או פסילת מי חטאת במחשבה)<sup id="ref78"><a href="#fn78">[78]</a></sup>.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>המנסך יין חבירו לע"ז לא נאסר היין, שאין אדם מישראל אוסר דבר שאינו שלו, ואם היה לו בו שותפות, או שהיה משומד שהרי הוא כגוי, או שהתרו בו וקבל ההתראה שהרי הוא משומד, הרי זה אוסר היין וחייב לשלם, והיאך יתחייב זה לשלם והרי הוא מתחייב בנפשו, מפני שמעת שהגביהו נתחייב לשלם ואינו מתחייב בנפשו עד שינסך.</strong> המנסך יין חברו לע"ז לא נאסר היין שאין אדם מישראל אוסר דבר שאינו שלו. א"א ולצעורי קא מיכוין.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המנסך יין חבירו לעבודה זרה – האם אדם אוסר דבר שאינו שלו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות הנאמר ב<strong>משנה</strong> (גיטין נב:) "המטמא, והמדמע, <strong>והמנסך</strong>...", דן הרמב"ם באפשרות של אדם לאסור את יין חבירו באמצעות ניסוכו לעבודה זרה למרות שהוא אינו שייך לו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> בחולין (מ.) מובאת מחלוקת אמוראים לגבי האפשרות של אדם מישראל לאסור דבר שאינו שלו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מצד אחד, אומר <strong>עולא</strong> בשם <strong>ר' יוחנן</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אף על פי שאמרו המשתחוה לבהמת חבירו לא אסרה. עשה בה מעשה- אסרה"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם אדם עושה מעשה בבהמת חברו לשם עבודת כוכבים, כמו למשל שחיטה לשם ע"ז, אסר את הבהמה למרות שהיא אינה שלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מצד שני פוסקים <strong>רב נחמן</strong>, <strong>רב עמרם</strong> ו<strong>רב יצחק</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אין אדם אוסר דבר שאין שלו"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אפילו על ידי מעשה אין אדם יכול לאסור בהמה של חבירו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא עומדת על כך, שהשאלה אם אדם אוסר דבר שאינו שלו או לא, נתונה במחלוקת תנאים:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"עובד כוכבים שניסך יינו של ישראל [אפילו] שלא בפני עבודת כוכבים- אסרו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יהודה בן בתירא</strong> ו<strong>ר' יהודה בן בבא </strong>מתירין אותו מפני שני דברים אחד שאין מנסכין יין אלא בפני עבודת כוכבים ואחד שיכול לומר לו <strong>לא כל הימנך שתאסר ייני לאונסי</strong>"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאשר מדובר על גוי שניסך יין של ישראל לשם עבודה זרה, סובר תנא קמא שהיין נאסר, ואילו <strong>ר' יהודה בן בתירא</strong> ו<strong>ר' יהודה בן בבא</strong> סוברים שאין הגוי אוסר את יינו של ישראל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> ממשיכה ומסבירה, שדברי האמוראים הסוברים שאין אדם אוסר דבר שאינו שלו יכולים לעמוד גם לפי דעת תנא קמא, הסובר שגוי יכול לאסור יינו של יהודי בניסוך. הטעם הוא מפני שאנחנו מניחים שכאשר יהודי מנסך יין של חבירו היהודי, אין כוונתו לשם עבודה זרה אלא רק כדי לצערו ולגרום לו הפסד, וממילא היין לא נאסר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי הבנה זו, מעמידה הגמרא את משנת "המטמא, והמדמע, <strong>והמנסך</strong>...", ביין של שותפים (ששותפים בו המנסך עם זה שנאסר יינו בעל כורחו), או במקרה של יהודי מומר שכאשר ניסך יש להניח שהתכוון באמת לעבודה זרה ולא רק לצער את חברו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק שאין אדם מישראל אוסר דבר שאינו שלו. אמנם אין הוא פוסק כשיטת התנאים שגוי אף הוא אינו אוסר יינו של יהודי, ולכן אם מדובר ביהודי מומר או שקיבל התראה לפני המעשה, הרי שאוסר הוא את יינו של חברו. ה<strong>ראב"ד</strong> מדגיש נקודה זו באומרו שהיהודי שאינו אוסר את של חבירו הוא במקרה בו נתכוון לצער את חבירו בלבד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפה ב) פוסק כדברי הרמב"ם.</p>
+                    
+                </div>
+                
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קים ליה בדרבה מיניה במנסך יין חבירו לעבודה זרה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> בגיטין (נב:), חלקו האמוראים לגבי המשמעות המדוייקת של המנסך שבמשנת "המטמא, והמדמע, והמנסך...":</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב</strong> פירש שמדובר במנסך ממש. ולעומתו <strong>שמואל</strong> פירש שמדובר במערב יין נסך ביינו של חבירו. הטעם שבגללו שמואל שינה מפשט הדברים הוא משום שאחרת לא ברור כיצד חייב המנסך ממון, שהרי מתחייב מיתה בניסוך לעבודה זרה, ולפי הכלל 'קים ליה בדרבה מיניה' צריך להיות פטור מממון<sup id="ref79"><a href="#fn79">[79]</a></sup>. רב מצידו מסביר שכיוון שהתחייב בתשלומים משעה שהגביה את היין, ולא התחייב מיתה עד שלא ניסך בפועל, אין אומרים כאן 'קים ליה', וחייב ממון למרות שחייב מיתה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פסק כרב, וכך פסק ה<strong>שו"ע</strong> (שפה ב).</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>כל הגורם להזיק ממון חבירו חייב לשלם נזק שלם מן היפה שבנכסיו כשאר המזיקין, אף על פי שאינו הוא המזיק זה הנזק עצמו באחרונה הואיל והוא הגורם הראשון חייב. כיצד, הזורק כלי שלו מראש הגג על גבי כרים וכסתות ובא אחר וקדם וסלק את הכרים מעל הארץ ונחבט הכלי בארץ ונשבר חייב נזק שלם כאילו </strong><strong>שברו בידו, שסלוק הכרים והכסתות גרם לו שישבר, וכן כל כיוצא בזה. </strong> שסלוק הכרים והכסתות גרם לו שישבר וכן כל כיוצא בזה. א"א הרב פסק כן משום דדיינינן דינא דגרמי ואין הכל מודין לו לפי שלא עשה בכלי שום מעשה.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>הזורק כלי של חבירו מראש הגג על גבי כרים וכסתות של בעל הכלי וקדם בעל הכלי והסיר הכרים הזורק חייב שזריקתו היא הגורם הראשון לשבירת הכלי, ואם קדם אחר וסלקן שניהן חייבין הזורק והמסלק ששניהם גרמו לאבד ממונו של זה.</strong> הזורק כלי וכו' הזורק חייב. א"א לא ראיתי שיבוש כזה והזורק לעולם פטור דפסיקי גיריה והמסלק אם הוא כדברי הרב חייב ואם כדברי אחרים פטור כדכתיבנא.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גרמא וגרמי בנזקין</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כרקע להלכות הבאות, נציג על קצה המזלג את עיקרי השיטות בביאור נזקי ה"גרמא" וה"גרמי"-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ק.) מספרת על <strong>ריש לקיש</strong> שהראה מטבע ל<strong>ר' אלעזר</strong> ושאלו האם זו מטבע טובה. כשאמר לו ר' אלעזר שאכן מדובר במטבע טובה השיב לו ריש לקיש שידע שהוא סומך עליו, כלומר, שאם ימצא שהמטבע אינו טוב, יהיה ר' אלעזר אחראי להחליפו, כיוון שהוא זה שהטעה את ריש לקיש. הגמרא מסבירה שר' אלעזר יהיה אכן חייב לפי שיטת <strong>ר' מאיר</strong> האומר ש<strong>דנים דינא דגרמי</strong>. כלומר, לפי ר' מאיר חייב המזיק גם אם לא הזיק ישירות אלא רק גרם לנזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (צח.) מובאים דברי <strong>רבה</strong>, הפוטר אדם ששרף שטר חוב של חברו (ובכך הפסידו, שכן אין הוא יכול לגבות את חובו הכתוב שם). רבה מסביר שפטור משום שאומר השורף "ניירא קלאי מינך", כלומר, שרפתי נייר בלבד. הגמרא מגיעה למסקנה שדברים אלו נכונים דווקא למי שלא סובר כר' מאיר, אך לפי ר' מאיר, כיוון שדנים דינא דגרמי, יש לשלם את מלוא סכום החוב שהפסידו על ידי שריפת השטר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקביל למושג של "גרמי", במקומות שונים בגמרא מצינו גם את המושג "גרמא" כביטוי לסוג של נזק שאין חייבים עליו. הנה שתי דוגמאות:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (ס.) מובאת <strong>ברייתא</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ליבה וליבתה הרוח, אם יש בלבויו כדי ללבותה חייב ואם לאו פטור"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אדם המלבה אש ואין בליבויו שלו בכדי ללבותה אלא אם כן הרוח תעזור לו פטור על נזקיה. הגמרא מסבירה שבנזיקין פטור למרות שהזורה בשבת ונעזר ברוח חייב, משום שמדובר על גרמא, וגרמא בנזיקין פטור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מח:) מסבירה את דברי המשנה (מז:) על שור שנפל לבור מים והבאישם שחייב, ואומרת שדווקא אם הבאישם מחמת גופו, כלומר, הליכלוך שעל גופו, אך אם מת השור, והובאשו המים מחמת ריח נבילתו, מדובר בגרמא, שכן מות השור רק איפשר לגורם אחר (הריקבון) להזיק, ולכן פטור השור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעניין היחס בין גרמא לגרמי קיימות שתי שיטות עיקריות בראשונים:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריצב"א</strong> (בתוספות בבא בתרא כב:) מסביר, שכל דיני הגרמי והגרמא, דין אחד להם ברמת דין התורה. קרי, מהתורה אדם פטור על גרימת נזק באפן בלתי ישיר. וחכמים ראו לגזור בדברים המצויים. לפי דעה זו, היזק שאינו ניכר (ראה תחילת פרק זה) אינו שונה עקרונית מגרמא וגרמי, וקנסו חכמים את המטמא, המדמע והמנסך. לפי שיטת הריצב"א אין דין "אדם מועד לעולם" אמור בגורם נזק, ולכן המזיק בשוגג פטור, כפי שידוע לנו מהמזיק היזק שאינו ניכר (עי' לעיל הלכות א-ג). כמו כן, אין לחייב את הבן לאחר מות המזיק, כיוון שאין התשלום חוב אמיתי שחייב המזיק לניזק, ואין לקנוס את הבן על חטאי האב. דברים דומים נשמעים מ<strong>רש"י</strong> שמדבריו בכמה מקומות בש"ס משמע שסובר שגרמא וגרמי הם שני שמות לדבר אחד<sup id="ref80"><a href="#fn80">[80]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> בקונטרס "דינא דגרמי" יוצא חוצץ כנגד תפיסה זו<sup id="ref81"><a href="#fn81">[81]</a></sup>, וטוען שדינא דגרמי כשמם כן הם- דין גמור ולא קנס. הרמב"ן מסביר שהמושג היזק שאינו ניכר שונה אף אינו תלוי במושג גרמי. בעוד שהראשון עניינו בהגדרת הנזק ביחס לשינוי שחל בחפץ הניזק, השני עוסק בישירות של גרימת הנזק. למשל, השורף שטר של חברו הוא היזק ניכר בגרמי, והמטמא טהרותיו של חברו זה היזק בידיים (ולא בגרמי) למרות שאינו ניכר<sup id="ref82"><a href="#fn82">[82]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמו כן, מסביר הרמב"ן (קונטרס דינא דגרמי ד"ה "וזה הטעם") שגרמא וגרמי הן שתי רמות שונות של ישירות. ה"גרמי" מאופיין בכך שהוא בבחינת "ברי היזקא", כלומר, אי אפשר לנזק שיקרה אלא באותו מעשה שעשה המזיק, ומשעשה המזיק את מעשהו הנזק בהכרח בא או עתיד לבוא, ואינו תלוי בגורם אחר. לעומתו, ה"גרמא" חסר תכונות אלה, ומאופיין בכך שההיזק אינו ודאי, או שהוא תוצאה של התערבות גורם אחר<sup id="ref83"><a href="#fn83">[83]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי שיטה זו, יש לחייב על גרמי גם בשוגג, כבכול אדם המזיק. כמו כן יש לחייב את הבן לאחר מות האב על נזקים שהזיק אביו שכן אין מדובר על קנס והתשלומים הם כחוב על האב, שעובר לבן עם מות האב. בשיטה זו מחזיקים גם ה<strong>רמב"ם</strong>, ה<strong>רא"ש</strong> ועימם רוב הראשונים. וכן פסק ה<strong>שו"ע</strong> (שפו א).</p>
+                    
+                </div>
+                
+                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הזורק כלי מראש הגג על גבי כרים וכסתות, והוזזו הכרים ונשבר הכלי</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כו:) מובאים דברי <strong>רבה</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>רבה</strong><strong>:</strong> זרק כלי מראש הגג והיו תחתיו כרים או כסתות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בא אחר וסלקן או קדם וסלקן- פטור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מאי טעמא? בעידנא דשדייה פסוקי מפסקי גיריה"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, רבה פוטר את זורק הכלי מראש הגג משום שבשעת זריקת הכלי "פסוקי מפסק גיריה" (יש הפסק לחיציו) שכן זריקת הכלי לא יכולה לשוברו כל עוד הכרים והכסתות מתחתיו ומשולה היא ליריית חץ על אדם שמגן על עצמו במגן בלתי חדיר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רוב הראשונים</strong> פירשו, כפשט דברי רבה, שזורק הכלי פטור לגמרי, משום שבזריקתו שלו כשלעצמה, לא היה בכדי לשבור את הכלי. אמנם נחלקו בדין מסלק הכרים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong>, <strong>ר"י</strong> (תוס' ד"ה "קדם") ה<strong>רא"ש</strong> (סי' טז) וה<strong>מאירי</strong>, מפרשים שהמסלק את הכרים פטור אף לפי שיטת ר' מאיר שדנים דינא דגרמי (כמותה אנו פוסקים להלכה), כיוון שאין מדובר כאן על <strong>גרמי</strong> אלא על <strong>גרמא</strong>. שכן לא עשה המסלק דבר בגוף  הכלי ו"אינו עושה מעשה המפסיד אלא שמסלק את המציל"<sup id="ref84"><a href="#fn84">[84]</a></sup>. ה<strong>ראב"ד</strong> מזכיר שיטה זו בדבריו על הרמב"ם לפנינו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם סוברים ה<strong>רי"ף</strong> וה<strong>נימוקי יוסף</strong> שרבה פטר את המסלק רק משום שהוא אינו סובר כר' מאיר שדנים דינא דגרמי. אך לפי ההלכה הנקוטה בידינו, שכן דנים דינא דגרמי, יש לנו לחייב את המסלק למרות שלא עשה דבר בגוף החפץ.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שיטתו של ה<strong>רמב"ם</strong> בדין זה יוצאת דופן ביחס לרוב שיטות הראשונים. בנוסף לכך שהרמב"ם הולך בדרכו של הרי"ף ופוסק שמסלק הכרים חייב על פי דינא דגרמי, הרמב"ם מוסיף ומחייב <strong>גם את זורק הכלי</strong> משום דינא דגרמי<sup id="ref85"><a href="#fn85">[85]</a></sup>. לכן, כאשר מזיק אחד זרק את הכלי על גבי כרים, ומזיק שני סילק את הכרים, חייבים <strong>שניהם</strong>, כל אחד חצי נזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong> מבאר שהרמב"ם הבין שדברי רבה אמורים לגבי הזורק בלבד. לכן, כאשר הרי"ף פוסק שאין הלכה כרבה משום שאנו פוסקים כר' מאיר שדיינינן דינא דגרמי, כוונתו שאין הלכה כרבה לפטור את הזורק, אלא הלכה היא שהזורק חייב משום דינא דגרמי. הטעם "פסוקי מיפסק גיריה" נאמר רק לפי שיטת רבה שאין דנים דינא דגרמי, ולכן איננו סוברים כך להלכה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפו ג) פסק כדעת הרי"ף והנימוקי יוסף, שהמסלק את הכרים חייב מדינא דגרמי, והרמ"א מביא את שיטת רש"י, שהמסלק את הכרים פטור כיוון שלא עשה מעשה בכלי עצמו והרי זו גרמא<sup id="ref86"><a href="#fn86">[86]</a></sup>.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>וכן השורף שטרותיו של חבירו חייב לשלם כל החוב שהיה בשטר, שאע"פ שאין גוף השטר ממון הרי גרם לאבד הממון, ובלבד שיודה לו המזיק ששטר מקויים היה וכך וכך היה כתוב בו ומחמת ששרפו הוא שאינו יכול לגבות החוב אבל אם לא האמינו אינו משלם לו אלא דמי הנייר בלבד. </strong>
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השורף שטר חוב של חברו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (צח:):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>רבה</strong> השורף שטרו של חבירו פטור דאמר ליה ניירא קלאי מינך"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, רבה פוטר את השורף שטר חוב של חברו ומפסידו בכך, משום שבסופו של דבר הזיק ישירות רק לפיסת נייר, ועל הנזק הממוני המגיע בעקיפין (מזה שבגלל השריפה אין לאותו בעל שטר כיצד לגבות את חובו), אין לחייב את המזיק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מבהיר, שדינו של רבה רלוונטי רק במקרה בו מאמין המזיק לניזק באשר לגובה הסכום שהיה רשום בשטר, שהרי אם ישנם עדים על גובה הסכום, ניתן לכתוב שטר חדש, ואם אין עדים, והמזיק אינו מודה לניזק לגבי גובה הסכום, ממילא לא ניתן לחייב את המזיק על הספק, ואין כאן כלל שאלה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אמימר</strong> מסכם ואומר שדברי רבה אמורים רק לפי מי שאומר שלא דנים דינא דגרמי, אך הסובר כר' מאיר, שדנים דינא דגרמי, יפסוק שהשורף שטר חוב של חבירו חייב. וכך מביאה הגמרא ש<strong>רפרם</strong> נהג להלכה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, הרמב"ם ורוב הראשונים סוברים שהלכה כר' מאיר, שדנין דינא דגרמי, ולכן להלכה פסקו כולם שהשורף שטר חוב של חבירו חייב, אם מאמינו לגבי הסכום שהיה כתוב בו, וכן פסק ב<strong>שו"ע</strong> (שפו ב).</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>וכן ראובן שהיה נושה בשמעון ומכר השטר ללוי וחזר אחר שמכרו ומחלו לשמעון, הרי נפטר שמעון כמו שיתבאר במקומו ונתחייב ראובן לשלם ללוי כל מה שבשטר, שהרי גרם לו לאבד השטר והרי הוא כמי ששרפו, וכן אם מחלו יורש ראובן משלם המוחל מן היפה שבנכסיו. </strong>
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוכר שטר חוב לחברו וחזר ומחלו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (כתובות פה:) מחדש <strong>שמואל</strong> ש"המוכר שטר חוב לחבירו וחזר ומחלו מחול", כלומר, אם מלווה מכר את שטר ההלוואה לאדם אחר (כלומר, מכר לו את הזכות לקבל את הדמים כשיוחזרו מהלווה), עדיין נשארת לו האפשרות למחול על החוב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שטעם הדבר הוא משום שלקונה ההלוואה אין יחס ישיר ללווה, ולכן הוא אינו יכול לתבוע אותו בבית דין, שהרי הלווה אומר לו שהוא מעולם לא לווה ממנו ואינו חייב לו כלום.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במילים אחרות, מכירת החוב אינה מעמידה את קונה החוב במקומו של המלווה, והיא מקנה רק את הזכות לקבל את הכסף כשזה יחזור ליד המלווה. לכן, אפשרות המחילה על החוב נשארת עדיין ביד המלווה, ומשמחל המלווה, הפסיד הקונה את כל סכום החוב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אמימר</strong> (שם פו.) פוסק שדין המוחל כדין השורף שטר חוב של חבירו, בו לפי ר' מאיר, כיוון שדנים דינא דגרמי, חייב לפצות את הקונה על הסכום שהפסידו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלקו הראשונים בגובה הפיצוי אותו חייב המוחל (המלווה) לשלם לקונה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (שם) כותב, שהמוחל חייב לשלם לקונה את מלוא סכום החוב הכתוב בשטר שמחל. כך גם משמע מה<strong>רמב"ם</strong>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, <strong>ר"י</strong> (בתוספות שם ד"ה "תיזיל") פוסק שהקונה מקבל פיצוי רק על הסכום אותו השקיע בקניית החוב, ולא על הפסדו במניעת גביית החוב הכתוב בשטר. כלומר, אין הקונה מפסיד (כי קיבל בחזרה את השקעתו), אך הוא גם אינו מרוויח. <strong>רב שרירא גאון</strong> (מובא בטור חו"מ סו) סובר אף הוא כך ומסביר את טעם הדבר- בניגוד לרכוש השייך ממש לבעליו, עליו צריך מזיק לשלם פיצוי שלם, כאן מראש החוב לא היה שייך באמת לקונה (ועובדה היא שיכול המלווה למחול ללווה עליו), ולכן אין סיבה לפצות את הקונה על כל החוב ודי לפצותו על הסכום שנתן<sup id="ref87"><a href="#fn87">[87]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (בשו"ת, כלל סט סימן א) פוסק כרש"י, אך הוא מוסיף ואומר שאין לפצות את הקונה במלוא הסכום הכתוב בשטר, אלא בהפסד האפקטיבי שנגרם לו עם מחילת השטר. למשל, אם ידוע שהלווה אדם עני, ואין סיכוי רב לגבות את החוב ממנו, או לחילופין אם הלווה אדם אלים שאינו מציית לבית הדין. לכן, יש לראות מה המחיר בו נמכר כזה שטר חוב בשוק, ולפיו יש לפצות את הקונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (חו"מ סו לב) פסק כשיטת רש"י והרמב"ם, שיש לפצות את הקונה על הסכום הכתוב בשטר, ועוד פסק כרא"ש, שאין מפצים את הקונה על מלוא הסכום, אלא על ההפסד המשוער בפועל. ה<strong>רמ"א </strong>חולק ופוסק כשיטת ר"י ורב שרירא גאון, שיש לפצות את הקונה על המעות שהוציא בלבד.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-7" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>וכן העושה עבדו אפותיקי וחזר ושחררו חייב המשחרר לשלם לבעל החוב שהרי הפקיע שעבודו וגרם לאבד ממונו, וכופין את בעל החוב גם הוא לשחרר העבד כדי שלא יפגע בו ויאמר לו עבדי אתה. וכן הדוחף מטבע חבירו ונתגלגל וירד לים חייב לשלם, וכן הצורם אזן הפרה חייב לשלם שהרי גרם לפחות דמיה, וכן המרקע דינרי חבירו והעביר צורתן חייב לשלם משום גורם, וכן כל כיוצא באלו הדברים.</strong> וכן העושה עבדו אפותיקי וחזר ושחררו חייב המשחרר לשלם לבעל החוב. א"א הרב אינו פוסק כן דרשב"ג הוא דאית ליה הכי ורבנן פליגי עליה וקי"ל כרבנן ולא דמי לשורף שטר חבירו דהתם בחבריה קא עביד מעשה אבל הכא אמר בדנפשאי קא עבידנא.
+                </div>
+                
+
+                
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עבד שעשאו רבו אפותיקי לאחרים ושיחררו – דין המזיק שעבודו של חברו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שנינו ב<strong>משנה</strong> (גיטין מ:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"עבד שעשאו רבו אפותיקי לאחרים ושיחררו. שורת הדין אין העבד חייב כלום אלא מפני תיקון העולם כופין את רבו ועושה אותו בן חורין וכותב שטר על דמיו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבן שמעון בן גמליאל</strong> אומר אינו כותב אלא משחרר"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> חלקו האמוראים בפירוש המשנה:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב</strong> פירש שמדובר במקרה בו רבו של העבד עשאו אפותיקי (כלומר ייחדו לגביית חוב ממנו), ואז שיחררו, כך שהמלווה (שהיה אמור לגבות את החוב מהעבד) הפסיד, שכן שוב אינו יכול לגבות מהעבד את חובו. גם תנא קמא וגם רשב"ג מסכימים שניהם שלמרות שהעבד נחשב בן חורין לגמרי, ומעולם לא נכנס תחת יד המלווה, בכל זאת כופים את המלווה לתת לו גט שחרור, כדי שלא יוציא עליו לעז שהוא עבדו. לדעת רב, מחלוקת תנא קמא ורשב"ג במשנה היא בדין <strong>המזיק שעבודו של חברו</strong>-  רשב"ג אומר שהמזיק שעבודו של חברו חייב, ולכן כיוון שעל ידי שחרור העבד הזיק בעליו את המלווה שלו היה העבד משועבד, חייב המשחרר לפצות את המלווה. לעומתו, לפי תנא קמא המזיק שעבודו של חברו פטור, ולכן אין לחייב את בעל העבד על ששמטו מתחת יד המלווה, אלא כיוון שנהנה העבד משחרורו, חייב העבד עצמו להשיב למלווה את כספו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת רב, סובר <strong>עולא</strong>, שהמשנה מדברת במקרה בו המלווה, שהעבד היה משועבד לו, הוא ששחרר את העבד. כיוון שאותו מלווה אינו בעליו של העבד ממש, אין העבד משוחרר, אבל מכיון שכבר יצא על אותו העבד שם של בן חורין, כופים את רבו האמיתי לשחררו. לדעת עולא התנאים שבמשנה חולקים בשאלת <strong>היזק שאינו ניכר</strong>- לדעת רשב"ג כיוון שבגלל מעשהו של המלווה נאלץ הראשון לשחרר את העבד, צריך המלווה לפצות את הבעלים. לעומת זאת, לדעת תנא קמא, היזק שאינו ניכר לאו שמיה היזק, ואין המלווה צריך לשלם למרות שבגללו הוכרח הבעלים לשחרר את עבדו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים ובכללם ה<strong>רמב"ם</strong>, פסקו כרב בהבנת המשנה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "במזיק") מעירים שהמזיק שעבודו של חברו חייב רק אם מדובר במקרה בו המלווה יכול לגבות רק באמצעות הנכס שניזק, כלומר, במקרה בו ייחד הלווה את החפץ כאפותיקי וסיכם עם המלווה שרק מאותו חפץ ניתן יהיה לגבות את החוב. התוספות מסבירים שאם לא כן, הרי שלא הפסיד המזיק את המלווה, שאם לא יגבה מחפץ זה יגבה מחפץ אחר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בבבא קמא (לג:) מתייחסת להבדל בין המזיק שעבודו של חברו לבין דינא דגרמי- הגמרא שם עוסקת במקרה בו שור תם (שגובה הניזק חצי נזק מגופו ורק מגופו) נשחט על ידי המזיק. במקרה זה נאמר שם שגובה הניזק מהבשר, ומפסיד את פחת השחיטה. מכאן מסיק <strong>ר' הונא בריה דר' יהושע</strong>, שהמזיק שעבודו של חברו פטור. הגמרא מסבירה שבמזיק שעבודו של חברו יש סברה לחייב יותר מאשר בשורף שטר חוב של חברו, שכן השורף שטר של חברו לא הזיק באופן ישיר את הממון שחברו איבד, ואילו המשחרר את העבד עושה מעשה ישיר ברכוש המיועד לחברו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות גמרא זו פוסק ה<strong>רמב"ם</strong> (כאן ובפרק יח הלכה ו מהלכות מלוה ולווה) שהמזיק שעבודו של חברו חייב כיוון שאנו פוסקים להלכה כר' מאיר שדנים דינא דגרמי, ולפי גמרא זו, אם בשורף שטר חוב של חבירו חייב, כל שכן שחייב במזיק שעבודו של חברו. כך פסק גם הרמב"ן (קונטרס דינא דגרמי ד"ה "וכן").</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד</strong> חולק ופוסק כתנא קמא, שהמזיק שעבודו של חברו פטור. הראב"ד מסביר שהשורף שטר של חברו חייב כי עושה מעשה ברכוש חברו, לעומתו, המשחרר עבד המשועבד לחברו אינו עושה שום מעשה ברכושו של חברו ולכן פטור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (יו"ד רסז סח) פוסק כרמב"ם.</p>
+                    
+                </div>
+                
+                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הדוחף מטבע חבירו לים, המאבד צורת מטבע חבירו והצורם אוזן פרת חבירו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (צח.) הובאו ארבעה מקרים בהם <strong>רבה</strong> פוטר את המזיק. אחד מהם, השורף שטר חוב של חבירו, כבר נידון לעיל (הלכה ט). במקרה של השורף את שטר חבירו, נאמר בגמרא במפורש שהדין תלוי בשאלה האם דנים דינא דגרמי או לא. רבה אינו דן דינא דגרמי ולכן הוא פוטר ואילו מי שפוסק להלכה שדנים דינא דגרמי, יחלוק ויחייב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באשר לשלוש ההלכות הנוספות, היחס בין דברי רבה לבין דעתו בעניין דינא דגרמי נותר בספק. במילים אחרות, בכל אחת מההלכות, לא ברור האם רבה פוטר מכיוון שהוא סובר שאין דנים דינא דגרמי, או לחילופין, מכיוון שישנה בכל הלכה (או בחלק מההלכות) סיבה צדדית אחרת לפטור, שבעטיה יפטור גם מי שמחייב בדינא דגרמי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">להלן נתייחס לכל אחת משלוש ההלכות אותן הביא רבה:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הזורק מטבע של חבירו לים הגדול- פטור. רבה מסביר שהמטבע מצוי לפנינו וניתן לנוטלו ולכן אין הדבר נחשב כנזק. משום כך אם המים עכורים ולכן לא ניתן לראות את המטבע וליטלו, חייב המשליכו. כמו כן, אם הגביה את המטבע קודם שזרקו, הרי שגזלו בכך וחייב להשיבו. <strong>רבא</strong> מקשה על דברי רבה מההלכה שאין מחללים מעשר על מעות הנמצאות בכיסו שנפל לים, ונלמד מכך שלמרות שניתן להעלות את הכסף מהים, בכל זאת נחשבים המעות לאבודים, ויתחייב הזורקן, שאיבד ממון חבירו. <strong>רבה</strong> עונה, שבמעשר ישנה דרישה מיוחדת שהכסף יהיה נגיש למחלל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שלמרות שניתן ליטול את המטבע מהים, עדיין ניזוק בעל המטבע בכך שהוא צריך לשלם לאדם (צוללן, או "בר אמודאי" בלשונו של רש"י) שיטלו. מכיוון שזהו נזק בלתי ישיר, פוטר רבה משום גרמא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השף מטבע של חבירו- פטור. רבה מגביל דין זה למקרה בו הכה בקורנס על מטבעו של חבירו, ואיבד את הצורה המוטבעת עליו, אך אם שייפו ממש, הרי שחיסר ממנו חומר וחייב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדומה למה שפירש רש"י במגלגל מטבע לים, גם כאן נראה שבפועל הנזק לבעל המטבע מתבטא בכך שהוא צריך לשלם למטביע מטבעות בכדי שיטביע מחדש צורה על המטבע ובכך שהמזיק לא הזיק את המטבע עצמו, אלא מנע את האפשרות להשתמש בו<sup id="ref88"><a href="#fn88">[88]</a></sup> (כמו שהזורק מטבע לים מנע את האפשרות להשתמש בו).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הצורם אוזן פרת חבירו (כך שפסלה למזבח)- פטור. רבה מסביר, שפטור כיוון שלא שינה בפרה דבר, ובנוסף, לא כל הפרות עומדות להיזבח, ולעניין חולין הרי לא הזיק כלל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכך שרבא רוצה ללמוד מדין חילול מעשר, שהמעות שנזרקו לים נחשבים אבודים לומד<strong> הראב"ד</strong> בחידושיו (הובא ברא"ש סי יג וברשב"א), שטעמו של רבה לפטור אינו משום שהוא פוטר בדינא דגרמי<sup id="ref89"><a href="#fn89">[89]</a></sup>, אלא משום שניתן ליטול את המטבע. מתוך כך הראב"ד פוסק כרבה שפטור, למרות שבאופן כללי הוא פוסק שדנים דינא דגרמי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> מביא את דברי הראב"ד, מצרף להם את דברי רש"י ופוסק אף הוא שהמגלגל מטבע של חבירו לים הרי הוא גרמא, ולכן יש לפטור בו אף למ"ד שמחייבים בדינא דגרמי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם בדין השף מטבע של חבירו ובדין הצורם אוזן פרת חבירו פוסקים הרא"ש והראב"ד שרבה פטר משום שלדעתו מדובר בגרמא, ולכן אף מי שסובר שבגרמי חייבים, יודה לרבה שהשף מטבע של חבירו פטור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף</strong> וה<strong>רמב"ם</strong> חולקים על הרא"ש והראב"ד ומבינים שרבה דיבר דווקא לשיטתו שאין דנים דינא דגרמי. לכן, עפ"י מה שנפסק להלכה שדנים דינא דגרמי, הם פוסקים שהמגלגל מטבע של חבירו לים חייב, אפילו אם המים צלולים וניתן ליטלו משם. באותו האופן מחייבים הרי"ף והרמב"ם בשף מטבע של חבירו ובצורם אוזן פרת חבירו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שפו א) פוסק כרמב"ם, ומחייב בכל המקרים שהביא רבה. לעומתו ה<strong>רמ"א </strong>(שפו ג) מביא את שיטת הרא"ש הפוטר במגלגל מטבע חבירו לים ובשף מטבע של חבירו.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-8" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>הזורק כלי מראש הגג לארץ ולא היה תחתיו כלים וקדם אחר ושברו במקל כשהוא באויר קודם שיגיע לארץ, הרי זה האחר פטור שלא שבר אלא כלי שסופו להשבר מיד בודאי ונמצא כשובר כלי שבור ואין זה כגורם, וכן כל כיוצא בזה פטור. </strong>
+                </div>
+                
+
+                
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הזורק כלי מראש הגג ואחר קדם ושברו במקל קודם שיגיע ארצה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כו:) מובאים דברי <strong>רבה</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>רבה</strong> זרק כלי מראש הגג ובא אחר ושברו במקל פטור. מאי טעמא מנא תבירא תבר"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, השובר את הכלי קודם שיתנפץ על הקרקע פטור משום שנחשב הדבר כאילו שבר כלי שבור ("מנא תבירא תבר").</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (יז:) מעלה <strong>רבא</strong> את השאלה מה דינה של בהמה שדרכה על כלי ולא שברתו, ונתגלגל מכוחה למקום אחר ונשבר שם. האם הולכים אחר רגע הדריכה ("בתר מעיקרא אזלינן"), ואז חייב בעל הבהמה נזק שלם, כי מדובר בנזק ישיר, או שהולכים אחר רגע השבירה ("בתר תבר מנא אזלינן"), ואז חייב בעל הבהמה חצי נזק בלבד<sup id="ref90"><a href="#fn90">[90]</a></sup>. הגמרא מסבירה שניתן לפתור התלבטות זו בעזרת הקבלה לדינו של רבה הפוטר אדם ששבר במקל כלי שנזרק לפני שהתנפץ, כיוון שמשמעות הדבר היא שהולכים אחר אחר רגע זריקת הכלי ("בתר מעיקרא"), ומאותו רגע מוגדר הכלי כשבור. כלומר, לו היינו הולכים אחר רגע שבירת הכלי ("בתר תבר מנא"), היינו מחייבים את זה ששבר את הכלי בפועל במקלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (פ"ב סי' א) וה<strong>טור</strong> (שצ) פסקו על פי דברי רבה ש"בתר מעיקרא אזלינן", ולכן זורק הכלי חייב והמשברו בדרך נפילתו פטור. כך גם מפרש <strong>רש"י</strong> (יז: ד"ה "פטור") וכן ניתן להבין מדברי ה<strong>רמב"ם</strong> שלפנינו, שפטר רק את השובר ולא את המשליך.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת ראשונים אלה כותב ה<strong>רמב"ן</strong> (קונטרס דינא דגרמי ד"ה "הזורק") ש"בתר תבר מנא אזיל", כלומר הולכים אחר רגע שבירת הכלי, ולכן הראשון שזרק פטור, כי לא הוא ששבר את הכלי בסופו של דבר. עם זאת, לגבי השני עדיין נאמרת טענת "מנא תבירא תבר", ולכן השני ששבר את הכלי בפועל פטור אף הוא כי כביכול שבר כלי שבור מכבר. על פי סברות אלה פוסק הרמב"ן שכאשר אחד השליך כלי והשני שברו במקל בטרם הגיע ארצה, פטורים שניהם<sup id="ref91"><a href="#fn91">[91]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> (מובא בנימוקי יוסף ז: מדפי הרי"ף) אף הוא פוסק להלכה שגם הזורק וגם השובר פטורים, אך מטעם אחר משל הרמב"ן- כיוון שרבא הוא אחרון, אין פושטים את ספיקו מפני דבריו של רבה, ולכן אנו עדיין בספק לדינא האם "בתר מעיקרא אזלינן" או "בתר תבר מנא", ושניהם פטורים, הראשון והאחרון שכן מאף אחד מהם לא ניתן להוציא ממון מספק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקביל, חלקו הראשונים לגבי היקף הכלל של "בתר מעיקרא אזלינן".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (יז: ד"ה "זרק") כתבו שאכן אם שבר אדם במקל כד במעופו שאחר השליך מגבוה, פטור השובר, כדברי רבה, שכן הולכים אחר מעיקרא והרי זה שובר כלי שבור מכבר, אך אם הראשון ידה אבן בכלי, והשני שבר את הכלי לפני שהאבן הספיקה לשוברו, בזה, למרות שהכלי היה נשבר גם לולי השני, חייב זה שהקדים ושברו בפועל. במילים אחרות, העובדה שהכלי עומד להישבר בוודאות ותוך זמן קצר אינה, כשלעצמה, מגדירה אותו כ"מנא תבירא". רק אם המזיק הראשון עושה את מעשהו בכלי עצמו הולכים אחר רגע זריקת הכלי<sup id="ref92"><a href="#fn92">[92]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">להלכה פסק ה<strong>שו"ע</strong> (שפו ד) כדברי הרא"ש, רש"י וסיעתם, שחייב הזורק ופטור המשבר. ה<strong>ש"ך</strong> (שם ס"ק כח) הביא להלכה את דברי התוספות, שיש לחלק בין הזורק את הכלי עצמו לבין הזורק אבן על הכלי.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-9" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג-יד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>שור שהיה עומד להריגה מפני שהוא מזיק את הבריות ואילן שהוא עומד לקציצה מפני שהוא מזיק את הרבים וקדם אחד ושחט שור זה וקצץ אילן זה שלא מדעת בעליו חייב לשלם לבעלים כמו שיראו הדיינים שהרי הפקיען מלעשות מצוה, ואם טען ואמר אתה אמרת לי להרגו ולקצצו הואיל והוא עומד לכך הרי זה פטור. </strong>
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>וכן מי ששחט חיה או עוף ובא אחר וכסה הדם שלא מדעת השוחט חייב ליתן כמו שיראו הדיינים, ויש מי שהורה שהוא נותן קנס קצוב והוא עשרה זהובים, וכן הורו שכל המונע הבעלים מלעשות מצות עשה שהן ראויין לעשותה וקדם אחר ועשאה משלם לבעלים עשרה זהובים. </strong>
+                </div>
+                
+
+                
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הטוען שהזיק ברשות בעלים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (צא:) שנויה <strong>ברייתא</strong> הפוטרת את המזיק במקרה בו הוא טוען להגנתו שעשה את מעשהו בשליחות הניזק:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שורי הרגת נטיעותי קצצת</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אתה אמרת לי להורגו אתה אמרת לי לקוצצו פטור"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב</strong> מסרב לקבל את הברייתא במקרה כללי, כיוון שאז ההשלכה שלה היא שכל ניזק עלול להזדקק להוכיח שלא שלח את המזיק להזיק, וזהו מצב שאינו סביר. לכן מעמיד רב את הברייתא בשור העומד להריגה, כיוון שהוא מזיק את הבריות ובאילן העומד לקציצה, כיוון שהוא מסוכן, בהם סבירים דברי המזיק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מרדכי</strong> (רמז פ) כותב שגם במקרים אחרים בהם סבירה טענת המזיק שעשה מעשיו בשליחות הניזק, כגון אם פטר המזיק את בעל חובו של הניזק במקרה בו ממילא לא יהיה ניתן לגבות את החוב (כגון שאין עדים כלל), פטור הניזק. המרדכי כותב עוד, שבמקרה שטענת המזיק ("אתה אמרת לי...") אינה סבירה חייב המזיק אפילו במקרה בו אין עדים על הנזק ויש למזיק מיגו<sup id="ref93"><a href="#fn93">[93]</a></sup>, כיוון שחזקה ברורה כעדים היא שאין אדם מורה לחברו להזיק דבר שיש בו ערך.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> ורוב ראשונים מקבלים את הסברו של רב לברייתא, ופוסקים לפיו להלכה. וכן נפסק בשו"ע (שפב א).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">(עי' לעיל פרק ה' הלכות יא-יב מתי המזיק בשליחות הניזק פטור ומתי חייב)</p>
+                    
+                </div>
+                
+                <div id="topic-9-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ה"חוטף" לחברו מצווה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, ראינו את העמדת <strong>רב</strong> את דברי הברייתא במקרה בו מדובר על שור העומד להריגה ואילן העומד לקציצה. הגמרא מסבירה שבמקרה זה תובע הניזק את המזיק על כך ש"חטף" לו את המצווה<sup id="ref94"><a href="#fn94">[94]</a></sup>, משום שהניזק עצמו רצה להרוג את השור או לקצוץ את האילן ובכך לקיים מצוות הסרת מכשול מהרבים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד מביאה הגמרא <strong>ברייתא</strong> בעניין זה. הברייתא דורשת מהפסוק "וְשָׁפַךְ אֶת דָּמוֹ וְכִסָּהוּ בֶּעָפָר" (ויקרא יז יג), שראוי הוא שהשוחט את החיה הוא זה שיכסה את דמה. ומספרת הברייתא על רבן גמליאל שחייב עשרה זהובים אדם ש"חטף" את מצוות כיסוי הדם מחברו ששחט. במסכת חולין (פז.) מרחיבה ה<strong>גמרא</strong> עוד בעניין זה ומבארת שדמי ברכת המצווה הם עשרה זהובים, ולכן במצוה שיש בה ארבע ברכות, כברכת המזון, משלם ה'חוטפה' ארבעים זהובים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"ת</strong> (מובא בתוספות ד"ה "וחייבו") פוסק, ששיעור זה של עשרה זהובים אינו שווה בכל דבר, שכן מדובר בקנס, ולכן אין ללמוד ממצוות כיסוי הדם למצווה אחרת ובכל מקום יש לחייב כפי ראות עיני הדיינים<sup id="ref95"><a href="#fn95">[95]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו פסק <strong>ר"י</strong> (שם) שבכל מצווה יש לשלם עשרה זהובים על חטיפתה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>רמב"ם</strong> וב<strong>שו"ע</strong> (שפב א) מובאות שתי הדעות הנ"ל.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-10" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>שמין למזיק בידו כדרך ששמין לו אם הזיק ממונו, כיצד, הרי שהרג בהמת חבירו או שבר כליו שמין כמה היתה הבהמה שוה חיה וכמה הנבילה שוה וכמה היה הכלי שוה והוא שלם וכמה שוה עתה ומשלם הפחת לניזק עם הנבילה או הכלי השבור כדרך שביארנו בשורו שהזיק, דין אחד הוא, דרך ענבים של חבירו שמין לו היזקו, וכן כל כיוצא בזה. </strong>
+                </div>
+                
+
+                
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שמין לאדם המזיק</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>תוספתא</strong> (ב"ק ג ב):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כלל אמרו בנזקין: הרג את שורו וקרע את כסותו וקיצץ נטיעותיו, לא יאמר 'טול את הנבלה ותן לי את הפרה' ,'טול אתה קרעים ותן לי את הטלית' ,'טול את הקצצין ותן לי את הנטיעות', אלא שמין אותן כמה הן יפין עד שלא הוזקו וכמה הן יפין משהוזקו [ו]לפיכך הין משלמין"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המזיק את חברו צריך לשלם לו את הפחת שנפחת במה שהזיק, למשל, אם הרג שורו, צריך לשלם לו את ההפרש בין מחיר השור השלם לבין מחיר הבשר שנותר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם בגמרא (יא.) אומר <strong>שמואל</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אין שמין לא לגנב ולא לגזלן אלא לנזקין ואני אומר אף לשואל"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בניגוד לגנב וגזלן, המחזירים לנגזל רכוש כפי שלקחו ממנו, ולא רק את הפחת שנפחת בעטים, המזיק את חברו או השואל מחברו וניזק החפץ מחזירים לבעלים את הנותר מהחפץ, ומשלימים ממון עד שווי החפץ הראשוני.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וכן נפסק ב<strong>רמב"ם</strong> וב<strong>שו"ע</strong> (שפז א).</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-11" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>כשגובין הפחת מן המזיק גובין מן המטלטלין שלו, אם אין לו מטלטלין גובין מן היפה שבנכסיו, וכן האונס והמפתה והמוציא שם רע כולן מן היפה שבנכסיו גובין מהן. </strong>
+                </div>
+                
+
+                
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גביית דמי הנזק מאדם המזיק</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עיין בדברינו הלכות נזקי ממון פרק ח הלכה י וצרף לכאן. נוסיף כאן רק לגבי האונס, המפתה והמוציא שם רע, שהגמרא (ה.) מציעה לכלול אותם בכלל אבות הנזיקין (לעניין תשלומי הצער הבושת והפגם שבהם), כלומר, שאף בהם משלמים ממיטב ככל אדם שהזיק או ממונו שהזיק.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-12" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז-יח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>כל המזיק ממון חבירו ואינו יודע מה הזיק, הרי הניזק נשבע בתקנת חכמים ונוטל כמו הנגזל, והוא שיטעון דברים שהוא אמוד בהן כמו שביארנו בנגזל. </strong>
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>כיצד, לקח כיס חבירו והשליכו לים או לאש או שמסרו ביד אנס ואבד, בעל הכיס אומר זהובים היה מלא והמזיק אומר איני יודע מה היה בו שמא עפר או תבן היה מלא, הרי הניזק נשבע בנקיטת חפץ ונוטל, והוא שיטעון דברים שהוא אמוד בהן או אמוד להפקידן אצלו ודרכן להניחן בכיס וכיוצא בו אבל אם אין דרכן להניחן בכלי זה הוא פשע בעצמו. כיצד, הרי שחטף חמת או סל מלאים ומחופים והשליכם לים או שרפן וטען הניזק שמרגליות היו בתוכן אינו נאמן ואין משביעין אותו על כך שאין דרך בני אדם להניח מרגליות בסלים ובחמתות, ואם תפש אין מוציאין מידו אלא נשבע שמרגליות היו בה ונוטל ממה שיש אצלו, וכן כל כיוצא בזה. </strong>
+                </div>
+                
+
+                
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עשו תקנת נגזל בניזק ודין המזיק דבר שהמעיט בערכו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תיקנו חכמים שכאשר נגזל וגזלן חלוקים בשאלה מה נגזל, יכול הנגזל להישבע שאכן כך גזלו כדבריו, ולגבות ממנו (שבועות מד:).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (סא:) חלקו חכמים ור' יהודה לגבי דין המבעיר אש ששרפה דברים הטמונים באש (עיין הלכות נזקי ממון פרק יד הלכה ח-ט והלכה יב). בסוף המשנה נאמר:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ומודים חכמים לר' יהודה במדליק את הבירה (=בית), שהוא משלם כל מה שבתוכה, שכן דרך בני אדם להניח בבתים"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (סב.) מסבירה, שדברים אלה אמורים במדליק בשל חברו<sup id="ref96"><a href="#fn96">[96]</a></sup>, שאם הוזקו דברים טמונים סוברים חכמים שחייב, ו<strong>בלבד שיהיו אלה דברים שצפוי שיהיו שם</strong>, כיוון שאין ראוי לחייב מזיק על דברים שלא ידע שהוא מזיקם. ר' יהודה לעומתם, מחייב על כל דבר טמון שהיה שם, אפילו אם היה מהדברים שאין צפוי שיהיו שם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדין זה של חכמים, שהמזיק שהצית משלם רק על מה שהיה צפוי שיהיה בבירה מביאה הגמרא סייג- במקרה של אדם שנתן דינר זהב לאשה לשומרו ואמר לה שהוא של כסף והיא הזיקה את הדינר, פוסק <strong>רבא</strong> שצריכה לשלם דינר זהב, למרות שהיא חשבה שהיא מזיקה רק דינר כסף, שערכו נמוך יותר. (בהמשך נראה את ההסברים השונים מדוע מקרה זה שונה מהמבעיר את הבירה שמשלם רק מה שדרך בני אדם להניח בבתים, דהיינו, רק מה שחשב שהוא מזיק).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך, מובא בגמרא מעשה, שבעט אדם בארגז של חברו והשליכו לנהר, ואמר הניזק שהיו בו מרגליות. ובא הדבר לפני <strong>רב אשי</strong> והתלבט ר' אשי האם לחייב את המזיק כאילו הזיק מרגליות. <strong>רבינא</strong> ניסה להוכיח שאכן יש לחייבו לפי דמי מרגליות מהדין המצוטט לעיל מהמשנה<sup id="ref97"><a href="#fn97">[97]</a></sup>, אך ר' אשי ענה לו, שמשם ניתן ללמוד רק לגבי דברים שדרך להניח בארגז כזה, שהם כסף (כמו שנאמר במשנה "שכן דרך בני אדם להניח בבתים"), אך מרגליות לא מצוי להניח בארגז שכזה ומכאן ההתלבטות. הגמרא משאירה את שאלתו של ר' אשי בתיקו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלקו הראשונים בהבנת התלבטותו של ר' אשי-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "מי מנחי") פירשו שאין הניזק מערער על כך שהיו בארגז מרגליות, ור' אשי מתלבט האם יכול היה המזיק להעלות על דעתו שבארגז יש מרגליות, שדמיהם יקרים יותר מכסף. אם יכול היה להעלות על דעתו דבר זה, הרי שחייב כפי שחייב המבעיר את הבירה על כל מה שסביר שיהיה בתוכה, אך אם מרגליות הם דבר שלא סביר שיהיה באותו ארגז, יהיה חייב רק עד דמי כסף שסביר שהיה בו<sup id="ref98"><a href="#fn98">[98]</a></sup>. את המקרה של רבא (הנותן דינר זהב לאשה ואמר לה שהוא של כסף, שחייבת בדינר זהב) מסבירים התוספות כמקרה יוצא דופן במיוחד, כיוון שהיה לה להעלות על דעתה שהדינר יותר יקר ממה שנאמר לה, ובעליו אמרו לה ערך נמוך יותר כדי שתתרצה לקבלו לשמירה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong> (ד"ה "מי מנחי") חולק על התוספות. לדעתו המקרה שבא לפני ר' אשי היה שהניזק והמזיק התווכחו ביניהם מה היה באותו ארגז. הניזק טען שהיו מרגליות, ואילו המזיק טוען שיכול להיות שהניזק משקר ושהיו בארגז דברים פחותים. אכן, לו היה טוען הניזק שהיה בארגז כסף, שוודאי שדרך אנשים לשמור בארגז כזה, היינו נוהגים על פי תקנת הנגזל בניזק, ואומרים שהניזק צריך רק להישבע על דבריו, וליטול, אך בדברים שלא לגמרי סביר שהיה בארגז, כמרגליות, שייך להתלבט האם גם בהם עשו תקנת נגזל. בכל אופן, לו היו עדים על כך שהיו מרגליות פוסק הרשב"א שחייב המזיק על מרגליות, שכיוון שהזיק בכוונה ובמזיד חייב על כל מה שגרם, אפילו אם לא שיער בדעתו את גובה הנזק. הרשב"א מפרש שמה שנאמר במשנה שהמצית בית חייב על מה שבתוכו אם מדובר בדברים שרגילים להיות בבתים אמור במזיק בשוגג, שדוקא בו לא ראוי שיחוייב על דברים שלא ידע שהוא מזיק. על פי דרך זו מפרש הרשב"א גם מדוע האשה שהזיקה דינר זהב בחושבה שמדובר בדינר זהב חייבת דינר זהב, למרות שחשבה שדינר כסף היא מזיקה. והטעם הוא, שהזיקה במזיד ולכן חייבת על כל הנזק שהסבה, אפילו אם לא היתה מודעת לו בשעת הנזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שיטת ה<strong>רמב"ם</strong> דומה מאד לשיטת הרשב"א, כלומר, גם לדעתו התלבטותו של ר' אשי היא האם להאמין לניזק שהיו מרגליות בארגז. אמנם, שלא כרשב"א, מסביר הרמב"ם שמרגליות בוודאי אין דרך להניחן בארגז, ור' אשי מתלבט האם ראוי להאמין ולהשביע את הניזק אפילו על דבר כגון זה<sup id="ref99"><a href="#fn99">[99]</a></sup>. כיוון שהגמרא נשארת בתיקו, פוסק הרמב"ם שכאשר טוען הניזק שהמזיק הזיקו דברים בלתי סבירים זהו ספיקא דדינא, ואם תפס הניזק אין מוציאין מידו<sup id="ref100"><a href="#fn100">[100]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפח א) כותב את דין 'תקנת הנגזל' במזיק, כלומר, שהניזק יכול לטעון מה הזיקוהו ולהישבע על כך, כל עוד הוא טוען דברים שסביר שניזקו. השו"ע מוסיף וכותב כלשון הרמב"ם, ומכאן משמע שהוא פוסק כמותו גם לעניין זה שאם יש עדים המעידים מה הזיק המזיק, חייב הוא לשלם אפילו אם מדובר בדברים שלא היה יכול להעלות על דעתו בשעת הנזק. ה<strong>רמ"א </strong>מביא את דעת התוספות החולקת, ופוסק, שאם מדובר על דברים שלא היה המזיק יכול להעלות על דעתו שהוא מזיק, פטור המזיק עליהם אפילו אם יש עדים שאותם הזיק.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-13" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>ידע המזיק שהכיס היה בו זהובים אבל אינו יודע כמה היו והניזק אומר אלף היו נוטל אלף בלא שבועה והוא שיהיה אמוד, שהרי זה המזיק מחויב שבועה ואינו יכול להשבע כמו שיתבאר בענין הפקדון. </strong>שהרי זה המזיק מחויב שבועה ואינו יכול להשבע כמו שיתבאר בענין הפקדון. א"א עיינתי בענין הפקדון ומה שאמר שם אינו מחוור אלא ה"ז הענין כאותו מעשה של שק צרור שהוא מביא לשם שנשבע ונוטל וההפרש שהוא כותב שם בין ענין זה לענין שק צרור אינו כלום דנהי דסיגין ומטכסין הוו כחטים ושעורים אבל שק ומטכסין טענו מיהא והודה לו בשק ואמר איני יודע במטכסין להוי כמודה במקצת ואיני יודע במקצת ויטול בלא שבועה אלא טעמא אחרינא אית לן בה ובין הכא ובין התם הלכה ישבע ויטול כמעשה דשק צרור.
+                </div>
+                
+
+                
+                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מזיק המודה לניזק בטיב הדבר שהזיק, אך אינו יודע בכמותו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר <strong>בירושלמי</strong> (בבא קמא פ"ו הלכה ז):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"חד בר נש אפקד גבי חבריה חד שק צריר ואירעו אונס אהן אמר סיגין הוה מלא ואהן הוה אמר מטקסין הוה מלא הרי זה נשבע ונוטל"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש- אדם אחד הפקיד אצל חברו שק צרוּר (=סגור, שלא ידע השומר מה יש בו). לאחר שאבד השק תבע המפקיד ואמר שסחורה יקרה היתה בו. ואילו השומר אומר שאמנם אינו יודע מה היה בו (שכן היה צרוּר), אך הוא טוען שאולי היו בו דברים פחותים ששוויים נמוך. במקרה זה נשבע הבעלים שדבריו אמת ונוטל כדבריו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> בהלכות שאלה ופקדון (פרק ה, ו-ז) מסביר שכאשר מפקיד תובע שומר והשומר טוען שאינו יודע על מה בדיוק שמר, ניתן לחלק בין שני מצבים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במצב הראשון מודה השומר שהמפקיד הפקיד אצלו את סחורה מהסוג אותו תובע המפקיד, אך כיוון שעירב המפקיד את הסחורה עם סחורה אחרת שלו לפני שספר את מה שקיבל, הוא מטיל פקפוק לגבי ה<strong>כמות</strong> שהמפקיד טוען שהיתה שם. במקרה זה דין השומר הוא כדין מודה במקצת, הצריך להישבע (שכן הוא מודה שלפחות משהו מהתביעה הופקד ברשותו) ומכיוון שאינו יכול להישבע (כי אינו יודע), משלם<sup id="ref101"><a href="#fn101">[101]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במצב השני, שהוא המצב המתואר בסוגיית הירושלמי, השומר אפילו אינו מודה לבעלים בסוג הסחורה, וטוען שאולי היתה שם סחורה מסוג הפחות בערכו. במקרה כזה אין השומר מחוייב שבועה, מכיוון שהוא אינו מודה במקצת, שהרי אפילו אם היה טוען בוודאות שהסחורה היתה מסוג פחות ממה שאומר המפקיד, היה פטור משבועת התורה, שכן אין הוא מודה במקצת, אלא כטענו חיטים והודה לו בשעורים. מסיבה זאת אין לומר שמחמת שאינו יכול להישבע משלם, ובמקרה זה הבעלים נשבע ונוטל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> משווה בין המקרה הראשון, לבין המקרה שבהלכה שלפנינו, בו המזיק מודה שהזיק זהובים ואינו יודע כמה הזיק. בשני המקרים מדובר במודה במקצת, שכן המזיק/השומר מודים שהתובע צודק בחלק מטענתו, ולכן חייבים הם שבועה, אך כיוון שאינם יכולים להישבע, נוטל התובע (הניזק) כפי דבריו, ואינו צריך להישבע.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד</strong> חולק וסובר ששני המצבים ביניהם מחלק הרמב"ם (מצב א ומצב ב) אינם שונים זה מזה מהותית, ובשניהם הדין הוא שנשבע התובע ונוטל. טעמו של הראב"ד הוא שאין שבועת מודה במקצת אמורה אלא במצב בו היה אמור הנתבע להיות מודע למלוא הסכום, ואף התובע טוען שהמסתיר יודע את הסכום, ואינו פועל בתום לב. במקרה כזה מוטלת חובת השבועה על הנתבע, ומשזה אינו יכול להישבע (כי הוא טוען שאינו יודע לגבי השאר), משלם. אמנם, בנידון דנן, במקרה של המזיק כיס זהובים ואינו יודע מה היה בו, או במקרה של מי שקיבל סחורה לשמור ועירבה עם סחורתו לפני שידע כמה קיבל, מדובר במקרה בו ברור שטענת הנתבע שאינו יודע כמה היה שם נאמרת בתום לב, ולכן אין הוא בגדר מחוייב שבועה שאינו יכול להישבע. במקרה זה פוסק הראב"ד שישבע בעל הפיקדון (או הניזק) ויטול. גם במקרה של השק הצרור (מקרה ב) פועל אותו היגיון לפי הראב"ד, וכך מסביר הראב"ד מדוע במקרה זה ישבע בעל הפיקדון<sup id="ref102"><a href="#fn102">[102]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפח א בסופו) פוסק כרמב"ם, שאם טוען הניזק שהמזיק איבד לו זהובים, ומודה המזיק שהיו אלה זהובים, אך טוען טענת שמא, שאולי היו פחות ממה שתובעו הניזק, כיוון שחייב המזיק שבועת מודה במקצת ואינו יכול להישבע, משלם את כל התביעה ללא צורך בשבועה מצד הניזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"א</strong> (שם) מביא את דעת הראב"ד, שאין במקרה זה דין מודה במקצת, ולכן בכדי לגבות כדברי של הניזק, צריך הוא להישבע על דבריו.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn75" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref75" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^75</a> 
+                        לכאורה יהיה הדין זהה בכל מחשבה הפוסלת את הקרבן, ולאו דווקא במחשבת פיגול, שכן בשורה התחתונה לא עלתה לבעלים ידי חובתו וצריך קרבן אחר. ועי' מל"מ.
+                    </li>
+                    
+                    <li id="fn76" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref76" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^76</a> 
+                        מפשט לשון הברייתא משמע שמדובר במזיד, שכן "חייב בדיני שמים" אמור בדרך כלל לגבי מזיד. כך גם משמע מפירוש רש"י המסביר ש"חייב בדיני שמיים" הכוונה שמהשמים יענישוהו על שהזיק ממון ישראל.
+                    </li>
+                    
+                    <li id="fn77" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref77" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^77</a> 
+                        עדיין צריך לשיטתו של הראב"ד להסביר מדוע במטמא, מדמע ומנסך ראו חכמים לנכון לקנוס את המזיד, וכאן לא. אכן, הראב"ד מסביר שקיים הבדל- העושה מלאכה בפרת חטאת ובמי חטאת אינו מתכוון להזיק אלא הוא מתכוון לתועלתו מהמלאכה, והנזק בא ממילא, ולכן לא ראו חכמים לנכון לקונסו.
+                    </li>
+                    
+                    <li id="fn78" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref78" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^78</a> 
+                        פירוש הרמב"ם צריך עיון, שכן אף הוא, כראב"ד, פוסק שהיזק שאינו ניכר לאו שמיה היזק, ובכן מדוע הוא נזקק להעמדות שמעמידה הגמרא לשיטת מי שסובר שהיזק שאינו ניכר שמיה היזק? המגיד משנה מתרץ, שהרמב"ם מבין שההעמדות שנותנת הגמרא מסבירות את הברייתא באופן הדומה לשוגג, כך שלפי מי שסובר שהיזק שאינו ניכר לאו שמיה היזק, וקנסו חכמים במזיד, בהעמדות של הגמרא לא גזרו. אבל במזיד רגיל בעושה מלאכה בפרת חטאת ובמי חטאת, קנסו חכמים כמו במטמא מדמע ומנסך.
+                    </li>
+                    
+                    <li id="fn79" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref79" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^79</a> 
+                        ואף אם פטור ממיתה בפועל (מחסרון התראה או סיבה אחרת) עדיין פטור ממון כיוון שקיי"ל שחייבי מיתות שוגגים פטורים מממון (עי' לעיל פרק ד, הלכה ז-ט).
+                    </li>
+                    
+                    <li id="fn80" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref80" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^80</a> 
+                        למשל רש"י בבא בתרא כב: ד"ה "גרמא", עיי"ש.
+                    </li>
+                    
+                    <li id="fn81" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref81" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^81</a> 
+                        הסיבה העיקרית לכתיבת הקונטרס היא תקיפת שיטת הריצב"א, וביסוס שיטת הגאונים והרמב"ן.
+                    </li>
+                    
+                    <li id="fn82" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref82" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^82</a> 
+                        הרמב"ן מגדיר היזק שאינו ניכר ככל היזק לחפץ שאחריו יכול המזיק להחזיר את החפץ לניזק ולומר לו "הרי שלך לפניך", שהרי אין שינוי בחפץ.
+                    </li>
+                    
+                    <li id="fn83" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref83" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^83</a> 
+                        ר"י (בתוספות ד"ה "זאת", בבא בתרא כב:) מציע הבדל אחר- בגרמי ההיזק לניזק נוצר בשעת המעשה, מה שאין כן בגרמא, בה נוצר ההיזק לאחר שעת מעשה.
+                    </li>
+                    
+                    <li id="fn84" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref84" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^84</a> 
+                        לשון המאירי שם
+                    </li>
+                    
+                    <li id="fn85" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref85" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^85</a> 
+                        בהלכה ז' מדבר הרמב"ם על מקרה בו זרק בעל הכלי את הכלי על גבי כרים ובא אחר וסילקם. במקרה זה האשם הבלעדי הוא המסלק, ואין להאשים את הבעלים, משום שהשליך את הכלי באופן בטוח לחלוטין, על גבי כרים. לעומת זאת, בהלכה ח' מדובר במקרה בו המזיק השליך את הכלי על גבי כרים, ובא הבעלים לתומו (או מזיק נוסף) ונטל את הכרים משם, ונשבר הכלי. במקרה זה חייב המשליך. ויש להסביר כיצד מצד אחד בהלכה ח' מחייב הרמב"ם את המשליך, ומצד שני בהלכה ז' אין אנו אומרים שבעל הכלי הזיק את עצמו בהשלכת הכלי ("איהו דאזיק אנפשיה"). ואולי יש לתרץ על פי דברי ערוה"ש בחילוקו בין גרמי לגרמא (שפו יא), שתנאי לגרמי הוא שעושה המזיק מעשהו בדרך נזק.
+                    </li>
+                    
+                    <li id="fn86" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref86" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^86</a> 
+                        לעניין השאלה האם מחייבים גם את הזורק על גבי הכרים (מחלוקת הרמב"ם ושאר הראשונים), פסק השו"ע מעט לא ברור. מצד אחד כתב השו"ע מתוך דברי הרמב"ם רק את דין הזורק כלי שלו על גבי כרים ובא אחר וסילק את הכרים, בו חייב רק המסלק (הלכה ז' ברמב"ם). מכאן משמע שהשו"ע לא פסק שזריקת הכלים על גבי כרים יכולה להיחשב כמעשה נזק (כלומר לא פסק כהלכה ח' ברמב"ם). אמנם מצד שני, לו היה השו"ע פוסק כנגד הרמב"ם היה צריך לדבר על מקרה בו זרק אפילו אדם אחר (שאינו בעל הכלי) את הכלי על גבי כרים, ובא אדם נוסף וסילקם, שפטור הזורק וחייב המסלק.
+                    </li>
+                    
+                    <li id="fn87" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref87" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^87</a> 
+                        אפשר להבין, לפי הסבר זה, שהפיצוי שמפצה המלווה את הקונה אינו על כך שהזיקו במעשה מחילת החוב, אלא על כך שהזיקו ביצירת מצג שוא של מכירת החוב, שלמעשה אינה מכירה אמיתית.
+                    </li>
+                    
+                    <li id="fn88" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref88" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^88</a> 
+                        מדובר על מטבעות של העת העתיקה, ששויים היה נעוץ במשקל המתכת היקרה מהם היו עשויים. ההטבעה עליהם שימשה לאישור למשקלם, והקלה על המסחר בהם. לכן מחיקת הצורה אינה פוגעת בערך האמיתי של המטבע, אלא רק מקשה על השימוש בו. השף מטבע של חברו במטבעות של ימינו, שערכם גבוה בהרבה ממשקל המתכת ממנה הם עשויים, כמוהו כשורף שטר חוב של חבירו, ובוודאי שהוא חייב.
+                    </li>
+                    
+                    <li id="fn89" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref89" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^89</a> 
+                        שאם מצד זה שהוא פוטר בדינא דגרמי, מה לי אם נחשבים המעות לאבודים, הרי מכל מקום פטור כיוון שלא הזיק את הכסף אלא רק מנע מבעליו לגשת אליו.
+                    </li>
+                    
+                    <li id="fn90" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref90" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^90</a> 
+                        כיוון שהלכה למשה מסיני שנזק שעושה הבהמה אגב הילוכה על ידי התזה, כהתזת אבנים ששברו את הכלים וכדומה, חייבים עליו רק חצי נזק. דין זה מכונה "צרורות", ואף כאן אם הולכים אחר רגע השבירה הרי שהנזק אירע בריחוק מקום מהבהמה כמו בהתזת אבנים שהזיקו.
+                    </li>
+                    
+                    <li id="fn91" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref91" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^91</a> 
+                        ראוי לציון כי הרמב"ן והתוספות חלוקים בנקודה מהותית- מה היחס בין האמירה "מנא תבירא תבר", כלומר ראיית הכלי כשבור משעת מעשה הנזק (השלכת הכלי מראש הגג) לבין הקביעה ש"בתר מעיקרא אזלינן". לשיטת התוספות מדובר במילים נרדפות- אם "בתר מעיקרא אזלינן" נמצא שבשעת זריקת הכלי נחשב הוא כבר כשבור וממילא השני "מנא תבירא תבר". לעומת זאת, לשיטת הרמב"ן מדובר בשתי שאלות נפרדות ובלתי תלויות- אנו פוסקים ש"בתר תבר מנא אזלינן", ולכן הראשון לא נחשב מזיק, אך מכיוון ש"מנא תבירא תבר", כלומר הכלי חשוב כשבור מכבר, פטור אף השני. סברת הרמב"ן היא, ששאלת "בתר מעיקרא" או "בתר תבר מנא" היא מהו הזמן בו נחשב האדם מזיק, האם בזמן עשיית מעשה ההיזק או בזמן התרחשות הנזק, אך שאלה זו מגדירה מי היה המזיק הראשון ומי השני, אך לא מורידה אחריות מאף אחד מהם. שהרי, שנים שחפרו בור יכולים להיות עקרונית חייבים, למרות שהשני חפר לאחר הראשון. מה שמוריד את האחריות מהשני היא רק העובדה שהנזק היה מתרחש באופן ודאי גם בלעדיו, וזו עובדה אובייקטיבית, הנכונה בין אם נסבור "מעיקרא" ובין אם נאמר "בתר תבר מנא". במילים אחרות, בשעת השבירה במקל היה שוויו של הכלי אפס, כיוון שזה שוויו של כלי שיש לו עוד שניה להתקיים, ולכן לא הפסיד השובר את בעל הכלי כלל, בין אם נחשב הוא למזיק הראשון ובין אם נחשב למזיק השני.
+                    </li>
+                    
+                    <li id="fn92" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref92" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^92</a> 
+                        התוספות מנמקים את דבריהם בכך שלו היו תמיד הולכים אחר תחילת הנזק ("בתר מעיקרא") הרי שבנזקי בהמתו לא היה הבדל כלל בין צרורות (התזת אבנים ע"י הילוך הבהמה, והאבנים הזיקו) לבין היזק ישיר. שכן אף שהכלי שנשבר על ידי הבהמה נשבר לא שהתיזה ובריחוק מקום, הרי שבשעת ההתזה כבר אנו רואים את הכלי כשבור. ולכן מחלקים התוס' בין מקרה בו המזיק הראשון עשה מעשה בכלי, שאז באמת רואים את הכלי כשבור משעת מעשה ההיזק, לבין מקרה בו המעשה נעשה ביידוי חפץ על הכלי, כבצרורות, שם אין אנו רואים את הכלי כשבור עד שלא נשבר בפועל. אמנם, התוספות נמנעים מלהסביר במפורש מה ההבדל בין מקרה בו המזיק הראשון זרק את הכלי עצמו, לבין מקרה בו זרק הראשון אבן על הכלי. ואולי ניתן להסביר, שכאשר זרק הראשון את הכלי, הרי שיצר מקרה בו הבעלים מתייאשים מהכלי ואינם מחזיקים ממנו עוד כשלהם, כמו במקרה של אבידה ששטפה נהר, בה חזקה שבעליה מתייאשים. לעומת זאת, כאשר נזרקת אבן על כלי, אפילו אם אובייקטיבית אובדנו של הכלי ודאי ותכוף, אין הדבר נראה בעיני הבריות כדבר אבוד, ולכן אין בעל הכלי מתייאש ממנו. אמנם זה טוב רק לפי השיטה שיאוש שלא מדעת הוא יאוש. וצ"ע.
+                    </li>
+                    
+                    <li id="fn93" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref93" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^93</a> 
+                        פירוש מיגו, שיכול המזיק לומר- האמינו לי, שלו הייתי רוצה לשקר הייתי אומר שלא היו דברים מעולם, ומתוך שיכול היה לומר זאת ולהיפטר, היינו יכולים לומר שנאמין לו שעשה את מעשיו בשליחות הניזק .
+                    </li>
+                    
+                    <li id="fn94" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref94" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^94</a> 
+                        שהרי אלמלא נבין כך יקשה- מה תובע הניזק מהמזיק? והרי ממילא מדובר על ממון אבוד.
+                    </li>
+                    
+                    <li id="fn95" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref95" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^95</a> 
+                        רבינו יונתן (מובא בשטמ"ק) מביא שני טעמים אפשריים לתשלום על 'חטיפת' מצווה. האחד הוא שמדובר בקנס, כלומר, חכמים רצו למנוע בעד אנשים שיקחו לעצמם מצוות של אחרים בכדי להגן על בעל המצווה המקורי. השני הוא שמדובר בתקנה שתפקידה הוא לחבב את המצוות על הבריות, כלומר, לשייך שווי כספי גבוה למצוות בכדי שאנשים לא ישאירו מצוות המוטלות עליהם לאחרים. רבינו יונתן אומר שלפי הטעם הראשון, הרי שמדובר כאן בקנס ולכן מודה בו פטור, ואילו לפי הטעם השני אין המודה פטור. נראה, שכאשר הדיינים שוקלים מהו הסכום הראוי לחייב בו את החוטף את המצווה, יש להם לקחת שיקולים אלה בחשבון. כלומר, אם הטעם הוא הרתעה, יש להם לקחת בחשבון את השאלה כמה נפוצה גניבה של מצוות כאלה, או לחילופין כמה נזק נפשי גרם חוטף המצווה לבעליה. לעומת זאת, אם הטעם לתשלום הוא הניסיון לחבב את המצווה, הרי שהשיקול הוא בדיוק הפוך- ככל שהמצווה קלה יותר בעיני הבריות, כך יש לשלם עליה יותר.
+                    </li>
+                    
+                    <li id="fn96" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref96" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^96</a> 
+                        במקרה זה נחשב המדליק כאילו הזיק באופן ישיר בידיו, כיוון שלהלכה אנו פוסקים שאישו משום חיציו אלא אם כן הדליק בשלו. ועיין עוד בפרק יד מהלכות נזקי ממון.
+                    </li>
+                    
+                    <li id="fn97" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref97" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^97</a> 
+                        כלומר, הדין שהמבעיר את הבירה משלם מה שבתוכה אפילו אם היה טמון.
+                    </li>
+                    
+                    <li id="fn98" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref98" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^98</a> 
+                        כלומר, דעת התוספות היא שאם המזיק הזיק דבר שחשב שערכו נמוך, ובסופו של דבר התברר שהזיק דבר שערכו גבוה מאד, אין ראוי לחייבו ביותר ממה שחשב שהוא מזיק. ואולי טעם הדבר הוא, שיש מן האחריות על הניזק גם כן, שכן היה צריך לחשוב שאם הוא מניח דבר יקר מאד בתוך סל או קופה שדרך להניח שם דברים פחותים, עלול מישהו להקל ראש בהם ולהזיקם. אם סברה זו נכונה, יהיה לכאורה הדין שונה אם אין זו אשמת הניזק שהמזיק לא ידע בערך הדברים שהוא מזיק.
+                    </li>
+                    
+                    <li id="fn99" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref99" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^99</a> 
+                        הרשב"א פירש שמרגליות הם דבר שספק דרך בני אדם להניח בארגז, ספק לא, ולכן מתלבט ר' אשי, אך בדבר שודאי אין דרך בני אדם להניח בארגז מוסכם על ר' אשי שאין מאמינים לניזק אפילו בשבועה.
+                    </li>
+                    
+                    <li id="fn100" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref100" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^100</a> 
+                        עי' הלכות נזקי ממון פרק א הלכה יא לעניין תפיסה בספיקא דדינא.
+                    </li>
+                    
+                    <li id="fn101" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref101" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^101</a> 
+                        דין זה שכיוון שאינו יכול להישבע משלם מופיע בגמרא בכמה מקומות וביניהם בבבא מציעא צח ע"א, שם אומר רבא שהנתבע מאה, ומודה בחמישים, ובחמישים האחרים אומר שאינו יודע, מכיוון שחייב שבועת מודה במקצת, ואינו יכול להישבע, כי אינו יודע לגבי החמישים האחרים, חייב לשלם. הרמב"ם כאמור, משווה מקרה זה למקרה שלפנינו.
+                    </li>
+                    
+                    <li id="fn102" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref102" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^102</a> 
+                        כאמור, הרמב"ם לעומתו הסביר שבמקרה שבירושלמי נשבע התובע ונוטל משום שלא הודה לו הנתבע בסוג הסחורה שתבע מאיתו. להרחבה בנושא, עי' הלכות שאלה ופיקדון, פרק ה', הלכה ו-ז.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

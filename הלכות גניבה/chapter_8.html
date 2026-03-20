@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הלכות גניבה - פרק ח</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">הלכות גניבה - פרק ח</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ח)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מצוות צידוק מידות ומשקלות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    זלזול במדידת הקרקע
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    אחידות במדידת קרקע
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    ממה עושים משקולות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה-ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    דין המחק
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שינוי במשקל המידות והמשקלות או בדרך המדידה בהם
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-7" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ח-יא
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-7-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    סטנדרטיזציה של המאזנים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-8" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יב-טז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-8-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    דין הכרעה
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-8-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מנהגים שונים בדרך המדידה- גדישה המידה ומדידה בכמה פעמים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-9" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-9-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שינוי הגדרת המידות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-10" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-10-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    תחזוקת המידות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-11" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יט
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-11-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שקילה בעזרת כמה משקולות בכף מאזניים אחת
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-12" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה כ
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-12-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    אכיפת צידוק המידות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">הלכות גניבה</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק ח</h1>
+            </div>
+
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מצות עשה לצדק המאזנים והמשקלות והמדות יפה יפה ולדקדק בחשבונן בשעת עשייתן שנאמר "מאזני צדק אבני צדק איפת צדק והין צדק יהיה לכם" (ויקרא י"ט ל"ו). וכן במדת הקרקע צריך לדקדק בחשבון משיחת הקרקע על פי העיקרים המתבארים בכתבי הגימטריות, שאפילו מלוא אצבע מן הקרקע רואין אותה כאילו היא מלאה כרכום.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מצוות צידוק מידות ומשקלות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף לאיסור עשיית העוול במדידה ולאיסור השהיית מידות מעוותות, התורה מצווה על הקפדה על מידות של צדק, קרי, מידות מדוייקות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אֶבֶן שְׁלֵמָה וָצֶדֶק יִהְיֶה לָּךְ אֵיפָה שְׁלֵמָה וָצֶדֶק יִהְיֶה לָּךְ לְמַעַן יַאֲרִיכוּ יָמֶיךָ עַל הָאֲדָמָה אֲשֶׁר ה' אֱלֹהֶיךָ נֹתֵן לָךְ (דברים כה טו)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מֹאזְנֵי צֶדֶק אַבְנֵי צֶדֶק אֵיפַת צֶדֶק וְהִין צֶדֶק יִהְיֶה לָכֶם אֲנִי ה' אֱלֹהֵיכֶם אֲשֶׁר הוֹצֵאתִי אֶתְכֶם מֵאֶרֶץ מִצְרָיִם (ויקרא יט לו)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ספרא</strong> (קדושים פרשה ג) לומד מהפסוקים כמה הלכות הקשורות לדאגה היתרה לכך שהמידות והמשקלות יהיו מדוייקים:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"מאזני צדק"- צדק את המאזנים יפה, "אבני צדק"- צדק את המשקלות יפה, "איפת צדק"- צדק את האיפות יפה, ו"הין צדק"- צדק את ההין יפה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוסי ברבי יהודה</strong> אומר והלא ההין בכלל איפה היה שנאמר ואיפת צדק אם כן למה נאמר והין צדק יהיה לך, לאו צדק והין צדק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"יהיה לך"- מנה לך אגרדימים על כן, מיכן אמרו הסיטון מקנח את מידותיו אחת לשלשים יום...</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף למצווה לדאוג לדיוק של המידות והמשקלות, לומד <strong>רבי יוסי ברבי יהודה</strong> מהפסוק חובה כללית של אדם לדיבורו ולאיסור הטעיית רעהו בדיבור, ש"הן" ו"לאו" שלו יהיו אמת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהלשון "יהיה לך" לומד המדרש שהמידות צריכות להישאר בהווייתן, כלומר, יש לדאוג גם לתחזוקת המידות באופן שוטף כך שהן תישארנה מדוייקות תמיד. דבר זה נעשה על ידי מינוי אחראים הסובבים בין הסוחרים ובוחנים את המידות בהם אלה משתמשים ("אגרדמים"), ועל ידי סדרה של הנחיות כמו קינוח תדיר של המידות, כמבואר בהמשך הפרק.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    ארבע אמות הסמוכין לחריץ מזלזלין במשיחתן והסמוכים לשפת הנהר אין מושחין אותן כלל מפני שהן של בני רשות הרבים.
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">זלזול במדידת הקרקע</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא מציעא קז:) נאמרו מפי <strong>רב יהודה</strong> כמה הלכות העוסקות במדידת קרקע, ל<strong>רב אדא</strong> שעיסוקו היה במדידת קרקעות ("משוחאה"):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר ליה <strong>רב יהודה</strong> ל<strong>רב אדא משוחאה</strong>: לא תזלזל במשחתא, דכל פורתא ופורתא חזי לכורכמא רישקא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר ליה <strong>רב יהודה</strong> ל<strong>רב אדא משוחאה</strong>: ארבע אמות דאניגרא - זלזל בהו, דאנהרא - לא תמשחנהו כלל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב יהודה לטעמיה, דאמר <strong>רב יהודה</strong>: ארבע אמות דאניגרא - לבני אניגרא, דאנהרא - דכולי עלמא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש ההלכה הראשונה ברור. מדובר על אזהרה למודד קרקע (לקונה, למוכר או לאחים או שותפים שחולקים ביניהם), שימדוד בדיוק רב ככל שניתן, כיוון שגם טעות קטנה במדידת קרקע, יש לה משמעות ממונית לא מבוטלת, שהרי בכל קרקע ניתן לגדל כרכום, שהוא צמח תבלין יקר, ואז כל יחידת שטח מיתרגמת לערך כספי גבוה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהלכה השניה נאמר לרב אדא שבמדידת ארבע האמות הסמוכות לאמת המים יש לזלזל, ואילו את ארבע האמות הסמוכות לנהר כלל אין למדוד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא ממשיכה (לאחר הקטע שצוטט לעיל) בביאור השטח שיש להשאיר ליד ערוצי מים המשמשים לתחבורה, ומתוך הקשר זה חלקו הראשונים בפירוש ההלכה -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> וה<strong>תוספות</strong> (ד"ה "ארבע גרמידי") מפרשים שכוונת רב יהודה לחובה להשאיר ארבע אמות פנויות (לא מעובדות) בסמוך לאמת המים או לנהר כדי לאפשר שימוש במים. סמוך לנהר יש רשות לכל אחד להשתמש במים ולכן יש להשאיר קרקע לא מעובדת במרחק גדול הנראה לעין בבירור, ואין למדוד שיעור מדוייק של ארבע אמות כלל. סמוך לאמת מים, שם יש רשות שימוש רק לבעלי השדות הסמוכים, מוחלים אלה, ולכן יש למדוד אך אין לדייק במדידה (לרש"י יש להותיר מעט פחות מהשיעור המדוייק, והשכנים הסמוכים לאמה ימחלו על הקושי בשימוש שייוצר עקב כך, ולפי התוספות, הפוך, יש להשאיר מקום רב יותר, והשכנים ימחלו על הפסד השטח המיועד לעיבוד מתוך שודתיהם).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מביא פירוש נוסף, שלפיו נראה שהלך גם ה<strong>רמב"ם</strong> (מתוך ההקשר בו מובא הדין כאן). לפירושם, מדובר על חלוקת שדה שחלק ממנה נסמך על אמת המים או על הנהר. רב יהודה פוסק, שאם השדה סמוכה לנהר, כלל אין להביא בחשבון כחלק משטחה את החלק הסמוך לנהר, כיוון שהנהר שייך לכל, ואפשרות השימוש בשדה בארבע האמות הסמוכות לנהר, מוגבלת מאד. באופן דומה, אך פחות קיצוני, אם השדה סמוכה לאמת מים, אין להחשיב את רצועת ארבע האמות הסמוכה לאמת המים כארבע אמות מלאות, אלא יש "לזלזל" בהן ולהחשיבן כפחות מארבע אמות, כיוון שלא ניתן להשתמש ברצועת קרקע זו לשימוש חקלאי מלא.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    והמודד את הקרקע לא ימוד לאחד בימות החמה ולאחד בימות הגשמים מפני שהחבל מתקצר בימות החמה, לפיכך אם מדד בקנה או בשלשלת ברזל וכיוצא בה אין בכך כלום.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אחידות במדידת קרקע</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בבבא מציעא סא:, מובאת <strong>ברייתא</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"לא תעשו עול במשפט במדה במשקל ובמשורה".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"במדה" - זו מדידת קרקע, שלא ימדוד לאחד בימות החמה ולאחד בימות הגשמים</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, עשיית עוול "במידה" מתפרשת כמדידה בלתי עקבית, כשמתקבלות בה תוצאות שונות בימות החמה מאשר בימות הגשמים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> ורוב הראשונים פרשו שמדובר במודד קרקע בעזרת חבל, שאורכו משתנה במקצת בין ימות החמה לבין ימות הגשמים, ונמצא שמודד במידה שונה בכל פעם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים אחרים פרשו (והובאו הדברים במאירי) שהקרקע עצמה מתפשטת  בימות החמה, ולכן יש לקחת התפשטות זו בחשבון.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים אף חלקו ביחס להקשר של מדידת הקרקע בימות החמה והגשמים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מתאר שמדובר במציאות בה נמדדת השדה בכדי לחלקה לשני אחים או שותפים, כאשר לאחד מודדים בימות החמה ולשני בימות הגשמים, ונמצא שלא חלקו בשווה. טעמו של רש"י נראה מתוך כך שהפסוק עוסק בעשיית עוול, כלומר, חלוקה בלתי צודקת (ואפשר שבמזיד).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מרחיב את האיסור למדוד באותו חבל בימות החמה ובימות הגשמים לכל מודד קרקע<sup id="ref104"><a href="#fn104">[104]</a></sup>, ואף קובע אותו בפרק העוסק בצידוק המשקלות ולא באיסור עשיית עוול. אמנם נראה שאף המפרשים כרש"י יודו לרמב"ם שיש מצווה לדקדק במדידת הקרקע משום מצוות צידוק המשקולות.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אין עושין משקלות לא של בדיל ולא של עופרת ולא של שאר מיני מתכות כאלו מפני שמעלין חלודה ומתחסרין, אבל עושין של צחיח סלע ושל זכוכית ושל אבן שוהם וכיוצא בהן.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ממה עושים משקולות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית הגמרא (בבא בתרא פט:) מובאת <strong>ברייתא</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אין עושין משקלות לא של בָּעַץ ולא של אבר, ולא של גיסטרון ולא של שאר מיני מתכות, אבל עושה הוא של צונמא ושל זכוכית</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא אוסרת על עשיית משקולות ממיני מתכות שונים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> ורוב הראשונים מסבירים שהטעם הוא מפני שמתכות אלה טבען להתחסר עם הזמן. לכן הברייתא ממליצה על עשיית משקולות מאבן או זכוכית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "ולא בשל") כותבים שהטעם הוא משום ששומן נוטה לדבוק למתכות, להתייבש עליהן ולהכבידן, ולכן האיסור להשתמש במשקולות ממתכת הוא דווקא עבור דברים כמו שקילת בשר ושומן. אמנם, גם התוספות מכירים בכך שמשקולת ממתכת טבעה להתחסר עם הזמן, אלא שלדעתם, אם המשקולת נועדה למכירה של דברים שאינם יקרים במיוחד, אין לחשוש בדבר זה. לעומת זאת, אם מדובר במכירה של זהב ואבנים טובות, יש לחפות את המשקולות בעור בכדי שלא יתבלו ויפחתו ויבוא בזה הפסד גדול, מפאת יוקר הסחורה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רלא י) פוסק כרש"י, ומביא את דברי התוספות כ"יש אומרים". הרמ"א מביא את דברי התוספות הנוספים, שיש לחפות משקלות בעור אם הן משמשות לשקילת דברים יקרים.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה-ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אין עושין את המחק לא של דלעת מפני שהוא מיקל ולא של מתכת מפני שהוא מכביד, אבל עושהו של זית ושל אגוזים ושל שקמה ושל אשכרוע וכיוצא בהן.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אין עושין את המחק צדו אחד קצר וצדו אחד עבה, ולא ימחוק מעט מעט מפני שמפחיתו למוכר, ולא ימחוק בבת אחת מפני שמפחיתו ללוקח.
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין המחק</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המחק הוא הכלי שבעזרתו משווים את פני תכולת כלי המדידה לאחר שמודדים בו דבר יבש הבא בגרגירים, כקמח, סוכר ודומיהם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (שם) מובאות שתי <strong>ברייתות</strong> בעניין זה:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תנו רבנן: אין עושין המחק של דלעת - מפני שהוא קל, ולא של מתכת - מפני שהוא מכביד,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אבל עושהו של זית ושל אגוז, של שקמה ושל אשברוע.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תנו רבנן: אין עושין את המחק צדו אחד עב וצדו אחד קצר;</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לא ימחוק בבת אחת, שהמוחק בבת אחת - רע למוכר ויפה ללוקח,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ולא ימחוק מעט מעט, שרע ללוקח ויפה למוכר</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם כותב את דברי הברייתא להלכה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אין טומנין את המשקלות במלח כדי שיפחתו, ולא ירתיח במדת הלח בעת שמודד, ואפילו היתה המדה קטנה ביותר, שהרי התורה הקפידה על המדות בכל שהוא שנאמר ובמשורה והיא מדה קטנה אחד משלשה ושלשים בלוג.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שינוי במשקל המידות והמשקלות או בדרך המדידה בהם</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור הדין ב<strong>ברייתא</strong> המובאת בגמרא (בבא מציעא, סא:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לא תעשו עול במשפט במדה במשקל ובמשורה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במדה - זו מדידת קרקע, שלא ימדוד לאחד בימות החמה ולאחד בימות הגשמים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשקל - שלא יטמין משקלותיו במלח,</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ובמשורה - שלא ירתיח</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הטמנת המשקלות במלח, חלקו הראשונים ביחס להבנת המציאות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> פירש שהמלח מכביד את המשקולות ולכן אין לו לקונה להטמין משקלותיו במלח, שאז נמצא מרמה את המוכר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו ה<strong>רשב"א</strong> פירש הפוך, שההטמנה גורעת ממשקל המשקולת (על ידי שאיבת לחות או על ידי עיכול) ולכן מדובר באזהרה למוכר. כך משמע גם מהרמב"ם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ההרתחה האמורה בסוף הברייתא, עניינה יצירת קצף בעת מזיגת דבר לח לתוך כלי המידה, כך שיראה כאילו הכלי מלא אף שאין הדבר כך.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-7" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח-יא</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מוכרי עששיות של ברזל וכיוצא בהן צריך להיות חוט המאזנים שאוחז השוקל בידו תלוי באויר שלשה טפחים וגבוהין מן הארץ שלשה טפחים ואורך קנה המאזנים ואורך החוטים שנים עשר טפח.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מאזנים של מוכרי צמר ושל מוכרי זכוכית יהיה אורך החוט שהן תלויין בו שני טפחים וגבוהין מן הארץ שני טפחים והקנה והחוטין ארכן תשעה טפחים.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מאזנים של חנוני ושל בעל הבית יהיה אורך החוט שהן תלויים בו טפח וגבוהין מן הארץ טפח ואורך הקנה ואורך החוטין ששה טפחים.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    החוט שתולין בו הפלס וכן חוט מאזנים של זהב ושל מוכרי ארגמן טוב ארכו שלש אצבעות וגבוהין מן הארץ שלש אצבעות ואורך הפלס ואורך השלשלאות שלו כפי מה שהוא רוצה.
+                </div>
+                
+
+                
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">סטנדרטיזציה של המאזנים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (בבא בתרא פט.) מביאה <strong>ברייתא</strong> העוסקת בדרישות המינימליות לסוגים שונים של מאזניים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נפש מאזנים - תלויה באויר ג' טפחים, וגבוהה מן הארץ שלשה טפחים, וקנה ומתנא שלה שנים עשר טפחים</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ושל צמרים ושל זגגין - תלויה באויר שני טפחים, וגבוהה מן הארץ שני טפחים, וקנה ומתנא שלה ט' טפחים</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ושל חנווני ושל בעה"ב - תלויה באויר טפח, וגבוהה מן הארץ טפח, וקנה ומתנא שלה ששה טפחים</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ושל טורטני (=צורף, רשב"ם)- תלויה באויר שלש אצבעות, וגבוהה מן הארץ שלש אצבעות, וקנה ומתנא שלה איני יודע</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המאזנים של ימיהם היו עשויות קנה אופקי הקשור באמצעו לחוט אנכי המוחזק בידו של השוקל או מחובר לתקרה, ומשני קצותיו חוטים ("מתנא") המחברים את קצותיו לכפות המאזניים, עליהם מניחים את הסחורה מצד אחד ואת המשקולות מהצד השני.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא דורשת שיהיה שיעור מינימלי בין כפות המאזניים לבין (הנע בין 3 טפחים במאזניים גדולות לבין 3 אצבעות במאזניים של צורפים) המשטח שתחתיהן, וכשיעור הזה שיהיה גם אורך החוט המחובר לאמצע הקנה, בו מוחזקות המאזניים. הראשונים מסבירים שטעם הדבר בכדי שתהיה הכרעת המאזניים ברורה הן בירידת הכף המכרעת כלפי מטה, והן בעליית הכף השניה כלפי מעלה באותו השיעור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף, קובעת הברייתא אורכים גם לקנה ולחוטים. למאזניים גדולות, מאזניים של צמרים וזגגים, ומאזניים של חנווני, 12, 9 ו-6 טפחים, בהתאמה, ולגני מאזניים של צורפים נאמר "איני יודע".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בפירוש שיעורים אלה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"ם</strong> כותב שמדובר באורך הכולל של הקנה והחוטים. כך, למשל, במאזניים גדולות, צריכים החוטים להיות באורך של ארבעה טפחים מכל צד, והקנה צריך להיות באורך של שמונה טפחים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> כותב שמדובר באורכו של כל חוט, ובאורך הקנה, שצריך שיהיו כולם בשיעור המצויין. כך למשל, במאזניים גדולות, החוטים באורך של 12 טפחים מכל צד, וכן כל אורך הקנה. מלשון ה<strong>רמב"ם</strong> נראה שכן גם דעתו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד חלקו ראשונים בטעם להגבלה זו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"ם</strong> כותב שככל שהסחורה כבדה יותר, כך יש צורך במנוף ארוך יותר בכדי להבחין בסטיות קטנות. לפי שיטה זו, אורך הקנה הנזכר הינו אורך מינימלי, והמחמיר להאריך יותר הרי זה משובח.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> כותב שמדובר באורכים המבטיחים שהקנה לא יתעוות ותתקלקל ע"י כך המדידה. לפי דבריו אין לחרוג מהמידות המוזכרות בברייתא, לא בהוספה ולא בהפחתה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רלא יג) כתב כדברי הברייתא ופירש את אורכי הקנה והחוטים כרמב"ם וכמאירי.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-8" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב-טז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מנין שחייב המוכר להכריע ללוקח בעת ששוקל לו שנאמר אבן שלמה וצדק אמרה תורה צדק משלך ותן לו.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    וכמה, בלח אחד למאה וביבש אחד לארבע מאות. כיצד מכר לו עשר ליטרין לח נותן לו גירומין אחד מעשרה בליטרא, ואם מכר לו עשרים ליטרין יבש נותן לו גירומין אחד מעשרים בליטרא, וכן לפי חשבון זה בין רב בין מעט.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    במה דברים אמורים במקום שנהגו למכור עין בעין אבל במקום שנהגו להכריע חייב להכריע לו טפח.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    היה שוקל לו עשר ליטרין לא יאמר לו שקול אחת אחת והכרע אלא שוקל לו עשרה בבת אחת והכרע אחד לכולן.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מקום שנהגו למוד בדקה לא ימוד בגסה, בגסה לא ימוד בדקה, למחוק לא יגדוש ויוסיף בדמים, וכן אם נהגו לגדוש לא ימחוק ויפחות מן הדמים, אלא מודד כמנהג המדינה.
+                </div>
+                
+
+                
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין הכרעה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> בבבא בתרא (פח:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חייב להכריע לו טפח.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היה שוקל לו עין בעין - נותן לו גירומין- אחד לעשרה בלח, ואחד לעשרים ביבש</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש, המשנה מחייבת את המוכר השוקל לקונה בעזרת מאזניים, שירבה בסחורה עד שתוכרע כף המאזניים הנושאת את הסחורה ותרד כדי טפח ממצבה המאוזן. כך, ברור שמה שמוכר לו כבד במעט מהמשקולות שבצד השני והסיכוי לטעות/רמאות קטֵן. המשנה מוסיפה עוד, שאם לא עשה כן, אלא שקל לו "עין בעין", כלומר הסתפק בכך שהקנה נשאר מאוזן, צריך לתת לו "גירומין", שהיא תוספת קטנה, בכדי שיהיה ברור שבמה שנתן לו יש לפָחות כדי המשקל שסוכם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מסביר <strong>ריש לקיש</strong> את המקור לדין</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>ר</strong><strong>יש </strong><strong>ל</strong><strong>קיש</strong>, דאמר קרא: "אבן שלמה וצדק", צָדֵק משלך ותן לו</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המילה "צדק" מלמדת שצריך שיהיה הקונה בטוח שנעשה עימו צדק ושלא קיבל פחות מהכמות שהוסכמה. הגמרא מוסיפה שדבר זה יכול לבוא לידי ביטוי בשני אופנים. האחד- במקום בו נוהגים "להכריע טפח", שאז ברור שיש בסחורה פחות כמשקל המבוקש, או, במקום בו שוקלים "עין בעין", על ידי הוספה מסויימת של סחורה- "גירומין"<sup id="ref105"><a href="#fn105">[105]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"ם</strong> ו<strong>הגהות אשרי</strong> (על הראש סי' כב) בשם ה<strong>אור זרוע</strong> מעירים, שאם מדובר במשקל קל במיוחד (פחות מליטרא), אין דרישה שיוכרע המשקל בשיעור של טפח, כיוון שאז יווצר חוסר צדק לצד השני, פירוש, בכדי ששקילת ליטרא תוכרע, צריך להוסיף כמות נכבדה כליטרא שבאנו לשקול מלכתחילה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכמות אותה יש להוסיף בתור "גירומין" ("אחד לעשרה בלח, ואחד לעשרים ביבש", בלשון המשנה) מתבארת בגמרא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>ר</strong><strong>בי</strong><strong> אבא בר ממל</strong> אמר <strong>רב</strong>: אחד מעשרה בליטרא בלח לעשרה ליטרין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחד מעשרה לעשרה ליטרין הם אחד ממאה ממה שמוכר לו. מכיוון שנאמר רק שיעור לגבי לח, נשאר להבין למה מתכוונת המשנה בשיעור היבש. הגמרא מתלבטת בין שתי אפשרויות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שרבי אבא מלמדנו ששיעור הגירומין של לח אינם עשירית (כפי שיכול היה להשתמע מהמשנה), אלא מאית, כך השיעור של אחד לעשרים שאומרת המשנה לגבי יבש כוונתו לאחד ממאתיים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבי אבא אמר על שיעור הלח ש"אחד מעשרה" שבמשנה הוא אחד מעשרה שבאחד מעשרה. לכן יש לפרש את ה"אחד מעשרים" שנאמר במשנה לגבי יבש כאחד מעשרים שבאחד מעשרים, שהוא אחד מארבע מאות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא נותרת בתיקו וה<strong>רמב"ם</strong> נוקט כאפשרות השניה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו ה<strong>מאירי</strong> כותב כאפשרות הראשונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רלא יד) פוסק כדברי המשנה והגמרא וכפירוש הרמב"ם לשיעור גירומין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ועי' עוד בנושא הבא, ביחס לשאלה האם הדרישה להכריע תלויה במנהג המדינה והאם יש דרישה להוסיף משום הכרעה גם במדידת נפח (ולא רק במשקל).</p>
+                    
+                </div>
+                
+                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מנהגים שונים בדרך המדידה- גדישה המידה ומדידה בכמה פעמים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>משנה</strong>  (שם פח:)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקום שנהגו למוד בדקה - לא ימוד בגסה, בגסה - לא ימוד בדקה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">למחוק - לא יגדוש, לגדוש - לא ימחוק</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ביחס לטעמו של הדין הראשון, מסביר ה<strong>רשב"ם</strong> שישנו הבדל בין מדידה של אותה כמות בכמה פעמים (במידה קטנה) ובפעם אחת (במידה גדולה), שכן חובת תוספת ההכרעה גורמת לכך שבכל מדידה ממלא המוכר את הכלי מעט יותר משפתיו, ואם כן, במדידת אותה כמות בכמה פעמים מקבל הלוקח יותר מאשר במדידה בכלי גדול פעם אחת. הרשב"ם מוסיף שגם במקום בו נהגו "למחוק" ולשטח את פני כלי המידה (כמבואר בסיפא, וכדלהלן), עדיין נותרת תוספת בולטת מעט מעל פניו, ובמדידה כמה פעמים בכלי קטן מצטברת תוספת זו ליותר מאשר במדידה פעם אחת בכלי גדול.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אגב אורחא, נמצאנו למדים מדברי הרשב"ם שני דברים ביחס לדין הכרעה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין הכרעה שייך גם במדידת נפח בעזרת כלי<sup id="ref106"><a href="#fn106">[106]</a></sup> ולא רק בשקילה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ישנם מקומות בהם נוהגים "למחוק", ולא לתת הכרעה במדידת נפח<sup id="ref107"><a href="#fn107">[107]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מובאת <strong>ברייתא</strong> המרחיבה עוד בנושא זה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מנין שאין מוחקין במקום שגודשין, ואין גודשין במקום שמוחקין?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תלמוד לומר: "איפה שלמה" (דברים כ"ה).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומנין שאם אמר הריני מוחק במקום שגודשין ולפחות לו מן הדמים, והריני גודש במקום שמוחקין ולהוסיף לו על הדמים, שאין שומעין לו?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תלמוד לומר: "איפה שלמה וצדק יהיה לך" (דברים כ"ה)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אפילו אם המוכר מציע לגלם במחיר את חריגתו מהמקובל בגדישת/מחיקת המידה, (למשל, למחוק במקום שנהגו לגדוש ולמכור בזול יותר או הפוך, לגדוש במקום בו נהגו למחוק ולמכור יותר ביוקר) אסור לו לעשות זאת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בטעם הדין-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"ם</strong> (ד"ה "תלמוד לומר איפה") מסביר שמדובר בכגון שהמוכר/קונה מודעים לחריגה ממנהג המדינה ומוחלים עליה (שאם לא כן, פשוט שהדבר אסור משום "לא תעשו עוול", ולא משום "איפה שלמה וצדק"<sup id="ref108"><a href="#fn108">[108]</a></sup>) ובכל זאת אסור לחרוג ממנהג המדינה מחשש שמא יתן הדבר מקום לרמאים לשנות ממנהג המדינה מבלי שהצד השני מודע לזה ומוחל<sup id="ref109"><a href="#fn109">[109]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ר"י מיגש</strong>, כנראה מאותה סיבה שמציין את הרשב"ם, מפרש שכל המימרא עוסקת רק במקרה בו לא הסכימו המוכר והקונה על דרך מדידה, שאז אסור למוכר, על דעת עצמו, למחוק או לגדוש בשונה ממנהג המדינה, אפילו אם הוא מביא זאת לידי ביטוי במחיר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בניגוד לראשונים הנ"ל, ה<strong>מאירי</strong> (פח. ד"ה "אמר המאירי") כותב בטעם הדין ש"כל שמשנה אפשר שכונת זיוף מניעתו ואין הלוקח מרגיש בו". ניתן להבין מדבריו, שגם כאשר שני הצדדים מודעים לשינוי ממנהג המדינה והדבר בא לידי ביטוי במחיר, עדיין החריגה מהמנהג נותנת מקום לרמאות של מוכר זה שמשנה<sup id="ref110"><a href="#fn110">[110]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם מלשון ה<strong>רא"ש</strong> (סי' כב) וה<strong>טור</strong> (רלא) משמע שבניגוד לר"י מיגש, אסרו לשנות ממנהג המדינה גם במקרה בו מסכימים הצדדים<sup id="ref111"><a href="#fn111">[111]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מובאת ברייתא נוספת הפוסקת דברים דומים בעניין מנהגי השקילה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מנין שאין מעיינין במקום שמכריעין, ואין מכריעין במקום שמעיינין?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תלמוד לומר: "אבן שלמה".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומנין שאם אמר הריני מעיין במקום שמכריעין ולפחות לו מן הדמים, והריני מכריע במקום שמעיינין ולהוסיף לו על הדמים, שאין שומעין לו?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תלמוד לומר: "אבן שלמה וצדק"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מתוך שתי האפשרויות לקיים "צדק משלך ותן לו" בשקילה, קרי, הכרעת טפח בכף המאזניים או נתינת גירומין (עי' בנושא הקודם), יש לבחור על פי מנהג המקום בשקילה. כלומר, אם מנהג המקום לדרוש שכף המאזניים שעליה הסחורה תוכרע כדי טפח, כך יש לנהוג, ואם המנהג לשקול עד שכפות המאזניים יתאזנו, כך יש לשקול, ואח"כ להוסיף "גירומין".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (פט.) מופיעות עוד שתי ברייתות העוסקות בדרך המדידה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היה מבקש ממנו שלשה רבעי ליטרא, לא יאמר לו: שקול לי שלשה רבעי ליטרא אחת אחת, אלא שוקל ליטרא ומניח רביע ליטרא עם הבשר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היה מבקש ממנו עשר ליטרין, לא יאמר לו: שקול לי אחת אחת והכריע, אלא שוקל לו כולן בבת אחת, ונותן הכרע אחד לכולן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כיוון שמדידה של אותה כמות בכמה שקילות/מדידות גוררת תוספת גדולה יותר מאשר מדידה בפעם אחת, לא יכול הקונה לדרוש מהמוכר לשקול לו בכמה פעמים<sup id="ref112"><a href="#fn112">[112]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הברייתא הראשונה, ה<strong>רשב"ם</strong> מפרשה בעניין דומה לשניה, ששקילה של שלשה רבעי הליטרא, בשלוש שקילות, תביא לתוספת מרובה מצד הקונה. ה<strong>רמב"ם</strong> הבין ברייתא זו בעניין אחר, כפי שיתבאר לקמן בהלכה יט.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כתב כדברי הברייתא, שבמקום שנהגו למוד לגסה לא ימוד בדקה והפוך, וכמו כן במקום בו נהגו לגדוש לא ימחוק והפוך. הרמב"ם לא פסק בצורה מפורשת את הברייתא האוסרת למדוד עין בעין במקום בו נהגו להכריע את המאזניים והפוך, אך ניתן להבין זאת מתוך דבריו שבמקום בו נהגו "לעיין" יש לתת גירומין, ובמקום בו נוהגים להכריע, חייב להכריע טפח. לעניין השאלה האם מותר לשנות ממנהג המדינה כאשר הדבר מוסכם על הצדדים, סתם הרמב"ם כלשון הברייתא ולא פירש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רלא ח), כותב כלשון הרא"ש והטור, שאין לשנות ממנהג המדינה בגדישה ובמחיקה, ובמדידה בגסה ובדקה, אפילו אם הדבר מוסכם על הצדדים.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-9" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    בני מדינה שרצו להוסיף על המדות או על המשקלות לא יוסיפו יתר על שתות, שאם היה הקב מכיל חמשה ועשאוהו מכיל ששה הרשות בידן, יתר על ששה לא יעשו.
+                </div>
+                
+
+                
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שינוי הגדרת המידות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (שם צ.) דן שמואל באפשרות לשנות את הגדרת המידות, כגון שמידה המכונה בשם כלשהו, תכיל כמות גדולה יותר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>שמואל</strong>: אין מוסיפין על המדות יותר משתות...</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>שמואל</strong> מגביל את היכולת לשנות את המידות בשיעור של עד שישית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מתלבטת בטעמו של שמואל. האפשרויות העולות (ונדחות)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חשש לעליית מחירים מופרזת במקרה בו המידות גדלות, דרך משל, אם כל קב הוא עתה קביים יש להכפיל את מחיר הקב, ויש חשש שהסוחרים יוסיפו על המחיר עוד יותר ממה שצריך. הגמרא דוחה אפשרות זו כי שיעור השישית אינו מובן לפיה, שהרי בכל הגדלת מידות, אפילו קטנה, יש לחשוש חשש זה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שמואל רצה למנוע מצבים בהם מי שאינו מודע לתקנה ימכור ביותר מהפרש של שישית מהמחיר הראוי, מה שיביא לביטול המיקח<sup id="ref113"><a href="#fn113">[113]</a></sup>. גם הסבר זה נדחה, משום ששיעור שישית נאמר כאשר ברור כמה נמכר והמחיר חרג מהראוי, אך כאשר היה חוסר התאמה בכמות, ביחס למה שסוכם (דרך משל, שמדד המוכר לפי המידה הישנה, בשעה שבני העיר שינוי כבר את המידה), אפילו על כלשהו המיקח בטל (עי' לעיל פרק ח הלכה ב).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הלכה היא שהסוחר הקונה בסיטונות ומוכר ליחידים, אל לו להשתכר יותר משישית. שמואל חשש להפסד של סוחרים הבאים ממקום אחר, שימכרו בטעות לפי המחיר של המידות הישנות, אך לפי הכמות (הגדולה יותר) של המידות החדשות. כל עוד הטעות קטנה משישית, אפשר שירוויח הסוחר משהו, אך טעות של שישית ומעלה תבטל את הרווח שלו, ואף תביא לו להפסד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על אפשרות זו הגמרא מעירה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">זבן וזבין תגרא איקרי?!</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, משל עממי הוא, שהקונה ומוכר באותו מחיר, אינו נחשב סוחר כי אינו מרוויח כלום, ופירושו כאן, שלא רק על הפסדם של הסוחרים היה לחשוש, אלא גם על מניעת הרווח שלהם. וחזרה שאלה למקומה, שיעור שישית מה לו פה?</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לבסוף מציע <strong>רב חסדא</strong> ששמואל למד את דבריו מפסוק ביחזקאל (מה, יב)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְהַשֶּׁקֶל עֶשְׂרִים גֵּרָה עֶשְׂרִים שְׁקָלִים חֲמִשָּׁה וְעֶשְׂרִים שְׁקָלִים עֲשָׂרָה וַחֲמִשָּׁה שֶׁקֶל הַמָּנֶה יִהְיֶה לָכֶם</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הפסוק מגדיר את משקל השקל והמנֶה על סמך משקל הגֵרה- בשקל יש עשרים גרה, ומשקל של מנה (יכול להיות) מורכב ממטבע של 25 שקלים, מטבע של 20 שקלים, מטבע של עשרה שקלים ומטבע של חמישה שקלים, ובסה"כ 60 שקלים (אגב ציון מספר השקלים שבמנה מציין הנביא את סוגי המטבעות שיש להשתמש בהם<sup id="ref114"><a href="#fn114">[114]</a></sup>).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכיוון שהמנה המקובל הוא בן 25 שקלים (סלעים), מסבירה הגמרא, שביחזקאל מדובר על מידה אחרת, "מנה של קודש", שהוא כפול (50 שקלים), ועליו הוסיף יחזקאל שישית (חמישית מלבר) כך שהמנה שהוא מתאר עומד על 60 שקלים. מכלל הדברים נמצאנו למדים שניתן להוסיף על המידות/משקלות עד שישית (שהיא חמישית מהמידה העכשווית).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"ם</strong> מסביר, שהפסוק עצמו אינו מסביר את ההגבלה שפסק שמואל, שלא להוסיף יותר משישית. שהרי לא ניתן ללמוד מהפסוק אלא רק שיחזקאל ייסף את המטבע בשיעור של שישית. לכן, הטעם היסודי הוא הטעם השלישי המוזכר לעיל, שלא להביא להפסד לתגרים הטועים. כל הנלמד מיחזקאל הוא שאין חוששים למניעת רווח של הסוחרים אלא רק לגרימת הפסד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מספרת עוד, ש<strong>רב פפא בר שמואל</strong> תיקן מידה (כיילא) השונה בשליש מהמידה שהיתה נהוגה עד כה. הגמרא מסבירה שרב פפא ראה היתר לעצמו לעשות כן, כיוון שהמידה שתיקן היתה מידה חדשה ולא החליפה את המידה הקודמת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כדברי שמואל שאין להוסיף על המידות יותר משישית, שהיא חמישית מערכן הראשון, כגון סאה בת חמישה קבין, מותר לעשותה של שישה. כן גם פסק ה<strong>שו"ע</strong> (רלא טו).</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-10" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    הסיטון מקנח את מדותיו אחת לשלשים יום,  ובעל הבית אחת לשנים עשר חדש, והחנוני מקנח מדותיו פעמים בשבת וממחה משקלותיו פעם אחת בשבת ומקנח מאזנים על כל משקל ומשקל כדי שלא יחלידו.
+                </div>
+                
+
+                
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תחזוקת המידות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (פח.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסיטון מקנח מדותיו אחד לשלשים יום, ובעל הבית - אחד לשנים עשר חדש;</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבן שמעון בן גמליאל</strong> אומר: חילוף הדברים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חנווני מקנח מדותיו פעמים בשבת, וממחה משקלותיו פעם אחת בשבת, ומקנח מאזנים על כל משקל ומשקל;</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>רשב"ג</strong>: במה דברים אמורים - בלח, אבל ביבש - אינו צריך</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה מחלקת בין שלושה סוגי מוכרים- בעל הבית, הוא החקלאי, המוכר את תוצרתו בכמות גדולה פעם אחת בשנה לסיטון. הסיטון (סיטונאי בלשוננו) הוא הקונה מהחקלאי ומוכר כמויות גדולות לחנווני. החנווני (קמעונאי בלשוננו) מוכר כמויות קטנות לצריכה ביתית שוטפת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כל אחד מהמוכרים מצווה לקנח (לנקות) את מידותיו (כלי מדידת הנפח) בתדירות מסויימת מפני הנוזלים הקרושים שמצטברים בתוכם וגורמים לכך שהכלי יחזיק בפועל כמות קטנה ממה שצריך.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי התדירות חלקו התנאים- <strong>תנא קמא</strong> קובע שבעל הבית מקנח מידותיו אחת לשנה, והסיטונאי- אחת לחודש. <strong>רשב"ג</strong> סובר הפוך. בכל אופן שניהם מודים שהחנווני צריך לעשות זאת בתדירות גבוהה של פעמיים בשבוע.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף, המשנה מטילה על החנווני חובה לקנח את משקלותיו פעם בשבוע ואת כפות המאזנים לאחר כל שקילה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בהסבר מחלוקת תנא קמא ורשב"ג לעניין תדירות קינוח המידות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"ם</strong> כותב שהמחלוקת נעוצה בהבנת המציאות- <strong>תנא קמא</strong> סובר שמפאת התדירות הנמוכה בה משתמש בעל הבית במידותיו (פעם בשנה), צריך הוא לדאוג לנקיונן רק לפני שמשתמש בהן. הסיטונאי קונה ומוכר באופן שוטף לאורך כל השנה ולכן כליו מתלכלכים יותר מהר וצריך לקנחם כל חודש. <strong>רשב"ג</strong> לעומתו סובר שתדירות השימוש משחקת תפקיד הפוך- ככל שמשתמשים במידה באופן תכוף יותר, כך פחות סחורה מספיקה להיקרש על דופנה. לפי חשבון זה של רשב"ג היה לכאורה החנווני, המוכר בתדירות גבוהה, צריך לקנח בתדירות נמוכה, אלא שהחנווני אינו מערה מכלי המידה שלו לכלי המידה של הלקוחות עד הטיפה האחרונה<sup id="ref115"><a href="#fn115">[115]</a></sup> ולכן למרות תדירות המכירה הגבוהה, מידותיו מתלכלכות מהר מאד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> חולק על הרשב"ם בהסבר דעת רשב"ג. לדעתו רשב"ג סובר שככל שהמכירה מתפזרת על כמה אנשים, כך גם ההפסד הכרוך בשיירים הדבוקים בכלי המידה מתפזר על פני כמה לקוחות, ולכן הוא משמעותי פחות. לכן דווקא בעל הבית המוכר בבת אחת לאנשים ספורים צריך להקפיד על נקיון מידותיו יותר מאשר הסיטונאי המוכר תדיר להרבה חנוונים. עדיין גם רשב"ג מודה, שהחנווני צריך להקפיד ביותר על נקיון מידותיו, כיוון שהוא מוכר לצרכנים שרבים מהם עניים, ולכן גם הבדלים זעומים בנפח כלי המידה יכולים להיות משמעותיים עבורם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוף המשנה מובאים עוד דברי <strong>רשב"ג</strong>, שאומר שקינוח המשקלות וכף המאזניים שמחויב החנווני לעשות, אמור דווקא בשקילת דבר לח.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב המפרשים הבינו שדברי רשב"ג אינם שנויים במחלוקת, ושטעמו פשוט- החובה לקנח את המשקולות נובעת מחשש שדבקו בהם שאריות אוכל ושמנוניות, דבר השייך רק במכירת דברים לחים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> אינו מגביל את חובה הקינוח לדברים לחים בלבד, ולכן נראה שהבין שחכמים חלוקים על רשב"ג בזה ופסק כמותם. הרמב"ם אף מביא טעם אחר לחובת הקינוח, השייך גם בשקילת דברים יבשים- שמא יחלידו משקלותיו ויתמעט משקלן כתוצאה מבלאי<sup id="ref116"><a href="#fn116">[116]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעניין חובת קינוח המידות, פסקו רוב הראשונים כתנא קמא, וכן פוסק ה<strong>שו"ע</strong> (רלא ז). השו"ע מביא את הסברו של הרשב"ם להבדל בין סיטונאי ובעל הבית לבין חנווני.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעניין קינוח המשקל וכף המאזניים פסק ה<strong>שו"ע</strong> (שם יב) כרוב הראשונים, שחובה זו אמורה דווקא בדבר לח.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-11" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המבקש לשקול שלשה רביעי ליטרא נותן ליטרא בכף מאזנים והבשר ורביע ליטרא בכף שניה, שאם אתה אומר נותן חצי ליטרא ורביע ליטרא בכף אחת שמא יפול רביע הליטרא ואין הלוקח רואהו.
+                </div>
+                
+
+                
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שקילה בעזרת כמה משקולות בכף מאזניים אחת</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (פט.) מופיעה <strong>ברייתא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היה מבקש ממנו שלשה רבעי ליטרא, לא יאמר לו: שקול לי שלשה רבעי ליטרא אחת אחת, אלא שוקל ליטרא ומניח רביע ליטרא עם הבשר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא מורה שהשוקל שלושת רבעי ליטרא לחבירו ישתמש במשקולת של ליטרא ובמשקולת של רבע ליטרא כך- יניח את משקולת הליטרא בכף אחתואת משקולת רבע הליטרא עם הבשר בכף השניה, וכאשר המאזניים שקולות, הרי הבשר במשקל שלושת רבעי הליטרא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים קישרו ברייתא זו עם הברייתא שלידה העוסקת בשקילה של כמות גדולה בכמה פעמים, והבינו שהעיקרון זהה, כלומר, יש לשקול את שלשת רבעי הליטרא בבת אחת ולא רבע בכל פעם בכמה פעמים (עי' לעיל בעניין הדרכים למדוד, עמוד 98).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פירש את הברייתא באופן אחר לגמרי. לדבריו הבעיה היא שאם יונחו על אותה כף מאזניים כמה משקולות, האחת של רבע והשניה של חצי ליטרא, יש חשש שאחת מהן תיפול מבלי שישים הלוקח לב לכך, ואז ימכור הסוחר פחות ממה שמשלם עליו הקונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רלא  יד) כותב כדברי הרמב"ם, וה<strong>סמ"ע</strong> (ס"ק כז) מוסיף שהכוונה שיפיל המוכר בכוונה אחת מהמשקולות.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-12" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כ</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    חייבין בית דין להעמיד שוטרים בכל מדינה ומדינה ובכל פלך ופלך שיהיו מחזרין על החנויות ומצדקין את המאזנים ואת המדות ופוסקין את השערים, וכל מי שנמצא עמו משקל חסר או מדה חסרה או מאזנים מקולקלין רשות יש להן להכותו כפי כחו ולקנסו כפי ראות בית דין לחזק הדבר, וכל מי שמפקיע את השער ומוכר ביוקר מכין אותו וכופין אותו ומוכר כשער השוק.
+                </div>
+                
+
+                
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אכיפת צידוק המידות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ספרי</strong> (פרשת כי תצא פיסקא רצד)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"יהיה לך", מנה אגרנמוס על כך, מיכן אמרו הסיטון מקנח מדותיו אחת לשלשים יום ובעל הבית אחת לשנים עשר חדש וכו'</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הספרי לומד מהמילים "אֶבֶן שְׁלֵמָה וָצֶדֶק <strong>יִהְיֶה לָּךְ </strong>אֵיפָה שְׁלֵמָה וָצֶדֶק <strong>יִהְיֶה לָּךְ</strong>", שישנה מצווה על בית הדין לדאוג לכך שהמצב בו המידות שלמות קיים ומתמיד ע"י "אגרנמוס"- פקידים האחראים על בדיקת המידות ואכיפת החוק. הספרי אף כותב שזה המקור להגדרה של זמנים קבועים בתחזוקת המידות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רלא ב) פוסק כדברים אלה.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn104" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref104" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^104</a> 
+                        המילים "לאחד... ולאחד..." אינן מתפרשות לפי הרמב"ם כאמורות כלפי שני אחים או שותפים החולקים ביניהם, אלא כלפי שני בני אדם, אחד שביקש שימדדו לו והיו אלה ימות הגשמים, והשני שמדדו לו בימות החמה.
+                    </li>
+                    
+                    <li id="fn105" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref105" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^105</a> 
+                        לגבי חוסר הצדק, לכאורה, ביחס למוכר, שנמצא שנותן תמיד יותר מכפי המידה, כנראה שלא חששו בזה משום שהמוכר יכול לגלם את התוספת במחיר גבוה קצת יותר שיקבע הוא.
+                    </li>
+                    
+                    <li id="fn106" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref106" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^106</a> 
+                        אלא שבזה לא נאמר השיעור של הכרעת טפח, השייך רק במאזניים. וכנראה שבזה שיעור ההכרעה פשוט- תוספת מסויימת מעל לגובה שפות הכלי.
+                    </li>
+                    
+                    <li id="fn107" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref107" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^107</a> 
+                        סביר שמקומות אלה דינם כמקומות בהם שוקלים "עין בעין", ולכן יש לתת בהם "גירומין"- תוספת מפורשת על כמות המיקח (עי' בנושא הקודם)
+                    </li>
+                    
+                    <li id="fn108" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref108" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^108</a> 
+                        כי הקונה אמור לקבל מידות גדושות ומקבל מחוקות באותו מחיר, וכן הפוך, אם הקונה מודד, ואמור למדוד מחוקות אך לוקח לעצמומ גדושות. וזהו, לדברי הרשב"ם, גזל גמור.
+                    </li>
+                    
+                    <li id="fn109" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref109" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^109</a> 
+                        למשל, במקום בו כולם גודשים את המידות ללא יוצא מן הכלל, אם פלוני ימחק את המידה, מתוך הסכמה עם הקונה (והפחתת המחיר), יכול לראות אותו מישהו אחר ולבוא לעשות זאת לקונה אחר מבלי שהקונה מסכים ומודע לכך שהוא מקבל פחות ממה שהיה צריך לפי המנהג (הבא לידי ביטוי במחיר).
+                    </li>
+                    
+                    <li id="fn110" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref110" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^110</a> 
+                        המאירי סתם ולא פירש כיצד השינוי נותן מקום לזיוף. ואולי הכוונה לכך שאם יש מנהג קבוע הרי שהמחיר משקף את הכמות הנמדדת על ידי אותו מנהג. לכן, כל המשנה, יש לחשוד שלא התאים את המחיר בצורה כזו שישקף את השינוי שלו. במילים אחרות, כאשר יש גמישות במדידה, ו"תחום אפור", יש חשש לנטיה לניצול המצב לטובת אחד הצדדים על חשבון השני.
+                    </li>
+                    
+                    <li id="fn111" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref111" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^111</a> 
+                        שכך כותב הרא"ש: "...אפילו במקום שקונין סאה גדושה בג' דינרין ואמר לו (הקונה) תן לי סאה מחוקה בב' דינרין, דסלקא דעתך ליהוי כקונה חצי המדה קמ"ל דאסור", והטור העתיק באופן דומה.
+                    </li>
+                    
+                    <li id="fn112" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref112" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^112</a> 
+                        נראה שברייתות אלה עוסקות במקום בו נהגו לשקול בבת אחת ועל פי הדין של "מקום שנהגו שנהגו בגסה, לא ימוד בדקה". לכן, אם מדובר במקום שנהגו לשקול בו בדקה, כפי שמבקש כאן הלוקח, לכאורה יש לעשות כפי שהלוקח מבקש ולשקול אחת אחת. וכנראה שהברייתא אינה מתנה את דינה במקום, כיוון שאין מקום בו נהגו בדווקא לשקול בכמה משקלות קטנות במקום באחת גדולה.
+                    </li>
+                    
+                    <li id="fn113" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref113" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^113</a> 
+                        כיוון שהדין באונאה הוא, שאם המוצר נמכר בפער של יותר משישית מערכו האמיתי, בטל המיקח.
+                    </li>
+                    
+                    <li id="fn114" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref114" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^114</a> 
+                        הסבר אחר לציון המנה בקבוצות שונות של שקלים מובא בתוספות בשם רבינו משולם, שכוונת יחזקאל היתה שמנה של קודש יהיה מורכב משלושה מטבעות, אחד של חמש עשרה, אחד של 20 ואחד של 25. ומניינים כמניין האותיות בכל אחד מפסוקי ברכת כהנים. התוספות מוסיפים שאפשר שזו היתה המוטיבציה מאחורי עצם הייסוף במנה, כדי שבאופן סמלי, יתברכו ישראל בברכה מעין ברכת כהנים בשקלים שהם נותנים למקדש.
+                    </li>
+                    
+                    <li id="fn115" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref115" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^115</a> 
+                        הבדל זה בין החנווני לבין שאר מוכרים מופיע במשנה ב"ב פז. ונפסק להלכה בטור ובשו"ע סי' רלא. חכמים חייבו את כל המוכר לחבירו דבר לח במידה, שיערה עד שיטפטפו שלוש טיפות משיירי הנוזל שבכלי. כאשר המוכר הוא חנווני, שזמנו דחוק ומוכר להרבה אנשים, פטרוהו חכמים מחובה זו.
+                    </li>
+                    
+                    <li id="fn116" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref116" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^116</a> 
+                        נראה שמה שהביא את הרמב"ם לפרש כך היא נקודה עליה עמדו כבר מפרשים כמו המאירי, והיא- שאם דבק במשקולות לכלוך, הרי הדבר מביא הפסד לחנווני, שמוכבדות משקלותיו ועתה הוא מוכר כמות יתרה באותו מחיר. ומדוע שנחייב את החנווני למנוע הפסד מעצמו? המאירי עצמו מפרש שהחשש הוא למקרה בו מישהו אחר ישתמש במשקלותיו של המוכר. לפירושו של הרמב"ם כלל אין שאלה, כיוון שהכוונה למנוע החלדה של המשקולות, שתביא להתמעטותן ולהונאה של הלקוחות ולא של החנווני.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

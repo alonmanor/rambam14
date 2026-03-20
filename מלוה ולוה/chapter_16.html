@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מלוה ולוה - פרק טז</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">מלוה ולוה - פרק טז</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק טז)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    העברת מעות הפרעון מהלווה למלווה
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-1-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    החזרת החוב בעל כרחו של המלווה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    פרעון חוב בעזרת שליח
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    קניין חוב במעמד שלושתן והדין בקניין טעות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    קניין במעמד שלושתן כאשר ממונו של המצווה עדיין אינו ביד הנותן
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה-ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    המצווה לחברו לפרוע עבורו חוב, חברו טוען שנתן ובעל החוב טוען שלא קיבל
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    קניין שטר חוב והצורך בראיה על כך
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-7" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ח-י
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-7-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שטר ושובר היוצאים מתחת יד שליש
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-7-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שובר היוצא מתחת יד המלוה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-8" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יא
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-8-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    המוצא שטר ואינו יודע מה טיבו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-9" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-9-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    המצהיר ששטר בין שטרותיו פרוע ואינו יודע איזהו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">מלוה ולוה</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק טז</h1>
+            </div>
+
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק עוסק בעיקרו בשני נושאים, הראשון הוא פרעון דרך אדם שלישי או העברת הזכות על החוב לאדם שלישי, ומתוך כך שמצבים כאלה יכולים ליצור ספיקות בפרעון, עוסק הפרק לדון בנושא שטרות ושוברים שנמצאו באופן היוצר ספק האם החוב נפרע או לא.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה א המשמשת כהקדמה, עוסקת בהגדרה הבסיסית של פרעון כמעבר הדמים באופן מלא לידיו של המלווה או בא כוחו, אלא אם כן הוגדר אחרת. הגדרה זאת עומדת בניגוד לפעולות אחרות של מעבר חפץ הגורר חלות דין כמו למשל נתינת גט אשה שם גם אם הגט אינו ביד האשה אלא בד' אמותיה או במקום בו היא יכולה לשומרו בכל זאת מגורשת. עם זאת, במקרה בו המלווה מסרב לקבל את הכסף לידיו ולסיים בכך את ההלוואה, רשאי הלווה להניח את הכסף לפניו וללכת. הלכה ב מתייחסת לפרעון חוב בעזרת שליח. מחד, אין הלווה נפטר מאחריות עד שיגיעו המעות ליד המלווה ממש. מאידך, נחלקו אמוראים האם יכול הלווה לחזור בו וליטול את המעות מהשליח. להלכה נקבע שמצד אחד השליח זוכה עבור המלווה ולכן המהלך אינו הפיך, ועדיין, מצד שני, אין הלווה נפטר מאחריות עד שיגיעו המעות בפועל ליד המלווה. בהמשך לפסק זה נחלקו ראשונים מי אחראי כלפי המלווה אם השליח עבר והחזיר את הממון ללווה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ג-ד מדברות על תקנת חכמים המסדירה העברת חוב ב"מעמד שלושתם". כאשר המלווה, הלווה ואדם שלישי נמצאים באותו מקום תיקנו חכמים שהמלווה יכול להקנות את החוב לאדם השלישי, למרות שאין מנגנון קנייני מאחורי שעבוד זה, שהרי המעות לא עברו דרך אותו אדם שלישי. מכיוון שתיקנו זאת כקניין לכל דבר, אם הדבר נעשה מתוך טעות מוכחת של אותו אדם, אין תוקף למעשה. מקרה אחר של "מעמד שלושתם" הוא כאשר הלווה מבקש מאדם שלישי לפרוע עבורו, והסכימו לכך המלווה ואותו אדם במעמד שלושתם. בזה נחלקו האמוראים האם מעמד שלושתם יוצר קניין מחייב, ועתה למלווה יש דין ודברים רק עם אותו אדם שלישי, או שמא יכול המלווה לחזור ולדרוש את הפרעון מהלווה המקורי. רוב הראשונים פסקו כדרך האחרונה וזאת משום שבניגוד למלווה המקנה מעות חוב שיש לו אצל הלווה לאדם אחר, במקרה המקביל הלווה אינו מעביר ממון אלא חובה ולכן אין חלות לדבר.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">כהמשך למקרה האחרון עוסקות הלכות ה-ו במעסיק שביקש מחנווני לשלם במצרכים לפועליו את שכרם שהוא חייב להם. החנווני טוען שנתן לפועלים ותובע את המעסיק שישלם לו, אך הפועלים טוענים שלא קיבלו ואף הם חוזרים ותובעים את המעסיק. על פי הגמרא תיקנו חכמים שגם החנווני וגם הפועלים נשבעים על טענתם במעמד שני הצדדים והמעסיק משלם לשני הצדדים, כלומר פעמיים. נחלקו המפרשים בהבנת תקנת חכמים שיטול החנווני בשבועה. יש שהבינו שהחנווני נוטל מעיקר הדין כי בעל הבית הורה לו לשלם לפועלים ותקנת חכמים לטובת המעסיק היא, שהחנווני נשבע כיוון שטענתו סותרת את טענת הפועלים. מולם יש המפרשים שמעיקר הדין אין החנווני נוטל מאומה ותיקנו לטובתו שיטול, והגבילו זאת לכך שיטול דווקא בשבועה. אם הפועלים מחלו ונותרה רק תביעת החנווני, על פי הדעה הראשונה נוטל ללא שבועה ואילו על פי השניה הדין אינו משתנה ונוטל בשבועה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ז עוסקת בקונה שטר חוב ומבקש לגבות בו כאשר אין בידו ראיה למכר. יש ראשונים שפסקו שמכיוון ששטרות נקנים בכתיבה ומסירה, ההחזקה בשטר כשלעצמה אינה מוכיחה שהמחזיק הוא הבעלים וללא ראיה לקניין השטר לא ניתן לגבות בעזרתו. מולם הרמב"ם פוסק שניתן לגבות בשטר מהלווה ללא כל ראיה נוספת אלא אם כן המלווה הראשון טוען שלא מכר שטר זה, שאז צריך להציג ראיה למכירה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">ההלכות עד סוף הפרק עוסקות ביחס לשטר שנמצא או לשובר שנמצא בהקשר היוצר ספק אם פרוע הוא או לא. הלכות ח-י פותחות בעיסוק בשטר או שובר הנמצא ביד שליש, שהוא אדם ניטראלי שהמלווה והלווה הפקידו אצלו מסמכים בנאמנות. השליש נאמן לומר שהשטר המצוי בידו פרוע הוא כי אם היה רוצה לשקר היה פשוט משמיד אותו. גם לגבי שובר שהופקד ביד השליש נאמן השליש לומר שהשובר אמיתי ומעיד על פרעון החוב כיוון שבעצם ההפקדה אצלו האמינוהו המלווה והלווה להעיד מה טיב השובר. בד"כ שובר תקף נמצא אצל הלווה כדי שיוכיח על הפרעון מול השטר שביד המלווה. במקום בו שובר נמצא ביד המלווה ואין מי שיעיד מה טיבו קיים ספק האם המלווה הכין את השובר אך עדיין לא תיקף אותו כי עוד לא היה פרעון או שמא היה פרעון והמלווה עוד לא הספיק לתת את השובר ללווה. הגמרא מכריעה שרק אם ההקשר מורה על כך שהשובר תקף, כגון שנמצא בין שטרות פרועים או שהוא כתוב על השטר עצמו, יש להניח שהשובר תקף. הלכה יא פוסקת שאדם המוצא שטר בין שטרותיו ואינו יודע מה טיבו לא יעשה בו דבר מחמת הספק. הרמב"ם נוקט בלשון המשנה וסותם דבריו, אך הראשונים נחלקו בדבר. רובם הבינו שמדובר באדם שלישי, שאינו יודע מי הפקיד את השטר בידו ובאילו תנאים. דעה אחרת מפרשת שמדובר במלווה. על פי דעה זו יש חובה על המלווה לזכור ברמת ודאות גבוהה מה עניינו של כל שטר שאצלו ואינו יכול להניח שכל שטר שאצלו עדיין אינו פרוע. ההלכה האחרונה בפרק עוסקת במלווה שלפני הסתלקותו אמר לבניו שבין שטרותיו יש שטר פרוע אך לא אמר להם איזהו. על פי הכלל "המוציא מחברו עליו הראיה" ומכיוון שכל לווה יכול לתלות ששטרו שלו הוא הפרוע, לא ניתן לגבות באף אחד מהשטרות אלא אם כן יש שם שני שטרות (או יותר) כנגד לווה אחד. במקרה זה יכול הלווה לתלות שהשטר הגדול ביותר שכנגדו הוא הפרוע ואת הנותרים יפרע הלווה. יש שאמרו שאם יש אינדיקציה שהשטר עליו דיבר המלווה הוא שטר מסויים, למשל או נמצא שובר עליו, יש לתלות שהוא הפרוע ובכל השאר ניתן לגבות.</p>
+                
+            </div>
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    החוב באחריות הלוה עד שיפרענו ליד המלוה או ליד שלוחו, אמר לו המלוה זרוק לי חובי והפטר וזרקו ואבד או נשרף קודם שיגיע ליד המלוה פטור, אמר לו זרוק לי חובי בתורת גיטין היו המעות קרובות ללוה הרי עדיין באחריותו, היו קרובות למלוה נפטר הלוה, מחצה על מחצה אם אבדו משם או נגנבו משלם הלוה מחצה.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">העברת מעות הפרעון מהלווה למלווה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה בגיטין (עח.) עוסקת במעבר הגט מידי הבעל לידי האשה, ואגב כך גם במעבר מעות קידושין ומעות חוב-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>היתה עומדת ברשות הרבים וזרקו לה, קרוב לה - מגורשת, קרוב לו - אינה מגורשת, מחצה על מחצה - מגורשת ואינה מגורשת. וכן לענין קדושין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכן לענין החוב, אמר לו בעל חובו זרוק לי חובי וזרקו לו, קרוב למלוה - זכה המלוה, קרוב ללוה - הלוה חייב, מחצה על מחצה - שניהם יחלוקו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא דנה למה הכוונה "קרוב לו" ו"קרוב לה", ומעלה שני הסברים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב</strong>: ארבע אמות שלה - זהו קרוב לה, ארבע אמות שלו - זהו קרוב לו. היכי דמי מחצה על מחצה?...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבה</strong> ו<strong>רב יוסף</strong> דאמרי תרוייהו: הכא בשתי כיתי עדים עסקינן, אחת אומרת קרוב לו ואחת אומרת קרוב לה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יוחנן</strong> אומר: קרוב לה - שנינו אפילו מאה אמה, וקרוב לו - שנינו אפילו מאה אמה. היכי דמי מחצה על מחצה? אמר <strong>רב שמן בר אבא</strong>, לדידי מיפרשא לה מיניה ד<strong>רבי יוחנן</strong>: הוא יכול לשומרו והיא אינה יכולה לשומרו - זהו קרוב לו, היא יכולה לשומרו והוא אינו יכול לשומרו - זהו קרוב לה, שניהם יכולין לשומרו, שניהם אין יכולין - זהו מחצה על מחצה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי דברי רב, הקרבה מתייחסת לד' האמות שסביב האדם. בשביל לפעול את פעולתו, הגט צריך להיות מונח בד' אמותיה של האשה ולצאת מד' אמותיו של האיש. לעומתו רבי יוחנן (לפי הבהרתו של רב שמן בר אבא) אומר שהקרבה היא יכולת שמירה. אם האשה יכול לשמור את הגט והבעל לא, אזי אפילו אם הגט רחוק ממנה, נחשב הוא ברשותה ומגורשת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (עח:) דנה בהמשך המשנה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר' אסי</strong> אמר <strong>ר' יוחנן</strong>: לגיטין אמרו ולא לדבר אחר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>...איתיביה: "וכן לענין החוב, זרוק לי חובי וזרקו לו, קרוב למלוה - זכה הלוה, קרוב ללוה - הלוה חייב, מחצה על מחצה - שניהם יחלוקו!"</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הכא במאי עסקינן - דאמר ליה זרוק לי חובי ותיפטר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי, מאי למימרא?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא צריכא, דאמר ליה זרוק לי חובי בתורת גיטין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואכתי מאי למימרא? מהו דתימא, מצי אמר ליה משטה אני בך, קמ"ל.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ר' אסי אומר שהאפשרות להחשיב את הגט ברשות האשה לפני שהגיע לידיה ממש, שייכת ספציפית בגט, אך בהעברת ממון וחפצים אחרים, אין החפץ נחשב כמועבר עד שיגיע לידי המקבל. לפיכך ההשוואה שעושה המשנה בין גט לבין פרעון חוב מתפרשת באופן מצומצם, בשתי אפשרויות. אפשרות אחת היא "זרוק לי חובי והפטר", כלומר, המלווה מוותר על הגעת החוב לידיו ממש. אפשרות אחרת היא שהמלווה אמר "זרוק לי חובי בתורת גיטין", כלומר, הותנה ספציפית שהדין שחל בגיטין, יחול גם על פרעון החוב, ולכן אין צורך שיגיע החוב לידי המלווה ממש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> והשו"ע (קכ א) פוסקים שכעיקרון הלווה אינו נפטר עד שיגיע החוב לידי המלווה, חוץ מבמקרים מיוחדים בהם ציין המלווה שהלווה יפטר כמו "זרוק לי חובי והפטר" או "זרוק לי חובי בתורת גיטין".</p>
+                    
+                </div>
+                
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החזרת החוב בעל כרחו של המלווה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה בבבא קמא (קיח.) נאמר</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הגוזל את חבירו, או שהלוה הימנו, או שהפקיד לו בישוב - לא יחזיר לו במדבר, על מנת לצאת במדבר - יחזיר לו במדבר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם הלווה המלווה במקום יישוב, יכול המלווה לבחור שלא לקבל את הפרעון במדבר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "מכלל" גיטין עה.) לומדים ממשנה זו שאם הלווה מחזיר בישוב ולא במדבר, אין למלווה ברירה אלא לקבל את החוב. עוד מקור שמביאים התוספות הוא הגמרא בבבא מציעא (מט.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דיהיב זוזי אשומשמי, לסוף אייקר שומשמי, הדרו בהו ואמרו ליה: לית לן שומשמי, שקול זוזך. לא שקיל זוזיה, איגנוב. אתו לקמיה ד<strong>רבא</strong>. אמר ליה: כיון דאמרי לך שקול זוזך ולא שקלית - לא מבעיא שומר שכר דלא הוי, אלא אפילו שומר חנם נמי לא הוי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר באדם שנתן תשלום מוקדם על סחורה. לבסוף העסקה התבטלה ואמר המוכר לקונה שיקח את כספו. הקונה התעכב ולא לקח את הכסף ובינתיים נגנב הכסף. רבא פסק שכיוון שהמוכר קרא לקונה שיקח את כספו, אין לו אפילו דין שומר חינם על הכסף והאחריות היא רק של הקונה. ניתן ללמוד מכאן שאפילו בלי שהכסף יצא מרשות המחזיק בו, הוא יכול להצהיר שהוא יצא מרשותו ולהיפטר מאחריות עליו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד בעניין נתינה בעל כרחו של המקבל מובאים דברי הגמרא בגיטין (עד:-עה.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנן התם: בראשונה היה נטמן יום שנים עשר חדש, כדי שיהא חלוט לו, התקין <strong>הלל</strong> <strong>הזקן</strong> שיהא חולש את מעותיו ללשכה, ויהא שובר את הדלת ונכנס, ואימתי שירצה הלה יבוא ויטול את מעותיו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>...אמר רבא: מתקנתו של הלל, הרי זה גיטך על מנת שתתני לי מאתים זוז, ונתנה לו - בין מדעתו ובין בעל כרחו הויא נתינה, וכי איצטריך ליה להלל לתקוני - שלא בפניו, אבל בפניו - בין מדעתו בין בעל כרחו הויא נתינה. מתקיף לה רב פפא, ואיתימא רב שימי בר אשי: ודלמא אפילו בפניו נמי - מדעתו אין, על כרחו לא, והלל מאי דאיצטריך ליה תקין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המוכר בית בעיר מוקפת חומה יכול לגאול אותו (דהיינו, לקנותו בחזרה בעל כרחו של הקונה) עד תום שנה. <strong>הלל הזקן</strong> תיקן שאם כבר עומדת לחלוף השנה, והבעלים הראשון מחפש את הקונה כדי לתת לו את הכסף ואינו מוצאו, יכול לשים את הכסף בבית דין כמשמורת לקונה, ולפרוץ לבית. התקנה ניתקנה על רקע התופעה בה הקונים היו מסתתרים בימים האחרונים של התקופה כדי שהבעלים הראשון לא יוכל לתת להם את הכסף והבית יחלט להם לצמיתות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבא לומד מהטעם של תקנת הלל שאם הקונה לא היה מסתתר, לא היתה בעיה לתת לו את הכסף אפילו בעל כרחו. כלומר, נתינה בעל כרחו של הנותן נחשבת נתינה ומוציאה את החפץ מאחריותו של הנותן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי הדברים האלה כותבים הרמב"ן בתשובה (נא) והטור (חו"מ קכ), שאמנם הזורק חוב לחבירו לא נפטר עד שיגיע לידי חבירו, אך אם מדובר בסיטואציה בה המלווה מסרב לקבל את הפרעון, יכול הלווה לזרוק אליו את הכסף וללכת ויהיה פטור, משום שנתינה בעל כרחו נתינה היא. כך גם פוסק השו"ע (חו"מ קכ ב).</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    היה ראובן חייב לשמעון מנה ואמר ללוי הולך לשמעון מנה זה שאני חייב לו אם בא לחזור אינו חוזר והוא חייב באחריותו עד שיגיע המנה לשמעון, החזיר לוי את המנה לראובן שניהן חייבין באחריותו עד שיגיע ליד שמעון כל חובו. <strong> היה ראובן חייב לשמעון מנה וכו' עד שיגיע ליד שמעון כל חובו. א"א אחריות לוי השליח איני יודע מה הוא אלא שאם יכפור ראובן במלוה נמצא לוי פושע בדבר עכ"ל.</strong>
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פרעון חוב בעזרת שליח</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בגיטין (יד.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איתמר: הולך מנה לפלוני שאני חייב לו,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב</strong>: חייב באחריותו, ואם בא לחזור - אינו חוזר</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>שמואל</strong> אמר: מתוך שחייב באחריותו, אם בא לחזור - חוזר...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כ"ע הולך כזכי דמי, והכא בהא קמיפלגי, מ"ס: לא אמרינן מיגו, ומ"ס: אמרינן מיגו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תניא כוותיה דרב: הולך מנה לפלוני שאני חייב לו תן מנה לפלוני שאני חייב לו, הולך מנה לפלוני פקדון שיש לו בידי, תן מנה לפלוני פקדון שיש לו בידי - חייב באחריותו, ואם בא לחזור - אינו חוזר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאשר הלווה משלח את הפרעון למלווה ביד שליח, כולם מודים (בהתאמה לעולה מההלכה הקודמת) שאינו נפטר מאחריות כל עוד הפרעון אינו מגיע בפועל לידי המלווה. כמו כן, כולם מודים ש"הולך כזכי דמי", כלומר, הנתינה לשליח כמוה כזכיה למלווה על ידי השליח. עם זאת, נחלקו האמוראים האם יכול הלווה לחזור בו ולדרוש מהשליח את הפרעון בחזרה כדי להשיבו בפעם אחרת. <strong>שמואל</strong> אומר שכיוון שהלווה עדיין אחראי על הממון, יכול לדרוש לקבלו בחזרה מהשליח. לעומתו, <strong>רב</strong> סובר שכיוון שכבר זיכה את המלווה דרך נתינה לשליח, אין ללווה עוד יכולת לדרוש את הממון מהשליח<sup id="ref228"><a href="#fn228">[228]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מובא מעשה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ר' אחי בר' יאשיה</strong> הוה ליה איספקא דכספא בנהרדעא,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר להו ל<strong>ר' דוסתאי ב"ר ינאי</strong> ול<strong>ר' יוסי בר כיפר</strong>: בהדי דאתיתו אתיוה ניהלי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אזול, יהביה ניהליה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמרי להו: נקני מינייכו, אמרי להו: לא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמרי להו: אהדריה ניהלן,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ר' דוסתאי ברבי ינאי אמר להו: אין, ר' יוסי בר כיפר אמר להו: לא...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כי אתו לגביה... א"ל: אמאי תיעבד הכי? א"ל: אותן בני אדם הן אמה וכובען אמה, ומדברין מחצייהן, ושמותיהן מבוהלין, ארדא וארטא ופילי בריש, אומרין כפותו - כופתין, אומרין הרוגו - הורגין, אילו הרגו את דוסתאי, מי נתן לינאי אבא בר כמותי!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ר' אחי ביקש מר' דוסתאי ומר' יוסי שיהיו שליחיו להביא לו צלחת כסף שהפקיד בנהרדעא. לאחר שקיבלו את הצלחת לידם דרשו השומרים מהם שיעשו קניין כך שהאחריות תסור מהשומרים ותעבור לשליחים. ר' יוסי סירב, ואף ר' דוסתאי שהסכים, עשה כן מחשש לחייו<sup id="ref229"><a href="#fn229">[229]</a></sup>. ה<strong>רשב"א</strong> לומד ממעשה זה שלאחר שהשליח קיבל את החוב מהלווה, כיוון שזכה בו עבור המלווה, אין לו להחזיר ללווה, ואם החזיר לו, שלא מתוך אונס, יכול המלווה ששלחו לגבות ממנו ולא מהלווה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם הראב"ד כותב שהשליח שהחזיר ללווה לאחר שקיבל ממנו התחייב באחריות החוב, אלא שהוא מסביר את אותה האחריות באופן שונה במקצת. לדבריו רק אם לא הצליח המלווה לגבות מהלווה, יכול להאשים בכך את השליח, על כך שנהג שלא כהוגן, ולגבות ממנו. כן גם כתב הטור (חו"מ קכה).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כותב ששניהם, הלווה והשליח שנטל מהלווה וחזר ונתן לו אחראים מול המלווה, אך אינו מפרט איך אחריות כפולה זאת מתבטאת הלכתית.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (חו"מ קכה א) פוסק כטור וכראב"ד ומביא את דעת הרמב"ם כ"יש אומרים".</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    ראובן שהיה חייב לשמעון מנה ואמר שמעון לראובן מנה שיש לי בידך תנהו ללוי והיו שלשתן עומדין וקיבל לוי ונמצא ראובן עני ואין לו ממה שיגבה ממנו הרי לוי חוזר בחוב של שמעון שזה הטעהו, ואם ידע לוי שהוא עני או שהיה עשיר באותה שעה והעני אינו יכול לחזור שהרי קיבל, טען לוי שהיה ראובן עני והטעהו ושמעון אומר עשיר היה והעני יראה לי שעל שמעון להביא ראיה ואח"כ יפטר מחוב לוי לא יהיה אלא שובר בידו אומרים לו קיים שוברך והפטר.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קניין חוב במעמד שלושתן והדין בקניין טעות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בגיטין (יג:)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב הונא</strong> אמר <strong>רב</strong>: מנה לי בידך תנהו לו לפלוני, במעמד שלשתן - קנה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: מסתברא מילתיה דרב בפקדון, אבל במלוה לא, והאלקים! אמר רב אפילו במלוה...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האמוראים מחדשים שאם ראובן חייב לשמעון מנה, יכול שמעון לומר במעמד שלושתם, שיתן ראובן את המנה ללוי, ומאותו רגע, נקנה החוב ללוי. כאשר מדובר במילווה, גורם מהלך זה להחלפת זהות המלווה, ומכל שכן שהדבר תקף כאשר מדובר בפיקדון וחפץ קונקרטי המחליף בעלות ועובר מבעלותו של שמעון לבעלותו של לוי. המשמעות היא שמחד שמעון, הבעלים (=מלווה) הראשון, כבר אינו יכול לחזור בו ומאידך, ראובן, המחזיק (=לווה), אינו יכול לצאת ידי חובה בהחזרה לשמעון.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין זה אומר דורשני, שהרי בעוד שראובן הלווה השתעבד לשמעון המלווה בשעת מתן מעות, מה גורם לו שישתעבד ללוי בדיבור בעלמא? הגמרא ממשיכה ומבארת דבר זה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וטעמא מאי?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אמימר</strong>: נעשה כאומר לו בשעת מתן מעות שעבדנא לך לדידך ולכל דאתו מחמתך.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א"ל רב אשי לאמימר: אלא מעתה, הקנה לנולדים דלא הוו בשעת מתן מעות, הכי נמי דלא קנו!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אמר <strong>רב אשי</strong>: בההיא הנאה דקא משתניא ליה בין מלוה ישנה למלוה חדשה, גמר ומשעביד נפשיה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א"ל <strong>הונא מר בריה דרב נחמיה</strong> לרב אשי: אלא מעתה, כגון הני דבי בר אלישיב דכפתי ושקלי לאלתר, ה"נ דלא קנו! וכי תימא ה"נ, א"כ נתת דבריך לשיעורין!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אמר <strong>מר זוטרא</strong>, הני תלת מילי שוינהו רבנן כהלכתא בלא טעמא</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מציעה כמה הצעות. או שמדובר בהסכמה מובלעת של הלווה שבעת הפרעון יתן את החוב לכל מי שידרוש המלווה, או שיש ללווה הנאה כלשהי בחידוש החוב. ברם, למסקנת הגמרא קובע מר זוטרא "שוינהו רבנן כהלכתא בלא טעמא". כלומר, מדובר בהחלטה פרקטית של חכמים, שלא ניתן למצוא טעם למנגנון הפעולה ההלכתי שלה<sup id="ref230"><a href="#fn230">[230]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך הסוגיה מובא מעשה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הנהו גינאי דעביד חושבנא בהדי הדדי, פש חמש איסתרי זוזי גבי חד מנייהו,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמרי ליה: יהבינהו ניהליה למרי ארעא באפי מרי ארעא וקנה מיניה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לסוף אזל עבד חושבנא בין דיליה לנפשיה, לא פש גביה ולא מידי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אתא לקמיה ד<strong>רב נחמן</strong>,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א"ל: מאי איעביד לך? חדא, דאמר רב הונא אמר רב; ועוד, הא קנו מינך.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א"ל <strong>רבא</strong>: ואטו האי מי קאמר לא יהבינא? דליכא גבאי קאמר! א"ל: א"כ, קנין בטעות הוא, וכל קנין בטעות חוזר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר בגננים שכאשר מנו את הכסף שקיבלו מבעל הבית על עבודתם, גילו שקיבלו חמישה זוזים מיותרים אצל אחד מהם. מאחר שבעל הבית היה שם עימהם, אמרו לאותו אחד מהם שהכסף היתר היה אצלו, שעליו לתת את הכסף לבעל הבית. לאחר מכן גילה אותו גנן שטעו בחשבון ושלא קיבלו יתר על שכרם. רב נחמן סבר בתחילה לומר שבמעמד כולם הקנו לבעל הבית ושוב לא ניתן לחזור. ברם, רבא העיר שכיוון שכאן אין מדובר בסרבנות לקיים את המיקח, אלא הגנן המדובר גילה למפרע שחמישה זוזים שחשב שעימו, אינם אצלו. ממילא מדובר ב"קנין בטעות" שנעשה מבלי לדעת את העובדות, ולכן הוא בטל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהתאמה, מסופר בירושלמי (קידושין פרק ג, הלכה ד)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יעקב בר אחא</strong> בשם <strong>רבי אימי</strong> ראובן חייב לשמעון סמכיה גבי לוי. אפירסן לוי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לית ראובן חייב לשמעון.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הדא דאת אמר בשלא עשו בהערמה אבל עשו בהערמה חייב.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראובן היה חייב לשמעון והסמיך את לוי לפרוע במקומו. מכיוון ששמעון הסכים והדבר היה במעמד שלושתם<sup id="ref231"><a href="#fn231">[231]</a></sup>, גם אם לוי לא מצליח לעמוד בהתחייבותו, אין שמעון יכול לחזור ולפרוע מראובן. אמנם, אם שמעון ולוי ידעו שלוי לא יוכל לעמוד בהתחייבות ועשו ובהערמה, בטל ההסכם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על בסיס סוגיות אלה פוסק הרמב"ם שבכל מקרה של קניין "מעמד שלושתן", בו הקניין נעשה מתוך הטעיה, הרי הקניין בטל. לכן, אם המלווה ה"חדש" לא ידע שהלווה עני ושהסיכוי שיפרע את החוב נמוך, יכול הוא לחזור בו והמלווה חוזר להיות הראשון.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    כבר ביארנו בהלכות מקח וממכר שראובן שלא היה לו אצל שמעון כלום והיה ראובן חייב ללוי מנה והמחהו אצל שמעון אף על פי שהמחהו במעמד שלשתן לא קנה, ואם רצה שמעון שלא יתן לא יתן ואם נתן חוזר וגובה מראובן שהרי על פיו נתן, וכן אם רצה לוי לחזור ולומר איני רוצה לגבות משמעון חוזר וגובה מראובן ואף על פי שנפרע מקצת משמעון חוזר וגובה השאר מראובן.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קניין במעמד שלושתן כאשר ממונו של המצווה עדיין אינו ביד הנותן</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המקרה הקלאסי של קניין במעמד שלושתם הוא כאמור כאשר יש מנה של שמעון ביד ראובן ושמעון מעבירו ללוי. מה הדין כאשר ביד ראובן אין כעת דבר משל שמעון ושמעון מצווה את ראובן לתת מנה ללוי, ומתחייב לשלם לו אח"כ? האם ראובן מתחייב בכך מול לוי? האם לוי יכול לתבוע את שמעון, או שמעתה דבריו של לוי הם רק מול ראובן?<sup id="ref232"><a href="#fn232">[232]</a></sup>. וריאציה זו של מעמד שלושתם בעייתית יותר מאשר המקרה הרגיל כיוון שאין כאן עדיין ממון שיוקנה לאחר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דוגמה הנידונה בפוסקים בהקשר זה היא הדין שהוצג בנושא הקודם- בעל הבית המסמיך אדם אחר לשלם לפועליו. סוגית הגמרא בבבא מציעא (קיב.) עוסקת בדין זה בהקשר של איסור הלנת שכר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: לא תלין פעלת שכיר...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המחהו אצל חנוני ואצל שולחני אינו עובר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איבעיא להו: חוזר או אינו חוזר?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב ששת</strong> אמר: אינו חוזר,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>רבה</strong> אמר: חוזר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר רבה: מנא אמינא לה - מדקתני: אינו עובר עליו, מעבר הוא דלא עבר, - הא מיהדר - הדר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ורב ששת אמר: מאי אינו עובר - אינו בתורת לעבור.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא מלמדת שאם בעל הבית ציווה לחנווני לתת סחורה לפועל תמורת שכרו, והחנווני קיבל עליו, שוב אין בעה"ב עובר משום הלנת שכר. האמוראים נחלקו האם יכול הפועל לתבוע את בעה"ב במקרה שהחנווני לא עמד בהתחייבותו. רב ששת אומר ששוב אין בין הפועל ובעה"ב כלום<sup id="ref233"><a href="#fn233">[233]</a></sup> ואילו רבה אומר שאם החנווני לא עשה את מה שהתחייב, חייב בעל הבית לשלם<sup id="ref234"><a href="#fn234">[234]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">להלן נידון המצב בו החנווני טוען שלא נתן והפועלים טוענים שלא קיבלו. הירושלמי (שבועות פרק ז הלכה ה) מתייחס למקרה זה וכותב-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הדא דתימר בשלא העמידו עמו אבל העמידו עמו אין בעל הבית חייב כלום.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם היה ציוויו של בעה"ב לחנווני במעמד שלושת הצדדים (בעה"ב, חנווני ופועלים), בעל הבית כבר אינו חייב כלום לפועלים ולכן הפועלים הטוענים שלא קיבלו מהחנווני יכולים לתבוע רק את החנווני והחנווני בתורו יתבע את בעה"ב. זהו, לכאורה, יישום של דין מעמד שלושתן. מכאן ניתן להבין שמעמד שלושתן יוצר קניין שאין לחזור ממנו, גם כאשר אין ביד הנותן (החנווני) ממון של המצווה (בעל הבית).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרי"ף (ב"מ בדפיו סח.-סח:) אינו מקבל זאת. לדבריו זו שיטת רב ששת, אך שיטת רבה, שהלכה כמותו, היא שהפועלים יכולים לחזור על בעל הבית, כלומר, שאפילו אם היה כאן מעמד שלושתן, קניין לא היה כאן, משום שהחנווני לא היה חייב דבר לבעל הבית מתחילה. פועל יוצא של שיטת הרי"ף הוא שאם החנווני כן היה חייב לבעל הבית, ובמעמד הפועל היה החנווני מתחייב לשלם לפועלים, היה חל קניין גמור ומה שהחנווני היה חייב לבעל הבית היה עובר להיות חוב לפועלים. במקרה כזה, עפ"י הרי"ף, אין הפועלים יכולים לתבוע את בעל הבית, והחוב הוא רק בינם לבין החנווני. כדבר זה מביא בטור (חו"מ צא) בשם הר"י מיגאש. גם הרמב"ם כותב שאם לא היה ביד הממחה כלום "אף על פי שהמחהו במעמד שלושתן לא קנה", וכן דעת הרא"ש (טור חו"מ קכו).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרי"ד (בפסקיו שבועות מז:) מסביר אחרת. לדבריו אם היה הסכם במעמד שלושתם, אפילו אם מתחילה לא היה החנווני חייב דבר לבעל הבית, החוב עובר מבעה"ב לחנווני, ולכן אם הפועלים טוענים שלא קיבלו את שכרם, הם אינם יכולים לתבוע את בעה"ב אלא את החנווני, כדברי הירושלמי<sup id="ref235"><a href="#fn235">[235]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">קיצורם של דברים, בניגוד לדעת הרי"ף שהבין מעמד שלושתן כהעברת בעלות על חפץ או חוב, לדעת הרי"ד קניין מעמד שלושתן הוא סוג של התחייבות ולכן יכול לפעול גם כאשר הנותן אינו חייב דבר למצווה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (חו"מ צא ג, חו"מ קכו ב) פוסק כדעת הרי"ף והרמב"ם.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה-ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    חנוני שהיה נותן לבעל הבית מן החנות כל מה שירצה בתורת הלואה ומקיפו עד שיתקבץ הכל ופורע לו ואמר לו בעל הבית תן לפועלים סלע או לבעל חובי מנה שיש לו אצלי ואני אתן לך והרי החנוני אומר נתתי והפועל או בעל חובו אומר לא לקחתי הרי הפועל או בעל חוב נשבע ונוטל מבעל הבית חובו וכן החנוני נשבע ונוטל מבעל הבית מה שטען שנתן שהרי הוא אמר לו ליתן, והפועל נשבע במעמד החנוני וכן החנוני במעמד הפועל או בעל חוב כדי שיכלמו זה מזה וכן כל כיוצא בזה ושבועה זו תקנת חכמים היא בנקיטת חפץ מפני שבאין שניהן ליטול, לפיכך אם מת החנוני נוטל בעל חוב בלא שבועה וכן אם מת פועל או בעל חוב החנוני נוטל בלא שבועה שהרי אין בעל הבית מפסיד כלום ואינו משלם אלא תשלום אחד.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    החנוני אומר אתה אמרת ליתן לזה מנה או צוית ואמרת לי אם יבא פלוני תן לו ובעל הבית אומר לא אמרתי לך הרי בעל הבית נשבע היסת ונפטר והחנוני עושה דין עם זה שנתן לו, וכן אם אמר החנוני לבעל הבית המקיפו כתוב בפנקסי שיש לי אצלך מנה ובעל הבית אומר איני יודע נשבע בעל הבית היסת שאינו יודע ונפטר כדין כל טוען על חבירו לכל דבר ואין בזה תקנת חכמים.
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המצווה לחברו לפרוע עבורו חוב, חברו טוען שנתן ובעל החוב טוען שלא קיבל</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה בשבועות (מה.) מונה את הנשבעים ונוטלים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>...ואלו נשבעין ונוטלין ... וחנוני על פנקסו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והחנוני על פנקסו כיצד?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא שיאמר לו: כתוב על פנקסי שאתה חייב לי מאתים זוז,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אומר לו: תן לבני סאתים חטין, תן לפועלי סלע מעות,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הוא אומר: נתתי, והן אומרים: לא נטלנו -</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הוא נשבע ונוטל והן נשבעין ונוטלין</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>בן ננס</strong>: כיצד אלו ואלו באין לידי שבועת שוא? אלא הוא נוטל שלא בשבועה והן נוטלין שלא בשבועה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעל הבית ציווה על החנווני לתת לפועלים שעבדו אצלו סחורה בשכרם. החנווני טוען שאכן נתן להם סחורה והוא תובע את תמורתה מבעל הבית. הפועלים מצידם טוענים שלא קיבלו את הסחורה והם תובעים את שכרם מבעל הבית. ברור שאחד הצדדים אינו דובר אמת ואם נשבעים שניהם ברור שאחת השבועות היא שבועת שקר, ולכן בן ננס סובר שגם החנווני וגם הפועלים נוטלים מבעה"ב שלא בשבועה. ברם, ת"ק סובר שבכל זאת שניהם נשבעים ונוטלים מבעה"ב. בגמרא (מז:) מתבאר עוד-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תניא:</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבי</strong>: טורח שבועה זו למה<sup id="ref236"><a href="#fn236">[236]</a></sup>?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א"ל <strong>ר' חייא</strong>, תנינא: שניהם נשבעין ונוטלין מבעל הבית.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>קיבלה מיניה או לא קיבלה מיניה?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ת"ש: דתניא</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי</strong> אומר: פועלין נשבעין לחנוני; ואם איתא, לבעל הבית מיבעי ליה!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: פועלים נשבעין לבעל הבית במעמד חנוני, כי היכי דליכספו מיניה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבא מסביר את דברי רבי- כאשר שניהם נשבעים, החנווני והפועלים, צריכים להישבע זה במעמד של זה כדי שדובר השקר יתבייש כשהוא עומד מול דובר האמת, ואז יודה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים דנו בטעם הדין לפי ת"ק-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ן (שבועות מד:) מדייק מדברי המשנה "חנווני על פנקסו" שחידושה של המשנה הוא דווקא לגבי החנווני. כלומר, למרות שמעיקר הדין אין החנווני אמור ליטול מאומה, כיוון שעצם העובדה שנתן לפועלים מוטלת בספק, בכ"ז חכמים תיקנו לטובת החנווני שיטול, ובשבועה. הפועלים לעומתו, כיוון שאין חולק על כך שבעל הבית היה חייב להם כסף, ופרעונו מוטל בספק, ובעה"ב עצמו אינו יכול לטעון בוודאות שפרע, הם נשבעין ונוטלים מעיקר הדין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחרת משמע מהריטב"א (שבועות מז: ובבא מציעא ג.) הסובר שמעיקר הדין היו אמורים גם הפועלים וגם החנווני ליטול מבעה"ב ללא שבועה, שכן לכל אחד מהם טענה מוצדקת כלפיו. הפועלים טוענים שעבדו עבורו ועדיין לא שילם להם והחנווני טוען שבכך שלא הורה לו בעה"ב לתת בעדים, התחייב במשתמע לסמוך על דברי החנווני. לכן, צריך בעה"ב לשלם פעמיים משום שפשע, שהיה לו לדרוש שיתן החנווני בעדים. וכל זה מעיקר הדין, אלא שחכמים תיקנו, לטובת בעל הבית הנדרש לשלם פעמיים, שישבעו החנווני והפועלים כדי שידייקו בדבריהם או יודו<sup id="ref237"><a href="#fn237">[237]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ההבדל בין השיטות מתבטא במקרה בו אין בעל הבית צריך לשלם פעמיים, כגון אם מתו הפועלים או החנווני, או הלך מי מהם למדינת הים או מחל על תביעתו. ונחלקו בדבר הראשונים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם כותב, בדומה לדברי הריטב"א, שכל השבועה ניתקנה משום שבאים שניהם ליטול ולטובת בעל הבית. ברם, אם רק אחד מהם בא ליטול, נוטל בלי שבועה כיוון שבעה"ב צריך לשלם רק פעם אחת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו פוסק הרמ"ה (הביאו וצידד בו הטור חו"מ צא) על פי דרכו של הרמב"ן שלעיל, שאם הפועלים אינם תובעים, ורק החנווני תובע, כיוון שמעיקר הדין לא היה אמור לקבל כלום, ומקבל רק מתוך תקנת חכמים שהתקינו לטובתו, נשבע כפי שתקנו חכמים ונוטל<sup id="ref238"><a href="#fn238">[238]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (צא א) כותב כדין המשנה וכדברי רבא, ובהמשך (שם ב) פוסק כרמב"ם לעניין הדין כאשר רק אחד הצדדים תובע. הרמ"א (שם) פוסק כדעת הרמ"ה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    ראובן שהוציא שטר חוב שיש ללוי על שמעון וטען שלוי נתנו לו בכתיבה ומסירה ואבד השטר שהקנהו בו או שטען שהקנהו לו על גב הקרקע הרי זה גובה אותו משמעון הואיל ויוצא מתחת ידו, טען שמעון שפרע ללוי ואמר ישבע לי ישבע לוי לשמעון ואח"כ יגבה ראובן, הודה לו שפרע ישלם לוי לראובן, טען לוי שלא מכר ולא נתן שטר זה נשבע היסת ונפטר.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קניין שטר חוב והצורך בראיה על כך</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהלכות מכירה (פרק ו הלכה יא ושם בהמשך) יתבארו בע"ה הדעות השונות לעניין דרך מכירת שטר חוב. בקציר העומר יצויין כאן, ששטר אינו כמיטלטלים אחרים, כיוון שאין גופו ממון אלא לראיה בא. לכן נחלקו בו הדעות ולהלכה פוסק הרמב"ם (שם) שאין די במסירתו לקונה, אלא יש לכתוב שטר נוסף על המכירה ולציין בו שהקונה קנה את השטר וכל שעבוד שנובע ממנו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האמוראים (ב"ב קעג.) דנים בשאלה איזו ראיה צריך אדם להציג כאשר הוא מחזיק בשטר הלוואה וטוען שהמלווה מכרו לו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אותיות נקנות במסירה - <strong>אביי</strong> אמר: צריך להביא ראיה, ו<strong>רבא</strong> אמר: אינו צריך להביא ראיה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור הקשור לדיון בנושא היא סוגית הגמרא ביבמות (קטז.). הגמרא שם דנה בחשש שיש שני אנשים בעלי אותו שם בעיר אחת<sup id="ref239"><a href="#fn239">[239]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ונחלקו בזה האמוראים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>אביי</strong> אמר: חיישינן, <strong>רבא</strong> אמר: לא חיישינן...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר רבא: מנא אמינא לה? דהנהו תרי שטרי דנפקי במחוזא, וכתיב בהו: חבי בר ננאי וננאי בר חבי, ואגבי בהו <strong>רבא בר אבוה</strong> זוזי, והא חבי בר ננאי וננאי בר חבי במחוזא שכיחי טובא!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואביי? למאי ניחוש לה? אי לנפילה - מזהר זהיר ביה, אי לפקדון - כיון דשמיה כשמיה לא מפקיד גביה, מאי אמרת? דלמא מסר ליה, אותיות נקנות במסירה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבא אומר שאין חוששים לשני אנשים בעלי אותו שם והוא לומד זאת מכך שרבא בר אבוה היה גובה בשטרות ששם המלווה בהם הוא שם שכיח באותו מקום ולא היה חושש שמא המחזיק בשטר (ששמו זהה לשם שעל השטר) אינו המלווה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אביי חושב שלא ניתן ללמוד ממעשה זה, שמכיוון שבמקרה שנידון אצל רבא בר אבוה לא היתה שום סיבה לחשוש שהמחזיק בשטר אינו בעליו החוקי. אין חוששים שהשטר נפל מבעליו ומצאו המחזיק, כיוון שאנשים זהירים בשטר חוב שלא לאבדו. אין חוששים שמא השטר הופקד ביד זה שמחזיק בו, כיוון שאדם אינו מפקיד שטר ביד מי ששמו כשמו. ואין חוששים שמא השטר נמכר לזה שמחזיק אותו אך רק במסירה (בעוד שצריך גם כתיבה), כי אדרבא, לדעתו של אביי שטרות כן נקנים במסירה בלבד<sup id="ref240"><a href="#fn240">[240]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכל מקום נמצאנו למדים מסוגיה זו שגם כאשר השם אינו מזהה את השטר באופן חד ערכי, אנו מחזיקים שהשטר שייך לזה שמחזיק בו ששמו כשם שעל השטר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים פסקו כשיטת רבא בבבא בתרא, שמי שהיה שטר חוב על שם מישהו אחר יוצא מתחת ידו, אין צריך להביא ראיה, אך נחלקו בהבנת גדר דבריו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הר"י (מובא ברא"ש ב"ב פרק י סי' לז), הרשב"א (ב"ב שם) ועוד ראשונים סוברים שלהלכה שטרות נקנים "בכתיבה ומסירה" (כלומר, שיש לערוך שטר מיוחד על מכירת שטר החוב). לכן העולה מסוגית יבמות אינו קביל להלכה וההחזקה בשטר חוב אינה, כשלעצמה, מעידה על בעלות עליו. הרשב"א מסביר ששטר אין גופו ממון, והוא ראיה על דבר אחר. לכן, בניגוד למיטלטלין אחרים, בהם יש חזקה שהמחזיק בהם הוא בעליהם, בשטר חוב אין הדבר כך ויש צורך בראיה נוספת. ראשונים אלה מוכיחים את שיטתם מסוגיית הגמרא ביבמות. לדבריהם, לפי הדעה ששטרות אינם נקנים במסירה בלבד, אלא "בכתיבה ומסירה", רבא סבור, בניגוד לפשט דבריו בבבא בתרא, שיש צורך להביא ראיה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דיוקם הוא מהמשא ומתן שבין אביי לרבא על היכולת ללמוד מהמעשה ברבא בר אבוה שאין חוששים לשני אנשים בעלי אותו שם. אביי, כזכור, טען שאין ללמוד מהמעשה, כיוון שאין ממה לחשוש<sup id="ref241"><a href="#fn241">[241]</a></sup>. רבא אמנם לא עונה לו, אך צריך לומר שלדעת רבא היה ממה לחשוש- אם שטרות נקנים בכתיבה ומסירה ולא רק במסירה, ניתן להעלות על הדעת מקרה בו המלווה המקורי מכר את השטר לשני (ששמו כשמו), אך לא עשה זאת בכתיבה אלא רק במסירה, ולכן יש חשש שמא ישנה המוכר את דעתו ויפקע השטר. לכן, לו היה חשש לשני אנשים בעלי אותו שם היה רבא בר אבוה צריך לדרוש ראיה, אלא שאין חשש כזה, ומכאן הוכחתו של רבא. כך או כך, לעניין הצורך להביא ראיה, מוכח שרבא דווקא דורש ראיה. כיצד הדבר עולה בקנה אחד עם דברי רבא המפורשים בסוגיית הגמרא ביבמות ש"אין צריך להביא ראיה"? לדעת ראשונים אלה, דברים אלה נאמרו על פי השיטה ששטרות נקנים במסירה בלבד, אך להלכה, שאין הדבר כך, אין ללמוד ממקור זה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מול ראשונים אלה, שיטת הרמב"ם והר"י מיגא"ש היא שיש ללמוד את עיקר ההלכה מדברי רבא ביבמות כפשטם, ולכן המראה שטר וטוען שנמכר לו כדין, אינו נדרש להראות את שטר המכר של שטר החוב, או כל ראיה אחרת. עם זאת, הרמב"ם בהלכות מכירה<sup id="ref242"><a href="#fn242">[242]</a></sup> מסייג את הדברים ואומר ש"אין צריך עדים לענין קנייתו אבל צריך עדים לענין תביעתו". הגר"א (חו"מ סו מ) מסביר שהטעם לכך הוא בדיוק מה שהתבאר לעיל בשיטת הר"י. מה שעולה מסוגיית הגמרא בבבא בתרא, שרבא סובר שצריך להביא ראיה, הוא רק לעניין תביעה, כלומר, ראיה המאפשרת לתבוע את השטר מול לווה הטוען שהשטר אולי אינו של התובע. מה שאומר רבא ביבמות, ש"אין צריך ראיה", הכוונה לראיה מול <strong>ה</strong>מלווה <strong>הראשון</strong> הטוען שכלל לא מכר את השטר. בסוף ההלכה שלפנינו מוסיף הרמב"ם עוד, שאם המלווה טוען שלא מכר את השטר, הגם שאינו יכול לקבל את השטר בחזרה לידו בכך, יכול הלווה להיאחז בדבריו ולהיפטר בשבועת היסת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שני מקרים נוספים עליהם מדבר הרמב"ם בהלכה זו הם אם הלווה טוען שכבר פרע ואם מוכר השטר מודה שהשטר פרוע. במקרה הראשון הדין כפי שנלמד לעיל (פרק יד הלכה ב), שיכול הלווה להשביע את המלווה. במקרה זה ישבע מוכר השטר ולא הקונה, שהרי אין הקונה יכול לדעת האם השטר פרוע. במקרה השני מודה המלווה שהשטר נפרע. מכיוון שהמוכר שטר חוב וחזל ומחל את החוב, החוב מחול (ר' פרק ו מהלכות מכירה), אף כאן שמורה היכולת למלווה המקורי, מוכר השטר, לרוקן את השטר מתוכן. במקרה זה לא יוכל הקונה לפרוע מהלווה, אך יכול הוא לדרוש פיצוי מהמלווה שמכר לו את השטר<sup id="ref243"><a href="#fn243">[243]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (חו"מ סו יא) פוסק כדברי הרמב"ם, ומביא כי"א את החולקים על הרמב"ם וסוברים שגם לעניין קניין השטר על הקונה להציג ראיה. כדעה זו פוסק הרמ"א.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-7" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח-י</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    שטר שהיה ביד שליש והוציא מתחת ידו בבית דין ואמר פרוע הוא נאמן אף על פי שהשטר מקויים שאילו רצה היה שורפו או קורעו, וכן אם מת השליש ונמצא כתב יוצא מתחת ידי שליש ששטר זה המונח אצלו פרוע הוא ה"ז פרוע אף על פי שאין עדים על הכתב, אבל כתב שיצא מתחת ידי מלוה ששטר פלוני פרוע אפילו היה בכתב ידי המלוה אינו אלא כמשחק.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    היו עדים על הכתב אם היו מקויימין הרי השטר פרוע, ואם אין עליו קיום ישאלו העדים החתומין על זה השובר, אם לא ידעו או שאין העדים מצויין הואיל ומתחת ידי המלוה או מתחת ידי יורשיו יצא אין השובר כלום.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    נמצא השטר בין שטרות פרועין ה"ז פרוע ואף על פי שאין עדים על הכתב הנמצא, וכן אם נמצא כתוב בגופו של שטר בין מפניו בין מאחוריו ואפילו במקצתו שטר זה פרוע או נפרע ממנו כך וכך עושין ע"פ הכתב ואף על פי שאין על הכתב עדים ואף על פי שיצא מתחת ידי המלוה שאילו לא נפרע לא היה כותב על השטר.
+                </div>
+                
+
+                
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שטר ושובר היוצאים מתחת יד שליש</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיתים שני צדדים של הסכם ממוני מוסרים ממון או שטר ליד אדם שלישי הנאמן עליהם, כדי שידאג לכך שההסכם יצא לפועל באופן עליו סיכמו מבלי שלאחד מהם, המחזיק בשטר או בממון, יהיה יתרון בכך על פני חברו. בעניין זה נאמר בתוספתא (ב"מ פרק א הלכה י)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הודאת בעל דין כמאה עדים והשליש נאמן משניהן</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>זה אומר כך וזה אומר כך והשליש אמר כך, השליש נאמן.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אימתי? בזמן שהשלישות יוצא מתחת ידו</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אין השלישות יוצא מתחת ידו הרי הוא כאחד מכל אדם.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאשר יש מחלוקת בין הצדדים התוספתא אומרת שיש לנהוג על פי מה שאומר השליש. הדבר נכון כל עוד הממון/שטר ביד השליש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד נאמר שם בהמשך (הלכה יג)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>סמפון<sup id="ref244"><a href="#fn244">[244]</a></sup> שיש עליו עדים מתקיים בחותמיו</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ושאין עליו עדים</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ויוצא מתחת ידי שליש (ו)אחר חיתום שטרות כשר</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סמפון הוא שובר המעיד על פרעון השטר או חלקו. בד"כ הלוה מקבל שובר זה לידו כראיה שיוכל להציג. כאשר אין על הסמפון עדים אזי אם הוא נכתב על השטר עצמו לאחר חתימת העדים ניתן לסמוך עליו כי השטר מן הסתם היה ביד המלווה, ואם הוא הניח לכתוב עליו את הסמפון סימן שהוא נעשה על דעתו. כמו כן, אם הסמפון יוצא מתחת יד שליש והשליש אומר שאכן הוא אמת, גם כן אפשר לסמוך עליו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מעשה הקשור בדין זה מובא בגמרא בסנהדרין (לא.)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההיא איתתא דנפק שטרא מתותי ידה, אמרה ליה: ידענא בהאי שטרא דפריע הוה. הימנה <strong>רב נחמן</strong>.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רבא</strong> לרב נחמן: כמאן? כרבי? דאמר: אותיות נקנות במסירה?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: שאני הכא, דאי בעיא - קלתיה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איכא דאמרי, לא הימנה רב נחמן. אמר ליה רבא לרב נחמן: והא אי בעיא קלתיה! –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כיון דאיתחזק בבי דינא - איבעיא קלתיה לא אמרינן.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איתיביה רבא לרב נחמן: סימפון שיש עליו עדים - יתקיים בחותמיו, אין עליו עדים, ויצא מתחת ידי שליש או שיצא אחר חיתום שטרות - כשר. אלמא: שליש מהימן! תיובתא דרב נחמן.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מעשה בא לפני רב נחמן- אשה הציגה שטר חוב שנמסר לה ואמרה שהשטר פרוע. מנגד טען המלווה שהשטר אינו פרוע והוא רוצה לגבות בו. לפי ה"איכא דאמרי" הראשון, רב נחמן פסק על פי גרסתה של האשה לחובתו של המלווה. רבא מברר את טעמו של רב נחמן ושואלו האם פסק כפי שפסק משום שלדעתו שטרות נקנים במסירה ולכן האשה קנתה את השטר ועתה היא בעלת החוב בפועל ויכולה שלא לפרוע. רב נחמן עונה שהאמין לאשה בגלל סיבה שונה, שאילו היתה רוצה היתה שורפת את השטר וממילא לא היה ניתן לגבות בו, ולכן יש להאמין לה שהשטר פרוע. גרסה נוספת מובאת לפיה רב נחמן לא האמין לאשה, למרות שיכלה לשרוף את השטר, וזאת משום שבי"ד ראו את השטר בידה מלפני שטענה את טענתה (תוספות ד"ה "כיוון"). על דרך זו מקשה רבא מביא ראיה מדברי התוספתא שיש להאמין לשליש ולכן אף כאן יש להאמין לאותה אשה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בבבא מציעא (כא.) מביאה את התוספתא שלעיל ומבארת טעם נוסף מדוע שליש צריך להיות נאמן-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>סמפון שיש עליו עדים - יתקיים בחותמיו, אין עליו עדים, ויוצא מתחת ידי שליש או שיוצא לאחר חיתום שטרות - כשר.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יוצא מתחת ידי שליש - דהא הימניה מלוה לשליש...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, שובר המעיד על פריעה, אף אם אין עליו עדים עדיין תקף. הטעם לכך הוא שבעצם ההפקדה אצל השליש המלווה האמינו ונחשב הדבר כאילו התנה המלווה מראש לעשות כדברי השליש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">יותר מזה כותב הטור (חו"מ נה) בשם רב האי גאון, שבניגוד לאחד מבעלי הדין, השליש אף פטור מלהישבע על טענתו, כיוון שאין אדם חוטא ולא לו<sup id="ref245"><a href="#fn245">[245]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הבית יוסף (חו"מ סה ד"ה "ומה שכתב") מקשה מדוע צריך בכלל שימצא שובר אצל השליש, והרי למדנו בגמרא בסנהדרין שאפילו אם נמצא אצל השליש רק השטר, כבר נאמן לומר שהשטר פרוע. כנראה שמכח שאלה זו מבין הרמב"ם שאפילו אם נמצא שובר ביד השליש לאחר שמת (כך שהשליש עצמו אינו אומר דבר) עושים מה שכתוב בשובר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הטור (חו"מ סה) כותב שעושים מה שכתוב בשובר שביד השליש רק אם גם שטר החוב המתאים נמצא בידו, וזאת משום שאם לא כן, הוא כלל אינו נחשב שליש לגבי אותו חוב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (חו"מ סה יט) פוסק ששטר ושובר הנמצאים ביד שליש, אפילו אם כבר ראו בי"ד את השטר בידו ואפילו אם מת השליש, עושים מה שכתוב בשובר.</p>
+                    
+                </div>
+                
+                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שובר היוצא מתחת יד המלוה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המצב הרגיל הוא ששובר המעיד על פרעון או פרעון חלקי ניתן מיד המלווה ליד הלווה ונשמר אצל הלווה. במשנה בבבא מציעא (כ.) מוזכר מקרה בו השובר נמצא ביד המלוה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מצא שטר בין שטרותיו ואינו יודע מה טיבו - יהא מונח עד שיבוא אליהו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם יש עמהן סמפונות - יעשה מה שבסמפונות.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י מסביר שמדובר בשני מקרים שונים. בראשון שליש מצא שטר שהופקד אצלו ואינו יודע מי הפקידו, המלוה או הלוה, וממילא אין לדעת אם הוא פרוע. במקרה השני מדובר במלווה שמצא אצלו שובר המעיד על פרעון השטר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (כ:)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב ירמיה בר אבא</strong> אמר <strong>רב</strong>: סמפון היוצא מתחת ידי מלוה, אף על פי שכתוב בכתב ידו - אינו אלא כמשחק, ופסול. לא מבעיא כתוב בכתב יד סופר, דאיכא למימר ספרא אתרמי ליה וכתב, אלא אפילו כתוב בכתב ידו (=של מלווה) - פסול. סבר: דלמא מתרמי ואתי בין השמשות, וקא פרע לי, דאי לא יהיבנא ליה לא יהיב לי זוזי, אכתוב אנא, דכי אייתי לי זוזי - אתן ליה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנן: אם יש עמהן סמפונות - יעשה מה שבסמפונות! –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כדאמר <strong>רב ספרא</strong>: שנמצא בין שטרות קרועין, הכא נמי: שמצאו בין שטרות קרועין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה את דברי רב, ששובר המעיד על פרעון, שנמצא אצל המלווה, אין הולכים לפיו, כיוון שחוששים שהמלווה כתב את השובר כדי שיהיה זמין בידו לתנו ללווה מיד לכשיפרענו, ובסוף לא פרע. הגמרא מעמתת דברים אלו עם דברי המשנה לפיהם מלוה המוצא שובר ("סמפון") אצלו, עושים מה שבשובר. רב ספרא מתרץ שמדובר במשנה בכגון שההקשר מורה על כך שהשטר פרוע כי המלווה מצא את שטר החוב שהשובר מתייחס אליו, בין שטרות קרועין<sup id="ref246"><a href="#fn246">[246]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל הובאו דברי התוספתא, לפיהם אם שובר נמצא כתוב על השטר עצמו ("לאחר חיתום שטרות") יש ללכת על פיו אפילו אם אין עדים על השובר, וזאת משום שהמלווה לא היה מניח ללווה לכתוב שובר על השטר מבלי שאכן פרעו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הטעם הנאמר לעיל, שישנו מצב שהמלווה כותב שובר לפני הפרעון כדי שיהיה מוכן לתנו ללווה אינו רלוונטי במקרה של שובר הכתוב על השטר עצמו, כיוון שהיה יכול בפשטות לתת את השטר עצמו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם פוסק על פי דברי רב, ששובר ללא עדים הנמצא ביד המלווה אינו כלום, ומסייג על פי דברי התוספתא והגמרא, שאם נמצא השטר בין שטרות פרועים או שהשובר כתוב על השטר עצמו, אפילו אם אין עדים, עושים מה שבשובר<sup id="ref247"><a href="#fn247">[247]</a></sup>. כן פוסק גם השו"ע (חו"מ סה יח, כ-כא).</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-8" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המוצא שטר בין שטרותיו ואין יודע מה טיבו יהיה מונח עד שיבא אליהו.
+                </div>
+                
+
+                
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוצא שטר ואינו יודע מה טיבו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל הבאנו את דברי המשנה בבבא מציעא (כ.) -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מצא שטר בין שטרותיו ואינו יודע מה טיבו - יהא מונח עד שיבוא אליהו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם יש עמהן סמפונות - יעשה מה שבסמפונות.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י ועימו רוב המפרשים (רא"ש סי' נב, רשב"א, מאירי) מבינים שמדובר באדם שלישי, שאינו לא המלווה ולא הלווה, שמצא שטר בין שטרותיו, ואינו יודע אם הלווה הפקידו אצלו או המלווה או ששניהם מינוהו כשליש. פירוש זה רואה את החלק הזה של המשנה כהמשך של המשניות הקודמות העוסקות באדם שמצא בחוץ שטרות שאינם שלו ומורות האם ולמי להחזירם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחרת מפרשים הריא"ז (קונטרס הראיות, ראיה כא) והרי"ד (בפסקיו בבא מציעא כ:)<sup id="ref248"><a href="#fn248">[248]</a></sup>. לדבריהם המילה "שטרותיו" מורה על כך שהשטר שמצא שלו הוא, כלומר, שמדובר במלווה שמצא שטר חוב שמעיד על הלוואה שהלווה הוא עצמו, ואינו יודע האם פרוע השטר או לא<sup id="ref249"><a href="#fn249">[249]</a></sup> <sup id="ref250"><a href="#fn250">[250]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (חו"מ סה א) פוסק כדעת רוב המפרשים, ששליש המוצא שטר אצלו ואינו יודע מי הפקידו ובאילו נסיבות ותנאים, לא יחזירו לאף צד.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-9" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    האומר לבניו שטר בין שטרותי פרוע ואיני יודע איזה הוא שטרותיו כולן פרועין, נמצא לאחד שם שני שטרות הגדול פרוע והקטן אינו פרוע אמר לחבירו שטר לך בידי פרוע הגדול פרוע והקטן אינו פרוע, חוב לך בידי פרוע כל שטרות שיש לו עליו כולן פרועין.
+                </div>
+                
+
+                
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המצהיר ששטר בין שטרותיו פרוע ואינו יודע איזהו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה (ב"ב קעג.)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>האומר לבנו שטר בין שטרותי פרוע ואיני יודע אי זהו - שטרות כולן פרועין.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נמצא לאחד שם שנים - הגדול פרוע, והקטן אינו פרוע.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלוה האומר לבנו לפני מיתתו ששטר אחד מהשטרות שאצלו פרוע לא ציין איזה מהם, כל אחד מהלווים יכול לתלות שהשטר שעליו הוא הפרוע ולכן לא ניתן לגבות בשטרות אלה מול לווה הטוען שפרע. בדומה, אם הודה המלווה ששטר של לווה מסויים פרוע, ויש שני שטרות כאלה או יותר, יכול הלווה לטעון שהשטר על החוב הגדול יותר הוא הפרוע וידו על העליונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מתבאר שטעם הדבר הוא משום ש"יד בעל השטר על התחתונה", כלומר, הלווה הוא המוחזק והודאת המלוה מרוקנת את השטר לגמרי או חלקית ממשמעות של ראיה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הנימוקי יוסף (פ: מדפי הרי"ף) אומר שאם יש אינדיקציה לזהות השטר עליו דיבר המלוה, למשל, אם נמצא שובר חתום בעדים על אחד השטרות בין חפצי הלוה, הרי זה הפרוע וכל השאר גובים בהם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם והשו"ע (חו"מ סה כג) פוסקים את דברי המשנה, והרמ"א מביא את דברי הנימוק"י.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn228" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref228" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^228</a> 
+                        המשמעות בפועל היא, שהשליח יכול לסרב לתת את המעות ללווה ששלחו ואין בית הדין מוציאים מיד השליח ומחזירים ללווה.
+                    </li>
+                    
+                    <li id="fn229" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref229" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^229</a> 
+                        כפי שר' דוסתאי מתאר, היו אותם אנשים אצלם היה הפיקדון מופקד אלימים ומסוכנים.
+                    </li>
+                    
+                    <li id="fn230" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref230" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^230</a> 
+                        תוספות שם ד"ה "כהלכתא".
+                    </li>
+                    
+                    <li id="fn231" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref231" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^231</a> 
+                        הדבר לא נאמר במפורש, אך כך מבארים המפרשים.
+                    </li>
+                    
+                    <li id="fn232" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref232" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^232</a> 
+                        סוגיית הירושלמי שהובאה לעיל- "ראובן חייב לשמעון סמכיה גבי לוי" היא מקרה שכזה.
+                    </li>
+                    
+                    <li id="fn233" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref233" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^233</a> 
+                        וזאת הסיבה שאין בעה"ב עובר בהלנת שכר.
+                    </li>
+                    
+                    <li id="fn234" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref234" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^234</a> 
+                        ומה שאין בעה"ב עובר בהלנת שכר הוא מפני שהציווי לחנווני שקול כתשלום, ולעיתים זה אף נוח יותר לפועל שמקבל ישר מזונות מהחנווני (אולי אפילו בהנחה) ואינו צריך לטרוח לקנות.
+                    </li>
+                    
+                    <li id="fn235" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref235" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^235</a> 
+                        הרי"ד מסביר שאין הדבר סותר את דברי רבה, הסובר שהפועל חוזר ותובע את בעל הבית, שכן רבה ורב ששת מדברים על מקרה בו החנווני מסרב לשלם לפועלים ולכן יש היגיון שאפילו אם הקניין חל, עתה הוא פוקע כיוון שכל חלותו היתה בהנחה שהחנווני יסכים לשלם לפועלים. לעומת זה, אם החנווני מסכים לשלם, אלא שאין לו, החובה לשלם עוברת מבעל הבית אל החנווני.
+                    </li>
+                    
+                    <li id="fn236" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref236" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^236</a> 
+                        המפרשים נחלקו בהסבר הגמרארש"י מסביר שרבי תמה על שיטת ת"ק לפיה יוצא ששבועה אחת היא בוודאי לשקר, ולכן הגמרא מנסה ללמוד מדברי רבי "פועלין נשבעין לחנוני", ששיטתו היא שרק הפועלים נשבעים שלא קיבלו כלום מהחנוני ונוטלים מבעה"ב, והחנוני מפסיד. ורבא מסביר שאין הכוונה כך, אלא רבי אומר כת"ק שכולם נשבעים ונוטלים מבעה"ב, וכוונתו שהפועלים נשבעים לבעה"ב במעמד החנוני, וכן להיפך, גם שבועתו של החנוני נעשית במעמד הפועלים.הראב"ד (כתוב שם, ומביאו במלחמת ה' ל. מדפי הרי"ף) מבאר שרבי חשב לפרש את דברי המשנה "הוא נשבע ונוטל והם נשבעים ונוטלים" באופן של "שבועה מדורגת"- החנווני נשבע ונוטל מבעה"ב, והפועלים נשבעים ונוטלים מהחנוני. ועל זה הוא מקשה- מדוע החנוני נשבע ולא מקבל תמורת זה כלום (שהרי נוטל ונותן). ר' חייא מסביר שכוונת ת"ק היא ששניהם, הפועלים והחנוני נשבעים לבעה"ב, כפי שהסברנו במשנה. אמנם, מדברי רבי "פועלין נשבעין לחנוני" ניתן להבין כדרך של "שבועה מדורגת", אך רבא מסביר שאין הדבר כך, אלא פועלים נשבעים לבעה"ב במעמד החנוני.בעל המאור (שם) גורס במשנה "אמר בן ננס: כיצד אלו ואלו באין לידי שבועת שוא? אלא הוא נוטל בשבועה והן נוטלין שלא בשבועה". כלומר, לגרסתו החנוני נוטל בשבועה והפועלים לא. טעם הדבר הוא משום שבעה"ב בוודאי היה חייב לפועלים וספק אם פרע, ולעומ"ז לחנווני ספק אם בכלל התחייב. על זה תמה רבי, שעדיף שהפועלים יטלו בשבועה והחנווני לא יטול דבר כדי שלא יצא שישלם בעה"ב פעמיים. ועונה לו ר' חייא, שראוי הוא שישלם בעה"ב פעמיים משום שהוא אחראי למצב הביש שכן לא הורה לחנוני לתת לפועלים בפני עדים.
+                    </li>
+                    
+                    <li id="fn237" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref237" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^237</a> 
+                        שיטת הריטב"א מיוסדת במידה רבה על הגמרא בבבא מציעא (ג.). הגמרא שם דנה בהבדל שבין מקרה בו שנים הפקידו כסף אצל  שלישי, אחד מנה ואחד מאתיים, וכל אחד מהם טוען ששלו המאתיים, שבזה אין השלישי מחזיר להם את המנה שבמחלוקת (ולדעת ר' יוסי, אין מחזי להם כלום, כדי ליצור סנקציה כלפי השקרן), לבין המקרה שלפנינו, בו בעל הבית משלם בוודאי יותר מהראוי. וכך אומרת הגמרא-בין לרבנן ובין לרבי יוסי, התם גבי חנוני על פנקסו דקתני זה נשבע ונוטל וזה נשבע ונוטל, מאי שנא דלא אמרינן נפקיה לממונא מבעל הבית, ויהא מונח עד שיבא אליהו, דהא בודאי איכא רמאי? - אמרי: התם היינו טעמא, דאמר ליה חנוני לבעל הבית: אנא שליחותא דידך קא עבדינא, מאי אית לי גבי שכיר? אף על גב דקא משתבע לי לא מהימן לי בשבועה, את האמנתיה, דלא אמרת לי בסהדי הב ליה, ושכיר נמי אמר ליה לבעל הבית: אנא עבדי עבידתא גבך, מאי אית לי גבי חנוני? אף על גב דמשתבע לי לא מהימן לי, הלכך תרוייהו משתבעי ושקלי מבעל הבית.
+                    </li>
+                    
+                    <li id="fn238" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref238" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^238</a> 
+                        אם רק תביעת הפועלים לפנינו, מודה הרמ"ה לרמב"ם שנוטלים ללא שבועה, שהוא עיקר דינם לפי כל השיטות.
+                    </li>
+                    
+                    <li id="fn239" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref239" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^239</a> 
+                        ספציפית מדובר שם באדם שהלך למדינת הים ושלחו שליחים לומר שמת, ואנו מסתפקים אם ניתן להתיר את אשתו או שמא השמועה מתייחסת לאדם אחר בעל אותו שם שהיה באותו מקום.
+                    </li>
+                    
+                    <li id="fn240" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref240" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^240</a> 
+                        כך שאם השטר נקנה ונמסר מיד בעליו הראשון ליד בעליו השני ששמו כשם הראשון אין בכך פסול והשני גובה בו.
+                    </li>
+                    
+                    <li id="fn241" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref241" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^241</a> 
+                        אין חוששים לנפילה או לפיקדון, ואף למכירת השטר אין חוששים, כי אדרבה, אם מסרו לשם מכירה, הרי הוא מכור, כי שטרות נקנים במסירה.
+                    </li>
+                    
+                    <li id="fn242" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref242" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^242</a> 
+                        פרק ו הלכה יא
+                    </li>
+                    
+                    <li id="fn243" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref243" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^243</a> 
+                        המגיד משנה דן בשאלה האם פיצוי זה הוא המחיר ששילם הקונה עבור השטר, או שמא ערך החוב שחשב הקונה לגבות בשטר. המגיד משנה נוטה לומר כדרך השניה ואף מדייק את דבריו מהרמב"ם.
+                    </li>
+                    
+                    <li id="fn244" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref244" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^244</a> 
+                        משמעות המילה "סמפון" היא כל דבר המבטל דבר אחר, ובהקשר שלנו, שובר המבטל שטר.
+                    </li>
+                    
+                    <li id="fn245" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref245" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^245</a> 
+                        וצ"ע האם זהו פירושו של רב האי גאון לטעם הנאמנות שנתפרש בגמרא או שזה טעם אחר שיכול להתקיים במקביל לטעם שבגמרא.
+                    </li>
+                    
+                    <li id="fn246" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref246" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^246</a> 
+                        השטר עצמו כמובן אינו קרוע. כמו כן, מדברי הרמב"ם משמע שלגרסתו היה כתוב "שטרות פרועין"..
+                    </li>
+                    
+                    <li id="fn247" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref247" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^247</a> 
+                        עי' בהמשך הערה שגיאה! הסימניה אינה מוגדרת..
+                    </li>
+                    
+                    <li id="fn248" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref248" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^248</a> 
+                        וכן נראה לדייק באור זרוע (חלק ד פסקי סנהדרין סימן ע).
+                    </li>
+                    
+                    <li id="fn249" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref249" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^249</a> 
+                        על פי פירוש זה ברור מדוע הגמרא מקשה על המשך המשנה "אם יש עמהם סמפונות..." מדין "סמפון שנמצא ביד מלוה", כיוון שכל הסיפא של המשנה, גם "המוצא שטר בין שטרותיו...", וגם ההמשך "אם יש עמהם סמפונות...", הכל מדובר במלווה שמצא. רש"י, שפירש כפירוש הראשון נאלץ, כדי לעלות בקנה אחד עם דברי הגמרא, לחלק את הסיפא ולאמר שמדובר בשני מקרים שונים, הראשון בשליש שמצא והשני במלווה, אך כאמור לדעת הריא"ז אין צורך בזה.עם זאת, נראה שהטעם שרוב הראשונים נמנעו מלפרש כריא"ז הוא קושי הסברה הכרוכה בכך. על פי דברי ריא"ז, כל מלווה אמור לזכור את הסטטוס של כל שטר הנמצא עימו ולא ניתן להניח שאם השטר עדיין אצלו סימן שלא נפרע. הדבר קשור לדין הנלמד לעיל (יד ב) שיכול הלווה להשביע את המלווה שהשטר אינו פרוע. על פי ריא"ז, אף אם לא תבע הלווה שבועה מהמלווה, צריך המלווה מצידו להיות בטוח מה טיבו של השטר, כך שיוכל להישבע על זה לפי הצורך. לעומ"ז לדעת רוב הראשונים החולקים עליו יש חזקה ששטר הנמצא אצל המלווה, שלו הוא. רק אם מתעוררת ריעותא מצד תביעה של הלווה שישבע המלווה, צריך לבררה על ידי שבועה.
+                    </li>
+                    
+                    <li id="fn250" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref250" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^250</a> 
+                        לעובדה שריא"ז מפרש את כל סוף המשנה במלווה שמצא שטר בין שטרותיו ואינו יודע אם פרוע או לא יש משמעות בביאור דין שובר שנמצא אצל המלווה. בעוד שלדעת רוב המפרשים אם יש על השובר חתימה של עדים עושים מה שבשובר, אפילו אם המלווה טוען שכתב את השובר כהכנה לפרעון אך לא היה פרעון, לדעת ריא"ז כל דין הגמרא והכשר השובר (אם עדים חתומים עליו, או אם נמצא השטר בין שטרות פרועים) אמור רק ביחס למקרה בו המלווה אינו יודע מה טיבו של השטר, כלומר, המלווה עצמו בספק. אם המלווה טוען שלא נפרע השטר, אפילו אם קיים שובר אצל המלווה, העובדה שגם השטר וגם השובר נמצאים אצל המלווה מורה על כך שיש להאמין לו.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

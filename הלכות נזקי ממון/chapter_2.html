@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הלכות נזקי ממון - פרק ב</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ב</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ב)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    היחס בין אבות לבין תולדות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    דין צרורות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ג-ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    צרורות – הלכה למשה מסיני
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-3-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    התיזה ברשות הרבים והזיקה ברשות הניזק
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-3-3" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    כח כוחו ככוחו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכות ה-ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שינוי בצרורות
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-4-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שינוי בצרורות, במקום שאי אפשר שלא להתיז גם לו היתה הולכת כדרכה:
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז-ח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    נזק וחצי נזק – ממון וקנס
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ט
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    צרורות בקול וברוח
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-7" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכות י-יא
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-7-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    נזק מתרנגולים ומדליל שברגליהם
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-8" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יג-יד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-8-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    נזק ישיר ועקיף בתרנגולים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-9" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה טו-טז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-9-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    תחילתו בפשיעה וסופו באונס:
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-9-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שינוי וכדרכו בקפיצת הכלב והגדי:
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-10" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יז-יח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-10-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    נזק שלם וחצי נזק בבע"ח שגרם לשריפה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-11" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יט
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-11-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    דין המשסה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-12" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה כ'
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-12-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    רבוצה ומהלכת ברה"ר
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">הלכות נזקי ממון</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק ב</h1>
+            </div>
+
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>אחד אבות נזקים ואחד התולדות אם היה האב מועד תולדתו מועדת ואם היה תם תולדתו כמוהו, וכל אבות נזיקין וכל תולדותיהן מועדין הן מתחלתן חוץ מקרן ותולדותיו שהן תמים בתחלה עד שיועדו כמו שביארנו.</strong> אחד אבות נזיקין ואחד התולדות אם היה האב מועד תולדתו מועדת. א"א הא לא מיחוור דהא אפילו מקרן לקרן אמרו /בבא קמא/ (מה) מועד לקרן ימין אינו מועד לקרן שמאל כ"ש לביעוט רגל או לנשיכת שן והוא עצמו לא כתב כן למעלה (פ"א ה"ד - ה), ואולי כך רצה לומר תולדותיהן כיוצא בהן כמו שהיא מועדת מתחילתה לאכילת פירות כך היא מועדת להתחכך בכותל להנאתה וכן כולן.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היחס בין אבות לבין תולדות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ב:-ג:) דנה בשאלה האם תולדות אבות הנזיקין דיניהם שווים לאבות, ובתשובתו של <strong>ר' פפא</strong>, שענה שיש תולדות שהם כמו האבות ויש שאינם כמו האבות. הגמרא מסיקה שכל תולדות הקרן, השן והרגל דינם כאבותיהם, וכך פוסק כאן הרמב"ם.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>כל תולדה כאב שלה חוץ מצרורות המנתזין מתחת רגלי הבהמה בשעת הילוכה שאע"פ שתולדת הרגל הן ופטור עליהן ברשות הרבים כרגל ואם הזיקו ברשות הניזק משלם מן היפה</strong><strong> שבנכסיו כרגל שהוא אב</strong><strong> אע"פ כן אינו משלם אלא חצי נזק. </strong>
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין צרורות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ג:) מנסה להבין גם למה התכוון ר' פפא כשאמר שלעיתים אין דין התולדות כדין האבות, ומסיקה שהכוונה לדין צרורות. דהיינו נזק משני שלא נגרם ע"י רגלי הבהמה עצמה אלא ע"י דבר הניתז ממנה. דין הצרורות אינו כדין הרגל, שהרי על הרגל משלמים נזק שלם ואילו על צרורות משלמים חצי נזק. הצרורות מכונים תולדה של רגל משום שכמו רגל משלמים עליהם מן העליה ולא מגופה של הבהמה. הגמרא מציינת ש<strong>רבא</strong> מתלבט האם משלמים על נזק צרורות מגופה של הבהמה כמו בכל חצי נזק, או מעליה, כנזק רגל רגיל. אמנם, גם לפי האפשרות שאף בצרורות משלמים מגוף הבהמה, הם עדיין מכונים תולדה של רגל, שכן כמוה, פטורים עליהם ברשות הרבים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מציג את דין הצרורות כתולדה של רגל, ופוסק שמשלם עליהם מהעליה ולא מגוף הבהמה. הרמב"ם מביא את שתי הסיבות המוזכרות בגמרא לכך שצרורות קרויות תולדה של רגל.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>כיצד, בהמה שנכנסה לחצר הניזק והלכה והיו צרורות מנתזין מתחת רגליה ושברו את הכלים משלם חצי נזק מן היפה שבנכסיו, ודבר זה הלכה מפי הקבלה היא. </strong>
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>וכן אם היתה מהלכת ברשות הרבים ונתזו צרורות מתחת רגליה לרשות הניזק ושברו את הכלים משלם חצי נזק, דרסה על הכלי ברשות הניזק ושברתו ונפל על כלי אחר ושברו, על הראשון משלם נזק שלם ועל האחרון חצי נזק. </strong>
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">צרורות – הלכה למשה מסיני</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (יז:) מובאות כמה ברייתות ובהן דוגמאות למחלוקת התנאים- <strong>חכמים</strong> כנגד <strong>סומכוס</strong>. בין השאר, חלוקים <strong>חכמים</strong> על <strong>סומכוס</strong> במקרה של בהמה שהתיזה צרורות עפר בהליכתה, והזיקו, במקרה של חזיר שנבר באשפה, התיז והזיק, או תרנגולים ששברו כלים ברוח שגרמו לה בכנפיהם. <strong>סומכוס</strong> סובר שכל אלה דינם כנזק רגל ישיר ומשלם נזק שלם, ואילו <strong>חכמים</strong> סוברים שמשלם חצי נזק. <strong>רבא</strong> מסכם שהמחלוקת בין סומכוס לחכמים אינה האם נזק בלתי ישיר מכח מעשה הבהמה הוא כנזק בגופה, שכן כולם מסכימים שהתזתה של הבהמה אינה שונה עקרונית מנזק שהיא מזיקה בגופה ממש. המחלוקת היא בנקודה אחרת- <strong>חכמים</strong> לומדים דין צרורות הלכה למשה מסיני, דהיינו, שעל נזק שנבע מהתזה שהתיזה הבהמה אפילו אגב הליכה כדרכה, יש לשלם רק חצי נזק. לעומתם, סומכוס אינו סובר שקיים דין צרורות וממילא לדעתו יש לשלם נזק שלם על התזה, ככל נזק רגל ישיר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יז.) עוסקת בנזקי רגל של בהמה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היתה מבעטת, או שהיו צרורות מנתזין מתחת רגליה, ושברה את הכלים - משלם חצי נזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דרסה על הכלי ושברתו, ונפל על כלי ושברו - על הראשון משלם נזק שלם, ועל האחרון משלם חצי נזק...</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יט.) דנה, האם המשנה היא כחכמים או כסומכוס. מצד אחד, ניתן לפרש שהרישא של המשנה עוסקת בשני מקרים שונים- הראשון הוא ביעוט שלא כדרכה, בו הזיקה באופן ישיר, ועליה יש לשלם חצי נזק בלבד, מדין שינוי (כנזק תם), והשני הוא התזת צרורות תוך כדי הליכה רגילה, עליה המשנה מחייבת חצי נזק מדין צרורות, כדברי חכמים. מצד שני ניתן לפרש שהמשנה מדברת על מקרה אחד- התזת צרורות תוך כדי ביעוט, עליו חייבים חצי נזק מדין שינוי בלבד (שהביעוט שינוי הוא, ושיעור הבנת המשנה הוא "היתה מבעטת והזיקה ישירות או בצרורות"). אם כך, המשנה היא כדברי סומכוס, שהתזת צרורות כשלעצמה, אין בה בכדי לחייב חצי נזק. הגמרא מוסיפה, שאם נפרש את המשנה כשיטת חכמים, הרי שהסיפא, העוסקת בכלי שניזוק ונפל על כלי נוסף והזיקו, תובן אף היא על פי דין צרורות- הכלי הראשון הוא נזק ישיר עליו חייבים נזק שלם, ואילו השני ניזוק מצרורות הכלי הראשון שהתיזה הבהמה, ועליו יש לשלם חצי נזק בלבד. הגמרא מציינת ש<strong>ר' אשי</strong> פירש את המשנה כשיטת חכמים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> וכל הראשונים פוסקים כחכמים.</p>
+                    
+                </div>
+                
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">התיזה ברשות הרבים והזיקה ברשות הניזק</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יט.) דנה בשאלה מה הדין אם התיזה צרורות ברשות הרבים שהזיקו ברשות היחיד (הניזק). מצד אחד נאמרת סברה לפטור- "עקירה אין כאן, הנחה יש כאן?!". כלומר, כיוון שמדובר בתולדת הרגל, ועל רגל ברה"ר פטור, שכן יש רשות לבהמה ללכת כדרכה ברשות הרבים, ממילא ההתזה היתה ברשות, וכי מה בכך שהפגיעה היתה ברשות הניזק? מצד שני מביאה הגמרא ברייתות מהן משמע שאף שההתזה היתה ברשות הרבים, כיוון שהפגיעה היתה ברשות הניזק, חייב. הכרעת הגמרא היא שאכן חייב, וכך פוסק ה<strong>רמב"ם</strong>, וה<strong>שו"ע</strong> (שצ ד).</p>
+                    
+                </div>
+                
+                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כח כוחו ככוחו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, ה<strong>גמרא</strong> (יט.) מתלבטת האם להעמיד את משנת 'כיצד הרגל' (יז.) כסומכוס או כחכמים. הגמרא מעירה, שאם נבחר להעמיד את משנתנו כסומכוס, אזי חייבים לפרש את המקרה של "דרסה על הכלי ושברתו, ונפל על כלי ושברו" (בו חייב נזק שלם על הראשון וחצי נזק על השני), במקרה בו הכלי הראשון נשבר כבר הוא ע"י צרורות (ועליו משלם נזק שלם לפי סומכוס, שכן לפיו אין דין צרורות), ואילו הכלי השני, נשבר מרסיסיו של הראשון, ועליו משלם חצי נזק. משמעות הדבר היא שאמנם לסומכוס צרורות ישירים הם כנזק בגופו, אך מודה הוא לחכמים בצרורות עקיפים, או בלשון הגמרא 'כח כוחו', שבהם משלם חצי נזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' אשי</strong> (יט.) שואל שאלה זו במפורש- האם כח כוחו לסומכוס נחשב ככוחו ומשלם נזק שלם, או שמשלם חצי נזק בלבד, ונשאר הדבר בספק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סי' ב', ד"ה 'בעי') חידש שאף לשיטת ההלכה הפוסקת כחכמים, ישנה משמעות לשאלת ר' אשי, שהרי ר' אשי שואל האם סומכוס מודה להלכה למשה מסיני לחייב חצי נזק בלבד לפחות בכח כוחו. ומכאן נשמע, שברור שלהלכה כח כוחו ככוחו, כלומר, חכמים הלומדים דין צרורות בכוחו, כל שכן שיסברו כך בכח כוחו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, מדברי ה<strong>תוספות</strong> (כב. ד"ה 'ורבי יוחנן') משמע שכלל לא ברור שלהלכה כח כוחו ככוחו, ואפשר שפטור עליו לגמרי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> וה<strong>רי"ף</strong> לא התייחסו ישירות לשאלת כח כוחו, שכן שאלה זו נשאלת על פי שיטת סומכוס שכלל אינה להלכה. ויש שהוכיחו מדברי הרמב"ם (לקמן בהלכה יז) שכח כוחו אינו ככוחו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שצ ה) כותב את לשון הרמב"ם, אך מוסיף את שיטת הרא"ש, לחייב על כח כוחו ככוחו, כ"יש אומרים".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">[בעניין דריסה על כלי, שנתגלגל ונשבר רק בריחוק מקום, עי' לקמן הלכה יג]</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכות ה-ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>היתה מהלכת ברשות הרבים ובעטה והתיזה צרורות והזיקו ברשות הרבים פטור, ואם תפש הניזק רביע נזק אין מוציאין מידו, שהדבר ספק הוא שמא שינוי הוא ואינו תולדת רגל שהרי בעטה. </strong>היתה מהלכת בר"ה ובעטה וכו' שהדבר ספק שמא שינוי הוא. א"א זו טעות היא כי בודאי הביעוט שינוי הוא דאי לא שינוי בצרורות לרביע נזק היכי משכחת לה ובעיא דר' ירמיה מר' זירא /בבא קמא/ (יט) לא בביעוט הוא אלא בצרורות כי אורחייהו וקא מיבעיא ליה אם הוא חייב בר"ה הואיל וחצי נזק הוא כקרן או פטור דכי אורחיה הוא כרגל ופשט ליה כהלכתא דפטור ולדידיה נמי דגריס ביעטה הא פשט ליה דתולדה דרגל הוא.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>בעטה בארץ ברשות הניזק והתיזה צרורות מחמת הבעיטה והזיקו שם חייב לשלם רביע נזק שזה שינוי הוא בהתזת הצרורות, ואם תפש הניזק חצי נזק אין מוציאין מידו, ואפילו היתה מהלכת במקום שאי אפשר לה שלא תתיז ובעטה והתיזה משלם רביע נזק, ואם תפש הניזק חצי נזק אין מוציאין מידו. </strong>
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שינוי בצרורות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (יט.) מעלה <strong>ר' אשי</strong> את השאלה, האם יש בצרורות שינוי לרביע נזק. בהמשך מבהירה הגמרא את השאלה יותר- כוונתו של ר' אשי לדון בדברי המשנה (יז.)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"היתה מבעטת, או שהיו צרורות מנתזין מתחת רגליה ושברה את הכלים - משלם חצי נזק",</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אפשרות אחת היא שהצרורות באים מהליכה רגילה, ודווקא בהם חייב חצי נזק מדין צרורות, אך יתכן שאם בעטה והתיזה צרורות, חייב רק רביע נזק, שכן אין זה כדרכה, ויש לשלם רק חצי ממה שהיה משתלם כדרכה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אפשרות שניה היא שמדובר במקרה שהביעוט נמצא בשני המקרים שבמשנה. כלומר בעטה והתיזה צרורות. או אז יש ללמוד מדברי המשנה, שבין בביעוט ישיר ובין בביעוט המתיז צרורות, חייב רק חצי נזק. ר' אשי נשאר בספק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך שואל <strong>ר' ירמיה</strong> את ר' <strong>זירא</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"היתה מהלכת ברה"ר (ובעטה) והתיזה והזיקה, מהו? לקרן מדמינן ליה וחייבת, או דלמא תולדה דרגל הוא ופטורה?"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">והתשובה היא שאכן מדובר בתולדה דרגל. (אם גורסים את המילה "ובעטה", השאלה מאד דומה לשאלתו של ר' אשי).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש את שאלת ר' אשי כך- האם כמו שבהיזק ישיר תם משלם חצי נזק ומועד נזק שלם, כך גם בהיזק עקיף בו מועד משלם חצי נזק, ישלם התם (כלומר, ששינה), רק רביע נזק, או שמא לא מצינו תם שמשלם פחות מחצי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מפרש שעל פי הדרך ש"יש שינוי בצרורות לרביע נזק", ביעטה והתיזה צרורות זהו מקרה של קרן, ולכן חייב חצי ממה שהיה חייב לו היה מועד, דהיינו רביע נזק, וחייב בין בחצר הניזק ובין ברשות הרבים. לעומת זאת, אם "אין שינוי בצרורות לרביע נזק", פירושו שלמרות שניתזו הצרורות ע"י בעיטה, עדיין הדבר נחשב כרגל, ולכן פטור ברה"ר, וחייב חצי נזק ברשות הניזק. במילים אחרות, אם "יש שינוי בצרורות לרביע נזק" יש בדבר קולא וחומרא- קולא, שחייב רק רביע נזק, ולא חצי נזק כבצרורות כדרכה, וחומרא- שחייב לשלם גם כשהזיק ברשות הרבים, כבקרן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השורש לשיטת הרמב"ם נעוץ כנראה בכך שהרמב"ם גורס בבעיית ר' ירמיה "היתה מהלכת ברה"ר ובעטה והתיזה והזיקה" והשאלה היא האם פטורה או חייבת, ומכאן שהשאלה היא האם מדובר ברגל הפטורה ברה"ר או קרן החייבת גם ברה"ר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כיוון שהדבר נשאר בספק, פוסק הרמב"ם שעל התזת צרורות בביעוט ברשות הרבים פטור (כי ספק רגל הוא) ואם תפס הניזק רביע נזק אין מוציאים מידו (על הצד שקֵרֵן היא), ואילו באותו מקרה בחצר הניזק, בוודאי שלפחות רביע נזק חייב, על הצד שמדובר בקרן, אך אם מדובר ברגל, הרי שחייב חצי נזק, ולכן משלם רבע נזק והרבע השני נותר בספק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד </strong>חולק על הרמב"ם וטוען שבכל אופן, כיוון שביעטה, הרי זו קרן, ולכן ברשות הרבים חייב בוודאי לפחות רביע נזק. וכל השאלה היא האם חייב חצי נזק או רביע נזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראב"ד אינו גורס את המילה "ובעטה", ולפיו שאלת ר' ירמיה שונה לגמרי משאלת ר' אשי (האם יש שינוי בצרורות לרביע נזק). ר' ירמיה שאל האם דין צרורות, שמשלם חצי נזק הוא עדיין שייך לדין הרגל, ולכן פטורים על צרורות ברה"ר, או שמא עצם כך שמשלמים חצי נזק, אומר שמדובר בקרן, וחייב עליו ברה"ר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצ ז) פוסק כרמב"ם.</p>
+                    
+                </div>
+                
+                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שינוי בצרורות, במקום שאי אפשר שלא להתיז גם לו היתה הולכת כדרכה:</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הגמרא</strong> (שם) מעלה את השאלה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"היתה מהלכת במקום שאי אפשר לה אלא אם כן מנתזת, ובעטה והתיזה והזיקה, מהו? כיון דאי אפשר לה אורחיה הוא, או דלמא השתא מיהא מחמת ביעוט קמנתזה צרורות?".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר ששאלה זו נסמכת על האפשרות שיש שינוי בצרורות לרביע נזק, והכוונה היא לשאול האם הבעיטה נחשבת שינוי גם כאשר היא איננה התנאי להתזה, והיתה מתיזה גם מבלי לבעוט.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מביא הסבר נוסף (אך דוחה אותו)- לפי הסבר זה, באופן כללי, אם הועדה לבעט, והתיזה בביעוט, אין לדבר דין צרורות, אלא דין קרן המועדת, ולכן חייב נזק שלם (או במילים אחרות- אין דין צרורות אלא כאשר ההתזה היתה ע"י דבר המועד מתחילתו, כהליכה רגילה). והשאלה היא במקום שאי אפשר שלא תתיז, האם נאמר שההתזה באה בגלל הביעוט ולכן זו קרן מועדת, או שכיוון שהביעוט לא היה תנאי להתזה, אין משלם אלא חצי, כאילו הלכה כדרכה והזיקה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מה<strong>רמב"ם</strong> משמע שהוא מפרש כפירוש הראשון ברש"י, שהספק הוא האם בביעוט והתזה בחצר הניזק, במקום שהיתה מתיזה אף ללא ביעוט, יש לשלם רביע נזק או חצי נזק. מכיוון שגם בעיה זו עלתה בתיקו, פוסק הרמב"ם גם כאן שמדובר בספק, וכל התופס אין מוציאים מידו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שצ ז) כותב כלשון כרמב"ם.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>כל המשלם נזק שלם הרי התשלומין ממון שהוא חייב לשלמו כמי שלוה מחבירו שהוא חייב לשלם, וכל המשלם חצי נזק הרי התשלומין קנס חוץ מחצי נזק של צרורות שהוא הלכה כמו שביארנו. </strong>
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>זה הכלל כל המשלם מה שהזיק הרי זה ממון וכל המשלם יתר או פחות כגון תשלומי כפל או חצי נזק הרי היתר על הקרן או הפחות קנס, ואין חייבין קנס אלא ע"פ עדים אבל המודה בכל קנס מן הקנסות פטור. </strong>
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק וחצי נזק – ממון וקנס</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בגמרא</strong> (טו.) חלקו האמוראים לגבי מעמד תשלומי חצי נזק של תם. <strong>ר' פפא</strong> סבר שהם תשלומי ממון, ו<strong>ר' הונא </strong>סבר שהם קנס, ולכן אין דנים אותם שלא במומחים סמוכים, ואם מודה המזיק, פטור הוא, שמודה בקנס (לפני שבאו עדים) פטור. <strong>הגמרא</strong> מסבירה שהמחלוקת תלויה בשאלה האם תשלומי חצי נזק הם קולא שהקלה תורה על המזיק, שמעיקר הדין היה צריך לשלם הכל, ואז מדובר בממון, או שמא, מדובר בחומרא שהחמירה התורה על המזיק, שכעיקרון לא היה אמור לשלם כלום, ואז מדובר בקנס. למסקנה פוסקת הגמרא, שחצי נזק הוא קנס, ובזה שונה הוא מחצי נזק צרורות, שהוא תשלום ממון.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>תרנגול שהושיט ראשו לאויר כלי זכוכית ותקע בו ושברו, אם היו בתוכו תבלין וכיוצא בהן שהושיט ראשו כדי לאכלן, על התבלין משלם נזק שלם ועל הכלי משלם חצי נזק כחצי נזק צרורות שכך הוא דרכו ואם היה הכלי ריקן הרי זה משונה ומשלם חצי נזק ככל הקנסות. </strong>תרנגול שהושיט ראשו וכו' ואם היה הכלי ריקם הרי זה משונה ומשלם חצי נזק. א"א זה טעות הוא דהא צרורות על ידי שינוי הוא ובעיא היא אם יש שינוי לרביע נזק או לא.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">צרורות בקול וברוח</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יח:) מביאה את דברי <strong>רמי בר יחזקאל</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"תרנגול שהושיט ראשו לאויר כלי זכוכית ותקע בו ושברו - משלם נזק שלם",</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבינה שקולו של התרנגול הוא כצרורות ורוצה להסביר זאת בכך שיש העדאה לצרורות, ושאחר שלוש פעמים של צרורות, משלמים אף עליהם נזק שלם. אך הגמרא דוחה, ואומרת שרמי בר יחזקאל סובר כסומכוס, שאין דין צרורות ולכן חייב נזק שלם. אך עדיין תמהה הגמרא: "והא משונה הוא!", וחצי נזק יש לו לשלם! ומתרצת שיש בכלי זרעונים ולכן זה כדרכו, וחייב נזק שלם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>מבאר שאכן רמי בר יחזקאל הולך עפ"י סומכוס, אך עפ"י ההלכה, שאינה כסומכוס, חייב על הכלי חצי נזק בלבד כדין צרורות. אמנם, הרמב"ם מוסיף שאם אין זרעונים בכלי, חייב חצי נזק (משום שאז זה אינו כדרכו).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> וה<strong>ראב"ד</strong> חולקים וסוברים שאם אין בכלי זרעונים הרי שמדובר בצרורות בשינוי, וזהו הרי ספק אם משלם חצי נזק או רביע נזק. ולכן הם מקשים על הרמב"ם שאמר שמשלם בזה חצי נזק<sup id="ref3"><a href="#fn3">[3]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">להבדיל מכל הראשונים הנ"ל, ה<strong>רי"ף </strong>פוסק את דברי רמי ב"י ככתבם, שאם יש זרעונים בכלי, חייב על הכלי נזק שלם. ומקשה עליו <strong>בעה"מ</strong>, שהרי מדובר בצרורות, ורק לסומכוס חייב כאן נזק שלם, ואין הלכה כסומכוס. ומתרץ <strong>הרשב"א,</strong> שהרי"ף הבין שהגמרא דוחה את ההעמדה של דברי רמי ב"י כסומכוס, שכן תקיעה בכלי אינה דרכו של התרנגול, ולכן הגמרא מעמידה מחדש, שאין מדובר כאן על נזק בתקיעה כלל (כלומר, אין מדובר בצרורות), אלא שהיו זרעונים בכלי, והנזק היה בגופו תוך כדי אכילה (או כדי להגיע לזרעונים), וחייב נזק שלם לכ"ע. לפי הסבר זה אין מחלוקת עקרונית בין הרי"ף לשאר הראשונים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שצ ט) כתב את הדין העקרוני שאף נזק ע"י השמעת קול נחשב כצרורות, ואם הזיקו התרנגולים ע"י השמעת קול תוך כדי אכילה, נחשב הדבר כצרורות, ומשלם בעל התרנגול על הכלי חצי נזק. אמנם, לגבי המקרה כאשר לא היו זרעונים בכלי, לא פוסק השו"ע במפורש כאחד הראשונים, ורק אומר שהדבר נידון כקנס, ולכן איננו דנים אותו בזמן הזה, כיוון שאיננו דנים קנסות.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-7" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכות י-יא</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>וכן סוס שצנף וחמור שנער ושבר את הכלים משלם חצי נזק. התרנגולין מועדין להלך כדרכן ולשבר, היה חוט או רצועה קשור ברגליהן ונסתבך כלי באותו החוט ונתגלגל ונשבר משלם חצי נזק, במה דברים אמורים בשקשרו אדם אבל אם נקשר על רגליהן מאליו בעל התרנגולין פטור, ואם היו לחוט בעלים ולא היה החוט הפקר בעל החוט חייב חצי נזק שהרי הוא כבור המתגלגל. </strong>
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>הצניע בעל החוט את החוט והתרנגולים דרסו עליו והוציאוהו ונקשר ברגליהן ושברו בו את הכלים אף בעל החוט פטור שהרי אנוס הוא. </strong> התרנגולין מועדין וכו' בד"א בשקשרו אדם אבל נקשר ברגליהן וכו' שהרי אנוס הוא. א"א דבר זה איני יודע מהו דהא קשרו אדם דקאמר ודאי בעל התרנגול הוא והא דקאמר חצי נזק משום דס"ל כרבא /בבא קמא/ (יז) דמספקא ליה דרסה על הכלי ונתגלגל למקום אחר ונשבר צרורות הוו או גופיה דחוט הקשור בו והרי הוא כשליף שעליה מעתה כשנקשר החוט מאליו ונסתבך בו הכלי ונתגלגל ונשבר אמאי פטור מ"מ צרורות דתרנגול הוא ואפילו בחוט של הפקר חייב; ומ"ש עוד שאם היו לחוט בעלים בעל החוט משלם חצי נזק דהוה כבורו המתגלגל ומשמע ליה דתרנגול נמי משלם חצי נזק שלא מצינו בבור חצי נזק ולאו מילתא היא דאי בתר דנייח אזיק בעל החוט נזק שלם הוא דמשלם בורו הוא ובעל תרנגול פטור הוא דאיש בור ולא שור בור ואם ע"י הגלגול נשבר בעל החוט פטור דלאו בור הוא אלא צרורות דתרנגול הוא וכוחו הוא; ומ"ש אף בעל החוט פטור שהרי אנוס הוא דמשמע והוא הדין לבעל תרנגול הא לא מתוקמא אלא בשברו בתר דנייח ומשום ולא שור בור דאי בהדי דאזיל בעל התרנגול אמאי פטור.
+                </div>
+                
+
+                
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק מתרנגולים ומדליל שברגליהם</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יז.) מביאה דוגמה לנזקי רגל מתרנגולים:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"התרנגולין מועדין להלך כדרכן ולשבר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היה דליל [=חבל] קשור ברגליו, או שהיה מהדס ומשבר את הכלים - משלם חצי נזק"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה (יט:) את פירוש <strong>רב הונא</strong> למשנה:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר רב <strong>הונא</strong>: לא שנו אלא שנקשר מאליו, אבל קשרו אדם – חייב"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בתחילה, מבינה ה<strong>גמרא</strong> מדברי ר' הונא, שהחיוב על הנזק שעשה הדליל הוא משום בור, ולכן אם קשרו אדם חייב נזק שלם כבור רגיל. אמנם הגמרא מקשה על הבנה זאת, שכן קשה להבין לפי זה מדוע אם נקשר מאליו משלם חצי נזק, שהרי אין תשלום חצי נזק על בור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לכן מפרשת הגמרא שבמשנה מדובר במקרה שהדליל הזיק תוך כדי זריקתו על ידי התרנגולים ("אדיי אדויי"), ודברי ר' הונא נאמרים מחדש:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"וכי אתמר דרב הונא - בעלמא אתמר: דליל הפקר- נקשר מאליו - פטור, קשרו אדם - חייב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">משום מאי חייב? אמר <strong>רב הונא בר מנוח</strong>: משום בורו המתגלגל ברגלי אדם וברגלי בהמה".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שלמסקנה, המשנה ור' הונא מדברים על שני תרחישים שונים. במשנה מדובר כאמור על יידוי של הדליל על ידי התרנגולים, ובזה לא חשוב של מי הדליל, והנזק הוא נזק צרורות הנזקף לחובת בעל התרנגולים, ותמיד יש לשלם עליו חצי נזק כדין צרורות. ר' הונא, לעומת זאת, מדבר על מקרה בו הניזק נתקל בדליל הקשור לתרנגולים, שאז אם הדליל הפקר הוא, ונקשר מאליו, אף בעל התרנגולים פטור, ואם הדליל נקנה בהגבהה ע"י הקושרו, חייב הקושרו משום בור נזק שלם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מבין שגם למסקנה, דברי ר' הונא אמורים כלפי המשנה, ועוסקים בדין צרורות. לדבריו, ר' הונא מסייג את המשנה למקרה בו קשר אדם את הדליל על רגל התרנגול, ואומר שאם נקשר מאליו, פטור<sup id="ref4"><a href="#fn4">[4]</a></sup>. בנוסף, אם יש לדליל בעלים הוא נושא באחריות מלאה, או חלקית, יחד עם בעל התרנגולים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שולחן ערוך</strong> (שצ סעיף י') מביא רק את החלק המוסכם בדברי הרמב"ם, שנזק עקיף ע"י הדליל נחשב כצרורות, אך לא מוסיף פירוט לגבי זהות הקושר והבעלות על הדליל.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-8" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג-יד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>היו מהדסין על גבי עיסה או על גבי פירות וטנפו או נקרו משלמין נזק שלם, הזיקו בעפר או בצרורות שהעלו בכנפיהן או ברגליהן משלמין חצי נזק. </strong>
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>היו מחטטין בחבל דלי ונפסק החבל ונשבר הדלי משלמין נזק שלם והוא שנתגלגל הדלי מחמתן עד שנפל ונשבר, ואם היה על החבל אוכל ובעת אכילתן פסקוהו משלם גם על החבל נזק שלם. </strong>היו מחטטין ונפסק החבל ונשבר הדלי משלמין נזק שלם. א"א לא נהיר ולא בהיר ולא צהיר דהא דמקשינן בגמרא /בבא קמא/ (יח) והא חבל משונה הוא אגופה דברייתא קא מקשי.
+                </div>
+                
+
+                
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק ישיר ועקיף בתרנגולים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במסגרת הדיון בדין צרורות, מביאה ה<strong>גמרא</strong> (יז:) ברייתא:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"תרנגולין שהיו מהדסין ע"ג עיסה ועל גבי פירות וטינפו או ניקרו - משלם נזק שלם, העלו עפר או צרורות - משלמין חצי נזק".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין זה הוא יישום ישיר של דין צרורות בתרנגולים, שכן אם הנזק נוצר ע"י יידוי עפר או צרורות, משלמים רק חצי נזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך דנה הגמרא בשאלתו של <strong>רבא</strong>, האם נזק מושהה בריחוק מקום, שנגרם ממגע ישיר של הבהמה דין צרורות לו או לא. למשל, אם דרכה הבהמה על כלי, ונתגלגל ונשבר במקום אחר, האם זה דומה לשבירה ישירה של הכלי, או ליידוי צרורות ששוברים את הכלי במקום אחר. בלשון הגמרא השאלה היא האם הולכים "אחר מעיקרא" או "אחר שבירת הכלי".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"תרנגולין שהיו מחטטין בחבל דלי, ונפסק החבל ונשבר הדלי - משלמין נזק שלם".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבינה שקודם התרנגולים פסקו את החבל, ואח"כ כתוצאה מזה נשבר הדלי, מכאן הגמרא רוצה להוכיח שהולכים בתר מעיקרא, כלומר, בנזק מושהה, הולכים אחר תחילתו, ואין הדבר נחשב כצרורות. תחילה רוצה הגמרא לדחות ולפרש שהכוונה שחייבים נזק שלם על החבל, (וזה רק אם נפרש שיש בצק על החבל, שאז הניקור בו היא נזק שן, כדרכם של התרנגולין, ולכן יש לשלם נזק שלם), אך לשון הברייתא, "ונשבר הדלי" מלמדת שהכוונה היא שחייבים נזק שלם על הדלי. לכן, למסקנה, מתרצת הגמרא, שאין מדובר בצרורות, אלא הדלי נשבר כתגובה מיידית של הזזת החבל ע"י התרנגולים, לכן לא ניתן להוכיח מהתרנגולים שהולכים אחר מעיקרא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי שאלתו של רבא, האם הולכים אחר שבירת הכלי או אחר מעיקרא, פוסק כאן ה<strong>רי"ף </strong>שהולכים אחר שבירת הכלי. לכן במקרה של התרנגולים יש לפרש להלכה שהדלי נשבר מיידית עם הזזת החבל, אחרת חייב רק חצי נזק, מדין צרורות, ולא נזק שלם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רא"ש</strong> (סימן א) וה<strong>טור</strong> (שצ) פוסקים שהולכים אחר מעיקרא, ושבירה מאוחרת אינה כצרורות. ממילא לפיהם אין צורך לפרש שהדלי נשבר מיד עם הזזת החבל. אלא אפילו אם החיטוט בחבל גרם לקריעתו ולשבירת הכלי במקום אחר, אין זה דין צרורות, וחייב נזק שלם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כרי"ף ולכן כותב שרק אם "נתגלגל הדלי מחמתן עד שנפל ונשבר", שהוא נזק ישיר ומיידי, חייבים נזק שלם. ואם היה בצק על החבל, הרי שגם הנזק לחבל הוא כדרכם וחייבים אף עליו נזק שלם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד </strong>מבין אחרת את ההעמדה של "בצק על החבל" שבגמרא. לדעתו, ההבנה של הגמרא, שמדובר כשיש בצק על החבל, היא הכרחית כדי לחייב נזק שלם, בין על החבל ובין על הדלי. הסברה בזה פשוטה- אם אין בצק על החבל הרי שהחיטוט בחבל לא היה כדי לאכול בצק, נמצא שהמעשה שעשו התרנגולים לא היה כדרכם, וממילא כל הנזק שנובע ממנו, בין לחבל ובין לדלי, הוא נזק תם שחייבים עליו חצי נזק בלבד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדומה לראב"ד, אף ה<strong>תוספות</strong> (שם ד"ה "והא חבל") מבינים שלא ניתן לחייב אפילו על הדלי נזק שלם, אם החיטוט בחבל לא היה כדרכם של התרנגולים. אמנם התוספות אומרים שחיטוט בחבל כדי לשתות לחות שבתוכו היא כן דרך התרנגולים, ולכן ניתן לפרש שיהיה חייב נזק שלם על הדלי גם אם אין בצק מרוח על החבל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעניין שבירה מאוחרת פסק ה<strong>רמ"א</strong> (שצ ה) כרא"ש וכטור. אף מה<strong>שו"ע</strong> (שצ יא) משמע שהלכה כרא"ש. לענין האפשרות לחייב על הדלי נזק שלם כשהחיטוט בחבל לא היה כדרכם של התרנגולים, פוסק שם בשו"ע כראב"ד וכתוספות.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-9" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו-טז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>הכלב והגדי שקפצו מראש הגג מלמעלה למטה ושברו את הכלים משלמין נזק שלם מפני שהן מועדים לדבר זה, וכן אם נפלו והזיקו, שעלייתן לראש הגג פשיעה ואע"פ שנפילתן אונס כל שתחלתו בפשיעה וסופו באונס חייב. </strong>
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>קפצו ממטה למעלה משלמין חצי נזק, והוא שנתלה הגדי ונסרך וקפץ הכלב אבל אם נסרך הכלב ודלג הגדי בין מלמעלה למטה בין ממטה למעלה חייבין נזק שלם, וכן תרנגול שדלג בין מלמעלה למטה בין מלמטה למעלה משלם נזק שלם. </strong>
+                </div>
+                
+
+                
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תחילתו בפשיעה וסופו באונס:</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (כא:):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכלב והגדי שקפצו מראש הגג ושברו את הכלים - משלם נזק שלם, מפני שהן מועדין".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מדייקת שאם נפלו, פטורים כי זה אונס. מבינה מכאן הגמרא שתחילתו בפשיעה וסופו באונס פטור. ב<strong>מסכת בבא מציעא </strong>(מב.) חלקו בכך אמוראים- אם שומר שמר פיקדון במקום המוגן מגנבים אך לא מפני שריפה, ונגנב הפיקדון, האם חייב כי תחילתו בפשיעה (כי שם במקום שאינו מוגן מפני השריפה), או שפטור כי סופו באונס (כי המקום מוגן מפני הגנבים). הגמרא מסיקה שם להלכה, שתחילתו בפשיעה חייב אף שסופו באונס.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר את המושג תחילתו בפשיעה וסופו באונס אצלינו במקביל למקרה בבבא מציעא- מדובר במקרה בו האדם פשע בשמירתו- הניח את החפץ במקום מועד לשריפה או שלא שמר על בהמתו שלא תקפוץ מהגג, דבר שדרכה לעשות. אמנם, בסופו של דבר הנזק/אבידה לא נבע מפשיעתו של המזיק/שומר (כיוון שלבסוף נפלה הבהמה- דבר נדיר מאד, ולא קפצה שהוא דבר מצוי). ונראה שדברי הרמב"ם אצלנו אינם שונים מהותית מהסברו של רש"י.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' זביד</strong> מסביר בגמרא, שלא תמיד נפילה היא אונס. למשל, אם אדם הניח את בהמתו על כותל צר, גם נפילה היא פשיעה, וחייב. נמצאנו למדים מדבריו, שנפילה היא אונס לא מכך שאין הבהמה בוחרת ליפול, אלא מתוך כך שנפילה של בהמה מגג רגיל היא נדירה ביותר. ונמצא ששונה דין דבר נדיר, שפטורים עליו לגמרי, מדין דבר שאינו כדרכה, שחייבים עליו בכל זאת חצי נזק.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> אצלינו מבארת, שמ"ד שתחילתו בפשיעה וסופו באונס חייב, יהיה חייב לפרש שמדובר במקרה שהכלים קרובים לכותל של הגג ממנו קפצו המזיקים, שאז בקפיצה לא היו הכלים נשברים, כיוון שלא היתה החיה נוחתת עליהם, ולכן אין כאן כלל פשיעה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כותב, על פי הקביעה שתחילתו בפשיעה וסופו באונס חייב, שבין אם קפצו בין אם נפלו, חייבים. הוא אינו כותב את הפטור במקרה של נפילה על כלים הקרובים לקיר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שצ יב) כותב כלשון הרמב"ם, וה<strong>רמ"א</strong> מוסיף שבנפילה על כלים הקרובים לקיר, כיוון שלא היה ניתן לשוברם ע"י קפיצה, כיוון שפשיעה אין כאן, פטור.</p>
+                    
+                </div>
+                
+                <div id="topic-9-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שינוי וכדרכו בקפיצת הכלב והגדי:</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מביאה שתי ברייתות הנראות כסותרות:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מצד אחד</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכלב והגדי שדלגו ממטה למעלה - פטורין, מלמעלה למטה - חייבין; אדם ותרנגול שדלגו, בין מלמעלה למטה בין מלמטה למעלה – חייבין"</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אך מצד שני-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכלב והגדי שדלגו, בין מלמעלה למטה בין מלמטה למעלה – פטורין".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ועונה <strong>ר' פפא</strong> שבברייתא השניה מדובר בשינוי- הכלב קפץ כדרך הגדי, ואילו הגדי נסרך ע"י תקיעת צפורניו בכותל, כדרך הכלבים. ו"פטורים" הכוונה, שחייבים חצי נזק, כדין נזק שאינו כדרכם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים בהסבר הגמרא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סימן ז) מפרש, שתשובתו של ר' פפא מסבירה מתי בקפיצה מלמעלה למטה פטור ומתי חייב. אם הקפיצה היתה כדרכה, אז חייב בנזק שלם. לעומת זאת, אם הכלב קפץ כדרך הגדי או הפוך, חייב חצי נזק בלבד, אף על קפיצה מלמעלה למטה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פירש אחרת – ההבדל בין סריכה לקפיצה, והאפשרות לשנות בהם מדרכו, רלוונטים רק בקפיצה מלמטה למעלה. אך בקפיצה מלמעלה למטה, חייבים תמיד נזק שלם. ונראה שהרמב"ם גורס "הכלב והגדי שדלגו בין מלמעלה למטה בין מלמטה למעלה – חייבין".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> לא מעלה את האפשרות שהעלאת הכלב לגג בפשיעה, תחייב נזק שלם אף שבסופו של דבר קפץ הכלב מהגג בשינוי. ב<strong>הגהות אשרי</strong> מסיק מכאן, ש"תחילתו בפשיעה וסופו באונס" הוא כלל האמור רק באותו אב נזיקין, אך אם פשע בדרך העלולה לבוא לאב נזיקין אחד ובסוף קרה אב נזיקין אחר, החיוב אינו כעל מה שהיה קורה לו היתה פשיעתו יוצאת לפועל. ולכן, אם העלה בפשיעה כלב לגג, והסתכן בכך שהכלב יקפוץ כדרכו וישבר כלים בנזק רגל, ובסוף קפץ הכלב ושיבר כלים בשינוי, שהוא קרן, פטור מנזק שלם, וחייב רק חצי נזק, למרות שאם היה הכלב נופל באונס, היה חייב נזק שלם מדין "תחילתו בפשיעה וסופו באונס חייב".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> וה<strong>רמב"ם</strong> חלוקים בעוד נקודה חשובה- ה<strong>רא"ש</strong> פוסק, שבכל מקרה בו קפצו הכלב והגדי מלמטה למעלה, הפטור שבברייתא הוא פטור גמור, אפילו מחצי נזק, משום שהדבר כל כך נדיר עד שמדובר באונס. ה<strong>רמב"ם</strong> לעומתו פוסק שקפיצה מלמטה למעלה אינה אונס וחייב בה בחצי נזק. ה<strong>שו"ע</strong> (שצ יב) פסק כדברי הרמב"ם, וה<strong>רמ"א</strong> פסק כרא"ש לעניין זה שקפיצה שלא כדרכו נחשבת שינוי בין מלמטה למעלה ובין הפוך.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-10" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז-יח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>כלב שנטל את החררה והלך לו לגדיש, אם הניחה בגדיש ואכל את החלה והדליק את הגדיש על החלה ועל מקום החררה משלם נזק שלם ועל שאר הגדיש חצי נזק, ואם היה מגרר את החלה על הגדיש והולך ושורף משלם על החררה נזק שלם ועל מקום הגחלת חצי נזק ועל שאר הגדיש פטור.</strong> כלב שנטל וכו' ועל מקום הגחלת חצי נזק ועל שאר הגדיש פטור. א"א ליתא דצרורות ע"י שינוי מרביע נזק מיהא לא מיפטר.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>במה דברים אמורים בששמר בעל הגחלת את אשו וסתם הדלת ובא הכלב וחתר ונטל את החררה מעל האש, אבל אם לא שמר אשו בעל האש חייב על שריפת הגדיש ובעל הכלב חייב על אכילת החררה ועל מקומה. </strong>בד"א כששמר בעל הגחלת וכו' אבל אם לא שמר אשו בעל האש חייב. א"א בעל האש נמי חייב.
+                </div>
+                
+
+                
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק שלם וחצי נזק בבע"ח שגרם לשריפה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (כא:) כותבת:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכלב שנטל חררה והלך לגדיש, אכל החררה והדליק הגדיש - על החררה משלם נזק שלם, ועל הגדיש משלם חצי נזק".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כב.) מעלה בהקשר לפירוש המשנה, את מחלוקת האמוראים האם אישו משום חיציו או משום ממונו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוחנ</strong><strong>ן</strong> סובר שאישו משום חיציו, כלומר, המזיק בעזרת אש דומה למזיק ביריית חץ, כיוון שאין ממשות לאש (והמבעיר חייב על מעשה ההבערה שנחשב מעשה הנזק למרות שהוא קרה לפני הנזק, כפי שיריית החץ מתרחשת לפני פגיעתו ובמקום אחר, ובכ"ז היורה הוא המזיק הישיר). לעומתו, <strong>ריש לקיש</strong> אומר שאישו משום ממונו, שכן חיציו הולכים מכוחו, ואילו האש מתקדמת מכוחה שלה, והמבעיר אינו אלא סיבתה (ולכן המבעיר אינו חייב על מעשה ההצתה, אלא שמעשה ההצתה רק מחייב אותו בשמירת האש שיצר, שלא תזיק).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שר' יוחנן וריש לקיש יפרשו בדרכים שונות את המקרה שבמשנה – <strong>ר' יוחנן</strong> יפרש, שהצתת הגדיש היא מעשה המשוייך לכלב ("חיציו דכלב") ולכן חייב על הגדיש שהוצת חצי נזק, משום שנחשב הדבר לצרורות (נזק לא מקומי שנגרם עקב פעולה שעשתה הבהמה כדרכה). לעומתו יפרש <strong>ריש לקיש</strong> שאין כוונת המשנה לחייב אלא על הגדיש שבמקום נפילת החררה, ומדובר במקרה שהכלב יידה את החררה, ולכן חייב על שריפת מקום נפילתה חצי נזק כדין צרורות. אמנם על שאר שריפת הגדיש פטור בעל הכלב, כיוון שהאש אינה ממונו שלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong>, ככל הראשונים, פוסק כר' יוחנן, ולכן פוסק שאם הכלב הניח את החררה על הגדיש, משלם על מקום החררה נזק שלם, ועל שאר הגדיש חצי נזק. אולם הרמב"ם ממשיך, וכותב שאם הכלב גרר את החררה על פני הגדיש כשהוא הולך ושורף, חייב על מקום הגחלת חצי נזק, ועל כל שאר הגדיש פטור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד</strong> ואחרים תמהו על דעתו זאת של הרמב"ם, שהרי זוהי העמדתו של ריש לקיש, שסבר שאישו משום ממונו, ומבעיר אינו חייב משום ההצתה, אלא משום חוסר השמירה, ולכן אינו חייב בעל הכלב על שאר הגדיש, אלא רק על מה שנשרף כתוצאה ממעשיו הישירים של הכלב (מקום הגחלת). כיוון שריש לקיש לא נפסק להלכה, לא ברור מדוע הרמב"ם פוסק גם לפי העמדתו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>כסף משנה</strong> מתרץ, שהרמב"ם סובר שכח כוחו אינו ככחו, ולכן על צרורות עקיפים, בהם הגחלת נזרקה (צרורות פעם אחת), ויצרה העברת אש (צרורות הנוצרים מצרורות), פטור לגמרי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד</strong> חולק על הרמב"ם, ומבין שכיוון שאנו פוסקים שאישו משום חיציו, הרי שבמקרה של כלב המגרר את החררה על פני הגדיש, יהיה דינו כדין צרורות בשינוי, ותלוי במחלוקת האם משלם חצי או רביע בצרורות בשינוי (עי' לעיל הלכות ה-ו). באופן דומה, חולק גם ה<strong>טור</strong> על דברי הרמב"ם, ופוסק שאם יידה את הגחלת על הגדיש, משלם על כל הגדיש חצי נזק, כיוון שכל הגדיש ניזוק בצרורותיו, ואנו פוסקים שאישו משום חיציו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> פסק כרמב"ם (שצב א) וה<strong>רמ"א</strong> הביא את דעת הטור החולקת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מגיעה למסקנה, שאף למ"ד שאישו משום חיציו, בכ"ז אישו היא ג"כ משום ממונו. מתוך כך הגמרא מעירה, שאם בעל הגחלת לא שמר היטב על גחלתו, חייב גם הוא, משום ממונו שהזיק, בין לר' יוחנן ובין לריש לקיש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong>, ה<strong>רא"ש</strong> ו<strong>הטור </strong>מבינים שהגמרא רואה את בעל הכלב ואת בעל הגחלת שהזיקה כמקבילים זה לזה, ולכן עליהם לחלוק בכל הנזקים (ליתר דיוק, בנזקים עליהם חייב בעל הכלב כשלעצמו נזק שלם, הם יחלקו בתשלום, ואילו על הנזקים בהם חייב בעל הכלב חצי נזק בלבד, יחלקו באותו החצי, וישלם בעל הגחלת עוד חצי שלם לבדו).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>הבין את המילים "וליחייב נמי בעל גחלת" אחרת – אם בעל הגחלת לא שמר את גחלתו, חייב הוא לבדו על כל הגדיש, ואילו בעל הכלב חייב לבדו על מקום הגחלת אותה הניח הכלב (ה<strong>מגיד משנה </strong>הבין שהרמב"ם פשוט לא גרס את המילה "נמי"). גם במחלוקת זו פסק ה<strong>שו"ע </strong>(שם) כרמב"ם, ואילו ה<strong>רמ"א </strong>פסק כטור.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-11" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>המשסה כלבו של חבירו באחר פטור מדיני אדם וחייב בדיני שמים, ובעל הכלב חייב חצי נזק, שכיון שהוא יודע שאם שסה את כלבו להזיק נושך לא היה לו להניחו, ואם שסהו בעצמו בעל הכלב פטור שכל המשנה ובא אחר ושינה בו פטור</strong>. ובעל הכלב חייב חצי נזק. א"א ואם מועד הוא נזק שלם משלם.
+                </div>
+                
+
+                
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין המשסה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כד:) מעלה שאלה- מה דין שמעון המשסה כלבו של ראובן בלוי. שמעון ודאי פטור, כדין גרמא בנזקין הפטור מדיני אדם וחייב בדיני שמים. אך מה דינו של בעל הכלב? האם יכול ראובן לומר שהוא לא עשה דבר, ורק המשסה אחראי, או שמא עצם אי שמירת הכלב, כשידוע שהוא עלול לנשוך בעקבות שיסוי, היא פשיעה. הגמרא מביאה <strong>ברייתא</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שיסה בו את הכלב שיסה בו נחש – פטור".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא פוטרת את המשסה, ולכאורה זה אומר שבעל החיה חייב. אך הגמרא דוחה, כי יכול להיות שאף אחד מהם אינו חייב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פסק כהבנה הראשונה, שבעל החיה חייב, והמשסה פטור מדיני אדם וחייב בדיני שמים. הרמב"ם מציין שבעל הכלב חייב רק חצי נזק. ה<strong>ראב"ד </strong>מעיר שאם הכלב מועד, משלם בעליו נזק שלם. אך ה<strong>מגיד משנה </strong>חולק על הראב"ד ומבין ברמב"ם שבכל אופן משלם בעל הכלב רק חצי נזק, שאין הדבר דומה לבע"ח רגיל שהזיק ביוזמתו, אלא לשור האצטדין, בו מבואר במשנה (לט:) שכיוון שנגח מחמת זה שהתגרו בו, אין הורגים אותו אף אם הרג את האדם (עי' להלן פ"ו הלכה ה).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>מביא את לשון הרמב"ם ומשמע שתמיד משלם בעל הכלב חצי נזק בלבד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך הגמרא מעיר <strong>רבא</strong>, שאפילו אם הדין הוא שבמשסה כלב של אחרים באדם, בעל הכלב חייב, אם שיסה את הכלב בעצמו בעל הכלב פטור, וזאת משום ש"כל המשנה ובא אחר ושינה בו – פטור". כלומר, "משנה" הכוונה שפשע בשמירת נזקו. והכוונה היא שאם הניזק פשע בשמירה על עצמו, האחריות מוטלת עליו למרות שאף המזיק פשע בשמירת נזקיו. ואף כאן, הגם שבעל הכלב "שינה", כלומר לא שמר על כלבו כראוי, עדיין חייב המשסה, שגרם לנזק לעצמו.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-12" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כ'</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    <strong>שתי פרות ברשות הרבים אחת רבוצה ואחת מהלכת ובעטה מהלכת ברבוצה חייב חצי נזק שאע"פ שדרכה להלך עליה אין דרכה לבעוט בה.</strong>
+                </div>
+                
+
+                
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רבוצה ומהלכת ברה"ר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כד:) מביא <strong>ר' פפא</strong> ראיה שאכן כל המשנה ובא אחר ושינה בו פטור, מדברי ריש לקיש. <strong>ריש לקיש</strong> פוסק שאם בעטה פרה מהלכת ברה"ר בפרה רבוצה, פטורה, ולכאורה הסיבה היא משום שהרבוצה שינתה, ולכן היא האחראית לנזק שאירע לה. אך <strong>רבא</strong> חולק וסובר שבמקרה כזה, למרות דין "כל המשנה" המהלכת חייבת, כיוון שאין לה רשות לבעוט ברה"ר אלא רק להלך, ובלשון הגמרא "כי אית לך רשותא לסגויי עלי, לבעוטי בי לית לך רשותא".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש </strong>(פרק ב' סימן י"ד) מסביר שאומרים ששינויו של הניזק פוטר את המזיק, כאשר מדובר בשינוי החושף את הניזק לנזק מצוי, כמו אדם השם כליו ברה"ר, במקום שאין רשות לעשות זאת, ושור אכל את כליו (זוהי קרן- כי אין הנאה להיזקו ובאופן כללי חייב ברה"ר), שבזה כיוון שהניזק חשף את עצמו אפילו לנזק מצוי פטור בעל השור. אך במקרה של בעיטת המהלכת ברבוצה, רביצתה של פרת הניזק אינה חושפת אותה לנזק שכיח ברה"ר, ולכן אין המזיק פטור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק על פי רבא, שהמהלכת חייבת אם בעטה ופטורה אם רק הלכה על הרבוצה כדרכה<sup id="ref5"><a href="#fn5">[5]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפט כ) פסק כדברי הרמב"ם.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn3" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref3" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^3</a> 
+                        הרמב"ם כאמור כתב, שלמ"ד שאין שינוי בצרורות לרביע נזק, ביעוט בצרורות אינו נחשב כקרן אלא כדרכה. ואולי הדברים עולים בקנה אחד עם שיטתו שכאן- בכל מקרה שבעל החיים המזיק לא נתכוון להזיק ישירות את הדבר המשונה, אלא עניינו היה בדבר הרגיל, אין זה נחשב שלא כדרכו, ומתוך הנחת יסוד זו באה השאלה לגבי בעיטה בצרורות- האם כיוון שלא בעטה בכלים, אלא באדמה, הרי שזה דרכה, או שמא בעיטה באדמה הרי היא כבעיטה בכלים ששברה.
+                    </li>
+                    
+                    <li id="fn4" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref4" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^4</a> 
+                        בטעם החשיבות של קושר החבל לעניין חיוב צרורות נראה להסביר בדעת הרמב"ם, שאם קשר אדם את החבל על רגל התרנגול, הרי שהחבל הוא חלק מהתרנגול, ותרנגול שהזיק בו, הרי הוא כבהמה שהזיקה "באוכף שעליה, ובשליף שעליה, ובפרומביא שבפיה" (יז:) עליה חייבים משום רגל. לכן, אם הזיק החבל בדרך של צרורות (שנתגלגל הכלי שנפגע ממנו, ונשבר במקום אחר) כבנידון דנן, חייב בעל התרנגולים חצי נזק. אמנם, אם החבל נקשר מאליו, אין הוא נחשב כחלק מהתרנגול, ולכן, הנזק שהוא מזיק באופן ישיר נחשב כבר לצרורות, ואם הזיק באופן עקיף עוד יותר, כבנידון דנן, נחשב הדבר לכח כוחו, ופטור בעל התרנגולים.
+                    </li>
+                    
+                    <li id="fn5" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref5" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^5</a> 
+                        אמנם הרמב"ם משנה במעט מלשון הגמרא. בעוד שבגמרא נאמר שאין רשות למהלכת לבעוט ברבוצה, הרמב"ם כותב שאין דרכה של המהלכת לבעוט ברבוצה. אפשר שכוונת הרמב"ם להסביר מדוע אין רשות לבהמה לבעוט בחברתה, שכן יש לה רשות לעשות רק מה שדרכה לעשות. אמנם יכול להיות שהרמב"ם, בדומה לרא"ש, בא להסביר מדוע אין המבעטת פטורה מדין כל המשנה ובא אחר ושינה בו פטור- כיוון שאין דרכה לבעט ברה"ר, הרי שהרבוצה לא הסתכנה ברביצתה, ואין רביצתה נחשבת שינוי.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מלוה ולוה - פרק ב</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">מלוה ולוה - פרק ב</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ב)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א-ג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    לווה הטוען שאין לו ממה לפרוע
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    לווה המוחזק שאין לו ורוצה המלווה להשביעו
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-2-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    לווה שמוחזק שיש לו והוא רוצה להישבע שאין לו כדי להיפטר
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה-ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    לווה המודה לבעלי חוב אחרים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    איסור הלוואה ללא עדים
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    לווה מאשתו וגרשה או מעבדו ושחררו
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">מלוה ולוה</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק ב</h1>
+            </div>
+
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">פרק ב עוסק בהגבלות שהטילה התורה על גביית החוב ובדינים המסתעפים מזה. הלכה א מניחה את היסודות לגביה על פי דין תורה- אין להפעיל לחץ על לווה שאין לו ממה לשלם משום "לא תהיה לו כנושה", ואף אין להיכנס אל ביתו כדי לחפש אם יש לו רכוש לשלם ממנו, כפי שכתוב "לא תבוא אל ביתו...בחוץ תעמוד". הלכה ב-ג מלמדות שבשלב מאוחר יותר, כדי שלא ירתעו מלהלוות, תקנו חכמים שמשביעים את הלווה שאכן אין לו ממה להחזיר. אף שבד"כ אין נשבעים על טענת ספק, כיוון שבוודאי היתה הלוואה, למדו חכמים מדין שומר הנשבע למפקיד, שגם כאן יש מקום להישבע. כמו כן, רוב הראשונים הבינו שכמו בשבועת מודה במקצת, אף כאן השבועה צריכה להיות בנקיטת חפץ, כיוון שהלווה מודה בהלוואה ואפשר שאומר שאין לו ממה להחזיר כדי להתחמק. הראשונים נחלקו האם שבועה זו היא סנקציה, שיש להמתין לפני הפעלתה כדי לאפשר ללווה להביא ראיה לטובתו, או שמדובר בחליף תשלום ולכן חייב הלווה להישבע מיד שאין לו ממה לשלם. בהלכה ד מחדש הרמב"ם מסברתו, שאם ברור לדיין, אפילו ללא הוכחות משפטיות, שללווה אין ממה לשלם, אסור לו להשביעו. כמו כן להיפך, אם ברור שהלווה רמאי ורוצה להישבע לשקר כדי להיפטר מתשלום, אסור לדיין להשביעו. אחת האפשרויות שיש ללווה להבריח רכוש מהמלווה המוציא כנגדו שטר היא ליצור מצג שווא שהוא חייב כסף במילווה בעל פה למישהו אחר. עוד אפשרות היא לעשות קנוניה עם מישהו שחייב לו כסף בשטר, בה הוא מבטל את השטר כדי שהכסף לא יגיע אליו וייגבה על ידי נושיו, ולאחר מכן ישלם לו החייב בסתר. הלכות ה-ו מדברות על הדרך למנוע תכסיסים כאלה. הלכה ז עוסקת באיסור שאסרו חכמים להלוות בלא עדים, אפילו לתלמיד חכם, כיוון שהדבר יכול להכשיל את הלווה בכך שיכפור במזיד או בשוגג, ועוד עלול לגרום למחלוקות שניתן למונען. כמו כן המליצו חכמים על הלוואה בשטר דווקא, כדי שלא יהיה הדבר בעדים ובזכרונם. ההלכה האחרונה בפרק עוסק באדם שלווה מאשתו או מעבדו. הפסק בזה הוא שלאחר שתתגרש האשה אין היא יכולה לגבות את החוב מהבעלה מכיוון שמניחים שמה שהלוותה לבעלה היה בכלל שלו. לדעת חלק מהראשונים הדברים אמורים דווקא אם לפני שהלוותה היה הכסף חבוי בידה, ומשום שאנו תולים שהבעל "לווה" ממנה כסף שלו רק כדי לשכנע אותה לגלות את מקומו. לפי שיטה זו, אם היה הכסף גלוי ובהישג ידו, אין לפקפק בתוקף ההלוואה ולאחר שתתגרש האשה צריך הבעל לשלם את החוב.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">דין תורה שבזמן שיתבע המלוה את חובו אם נמצאו ללוה נכסים מסדרין לו ונותנין לבעל חובו את השאר כמו שביארנו, ואם לא נמצא ללוה כלום או נמצאו לו דברים שמסדרין לו בלבד ילך הלוה לדרכו ואין אוסרין אותו ואין אומרים לו הבא ראייה שאתה עני ולא משביעין אותו כדרך שדנין העכו"ם שנאמר לא תהיה לו כנושה, אלא אומרים למלוה אם אתה יודע נכסים לזה המחוייב לך לך ותפוס אותן.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">מי שנתחייב בשבועה זו מפני שטר חוב שעליו והודה לאחרים בחובות אחרים והשיגה ידו יתר על הראוי לו לא יטול היתר אלא בעלי שטרות בלבד, שמא קנוניא עושה בהודאתו על נכסיו של זה.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">בסוגיית הגמרא בכתובות (יט.)-</p>
+                
+            </div>
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    טען שיש לו והחביא אותן והרי הן בתוך ביתו אין מן הדין שיכנס לביתו לא הוא ולא שליח ב"ד שהתורה הקפידה על זה שנאמר בחוץ תעמוד, אבל מחרימין על מי שיש לו ולא יתן לבעל חובו, כשראו הגאונים הראשונים שעמדו אחר חבור הגמרא שרבו הרמאים וננעלה דלת בפני לוין התקינו שמשביעין את הלוה שבועה חמורה כעין של תורה בנקיטת חפץ שאין לו כלום יתר על דברים שמסדרין לו, ושלא החביאן ביד אחרים ושלא נתן מתנה ע"מ להחזיר וכולל בשבועה זו שכל שירויח וכל שיבא לידו או לרשותו מאשר תשיג ידו לא יאכיל ממנו כלום לא לאשתו ולא לבניו ולא ילביש אותן ולא יטפל בהן ולא יתן מתנה לאדם בעולם, אלא יוציא מכל אשר תשיג ידו מזון ל' יום וכסות י"ב חדש מזון הראוי לו וכסות הראוי לו, לא אכילת הזוללים והסובאין או בני מלכים ולא מלבושי הפחות והסגנים אלא כדרכו, וכל היתר על צרכו יתן לבעל חובו ראשון ראשון עד שיגבנו כל חובו, ומחרימין תחלה על מי שידע לפלוני נכסים גלויין או טמונין ולא יודיע לב"ד, גם אחר התקנה הזאת אין בעל חוב יכול להכנס לתוך ביתו של לוה לא הוא ולא שליח ב"ד שלא תקנו לעקור גוף התורה אלא הלוה עצמו יוציא כליו או יאמר כך וכך הוא שיש לי מניחין הראוי לו ויוציא השאר וישבע בתקנה זו וכזה דנין ישראל בכל מקומותן, נראה לו ממון אחר שנשבע שבועה זו ואמר של אחרים הוא או עסק הוא בידי אין שומעין לו עד שיביא ראייה וכן הורו רבותי.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מי שנשבע שבועה זו שאין לו כלום וכל מה שירויח יתן לב"ח אין כל אחד מבעלי חובות בא ומשביעו ששבועה אחת כוללת כל בעלי חובות, ותקנת אחרונים היא ואין מדקדקין בה להחמיר אלא להקל.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">לווה הטוען שאין לו ממה לפרוע</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפרק הקודם התבאר שהמלווה התובע את הלווה בשעה שיודע שאין לו ממה שיפרע עובר על "לא תהיה לו כנושה". ספר התרומות (שער ב חלק א אות ב) מרחיב את משמעות האיסור גם לדברים המצויים בסמכות בית הדין ומקובלים במשפט אומות העולם כדי להפעיל לחץ על הלווה שישלם-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>גרסינן בפרק איזהו נשך כי אתא רב דימי אמר מנין לנושה בחבירו מנה ויודע שאין לו שאסור לעבור לפניו תלמוד לומר לא תהיה לו כנשה... למדנו מכאן שדין תורה כך הוא, שלוה שטוען אין לי כלום במה לפרוע, שאין לנו להכלימו בשום ענין בעולם, ואף לא לחפש את מצפוניו... וכן אין לנו לאסר את גופו ואף לא להביא ראיה שהוא עני, ואף לא להשביעו... אלא כיון שהוחזק למלוה או לב"ד שהוא עני אסור לדיין לביישו בדבר מדברים אלה, אך אם נסתפק המלוה והב"ד בעניני הלוה ועסקיו יש לנו לתור ולדרוש אחריו, וכדאמרינן עד דרוש אחיך אותו דרשהו אם רמאי הוא אם לאו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (שם אות ג) מתבארת תקנת הגאונים</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומפני שראו הגאונים ז"ל שעמדו אחר התלמוד שרבו הרמאין וננעלה דלת בפני לוין התקינו שכל לוה שטען שאין לו מה לפרוע שמשביעין אותו שאין לו כלום יתר על הדברים שמסדרין לבעל חובו... ושאין לו כלום שהחביא אותן ביד אחרים, ושלא עשה מתנה לשום אדם בעולם על מנת להחזיר וכולל בשבועה זו שכל מה שירויח וכל מה שיבא לידו [או לרשותו] מאשר תשיג ידו לא יאכיל ממנו כלום לא לאשתו ולא לבניו ולא ילביש אותן ולא יטפל בהן, ושלא יתן מתנה לאדם בעולם... וכל היתר על כל צרכיו יתן לבעל חובו ראשון ראשון עד שיגבה כל חובו. ומחרימין תחלה על כל מי שיודע לפלוני נכסים גלוים או טמונים ולא יודיע לב"ד.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמבואר, טעם תקנת הגאונים הוא שדין התורה, שמטרתו להקל על הלווים, הפך לדבר המקשה על הלווים לקבל הלוואה, כי המלווים חששו שהלווים יסתירו את נכסיהם וכך לא יוכלו לגבות מהם. לכן תיקנו שבועה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי מהות השבועה כותב המרדכי (ב"מ רמז רסה) שהדבר דומה לשבועה שמשביעים שומר שטען שנאנס-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומשביעין אותו שבועה שאינה ברשותו... כתב רבינו מאיר אף על גב דשבועה זו על טענת ספק היא מכל מקום משביעין אותו כיון דמעיקרא היתה ברשותו ובההיא שעתא היה חייב להחזירה בעין מספק אל תפטרנו [רמז רסו] הה"נ כשלוה אומר אין לי מאומה לא כסף ולא שוה כסף ממה לפרוע משבעינן ליה מספק כיון דתביעה גמורה יש [לו] למלוה עליו דודאי נתחייב לו [ועדיין הוא חייב לו] אלא שעכשיו אין לו מספק אל תפטרנו אא"כ ישבע שאין לו</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, למרות שהמלווה טוען טענת ספק- שאולי יש ללווה נכסים לגבות מהם, עדיין כיוון שודאי שהיה כאן חוב, יש מקום לשבועה. הדבר דומה לשבועה המשביעים שומר הטוען שנאנס, אף שהמפקיד אינו טוען טענת ודאי מולו, כיוון שודאי שהיתה הפקדה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד מביא התרומות (שם אות ה) דעה שהשבועה המדוברת היא שבועת היסת (ללא נקיטת חפץ), אך הוא אינו מסכים עם דעה זו, ומסביר שמדובר בשבועה בנקיטת חפץ ("כעין דאורייתא") משום שהדבר דומה לשבועת מודה במקצת שהיא שבועת התורה, הנעשית בנקיטת חפץ. כלומר, כפי שבמודה במקצת אנו חוששים שמא הלווה מתחמק מתשלום מתוך שלא נעים לו לכפור בכל, ומתכנן לשלם את השאר אח"כ, כך הלווה הטוען שאין לו נכסים מנסה להתחמק מבלי לשקר שקר גס כדי לשלם אח"כ כשיהיה לו יותר ממון.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים מתי בית הדין משביעים את הלווה. לדעת רב האי גאון (מובא בתרומות, שם ט) יש להמתין תשעים יום, בדומה לאדרכתא המוציאים נגד לווה המערער על חובו, שנותנים לו תשעים יום לנסות להביא ראיות לטובתו<sup id="ref5"><a href="#fn5">[5]</a></sup>. רוב הראשונים חולקים על שיטה זו, ומדמים את העניין למצב בו הלווה מערער על החוב אך מודיע שלא ישתף פעולה עם בית הדין ("לא אתינן"), שאז כותבים לו אדרכתא מיד כי אין סיבה להמתין. אף כאן, כיוון שחושדים בלווה שהוא מסתיר ממון ולכן משביעים אותו, עושים זאת מיד<sup id="ref6"><a href="#fn6">[6]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כידוע, במקרים בהם הלווה טוען שהשטר פרוע, תיקנו חכמים שישבע המלווה שבועת היסת (דרבנן) ויטול. מתוך כך נחלקו ראשונים מה הדין כאשר בצד זה שהלווה טוען שאין לו ממה לשלם, הוא גם טוען שכבר פרע את השטר. ובמקרה דנן נשאלת השאלה מי ישבע קודם. הרמב"ם כותב בהמשך (פרק יד הל' יב) שהלווה ישבע תחילה כתקנת הגאונים, שאין לו ממה לפרוע, ורק לאחר מכן ישבע המלווה שבועת היסת. לעומתו, הרי"ף (בתשובותיו, סא) סובר שהמלווה יכול להישבע ראשון אם ירצה, ורק לאחר שנשבע הופכת תביעתו להיות ברת תוקף ומחייבת שבועה את הלווה הטוען שאין לו ממה לפרוע<sup id="ref7"><a href="#fn7">[7]</a></sup>.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    מי שהוחזק שהוא עני וכשר והולך בתום והדבר גלוי וידוע לדיין ולרוב העם ובא בעל חובו להשביעו בתקנה זו והוחזק התובע שאינו מסתפק בעניות זה אלא רוצה לצערו בשבועה זו להצר לו ולביישו ברבים כדי להנקם ממנו או כדי שילך וילוה מן העכו"ם או יקח נכסי אשתו ויתן לזה עד שינצל משבועה זו, יראה לי שאסור לדיין ירא שמים להשביעו שבועה זו ואם השביעו ביטל לא תעשה של תורה לא תהיה לו כנושה, ולא עוד אלא ראוי לדיין לגעור בתובע ולטרדו מפני שהוא נוטר והולך בשרירות לבו, שלא תקנו הגאונים תקנה זו אלא מפני הרמאין והרי נאמר עד דרוש אחיך אותו דרשהו אם רמאי הוא או אינו רמאי ומאחר שהוחזק זה שהוא עני ושאינו רמאי אסור להשביעו, וכן אני אומר שמי שהוחזק רמאי ודרכיו מקולקלין במשאו ומתנו והרי הוא אמוד שיש לו ממון וטען שאין לו כלום והרי הוא רץ להשבע בתקנה זו שאין ראוי להשביעו אלא אם יש כח בדיין לעשותו עד שיפרע בעל חובו או לנדותו עד שיתן יעשה מאחר שהוא אמוד, שפריעת בעל חוב מצוה, כללו של דבר כל שיעשה הדיין מדברים אלו וכוונתו לרדוף הצדק בלבד שנצטוינו לרדפו ולא לעבור הדין על אחד מבעלי דינין ה"ז מורשה לעשות ומקבל שכר, והוא שיהיו מעשיו לשם שמים.
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">לווה המוחזק שאין לו ורוצה המלווה להשביעו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הלכה זו היא מדעתו של הרמב"ם. כפי שמשמע מדברי הרמב"ם, הטעם שאין להשביע לווה שידוע שאין לו הוא משום שהדבר מפעיל לחץ על הלווה שישיג כסף וזה מנוגד למצוות "לא תהיה לו כנושה". כך פסק ה<strong>שו"ע</strong> (חו"מ צט ד)</p>
+                    
+                </div>
+                
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">לווה שמוחזק שיש לו והוא רוצה להישבע שאין לו כדי להיפטר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי ניצול השבועה ע"י מי שחזקתו שיש לו ורוצה להיפטר מהשבועה המקור לדבר מויקרא רבה (ויקרא פרשה ו)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר</strong><strong>בי</strong><strong> סימון</strong> אין מוסרין את השבועה למי שהוא חשוד על השבועה ואין נותנין את השבועה למי שהוא רץ אחר השבועה</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ככלל, האפשרות של דיין לדון על פי ראות דעתו כאשר ברורה לו האמת מעוגנת בכמה מקורות. כך למשל בשבועות (ל:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מנין לדיין שיודע בדין שהוא מרומה, שלא יאמר: הואיל והעדים מעידין, אחתכנו ויהא קולר תלוי בצואר עדים? תלמוד לומר: מדבר שקר תרחק.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ועוד בכמה מקומות מסופר על דיינים מחכמי התלמוד שהפעילו לחץ על בעלי דין שחשדו בהם ברמאות, ללא הוכחות חותכות, עד שהודו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהלכות סנהדרין (פרק כד) כותב הרמב"ם באריכות, שמעיקר הדין יש רשות לבית הדין לדון בדיני ממונות גם ללא ראיות ברורות כל זמן שהאמת ברורה להם. אלא שברבות הימים "משרבו בתי דינין שאינן הגונים ואפילו היו הגונים במעשיהם אינן חכמים כראוי ובעלי בינה הסכימו רוב בתי דיני ישראל שלא יהפכו שבועה אלא בראיה ברורה, ולא יפגמו שטר ויפסידו חזקתו בעדות אשה או פסול וכן בשאר כל הדינין ולא ידון הדיין בסמיכת דעתו ולא בידיעתו כדי שלא יאמר כל הדיוט לבי מאמין לדברי זה ודעתי סומכת על זה".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">למרות הסתייגות זו (שהמגיד משנה מזכירה כאן), הרמב"ם כן פוסק כאן שהדיין יכול לפעול על פי הבנתו שהלווה רמאי וישבע לשקר<sup id="ref8"><a href="#fn8">[8]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שם ה) פוסק את דברי הרמב"ם להלכה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה-ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    ראובן שהיה חייב לשמעון מאה ולוי חייב לראובן מאה מוציאין מלוי ונותנין לשמעון, לפיכך אם אין לראובן נכסים והיו לו שטרי חוב על לוי ואמר לוי שטר אמנה הוא פרוע הוא והודה לו ראובן אין משגיחין על הודאתו שמא קנוניא הם עושין לאבד זכותו של שמעון אלא ישבע שמעון ויטול מלוי כדין כל טורף שאינו נפרע אלא בשבועה, וכן כל מי שיש עליו שטר חוב והודה לאחר מעצמו בחוב אחר אם אין לו נכסים כדי שיגבו שניהם גובה בעל השטר בלבד שלא יעשו קנוניא על שטרו של זה.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">לווה המודה לבעלי חוב אחרים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יהודה</strong> אמר <strong>רב</strong>: האומר שטר אמנה הוא זה - אינו נאמן. דקאמר מאן? אילימא דקאמר לוה, פשיטא, כל כמיניה? ואלא דקאמר מלוה, תבוא עליו ברכה!...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>אביי</strong> אמר: לעולם דאמר מלוה, וכגון שחב לאחרים וכדרבי נתן</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דתניא,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי נתן</strong> אומר: מנין לנושה בחבירו מנה וחבירו בחבירו, מנין שמוציאין מזה ונותנין לזה? תלמוד לומר: ונתן לאשר אשם לו!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שטר אמנה הוא שטר חוב הנכתב, נחתם וניתן למלווה ככל שטר חוב, אלא שעדיין לא היתה הלוואה. הלווה נותן שטר זה למלווה, כדי שבעת הצורך יוכל האחרון להלוות לו מיד מבלי להיערך לכתיבת שטר. השם "שטר אמנה" נובע מכך שהלווה מאמין למלווה שלא ישתמש בשטר בכדי לגבות ממנו שלא כדין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה הנידון, מדובר בשטר חוב שנטען שהוא שטר אמנה, ורב יהודה קובע שאין מאמינים לטענה. הגמרא מבררת מי הוא הטוען. מצד אחד אם מדובר בלווה, ברור שאינו נאמן, שהרי כל לווה היה יכול לומר כך, ומה בא רב יהודה ללמדנו? מצד שני אם מדובר במלווה המודיע שהשטר שבידו שטר אמנה הוא, מדוע שלא נאמין לו? אביי מסביר שמדובר במלווה הטוען שהשטר שבידו שטר אמנה הוא, אך הוא עושה זאת במצב בו יש לו נושים, להם הוא חייב כסף ואין להם מהיכן לגבות. החשש הוא שהשטר הוא שטר אמיתי, והמלווה, ביודעו שכל כסף שיגבה בשטר ייגבה ממנו על ידי בעל חובו, עשה קנוניה עם זה שלווה ממנו והגיע איתו להסדר בו המלווה יבטל את השטר כשטר אמנה והלווה מתחייב לשלם לו מרצונו סכום נמוך יותר בסתר, כך שיבריח את הרכוש מהנושים שלא ידעו בדבר. לכן אין מאמינים לו שמדובר בשטר אמנה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דברי אביי נתמכים מדברי רבי נתן, הפוסק שאם לוי חייב לראובן וראובן חייב לשמעון, יש תביעה ישירה בין שמעון ללוי, ואין יכולת ביד ראובן לפטור את לוי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (חו"מ פו א) פסק להלכה את דברי רבי נתן, ובמקום אחר (חו"מ מז א) פסק כרבי יהודה על פי פירושו של אביי.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אסור לאדם להלוות מעותיו בלא עדים ואפילו לתלמיד חכם אלא אם כן הלוהו על המשכון והמלוה בשטר משובח יתר, וכל המלוה בלא עדים עובר משום ולפני עור לא תתן מכשול וגורם קללה לעצמו.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור הלוואה ללא עדים</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ב"מ עה:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יהודה</strong> אמר <strong>רב</strong>: כל מי שיש לו מעות, ומלוה אותן שלא בעדים - עובר משום ולפני עור לא תתן מכשל,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>ריש לקיש</strong> אמר: גורם קללה לעצמו, שנאמר תאלמנה שפתי שקר הדוברות על צדיק עתק.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב יהודה  אומר שהמלווה ללא עדים מכשיל את הלווה. רש"י מסביר שה"מכשול" אינו דווקא שהלווה יכפור בחוב, אלא עצם זה שהוא מעלה את הדבר על דעתו הוא כבר מכשול. ריש לקיש מוסיף שאם המלווה יתבע את החוב והלווה יכפור, הבריות יקללו את המלווה בליבם כי יחשבו שהוא משקר<sup id="ref9"><a href="#fn9">[9]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (שם) מסופר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמרו ליה רבנן ל<strong>רב אשי</strong>: קא מקיים <strong>רבינא</strong> כל מה דאמור רבנן. שלח ליה בהדי פניא דמעלי שבתא: לישדר לי מר עשרה זוזי, דאתרמי לי קטינא דארעא למזבן. - שלח ליה: ניתי מר סהדי, ונכתב כתבא. - שלח ליה: אפילו אנא נמי? - שלח ליה: כל שכן מר, דטריד בגירסיה משתלי וגורם קללה לעצמי.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב אשי ניסה לבחון את רבינא האם ילווה לו ללא שטר ועדים בניגוד לדברי חכמים. רבינא לא נפל בפח והסביר שאפילו על רב אשי אינו סומך, לא משום שהוא חושד בו חלילה, אלא משום שכיוון שרב אשי טרוד בלימוד התורה, עלול הוא לשכוח שקיבל הלוואה, ואז כשיתבע אותו רבינא יגרום קללה לעצמו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המגיד משנה כותב שבמלווה על משכון אין לא את טעמו של רב יהודה, כי הלווה אינו יכול לכפור אלא עד כדי שווי המשכון, וכמו כן אין את טעמו של ריש לקיש, כי הבריות יטו להאמין למלווה. לכן, במקרה זה מותר להלוות אף ללא עדים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם פוסק כדברי רב יהודה וריש לקיש כאחד. מהסיפור שבגמרא מסיק הרמב"ם שהדין אמור אפילו בתלמיד חכם, ושעדיף להלוות בשטר מאשר בעדים בע"פ ("ניתי מר סהדי ונכתב כתבא"). כך פוסק השו"ע (חו"מ ע א) ומוסיף להלכה את דברי המגיד משנה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    הרב שלוה מעבדו ואח"כ שחררו או לוה מאשתו ואחר כך גירשה אין להן עליו כלום שכל מה שקנה עבד קנה רבו וכל המעות שביד האשה בחזקת בעלה אלא אם הביאה ראייה שהן מנדונייתה.
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">לווה מאשתו וגרשה או מעבדו ושחררו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא במסכת בבא בתרא (נא.) דנה בדין אשה שקנתה מבעלה. הגמרא דנה האם יש להניח שהכסף שנתנה לו הוא כסף שלקחה בעבר מבעלה והחביאה אותו, והרקע לקניין הוא שהבעל ביים מכירה (חסרת תוקף כמובן) כדי לשכנע אותה להוציא את הכסף. הגמרא מנסה להוכיח מברייתא</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מיתיבי: לוה מן העבד ושחררו, מן האשה וגרשה - אין להן עליו כלום.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מאי טעמא? לאו משום דאמרינן: לגלויי זוזי הוא דבעי!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש, הלווה מאשתו ולאחר מכן התגרשו, או הלווה מעבדו ולאחר מכן משחררו, אין האשה והעבד יכולים לתבוע את כספם בחזרה. הגמרא מבינה שהטעם הוא כנ"ל, שבעצם אין אנו מאמינים שכספם היה זה, אלא היה זה כספו של הבעל/הרב, והאשה או העבד החביאוהו, וההלוואה היתה תחבולה לגרום להם לגלות את הכסף.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מוסיפה הגמרא שבהלוואה יש עוד יותר מקום לטעון טיעון זה מאשר במכר-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שאני התם, דלא ניחא ליה לשווייה נפשיה עבד לוה לאיש מלוה</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כיוון שיש יחס תלות נפשי בין לווה למלווה, אדם יעשה הכל כדי לא ללוות באמת מאשתו או מעבדו, לכן סביר שמדובר במעמד פיקטיבי שנועד לגרום לעבד/אשה לגלות את מקום המעות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים פסקו כדברי הברייתא, אך נחלקו ביחס לתוקף הטעם שבגמרא להלכה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרשב"א והטור הבינו שטעם הדין הוא אכן כי חוששים שהבעל רק רצה שתגלה לו היכן מעותיו שהחביאה. לכן, אם המעות שהלוותה לו לא היו טמונים, הטעם אינו תקף ובמקרה זה הבעל כן צריך להחזיר את ההלוואה לאשתו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי הרמב"ם לעומ"ז, נראה שהוא סובר שאין לחלק חילוק זה ובכל אופן הבעל פטור, כיוון שכל המעות שביד האשה מוחזקים כשייכים לבעלה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המגיד משנה מעיר שהדברים קשורים למחלוקת הראשונים האם אשה נאמנת לומר שמה שבידה שלה הוא ולא של בעלה. ועי' במה שבארנו במחלוקת זו בהלכות שכירות (ז, י).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (אה"ע פו ב) כותב רק כדברי הברייתא, ואינו מנמק. הרמ"א מחלק, כדברי הרשב"א, בין מעות טמונים לבין מעות שאינם טמונים.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn5" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref5" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^5</a> 
+                        רב האי אומר שאם כאשר הלווה מערער נותנים תשעים יום, כל שכן כאשר הוא מודה ואין לו ממה לשלם שיש לתת לו תשעים יום לנסות להשיג כסף לפני שישבע שאין לו. הדברים נובעים מהנחה שמטרת ההמתנה היא לטובת המלווה, כדי שאולי יקבל פרעון כלשהו, ומהבנה שהשבועה אמורה להפעיל לחץ על הלווה שינסה להשיג ממון בכדי להינצל ממנה.
+                    </li>
+                    
+                    <li id="fn6" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref6" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^6</a> 
+                        אפשר שלדידם השבועה אינה דרך להפעיל לחץ לגיוס הכסף, אלא רק דרך לביצוע הגביה עצמה, דרך השבועה על כך שכל דבר שיגיע לידו מעתה ואילך יתן בחובו.
+                    </li>
+                    
+                    <li id="fn7" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref7" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^7</a> 
+                        שיטת הרי"ף מובנת, שכל עוד לא נשבע המלווה היסת, אין כאן תביעה על הלווה. לעומתה, שיטת הרמב"ם צ"ע. ואולי אפשר לומר שלדעת הרמב"ם כיוון שהלווה טוען שתי טענות, יש מקום לחשוד שבשתיהן הוא משקר ואין כוונתו אלא "להוריד את המלווה מגבו", ולכן ראשית ישבע הוא על אחת הטענות, ואפשר שהדבר ירתיע אותו ויודה ואז לא יהיה תורך כלל לשבועת ההיסט של המלווה.
+                    </li>
+                    
+                    <li id="fn8" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref8" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^8</a> 
+                        ונראה לחלק בין הדוגמאות שהוא מביא בהלכות סנהדרין, שם עיקר הדין נחרץ על פי תפיסת המציאות של הדיין, לבין המקרה שלפנינו בו הדיין רק אינו מניח את הרמאי להישבע.
+                    </li>
+                    
+                    <li id="fn9" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref9" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^9</a> 
+                        דברי ריש לקיש מוסיפים על דברי רב יהודה בכך שאפילו אם יסכים המלווה בליבו לוותר ללווה, ובכך יסיר את החשש שהלה יעבור על איסור בכך שיכפור בחוב, עדיין אם יתבע המלווה את הממון והלווה יכפור, יגרום המלווה קללה לעצמו.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>

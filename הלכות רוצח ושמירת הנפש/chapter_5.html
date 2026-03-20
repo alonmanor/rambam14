@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הלכות רוצח ושמירת הנפש - פרק ה'</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+        <div class="font-bold truncate w-3/4">הלכות רוצח ושמירת הנפש - פרק ה'</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 פרויקט הרמב"ם
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ה')</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    איסור המרת עונש גלות בכופר
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    גלות במקרה שלא מת הנהרג מיד
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-2-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    מיתה ברוצח במזיד אם לא מת הנהרג מיד
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ג-ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    חילוקי מעמד בהורג ונהרג בשוגג
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה-ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    ההורג בשוגג תוך כדי קיום מצווה
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-4-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    האב שהרג את בנו
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-4-3" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    שליח בית דין שהרג בשגגה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז-ח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הבריחה לעיר מקלט קודם הדין ולאחר הדין
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ט-יא
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    רוצח בשגגה שיצא חוץ לעיר בה נקלט והרגו גואל הדם או אדם אחר
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-6-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    רוצח בשגגה שהרגו גואל אדם בדרכו לעיר המקלט
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-7" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יב-יד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-7-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    קליטת המזבח
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">הלכות רוצח ושמירת הנפש</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק ה'</h1>
+            </div>
+
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">ארבעת הפרקים הבאים עוסקים בדינו של ההורג אדם בשוגג, ובדין ערי המקלט אליהן הוא נס. בהלכה א מציג הרמב"ם את המצווה להגלות רוצח בשוגג לעיר מקלט, ואת האיסור להמיר עונש זה בכופר.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ב עוסקת במקרה בו לא מת הנהרג מיד. במקרה שכזה, אם יש לתלות שמעורב במיתה גורם אחר, כמו למשל תנועה של הנהרג עצמו או רוח שנכנסה בפצעיו, פטור ההורג מגלות. הראשונים חלקו האם פטור זה הוא דין מיוחד ברוצח בשוגג, או שהוא שייך עקרונית גם בדין רוצח במזיד, וכמו כן האם יש לתלות שגורם אחר גרם למיתה אפילו אם כבר אמדו בית הדין שמעשיו של הרוצח יש בהם בכדי לגרום למותו של הנרצח בפני עצמם.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ג-ד עוסקות בחילוקי מעמדות בדין גלות. נפסק כי דין גלות שייך גם בגר תושב, כלומר, גר תושב שהרג גר תושב אחר גולה. הראשונים חלקו בשאלה האם גם ישראל שהרג גר תושב חייב גלות.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכות ה-ו מוסבר העיקרון לפיו חיוב גלות אינו אמור במקרה בו הכה הרוצח את הנרצח בהקשר של מצווה כמו אב המכה את בנו לצורך חינוך או שליח בית דין המפעיל כח ברשות. בהקשר זה הועלו בגמרא ובפוסקים שתי אפשרויות, לפי האחת דווקא על גרימת מוות תוך כדי עיסוק במצווה ממש פוטר מגלות. לפי השניה אפילו עיסוק במכשירי מצווה, שאין ברירה אלא לעשותם פוטר מגלות.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">לעיר המקלט נועדו שני תפקידים בשני פרקי זמן שונים- מיד לאחר הרצח תפקיד עיר המקלט הוא שמירה על הרוצח מפני גואל הדם בכדי לאפשר לו לעמוד בפני בית הדין, לכן הרוצח נס לעיר המקלט מיד לאחר הרצח עד שיקחוהו משם ויעמידוהו בדין. לאחר גמר דינו של הרוצח, אם התברר שהוא חייב גלות, חוזר הרוצח לעיר המקלט, הפעם לא רק בכדי לשמור על חייו מפני גואל הדם, אלא גם כריצוי עונש הגלות שנגזר עליו. הלכות ז-ח מתארות את סדר ההתרחשויות לאחר מעשה הרצח.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ט-יא מתמקדות בצד ה"מקלט" שבעיר המקלט, קרי, בהגנה שהיא מספקת לרוצח מפני גואל הדם. התורה מתייחסת להריגת הרוצח על ידי גואל הדם הן בבריחתו לעיר המקלט לפני גזר הדין, והן ביציאתו מעיר המקלט לאחר שנגזרה עליו גלות בה. במקרה הראשון מלמדת התורה שגואל הדם פטור על הריגת הרוצח, אמנם, מהכתוב משמע שלכתחילה אין רצון התורה שיהרוג גואל הדם את הרוצח. לעומת זאת, במקרה השני, בו הרוצח יוצא מעיר המקלט, נאמרה לשון פחות מסתייגת: "ורצח גואל הדם את הרוצח". חלקו התנאים האם לשון זו מורה על מצווה שישנה ביד גואל הדם להרוג את הרוצח, או שמא מדובר על רשות. כמו כן חלקו מה דין אדם אחר שהרג את הרוצח היוצא מעיר מקלטו.</p>
+                
+                    <p class="mb-3 leading-relaxed text-base md:text-lg">לסיום הפרק (יב-יד) דן הרמב"ם בקליטת המזבח. מהפסוק בפרשת משפטים וממעשה יואב ושלמה (מלכים א ב) ואדוניה ושלמה (שם א) משמע שהמזבח יכול גם כן לשמש כמקלט בדומה לעיר מקלט. כמו כן, מהמתואר בספר מלכים משמע שהמזבח קולט לא רק רוצחים אלא גם מחוייבי מיתה למלכות. על רקע זה חלוקים הראשונים האם המזבח קולט, בתנאים מסויימים, גם רוצחים במזיד, או שמא אין הוא קולט אלא רוצחים בשוגג, כעיר מקלט.</p>
+                
+            </div>
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    כל ההורג בשגגה גולה ממדינה שהרג בה לערי מקלט ומצות עשה להגלותו שנאמר "וישב בה עד מות הכהן הגדול" (במדבר ל"ה כ"ח), והוזהרו בית דין שלא ליקח כופר מן הרוצח בשגגה כדי לישב בעירו שנאמר "ולא תקחו כופר לנוס אל עיר מקלטו" (במדבר ל"ה כ"ה).
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור המרת עונש גלות בכופר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בבמדבר (לה לא-לב)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְלֹא תִקְחוּ כֹפֶר לְנֶפֶשׁ רֹצֵחַ אֲשֶׁר הוּא רָשָׁע לָמוּת כִּי מוֹת יוּמָת:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְלֹא תִקְחוּ כֹפֶר לָנוּס אֶל עִיר מִקְלָטוֹ לָשׁוּב לָשֶׁבֶת בָּאָרֶץ עַד מוֹת הַכֹּהֵן:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כתובות לב:) מפרשת את שני הפסוקים כאוסרים לפטור רוצחים במזיד או בשוגג מעונש מיתה או מגלות תמורת לקיחת ממון.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה שיש צורך בכתיבת האיסור גם ברוצח בשוגג וגם ברוצח במזיד, כיוון שלו היה כתוב האיסור רק ברוצח במזיד, היינו אומרים שדווקא בו ניתן להמיר את עונש המיתה, כיוון שחסה התורה על חייו, ולו היה כתוב הציווי רק ברוצח בשוגג היינו חושבים שרק בו ניתן להמיר את הגלות בתשלום כי חטאו פחות חמור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מונה את חובת ההגליה של רוצח בשוגג כמצוות עשה אחת (ספר המצוות עשה רכה), ואת האיסור לפוטרו תמורת כופר כמצוות לא תעשה (שם מצוות לא תעשה רצו)</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אין הרוצח בשגגה גולה אלא אם כן מת הנהרג מיד אבל אם חבל בו בשגגה אף על פי שאמדוהו למיתה וחלה ומת אינו גולה שמא הוא קירב את מיתת עצמו או הרוח נכנסה בחבורתו והרגתהו, אפילו שחט בו כל שני הסימנים ועמד מעט אינו גולה על ידו, לפיכך אם לא פרכס כלל או ששחטו במקום שאין הרוח מנשבת בו כגון בית סתום של שיש הרי זה גולה, וכן כל כיוצא בזה. אבל אם חבל בו בשגגה אף על פי שאמדוהו למיתה וכו' שמא הוא קירב את מיתת עצמו. א"א נמצא לדבריו מה שאמרו (כתובות לג) חובשין אותו דאי מיית קטלינן ליה לא אמרו אלא במכה שאין בה חבורה ולא מחוור כלל, ואומר אני שלא אמרו הרוח בלבלתו או פרכוסו הרגתו אלא בששחט בו שנים או רוב שנים אבל חבורה אחרת אין הרוח ופרכוס מקרבין את מיתתו.
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גלות במקרה שלא מת הנהרג מיד</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הגמרא</strong> במסכת גיטין (ע:) דנה בכשירותו ההלכתית של אדם שחוט העומד למות, לצוות על נתינת גט לאשתו. בהקשר זה מובאים דברי <strong>שמואל</strong>, שעדים שראו פלוני ששוחטים את רוב שני סימניו (קנה וושט, והכוונה שלא ראו מה קרה אחר כך) יכולים להעיד עליו שמת ולהתיר את אשתו. הגמרא מסבירה שדין זה אינו משום שבזמן השחיטה נחשב הוא כמת, אלא משום שוודאי שהוא עומד למות בסוף.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שחט בו שנים או רוב שנים (כלומר, שחט <strong>בשוגג</strong> קנה וושט של חבירו) הרי זה אינו גולה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מברייתא זו מקשה הגמרא- מדוע שלא יגלה? והרי הנשחט חשוב הוא כמת עד כדי כך שמעידים עליו להתיר את אשתו!</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שתי תשובות מובאות לשאלה זו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חוששים שמא נשבה הרוח בפצעיו ולכן אינו גולה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הנהרג פרכס ובכך קירב את מיתתו, ולכן אין ההורג גולה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסכמת שההבדל בין שתי התשובות הנ"ל יהיה כאשר שחטו במקום בו אין רוח, או במקרה שלא פרכס.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">העולה מדברי הגמרא, שאין הכרח עקרוני שימות הנהרג לאלתר בכדי להתחייב גלות, אך אם גורם אחר התערב בין הפציעה למוות, יכול הנהרג להיפטר מגלות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעניין טעם הדין, מבארים ה<strong>תוספות</strong> (ד"ה "אלא") שהדבר נלמד מהכתוב ברוצח בשוגג "ויפל עליו וימות", ממנו משמע שמת הנהרג לאלתר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בהבנת מסקנת הגמרא-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש, שהחשש שמא נשבה הרוח בפצע כוונתו שאולי אם לא היתה נושבת לא היה מת כלל ולכן מספק פטור מגלות. בנוסף, מסביר רש"י שבמקרה שפרכס הסיבה שפטור מגלות היא משום ש"נמצא שלא הרגו זה", כלומר, קיימת אפשרות, שבפועל הוא שהרג את עצמו. במילים אחרות, לפי רש"י, אם סופו של הנהרג למיתה ללא ספק ואין אדם אחר שתרם לקירוב מיתתו, ברור שההורג גולה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחרת משמע מדברי ה<strong>תוספות</strong> (ד"ה "בביתא") המסביר שגם בפרכוס וגם בנשיבת הרוח בפצעי הנהרג, פטור ההורג משום שדבר אחר קירב את מיתתו. אמור מעתה, אפילו אם ודאי הוא שימות הנהרג לבסוף כתוצאה ממעשיו של ההורג, עדיין פטור ההורג מגלות אם היה כח אחר מעורב במעשה, שיכול לקרב את מיתת הנהרג<sup id="ref67"><a href="#fn67">[67]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגית ה<strong>גמרא</strong> בכתובות (לג:) מביאה הגמרא את הדין שחובשים את המכה את חבירו (שאמדוהו למיתה) לאחר מעשה עד שימות המוכה. אם מת המוכה לבסוף, הורגים את הרוצח, ואם לא מת, משלם המכה ככל חובל (ראה לעיל פרק ד הלכה ג-ה). הגמרא מנסה להוכיח מכך, שאם משלם המכה, הרי אינו לוקה<sup id="ref68"><a href="#fn68">[68]</a></sup>. הגמרא פורכת את ההוכחה ואומרת שניתן להעמיד דין זה דווקא במכה חבירו בשוגג, וחובשים את המכה כדי שאם ימות המוכה, יתחייב המכה גלות. מדברים אלה משמע שהמכה חבירו בשוגג מתחייב גלות אפילו אם לא מת לאלתר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (שם ד"ה "דלמא") מתרצים שדווקא בשחיטה וכדומה לה גורמים פרכוס או רוח לקירוב מיתה, אך ישנן פציעות אחרות בהן אין לחשוש לקירובי מיתה אחרים מלבד מעשהו של ההורג.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי </strong>מפרש אחרת. לדבריו אם אמדו את המוכה למיתה (כפי המתואר בסוגיה בכתובות) אין חוששים עוד לגורמים אחרים שקירבו את מיתתו. רק אם לא הספיקו לאומדו עד שמת, תולים בגורמים שונים שקירבו מיתתו בכל מקום שישנם גורמים שכאלה בנמצא.</p>
+                    
+                </div>
+                
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מיתה ברוצח במזיד אם לא מת הנהרג מיד</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים פסקו שדין זה, שתולים שמחמת הרוח או הפרכוס מת, אמור רק ברוצח בשוגג, אך ברוצח במזיד אין מקלים ואם אמדוהו למיתה, אפילו מת זמן ארוך לאחר מעשה, חייב הרוצח מיתה. כך מבארים ה<strong>תוס'</strong> (ראה לעיל), וכך נראית גם דעת ה<strong>רמב"ם</strong> מתוך שהביא דין זה דווקא בהלכות רוצח בשוגג.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">יוצא דופן בהקשר זה הוא ה<strong>ראב"ד</strong> (לפי הסברו של הכסף משנה) המבין שאפילו ברוצח במזיד כשלא נהרג הקרבן לאלתר, יש לחשוש לנשיבת רוח או לפרכוס. אפשר לפרש בדומה לזה גם בדברי רש"י (עי' הערה ). מכיוון שהלכה פסוקה היא, שחובשים את הרוצח במזיד עד שיתברר גורלו של המוכה ואם מת זה, נהרג עליו, מפרש הראב"ד (בדומה לתוספות), שרק בשחיטה חוששים לנשיבת הרוח, אבל בדרך כלל, אפילו מת לאחר זמן, נענש עליו ההורג בין בגלות ובין במזיד.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    ישראל שהרג בשגגה את העבד או את גר תושב גולה וכן העבד שהרג בשגגה את ישראל או את גר תושב וכן גר תושב שהרג את גר תושב או את העבד בשגגה גולה שנאמר לבני ישראל ולגר ולתושב בתוכם. ישראל שהרג בשגגה את העבד או את גר תושב. א"א אין נראה כך מן ההלכה לפי שהוצרכו להביא עבד וכותי מן הריבוי אלמא גר תושב אין גולין עליו ואין נהרג עליו ועוד כי יכה את רעהו כתיב.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    גר תושב שהרג את ישראל בשגגה אף על פי שהוא שוגג הרי זה נהרג, אדם מועד לעולם, וכן גר תושב שהרג גר תושב מפני שעלה על דעתו שמותר להרגו הרי זה קרוב למזיד ונהרג עליו הואיל ונתכוון להרגו, וגוי שהרג את הגוי בשגגה אין ערי מקלט קולטות אותו שנאמר לבני ישראל.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חילוקי מעמד בהורג ונהרג בשוגג</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (מכות ח:):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכל גולין על ידי [כלומר, כשהרגו אדם מ-] ישראל וישראל גולין על ידיהן</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חוץ מגר תושב</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וגר תושב אינו גולה אלא על ידי גר תושב</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (שם) מסבירה, ש"הכל" הכוונה לכלול כותים ועבדים. כלומר, יש להבין את דברי המשנה הראשונים כך- ישראלים, כותים ועבדים שהרגו ישראל בשוגג, גולים, וכנ"ל הפוך, אם ישראל הרג בשוגג אחד ממעמדות אלה, גם כן גולה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (שם עמוד ב) מסכמת הגמרא על פי משנתנו, שגר תושב שהרג גר תושב גולה (כמבואר בסיפא), אך לעומת זאת, גר תושב שהרג ישראל, אינו גולה (כמבואר ברישא). הגמרא ממשיכה ומבארת, שחילוק זה מסביר גם כיצד מצד אחד כללה התורה את הגר התושב בדין הגולים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לִבְנֵי יִשְׂרָאֵל <strong>וְלַגֵּר וְלַתּוֹשָׁב</strong> בְּתוֹכָם תִּהְיֶינָה שֵׁשׁ הֶעָרִים הָאֵלֶּה לְמִקְלָט (במדבר לה טו)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומצד שני ייחדה את האפשרות לגלות לישראל בלבד:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"וְהָיוּ <strong>לָכֶם</strong> הֶעָרִים לְמִקְלָט מִגֹּאֵל..." (שם יב)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מקשה על מסקנה זו, שגר תושב שייך בדין גלות, מ<strong>ברייתא</strong> שם נאמר:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפיכך גר ועובד כוכבים שהרגו נהרגין</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכאן משמע שאין חילוק בין גר תושב לבין גוי רגיל, ושניהם אינם גולים, אפילו אם הרגו את בני מינם! הגמרא מתרצת שלעיתים גם גר תושב שהרג גר תושב אחר, אינו גולה כדברי המשנה, אלא נהרג, כפי שיתבאר לקמן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בשאלה מתי נהרג ומתי גולה נחלקו האמוראים מחלוקת קיצונית-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב חסדא</strong> סובר שאם הרג גר תושב את חברו ב"דרך ירידה" (שבאופן זה ישראל שהרג את חבירו גולה, עי' להלן פרק ו יב-יד) גולה ועל כך דיברה המשנה. אמנם אם הרגו ב"דרך עליה", אינו גולה אלא נהרג (בכך עסקה הברייתא). רב חסדא סובר עוד, שקיים מקרה בו גר תושב שהרג יהיה פטור מכל וכל, וחשוב כאנוס, והוא כאשר בשעת מעשה חשב ההורג שמעשהו מותר, אם משום שחשב שבהמה לפניו, או משום שטעה בהבנת איסור הרציחה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> חלוק על רב חסדא מכל וכל. הוא אמנם מודה שגר תושב שהרג את חבירו ב"דרך ירידה" חייב גלות, ושזהו המקרה עליו דיברה המשנה. אך במקרה שהרגו ב"דרך עליה" פוטרו רבא מכל וכל, ובמקרה של "אומר מותר", מחייבו רבא מיתה כי קרוב למזיד הוא, "שהיה לו ללמוד ולא למד". שני פסקים אלה הפוכים לגמרי לדבריו של רב חסדא<sup id="ref69"><a href="#fn69">[69]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כדברי רבא, שגר תושב שהרג גר תושב כי חשב שהדבר מותר אינו גולה אלא נהרג. בהמשך (פרק ו הלכה יב) פוסק הרמב"ם עוד כרבא שדרך עליה קלה יותר מאשר דרך ירידה, ושהפטור מגלות של ההורג ב"דרך עליה" הוא משום שקרוב לשוגג ולא משום שקרוב לאונס.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בהבנת דברי המשנה "חוץ מגר תושב"-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כאן ובפירוש המשניות, פירש שישראל שהרג גר תושב בשוגג גולה, ודברי המשנה "חוץ מגר תושב" כוונתם להוציא מדין גלות גר תושב רק במקרה בו הרג ישראל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת הרמב"ם מבין ה<strong>ראב"ד</strong> שגר תושב אינו גולה בין אם הרג ישראל ובין אם ישראל הרגו. הוא סומך את דבריו על הפסוק "אֲשֶׁר יַכֶּה אֶת <strong>רֵעֵהוּ</strong> בִּבְלִי דַעַת" (שמות יט ד), ממנו משמע שדווקא אם הרג ישראל את רעהו גולה הוא לעיר מקלט, ולא אם הרג גר תושב.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי גר תושב שהרג עבד כותב ה<strong>רמב"ם</strong> שגולה. לכאורה הדברים מנוגדים ללשון המשנה "וגר תושב אינו גולה אלא על ידי גר תושב". אמנם הגירסה ב<strong>ירושלמי</strong> היא "וגר תושב על ידי גר תושב", ואז אפשר גם שיגלה על הריגת אחרים שאינם גרים תושבים. ה<strong>כסף משנה</strong> מקשה מה ראה הרמב"ם לחלק בין עבד לבין ישראל, שהרי המשנה כוללת כותים ועבדים עם ישראל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בסנהדרין (נז.) קובעת שבני נח נהרגים על כל עבירה משבע המצוות עליהן הם מוזהרים. בהמשך נאמר שבני נח נהרגים אפילו ללא התראה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> בסוגייתנו פירש, שהברייתא "לפיכך גר ועובד כוכבים שהרגו נהרגין" היא נגזרת ישירה מהנאמר בסנהדרין, שהרי אם חייבים בני נח מיתה אפילו ללא התראה, משמע שחייבים מיתה גם על שוגג, והרי לנו שבן נח (וכמותו גם גר תושב) חייב מיתה על הריגה בשוגג, כמו על שאר מצוותיו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> (ד"ה "הא דתניא") חולק על דברים אלה, וטוען שהגמרא בסנהדרין לא התכוונה שבן נח נהרג על שוגג בכל אחת משבע מצוותיו, שהרי לו היתה זו הכוונה, היתה הגמרא אומרת זאת במפורש. הרמב"ן מפרש שהברייתא "לפיכך גר ועובד כוכבים שהרגו נהרגין" כוונתה שדין הריגה הוא דין יוצא דופן ובו חייבים גר תושב ובן נח מיתה אפילו על שוגג<sup id="ref70"><a href="#fn70">[70]</a></sup>. גם ה<strong>רמב"ם</strong> (לפנינו ובהלכות מלכים י, א) פסק בדרך זו .</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה-ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    הבן שהרג את אביו בשגגה גולה וכן האב שהרג את בנו בשגגה גולה על ידו, במה דברים אמורים בשהרגו שלא בשעת לימוד, או שהיה מלמדו אומנות אחרת שאינו צריך לה, אבל אם יסר בנו כדי ללמדו תורה או חכמה או אומנות ומת פטור.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    וכן הרב המכה את תלמידו או שליח בית דין שהכה את בעל דין הנמנע מלבוא לדין והמיתו בשגגה פטורין מן הגלות שנאמר "לחטוב עצים"- לדברי הרשות, יצא האב המכה את בנו והרב הרודה את תלמידו ושליח בית דין שהרי שגגו והרגו בשעת עשיית המצוה. וכן הרב המכה תלמידו או שליח בית דין שהכה את בעל דין הנמנע מלבא בדין וכו'. א"א זו לא שמענו מעולם אלא שליח ב"ד שהוא מלקה ממה שאמדוהו ב"ד ומת תחת ידו והא דאמרינן (מ"ק טז) דכפתינן ואסרינן ועבדינן הרדפה הנהו לבעלי עבירות עד שיחזרו בהן.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההורג בשוגג תוך כדי קיום מצווה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעניין רוצח בשוגג נאמר</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וַאֲשֶׁר יָבֹא אֶת רֵעֵהוּ בַיַּעַר <strong>לַחְטֹב עֵצִים</strong> וְנִדְּחָה יָדוֹ בַגַּרְזֶן לִכְרֹת הָעֵץ וְנָשַׁל הַבַּרְזֶל מִן הָעֵץ וּמָצָא אֶת רֵעֵהוּ וָמֵת הוּא יָנוּס אֶל אַחַת הֶעָרִים הָאֵלֶּה וָחָי (דברים יט ה)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (מכות ח.) לומד <strong>אבא שאול</strong> מפסוק זה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אבא שאול</strong> אומר מה חטבת עצים רשות אף כל רשות יצא האב המכה את בנו, והרב הרודה את תלמידו, ושליח בית דין.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כשם שהדוגמה שבתורה היא לאדם שהרג בשוגג תוך כדי עשיית דבר הרשות, כך באופן כללי, הרוצח בשוגג מתחייב בגלות רק כאשר עשה את מעשהו שלא מתוך מצווה. לכן, אב המכה את בנו ללמדו מוסר, או הרב הרודה בתלמידו ללמדו תורה או שליח בית דין המכה את חברו במצוות בית הדין, ומתו, פטורים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> מועלית האפשרות שאף הדוגמה המובאת בפסוקים, כריתת עצים ביער, היא מעשה של מצווה, וזאת כאשר העצים נכרתים למטרת מצווה כבניין סוכה או עצי מערכה למקדש. לפי זה דברי אבא שאול במשנה אינם מובנים, שהרי כריתת עצים היא לא תמיד רשות, וכיצד זה למדים מדוגמה זו שדווקא העוסק בדבר הרשות והרג גולה? <strong>רבא</strong> דוחה אפשרות זו בשתי דרכים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי דרך אחת מסביר רבא, שכיוון שאין המצווה לכרות עצים (שהרי אם מצא כרותים די בכך), הרי שכריתת העצים כשלעצמה היא תמיד מעשה של רשות. בכך שונה היא מהאב המכה את בנו העוסק במצווה בעצם ההכאה. לפי אפשרות זו, העוסק ב<strong>הכשר מצווה</strong>, ככריתת עצים לצורך סוכה, והרג תוך כדי מעשיו, <strong>אינו</strong> פטור מגלות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי דרך אחרת מסביר רבא, שהלימוד שלומד אבא שאול מהפסוק אינו מעצם כריתת העצים, אלא מהנאמר "<strong>וַאֲשֶׁר </strong>יָבֹא אֶת רֵעֵהוּ בַיַּעַר", כלומר, שעוסק בדבר שהבחירה בידו אם לעשותו, שאם רוצה בא ואם אינו רוצה אינו בא. לפי הסבר זה ניתן לומר שאף העוסק בהכשר מצווה, אם אין לו ברירה אלא לעשות דבר זה בכדי לקיים את המצווה, ובתוך מעשיו הרג בשגגה, פטור הוא מגלות<sup id="ref71"><a href="#fn71">[71]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> פוסק שחטיבת עצים, אפילו לצורך מצווה, אין בה בכדי לפטור מגלות. זאת על פי דברי רבא הראשונים לפיהם כיוון שאם מצא כרותים די בכך, אין כריתת העצים מוגדרת כמצווה. מלשון ה<strong>רמב"ם</strong> "...שהרי שגגו והרגו <strong>בשעת עשיית המצוה</strong>" ניתן לדייק שאף דעתו כדעת המאירי.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחרת משמע מפירוש ה<strong>ברטנורא</strong>. לדעתו דברי רבא האחרונים הם הקובעים, ולכן אם המעשה היה מחוייב לצורך מצווה, אפילו אם אינו מצווה בעצמו, ונהרג אדם אגב עשיית המעשה, פטור ההורג מגלות.</p>
+                    
+                </div>
+                
+                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">האב שהרג את בנו</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> הבאה (שם ח:) נאמר</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האב גולה על ידי [כלומר בעקבות הריגתו של] הבן והבן גולה על ידי האב</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מבינה שמדובר על אב שהרג את בנו בשוגג תוך כדי ייסורו לצורכי לימוד. לכן מקשה הגמרא כיצד הדבר עולה בקנה אחד עם הנלמד במשנה הקודמת, שההורג את בנו תוך כדי לימוד אינו גולה. הגמרא עונה שמדובר באב המלמד את בנו מלאכה, ובאופן שאין זו מצווה כיוון שיודע הוא כבר מלאכה אחרת.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי דברים אלה פוסק ה<strong>רמב"ם</strong> שהאב גולה על הריגת בנו תוך כדי לימוד רק אם היה זה תוך כדי לימוד מלאכה שאינו צריך לה, שאם לא כן, הרי הורגו מתוך עיסוק במצווה ופטור.</p>
+                    
+                </div>
+                
+                <div id="topic-4-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שליח בית דין שהרג בשגגה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור לעיל, <strong>אבא שאול</strong> פוטר מגלות את שליח בית הדין שהרג. בראשונים מצינו כמה דעות לגבי מהות המקרה -</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> כותב שהכוונה לשליח בית דין שהכה את החייב מלקות כפי שפסקו ואמדו בית הדין, ומת תחת ידו. לפי זה, מוסיף הרמב"ן, הסיבה שפטור מגלות אינה משום שעסק במצווה, אלא משום שהיה אנוס. בכך שונה דוגמה זו מהאב המכה את בנו והרב המכה בתלמידו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שהכוונה לשליח בית הדין "המלקה ארבעים לחייב מלקות". ניתן להבין בדבריו שהכוונה לשליח בית דין שהוסיף מכה אחת על השלושים ותשע שהיה אמור לתת. אמנם פירוש זה קשה כיוון שלהלן במשנה (כב:) נאמר על מקרה שכזה ש"הוסיף לו עוד רצועה אחת ומת הרי זה גולה על ידו". לכן נראה שרש"י סובר כרמב"ן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> (לפי הגרסה שהיתה לפני הראב"ד, הכסף משנה והמאירי) כותב שהכוונה לשליח בית הדין "שהכה את בעל דין הנמנע מלבא בדין".</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    בתחילה אחד שוגג ואחד מזיד מקדימין לערי מקלט ובית דין של אותה העיר שהרג בה שולחין ומביאין אותן משם ודנין אותן, שנאמר "ושלחו זקני עירו ולקחו אותו משם", מי שנתחייב מיתה ממיתין אותו שנאמר "ונתנו אותו ביד גואל הדם", מי שנפטר פוטרים אותו שנאמר "והצילו העדה את הרוצח מיד גואל הדם", מי שנתחייב גלות מחזירין אותו למקומו שנאמר "והשיבו אותו העדה אל עיר מקלטו".
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    כשמשיבין אותו מוסרין לו שני תלמידי חכמים שמא יהרגנו גואל הדם בדרך ואומרין להם אל תנהגו בו מנהג שופכי דמים בשוגג בא מעשה לידו.
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הבריחה לעיר מקלט קודם הדין ולאחר הדין</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>דברים</strong> יט, יא-יג מתארת התורה מקרה בו רוצח במזיד בורח לעיר מקלט-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְכִי יִהְיֶה אִישׁ שֹׂנֵא לְרֵעֵהוּ וְאָרַב לוֹ וְקָם עָלָיו וְהִכָּהוּ נֶפֶשׁ וָמֵת וְנָס אֶל אַחַת הֶעָרִים הָאֵל: וְשָׁלְחוּ זִקְנֵי עִירוֹ וְלָקְחוּ אֹתוֹ מִשָּׁם וְנָתְנוּ אֹתוֹ בְּיַד גֹּאֵל הַדָּם וָמֵת: לֹא תָחוֹס עֵינְךָ עָלָיו וּבִעַרְתָּ דַם הַנָּקִי מִיִּשְׂרָאֵל וְטוֹב לָךְ:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>במדבר</strong> לה, כב-כה, מתואר מקרה של רוצח בשוגג-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְאִם בְּפֶתַע בְּלֹא אֵיבָה הֲדָפוֹ אוֹ הִשְׁלִיךְ עָלָיו כָּל כְּלִי בְּלֹא צְדִיָּה: אוֹ בְכָל אֶבֶן אֲשֶׁר יָמוּת בָּהּ בְּלֹא רְאוֹת וַיַּפֵּל עָלָיו וַיָּמֹת וְהוּא לֹא אוֹיֵב לוֹ וְלֹא מְבַקֵּשׁ רָעָתוֹ: וְשָׁפְטוּ הָעֵדָה בֵּין הַמַּכֶּה וּבֵין גֹּאֵל הַדָּם עַל הַמִּשְׁפָּטִים הָאֵלֶּה: וְהִצִּילוּ הָעֵדָה אֶת הָרֹצֵחַ מִיַּד גֹּאֵל הַדָּם וְהֵשִׁיבוּ אֹתוֹ הָעֵדָה אֶל עִיר מִקְלָטוֹ אֲשֶׁר נָס שָׁמָּה וְיָשַׁב בָּהּ עַד מוֹת הַכֹּהֵן הַגָּדֹל אֲשֶׁר מָשַׁח אֹתוֹ בְּשֶׁמֶן הַקֹּדֶשׁ</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהתיאור בדברים בו זקני העיר לוקחים את הרוצח מעיר המקלט ומהתיאור בבמדבר לפיו בית הדין ("העדה") משיבים את הרוצח אל עיר המקלט ניתן ללמוד על האופן בו גולה הרוצח, לפני עמידתו למשפט ובמקרה הצורך, אחריה. וכך נאמר בברייתא (מכות י:)-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוסי בר' יהודה</strong> אומר: בתחלה [תחילת ההליך המשפטי- רש"י] אחד שוגג ואחד מזיד מקדימין לערי מקלט ובית דין שולחין ומביאין אותם משם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מי שנתחייב מיתה- הרגוהו, שנאמר "ושלחו זקני עירו ולקחו אותו משם ונתנו אותו ביד גואל הדם ומת".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מי שלא נתחייב- פטרוהו, שנאמר "והצילו העדה את הרוצח מיד גואל הדם".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מי שנתחייב גלות- מחזירין אותו למקומו שנאמר "והשיבו אותו העדה אל עיר מקלטו אשר נס שמה".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי</strong> אומר מעצמן הן גולין. כסבורין הן אחד שוגג ואחד מזיד קולטות והן אינן יודעין שבשוגג קולטות במזיד אינן קולטות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי דעת <strong>ר' יוסי</strong>, הפסוקים בספר דברים מתארים מציאות <strong>מחייבת</strong>, לפיה כל רוצח חייב לברוח קודם כל לעיר מקלט קודם שימשך בירור דינו. לעומת זאת, לדעת <strong>רבי</strong> הפסוקים מתארים מקרה בו הרוצח במזיד בורח <strong>בטעות</strong> לעיר מקלט, בחושבו שהיא קולטת אף מזידים, וממילא אין כל חיוב לבצע זאת לכתחילה. ב<strong>משנה</strong> (ט:) הובאה דעתו של ר' יוסי, וכך פסק ה<strong>רמב"ם</strong>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (ט:) וביתר הרחבה ב<strong>ברייתא</strong> (י:) נאמר ששולחים עם הרוצח שני תלמידי חכמים ששומרים עליו מפני גואל הדם. אותם תלמידי חכמים אומרים לגואל הדם: "אל תנהג בו מנהג שופכי דמים, בשגגה בא מעשה לידו". מה<strong>גמרא</strong> (י:) עולה שתלמידי החכמים מלווים את הרוצח כבר כשלוקחים אותו מעיר המקלט לעירו בכדי לדונו, כלומר, עוד לפני שהוחלט שמדובר ברוצח בשוגג. לכן, כאשר הם אומרים לגואל הדם ש"בשוגג בא מעשה לידו" הכוונה היא שאולי יצא מפסק הדין שבשוגג בא מעשה לידו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אכן, ה<strong>מאירי</strong> כותב שמצרפים לו שומרים אלה בין בלכתו לדינו בעיר בה בוצע המעשה, ובין בשובו משם לעיר המקלט אם יצא דינו לגלות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, מלשון ה<strong>רמב"ם</strong> "כשמשיבין אותו", ניתן לדייק שהוא מחייב צירוף שני תלמידי חכמים דווקא כאשר משיבים את הרוצח לעיר המקלט, כאשר נגמר דינו לגלות.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-יא</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    רוצח בשגגה שהרגו גואל הדם חוץ לתחום עיר מקלטו פטור שנאמר "ולו אין משפט מות" (דברים יט ו).
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אחד ההורגו בדרך קודם שיכנס לעיר מקלטו או שהרגו בחזירתו עם השנים ששומרין אותו, נכנס לעיר מקלטו ויצא חוץ לתחומה בזדון הרי זה התיר עצמו למיתה ורשות לגואל הדם להרגו ואם הרגו כל אדם אין חייבין עליו שנאמר "אין לו דם" (במדבר לה כז).
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    יצא חוץ לתחום עיר מקלטו בשגגה כל ההורגו בין גואל הדם בין שאר אדם גולה על ידו, הרגו בתוך תחום עיר מקלטו אפילו גואל הדם הרי זה נהרג עליו.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רוצח בשגגה שיצא חוץ לעיר בה נקלט והרגו גואל הדם או אדם אחר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכתוב בבמדבר עוסק ברוצח בשוגג היוצא מחוץ לעיר המקלט-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְאִם יָצֹא יֵצֵא הָרֹצֵחַ אֶת גְּבוּל עִיר מִקְלָטוֹ אֲשֶׁר יָנוּס שָׁמָּה: וּמָצָא אֹתוֹ גֹּאֵל הַדָּם מִחוּץ לִגְבוּל עִיר מִקְלָטוֹ וְרָצַח גֹּאֵל הַדָּם אֶת הָרֹצֵחַ אֵין לוֹ דָּם: כִּי בְעִיר מִקְלָטוֹ יֵשֵׁב עַד מוֹת הַכֹּהֵן הַגָּדֹל וְאַחֲרֵי מוֹת הַכֹּהֵן הַגָּדֹל יָשׁוּב הָרֹצֵחַ אֶל אֶרֶץ אֲחֻזָּתוֹ: (במדבר לה כו-כח)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (מכות יב.) מובאת <strong>ברייתא</strong> ובה מחלוקת תנאים בהבנת הנאמר "ורצח גואל הדם את הרוצח":</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">'ורצח גואל הדם את הרוצח'-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מצוה ביד גואל הדם. אין גואל הדם, רשות ביד כל אדם דברי <strong>רבי יוסי הגלילי</strong>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר</strong><strong>בי</strong><strong> עקיבא</strong> אומר רשות ביד גואל הדם וכל אדם חייבין עליו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, במקרה שהרוצח כבר נקלט בעיר המקלט, ויצא חוץ לתחומה, מבין <strong>ר' יוסי</strong> שהתורה מצווה על גואל הדם להורגו, ובכל אופן כל אדם שהרגו פטור. לעומתו <strong>ר' עקיבא</strong> מבין את הנאמר בתורה בתור רשות- "ורצח", הכוונה- אם קרה הדבר ורצחו. כלומר, אם הרגו גואל הדם מאחר שיצא מעיר המקלט- פטור, ובכל אופן כל אדם אחר שהרגו, איסור הוא בידו ונהרג עליו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ביארנו את דברי <strong>ר</strong><strong>בי</strong><strong> עקיבא</strong> לפי הגירסה בדפוסים שלפנינו. לפי גרסאות אחרות יש לגרוס "ר' עקיבא אומר רשות ביד גואל הדם וכל אדם <strong>אין</strong> חייבין עליו". לפי גרסה זו, אדם שאינו גואל הדם, שהרג את הרוצח, פטור מעונש על אף שעבר על איסור. בזאת שונה הוא מגואל הדם, שכלל לא עבר על איסור בהריגתו, כיוון שרשות היא בידו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדרך זו פסקו ה<strong>רמב"ם</strong>, <strong>רבינו חננאל</strong> וה<strong>ריטב"א</strong>. הרמב"ם אף סומך גרסה זו על הכתובים שהרי נאמר "אין לו דם", ומשמע שאין חיוב על הריגתו בכלל, בין אם הרגו גואל הדם ובין אם הרגו אדם אחר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מובאת דעה שלישית, דעת <strong>ר' אליעזר</strong>, אותה מציגה הגמרא כחולקת על דעותיהם של ר' יוסי ור' עקיבא:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר</strong><strong>בי</strong><strong> אליעזר</strong> אומר '[וְהָיוּ לָכֶם הֶעָרִים לְמִקְלָט מִגֹּאֵל וְלֹא יָמוּת הָרֹצֵחַ] עַד עָמְדוֹ לִפְנֵי הָעֵדָה לַמִּשְׁפָּט' מה תלמוד לומר? לפי שנאמר 'ורצח גואל הדם את הרוצח' יכול מיד? תלמוד לומר 'עד עמדו לפני העדה למשפט'.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי <strong>ר</strong><strong>בי</strong><strong> אל</strong><strong>י</strong><strong>עזר</strong> למד <strong>רב</strong>, שבניגוד לדברי התנאים האחרים, רוצח שיצא חוץ לתחום ומצאו גואל הדם והרגו, נהרג עליו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו כיצד להבין את דינו של רב ואת הקשר בינו לבין הלימוד מהפסוק-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> כותב שהפסוק בא לאסור את הריגת הרוצח שיצא עד שלא יבוא לפני בית דין שיתרו בו שאסור לו לצאת. זוהי הכוונה "עד עומדו לפני העדה למשפט".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינו חננאל</strong> מבאר שעד שנידון הרוצח בבית דין (שזו הכוונה ב"עד עומדו") ההורגו חייב. אמנם, לאחר שנידון לגלות, מודה ר' אליעזר לתנאים האחרים, שגואל הדם שהרגוֹ פטור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מתלבטת האם המקרה המתואר בכתוב, בו פטור גואל הדם עוסק אפילו ברוצח שיצא בשוגג מעיר מקלטו (שכן משמע מההדגשה היתרה שבפסוק- "אִם יָצֹא יֵצֵא", לכלול כל סוגי יציאה), או שמא הדין אמור דווקא ברוצח שיצא <strong>בכוונה</strong> מעיר מקלטו ואין ללמוד מהייתור שבפסוק כיוון ש"דברה תורה כלשון בני אדם".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מובאות שתי ברייתות החולקות בנקודה זו. האחת, לפיה גם אם יצא בשוגג ההורגו פטור-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם יצֹא יצֵא הרוצח, אין לי אלא במזיד בשוגג מנין? תלמוד לומר "אם יצֹא יצֵא"- מכל מקום</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">והשניה ממנה משמע שאם יצא בשוגג ההורגו חייב-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">(וההורגו) במזיד נהרג בשוגג גולה</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הריטב"א</strong> אינו גורס את המילה "וההורגו" ומסביר שהכוונה לרוצח שאם יצא במזיד מעיר מקלטו, אזי הוא "נהרג" כלומר, ההורגו פטור. לעומת זאת, אם יצא בשוגג, הרי הוא "גולה", כלומר, דינו שיחזור לעיר מקלטו ולגלותו, ואין להורגו<sup id="ref72"><a href="#fn72">[72]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אביי</strong> פותר מסברה כדרך השניה, וטעמו- "שלא יהא סופו חמור מתחלתו", כלומר, כפי שעל הרציחה עצמה מחוייב הרוצח מיתה דווקא אם היתה במזיד, כך על היציאה מהעיר יחוייב מיתה (כלומר, יפטר גואל הדם ממיתה, ולכן לא יפחד להורגו) רק על יציאה במזיד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק שאכן אם יצא בשוגג אין להורגו, אך הוא מציין ש"כל ההורגו גולה על ידו". רבים פרשו שכוונת הרמב"ם שדווקא ההורגו בשוגג גולה על ידו. אמנם <strong>ערוה"ש</strong> (תכה מב) מפרש שאף ההורגו במזיד, לאותו רוצח שיצא בשוגג מעירו, חייב גלות בלבד. ערוה"ש מפרש שטעם הדבר מתוך שאם יוצא הוא במזיד הרי רשאים להורגו, ולכן אם אין ההורגו יודע שיצא בשוגג, פטור הוא כיוון שחשב שרשות בידו להרגו<sup id="ref73"><a href="#fn73">[73]</a></sup>.</p>
+                    
+                </div>
+                
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רוצח בשגגה שהרגו גואל אדם בדרכו לעיר המקלט</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בצד הדיון ברוצח שיצא חוץ לעיר מקלטו, דנה הגמרא בסוגיה נפרדת (שם י:) ברוצח בשוגג שהרגו גואל הדם עוד לפני שהגיע לעיר המקלט. מוקד הדיון הוא תיאור המקרה שבתורה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פֶּן יִרְדֹּף גֹּאֵל הַדָּם אַחֲרֵי הָרֹצֵחַ כִּי יֵחַם לְבָבוֹ וְהִשִּׂיגוֹ כִּי יִרְבֶּה הַדֶּרֶךְ וְהִכָּהוּ נָפֶשׁ וְלוֹ אֵין מִשְׁפַּט מָוֶת כִּי לֹא שֹׂנֵא הוּא לוֹ מִתְּמוֹל שִׁלְשׁוֹם (דברים יט ו)</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התורה דורשת להבדיל ערי מקלט ולתקן את הדרכים המובילות אליהן בכדי למנוע את הריגת הרוצח בשוגג על ידי גואל הדם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית הגמרא מובאות ברייתות חלוקות. האחת סוברת ש"לו אין משפט מוות" אמור כלפי גואל הדם. כלומר, משמעות הפסוק היא שישנו חשש שגואל הדם יהרוג את הרוצח ולא יפחד, שכן אין הוא נענש על הריגה זו. לפי הברייתא השניה, "לו אין משפט מוות" אמור כלפי הרוצח, ושיעור הפסוק הוא- שמא יהרוג גואל הדם את הרוצח אשר לא מגיע לו להיהרג, שכן רצח בשוגג.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב הונא</strong> הולך על פי הדרך הראשונה, ולכן הוא פוסק ש"רוצח שגלה לעיר מקלט ומצאו גואל הדם והרגו פטור", שהרי אין לו, לגואל הדם, משפט מוות על הריגת הרוצח.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היחס בין דברי ר' הונא האמורים ברוצח הבורח לעיר מקלט, לבין מחלוקת התנאים האמורה ברוצח שיצא מהעיר לאחר שנקלט שם, אינו חד משמעי-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בריטב"א מובאים דברי <strong>רבי מאיר הלוי</strong>, הסובר שדעת רב (ורבי אליעזר), שגואל הדם שהרג את הרוצח שיצא חוץ לעיר חייב עליו, חלוקים על דברי ר' הונא. טעמו הוא, שאם ההורג את הרוצח בבורחו פטור, כל שכן שיפטר ההורג את הרוצח שיצא מעיר המקלט, שבזה יש להאשים יותר את הרוצח שפשע במה שיצא מהעיר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> עצמו מפקפק בדבר, וטוען שגם יכולה להיות סברה הפוכה- להחמיר יותר בדין גואל הדם דווקא כשהרג את הרוצח בבורחו לעיר המקלט, שכן אם כבר הגיע לעיר המקלט, נחשב הוא כבר מוגן, וזאת אפילו יצא מהעיר, כל עוד דעתו לשוב לשם, וכפי שאין להורגו בתוך העיר, כך סברה היא שאין להורגו מחוצה לה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-7" class="mb-12 pt-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב-יד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    המזבח קולט שהרי נאמר בהורג בזדון "מעם מזבחי תקחנו למות" (שמות כ"א י"ד) מכלל שההורג בשגגה אינו נהרג במזבח, לפיכך ההורג בשגגה וקלטו מזבח והרגו שם גואל הדם הרי זה נהרג עליו כמי שהרגו בתוך עיר מקלטו.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    אין קולט אלא גגו של מזבח בית העולמים בלבד ואינו קולט אלא כהן ועבודה בידו אבל זר או כהן שאינו עובד בשעה שנהרג או שהיה עובד ולא היה על גגו אלא סמוך למזבח או אוחז בקרנותיו אינו נקלט.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                    וכל מי שקלטו המזבח אין מניחין אותו שם אלא מוסרין לו שומרין ומגלין אותו לעיר מקלטו. במה דברים אמורים במחוייב גלות, אבל מי שפחד מן המלך שלא יהרגנו בדין המלכות או מבית דין שלא יהרגוהו בהוראת שעה וברח למזבח ונסמך לו ואפילו היה זר הרי זה ניצל, ואין לוקחין אותו מעל המזבח למות לעולם אלא אם כן נתחייב מיתת בית דין בעדות גמורה והתראה כשאר כל הרוגי בית דין תמיד.
+                </div>
+                
+
+                
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קליטת המזבח</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>פרשת משפטים </strong>(שמות כא יב-יד):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מַכֵּה אִישׁ וָמֵת מוֹת יוּמָת: וַאֲשֶׁר לֹא צָדָה וְהָאֱלֹהִים אִנָּה לְיָדוֹ וְשַׂמְתִּי לְךָ מָקוֹם אֲשֶׁר יָנוּס שָׁמָּה: וְכִי יָזִד אִישׁ עַל רֵעֵהוּ לְהָרְגוֹ בְעָרְמָה מֵעִם מִזְבְּחִי תִּקָּחֶנּוּ לָמוּת</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מפשט הפסוק ומההקשר משמע שבניגוד לרוצח בשגגה, שנס למקום ידוע, רוצח במזיד אפילו אם נס למזבח, בכל זאת נלקח משם למות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, בגמרא במסכת יומא (פה.) מובאים דברי <strong>ר' עקיבא</strong> המדייק "מעם מזבחי" ולא "מעל מזבחי". כלומר, לפי דבריו, אם כהן עובד על המזבח, הרי המזבח קולטו אפילו אם הוא רוצח במזיד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>מלכים א פרק א</strong> מסופר על אדוניה בן חגית שברח מפני שלמה מפחד שיהרגנו כמורד במלכות, ונאחז בקרנות המזבח-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וַיֻּגַּד לִשְׁלֹמֹה לֵאמֹר הִנֵּה אֲדֹנִיָּהוּ יָרֵא אֶת הַמֶּלֶךְ שְׁלֹמֹה וְהִנֵּה אָחַז בְּקַרְנוֹת הַמִּזְבֵּחַ לֵאמֹר יִשָּׁבַע לִי כַיּוֹם הַמֶּלֶךְ שְׁלֹמֹה אִם יָמִית אֶת עַבְדּוֹ בֶּחָרֶב: וַיֹּאמֶר שְׁלֹמֹה אִם יִהְיֶה לְבֶן חַיִל לֹא יִפֹּל מִשַּׂעֲרָתוֹ אָרְצָה וְאִם רָעָה תִמַּצֵא בוֹ וָמֵת: וַיִּשְׁלַח הַמֶּלֶךְ שְׁלֹמֹה וַיֹּרִדֻהוּ מֵעַל הַמִּזְבֵּחַ וַיָּבֹא וַיִּשְׁתַּחוּ לַמֶּלֶךְ שְׁלֹמֹה וַיֹּאמֶר לוֹ שְׁלֹמֹה לֵךְ לְבֵיתֶךָ</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן דומה מסופר (שם פרק ב) על יואב בן צרויה שברח אף הוא משלמה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְהַשְּׁמֻעָה בָּאָה עַד יוֹאָב כִּי יוֹאָב נָטָה אַחֲרֵי אֲדֹנִיָּה וְאַחֲרֵי אַבְשָׁלוֹם לֹא נָטָה וַיָּנָס יוֹאָב אֶל אֹהֶל ה' וַיַּחֲזֵק בְּקַרְנוֹת הַמִּזְבֵּחַ: וַיֻּגַּד לַמֶּלֶךְ שְׁלֹמֹה כִּי נָס יוֹאָב אֶל אֹהֶל ה' וְהִנֵּה אֵצֶל הַמִּזְבֵּחַ וַיִּשְׁלַח שְׁלֹמֹה אֶת בְּנָיָהוּ בֶן יְהוֹיָדָע לֵאמֹר לֵךְ פְּגַע בּוֹ: וַיָּבֹא בְנָיָהוּ אֶל אֹהֶל ה' וַיֹּאמֶר אֵלָיו כֹּה אָמַר הַמֶּלֶךְ צֵא וַיֹּאמֶר לֹא כִּי פֹה אָמוּת וַיָּשֶׁב בְּנָיָהוּ אֶת הַמֶּלֶךְ דָּבָר לֵאמֹר כֹּה דִבֶּר יוֹאָב וְכֹה עָנָנִי: וַיֹּאמֶר לוֹ הַמֶּלֶךְ עֲשֵׂה כַּאֲשֶׁר דִּבֶּר וּפְגַע בּוֹ וּקְבַרְתּוֹ וַהֲסִירֹתָ דְּמֵי חִנָּם אֲשֶׁר שָׁפַךְ יוֹאָב מֵעָלַי וּמֵעַל בֵּית אָבִי:  וְהֵשִׁיב ה' אֶת דָּמוֹ עַל רֹאשׁוֹ אֲשֶׁר פָּגַע בִּשְׁנֵי אֲנָשִׁים צַדִּקִים וְטֹבִים מִמֶּנּוּ וַיַּהַרְגֵם בַּחֶרֶב וְאָבִי דָוִד לֹא יָדָע אֶת אַבְנֵר בֶּן נֵר שַׂר צְבָא יִשְׂרָאֵל וְאֶת עֲמָשָׂא בֶן יֶתֶר שַׂר צְבָא יְהוּדָה: וְשָׁבוּ דְמֵיהֶם בְּרֹאשׁ יוֹאָב וּבְרֹאשׁ זַרְעוֹ לְעֹלָם וּלְדָוִד וּלְזַרְעוֹ וּלְבֵיתוֹ וּלְכִסְאוֹ יִהְיֶה שָׁלוֹם עַד עוֹלָם מֵעִם ה': וַיַּעַל בְּנָיָהוּ בֶּן יְהוֹיָדָע וַיִּפְגַּע בּוֹ וַיְמִתֵהוּ וַיִּקָּבֵר בְּבֵיתוֹ בַּמִּדְבָּר:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מכות יב.) מסבירה שיואב טעה כמה טעויות ובגללן הותר לשלמה להורגו. ראשית, טעה שאין קולט אלא גג המזבח הוא אחז בקרנותיו, כמו כן רק המזבח שבמקדש קולט, והוא ברח למזבח בשילה (בראשית ימי שלמה עוד לא עמד המקדש על תילו). מלבד זאת, המזבח קולט רק כהן בשעת עבודת קודש. מכלל הדברים נלמד שכאשר מתמלאים כל התנאים הללו, המזבח קולט.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות פשט הפסוקים בפרשת משפטים מפרש ה<strong>רמב"ם</strong>, שהמזבח אינו קולט כלל רוצחים במזיד. את כל הדרישות המופיעות בגמרא במכות מפרש הרמב"ם כאמורות כלפי רוצח בשוגג.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רשב"א</strong> (בתשובותיו ח"א תקכד) פסק כפי דעת ר' עקיבא בגמרא ביומא, ולכן הוא סובר שהמזבח קולט גם רוצחים במזיד, וגם כלפיהם אמורות כל הדרישות שבסוגיה במכות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מוסיף ופוסק ששלושת התנאים המוזכרים בסוגייה במכות אמורים רק בחייב גלות, אך במי שבורח מהמלך או מבית דין שלא יהרגוהו בהוראת שעה, המזבח קולט אפילו אם היה זר.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דברי הרמב"ם כאן קשים, שהרי לכאורה יואב לא נידון כדין רוצח אלא כדין מורד במלכות (כמבואר בסוגיה בסנהדרין מט.) והסוגיה במכות אומרת שטעה בשלושה דברים, ומשמע מכך שאף מורד במלכות זקוק לכל התנאים האמורים בקליטת המזבח.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ערוה"ש</strong> (תכה מג) מתרץ שיואב טעה בכך שנהג שלא כפי הדרך שהיתה מצילה חייבי גלות, כלומר ניכר היה ממעשיו שאינו יודע את הדין, אך בדין מורד במלכות אכן נהג כדין (ומשמע ששלמה לא נהג כדין כאשר ציווה להרגו)<sup id="ref74"><a href="#fn74">[74]</a></sup>.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn67" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref67" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^67</a> 
+                        בניגוד לתוספות, שהסבירו שקיימת גזירת הכתוב הדורשת שההורג יהיה הגורם הבלעדי למוות בכדי לחייב גלות, נראה שרש"י הבין אחרת. רש"י מפרש שנשיבת הרוח בפצעי הנשחט גורמת לספק שמא אלמלא הרוח היה שורד. נראה שרש"י נדחק לפרש כך משום שלדעתו באמת אין דין מיוחד בשוגג. כמו שברוצח במזיד צריך וודאות בכך שמעשיו של הרוצח גרמו למוות, כך גם בהורג בשוגג נדרשת ודאות שכזו.
+                    </li>
+                    
+                    <li id="fn68" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref68" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^68</a> 
+                        מתוך כך שהיתה התראה, שלכן אם מת המוכה חייב המכה מיתה, והתראה למיתה טובה גם למלקות, ובכל זאת אם לא מת המוכה אין מלקים את המכה (למרות שעבר על איסור הכאת חבירו), ומשלם במקום, ומכאן שאין אדם לוקה ומשלם.
+                    </li>
+                    
+                    <li id="fn69" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref69" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^69</a> 
+                        עי' הערה 95
+                    </li>
+                    
+                    <li id="fn70" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref70" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^70</a> 
+                        מדברי הרמב"ן משמע שלדעתו ה"לפיכך" של הברייתא מתחייחס למשנתנו. כלומר, כוונת הברייתא היא שכיוון שגר תושב שהרג ישראל אינו גולה, כמבואר בברייתא, הרי הוא נהרג. כלומר, בניגוד לישראל, שהיה ראוי ליהרג אף בשוגג (ולכן דמו הותר כלפי גואל הדם), אך התורה נתנה לו את האפשרות לגלות לעיר מקלט, גר תושב, שאין לו אפשרות זו לגלות, חייב מיתה.
+                    </li>
+                    
+                    <li id="fn71" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref71" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^71</a> 
+                        קיים הבדל מהותי בין שתי האפשרויות- בעוד שלפי האפשרות הראשונה הפטור מגלות הוא משום שאם הרג אדם בשוגג תוך כדי עשיית מצווה אין מעשיו מוגדרים כרצח, לפי האפשרות השניה מה שפוטרו מעונש הוא שהיה חייב לעשות את מעשיו ולא היתה לו ברירה, לכן אשמתו פחותה.
+                    </li>
+                    
+                    <li id="fn72" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref72" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^72</a> 
+                        הערוך לנר מעיר שפירוש הברייתא לפי הריטב"א קשה לשונית, שכן אם הכוונה לומר שאין להרוג את הרוצח שיצא בשוגג מעיר מקלטו, צריך היה לומר שחוזר לעיר מקלטו או ביטוי דומה, ולא "גולה", שמשמעו להגלות אדם שעד עכשיו לא היה בגלות. לכן הוא מציע לגרוס את המילה "וההורגו", והוא מסביר שברור לגמרא שהברייתא עוסקת ביוצא בשוגג, ומלמדת שדינו ככל האדם, שההורגו במזיד נהרג ובשוגג גולה.
+                    </li>
+                    
+                    <li id="fn73" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref73" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^73</a> 
+                        אמנם עדיין נשאר ערוה"ש על הרמב"ם בצריך עיון מצד פירושו את דברי הגמרא, כיוון שלפי הרמב"ם יש לפרש את דברי הברייתא "במזיד נהרג בשוגג גולה" שה"נהרג" הכוונה לרוצח, וה"גולה" הכוונה להורג הרוצח, וזהו פירוש קשה מאוד.
+                    </li>
+                    
+                    <li id="fn74" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref74" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^74</a> 
+                        ניתן גם לתרץ לענ"ד, שהרמב"ם, למרות הגמרא בסנהדרין, פירש שיואב נידון כרוצח מצד שלמה. אמנם, יואב עצמו חשב ששלמה רוצה להורגו רק מצד מורד במלכות (כי היה אחר אדוניה) ולכן אחז בקרנות המזבח, ולא במזבח בית עולמים ולא בשעת עבודה. לפי פירוש זה שלוש טעויותיו של יואב הן בעצם טעות אחת- שהוא לא ידע על מה רוצים להורגו.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            // מחליף את המחלקה שמחביאה/מציגה את התפריט
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // סוגר את התפריט אוטומטית אחרי שלוחצים על קישור כדי לקרוא בנוחות
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) { // בודק אם זה מסך טלפון (מתחת ל-md של tailwind)
+                toggleSidebar();
+            }
+        }
+    </script>
+</body>
+</html>
