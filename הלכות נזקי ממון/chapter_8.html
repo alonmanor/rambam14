@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ח</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1016,7 +1026,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1026,7 +1036,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזקין בין רכוש הדיוט להקדש</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (לז:) פוטרת בין בשור של ישראל שנגח לשור של הקדש, ובין במקרה ההפוך. המשנה לומדת דין זה מהאמור בעניין נגיחת שור תם:</p>
@@ -1042,7 +1052,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב-ג</h2>
 
                 
@@ -1056,7 +1066,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גבייה מבשר שלמים שהזיקו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמת שלמים היא דוגמה לקדשים שאין בהם מעילה ולכן חייבים לשלם אם הזיקו. <strong>בגמרא</strong> (יג.) מובאים דברי <strong>ר' אבא</strong>, הקובע שאם בהמת שלמים הזיקה, ניתן לגבות מבשרה בלבד, ולא מהאימורים, שכן האימורים הם החלקים שאינם נאכלים לבעלים, שכן הם אינם ממון בעלים, יש בהם מעילה ואין בהם דין נזיקין.</p>
@@ -1068,7 +1078,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
 
                 
@@ -1078,7 +1088,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור של הפקר שנגח</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ט:) מחייבת בנזק "נכסים מיוחדים [מלשון ייחוד, שמיוחדים ויש להם זיקה לאדם מסויים]". ה<strong>גמרא</strong> (יג:) דנה בכוונת המשנה, ומסיקה על פי ברייתא, שהמשנה באה למעט נכסי הפקר מדין נזיקין. כלומר, אם הזיק שור הפקר ואח"כ זכה בו אדם אחר, לא ניתן לגבות ממנו, אף לא אם הזיק בנזק תם. בגמרא מובא גם פירושו של רבינא למשנה. <strong>רבינא</strong> מסביר שהמשנה ממעטת מדין נזקין שור שהופקר או הוקדש לאחר שנגח. רבינא מוסיף שדין זה נלמד מהפסוק:</p>
@@ -1100,7 +1110,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
 
                 
@@ -1110,7 +1120,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הדין כשהניזק או המזיק הוא גוי</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (לז:) אומרת, ששור של ישראל שנגח שור של גוי, פטור, ואילו שור של גוי שנגח שור של ישראל, משלם נזק שלם בין תם ובין מועד. ב<strong>גמרא</strong> מובא הטעם לחוסר הסימטריה- שהקב"ה התיר את ממונם של הגויים לישראל כיוון שאלה אינם מקיימים את שבע מצוות בני נח המוטלות עליהם.</p>
@@ -1124,7 +1134,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ט</h2>
 
                 
@@ -1146,7 +1156,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מכר או הקדיש המזיק את שורו – שייכות הניזק בשור המזיק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כזכור, נזק שור תם נגבה מגופו. ה<strong>גמרא</strong> (לג.) מביאה את מחלוקת התנאים לעניין שייכות הניזק בשור תם. <strong>ר' עקיבא</strong> סבור שמיד עם הנגיחה הופך הניזק להיות שותף ממש בשור המזיק, שהרי הוא משתלם חצי נזק מגופו של השור המזיק. <strong>ר' ישמעאל </strong>סובר שאין הניזק זוכה בחלקו בשור המזיק עד שיחייבוהו בי"ד, ועד אז הרי הנזק כחוב על המזיק, והשור המזיק שייך עדיין כולו למזיק. לפי זה, אם מכר או הקדיש המזיק את השור, לפי ר' עקיבא יש סברה שאין מעשיו כלום שהרי השור אינו כולו שלו, ואילו לפי ר' ישמעאל הדעת נותנת שמה שעשה עשוי. סוגיית הגמרא ממשיכה ומבררת את המקרים הללו לפי כל אחת מהדעות.</p>
@@ -1175,7 +1185,7 @@
                     
                 </div>
                 
-                <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קדמו בעלי חובות ותפסוהו- דין קדימות בגביה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ברייתא</strong> הנ"ל מוסיפה ודנה בדין קדימות בגבייה. אם באו בעלי חובות של המזיק (לפני ההעמדה בדין) וגבו את השור לפני שהספיק הניזק לגבותו, יש הבדל בדין בין שור תם לשור מועד. בשור תם הניזק קודם לבעלי החובות וגובה מהם, ולעומת זאת בשור מועד כל הקודם לגבות זוכה. הגמרא מסבירה שקדימות הניזק על פני בעלי החוב בשור תם נובעת מכך שיש בפיו של הניזק טענה כלפיהם- 'לו היה השור ברשותך בשעה שהזיק, לא ממך הייתי גובה?'</p>
@@ -1191,7 +1201,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1201,7 +1211,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גובים לנזקין ממטלטלין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יד:) בתארה את דין תשלומי נזקין, כותבת "שווה כסף". ה<strong>גמרא</strong> (שם) מביאה ברייתא, המפרשת שביטוי זה כוונתו היא שבית דין אינם גובים תשלומי נזיקין אלא מנכסים שיש להם אחריות, ולא ממיטלטלין (דהיינו הכוונה היא ל"שווה כסף", להבדיל ממיטלטלין החשובים ככסף ממש). אמנם, הגמרא קובעת למסקנה שאין זה הדין הרגיל- בדרך כלל גובים תשלומי נזק גם ממיטלטלין, והמשנה המחייבת תשלומי נזק מנכסים שיש להם אחריות בלבד, מדברת על גביה מיתומיו של המזיק, שאין לגבות מהם מיטלטלין כיוון שאולי קנאום לאחר מיתת אביהם (עי' לקמן הלכה יא).</p>
@@ -1210,7 +1220,7 @@
                     
                 </div>
                 
-                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עידית של ניזק או של מזיק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ז:) מביאה את מחלוקת ר' עקיבא ור' ישמעאל בהבנת דברי התורה:</p>
@@ -1226,7 +1236,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יב</h2>
 
                 
@@ -1240,7 +1250,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גביית תשלומי נזקין מיתומי המזיק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יד:) מגיעה למסקנה (עי' לעיל הלכה י), שמיתומים אין לגבות ממטלטלין אלא רק מקרקע. <strong>רש"י</strong> מסביר שטעם הדבר משום שבמטלטלין יכול להיות שהיתומים קנו לאחר מיתת אביהם, ולכן אינם משתעבדים לפריעת החוב. וכך פוסק כאן ה<strong>רמב"ם</strong>.</p>
@@ -1262,7 +1272,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג-יד</h2>
 
                 
@@ -1276,7 +1286,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חובת הראיה בנזיקין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יד:) כותבת:</p>
@@ -1336,7 +1346,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

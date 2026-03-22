@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ו</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1058,7 +1068,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1068,7 +1078,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">התפלגות הנגיחות הדרושות כדי להפוך שור למועד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (כג:) עוסקת בהגדרתו של שור מועד, ובדרך בה הוא חוזר להיות תם:</p>
@@ -1091,7 +1101,7 @@
                     
                 </div>
                 
-                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ליעודי תורא או ליעודי גברא – עדויות על שלוש נגיחות שהתקבלו ביום אחד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מעלה בהמשך שאלה- האם שלושת הימים שהצריך ר' יהודה הם כדי לייעד את השור או את בעליו. על פי <strong>התוספות</strong> (שם ד"ה "אי") השאלה היא מה מטרת שלושת הימים- האם צריך שלושה ימים נפרדים כדי לברר את תכונתו של השור כשור נָגח ביתר דיוק, או שהצורך בשלושה ימים נובע מכך שאנו מקלים על הבעלים להודיעו שלוש פעמים נבדלות כדי לתת לו שלוש הזדמנויות לשמור את שורו, ואין לחייבו נזק שלם עד שהוא פושע בשמירתו שלוש פעמים. מ<strong>רש"י</strong> לעומת זאת (ד"ה "לייעודי" ו"השתא") משמע שאין שאלת הגמרא קשורה לטעם בגללו יש צורך בשלושה ימים נפרדים.</p>
@@ -1119,7 +1129,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב-ד</h2>
 
                 
@@ -1137,14 +1147,14 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">העדה בבית דין ובפני הבעלים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור הדין שהעדות על נגיחת השור צריכה להינתן בבית דין, בנוכחות הבעלים, הוא בברייתא (שם). הרמב"ם מוסיף מסברתו את המקור לכך.</p>
                     
                 </div>
                 
-                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור שאין לו בעלים בני חיוב – העמדת אפוטרופוס לגבות חצי נזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (לט.) עוסקת בשתי בעיות המתעוררות כאשר לשור המזיק אין בעלים בני חיוב. הבעיה הראשונה היא שאין מי להאשים בפשיעה בשמירה. בעקבות בעיה זו פוסקת המשנה, ששור של חרש שוטה וקטן שנגח שור של פיקח, פטורים הבעלים. הבעיה השניה היא שאי אפשר לכאורה להפוך את השור למועד, כי אין העדאה אלא בפני בעלים (עי' לעיל). הפתרון שמעלה המשנה לבעיה זו היא מינוי אפוטרופוס, שיהווה תחליף לבעלים, והעדאה בפניו.</p>
@@ -1161,7 +1171,7 @@
                     
                 </div>
                 
-                <div id="topic-2-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מי משלם על נזקי שור מועד של היתומים.</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, מוסכם על כולם שממנים אפוטרופוס להעיד בפניו ולו בכדי להפוך את השור למועד, ולחייב נזק שלם (אם הוחזק נגחן). וחלקו האמוראים בשאלה מי משלם את הנזק השלם. <strong>ר' יוחנן</strong> סובר שמשלמים את הנזק מנכסי היתומים, ולמרות שבד"כ אין גובים חובות מנכסי יתומים, אא"כ נצרך הדבר להגנתם (כגון אם החוב גדל משום ריבית, או לתשלום כתובת אשת אביהם, שכל זמן שאינה מקבלת כתובה, ניזונה מהירושה שלהם), כאן גובים מהם, כדי שלא להרתיע אנשים מלהיות אפוטרופסים. <strong>ר' יוסי בר חנינא</strong> חולק וסובר שמשלמים מנכסי האפוטרופוס, וכשיגדלו היתומים, יתבע אותם האפוטרופוס.</p>
@@ -1173,7 +1183,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
 
                 
@@ -1183,7 +1193,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין שור האיצטדין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בתורה:</p>
@@ -1205,7 +1215,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
 
                 
@@ -1215,7 +1225,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רשות מְשנה –הקשר בין ההעדאה לבין מחזיק השור.</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (לט:) מביאה <strong>ברייתא</strong> (שבחלקה הראשון עסקנו לעיל בהלכה ד)- שור שהועד תחת רשות אפוטרופוס (כיוון שבעליו חרש שוטה וקטן או במדינת הים), ושבו הבעלים (נתפקחו, גדלו, או שבו ממדינת הים) – <strong>יהודה בן נקוסא</strong> אומר שחוזר השור לתמותו, עד שיעידו בו מחדש בפני הבעלים שלוש פעמים, ואילו <strong>חכמים</strong> אומרים, שהשור נותר מועד. בהמשך, מובאת <strong>ברייתא</strong> נוספת ובה מחלוקת בין <strong>ר' יעקב</strong> המחייב חצי נזק בשור של חרש שוטה או קטן לבין <strong>ר' יהודה</strong> המחייב נזק שלם. אחת מהדרכים בהן ניתן להבין ברייתא זו היא של <strong>רבינא</strong> (מ.), שמדובר שוב על שור מועד של חרש שוטה וקטן, וגדלו או נתפקחו, שר' יעקב סובר שחזר השור לתמותו, ואילו ר' יהודה סובר שעדיין מועד הוא.</p>
@@ -1229,7 +1239,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1239,7 +1249,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חזרה ממועדות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עיין בהסבר להלכה א' לעיל. כאמור, <strong>הרמב"ם</strong> פסק כר' יוסי, הפוסק כר' מאיר שבמשנה לגבי חזרה. לכן כותב הרמב"ם שאם ילדים מתגרים בשור, ובכל זאת הוא אינו נוגח, הרי הוא תם לעניין נגיחה. מכאן משליך הרמב"ם, שבכל נזק מועד של קרן, נבחנת חזרתו של השור לתמות על ידי התנהגותו כשמתגרים בו.</p>
@@ -1251,7 +1261,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1261,7 +1271,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מועדות לניזק ספיציפי</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (לז.) מביאה את המקרים עליהם מדבר הרמב"ם בהלכה זו, ומחדשת ששור יכול להיות מועד להזיק ניזק מסויים, כגון מין בהמה מסויימת, או גודל מסויים שלה, או דווקא אדם ולא בהמה. ואם נגח השור ניזק שלא היה מועד להזיק, חייב חצי נזק בלבד.</p>
@@ -1272,7 +1282,7 @@
                     
                 </div>
                 
-                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מועד לשבתות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (שם) פוסקת ששור שנגח שלוש פעמים בשבת, הינו מועד לשבתות, וחייב נזק שלם על נגיחות שבת, וחצי נזק על נגיחות בחול.</p>
@@ -1288,7 +1298,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-י</h2>
 
                 
@@ -1302,7 +1312,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">העדאה לכמה סוגי בהמות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>ברייתא</strong> (לז.) "נגח שור חמור וגמל - נעשה מועד לכל". כלומר, שלוש נגיחות של שלושה סוגים שונים של בהמות, מראות שהשור מועד ליגח באופן כללי, ולאו דווקא סוג מסויים של בהמה.</p>
@@ -1313,7 +1323,7 @@
                     
                 </div>
                 
-                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מועד לסירוגין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם) מביאה <strong>ברייתא</strong> נוספת לפיה אם שור ראה שור אחר ונגחו, ואז ראה שור ונמנע מלנגוח, ושוב ראה שור ונגחו וחוזר חלילה עד שנגח שלושה שוורים לסירוגין, ונמנע מלנגוח שלושה שוורים לסירוגין, הרי ש"נעשה מועד לסירוגין לשוורים". בהמשך מובאת עוד ברייתא המתארת מקרה המכליל את עיקרון ההעדאה לסירוגין, עם עיקרון ההעדאה לכמה סוגי בהמות. הברייתא פוסקת שאם נגח סוגי בהמות שונים (שור, סוס ופרד), ובין לבין נמנע מלנגוח סוגי בהמות שונים (חמור, גמל וערוד), נעשה מועד לסירוגין לכל.</p>
@@ -1331,7 +1341,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
 
                 
@@ -1341,7 +1351,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">העדאה לפי תאריך</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בגמרא</strong> (נידה סד.) חלוקים רב ושמואל בענייו אשה שהתחילה לראות דם ביום טו לחודש מסויים, ובחודש שאחריו ביום טז ובחודש שאחריו ב-יז לחודש. <strong>רב</strong> אומר שעתה יש לאותה אשה וסת קבועה, כלומר, היא אמורה לראות דם שוב ב-יח לחודש הבא, ב-יט לחודש שאחריו וכן הלאה. <strong>שמואל</strong> חולק וסובר שכדי שתקבע וסת, יש צורך לראיה נוספת, ביום יח לחודש הבא, ורק אז יכולה לסמוך על הקביעות של הסטת יום הראיה ביום אחד כל חודש. טעמו של שמואל הוא שחזקת שלוש פעמים צריכה לבוא לידי ביטוי בפערי הזמן שבין נגיחה לנגיחה, ולכן צריך שלושה פרקי זמן של חודש ויום בין ראיה לראיה כדי שהוסת תיקבע להפסקות זמן כאלו.</p>
@@ -1354,7 +1364,7 @@
                     
                 </div>
                 
-                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מועד לשופרות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (לז:) אומר רבא, שאם נגח שלוש פעמים לאחר ששמע קול שופר, נעשה מועד לשופרות, כלומר, מועד לנגוח בעקבות שמיעת קול שופר. וכך פוסק ה<strong>רמב"ם</strong>. לדין זה יש השלכה על כל העדאה, שאם הנגיחות קרו בעקבות רעש מיוחד או מקום מיוחד, יש להגביל את ההעדאה לתנאים אלו.</p>
@@ -1364,7 +1374,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב-יג</h2>
 
                 
@@ -1378,7 +1388,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההקשר של נגיחת מינו ביחס לנגיחות אחרות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הגמרא</strong> (לז:) דנה בשני המקרים הבאים:</p>
@@ -1422,7 +1432,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

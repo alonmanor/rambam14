@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ה</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1018,7 +1028,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א:</h2>
 
                 
@@ -1028,7 +1038,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מניעת נזק אקטיבית מצד הניזק:</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כג:) מביאה את דברי ר' יוסף שעיזים שבשוק המפסידות נכסי אחרים, מתרים בבעליהם פעמיים ושלוש ואם עדיין אינו שומר את עיזיו מלהזיק, שוחטים אותן ומוסרים לו את דמי הבשר.</p>
@@ -1048,7 +1058,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב:</h2>
 
                 
@@ -1058,7 +1068,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור גידול בהמה דקה:</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (עט:) כותבת:</p>
@@ -1080,7 +1090,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג:</h2>
 
                 
@@ -1130,7 +1140,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עשרה תנאים שהתנה יהושע:</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (פ: למטה) מובאים עשרה תנאים שהתנה יהושע. הקו המנחה של אותם תנאים הוא מידה של שיתופיות בבעלות על הארץ. להלן התקנות בלשון הגמרא ופירושיהן:</p>
@@ -1160,7 +1170,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכות ד, ו:</h2>
 
                 
@@ -1174,7 +1184,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תקנת שלמה:</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד תקנה אחת, בעלת האופי הכללי של תקנות יהושע, מיוחסת בגמרא לשלמה המלך, והיא, שבזמן הקיץ לאחר הקציר, ועד יז במרחשוון, שהוא זמן הרביעה השניה של הגשמים (שאז הדריכה מזיקה לזרעים שבשדה), מותר לכל אדם ללכת בשדות אחרים. ה<strong>גמרא</strong> מבארת שטעם הדבר הוא שאין שום הפסד לבעל השדה בכך ולכן אין ראוי שיאסור על כך.</p>
@@ -1186,7 +1196,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה:</h2>
 
                 
@@ -1196,7 +1206,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שייכות תקנות יהושע בחו"ל:</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> נפסק שתנאי יהושע שייכים גם בחו"ל וכל שכן בבבל. <strong>רש"י</strong> מפרש שיהושע כלל את חו"ל בתקנותיו כיוון שמצויים שם שיירות של ישראל.</p>
@@ -1206,7 +1216,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1216,7 +1226,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מתי מותר לגדל בהמה דקה בארץ ישראל:</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מביאה כמה מקרים בהם מותר לגדל בהמה דקה לזמן מוגבל. לפני הרגל או לפני מסיבה גדולה, מותר לקנות בהמות ולשהותן עד שלושים יום, ובלבד שלא ישהה לאחר הרגל או המסיבה. כמו כן הטבח השוחט את הבהמות למוכרן ביום השוק, לא מותר לו לקנות בהמות רבות יחד ולשהותן עד יום השוק, ובלבד שלא ישהה בהמה לאחר יום השוק. ה<strong>רמב"ם </strong>לא כתב הגבלה זו בטבח, אלא כתב בפשטות שמותר לטבח לשחוט מעט מעט, ולהשהות לפני שהוא שוחט.</p>
@@ -1226,7 +1236,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1236,7 +1246,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור גידול בהמה דקה בבבל</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (פ.) מובאים דברי <strong>ר' הונא</strong>, שמאז בואו של רב לבבל דין בבל כדין ארץ ישראל לעניין איסור גידול בהמה דקה. <strong>רש"י</strong>, בעקבות הבנתו שטעם האיסור הוא משום יישוב הארץ, מסביר שטעם החלתו של האיסור על בבל הוא משום שרבו המתיישבים שם סביב בואו של רב, או משום שרוב ישראל ישובים שם. ואף ה<strong>רמב"ם </strong>מסביר, שרוב הכרמים והשדות בבבל היו של ישראל, וגזרו על גידול בהמה דקה כדי לשמור על ממון ישראל, מאותה הסיבה בדיוק שגזרו בארץ ישראל עצמה.</p>
@@ -1246,7 +1256,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1256,7 +1266,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור גידול כלבים וחזירים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (עט:) אוסרת גידול חזירים בכל מקום, ואף גידול כלבים אלא אם כן היו קשורים בשלשלת. ב<strong>גמרא</strong> (פג.) משמע שגידול כלבים אסור מפני הסכנה שהם מהווים לאנשים, ולכן מותר אם קשור בשלשלת, ובעיר הקרובה לספר מותר אף לשחררו בלילה לצרכי שמירה. הטעם המובא (פב:) לאיסור גידול חזירים הוא משום מעשה שהיה בימי מצור יהודה אריסטובלוס על יוחנן הורקנוס בירושלים, שהיו הצרים מעלים את קרבן התמיד לנצורים, עד שפעם אחת, כדי להפסיק את העבודה ולנצחם במלחמה, העלו להם חזיר.</p>
@@ -1268,7 +1278,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1278,7 +1288,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רועה שעשה תשובה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור הדין ב<strong>ברייתא</strong> (פ.), בה נאמר שאם מישהו מצא עצמו עם הרבה חזירים, כלבים או בהמה דקה, בין אם נפלו לו בהיתר (ירושת גר), ובין באיסור (רועה בהמה דקה שעשה תשובה), לא הכריחו אותו להיפטר מכולם בבת אחת, כי אז יצטרך למוכרן בזול ולהפסיד, אלא יכול למכור מעט מעט.</p>
@@ -1297,7 +1307,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

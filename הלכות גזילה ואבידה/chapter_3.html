@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות גזילה ואבידה - פרק ג</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1148,7 +1158,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
 
                 
@@ -1162,7 +1172,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השתנה ערך הגזילה ואז נשברה או אבדה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סוגיית הגמרא בבבא מציעא (מג.) עוסקת בשומר ששלח יד בפיקדון ולאחר מכן התייקר הפקדון או הוזל, כפי איזה ערך משלם. בהקשר זה מובאים דברי <strong>רבה</strong>:</p>
@@ -1204,7 +1214,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
 
                 
@@ -1214,7 +1224,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הערכת שווי הגזילה לפי מחיר סיטונאי או קמעונאי</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא מציעא צט:) מובאים דברי <strong>שמואל</strong>:</p>
@@ -1234,7 +1244,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
 
                 
@@ -1244,7 +1254,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אימתי מחזיר גזילה גם לאחר איבוד שוויה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (בבא קמא צו:)</p>
@@ -1267,7 +1277,7 @@
                     
                 </div>
                 
-                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בהמה והזקינה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב פפא</strong> (צו:) מסביר שאין הכוונה דווקא להזקינה, אלא אפילו אם הכחישה הבהמה, והמשנה כתבה "הזקינה" והתכוונה לכל חולי וכחש שאין לו תקנה.</p>
@@ -1276,7 +1286,7 @@
                     
                 </div>
                 
-                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עבדים והזקינו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה (מצוטטת לעיל) חלקו התנאים האם עבדים דינם כבהמה, או שמא בעבדים למרות שהוכחשו ופחת ערכם באופן בלתי הפיך עדיין אומר לו "שלך לפניך". מהגמרא משמע שמחלוקת התנאים היא האם דין עבדים כדין קרקעות שאינן נגזלות. <strong>חכמים</strong> אומרים שעבדים כמיטלטלין, ואילו <strong>ר' מאיר</strong> אומר שעבדים כקרקע, וכיוון שעבד אינו נגזל, נמצא הוא ברשות בעליו גם כאשר הוא אצל הגזלן, וממילא חוזר בעינו גם אם חלה והוכחש.</p>
@@ -1289,7 +1299,7 @@
                     
                 </div>
                 
-                <div id="topic-3-4" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-4" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גזל מטבע ונפסל או נסדק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (צז.) חלקו האמוראים בפירוש המקרה של "נפסל" המטבע, בו פוסקת המשנה שאומר הגזלן "הרי שלך לפניך" (להבדיל ממקרה בו נסדק המטבע, בו משלם כשעת הגזילה)-</p>
@@ -1308,7 +1318,7 @@
                     
                 </div>
                 
-                <div id="topic-3-5" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-5" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גזל פירות והרקיבו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> נמנ פירות והרקיבו עם המקרים בהם צריך הגזלן לשלם כשעת הגזילה. הגמרא בהמשך (צח:) מקשה מ<strong>ברייתא</strong> ממנה משמע שבגזל פירות והרקיבו, אומר הגזלן לנגזל "הרי שלך לפניך" ומשיב את הפירות הרקובים עצמם.</p>
@@ -1320,7 +1330,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
 
                 
@@ -1330,7 +1340,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הנשבע על איסורי הנאה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קה.-קה:) שואל <strong>רבא</strong>-</p>
@@ -1364,7 +1374,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
 
                 
@@ -1374,7 +1384,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">התוקף בהמתו של חבירו ועשה בה מלאכה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (צו:) מספרת על אדם שגזל צמד בקר מחברו, השתמש בהם בכדי לחרוש ולעבוד בשדהו, ואחר כך החזירם. <strong>רב</strong> <strong>נחמן</strong> חייב את אותו הגזלן בתשלום חצי מהשבח שהשביח בעזרת השוורים<sup id="ref48"><a href="#fn48">[48]</a></sup>, והסביר שמקרה זה מיוחד כיוון שמדובר בגזלן הרגיל לעשות כך, ויש לקונסו, אך במקרה רגיל הדין הוא שמחזיר את הגזילה בעינה כיוון שלא נשתנתה באופן בלתי הפיך.</p>
@@ -1388,7 +1398,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1398,7 +1408,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">התוקף עבדו של חבירו ועשה בו מלאכה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (צז.) דנה בשאלה האם לדעת <strong>רב</strong> עבדים כקרקעות, ומביאה את דברי <strong>רב דניאל</strong> בשם רב:</p>
@@ -1432,7 +1442,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1442,7 +1452,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">התוקף ספינתו של חבירו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (צז.) מביאה מחלוקת אמוראים:</p>
@@ -1478,7 +1488,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1488,7 +1498,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הדר בחצר חבירו שלא מדעתו- כללי</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סוגיית <strong>הגמרא</strong> בבא קמא (כ.-כא.) עוסקת בשאלת הדר בחצר חבירו שלא ברשות חבירו, האם צריך או לא צריך לשלם לו. בתחילה (כ.) מגדירה הגמרא את השאלה במקרה בו מדובר בשוכר הרגיל לשכור דירות ולשלם תמורת מגוריו, כך שנהנה מדירתו בחצר, ומאידך בעל החצר אינו רגיל להשכירה, כך שהוא אינו מפסיד את דמיה מהשכרתה. מצב זה מכנה הגמרא בשם "זה נהנה (הדייר) וזה לא חסר (בעל הבית)", ובו חוקרת הגמרא האם משום שנהנה הדייר, עליו לשלם, או שמא משום שלא הפסיד בעל הבית, פטור הדייר מלשלם. במקרה בו בעל הבית רגיל להשכיר את דירתו והדייר רגיל לשכור ("זה נהנה וזה חסר") פשוט לגמרא שיש לשלם, ומאידך, במקרה בו שניהם אינם רגילים לשכור ("זה לא נהנה וזה לא חסר") פשוט לגמרא שפטור מלשלם.</p>
@@ -1523,7 +1533,7 @@
                     
                 </div>
                 
-                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היחס בין חסרונו של בעל הבית לבין גובה התשלום שמשלם הדייר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במהלך סוגיית הגמרא הדנה בדין "זה נהנה וזה אינו חסר" (ב"ק כ.-כא.), מביאה הגמרא משנה (בבא מציעא קיז:)-</p>
@@ -1547,7 +1557,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1557,7 +1567,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגוזל צמר וסממנים וצבעם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בב"ק קא. מעלה את השאלה האם "יש שבח סמנין (=חומרי צביעה) על הצמר". הגמרא מנסה לברר את פשר השאלה, ולבסוף מסבירה-</p>
@@ -1585,7 +1595,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יג</h2>
 
                 
@@ -1603,7 +1613,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שליחות יד גזל ושאלה שלא מדעת</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בפרשת משפטים (שמות כב ו-י):</p>
@@ -1660,7 +1670,7 @@
                     
                 </div>
                 
-                <div id="topic-10-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שליחות יד במחשבה ובמעשה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגדרה של שליחות היד חלקו התנאים ב<strong>משנה</strong> בבבא מציעא (מג:):</p>
@@ -1681,7 +1691,7 @@
                     
                 </div>
                 
-                <div id="topic-10-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הצורך בחסרון בשליחות יד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא מציעא מא.) מובאת מחלוקת האמוראים:</p>
@@ -1708,7 +1718,7 @@
                     
                 </div>
                 
-                <div id="topic-10-4" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-4" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שליחות יד במקצת הפיקדון</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בבבא מציעא (מג:) מפרטת את הצורך בהגבהה (בעלת משמעות קניינית) בכדי להתחייב בשליחות יד:</p>
@@ -1739,7 +1749,7 @@
                     
                 </div>
                 
-                <div id="topic-10-5" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-5" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין ארנקי</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על הערתו הנ"ל של שמואל, ש"הגביה את החבית ונטל ממנה רביעית", הכוונה שלא נטל אלא חשב ליטול, תמהה הגמרא (מד.)-</p>
@@ -1771,7 +1781,7 @@
             </div>
             
             
-            <div id="halacha-11" class="mb-12 pt-8">
+            <div id="halacha-11" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
 
                 
@@ -1781,7 +1791,7 @@
                 
 
                 
-                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גזילה על ידי כפירה בפקדון</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא קמא קה:):</p>
@@ -1807,7 +1817,7 @@
             </div>
             
             
-            <div id="halacha-12" class="mb-12 pt-8">
+            <div id="halacha-12" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
 
                 
@@ -1817,7 +1827,7 @@
                 
 
                 
-                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השבה בשואל שלא מדעת בעלים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעניין גדר חובת ההשבה בשומר הגונב מן הפיקדון מביאה הסוגיה בבבא קמא (קיח:) את מחלוקת התנאים:</p>
@@ -1859,7 +1869,7 @@
             </div>
             
             
-            <div id="halacha-13" class="mb-12 pt-8">
+            <div id="halacha-13" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טז</h2>
 
                 
@@ -1869,7 +1879,7 @@
                 
 
                 
-                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הממשכן את חבירו, האם נחשב גזלן?</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>משנה</strong> במסכת שבועות (מד:)</p>
@@ -2090,7 +2100,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

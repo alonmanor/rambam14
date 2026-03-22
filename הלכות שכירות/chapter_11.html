@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות שכירות - פרק יא</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1065,7 +1075,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
 
                 
@@ -1079,7 +1089,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עשין ולאוין בהלנת שכר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (קי:) מביאה <strong>ברייתא</strong>-</p>
@@ -1110,7 +1120,7 @@
                     
                 </div>
                 
-                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שכר גר תושב, עכו"ם ושכירות בהמה וכלים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (קיא.)-</p>
@@ -1163,7 +1173,7 @@
                     
                 </div>
                 
-                <div id="topic-1-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">זמן הגביה וזמן האיסור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (קי:)-</p>
@@ -1243,7 +1253,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
 
                 
@@ -1253,7 +1263,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בל תלין בקבלן</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קיב.) נשאל <strong>רב ששת</strong> בשאלה האם קבלן, המחוייב כלפי הלקוח להשלמתה של מלאכה מסויימת (בניגוד לשכיר המחוייב לעבוד אצל המעסיק זמן נקוב, בין יעשה הרבה ובין מעט), עובר בבל תלין-</p>
@@ -1281,7 +1291,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
 
                 
@@ -1291,7 +1301,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין בל תלין כששוכר הפועלים אינו המשלם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קי:) מובאת <strong>ברייתא</strong>-</p>
@@ -1308,7 +1318,7 @@
                     
                 </div>
                 
-                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תנאים לחיוב בל תלין- תביעת השכיר, זמינות המעות וזהות המשלם.</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (קיא.)-</p>
@@ -1337,7 +1347,7 @@
                     
                 </div>
                 
-                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המחהו אצל חנווני\שולחני, האם חוזר בו?</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוגע למקרה בו המחה אצל חנווני\שולחני, נחלקו האמוראים (שם)-</p>
@@ -1375,7 +1385,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
 
                 
@@ -1385,7 +1395,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור "בל תשהא"</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' לעיל בעמוד 172, "זמן הגביה וזמן האיסור".</p>
@@ -1395,7 +1405,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
 
                 
@@ -1405,7 +1415,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שכיר בזמנו נשבע ונוטל</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדרך כלל, כאשר אדם תובע את חבירו ללא ראיה, וחבירו כופר בכל, הדין הוא שהמוציא מחבירו עליו הראיה<sup id="ref254"><a href="#fn254">[254]</a></sup>. ב<strong>משנה</strong> (ב"מ קיא.) מוצגת תקנה יוצאת דופן, לפיה אם שכיר תובע (ללא הבאת ראיה נוספת) את המעסיק וטוען שלא קיבל את שכרו, והמעסיק טוען שכבר שילם לו, נשבע השכיר על נכונות תביעתו ונוטל מהמעסיק-</p>
@@ -1458,7 +1468,7 @@
                     
                 </div>
                 
-                <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שכיר שתבע את המעסיק לאחר זמנו, והמעסיק טוען שכבר שילם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא ממשיכה ומבררת מדוע תיקנו חכמים את התקנה המתוארת במשנה רק אם השכיר תבע בזמנו-</p>
@@ -1491,7 +1501,7 @@
                     
                 </div>
                 
-                <div id="topic-5-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מתי שכיר נשבע ונוטל אף לאחר זמנו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, המשנה (קיא.) קובעת שלמרות שבאופן רגיל שכיר שתבע את בעל הבית לאחר זמנו אינו נשבע ונוטל, "אם יש עדים שתבעו הרי זה נשבע ונוטל" אפילו אם תבעו לאחר זמנו. הגמרא (ב"מ קיג.) דנה בדברי המשנה -</p>
@@ -1526,7 +1536,7 @@
                     
                 </div>
                 
-                <div id="topic-5-4" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-4" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">במקרה בו שכרו ללא עדים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסוגיה בשבועות (מה:) מסייגת את זכותו של השכיר להישבע וליטול-</p>
@@ -1568,7 +1578,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1578,7 +1588,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מחלוקת בין המעסיק לשכיר על גובה השכר שסוכם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בשבועות (מה:) מובאת <strong>ברייתא</strong> כהנְגָדה לדין השכיר הנשבע ונוטל-</p>
@@ -1650,7 +1660,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1660,7 +1670,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מחלוקת בין בעל הבית לבין אומן על גובה השכר שסוכם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן כללי ישנה חזקה שמיטלטלין שתחת ידו של אדם, שלו הם. לכן אדם הטוען לבעלות על חפץ הנמצא תחת יד חבירו, עליו הראיה, וכל עוד לא הביא ראיה אין מוציאים את החפץ מתחת יד מי שמחזיקו. ה<strong>גמרא</strong> בבבא בתרא (מה.) דנה בשאלה האם גם בטוען כלפי אומן הדין כך. כלומר, האם לאומן יש חזקה שמה שנמצא תחת ידיו הוא שלו, או שמא, מכיוון שאנשים רבים נותנים לו חפציהם לתיקון, אם נמצא תחת ידו חפץ מעין זה, אין חזקה שהוא שלו. על פי הדרך האחרונה, במקרה בו אדם מספר שנתן חפץ לאומן לתיקון ותובע אותו בחזרה, והאומן משיב שמכרו לו, אין לאומן חזקה וניתן להוציא את החפץ מתחת ידו.</p>
@@ -1692,7 +1702,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1702,7 +1712,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גלגול שבועה ושידול לשבועה בשבועת שכיר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בשבועות (מח:-מט.) עוסקת בדין גלגול שבועה, לפיו אם ראובן מתחייב לשמעון שבועה, יכול שמעון להשביעו גם על תביעות נוספות שהיו ביניהם בעבר ושלא היתה יכולת בידו להשביע את ראובן עליהם כשלעצמם.</p>
@@ -1882,7 +1892,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

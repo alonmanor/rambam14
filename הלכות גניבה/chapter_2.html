@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות גניבה - פרק ב</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1153,7 +1163,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1163,7 +1173,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גניבת נכסי גוי או נכסי הקדש</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (בבא קמא דף סב:) מביאה <strong>ברייתא</strong> הלומדת מהפסוקים במה <strong>אין</strong> דין כפל של גנב אמור:</p>
@@ -1205,7 +1215,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
 
                 
@@ -1215,7 +1225,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כפל בעבדים שטרות וקרקעות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בבבא קמא (סב:) מביאה <strong>ברייתא</strong> (הבאנוה לעיל) הלומדת את הפסוק "עַל כָּל דְּבַר פֶּשַׁע עַל שׁוֹר עַל חֲמוֹר עַל שֶׂה עַל שַׂלְמָה עַל כָּל אֲבֵדָה" (שמות כב, ח) בכלל ופרט וכלל- תחילת הפסוק וסופו באים בלשון כוללת- "<strong>כל</strong> דבר פשע", "<strong>כל</strong> אבדה", וביניהם מובאים פרטים שונים. הברייתא לומדת שאין בכלל אלא מה שיש בפרט, כלומר, דין כפל אמור דווקא ב"דבר המיטלטל וגופו ממון" כדוגמת הפרטים שהוזכרו בפסוק, ולא בעבדים קרקעות ושטרות.</p>
@@ -1231,7 +1241,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
 
                 
@@ -1241,7 +1251,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגונב פטר חמור של חבירו קודם שיפדה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא במסכת בכורות (ט:) מביאה <strong>ברייתא</strong>:</p>
@@ -1261,7 +1271,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
 
                 
@@ -1271,7 +1281,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגונב טבלו של חבירו ואכלו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> בקידושין (נח.) נאמר:</p>
@@ -1306,7 +1316,7 @@
                     
                 </div>
                 
-                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגונב חֵלבּו של חבירו ואכלו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בכתובות (ל.) מביאה את שיטת <strong>רבי נחוניא בן הקנה</strong> ביחס לחיוב מיתה ותשלומין-</p>
@@ -1330,7 +1340,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
 
                 
@@ -1340,7 +1350,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגונב דבר שיש בו טובת הנאה בלבד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' בדברינו לעיל בהלכה ד, בדין הגונב טבלו של חבירו, שם הובאה הסוגיה ממסכת קידושין והוסבר הספק האם טובת הנאה חשובה כממון או לאו.</p>
@@ -1366,7 +1376,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ז</h2>
 
                 
@@ -1380,7 +1390,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגונב משל אביו וטבח ומכר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כותבת ה<strong>משנה</strong> (בבא קמא ע.):</p>
@@ -1405,7 +1415,7 @@
                     
                 </div>
                 
-                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הקדיש הגנב או בעל הבית</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (ב"ק ע.):</p>
@@ -1430,7 +1440,7 @@
                     
                 </div>
                 
-                <div id="topic-6-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">האם הקדשת הגנב חשובה כמכירה לעניין תשלומי ארבעה וחמישה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (עו.) דנה בשאלה מדוע דנה משנתנו בשאלת טביחה ומכירה לאחר הקדש שהקדיש הגנב את הבהמה שגנב? והרי ניתן לראות את ההקדשה עצמה כמכירה, המעבירה את הבהמה מרשות לרשות, וראוי שיתחייב הגנב על ההקדשה עצמה תשלומי ארבעה וחמישה, ובלשון הגמרא:</p>
@@ -1462,7 +1472,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1472,7 +1482,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מה נחשב שחיטה לעניין תשלומי ארבעה וחמישה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ע.) מונה סוגים שונים של שחיטה הנחשבים כשחיטה לעניין תשלומי ארבעה וחמישה:</p>
@@ -1516,7 +1526,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1526,7 +1536,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגונב כלאים וטבח או מכר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספתא</strong> (ב"ק פרק ז), מביאה מחלוקת תנאים לגבי הטובח או מוכר בהמת כלאים (הנולדת מכבשה ותיש) שגנב:</p>
@@ -1547,7 +1557,7 @@
                     
                 </div>
                 
-                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוכר או טובח בהמה חסרה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' לקמן הל' יא-יב.</p>
@@ -1557,7 +1567,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1567,7 +1577,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מכירה וטביחה על ידי אחר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (עח:) מביאה <strong>ברייתא</strong>:</p>
@@ -1591,7 +1601,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יב</h2>
 
                 
@@ -1605,7 +1615,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוכר ומשייר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (עח:):</p>
@@ -1675,7 +1685,7 @@
             </div>
             
             
-            <div id="halacha-11" class="mb-12 pt-8">
+            <div id="halacha-11" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג-יד</h2>
 
                 
@@ -1689,7 +1699,7 @@
                 
 
                 
-                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלומי כפל בשותפים שגנבו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בבבא מציעא (ח.) דנה ביכולתו של אדם המגביה מציאה לחבירו לקנותה עבור חבירו. רבא מעלה אפשרות שהמגביה לחבירו קנה חבירו רק אם נתכוון בהגבהתו לקנות אף לעצמו. <strong>רבא</strong> מוכיח את דבריו מדין השותפים שגנבו-</p>
@@ -1710,7 +1720,7 @@
                     
                 </div>
                 
-                <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שותף שגנב וטבח או מכר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (עח:) מביאה <strong>ברייתא</strong> העוסקת בין השאר בדין תשלומי ארבעה וחמישה בבהמת שותפים שנגנבה ובשותפים שגנבו:</p>
@@ -1748,7 +1758,7 @@
             </div>
             
             
-            <div id="halacha-12" class="mb-12 pt-8">
+            <div id="halacha-12" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
 
                 
@@ -1758,7 +1768,7 @@
                 
 
                 
-                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גנב שנפסק דינו ואז טבח או מכר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בבבא מציעא (טז:) מחלקת בין שני שלבים בגמר הדין של דיני ממונות. ראשית ישנו את השלב בו הדיינים אומרים לצד שיצא חייב "חייב אתה ליתן לו", כלומרף הדין עימך. ולאחריו ישנו שלב בו אמרים הדיינים לחייב הוראה יותר פסקנית- "צא תן לו".</p>
@@ -1786,7 +1796,7 @@
             </div>
             
             
-            <div id="halacha-13" class="mb-12 pt-8">
+            <div id="halacha-13" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טז-יח</h2>
 
                 
@@ -1804,7 +1814,7 @@
                 
 
                 
-                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההתחייבות בגניבה כמעשה קניין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בבבא קמא (עט.) עוסקת בקביעת הרגע בו מתחילה הגניבה והחיובים הקשורים בה:</p>
@@ -1869,7 +1879,7 @@
                     
                 </div>
                 
-                <div id="topic-13-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-13-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המטמין בחורשים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בתוך הדיון על המעשה שעל ידו הגנב מתחייב בגניבה, מביאה הגמרא (עט:) את דברי <strong>ר' אלעזר</strong>:</p>
@@ -2046,7 +2056,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

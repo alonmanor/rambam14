@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק יג</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1142,7 +1152,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1152,7 +1162,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזקי כלים בבור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (נב.):</p>
@@ -1172,7 +1182,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב-ד</h2>
 
                 
@@ -1190,7 +1200,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תולדות הבור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (כח.):</p>
@@ -1217,7 +1227,7 @@
                     
                 </div>
                 
-                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נתקל הניזק בקרקע ונחבט באבן, או הפוך</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מובאת <strong>ברייתא</strong>, המחייבת את המניח אבן ברשות הרבים על נזקי צלוחיתו של חברו שנשברה עליה.</p>
@@ -1237,7 +1247,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה-ו</h2>
 
                 
@@ -1251,7 +1261,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין המזיק חפץ שהונח ברשות הרבים והמוזק בו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (כז.):</p>
@@ -1287,7 +1297,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1297,7 +1307,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נשבר כדו ברשות הרבים, והוזק אחר בחרסים – נתקל פושע ומפקיר נזקיו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (כח.)</p>
@@ -1341,7 +1351,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח-ט</h2>
 
                 
@@ -1355,7 +1365,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אדם הנתקל בחברו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (לא.)</p>
@@ -1381,7 +1391,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1391,7 +1401,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אדם הנתקל באדם שנפל כי נתקל באדם אחר (תאונת שרשרת)</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (לא.) מובאת <strong>ברייתא</strong>:</p>
@@ -1463,7 +1473,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
 
                 
@@ -1473,7 +1483,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נתקל ונפל ברשות הרבים, ומעדו ונפלו עליו כמה אנשים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ברייתא</strong> שלעיל (המתארת את תאונת השרשרת, ראה בהלכה הקודמת) מוסיפה כאמור, שאם נפלו כולם מחמתו של הראשון, חייב הוא בנזקי כולם. ב<strong>גמרא</strong> (לא:) דנו האמוראים במה דברים אמורים. <strong>ר' פפא</strong> אומר שחסם הראשון את הדרך כנבילה (כ"שלדא"), ואילו <strong>ר' זביד</strong> אומר שחסמה כמקל העיוורים (כ"חוטרא דסמיותא").</p>
@@ -1489,7 +1499,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
 
                 
@@ -1499,7 +1509,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השופך מים ברשות הרבים והוזק בהם אחר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ל.) פוסקת שאם שפך אדם מים ברשות הרבים והוזק בהם אדם אחר- חייב השופך</p>
@@ -1525,7 +1535,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג-יז</h2>
 
                 
@@ -1551,7 +1561,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רשות השימוש ברה"ר, ואחריות הנזיקין על חפצי האדם שם.</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (ל.) מובאת ברייתא המתירה הזרמה של מי שופכין לרה"ר בימות הגשמים, אך לא בימות החמה<sup id="ref42"><a href="#fn42">[42]</a></sup>. ובכל אופן, אם הזיקו המים, חייב עליהם (לשמואל- כבור).</p>
@@ -1603,7 +1613,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יח</h2>
 
                 
@@ -1613,7 +1623,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אחריות ישירה ועקיפה של אומנים העוסקים בבניין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> בבבא מציעא (קיח:) מובאת ברייתא המתארת מעבר של אבן מהחוצב עד לבנאי דרך בעלי המלאכה השונים, כאשר בכל שלב, חייב הנושא את האבן בנזקיה, בין אם הוזקה האבן או שהזיקה אחרים (רש"י). אמנם אם האבן כבר הוצבה במקומה בבניין ואז נפלה והזיקה, חייבים כולם. הגמרא מבארת שזה הדין אם כל האומנים האלה קבלו את העבודה בקבלנות, אך אם הם שכירים, חייב האחרון בלבד. <strong>רש"י </strong>מסביר שאם קיבלו את העבודה עליהם בקבלנות, הרי שקיבלו על עצמם בזה את אחריות שמירת הנזקים הקשורים בעבודה, וחייבים כולם, מה שאין כן כאשר כל אחד הוא שכיר ואחראי רק שלא לפשוע בחלקו שלו מן העבודה. אמנם גם אם קבלו את העבודה בקבלנות, אם האבן הזיקה בהיותה בידי אחד מהם, חייב רק הוא, כיוון שאז אין לו דין נזקי ממון אלא דין אדם המזיק.</p>
@@ -1625,7 +1635,7 @@
             </div>
             
             
-            <div id="halacha-11" class="mb-12 pt-8">
+            <div id="halacha-11" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
 
                 
@@ -1635,7 +1645,7 @@
                 
 
                 
-                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הכותל והאילן שנפלו לרה"ר והזיקו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה הראשונה במסכת מדברת על מכנה משותף בין אבות הנזיקין השונים. ב<strong>גמרא</strong> (ו.-ו:) דנו האמוראים אילו מקרים יש ללמוד מהמכנה המשותף שבין אבות נזיקין שונים ולא מאבות הנזיקין עצמם. אחת ההצעות (ו:) היא שמדובר במקרה המתואר במשנה בסוף בבא מציעא (קיז:):</p>
@@ -1665,7 +1675,7 @@
             </div>
             
             
-            <div id="halacha-12" class="mb-12 pt-8">
+            <div id="halacha-12" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כ-כב</h2>
 
                 
@@ -1683,7 +1693,7 @@
                 
 
                 
-                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הצניע קוציו והזיקו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ל.) כותבת:</p>
@@ -1700,7 +1710,7 @@
                     
                 </div>
                 
-                <div id="topic-12-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המצניע קוציו בתוך גדר חברו, וסתר חברו את הגדר, והזיקו הקוצים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong> העוסקת בנזק של קוצים, שיש לו שני אחראים פוטנציאליים, המצניע, ובעל הכותל:</p>
@@ -1720,7 +1730,7 @@
             </div>
             
             
-            <div id="halacha-13" class="mb-12 pt-8">
+            <div id="halacha-13" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כג</h2>
 
                 
@@ -1730,7 +1740,7 @@
                 
 
                 
-                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תקלות שאין לעשות ברה"ר אפילו אם מקבל על עצמו אחריות נזקיהם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (נ:) מובאת <strong>ברייתא</strong> האוסרת על אדם לסקל אבנים מרשותו לרשות הרבים. ועוד <strong>ברייתא</strong> (נ.) הפוטרת אדם שחפר ברה"ר ומסרו לשימוש הרבים (לשיטת <strong>רש"י</strong> הכוונה שהודיע לרבים שהבור הוא לשימושם, ולשיטת ה<strong>רא"ש</strong> הכוונה שמסר לרבים את כיסוי הבור). וכך פסק ה<strong>שו"ע</strong> (תיז א, תי ז)</p>
@@ -1750,7 +1760,7 @@
             </div>
             
             
-            <div id="halacha-14" class="mb-12 pt-8">
+            <div id="halacha-14" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כד-כו</h2>
 
                 
@@ -1768,7 +1778,7 @@
                 
 
                 
-                <div id="topic-14-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-14-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בניה ואילן הבולטים לתוך רשות הרבים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (בבא בתרא ס.):</p>
@@ -1796,7 +1806,7 @@
             </div>
             
             
-            <div id="halacha-15" class="mb-12 pt-8">
+            <div id="halacha-15" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כז</h2>
 
                 
@@ -1806,7 +1816,7 @@
                 
 
                 
-                <div id="topic-15-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-15-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מצר שהחזיקו בו רבים אסור לקלקלו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראינו בהלכה הקודמת, שמותר לחרוג בזיזים וגזוזטראות לתוך רשות הרבים רק אם כנס לתוך שלו ואז הוציאם, כך שלא יגיעו לרשות הרבים. ב<strong>גמרא</strong> (בבא בתרא ס.) מובאת מחלוקת האמוראים- במקרה בו כנס את כתליו פנימה במטרה להוציא זיזים באופן המותר, ולא הוציא, ורוצה לחזור ולבנות את כתליו כמקודם על שפת רשות הרבים. <strong>ר' יוחנן</strong> סובר שאסור לו, על פי העיקרון הידוע מדברי <strong>ר' יהודה</strong>, ש"מצר שהחזיקו בו רבים אסור לקלקלו". לעומתו סובר <strong>ריש לקיש</strong> שמותר, כיוון שאין לקלקל את מצר הרבים דווקא במקום בו יהרוס אותו בכך לגמרי ולא ישאיר לרבים מעבר, אך אם משאיר להם מקום, כמו כאן, מותר. אמנם, לדעת כולם, יכול להימלך מתי שירצה ולהוציא זיזים החוצה, כלומר, השטח בו זכו הרבים ממנו אין דינו כדין שטח מקורי של הרבים.</p>
@@ -1933,7 +1943,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

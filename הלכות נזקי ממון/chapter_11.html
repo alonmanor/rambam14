@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק יא</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1030,7 +1040,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1040,7 +1050,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומת הכופר וקנס העבד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מ.) מביאה ברייתא ובה מחלוקת תנאים לגבי משמעות הביטוי "ונתן פדיון נפשו" האמור בקנס (כלומר, 'נפשו' של מי)- <strong>תנא קמא</strong> סובר שיש לתת את דמי הניזק, ואילו <strong>ר' ישמעאל בנו של ר' יוחנן בן ברוקא</strong> סובר שיש לתת את דמי המזיק. הגמרא מסבירה ששתי הדעות מסכימות שלכופר יש משמעות של כפרה, אך חלוקות הן באופי הכפרה. ר' ישמעאל סובר שהמזיק צריך לתת את פדיון נפשו, דהיינו הוא נותן כביכול את עצמו. ואילו תנא קמא לומד מהביטוי "אם כופר <strong>יושת</strong> עליו", שהכוונה לדמי הניזק כמו בפסוק המקביל לגבי איש שנגף אשה הרה ויצאו ולדותיה- "כאשר <strong>ישית</strong> עליו בעל האשה", שם מדובר בוודאי על תשלום דמי הוולדות. ה<strong>רמב"ם</strong> פסק כתנא קמא.</p>
@@ -1056,7 +1066,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
 
                 
@@ -1066,14 +1076,14 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">למי ניתן כופר על הריגת אשה נשואה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מב:) מביאה ברייתא בה אומר <strong>ר' עקיבא</strong>, ש"אשה- נזקיה ליורשיה". דהיינו, הנזק שמשלם המזיק על שורו שהזיק אשה נשואה, הולך ליורשיה ממשפחתה שלה ולא לבעלה. <strong>ריש לקיש</strong> מסביר שמדובר דווקא על כופר המשלם בעל שור שהרג אשה. והסיבה היא, שהכופר אינו משתלם עד שהאשה מתה, ולאחר מות האשה אין בעלה יורש נכסים שלא היו בחזקתה בשעת מיתתה. ה<strong>רמב"ם</strong> פוסק כהסברו של ריש לקיש.</p>
                     
                 </div>
                 
-                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כופר על חציו עבד וחציו בן חורין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן כללי קיימת מחלוקת בין התנאים לגבי מעמדו של חציו עבד וחציו בן חורין (גיטין מא.).</p>
@@ -1095,7 +1105,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ה</h2>
 
                 
@@ -1113,7 +1123,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דמי ולדות של בת חורין ושפחה בשור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (מח:) כותבת הבדל בין אדם לבין שור שהזיקוּ. בעוד שאדם שנתכוון לחברו, אך פגע באשה מעוברת והפילה, משלם דמי ולדות לבעל, שור שהיה מתכוון לחברו, ופגע באשה מעוברת והפילה, אינו משלם דמי ולדות.</p>
@@ -1140,7 +1150,7 @@
                     
                 </div>
                 
-                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הדרך לשום דמי ולדות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התורה קובעת שדמי הוולדות שמקבלת אשה שהוכתה והפילה שייכים לבעלה. אמנם, נזקים אחרים שבאו לה בעקבות המכה שייכים לה. ה<strong>משנה</strong> (מח:) עוסקת בהגדרת דמי הוולדות ובאיפיונם משאר הנזק:</p>
@@ -1158,7 +1168,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
 
                 
@@ -1168,7 +1178,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלומי נזק בשור שנגח את האדם שלא בכוונה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (מד:) מביאה <strong>ברייתא</strong> הפוסקת ששור שהרג ונתכוון להרוג בן חיוב (כלומר, אדם שעל הריגתו חייב סקילה), תמיד נסקל בין תם ובין מועד. כמו כן, בין נתכוון ובין אם לא נתכוון, אם הוא מועד, על בעליו לשלם כופר. הברייתא מוסיפה ומביאה את מחלוקת התנאים בהיקש מהריגה לנזק-</p>
@@ -1190,7 +1200,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
 
                 
@@ -1204,7 +1214,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור שהזיק והמית</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (סוף צ:) מביאה <strong>ברייתא</strong> בעניין שור שהזיק וגם המית:</p>
@@ -1246,7 +1256,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1256,7 +1266,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מעמדו הממוני של השור הנסקל</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מתוך הנאמר בפסוק (שמות כא כח):</p>
@@ -1290,7 +1300,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1300,7 +1310,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור שהמית ונתערב באחרים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> במסכת סנהדרין (עט:) מביאה מחלוקת תנאים:</p>
@@ -1322,7 +1332,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יב</h2>
 
                 
@@ -1336,7 +1346,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין ולד הפרה שהרגה אדם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> במסכת סנהדרין (פ.) מובאת <strong>ברייתא</strong>:</p>
@@ -1374,7 +1384,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
 
                 
@@ -1384,7 +1394,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור הנסקל שהוזמו עדיו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> במסכת כריתות (כג:) מבהירה, שברגע שמתברר ששור שנגמר דינו לסקילה, הינו חף מפשע, הרי איסור ההנאה סר ממנו, ואין סוקלים אותו, אלא הוא חוזר להיות בהמה רגילה. בהקשר זה, מביאה הגמרא (כד.) את דברי <strong>ר' יוחנן</strong>, ששור שנגמר דינו לסקילה, כיוון שבעליו מפקירים אותו, הרי שאם מוזמים עדיו, והוא חוזר להיות בהמה רגילה, נחשב הוא להפקר, וכל המחזיק בו זכה בו. אמנם, <strong>רבא </strong>מבאר, שאם ברורה לבעלים חפותו של השור, אין הבעלים מפקירים אותו, משום שהם מצפים שיבואו עדים שיזימו את הראשונים.</p>
@@ -1405,7 +1415,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

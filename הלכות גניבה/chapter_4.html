@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות גניבה - פרק ד</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1035,7 +1045,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1045,7 +1055,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המקור לדין הטוען טענת גנב בפיקדון</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כותבת ה<strong>משנה</strong> במסכת בבא קמא (קח:)-</p>
@@ -1091,7 +1101,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב-ד</h2>
 
                 
@@ -1109,7 +1119,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הטוען טענת גנב ששלח יד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סוגיית הגמרא בבבא קמא (קז:) דנה בטוען טענת גנב בפיקדון (ונשבע עליה לשקר), שקודם שטען, שלח בו יד, כלומר, נטלו או הגביהו על מנת לגוזלו לעצמו (ראה הלכות גזילה פרק ג הל' יא-יג). דעה אחת המובאת בגמרא היא דעתו של <strong>רב חייא בר יוסף</strong>-</p>
@@ -1159,7 +1169,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
 
                 
@@ -1169,7 +1179,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הטוען טענת גנב ונשבע ובאו עדים וחזר הדבר כמה פעמים, האם משלם כמה כפילות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ב"ק קח.) מעלה <strong>רב פפא</strong> שאלה- האם ימצא מקרה בו אדם ישלם כמה כפילות או כמה חומשים על ממון אחד? -</p>
@@ -1209,7 +1219,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
 
                 
@@ -1219,7 +1229,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ממון המחייבו כפל פוטרו מן החומש</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית הגמרא בפרק "מרובה" (סה.-סה:) מובאת <strong>ברייתא</strong> הדנה במקומו של תשלום החומש בנשבע לשקר על טענת גנב:</p>
@@ -1277,7 +1287,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1287,7 +1297,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלום חומש וכפל כאחד על ידי שני אנשים שונים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לאחר שהגיעה הגמרא (שם) למסקנה, שעל ממון אחד לא ניתן לשלם חומש וכפל, מתעורר <strong>רבינא</strong> לברר פרט בדין זה-</p>
@@ -1309,7 +1319,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1319,7 +1329,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גנב שהודה לשומר ממנו גנב, האם נחשב כמודה בקנס להיפטר מכפל כלפי הבעלים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (קח:) מתארת מקרה בו נגנב פיקדון משומר, והשומר נשבע לבעלים שנגנב הפיקדון, ונפטר בשבועתו<sup id="ref77"><a href="#fn77">[77]</a></sup>. לאחר מכן הוכר הגנב ותבעו השומר. הגנב הודה לשומר ממנו גנב, אך במקביל מול הבעלים עצמו כפר, ובאו עדים והעידו שגנב. אלמלא היה הגנב מודה לשומר, בוודאי שהיה מתחייב עכשיו בכפל. השאלה הנשאלת היא האם נפטר הגנב מהכפל בהודאה שהודה לשומר, או שמא, כיוון שסוף סוף מול הבעלים כפר, חייב בכפל-</p>
@@ -1356,7 +1366,7 @@
                     
                 </div>
                 
-                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גנב שהודה לבעלים, האם נפטר מכפל מול השומר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (שם), מובא בגמרא המקרה ההפוך למקרה הקודם-</p>
@@ -1392,7 +1402,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1402,7 +1412,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הטוען טענת גנב בפיקדון של קטן</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בשבועות (לח:) פוסקת</p>
@@ -1456,7 +1466,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י-יב</h2>
 
                 
@@ -1474,7 +1484,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דרך השבת הגניבה בשולח יד בפיקדון</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' פרק ג' הלכה טו מהלכות גזילה ואבידה, ובדברינו שם.</p>
@@ -1485,7 +1495,7 @@
                     
                 </div>
                 
-                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כפל בשומר השולח יד בפיקדון</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כאן ובפרק ג הלכה ד, כותב שישנה מציאות של גניבה ששומר גונב מרשות עצמו ומתחייב כפל. בפרק ג, הלכה ד מכנה זאת הרמב"ם שהשומר לקח "דרך גניבה".</p>
@@ -1576,7 +1586,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

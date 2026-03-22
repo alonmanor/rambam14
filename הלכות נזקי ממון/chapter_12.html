@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק יב</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1214,7 +1224,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1224,7 +1234,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הקדמה לדין הבור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>תורה</strong> (שמות כא, לג-לד):</p>
@@ -1246,7 +1256,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
 
                 
@@ -1256,7 +1266,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החופר בור ברשותו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (מט:) מביאה מחלוקת תנאים:</p>
@@ -1290,7 +1300,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
 
                 
@@ -1300,7 +1310,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חובת כיסוי הבור והבעלות על הבור כמחייבים על נזקיו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל (פרק ז' הלכה ו') ראינו, שלמרות שהתורה פטרה בעל בהמה שחפרה בור על נזקי הבור שחפרה, שנאמר "כי יכרה <strong>איש</strong> בור", עדיין אם הבור נמצא ברשותו חלה עליו חובה למלאו, ואם לא עשה כן הרי הוא חייב בנזקיו, אפילו אם הבהמה שחפרתו אינה שלו כלל.</p>
@@ -1312,7 +1322,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ה</h2>
 
                 
@@ -1326,7 +1336,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גדר חובת כיסוי הבור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נ.) מבארת שדרך אחת להסביר את הכפילות "כי יפתח" ו"כי יכרה", (שהרי אם על פתיחה חייב, לא כל שכן שחייב על כריית הבור ממש) היא שהוא בא ללמדנו שאף אם אדם חפר ממש בור, ולא רק פתחו, עדיין אם כיסהו כראוי, פטור על נזקיו. ה<strong>גמרא</strong> (נה:) לומדת זאת גם מהפסוק "ולא יכסנו", דהיינו אם כיסה את הבור הרי הוא פטור.</p>
@@ -1356,7 +1366,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
 
                 
@@ -1366,7 +1376,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">זהות בעל הבור ביצירה מחודשת של בור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ל.) כותבת:</p>
@@ -1384,7 +1394,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1394,7 +1404,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חלוקת האחריות בבור של שני שותפים – מתי יכול הראשון להשאיר את הבור מגולה ולסמוך על השני</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (נא.)</p>
@@ -1419,7 +1429,7 @@
                     
                 </div>
                 
-                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חלוקת האחריות בבור של שני שותפים – מי מהשותפים אחראי לבור שנתגלה מעצמו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך למשנה הנ"ל אומרת ה<strong>משנה</strong> (נב.):</p>
@@ -1457,7 +1467,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1467,7 +1477,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוסר בורו לחרש שוטה וקטן</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ט:) מביאה <strong>ברייתא</strong> לפיה אם מסר שור או בור לידי חרש שוטה או קטן, חייב המוסר, אך אם מסר אש לידיו פטור המוסר. בפירוש הברייתא חלקו האמוראים-</p>
@@ -1487,7 +1497,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1497,7 +1507,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המכסה בורו בדלי של חברו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (ל.) מובאת <strong>ברייתא</strong> לפיה מי שטומן את קוציו בתוך כותל של חברו, ובא בעל הכותל, והרס את כותלו, והוזק מישהו בקוצים, חייב בעל הקוצים ולא בעל הכותל. הגמרא מבהירה שמדובר במקרה בו הכותל רעוע, ולכן היה על בעל הקוצים לדעת שהכותל מועד להריסה ולא להניח את קוציו בו (עי' בפרק הבא הלכות כ'-כב').</p>
@@ -1511,7 +1521,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1521,7 +1531,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק ומיתה בבור פחות מעשרה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (נ:) כותבת שדין כל סוגי חפירות הקרקע כדין בור. והתורה ציינה בור כדי להודיענו שרק אם עמוק 10 טפחים ומעלה חייב על מיתת בע"ח בו (כי בפסוק מדובר על מיתה). עם זאת, המשנה פוסקת שעל נזק חייב גם בפחות מ-10 טפחים.</p>
@@ -1531,7 +1541,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
 
                 
@@ -1541,7 +1551,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עומק הממית בבור שבו מים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נא:) דנה במקרים בהם ישנם פחות מעשרה טפחים בבור, אך כמה מהם מלאים מים. לפי גרסתנו בגמרא, קובע רבה בר בר חנה שאם יש בבור שמונה טפחים אך שנים מהם מלאים מים נחשב הבור כבור של עשרה טפחים, שכן כל טפח שבו מים נחשב כשני טפחים ללא מים. <strong>רש"י</strong> מסביר שהמים מרבים הבל. אמנם, אם יש שבעה טפחים שמתוכם שלושה מלאים מים, או תשעה שמתוכם אחד מלא מים, הגמרא נשארת בספק, האם ללכת אחר ריבוי המים או אחר ריבוי העומק.</p>
@@ -1555,7 +1565,7 @@
             </div>
             
             
-            <div id="halacha-11" class="mb-12 pt-8">
+            <div id="halacha-11" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב-יג</h2>
 
                 
@@ -1569,7 +1579,7 @@
                 
 
                 
-                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שנים שנשתתפו בחפירת בור, כשהאחרון העמיק את הבור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נא.) מביאה את מחלוקת התנאים במקרה של אדם החופר בור של תשעה טפחים ובא אחר והשלימו לעשרה- <strong>חכמים</strong> אומרים שהאחרון חייב, ואילו <strong>רבי</strong> אומר, שלעניין נזקין (בהם חייב גם החופר בור של תשעה טפחים), חייבים שניהם, ואילו לעניין מיתה חייב רק זה שהשלים לעשרה טפחים.</p>
@@ -1602,7 +1612,7 @@
                     
                 </div>
                 
-                <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שנים שנשתתפו בחפירת בור, כשהאחרון הרחיב את הבור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (נא:) מועלית השאלה, מה הדין אם האחד חפר בור עמוק עשרה טפחים, וחברו לא העמיק את הבור כמו בדוגמה הקודמת, אלא הרחיבו. מצד אחד מיעט החופר את הבל הבור (שכן ככל שהבור רחב ביחס לעומקו, כך יש בו פחות הבל, וראה בהלכה הבאה) ולכן יש סברה שיהיה פטור, אך מצד שני "קירב היזקו", כלומר, החופר השני קירב את שפת הבור לבהמה שנפלה לתוכו ואלמלא היה עושה זאת אולי לא היתה הבהמה נופלת (רש"י).</p>
@@ -1626,7 +1636,7 @@
             </div>
             
             
-            <div id="halacha-12" class="mb-12 pt-8">
+            <div id="halacha-12" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד-טו</h2>
 
                 
@@ -1640,7 +1650,7 @@
                 
 
                 
-                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הבל וחבטה בבור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נ:) מביאה את מחלוקת האמוראים-</p>
@@ -1666,7 +1676,7 @@
             </div>
             
             
-            <div id="halacha-13" class="mb-12 pt-8">
+            <div id="halacha-13" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טז</h2>
 
                 
@@ -1676,7 +1686,7 @@
                 
 
                 
-                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נפילת בהמה פיקחת ואדם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (נב.) כותבת:</p>
@@ -1710,7 +1720,7 @@
             </div>
             
             
-            <div id="halacha-14" class="mb-12 pt-8">
+            <div id="halacha-14" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז</h2>
 
                 
@@ -1720,7 +1730,7 @@
                 
 
                 
-                <div id="topic-14-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-14-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נפילת שור פסולי המוקדשים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (נא.) מובאים דברי <strong>רבא</strong>:</p>
@@ -1736,7 +1746,7 @@
             </div>
             
             
-            <div id="halacha-15" class="mb-12 pt-8">
+            <div id="halacha-15" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יח</h2>
 
                 
@@ -1746,7 +1756,7 @@
                 
 
                 
-                <div id="topic-15-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-15-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נפילה "לפניו" ו"לאחריו"</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (נב.):</p>
@@ -1780,7 +1790,7 @@
             </div>
             
             
-            <div id="halacha-16" class="mb-12 pt-8">
+            <div id="halacha-16" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
 
                 
@@ -1790,7 +1800,7 @@
                 
 
                 
-                <div id="topic-16-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-16-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק משולב של שור ובור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (נג.) מובאת <strong>ברייתא</strong> ובה מחלוקת תנאים:</p>
@@ -1824,7 +1834,7 @@
             </div>
             
             
-            <div id="halacha-17" class="mb-12 pt-8">
+            <div id="halacha-17" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כ</h2>
 
                 
@@ -1834,7 +1844,7 @@
                 
 
                 
-                <div id="topic-17-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-17-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק משולב של בור ואבן שעל פיו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (נג.) משווה <strong>רבא</strong> בין המקרה שבהלכה הקודמת לבין מקרה בו אבן הונחה על פי הבור, ושור נתקל באבן ונפל לבור. רבא אומר שניתן לראות את האבן כשור דוחף, וגם כאן יחלקו התנאים כפי שחלקו במקרה של שור שדחף את חברו לבור- לדעת <strong>ר' נתן</strong> ישלמו בעל הבור ובעל האבן כל אחד חצי נזק, ולדעת <strong>תנא קמא</strong> ישלם בעל האבן את מלוא הנזק.</p>
@@ -1850,7 +1860,7 @@
             </div>
             
             
-            <div id="halacha-18" class="mb-12 pt-8">
+            <div id="halacha-18" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כא</h2>
 
                 
@@ -1860,7 +1870,7 @@
                 
 
                 
-                <div id="topic-18-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-18-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק משולב של שני שוורים שרק מאחד ניתן לגבות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מדברת על שני שוורים, האחד של הדיוט והשני של הקדש (למשל, שור בכור בעל מום) שנגחו והמיתו שור שלישי. כאן לא ניתן לגבות מהשור של ההקדש והשאלה היא כמה משלם ההדיוט.</p>
@@ -1890,7 +1900,7 @@
             </div>
             
             
-            <div id="halacha-19" class="mb-12 pt-8">
+            <div id="halacha-19" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כב</h2>
 
                 
@@ -1900,7 +1910,7 @@
                 
 
                 
-                <div id="topic-19-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-19-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גביה מיורשי המזיק כשמת המזיק לפני עמידה בדין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (בבא בתרא קעה:) מחלוקת אמוראים האם מִלווה על פה גובה מן היורשים, דהיינו, האם כאשר ההלוואה איננה בשטר ניתן לגבות מיורשי הלווה לאחר מיתתו.</p>
@@ -1975,7 +1985,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

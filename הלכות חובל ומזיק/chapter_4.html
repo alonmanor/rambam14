@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות חובל ומזיק - פרק ד'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1159,7 +1169,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ד</h2>
 
                 
@@ -1181,7 +1191,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומת דמי ולדות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (מח:) מציגה את דין תשלום דמי ולדות ודנה בדרך השומה שלהם:</p>
@@ -1212,7 +1222,7 @@
                     
                 </div>
                 
-                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דמי ולדות כאשר אין הבעל בחיים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (מח:) פסקה כמשמעות הפסוקים, שדמי הולדות שייכים לבעל האשה, דין זה מורחב על ידי <strong>ר' פפא</strong> (מג.), המסביר שהתורה זיכתה את דמי הולדות לאביהם מכל מקום, אפילו אם הוא אינו נשוי לאשה מהאמור "כַּאֲשֶׁר יָשִׁית עָלָיו בַּעַל הָאִשָּׁה", ממנו לומדים שבעל הזכות הוא בועל האשה ולאו דווקא בעלה. ב<strong>ירושלמי</strong> (פרק ה' הלכה ה') מבואר עוד, שאם אבי הולדות אינו ראוי להיות בעלה של האשה (כגון בבא על אימו או על אחותו) לא זיכתה לו התורה את דמי הולדות.</p>
@@ -1252,7 +1262,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה-ו</h2>
 
                 
@@ -1266,7 +1276,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המתכוון להרוג את זה והרג את זה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה בסנהדרין</strong> (עח:), מובאת מחלוקת תנאים לגבי גדר הכונה הנדרשת על מנת להתחייב מיתה על רצח-</p>
@@ -1283,7 +1293,7 @@
                     
                 </div>
                 
-                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דמי ולדות כשמתה האשה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בכתובות (לו:) פוטרת מקנס את הבא על בתו משום שהוא מתחייב בנפשו. דבר זה נלמד מהפסוק "אם לא יהיה אסון ענוש יענש", ממנו משמע שדמי ולדות משלמים רק אם לא מתה האשה, שאם מתה הרי הנוגף מתחייב בנפשו ופטור מדמי ולדות.</p>
@@ -1327,7 +1337,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ט</h2>
 
                 
@@ -1345,7 +1355,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החובל בחבירו תוך כדי עשיית עוון מיתה או מלקות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כותבת ה<strong>משנה</strong> (פז.):</p>
@@ -1388,7 +1398,7 @@
                     
                 </div>
                 
-                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חיוב מיתה בחובל בשבת</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אגב אורחא מעלה הרמב"ם נקודה הקשורה להגדרת מקלקל לעניין חיוב מלאכת שבת.</p>
@@ -1404,7 +1414,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1414,7 +1424,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החובל בעבד שלו, ובעבד כנעני של חברו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כותבת ה<strong>משנה</strong> (פז.):</p>
@@ -1448,7 +1458,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
 
                 
@@ -1458,7 +1468,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החובל בעבד כנעני שיצא לחרות אך עדיין לא הגיע גט שחרור לידו ("מעוכב גט שחרור")</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בגיטין (מב:) מעלה את השאלה הבאה- עבד המעוכב גט שחרור (כגון שהקדישו רבו או הפקירו, שכבר אין לרבו בו דבר ובכל זאת צריך רבו עדיין לתת לו שטר שחרור), האם מקבל אדונו קנס שלושים שקלים במקרה שהעבד ננגח ומת. במילים אחרות, האם בעליו של העבד נחשב עדיין לאדונו? מצד אחד ניתן לומר שכן, כיוון שהוא עדיין צריך לתת לו שטר שחרור, ורק אדון העבד יכול לתת שטר שכזה. אמנם, מצד שני, אין לבעלים כבר שום שייכות במעשה ידיו של העבד והעבד כבר אינו נתון למרותו, ולכן אולי הבעלים כבר אינו נקרא אדוניו של העבד ואינו מקבל את הקנס עליו.</p>
@@ -1482,7 +1492,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
 
                 
@@ -1492,7 +1502,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החובל במי שחציו עבד וחציו בן חורין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בגיטין (מא.) דנה במי שחציו עבד וחציו בן חורין. בתחילה חלקו התנאים בדין זה- <strong>בית הלל</strong> פסקו שהעבד עובד את רבו יום אחד, ואת עצמו יום אחד, לסירוגין, ו<strong>בית שמאי</strong> סברו שכיוון שמצב זה אינו מאפשר לעבד לשאת לא שפחה ולא בת חורין, הרי שהעבד מתבטל ממצוות פריה ורביה, ולכן יש לכפות את רבו לשחררו, והעבד, שהוא עתה בן חורין גמור, חייב לרבו לשעבר את חצי דמיו. המשנה מסכמת שחזרו בית הלל להורות כבית שמאי.</p>
@@ -1524,7 +1534,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
 
                 
@@ -1534,7 +1544,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החובל בעבד עברי של חברו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (פו.) מובאת מחלוקת אמוראים לגבי המזיק נזק בלתי הפיך לעבדו העברי של חברו:</p>
@@ -1566,7 +1576,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
 
                 
@@ -1576,7 +1586,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החובל בבת קטנה של חברו, למי משלם, והחובל בבתו, האם חייב</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (פז.) מעלה <strong>ר' אלעזר</strong> את השאלה למי משלם החובל בבת קטנה של חברו. האם, בדומה לכסף קידושיה ולמציאתה, זכאי האב גם לתשלומי הנזיקין שלה. או שבניגוד לכסף הקידושין השייך לאב כיוון שבידו לקדשה למי שירצה, כאן אין רשות לאב לחבול בה בעצמו, ולכן דמי הנזק אינם שלו אלא שלה.</p>
@@ -1622,7 +1632,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו-טז</h2>
 
                 
@@ -1636,7 +1646,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החובל באשת חברו ובאשתו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> בכתובות (סה:) חולקים התנאים בשאלה מי מקבל את תשלומי הבושת והנזק ("פגם") המגיעים לאשה נשואה שהוזקה על ידי אחר:</p>
@@ -1672,7 +1682,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז</h2>
 
                 
@@ -1682,7 +1692,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המזיק את אשתו בתשמיש המטה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (לא:)</p>
@@ -1696,7 +1706,7 @@
             </div>
             
             
-            <div id="halacha-11" class="mb-12 pt-8">
+            <div id="halacha-11" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יח</h2>
 
                 
@@ -1706,7 +1716,7 @@
                 
 
                 
-                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">האשה שהזיקה את בעלה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (פז.)</p>
@@ -1744,7 +1754,7 @@
             </div>
             
             
-            <div id="halacha-12" class="mb-12 pt-8">
+            <div id="halacha-12" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
 
                 
@@ -1754,7 +1764,7 @@
                 
 
                 
-                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החובל בבניו הגדולים או הקטנים- מה משלם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שהבאנו לעיל (הלכה יד) מובאות בגמרא (פז:) שתי <strong>ברייתות</strong> הנראות כסותרות:</p>
@@ -1779,7 +1789,7 @@
                     
                 </div>
                 
-                <div id="topic-12-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החובל בבניו הקטנים, כיצד משלם להם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ברייתות</strong> כתבו שקטנים שחבל בהם אביהם, אין לשלם להם מיד כבגדולים אלא יש "לעשות להם סגולה". ונחלקו האמוראים למה הכוונה-</p>
@@ -1807,7 +1817,7 @@
             </div>
             
             
-            <div id="halacha-13" class="mb-12 pt-8">
+            <div id="halacha-13" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כ-כא</h2>
 
                 
@@ -1821,7 +1831,7 @@
                 
 
                 
-                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מה בין חרש שוטה וקטן שהזיקו לבין עבד ואשה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בבבא קמא (יד:) מבהירה שלעניין נזקים, דין נשים כדין אנשים:</p>
@@ -1857,7 +1867,7 @@
             </div>
             
             
-            <div id="halacha-14" class="mb-12 pt-8">
+            <div id="halacha-14" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כב</h2>
 
                 
@@ -1867,7 +1877,7 @@
                 
 
                 
-                <div id="topic-14-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-14-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין הנזק כשיכול הניזק להציל</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כז.) קובע <strong>רבה</strong>:</p>
@@ -2044,7 +2054,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

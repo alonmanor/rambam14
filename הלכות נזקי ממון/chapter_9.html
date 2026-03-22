@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ט</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1040,7 +1050,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
 
                 
@@ -1054,7 +1064,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מעוברת שנגחה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (מו.) כותבת:</p>
@@ -1065,7 +1075,7 @@
                     
                 </div>
                 
-                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלום מגוף המזיק בבהמה הרה ובביצת עוף</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מז.) מסבירה שלפי <strong>רבא</strong>, יש לכלול את העובר שבמעי פרה שהזיקה בכלל דמיה, כאשר באים לשלם מגופה, אף על פי שבעת התשלום העובר כבר נולד. זאת, בניגוד לביצה שבמעי תרנגולת שהזיקה, שאין לחשב אותה בכלל גופה של התרנגולת, שכן הביצה נפרדת היא מגוף התרנגולת. ה<strong>תוספות</strong> (שם ד"ה "מאי") מעירים שאם הביצה מעורה בגידים היא כן נחשבת חלק מגוף התרנגולת, אך כדי לגבות נזק מביצת התרנגולת שהזיקה, צריך הניזק להוכיח שאכן בשעת הנזק היתה הביצה מעורה בגידים.</p>
@@ -1077,7 +1087,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
 
                 
@@ -1087,7 +1097,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ספק בהיקף הנזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (מו.) כותבת:</p>
@@ -1113,7 +1123,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ה</h2>
 
                 
@@ -1127,7 +1137,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דרך שומת הנזק לפרה מעוברת</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (מז.) אומר <strong>רבא</strong> שאם שור נגח פרה מעוברת וזו הפילה את עוברה, אין שמים את הנזק לפרה בנפרד ולהריגת הולד בנפרד, אלא רואים את הפרש הערך בין פרה מעוברת בריאה לבין פרה חבולה כזו שאינה מעוברת. רבא מעיר שאותו הדין שייך גם בנזק ליבול המחובר לקרקע (עיין לעיל פרק ד' הלכה יג). הסיבה היא משום שהמזיק טוען ששורו הזיק פרה מעוברת, ולכן יש לו לשלם רק את הפחת בין מצב הרכוש בשעת הנזק לבין מצבו העכשווי. או במילים אחרות, מטרת תשלומי הנזק אינה לשלם את ערכו של הנזק כשלעצמו, אלא כדי לתקן ולהשיב את המצב לקדמותו ע"י פיצוי הניזק. ה<strong>רמב"ם </strong>וכל הראשונים פוסקים כרבא להלכה.</p>
@@ -1141,7 +1151,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
 
                 
@@ -1151,7 +1161,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוציא מחברו עליו הראיה בספק אם הזיק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (לה:) פוסקת, שאם רדף שור אחר שור אחר, ונמצא השור הרדוף מת, וחולקים הניזק והמזיק- הניזק אומר שהשור הרודף נגחו, ואילו המזיק אומר שהוא נפגע מסלע, במקרה זה "המוציא מחבירו עליו הראיה", דהיינו, על הניזק להביא ראיה שאכן שורו של חברו הוא שנגח את השור המת. ב<strong>גמרא</strong> (לו.) מבואר ש<strong>סומכוס</strong> חולק על דין המשנה, ואומר שמשום שיש ספק, עליהם לחלוק.</p>
@@ -1171,7 +1181,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
 
                 
@@ -1185,7 +1195,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ספק בזהות השור הנוגח</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> הנ"ל (לה:) ממשיכה ואומרת, שאם שני שוורים רדפו אחר שור שלישי, ואחד מהם נגחו ואין ידוע מי, אם שני השוורים הרודפים שייכים לשני בני אדם שונים, שניהם פטורים, כיוון שכל אחד מהבעלים מתגונן ואומר לניזק- הבא ראיה ששורי הוא שהזיק. אך אם שני השוורים הרודפים הם של אותו אדם, המשנה קובעת ש"שניהם חייבים".</p>
@@ -1205,7 +1215,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-י</h2>
 
                 
@@ -1219,7 +1229,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההבדל בין ברי לשמא בטענת הניזק – היחס לטענו חיטים והודה בשעורים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>משנתנו</strong> (לה:) ממשיכה ומבארת את המקרה של שני שוורים של אדם אחר, הרודפים אחר שור שלישי שנמצא נגוח ואין ידוע מי מהם נגחו. אם אחד משני הרודפים הוא מועד והשני הוא תם, והמזיק טוען שהתם הוא שנגח (ולכן אין הוא חייב אלא חצי נזק מגופו), ואילו הניזק טוען שהמועד הוא שנגח (ולכן חייב המזיק נזק שלם מהעליה), המוציא מחברו עליו הראיה, דהיינו כדי שיקבל הניזק כפי שהוא טוען, עליו להביא ראיה. דין שווה אומרת הגמרא במקרה ששני השוורים הנוגחים תמים הם, אך אחד מהם הוא גדול (ויש להשתלם מגופו כדי חצי הנזק) ואילו השני קטן, (ואין בו כדי חצי נזק), וטוען הניזק שהגדול נגח, ומשיב המזיק שהקטן נגח. גם כאן אין הניזק מקבל מהגדול אלא אם כן הביא ראיה לטובתו.</p>
@@ -1238,7 +1248,7 @@
                     
                 </div>
                 
-                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שבועת מודה במקצת בויכוח על זהות השור הנוגח</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאשר אדם טוען על חברו שהוא חייב לו סכום כסף, והלה מודה לו במקצת הסכום וכופר בשאר, חייב הנתבע מדין התורה להישבע כדי להיפטר. זהו דין מודה במקצת (רמב"ם טוען ונטען פ"א ה"א). כאשר הנתבע מודה במקצת אך לא ממין הטענה, הדין הוא שפטור הנתבע (שם פ"ג ה"ח). דוגמה לכך היא טענו חיטים והודה לו בשעורים.</p>
@@ -1256,7 +1266,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
 
                 
@@ -1266,7 +1276,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">יעילות תפיסה בתבעו חיטים והודה בשעורים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (לה:) ממשיכה ודנה במקרה בו היו שני שוורים תמים רודפים (של אדם אחד), שנגחו שני שוורים רדופים (של אדם אחר), והוויכוח בין המזיק לניזק הוא שהמזיק אומר שהשור הגדול נגח את הקטן, והקטן נגח את הגדול (ומכיוון שאין בדמי הנוגח הקטן כדי תשלום חצי הנזק על השור הנגוח הגדול, הרי שהפסיד הניזק), ואילו הניזק אומר שהגדול נגח את הגדול והקטן את הקטן (ואז יש בנוגחים די בכדי לגבות מהם חצי נזק בין על הנגוח הגדול ובין על חברו הקטן). לחילופין, יתכן מקרה בו הרודפים היו תם ומועד, והויכוח הוא האם מועד נגח את הגדול ותם את הקטן (כך אומר הניזק, ואז הוא יכול לקבל פיצוי מלא על נזקו העיקרי שהוא שורו הגדול שמת), או שמא הפוך- מועד נגח את הקטן ותם את הגדול (שזו טענת המזיק, שאז אין הוא משלם נזק שלם אלא על השור הקטן, שנזקו פחוּת). בהתאמה למקרים הקודמים, גם כאן המשנה קובעת ש"המוציא מחברו עליו הראיה", דהיינו, אין הניזק נוטל כדבריו ללא ראיה.</p>
@@ -1282,7 +1292,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב-יג</h2>
 
                 
@@ -1296,7 +1306,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">יותר מניזק אחד בשור תם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (לו.) דנה בתשלומים משור תם שנגח כמה שוורים:</p>
@@ -1342,7 +1352,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
 
                 
@@ -1352,7 +1362,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מזיק שהוא ניזק וניזק שהוא מזיק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (לג.) מדברת על מקרה בו שני שוורים הזיקו זה את זה. הכלל הוא שתשלומי הנזק מתקזזים זה מזה, כך שבפועל מי שצריך לשלם את התשלום הגדול יותר (יהיה זה נזק שלם או חצי נזק, לפי העניין), נותן את הפרש התשלומים לשני.</p>
@@ -1371,7 +1381,7 @@
                     
                 </div>
                 
-                <div id="topic-9-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פטוֹר על התגוננות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל (פ"ב הלכה כ, ופ"ג הלכה ג) עסקנו בדין "כל המשנה ובא אחר ושינה בו פטור". עניינו של דין זה הוא שכאשר הניזק עצמו גורם לעצמו את הנזק, פטור המזיק. דוגמאות לכך הם המשסה כלבו של חברו בעצמו, ופרה מהלכת ברשות הרבים שבעטה בפרה רבוצה. ה<strong>רא"ש</strong> (סי יג) כותב, שאף בדין שוורים שנגחו זה את זה, השור הראשון שנגח אחראי לכך שהשור השני "החזיר" לו, וממילא צריך להיות השור השני פטור, כיוון שפעל מתוך התגוננות עצמית, והשור הראשון הוא שהביא על עצמו את הנזק. לכן מפרש הרא"ש שמשנתנו מדברת על שוורים שנגחו זה את זה בבת אחת, או לחילופין, שלאחר הנגיחה הראשונה נפרדו זה מזה ואז נפגשו שוב ונגח המנוגח את המנגח.</p>
@@ -1409,7 +1419,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

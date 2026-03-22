@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות שכירות - פרק ב</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1105,7 +1115,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
 
                 
@@ -1119,7 +1129,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין השומרים בפיקדון שהוא קרקעות, עבדים, שטרות או הקדש</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (ב"מ נו.)-</p>
@@ -1182,7 +1192,7 @@
                     
                 </div>
                 
-                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומרי עבדים שטרות קרקעות או הקדש, במקרה שהתחייבו באחריותם ע"י קניין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (נח.) מקשה <strong>רב יוסף בר חמא</strong> מברייתא (הובאה כדוגמתה בתוספתא בבא מציעא ח א) על משנתנו-</p>
@@ -1220,7 +1230,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
 
                 
@@ -1230,7 +1240,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר על קרקע, שטר, עבדים או הקדשות שפשע בשמירה עליהם וניזוקו.</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, המשנה פוטרת שומר שכזה אפילו משבועת השומרים. הראשונים חלקו מה הדין כאשר פשע השומר, האם חייב הוא או פטור.</p>
@@ -1260,7 +1270,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
 
                 
@@ -1270,7 +1280,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוסר לחבירו דבר המחובר לקרקע לשומרו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (שבועות מב.)-</p>
@@ -1332,7 +1342,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
 
                 
@@ -1342,7 +1352,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הדרישה שיהיה הפיקדון חולין ונכסי ישראל משעת תחילת ההפקדה ועד סופה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ה</strong><strong>מכילתא דרבי שמעון בר יוחאי</strong> (פרק כב), דורשת את הפסוקים האמורים בשומר חינם "כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ כֶּסֶף אוֹ כֵלִים לִשְׁמֹר וְגֻנַּב מִבֵּית הָאִישׁ... וְנִקְרַב בַּעַל הַבַּיִת אֶל הָאֱלֹקִים אִם לֹא שָׁלַח יָדוֹ בִּמְלֶאכֶת רֵעֵהוּ... עַד הָאֱלֹקִים יָבֹא דְּבַר שְׁנֵיהֶם..." (שמות כב ו-ח)-</p>
@@ -1378,7 +1388,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ז</h2>
 
                 
@@ -1392,7 +1402,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קטן שהפקיד ביד גדול</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מכילתא דרבי שמעון בר יוחאי</strong> (פרק כב) דורשת את הפסוקים הנאמרים בשומר, באותו האופן בו נדרשו לעניין שמירת הקדש ושמירת רכוש עכו"ם (ראה לעיל עמ' 27)-</p>
@@ -1458,7 +1468,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1468,7 +1478,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">"תיקנו משיכה בשומרים"- תחילת חלות הסכם השמירה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נסקור תחילה כמה סוגיות הנוגעות לרגע תחילת השמירה-</p>
@@ -1539,7 +1549,7 @@
                     
                 </div>
                 
-                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נוסח ההסכמה לשמירה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים מזכירים שלוש סוגיות בהן נידונה ההשלכה של אמירתו של שומר על התחייבותו בשמירה-</p>
@@ -1624,7 +1634,7 @@
                     
                 </div>
                 
-                <div id="topic-6-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הודאה במקצת בשומרים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בפרשת השומרים (שמות כב ח)-</p>
@@ -1689,7 +1699,7 @@
                     
                 </div>
                 
-                <div id="topic-6-4" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-4" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פטור משבועה במיגו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא במסכת שבועות (מה:) דנה בהלכה הפסוקה במשנה (שם מה.), שכאשר שכיר תובע את בעל הבית עבור שכרו, ובעל הבית טוען שכבר שילם, נשבע השכיר ונוטל<sup id="ref28"><a href="#fn28">[28]</a></sup>.</p>
@@ -1730,7 +1740,7 @@
                     
                 </div>
                 
-                <div id="topic-6-5" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-5" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שתי כסף בשבועת השומרים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' במה שיתבאר בעז"ה בהלכות טוען ונטען פרק ג הלכה ו.</p>
@@ -1740,7 +1750,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1750,7 +1760,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר שהתנה להוריד מחיוב שמירתו- "מתנה על מה שכתוב בתורה"?</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (בבא מציעא צד.)-</p>
@@ -1803,7 +1813,7 @@
                     
                 </div>
                 
-                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">האם תנאו של השומר כפוף לקניין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה ברייתא המשלימה את הברייתא, ומציינת שכשם שהשומר יכול להתנות את השמירה בכך שיתחייב במידה פחותה מזו הרגילה, כך יכול בעל הבית להתנות את השמירה בכך שהשומר יתחייב <strong>יותר</strong> מהמידה הרגילה. הגמרא מנסה לברר על ידי מה מתחייב השומר שהסכים לכך-</p>
@@ -1826,7 +1836,7 @@
                     
                 </div>
                 
-                <div id="topic-7-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר המתנה שיפטר אף מפשיעה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה כתבה ששומר חינם יכול להתנות שיפטר משבועה, אך לא דיברה באופן מפורש על מקרה בו שומר (למשל שומר חינם) מתנה להיפטר אפילו מפשיעה. הראשונים חלקו האם תנאי שכזה חל-</p>
@@ -1844,7 +1854,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1854,7 +1864,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המפקיד טוען שהשומר התחייב יותר מגדרו ע"י תנאי והשומר מכחיש</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה זה, כיוון שהנתבע מודה ששומר היה וממילא נשבע שבועת השומרים פוסק הרמב"ם שאגב שנשבע שבועת השומרים יכול לגלגל על הנתבע שישבע שבועת התורה גם על כך שאכן לא היה תנאי (בעניין גילגול שבועה עי' פרק א מהלכות טוען ונטען).</p>
@@ -1864,7 +1874,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
 
                 
@@ -1874,7 +1884,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כשהנתבע מכחיש שקיבל על עצמו שמירה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל, בעניין "הודאה במקצת בשומרים" הבאנו את שיטת <strong>רש"י</strong> הסובר שהכופר בכל בפיקדון חייב שבועה, ואת שיטותיהם של <strong>ריב"א</strong> ו<strong>רבינו תם</strong> הסוברים, כל אחד מטעם אחר, שהכופר בכל בפיקדון פטור משבועה. הרמב"ם כאן, על פי שיטתם, פוסק ששומר הכופר בעצם היותו שומר, פטור משבועת התורה.</p>
@@ -1886,7 +1896,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
 
                 
@@ -1896,7 +1906,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הכופר בפיקדון בשעה שהמפקיד מחזיק בשטר ההפקדה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שנתבאר בהלכה הקודמת, שומר הכופר בעצם מינויו כשומר או שטוען שהחזיר את הפיקדון, אינו חייב להישבע על כך שבועת התורה, אלא רק שבועת היסת. הגמרא בבבא בתרא (ע.:) עוסקת במקרה בו השומר כופר בכל וטוען שכבר השיב את הפיקדון, ומולו עומד המפקיד, טוען שהפיקדון לא הוחזר, ובידו, כראיה, שטר ההפקדה שאמור היה השומר לקחת עם החזרת הפיקדון-</p>
@@ -2055,7 +2065,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

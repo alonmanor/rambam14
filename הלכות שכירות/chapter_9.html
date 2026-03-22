@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות שכירות - פרק ט</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1113,7 +1123,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
 
                 
@@ -1127,7 +1137,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מנהג המדינה בהעסקת פועלים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כותבת המשנה הפותחת את פרק "השוכר את הפועלים" (פג.)-</p>
@@ -1203,7 +1213,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
 
                 
@@ -1213,7 +1223,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שלוחו של בעל הבית שהטעה את הפועלים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (עה:)-</p>
@@ -1298,7 +1308,7 @@
                     
                 </div>
                 
-                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בעל הבית שהטעה את הפועלים ופועלים שהטעו את בעל הבית</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור לעיל, התלמוד <strong>הבבלי</strong> העמיד את האמור במשנה "הטעו זה את זה" בפועלים שהטעו זה את זה (שליח לשכור פועלים שהטעה את הפועלים ששכר).</p>
@@ -1334,7 +1344,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
 
                 
@@ -1344,7 +1354,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פועל או בעל הבית שחזרו בהם-כללי</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שראינו לעיל, נטייתה הראשונה של הגמרא בתלמוד הבבלי היא ללפרש את דברי המשנה "השוכר את הפועלים <strong>והטעו זה את זה</strong>..." באון שפועל הטעה פועל אחר. אפשרות אחרת מועלית בהמשך (עו:)-</p>
@@ -1387,7 +1397,7 @@
                     
                 </div>
                 
-                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בעל בית שחזר בו לאחר שהלכו עימו הפועלים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שראינו, הברייתא (חלק 2) קובעת שאם כבר הלכו הפועלים למקום העבודה ורק אז רוצה בעל הבית לחזור בו, חייב לשלם להם שכר יום עבודה מלא, עם הפחתה המביאה לידי ביטוי את העובדה שבסופו של דבר הפועלים השקיעו רק את זמנם ("כפועל בטל"), ולא עבדו עבודת כפיים בפועל.</p>
@@ -1440,7 +1450,7 @@
                     
                 </div>
                 
-                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פועלים או בעל בית שחזרו בהם לאחר שעשו הפועלים מקצת מהמלאכה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שראינו לעיל, ה<strong>ברייתא</strong> (עו:) דנה בדרך לשלם לבעל מלאכה שעשה חלק מהעבודה עליה סוכם ואז חזר בו. נחזור כאן על דברי הברייתא-</p>
@@ -1499,7 +1509,7 @@
                     
                 </div>
                 
-                <div id="topic-3-4" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-4" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חזרה בדבר האבד- כללי</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>משנתנו</strong> (עה:) מביאה שתי דוגמאות לפועלים שחזרו בהם באופן שיוצר הפסד למלאכתו של בעל הבית-</p>
@@ -1542,7 +1552,7 @@
                     
                 </div>
                 
-                <div id="topic-3-5" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-5" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היתר הטעיית הפועלים בדבר האבד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים, האם מותר לבעל הבית להטעות את הפועלים החפצים לחזור בהם גם במצבים שאינם המצב המפורש בברייתא (דבר האבד, כאשר אין פועלים אחרים)-</p>
@@ -1555,7 +1565,7 @@
                     
                 </div>
                 
-                <div id="topic-3-6" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-6" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין שכירת פועלים חילופיים על חשבון אלה שחזרו בהם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שראינו לעיל, הברייתא קובעת עד כמה יכול בעה"ב להוציא על פועלים חלופיים, על חשבון הראשונים שחזרו בהם-</p>
@@ -1590,7 +1600,7 @@
                     
                 </div>
                 
-                <div id="topic-3-7" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-7" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פועל שחזר בו מחמת אונס</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במסגרת העיסוק במחלוקת חכמים ור' דוסא, מביאה הגמרא (עז.) <strong>ברייתא</strong> העוסקת בפועל שנאלץ לעזוב את מלאכתו בחצי היום מחמת אונס-</p>
@@ -1624,7 +1634,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
 
                 
@@ -1634,7 +1644,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השוכר את הפועל ונלקח בעל כרחו לעבודת המלך</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>תוספתא</strong> (ב"מ פ"ז הל' ח)-</p>
@@ -1656,7 +1666,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
 
                 
@@ -1666,7 +1676,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בעל הבית שחזר בו לאחר אירוע המייתר את הצורך בפועלים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בביאור הלכה זו הורחב לעיל (עמוד 138). להלן יושלם דין האריס.</p>
@@ -1698,7 +1708,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1708,7 +1718,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השוכר את הפועל ליום שלם וסיים את מלאכתו בחצי היום</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (עז.)-</p>
@@ -1740,7 +1750,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1750,7 +1760,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שליח שהלך ולא עשה שליחותו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>תוספתא</strong> (ב"מ פרק ז)-</p>
@@ -1779,7 +1789,7 @@
                     
                 </div>
                 
-                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">האומר לפועל טול מה שעשית בשכרך</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (בבא מציעא קיז:)-</p>
@@ -1823,7 +1833,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1833,7 +1843,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השוכר את הפועל לעשות בתוך שלו והראהו בשל חברו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם קיח.) דנה בדברי המשנה (שהובאו לעיל), האוסרת על מעסיק לומר לפועל "טול מה שעשית בשכרך", ומקשה מברייתא ממנה משמע הדבר ההפוך-</p>
@@ -1863,7 +1873,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
 
                 
@@ -1873,7 +1883,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השוכר את הפועל לעשות עימו בתבן וקש ואמר לו טול מה שעשית בשכרך</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' לעיל בנושא "האומר לפועל טול מה שעשית בשכרך"</p>
@@ -1883,7 +1893,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
 
                 
@@ -1893,7 +1903,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פועל המוצא מציאה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' הלכות גזילה ואבידה פרק יז הל' יג, ובמה שבארנו שם.</p>
@@ -2074,7 +2084,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

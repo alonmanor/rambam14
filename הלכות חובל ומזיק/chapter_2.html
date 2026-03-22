@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות חובל ומזיק - פרק ב'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1125,7 +1135,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
 
                 
@@ -1139,7 +1149,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מקרים בהם יש לשלם רק חלק מחמשת התשלומים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור דברי הרמב"ם ב<strong>ברייתא</strong> המובאת בירושלמי (פרק ח הלכה א):</p>
@@ -1167,7 +1177,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
 
                 
@@ -1177,7 +1187,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">צער שלא במקום נזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) מביאה דוגמה למקרה בו יש לשלם על הצער בלבד:</p>
@@ -1202,14 +1212,14 @@
                     
                 </div>
                 
-                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ריפוי שלא במקום נזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (פה:) מביאה דוגמה למקרה בו יש תשלומי ריפוי בלבד- כאשר המזיק הזיק על ידי סיכתו של הניזק בסם חריף המשנה את מראה הבשר ללבן, צריך הוא לשלם לו עבור ריפוי המחזיר את מראה עורו לכשהיה. וכן פסקו ה<strong>רמב"ם</strong>, ה<strong>טור</strong> (תכ) וה<strong>שו"ע</strong> (תכ י)</p>
                     
                 </div>
                 
-                <div id="topic-2-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שבת שלא במקום נזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) מביאה דוגמה למקרה בו יש לשלם על ביטול המלאכה בלבד- כאשר סגר המזיק את הניזק בחדר כך שלא יוכל לצאת ולעבוד.</p>
@@ -1223,7 +1233,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ו</h2>
 
                 
@@ -1241,7 +1251,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלומי נזק על דבר שסופו לחזור</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (פה:) מעלה <strong>רבה</strong> שאלה- מהו דין "שבת הפוחתתו בדמים"? ומסביר <strong>רש"י</strong>, שהכוונה למקרים בהם שוויו של הניזק פוחת רק באופן זמני, והשאלה היא האם הדבר נכנס בגדר שבת בלבד, או שיש לגבותו בגדר נזק, למרות שהוא חוזר.</p>
@@ -1252,7 +1262,7 @@
                     
                 </div>
                 
-                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלום חמישה דברים במקום שאין חבורה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (פה:) מביאה <strong>ברייתא</strong> לפיה המכה אביו ואמו ולא גרם להם לחבורה חייב חמישה דברים. כלומר, כיוון שהעושה חבורה באביו ואמו חייב מיתה, יהיה חייב בתשלומי חמישה דברים רק במקרה <strong>שלא</strong> עשה בהם חבורה. ה<strong>גמרא</strong> שואלת כיצד ייתכן מקרה שאפילו חבורה לא עשה המכה, ובכל זאת חייב הוא בחמישה דברים, ועונה שמדובר באדם שהשיר את שער הראש של חברו בעזרת משחה, באופן בלתי הפיך. נזק חייב משום שחיסר בחברו דבר באופן בלתי הפיך הפוחת מדמיו. צער וריפוי על הכאב המתלווה לפגיעה, ועל הטיפול הנדרש. שבת במקרה בו האדם משתמש בשער ראשו למלאכתו, כגון רקדן המנענע שער ראשו מתוך ריקוד, וכמובן גם בושת.</p>
@@ -1274,7 +1284,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1284,7 +1294,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק ללא מגע</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (צא.) מביאה <strong>ברייתא</strong> המבדילה בין נזק בו יש מגע בין המזיק לניזק לנזק לנזק ללא מגע:</p>
@@ -1314,7 +1324,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1324,7 +1334,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נאמנות הניזק במקרה של הטלת מום הניכר לו בלבד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כותב מסברה שכדי למנוע מעשי רמאות, כאשר הניזק לכאורה מתלונן על כך שמכת המזיק סימאה את עינו או חרשה אותו, אין להאמין לו מיד אלא יש לראות האם יוחזק בסביבתו כחרש או עיוור כדבריו.</p>
@@ -1336,7 +1346,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-י</h2>
 
                 
@@ -1350,7 +1360,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אומדן צער במקום נזק ושלא במקום נזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) כותבת כיצד יש להעריך את גובה התשלום על הצער-</p>
@@ -1374,7 +1384,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
 
                 
@@ -1384,7 +1394,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אומדן תשלומי שבת במקום נזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) כותבת לעניין תשלומי שבת במקום נזק (כלומר, במקום בו איבד הניזק איבר כלשהו באופן בלתי הפיך):</p>
@@ -1417,7 +1427,7 @@
                     
                 </div>
                 
-                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלומי ביטול מלאכה כפועל בטל</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ברייתא</strong> בבבא מציעא (עו:) מבואר שפועלים שנשכרו, הגיעו לעבודה ובסוף לא עבדו שלא באשמתם, מקבלים את שכרם, אך לא את כל שכרם, משום ש"אינו דומה עושה מלאכה ליושב בטל". כלומר, גם כאשר בעל הבית צריך לפצות את הפועלים על איבוד השתכרות במקום אחר, אין הוא משלם להם את כל מה שהיה משלם לו היו עובדים אצלו בפועל.</p>
@@ -1437,7 +1447,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
 
                 
@@ -1447,7 +1457,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המחריש את חברו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (פה:) העוסקת בתשלומי שבת במקום שיש בו נזק, מביאה את דברי <strong>רבא</strong>:</p>
@@ -1473,7 +1483,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
 
                 
@@ -1483,7 +1493,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איחוד כמה חבלות לתביעה אחת</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (פה:) מעלה <strong>רבא</strong> את השאלה הבאה- במקרה בו המזיק קטע את ידו של הניזק, ואז, בריחוק זמן, שבר את רגלו ושוב לאחר זמן סימאו, ולאחר זמן גם חרשו. ולא אמדו בית הדין את התשלומים בין מעשה למעשה. האם במקרה כזה יש לשום את תשלומי הצער והבושת של כל אחת מהחבלות בנפרד, או שמא יש לשום הכל ביחד?</p>
@@ -1507,7 +1517,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד-טז</h2>
 
                 
@@ -1525,7 +1535,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אומדן עתידי של הריפוי והשבת בשעת השומה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (צא.) מובאת <strong>ברייתא</strong>:</p>
@@ -1553,7 +1563,7 @@
             </div>
             
             
-            <div id="halacha-11" class="mb-12 pt-8">
+            <div id="halacha-11" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז-יח</h2>
 
                 
@@ -1567,7 +1577,7 @@
                 
 
                 
-                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ניזק שרוצה לרפא את עצמו, ומזיק שרוצה לרפא בעצמו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (פה.) אומרת שהניזק אינו יכול לדרוש שיתנו לו מראש את כסף הריפוי בידו, ושהוא ירפא את עצמו, שכן המזיק יכול לטעון שהוא חושש שהניזק לא ישתמש בכסף לשם ריפוי, וגנאי הוא למזיק, שמתפרסם בין הבריות כחובל שאינו מרפא. על פי הנפסק בהלכה הקודמת, שבכפוף להסכמת המזיק, ניתן לאפשר מימון של הריפוי על בסיס יום יומי, פוסק הרמב"ם כאן, שאם אכן החליטו על צורת תשלום כזו, יכול הניזק לדרוש את התשלום במזומן בידו, שכן אז אין חשש שישתמש בו לצרכים אחרים לאורך זמן מבלי שישימו לב.</p>
@@ -1583,7 +1593,7 @@
             </div>
             
             
-            <div id="halacha-12" class="mb-12 pt-8">
+            <div id="halacha-12" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
 
                 
@@ -1593,7 +1603,7 @@
                 
 
                 
-                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אחריות המזיק במקרים של סיבוכים רפואיים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג.) מדברת על מקרה בו התפתחו סיבוכים הקשורים למכה, והריפוי של המכה מתעכב-</p>
@@ -1643,7 +1653,7 @@
             </div>
             
             
-            <div id="halacha-13" class="mb-12 pt-8">
+            <div id="halacha-13" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כ</h2>
 
                 
@@ -1653,7 +1663,7 @@
                 
 
                 
-                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נתינת זמן למזיק לפרוע</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (צ:) מספרת על מקרה בו פסק בית הדין לחובת אדם שבייש. אותו אדם ביקש ארכה לפני התשלום ובית הדין נעתר לו.</p>
@@ -1724,7 +1734,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

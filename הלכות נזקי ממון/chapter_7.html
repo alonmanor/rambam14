@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ז</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1058,7 +1068,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1068,7 +1078,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השמירה הדרושה בתם ובמועד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (מה:) מביאה מחלוקת תנאים משולשת, לעניין רמת השמירה הנדרשת כדי להיפטר בשור תם ובשור מועד-</p>
@@ -1113,7 +1123,7 @@
                     
                 </div>
                 
-                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">צד תמות במקומה עומדת</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בגמרא</strong> (מה:) מובאת שיטתו של <strong>ר' אדא בר אהבה</strong>, לגבי הבנת ההשלכות של שיטת ר' יהודה. מכיוון שר' יהודה מחייב במועד שמירה פחותה ובתם שמירה מעולה, מגיע ר' אדא בר אהבה מסברה (עפ"י תוס' ד"ה "לא פטר") למסקנה שגם במועד עדיין "חצי התמות" במקומו עומד. כלומר, המועדות אינה באה לגרוע דבר מהתמות, אלא להוסיף חומרה עליה – על נזק מועד משלמים חצי נזק מגופו, כתם, ועוד חצי נזק מעליה, כמועד. כמו כן לגבי השמירה, אם הזיק שור מועד בשמירה פחותה, אמנם על חצי הנזק המועד פטורים הבעלים, אך חצי הנזק של תם (שאינו נפטר בפחות משמירה מעולה) עדיין משולם.</p>
@@ -1127,7 +1137,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
 
                 
@@ -1137,7 +1147,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מועד לקרן ימין ונגח בקרן שמאל</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הגמרא</strong> (מה:) מביאה את דברי <strong>רב</strong>:</p>
@@ -1159,7 +1169,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
 
                 
@@ -1169,7 +1179,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההבדל בין שור שהזיק לבין בעליו שהזיקו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (לד:) מביאה כמה מקרים בהם דברים שעשה השור, דינם שונה מדברים שעשו הבעלים, וביניהם- השור אינו חייב אם בייש, ואילו האדם חייב אם בייש. שור שחבל באביו ובאמו של בעליו, חייב כמזיק כל אדם, ואילו בעליו שחבל באביו ובאמו פטור מתשלומים (כיוון שענוש מיתה), וכנ"ל אם השור הזיק בשבת ע"י עשיית מלאכה, כגון שריפת גדיש, שהשור חייב על הנזק, ואילו האדם פטור כיוון שחייב מיתה על חילול השבת.</p>
@@ -1183,7 +1193,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
 
                 
@@ -1193,7 +1203,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין נגיחה בחצר בעל הבית</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (מז:) פוסקת שהנכנס לחצר חברו שלא ברשות, אם נגחו שורו של בעל הבית, פטור בעל הבית, ואם נגח שורו של הנכנס את שור בעל הבית, חייב. לגבי השאלה מה חייב, מצינו מחלוקת תנאים <strong>במשנה</strong> (כד:) כש<strong>ר' טרפון</strong> סובר שעל קרן ברשות הניזק משלמים תמיד נזק שלם בין תם ובין מועד, ואילו <strong>חכמים</strong> סוברים שדינו כדין רשות הרבים, שעל קרן מועדת משלם נזק שלם, ואילו על קרן תמה משלם חצי נזק.</p>
@@ -1205,7 +1215,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
 
                 
@@ -1215,7 +1225,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נפל שור הנכנס לבור בעל הבית, והבאיש את מימיו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (מז:) ממשיכה ומדברת על הנכנס לחצר חברו שלא ברשות:</p>
@@ -1230,7 +1240,7 @@
                     
                 </div>
                 
-                <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מחלוקת רבי ות"ק – הרשאת כניסה כקבלת אחריות נזקין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין הנכנס לחצר חברו ברשות ושלא ברשות נידון לעיל (פרק ג, הלכות יג-יד) במסגרת הלכות נזקי שן ורגל עיין שם וצרף לכאן. הדיבור יורחב רק בהצגת שיטתו של הראב"ד המובאת כאן בהרחבת יתר.</p>
@@ -1252,7 +1262,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
 
                 
@@ -1262,7 +1272,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בהמתו שחפרה בורות בחצר חברו, וניזוק בהם אחר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (מח.) אומר <strong>רבא</strong>, שהמכניס שורו שלא ברשות לחצר חברו, וחפר השור בורות בחצר, חייב בעל השור על הנזק לחצר, אך אם מישהו ניזק בבור שנוצר, אין חייב בעל השור, אלא בעל החצר. הגמרא אומרת שלמרות שבדרך כלל אין מחייבים אדם על בור שכרתה בהמתו, שנאמר "כי יכרה <strong>איש</strong> בור", כאן כיון שהיה על בעל החצר לסתום את הבור ולא סתם רואים אותו כאילו כרה אותו.</p>
@@ -1278,7 +1288,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1288,7 +1298,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הזיק בעל החצר את השור שנכנס לחצרו לא רשות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד מימרא של רבא ב<strong>גמרא</strong> (שם)- אם הזיק בעל החצר את השור הנכנס ללא רשות, פטור, כל עוד הזיקו שלא בכוונה. ואם הזיקו בכוונה חייב כיוון שיש לבעל החצר רשות להוציא את השור מרשותו אך לא להזיקו בכוונה.</p>
@@ -1298,7 +1308,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח-י</h2>
 
                 
@@ -1316,7 +1326,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שמין לנזקין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הגמרא</strong> (י:) מדייקת מדברי המשנה (ט:), המשתמשת בלשון תשלומי נזק, שהניזק מטפל בנבילה. כלומר, הנבילה היא עדיין שלו, ועל המזיק לשלם לו את הנזק- ההפרש בין הערך הקודם של בהמתו לבין ערך הנבילה הנוכחי. כמה סימוכין בפסוקים מובאים, וביניהם דברי חזקיה, הלומד מהפסוק</p>
@@ -1327,7 +1337,7 @@
                     
                 </div>
                 
-                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פחת ושבח נבילה למי</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> וה<strong>ברייתא</strong> (לד.) מביאות מחלוקת תנאים הנוגעת להבנת הפסוק:</p>
@@ -1355,7 +1365,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יב</h2>
 
                 
@@ -1369,7 +1379,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נשתנה ערכיהם של השור הניזק או של המזיק בין שעת הנזק לבין שעת ההעמדה בדין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (לד.) מובאת ברייתא בשני חלקים, העוסקת בשור שווה 200 שנגח שור שווה 200, ופצעו כך שערכו ירד ב-50.</p>
@@ -1393,7 +1403,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
 
                 
@@ -1403,7 +1413,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הטיפול בנבילה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (<strong>יא</strong>.) מביאה מחלוקת תנאים בפירוש הכתוב בדין השומרים</p>
@@ -1456,7 +1466,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

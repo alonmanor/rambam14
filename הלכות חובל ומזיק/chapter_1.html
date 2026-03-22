@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות חובל ומזיק - פרק א'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1118,7 +1128,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1128,7 +1138,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חמשת תשלומי החובל - פתיחה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) פותחת בחמשת תשלומי החובל בחבירו:</p>
@@ -1144,7 +1154,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב-ו</h2>
 
                 
@@ -1170,7 +1180,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דרך שומת תשלומי הנזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) מפרטת את דרך שומת הנזק:</p>
@@ -1189,7 +1199,7 @@
                     
                 </div>
                 
-                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המקור לתשלומי נזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מביאה את הפסוק "עין תחת עין" כמקור לכך שאם אדם פגע בגופו של חברו, הוא צריך לפצותו בממון. הסוגיה מביאה כמה ברייתות ואת דבריהם של כמה אמוראים שמטרת כולם להסביר מדוע אין להבין את הפסוק כפשוטו, ויש לפרשו במובן של פיצוי ממוני. להלן ההצעות שעולות בסוגיה:</p>
@@ -1219,7 +1229,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
 
                 
@@ -1229,7 +1239,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המקור לתשלומי צער</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) מביאה דוגמה למקרה בו יש לשלם רק על צער-</p>
@@ -1255,7 +1265,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
 
                 
@@ -1265,7 +1275,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המקור לתשלומי שבת וריפוי</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (פה.) מובאת <strong>ברייתא</strong>:</p>
@@ -1281,7 +1291,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-י</h2>
 
                 
@@ -1295,7 +1305,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המקור לתשלומי בושת</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פו:) פוסקת:</p>
@@ -1327,7 +1337,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
 
                 
@@ -1337,7 +1347,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אדם מועד לעולם לעניין תשלומי נזק ולעניין תשלומי ארבעה דברים – דין ישֶן שהזיק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (כו.)</p>
@@ -1377,7 +1387,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
 
                 
@@ -1387,7 +1397,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אדם מועד לעולם ודין המתכוון להזיק לעניין בושת - הנופל מהגג והזיק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (כז.) פוסק <strong>רבה</strong>:</p>
@@ -1427,7 +1437,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
 
                 
@@ -1437,7 +1447,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שנים שחבלו באחד</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (נג:) מדבר <strong>רבא</strong> על מקרה בו הזיקו שור אדם ובור כאחד, ע"י דחיפת אדם שור או כלי לתוך הבור:</p>
@@ -1463,7 +1473,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
 
                 
@@ -1473,7 +1483,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נתכוון לבייש את האחד ובייש את השני</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הערכת תשלומי בושת, פוסקת ה<strong>משנה</strong> (פג:), שהכל לפי המבייש והמתבייש, דהיינו, אין דמים קבועים וקצובים לבושת, אלא ההערכה של דמי הבושת במעשים דומים חיצונית יכולה להשתנות לפי מעמדם של המבייש והמתבייש (נושא זה יורחב בפרק ג').</p>
@@ -1497,7 +1507,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
 
                 
@@ -1507,7 +1517,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עוד בעניין נזק באינו מתכוון – אבן בחיקו ועמד ונפלה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כו:) מובאים דברי <strong>רבה</strong> לגבי אחריות האדם למעשיו שנעשו ללא כוונה ברמות שונות, ולצורך עניינים שונים. בין השאר מדובר על מי שהיתה לו אבן בחיקו, ועמד ונפלה והזיקה, בין שלא ידע עליה, ובין שידע עליה אך שכחה. עוד מקרה הוא כאשר המזיק התכוון לזרוק למרחק קצר, אך בטעות זרק רחוק יותר וכך פגע והזיק. בכל המקרים האלה פוסק רבה שחייב בתשלום נזק, אך פטור על תשלומי צער, ריפוי ושבת. וזאת על פי העקרונות שהוצגו לעיל בהלכה יא-יב, לפיהם על תשלומי נזק חייבים אפילו בשוגג בעוד שד' דברים חייבים דווקא אם מדובר במזיד או קרוב למזיד.</p>
@@ -1521,7 +1531,7 @@
             </div>
             
             
-            <div id="halacha-11" class="mb-12 pt-8">
+            <div id="halacha-11" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טז</h2>
 
                 
@@ -1531,7 +1541,7 @@
                 
 
                 
-                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין 'אדם מועד לעולם' במקרה 'סימטרי'- רשות משותפת או רשות שאינה לא לזה ולא לזה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (מח.) מובאים דברי <strong>רבא</strong>:</p>
@@ -1572,7 +1582,7 @@
                     
                 </div>
                 
-                <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק בשוגג ובמזיד ברשות המזיק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור לעיל, מדברי <strong>רבא</strong> עולה שבעל הבית פטור על נזק שהזיק את הנכנס שלא ברשות. <strong>ר' פפא</strong> מגביל את הפטור למקרה שבעל הבית "לא ידע בו" בנכנס.</p>
@@ -1590,7 +1600,7 @@
             </div>
             
             
-            <div id="halacha-12" class="mb-12 pt-8">
+            <div id="halacha-12" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז</h2>
 
                 
@@ -1600,7 +1610,7 @@
                 
 
                 
-                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">העושה מעשה ברשות אחת והזיק ברשות אחרת</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (לב:):</p>
@@ -1613,7 +1623,7 @@
                     
                 </div>
                 
-                <div id="topic-12-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הנכנס לחנותו של נגר והוזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך למשנה הנ"ל, מובאת <strong>ברייתא</strong> (שם):</p>
@@ -1669,7 +1679,7 @@
             </div>
             
             
-            <div id="halacha-13" class="mb-12 pt-8">
+            <div id="halacha-13" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יח-יט</h2>
 
                 
@@ -1683,7 +1693,7 @@
                 
 
                 
-                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אומד לנזקין</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (צ:) מביאה <strong>ברייתא</strong> הדנה באומד למיתה- מהפסוק "והכה איש את רעהו באבן או באגרוף" (שמות כא יח) לומד <strong>שמעון התימני</strong> שהכלי בו בוצעה ההריגה צריך להיות זמין לבחינה לדיינים ולעדים כדי שיחוו דעתם אם אכן יש בו די בכדי להרוג, ולכן אם אבד הכלי, פטור הנאשם. <strong>ר' עקיבא</strong> חולק עליו וסובר שדי בכך שהעדים יכולים להעיד על כלי ההריגה. כך או כך, מוסכם על שניהם שצריך שבכלי בו נתבצעה ההריגה יהיה בכדי להרוג לפי אומדן הדיינים.</p>
@@ -1706,7 +1716,7 @@
                     
                 </div>
                 
-                <div id="topic-13-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-13-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ממציא את עצמו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במסגרת הדיון בהלכה יז לעיל, צטטנו את הברייתא המביאה את דברי <strong>ר'</strong><strong> אליעזר בן יעקב</strong>, לפיה אם הוציא הניזק/נהרג את ראשו רק לאחר שהאבן יצאה מתחת ידי המזיק, הרי המזיק פטור. כמו כן ראינו את הלישנא השלישית בגמרא, המשייכת את דברי <strong>ר' יוסי בר חנינא</strong> לברייתא הנ"ל, כך שפטור מגלות אך חייב בארבעה דברים.</p>
@@ -1820,7 +1830,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }

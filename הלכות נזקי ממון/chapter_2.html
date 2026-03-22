@@ -7,12 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+        }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
+        [id] {
+            scroll-margin-top: 90px; 
+        }
+
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
         html { scroll-behavior: smooth; }
+        
         .sidebar-scroll::-webkit-scrollbar { width: 6px; }
         .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
         details > summary { list-style: none; }
@@ -21,25 +31,25 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md z-20">
+    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ב</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
 
-    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-40">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
         
         <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
             <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
                 🏠 הלכה ממקורה
             </a>
             <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -1100,7 +1110,7 @@
 
             
             
-            <div id="halacha-1" class="mb-12 pt-8">
+            <div id="halacha-1" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
 
                 
@@ -1110,7 +1120,7 @@
                 
 
                 
-                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היחס בין אבות לבין תולדות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ב:-ג:) דנה בשאלה האם תולדות אבות הנזיקין דיניהם שווים לאבות, ובתשובתו של <strong>ר' פפא</strong>, שענה שיש תולדות שהם כמו האבות ויש שאינם כמו האבות. הגמרא מסיקה שכל תולדות הקרן, השן והרגל דינם כאבותיהם, וכך פוסק כאן הרמב"ם.</p>
@@ -1120,7 +1130,7 @@
             </div>
             
             
-            <div id="halacha-2" class="mb-12 pt-8">
+            <div id="halacha-2" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
 
                 
@@ -1130,7 +1140,7 @@
                 
 
                 
-                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין צרורות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ג:) מנסה להבין גם למה התכוון ר' פפא כשאמר שלעיתים אין דין התולדות כדין האבות, ומסיקה שהכוונה לדין צרורות. דהיינו נזק משני שלא נגרם ע"י רגלי הבהמה עצמה אלא ע"י דבר הניתז ממנה. דין הצרורות אינו כדין הרגל, שהרי על הרגל משלמים נזק שלם ואילו על צרורות משלמים חצי נזק. הצרורות מכונים תולדה של רגל משום שכמו רגל משלמים עליהם מן העליה ולא מגופה של הבהמה. הגמרא מציינת ש<strong>רבא</strong> מתלבט האם משלמים על נזק צרורות מגופה של הבהמה כמו בכל חצי נזק, או מעליה, כנזק רגל רגיל. אמנם, גם לפי האפשרות שאף בצרורות משלמים מגוף הבהמה, הם עדיין מכונים תולדה של רגל, שכן כמוה, פטורים עליהם ברשות הרבים.</p>
@@ -1142,7 +1152,7 @@
             </div>
             
             
-            <div id="halacha-3" class="mb-12 pt-8">
+            <div id="halacha-3" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ד</h2>
 
                 
@@ -1156,7 +1166,7 @@
                 
 
                 
-                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">צרורות – הלכה למשה מסיני</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (יז:) מובאות כמה ברייתות ובהן דוגמאות למחלוקת התנאים- <strong>חכמים</strong> כנגד <strong>סומכוס</strong>. בין השאר, חלוקים <strong>חכמים</strong> על <strong>סומכוס</strong> במקרה של בהמה שהתיזה צרורות עפר בהליכתה, והזיקו, במקרה של חזיר שנבר באשפה, התיז והזיק, או תרנגולים ששברו כלים ברוח שגרמו לה בכנפיהם. <strong>סומכוס</strong> סובר שכל אלה דינם כנזק רגל ישיר ומשלם נזק שלם, ואילו <strong>חכמים</strong> סוברים שמשלם חצי נזק. <strong>רבא</strong> מסכם שהמחלוקת בין סומכוס לחכמים אינה האם נזק בלתי ישיר מכח מעשה הבהמה הוא כנזק בגופה, שכן כולם מסכימים שהתזתה של הבהמה אינה שונה עקרונית מנזק שהיא מזיקה בגופה ממש. המחלוקת היא בנקודה אחרת- <strong>חכמים</strong> לומדים דין צרורות הלכה למשה מסיני, דהיינו, שעל נזק שנבע מהתזה שהתיזה הבהמה אפילו אגב הליכה כדרכה, יש לשלם רק חצי נזק. לעומתם, סומכוס אינו סובר שקיים דין צרורות וממילא לדעתו יש לשלם נזק שלם על התזה, ככל נזק רגל ישיר.</p>
@@ -1173,14 +1183,14 @@
                     
                 </div>
                 
-                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">התיזה ברשות הרבים והזיקה ברשות הניזק</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יט.) דנה בשאלה מה הדין אם התיזה צרורות ברשות הרבים שהזיקו ברשות היחיד (הניזק). מצד אחד נאמרת סברה לפטור- "עקירה אין כאן, הנחה יש כאן?!". כלומר, כיוון שמדובר בתולדת הרגל, ועל רגל ברה"ר פטור, שכן יש רשות לבהמה ללכת כדרכה ברשות הרבים, ממילא ההתזה היתה ברשות, וכי מה בכך שהפגיעה היתה ברשות הניזק? מצד שני מביאה הגמרא ברייתות מהן משמע שאף שההתזה היתה ברשות הרבים, כיוון שהפגיעה היתה ברשות הניזק, חייב. הכרעת הגמרא היא שאכן חייב, וכך פוסק ה<strong>רמב"ם</strong>, וה<strong>שו"ע</strong> (שצ ד).</p>
                     
                 </div>
                 
-                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כח כוחו ככוחו</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, ה<strong>גמרא</strong> (יט.) מתלבטת האם להעמיד את משנת 'כיצד הרגל' (יז.) כסומכוס או כחכמים. הגמרא מעירה, שאם נבחר להעמיד את משנתנו כסומכוס, אזי חייבים לפרש את המקרה של "דרסה על הכלי ושברתו, ונפל על כלי ושברו" (בו חייב נזק שלם על הראשון וחצי נזק על השני), במקרה בו הכלי הראשון נשבר כבר הוא ע"י צרורות (ועליו משלם נזק שלם לפי סומכוס, שכן לפיו אין דין צרורות), ואילו הכלי השני, נשבר מרסיסיו של הראשון, ועליו משלם חצי נזק. משמעות הדבר היא שאמנם לסומכוס צרורות ישירים הם כנזק בגופו, אך מודה הוא לחכמים בצרורות עקיפים, או בלשון הגמרא 'כח כוחו', שבהם משלם חצי נזק.</p>
@@ -1202,7 +1212,7 @@
             </div>
             
             
-            <div id="halacha-4" class="mb-12 pt-8">
+            <div id="halacha-4" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכות ה-ו</h2>
 
                 
@@ -1216,7 +1226,7 @@
                 
 
                 
-                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שינוי בצרורות</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (יט.) מעלה <strong>ר' אשי</strong> את השאלה, האם יש בצרורות שינוי לרביע נזק. בהמשך מבהירה הגמרא את השאלה יותר- כוונתו של ר' אשי לדון בדברי המשנה (יז.)</p>
@@ -1249,7 +1259,7 @@
                     
                 </div>
                 
-                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שינוי בצרורות, במקום שאי אפשר שלא להתיז גם לו היתה הולכת כדרכה:</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הגמרא</strong> (שם) מעלה את השאלה</p>
@@ -1269,7 +1279,7 @@
             </div>
             
             
-            <div id="halacha-5" class="mb-12 pt-8">
+            <div id="halacha-5" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
 
                 
@@ -1283,7 +1293,7 @@
                 
 
                 
-                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק וחצי נזק – ממון וקנס</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בגמרא</strong> (טו.) חלקו האמוראים לגבי מעמד תשלומי חצי נזק של תם. <strong>ר' פפא</strong> סבר שהם תשלומי ממון, ו<strong>ר' הונא </strong>סבר שהם קנס, ולכן אין דנים אותם שלא במומחים סמוכים, ואם מודה המזיק, פטור הוא, שמודה בקנס (לפני שבאו עדים) פטור. <strong>הגמרא</strong> מסבירה שהמחלוקת תלויה בשאלה האם תשלומי חצי נזק הם קולא שהקלה תורה על המזיק, שמעיקר הדין היה צריך לשלם הכל, ואז מדובר בממון, או שמא, מדובר בחומרא שהחמירה התורה על המזיק, שכעיקרון לא היה אמור לשלם כלום, ואז מדובר בקנס. למסקנה פוסקת הגמרא, שחצי נזק הוא קנס, ובזה שונה הוא מחצי נזק צרורות, שהוא תשלום ממון.</p>
@@ -1293,7 +1303,7 @@
             </div>
             
             
-            <div id="halacha-6" class="mb-12 pt-8">
+            <div id="halacha-6" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
 
                 
@@ -1303,7 +1313,7 @@
                 
 
                 
-                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">צרורות בקול וברוח</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יח:) מביאה את דברי <strong>רמי בר יחזקאל</strong>:</p>
@@ -1325,7 +1335,7 @@
             </div>
             
             
-            <div id="halacha-7" class="mb-12 pt-8">
+            <div id="halacha-7" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכות י-יא</h2>
 
                 
@@ -1339,7 +1349,7 @@
                 
 
                 
-                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק מתרנגולים ומדליל שברגליהם</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יז.) מביאה דוגמה לנזקי רגל מתרנגולים:</p>
@@ -1371,7 +1381,7 @@
             </div>
             
             
-            <div id="halacha-8" class="mb-12 pt-8">
+            <div id="halacha-8" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג-יד</h2>
 
                 
@@ -1385,7 +1395,7 @@
                 
 
                 
-                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק ישיר ועקיף בתרנגולים</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במסגרת הדיון בדין צרורות, מביאה ה<strong>גמרא</strong> (יז:) ברייתא:</p>
@@ -1419,7 +1429,7 @@
             </div>
             
             
-            <div id="halacha-9" class="mb-12 pt-8">
+            <div id="halacha-9" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו-טז</h2>
 
                 
@@ -1433,7 +1443,7 @@
                 
 
                 
-                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תחילתו בפשיעה וסופו באונס:</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (כא:):</p>
@@ -1454,7 +1464,7 @@
                     
                 </div>
                 
-                <div id="topic-9-2" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-9-2" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שינוי וכדרכו בקפיצת הכלב והגדי:</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מביאה שתי ברייתות הנראות כסותרות:</p>
@@ -1484,7 +1494,7 @@
             </div>
             
             
-            <div id="halacha-10" class="mb-12 pt-8">
+            <div id="halacha-10" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז-יח</h2>
 
                 
@@ -1498,7 +1508,7 @@
                 
 
                 
-                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק שלם וחצי נזק בבע"ח שגרם לשריפה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (כא:) כותבת:</p>
@@ -1532,7 +1542,7 @@
             </div>
             
             
-            <div id="halacha-11" class="mb-12 pt-8">
+            <div id="halacha-11" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
 
                 
@@ -1542,7 +1552,7 @@
                 
 
                 
-                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין המשסה</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כד:) מעלה שאלה- מה דין שמעון המשסה כלבו של ראובן בלוי. שמעון ודאי פטור, כדין גרמא בנזקין הפטור מדיני אדם וחייב בדיני שמים. אך מה דינו של בעל הכלב? האם יכול ראובן לומר שהוא לא עשה דבר, ורק המשסה אחראי, או שמא עצם אי שמירת הכלב, כשידוע שהוא עלול לנשוך בעקבות שיסוי, היא פשיעה. הגמרא מביאה <strong>ברייתא</strong>:</p>
@@ -1562,7 +1572,7 @@
             </div>
             
             
-            <div id="halacha-12" class="mb-12 pt-8">
+            <div id="halacha-12" class="mb-12 pt-4">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כ'</h2>
 
                 
@@ -1572,7 +1582,7 @@
                 
 
                 
-                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-4">
+                <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
                     <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רבוצה ומהלכת ברה"ר</h3>
                     
                     <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כד:) מביא <strong>ר' פפא</strong> ראיה שאכן כל המשנה ובא אחר ושינה בו פטור, מדברי ריש לקיש. <strong>ריש לקיש</strong> פוסק שאם בעטה פרה מהלכת ברה"ר בפרה רבוצה, פטורה, ולכאורה הסיבה היא משום שהרבוצה שינתה, ולכן היא האחראית לנזק שאירע לה. אך <strong>רבא</strong> חולק וסובר שבמקרה כזה, למרות דין "כל המשנה" המהלכת חייבת, כיוון שאין לה רשות לבעוט ברה"ר אלא רק להלך, ובלשון הגמרא "כי אית לך רשותא לסגויי עלי, לבעוטי בי לית לך רשותא".</p>
@@ -1619,7 +1629,6 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
-            
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
         }
