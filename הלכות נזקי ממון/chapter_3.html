@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ג</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ג)</h3>
                 <ul class="space-y-3">
@@ -1074,7 +1074,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1087,21 +1087,21 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א':</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א':</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הבהמה מועדת לאכול פירות או ירקות וכיוצא בהן, לפיכך אם נכנסה לרשות הניזק ואכלה דברים שדרכה לאכלם משלם נזק שלם שנ' +שמות כ"ב ד'+ ובער בשדה אחר מיטב שדהו וגו', ואם אכלה אותן ברשות הרבים פטור ואם נהנית משלם מה שנהנית לא מה שהזיקה.</strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלומי שן ברשות הניזק וברשות הרבים:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלומי שן ברשות הניזק וברשות הרבים:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יט:) מחייבת על נזק שן ברשות הניזק נזק שלם, אם הבהמה אכלה דבר שדרכה לאכול. ברשות הרבים פטור על נזקי שן, אך עדיין הבהמה צריכה לשלם מה שנהנתה. במקרה שאכלה הבהמה דבר שאין דרכה לאכול, נחשב הדבר כקרן וחייבת חצי נזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (יט:) מחייבת על נזק שן ברשות הניזק נזק שלם, אם הבהמה אכלה דבר שדרכה לאכול. ברשות הרבים פטור על נזקי שן, אך עדיין הבהמה צריכה לשלם מה שנהנתה. במקרה שאכלה הבהמה דבר שאין דרכה לאכול, נחשב הדבר כקרן וחייבת חצי נזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק את דברי המשנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק את דברי המשנה.</p>
                     
                 </div>
                 
@@ -1109,37 +1109,37 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב':</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב':</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כיצד, נכנסה לרשות הניזק ואכלה שומשמין או לוט וכיוצא בהם בשוה דינר משלם דינר, ואם אכלה אותן ברשות הרבים ונהנית רואין אותן כאילו הן שעורים או עמיר ומשלם דמי עמיר או דמי שעורים בזול. </strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלומי מה שנהנית:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלומי מה שנהנית:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כ.) מביאה מחלוקת אמוראים שחלקו בפירוש הדין של "משלמת מה שנהנית" –</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (כ.) מביאה מחלוקת אמוראים שחלקו בפירוש הדין של "משלמת מה שנהנית" –</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"וכמה? <strong>רבה</strong> אמר: דמי עמיר (מאכל בהמות), <strong>רבא</strong> אמר: דמי שעורים בזול."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"וכמה? <strong>רבה</strong> אמר: דמי עמיר (מאכל בהמות), <strong>רבא</strong> אמר: דמי שעורים בזול."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong> ממנה משמע כרבה –</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה <strong>ברייתא</strong> ממנה משמע כרבה –</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"<strong>רבי שמעון בן יוחי</strong> אמר: אין משלמת אלא דמי עמיר בלבד",</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"<strong>רבי שמעון בן יוחי</strong> אמר: אין משלמת אלא דמי עמיר בלבד",</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>וברייתא</strong> ממנה משמע כרבא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>וברייתא</strong> ממנה משמע כרבא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"... אומדין כמה אדם רוצה להאכיל לבהמתו דבר הראוי לה אע"פ שאינו רגיל,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"... אומדין כמה אדם רוצה להאכיל לבהמתו דבר הראוי לה אע"פ שאינו רגיל,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפיכך אכלה חטין או דבר הרע לה – פטורה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפיכך אכלה חטין או דבר הרע לה – פטורה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שרבא ורבה חולקים במקרה בו הבהמה אכלה שעורים. רבה סובר שהנאת בעל הבהמה היא בעמיר הזול שנחסך ממנו באכילתה, ולכן יש לחייבו לשלם שיעור דמי עמיר בכמות אותה אכלה. לעומת זאת, רבא סובר שכיוון שאכלה הבהמה שעורים, שהן מאכל טוב יותר, יש לחייב את בעל הבהמה על שעורים. אמנם, אין לחייבו כשער הרגיל של שעורים, אלא "דמי שעורים <strong>בזול</strong>", דהיינו, יש לאמוד כמה יתן בעל בהמה ממוצע כדי שבהמתו תאכל כמות כזו של שעורים. שיעור כסף זה נמוך מהערך האמיתי של השעורים, כיוון שאדם לא יבזבז מאכל טוב כזה על בהמתו אלא אם כן הוא ימצא לקנותו בזול יחסית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש שרבא ורבה חולקים במקרה בו הבהמה אכלה שעורים. רבה סובר שהנאת בעל הבהמה היא בעמיר הזול שנחסך ממנו באכילתה, ולכן יש לחייבו לשלם שיעור דמי עמיר בכמות אותה אכלה. לעומת זאת, רבא סובר שכיוון שאכלה הבהמה שעורים, שהן מאכל טוב יותר, יש לחייב את בעל הבהמה על שעורים. אמנם, אין לחייבו כשער הרגיל של שעורים, אלא "דמי שעורים <strong>בזול</strong>", דהיינו, יש לאמוד כמה יתן בעל בהמה ממוצע כדי שבהמתו תאכל כמות כזו של שעורים. שיעור כסף זה נמוך מהערך האמיתי של השעורים, כיוון שאדם לא יבזבז מאכל טוב כזה על בהמתו אלא אם כן הוא ימצא לקנותו בזול יחסית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פסק גם כרבה וגם כרבא, וכתבו המפרשים, שהסתפק לרמב"ם כמי הלכה, ולכן כתב ללכת תמיד אחר השיעור הנמוך יותר בכל מקום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פסק גם כרבה וגם כרבא, וכתבו המפרשים, שהסתפק לרמב"ם כמי הלכה, ולכן כתב ללכת תמיד אחר השיעור הנמוך יותר בכל מקום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם בקרב הראשונים המבינים שיש מחלוקת ופוסקים כאחת הדעות, נחלקו האם לפסוק כרבא או כרבה. ה<strong>שו"ע </strong>(שצא ח) פוסק כרבה, וה<strong>רמ"א</strong> הביא את דעות הפוסקים כרבא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם בקרב הראשונים המבינים שיש מחלוקת ופוסקים כאחת הדעות, נחלקו האם לפסוק כרבא או כרבה. ה<strong>שו"ע </strong>(שצא ח) פוסק כרבה, וה<strong>רמ"א</strong> הביא את דעות הפוסקים כרבא.</p>
                     
                 </div>
                 
@@ -1147,32 +1147,32 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג':</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג':</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אכלה אוכלין הרעים לה כגון שאכלה חיטין הואיל ולא נהנית פטור. אכלה אוכלין שאין דרכה לאכלן כגון שאכלה כסות או כלים בין ברשות הניזק בין ברשות הרבים משלם חצי נזק שזה שינוי הוא ודרך בני אדם להניח כליהם וכסותן ברשות הרבים עד שינוחו מעט.</strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אכלה דבר הרע לה:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אכלה דבר הרע לה:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק על פי הברייתא שלעיל, שאם אכלה ברשות הרבים אוכלים הרעים לה- פטורה, שכן מצד נזקין אינה חייבת, ומצד תשלום מה שנהנתה, הרי לא נהנתה, כי מדובר באוכלין הרעים לה. יש לציין שאף אם הבהמה נהנתה מהאוכלים הרעים אותם אכלה (שהרי אחרת לא היתה ממשיכה לאכול אותם), עדיין אם הם רעים לה, הרי שבעל הבהמה לא נהנה מהאכילה, כי הוא אינו מעוניין בדירדור בריאותה של בהמתו, ולכן אנו פוטרים אותו מלשלם. במילים אחרות, "משלמת מה שנהנתה" הכוונה שבעל הבהמה משלם מה שנהנה הוא ממה שאכלה בהמתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק על פי הברייתא שלעיל, שאם אכלה ברשות הרבים אוכלים הרעים לה- פטורה, שכן מצד נזקין אינה חייבת, ומצד תשלום מה שנהנתה, הרי לא נהנתה, כי מדובר באוכלין הרעים לה. יש לציין שאף אם הבהמה נהנתה מהאוכלים הרעים אותם אכלה (שהרי אחרת לא היתה ממשיכה לאכול אותם), עדיין אם הם רעים לה, הרי שבעל הבהמה לא נהנה מהאכילה, כי הוא אינו מעוניין בדירדור בריאותה של בהמתו, ולכן אנו פוטרים אותו מלשלם. במילים אחרות, "משלמת מה שנהנתה" הכוונה שבעל הבהמה משלם מה שנהנה הוא ממה שאכלה בהמתו.</p>
                     
                 </div>
                 
                 <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אכילת כסות וכלים:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אכילת כסות וכלים:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> כותבת, שרק ברשות הניזק חייבת הבהמה על אכילתה, אך ברשות הרבים פטורה. <strong>רב</strong> ו<strong>שמואל</strong> חלוקים בשאלה במה דברים אמורים. <strong>רב</strong> אומר שהכוונה לשתי הדוגמאות שהובאו למעלה במשנה, כלומר, בין באכילת פירות וירקות שדרכה לאכול, ובין באכילת כסות וכלים, עליהם חייב בעל הבהמה חצי נזק, פטור ברשות הרבים. ו<strong>שמואל</strong> חולק ואומר שבכסות וכלים חייב בעל הבהמה חצי נזק מדין קרן (שכן אכלה דברים שאין דרכה לאכול), אף ברשות הרבים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> כותבת, שרק ברשות הניזק חייבת הבהמה על אכילתה, אך ברשות הרבים פטורה. <strong>רב</strong> ו<strong>שמואל</strong> חלוקים בשאלה במה דברים אמורים. <strong>רב</strong> אומר שהכוונה לשתי הדוגמאות שהובאו למעלה במשנה, כלומר, בין באכילת פירות וירקות שדרכה לאכול, ובין באכילת כסות וכלים, עליהם חייב בעל הבהמה חצי נזק, פטור ברשות הרבים. ו<strong>שמואל</strong> חולק ואומר שבכסות וכלים חייב בעל הבהמה חצי נזק מדין קרן (שכן אכלה דברים שאין דרכה לאכול), אף ברשות הרבים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שסברתו של רב היא שהמניח את כסותו וכליו ברה"ר הוא משנה מהדרך הרגילה שמותר להתנהג בה ברה"ר, ולכן עפ"י הכלל של "כל המשנה ובא אחר ושינה בו פטור" פטור המזיק, שכן האחריות נופלת על כתפי הניזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שסברתו של רב היא שהמניח את כסותו וכליו ברה"ר הוא משנה מהדרך הרגילה שמותר להתנהג בה ברה"ר, ולכן עפ"י הכלל של "כל המשנה ובא אחר ושינה בו פטור" פטור המזיק, שכן האחריות נופלת על כתפי הניזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כשמואל, שחייב בעל הבהמה חצי נזק מדין קרן, וזאת למרות שהוא באופן כללי כן פוסק ככלל של "כל המשנה...". הרמב"ם מסביר שהנחת כסות וכלים ברה"ר אינה נחשבת לשינוי, כיוון שהגם שאין רשות הרבים מיועדת לכתחילה להנחת כסות וכלים, עדיין ישנם אנשים שמניחים את כליהם כדי לפוש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק כשמואל, שחייב בעל הבהמה חצי נזק מדין קרן, וזאת למרות שהוא באופן כללי כן פוסק ככלל של "כל המשנה...". הרמב"ם מסביר שהנחת כסות וכלים ברה"ר אינה נחשבת לשינוי, כיוון שהגם שאין רשות הרבים מיועדת לכתחילה להנחת כסות וכלים, עדיין ישנם אנשים שמניחים את כליהם כדי לפוש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שצא ב) פסק אף הוא כשמואל, אך לא כתב את הצידוק שדרך בני אדם להניח כליהם ברשות הרבים כדי לפוש. ה<strong>גר"א</strong> מסביר שהשו"ע כלל לא פוסק שאומרים ברשות הרבים כל המשנה ובא אחר ושינה בו פטור, ולכן הוא אינו זקוק לצידוק הנ"ל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שצא ב) פסק אף הוא כשמואל, אך לא כתב את הצידוק שדרך בני אדם להניח כליהם ברשות הרבים כדי לפוש. ה<strong>גר"א</strong> מסביר שהשו"ע כלל לא פוסק שאומרים ברשות הרבים כל המשנה ובא אחר ושינה בו פטור, ולכן הוא אינו זקוק לצידוק הנ"ל.</p>
                     
                 </div>
                 
@@ -1180,47 +1180,47 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד'-ה':</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד'-ה':</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בהמה שהיתה עומדת ברשות הניזק ותלשה פירות מרשות הרבים ואכלתן ברשות הניזק הרי הדבר ספק לפיכך אינה משלמת אלא מה שנהנית ואם תפש הניזק כמה שהזיקה אין מוציאין מידו שהרי ברשותו אכלה. </strong> בהמה שהיתה עומדת ברשות הניזק ותלשה פירות מרשות הרבים. א"א נראה דהכי גריס לה למילתא (/בבא קמא/ כ) מתגלגל מהו היכי דמי דקיימא ברה"י וקא מתגלגל ואתי מר"ה =מרשות הרבים= לרה"י והיא מיושרת מן הגירסות שלנו
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כלב שנכנס לחצר ונטל פת או בשר והוציאן לרשות הרבים או לחצר אחרת ואכלן שם משלם מה שנהנה, אכלן בשדה של בעל החצר משלם נזק שלם כאילו אכלן בתוך החצר שהרי ברשות הניזק אכל, וכן כל כיוצא בזה.</strong>
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פירות ברשות הרבים ואכלתן ברשות הניזק, והפוך:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">פירות ברשות הרבים ואכלתן ברשות הניזק, והפוך:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (כא:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (כא:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכלב שנטל חררה והלך לגדיש, אכל החררה והדליק הגדיש –</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הכלב שנטל חררה והלך לגדיש, אכל החררה והדליק הגדיש –</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על החררה משלם נזק שלם, ועל הגדיש משלם חצי נזק"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על החררה משלם נזק שלם, ועל הגדיש משלם חצי נזק"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא </strong>(כג.) מסבירה, שמדובר במקרה בו הכלב אכל את החררה מעל גדיש של בעל החררה, כלומר ברשות הניזק, שכן אם היה אוכל מעל גדיש של מישהו אחר, לא היה מתקיים התנאי לחיוב שן "וביער בשדה אחר [=שדה הניזק]" (שמות כב ד), ממנו משמע שצריך שהאכילה תהיה בחצר הניזק, ולא די בכך שהלקיחה תהיה משם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא </strong>(כג.) מסבירה, שמדובר במקרה בו הכלב אכל את החררה מעל גדיש של בעל החררה, כלומר ברשות הניזק, שכן אם היה אוכל מעל גדיש של מישהו אחר, לא היה מתקיים התנאי לחיוב שן "וביער בשדה אחר [=שדה הניזק]" (שמות כב ד), ממנו משמע שצריך שהאכילה תהיה בחצר הניזק, ולא די בכך שהלקיחה תהיה משם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ב</strong><strong>גמרא</strong> (כ.) מועלית שאלה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ב</strong><strong>גמרא</strong> (כ.) מועלית שאלה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"בעי <strong>ר' זירא</strong>: מתגלגל, מהו?"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"בעי <strong>ר' זירא</strong>: מתגלגל, מהו?"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומסבירה הגמרא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומסבירה הגמרא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כגון דקיימא עמיר ברשות היחיד וקא מתגלגל ואתי מרשות היחיד לרה"ר, מאי?".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כגון דקיימא עמיר ברשות היחיד וקא מתגלגל ואתי מרשות היחיד לרה"ר, מאי?".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלקו הראשונים בהבנת השאלה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חלקו הראשונים בהבנת השאלה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שמדובר על בהמה שגלגלה, כלומר, העבירה את האוכל מרשות הרבים לרשות הניזק (או הפוך), ושם אכלתו. והשאלה היא האם הולכים אחר מקום האכילה או אחר המקום בו היה האוכל מונח לפני שהבהמה לקחתו<sup id="ref6"><a href="#fn6">[6]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שמדובר על בהמה שגלגלה, כלומר, העבירה את האוכל מרשות הרבים לרשות הניזק (או הפוך), ושם אכלתו. והשאלה היא האם הולכים אחר מקום האכילה או אחר המקום בו היה האוכל מונח לפני שהבהמה לקחתו<sup id="ref6"><a href="#fn6">[6]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> מקשים מכך שלגמרא (כג.) פשוט שמשנת 'הכלב שנטל חררה ואכלה מעל לגדיש', מדברת בגדיש של בעל החררה, ואם מדובר ב"גדיש דעלמא", הרי שפטור בעל הכלב, הרי לנו שכדי להתחייב בשן צריך לאכול בחצר הניזק. דהיינו, בוודאי שלקיחה מחצר הניזק אין בה די בכדי לחייב, ויש צורך גם באכילה בחצר הניזק. מתוך כך מפרשים ה<strong>תוספות </strong>שמדובר באוכל שאכלה הבהמה בחצר הניזק, אך האוכל היה בשעת "גלגול" החוצה לרשות הרבים, כך שלו לא היתה הבהמה אוכלתו, היה מגיע לרשות הרבים. ובזה שואל ר' זירא, האם נדון את האוכל כאילו נאכל ברה"ר, ונפטור את בעל הבהמה, או שמא כיוון שסוף סוף אכלה הבהמה ברשות הניזק, נחייב את בעליה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> מקשים מכך שלגמרא (כג.) פשוט שמשנת 'הכלב שנטל חררה ואכלה מעל לגדיש', מדברת בגדיש של בעל החררה, ואם מדובר ב"גדיש דעלמא", הרי שפטור בעל הכלב, הרי לנו שכדי להתחייב בשן צריך לאכול בחצר הניזק. דהיינו, בוודאי שלקיחה מחצר הניזק אין בה די בכדי לחייב, ויש צורך גם באכילה בחצר הניזק. מתוך כך מפרשים ה<strong>תוספות </strong>שמדובר באוכל שאכלה הבהמה בחצר הניזק, אך האוכל היה בשעת "גלגול" החוצה לרשות הרבים, כך שלו לא היתה הבהמה אוכלתו, היה מגיע לרשות הרבים. ובזה שואל ר' זירא, האם נדון את האוכל כאילו נאכל ברה"ר, ונפטור את בעל הבהמה, או שמא כיוון שסוף סוף אכלה הבהמה ברשות הניזק, נחייב את בעליה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>מפרש עקרונית כרש"י, אך רק במקרה בו הבהמה אכלה ברשות הניזק פירות של הניזק שהיו מצויים ברה"ר (לרש"י המקרה ההפוך גם כן מצוי בספק). הרמב"ם פוסק כך מתוך כך שהוא אינו גורס את המילה "עמיר", אלא רק "כגון דקיימא [=הבהמה] ברשות היחיד". כך הרמב"ם גם נמנע משאלת התוספות- אכן הכלב שלקח את החררה מרשות הניזק ואכלה ברשות הרבים פטור (וכך פסק בהלכה ה'), אך ר' זירא שואל על המקרה ההפוך, של אוכל שנלקח מרשות הרבים ונאכל ברשות הרבים, ובו נותרת הגמרא בקושיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>מפרש עקרונית כרש"י, אך רק במקרה בו הבהמה אכלה ברשות הניזק פירות של הניזק שהיו מצויים ברה"ר (לרש"י המקרה ההפוך גם כן מצוי בספק). הרמב"ם פוסק כך מתוך כך שהוא אינו גורס את המילה "עמיר", אלא רק "כגון דקיימא [=הבהמה] ברשות היחיד". כך הרמב"ם גם נמנע משאלת התוספות- אכן הכלב שלקח את החררה מרשות הניזק ואכלה ברשות הרבים פטור (וכך פסק בהלכה ה'), אך ר' זירא שואל על המקרה ההפוך, של אוכל שנלקח מרשות הרבים ונאכל ברשות הרבים, ובו נותרת הגמרא בקושיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>שו"ע</strong> (שצא יב) העתיק את לשון הרמב"ם, לפיה הבהמה היתה ברשות הניזק, ולקחה את הפירות ברשות הרבים, והדבר ספק. בסעיף ז מדבר השו"ע על המקרה ההפוך, של בהמה שלקחה אוכל מרשות הניזק, ואכלתו ברשות הרבים, ופוסק שפטור, על פי סוגיית כלב שנטל חררה. אמנם ישנה חוסר בהירות בדברי השו"ע, שכן הוא מוסיף שאם האוכל נלקח מרשות הרבים ונאכל ברשות היחיד יש מחייבים, והדברים סותרים לכאורה למה שכתב בהלכה יב, שהדבר ספק. ה<strong>רמ"א</strong> בהלכה יב הביא את שיטת רש"י, דשהספק שייך גם בין כשהיתה עומדת ברשות הרבים ולקחה מרשות הניזק, ובין הפוך, כשהיתה עומדת ברשות הניזק ולקחה מרשות הרבים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>שו"ע</strong> (שצא יב) העתיק את לשון הרמב"ם, לפיה הבהמה היתה ברשות הניזק, ולקחה את הפירות ברשות הרבים, והדבר ספק. בסעיף ז מדבר השו"ע על המקרה ההפוך, של בהמה שלקחה אוכל מרשות הניזק, ואכלתו ברשות הרבים, ופוסק שפטור, על פי סוגיית כלב שנטל חררה. אמנם ישנה חוסר בהירות בדברי השו"ע, שכן הוא מוסיף שאם האוכל נלקח מרשות הרבים ונאכל ברשות היחיד יש מחייבים, והדברים סותרים לכאורה למה שכתב בהלכה יב, שהדבר ספק. ה<strong>רמ"א</strong> בהלכה יב הביא את שיטת רש"י, דשהספק שייך גם בין כשהיתה עומדת ברשות הרבים ולקחה מרשות הניזק, ובין הפוך, כשהיתה עומדת ברשות הניזק ולקחה מרשות הרבים.</p>
                     
                 </div>
                 
@@ -1228,27 +1228,27 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו':</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו':</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בהמה שאכלה אוכלין שאין דרכה לאכלן אבל אוכלת היא אותן על ידי הדחק, כגון פרה שאכלה שעורים וחמור שאכל כרשינים או דגים וחזיר שאכל חתיכת בשר וכלב שלקק את השמן וחתול שאכל תמרים וכן כל כיוצא באלו, אם אכלה ברשות הניזק משלם נזק שלם, וברשות הרבים פטור ואם נהנית משלם מה שנהנית. </strong>
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אכילה ע"י הדחק:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אכילה ע"י הדחק:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יט:) חילקה בין אכילת דברים שדרכה של הבהמה לאכול, עליהם משלמים נזק שלם ברשות הניזק, לבין דברים שאין דרכה של הבהמה לאכול, ככסות וכלים, שהם קרן, ומשלמים עליהם חצי נזק. ה<strong>גמרא</strong> מביאה <strong>ברייתא</strong>–</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (יט:) חילקה בין אכילת דברים שדרכה של הבהמה לאכול, עליהם משלמים נזק שלם ברשות הניזק, לבין דברים שאין דרכה של הבהמה לאכול, ככסות וכלים, שהם קרן, ומשלמים עליהם חצי נזק. ה<strong>גמרא</strong> מביאה <strong>ברייתא</strong>–</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"פרה שאכלה שעורין, וחמור שאכל כרשינן, וכלב שליקק את השמן, וחזיר שאכל חתיכה של בשר - משלמין נזק שלם",</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"פרה שאכלה שעורין, וחמור שאכל כרשינן, וכלב שליקק את השמן, וחזיר שאכל חתיכה של בשר - משלמין נזק שלם",</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומסביר <strong>רש"י</strong> שמדובר על מאכלים שאינם מאכלי הבהמה הרגילים אך היא אוכלת אותם בשעת הדחק, ובכל זאת אין דינם כאכילת כסות וכלים, וחייבים על אכילתם נזק שלם. <strong>רש"י</strong> מסביר את ההבדל:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומסביר <strong>רש"י</strong> שמדובר על מאכלים שאינם מאכלי הבהמה הרגילים אך היא אוכלת אותם בשעת הדחק, ובכל זאת אין דינם כאכילת כסות וכלים, וחייבים על אכילתם נזק שלם. <strong>רש"י</strong> מסביר את ההבדל:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אורחיה למכלינהו ע"י הדחק אבל כסות וכלים אפילו ע"י הדחק לאו אורחיה למכלינהו אלא מתכוין להזיק".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אורחיה למכלינהו ע"י הדחק אבל כסות וכלים אפילו ע"י הדחק לאו אורחיה למכלינהו אלא מתכוין להזיק".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כאן, שאכן גם אכילה שע"י הדחק שמה אכילה, ונידונית כשן, לחייב נזק שלם ברשות הניזק ולפטור ברשות הרבים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק כאן, שאכן גם אכילה שע"י הדחק שמה אכילה, ונידונית כשן, לחייב נזק שלם ברשות הניזק ולפטור ברשות הרבים.</p>
                     
                 </div>
                 
@@ -1256,25 +1256,25 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז':</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז':</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>חיה שנכנסה לרשות הניזק וטרפה ואכלה בהמה או בשר משלם נזק שלם שזה הוא דרכה, אבל כלב שאכל כבשים קטנים או חתול שאכל תרנגולים גדולים הרי זה שינוי ומשלם חצי נזק.</strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כדרכה ושינוי בנזק טריפה:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">כדרכה ושינוי בנזק טריפה:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (טז:) מובאת דעתו של <strong>שמואל</strong>, שדרך אכילתו של אריה היא ע"י דריסה, כלומר, אכילת הבהמה בעודה חיה. לכן, אריה שדרס בהמה ברה"ר פטור כדין שן ברה"ר, ואילו ברשות הניזק חייב נזק שלם. לעומת זאת, אריה שטרף, כלומר קודם הרג את הבהמה ורק אח"כ אכלה, זהו שינוי מדרכו, וחייב חצי נזק בין ברשות הרבים ובין ברשות הניזק. הגמרא מסבירה עוד, שאם האריה טורף כדי לשמור לאח"כ, הרי שדרכו היא גם להרוג בלבד בלי לאכול. הגמרא מביאה <strong>ברייתא</strong> הקשה לשמואל:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (טז:) מובאת דעתו של <strong>שמואל</strong>, שדרך אכילתו של אריה היא ע"י דריסה, כלומר, אכילת הבהמה בעודה חיה. לכן, אריה שדרס בהמה ברה"ר פטור כדין שן ברה"ר, ואילו ברשות הניזק חייב נזק שלם. לעומת זאת, אריה שטרף, כלומר קודם הרג את הבהמה ורק אח"כ אכלה, זהו שינוי מדרכו, וחייב חצי נזק בין ברשות הרבים ובין ברשות הניזק. הגמרא מסבירה עוד, שאם האריה טורף כדי לשמור לאח"כ, הרי שדרכו היא גם להרוג בלבד בלי לאכול. הגמרא מביאה <strong>ברייתא</strong> הקשה לשמואל:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"חיה שנכנסה לחצר הניזק, טרפה בהמה ואכלה בשר - משלם נזק שלם".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"חיה שנכנסה לחצר הניזק, טרפה בהמה ואכלה בשר - משלם נזק שלם".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>אינו פוסק כשמואל, אלא כפשט הברייתא, שכל סוג טריפה של חיית טרף נחשב נזק של שן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>אינו פוסק כשמואל, אלא כפשט הברייתא, שכל סוג טריפה של חיית טרף נחשב נזק של שן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף פוסק הרמב"ם כגמרא (טו:) המניחה כדבר פשוט, שכלב שאכל כבשים וחתול שאכל תרנגולים גדולים, שינוי הוא ודינו כקנס<sup id="ref7"><a href="#fn7">[7]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף פוסק הרמב"ם כגמרא (טו:) המניחה כדבר פשוט, שכלב שאכל כבשים וחתול שאכל תרנגולים גדולים, שינוי הוא ודינו כקנס<sup id="ref7"><a href="#fn7">[7]</a></sup>.</p>
                     
                 </div>
                 
@@ -1282,21 +1282,21 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח':</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח':</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>סל שיש בו לחם ונכנס חמור ושבר הסל ואכל הלחם משלם על הסל ועל הלחם נזק שלם שזה הוא דרכו, וכן שעיר עזים שראה לפת וכיוצא בו על פי החבית ונסתבך בחבית ואכל את הלפת </strong><strong>ושבר את החבית משלם על שניהן נזק שלם, כשם שדרכו לאכול כך דרכו להתלות בכלים ולעלות כדי לאכול, וכן כל כיוצא בזה. אבל אם נכנס החמור ואכל את הלחם ואחר כך שבר את הסל, על הלחם משלם נזק שלם ועל הסל חצי נזק, וכן כל כיוצא בזה.</strong>
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק שהוא כשלעצמו אינו כדרכה, הבא ע"י נזק שהוא כדרכה:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק שהוא כשלעצמו אינו כדרכה, הבא ע"י נזק שהוא כדרכה:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יט:) מספרת על <strong>ר' יהודה</strong>, שבמקרה של חמור שאכל לחם מתוך סל, והזיק את הסל, חייב ר' יהודה את בעל החמור נזק שלם על הלחם, וחצי נזק על הסל. הגמרא מעמידה שקודם אכל החמור את הלחם ורק אח"כ הזיק את הסל, כי אם היזק הסל היה אגב אכילת הלחם, נחשב הדבר לדרכו, וחייב אף על הסל נזק שלם. ואכן, במקרה מקביל של עז שאכלה לפת, ובתוך כך שברה את החבית שהלפת היתה מונחת עליה, פסק <strong>רבא</strong> שחייב בעל העז נזק שלם גם על הלפת וגם על החבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (יט:) מספרת על <strong>ר' יהודה</strong>, שבמקרה של חמור שאכל לחם מתוך סל, והזיק את הסל, חייב ר' יהודה את בעל החמור נזק שלם על הלחם, וחצי נזק על הסל. הגמרא מעמידה שקודם אכל החמור את הלחם ורק אח"כ הזיק את הסל, כי אם היזק הסל היה אגב אכילת הלחם, נחשב הדבר לדרכו, וחייב אף על הסל נזק שלם. ואכן, במקרה מקביל של עז שאכלה לפת, ובתוך כך שברה את החבית שהלפת היתה מונחת עליה, פסק <strong>רבא</strong> שחייב בעל העז נזק שלם גם על הלפת וגם על החבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פסק עפ"י הגמרא הנ"ל, וגם ה<strong>שו"ע </strong>(שצ"א סעיף ד'-ה').</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פסק עפ"י הגמרא הנ"ל, וגם ה<strong>שו"ע </strong>(שצ"א סעיף ד'-ה').</p>
                     
                 </div>
                 
@@ -1304,29 +1304,29 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בהמה שאכלה מתוך הרחבה בין דרך הליכתה בין שעמדה ואכלה משלם מה שנהנית, ואפילו חזרה על צדי הרחבה ואכלה מהן, אבל אם הניחה את הרחבה והלכה ועמדה בצדי הרחבה ואכלה משלם מה שהזיקה, אכלה מפתח החנות משלם מה שנהנית, מתוך החנות משלם מה שהזיקה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזקי שן ברשות הרבים וברשות הניזק:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזקי שן ברשות הרבים וברשות הניזק:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יט:) מביאה דוגמאות לנזק שן ברשות הרבים מול נזק שן ברשות הניזק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (יט:) מביאה דוגמאות לנזק שן ברשות הרבים מול נזק שן ברשות הניזק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אכלה מתוך הרחבה - משלמת מה שנהנית (כדין שן ברשות הרבים), מצדי הרחבה - משלמת מה שהזיקה (כדין שן ברשות הניזק); מפתח החנות - משלמת מה שנהנית, מתוך החנות - משלמת מה שהזיקה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אכלה מתוך הרחבה - משלמת מה שנהנית (כדין שן ברשות הרבים), מצדי הרחבה - משלמת מה שהזיקה (כדין שן ברשות הניזק); מפתח החנות - משלמת מה שנהנית, מתוך החנות - משלמת מה שהזיקה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם אכלה מדבר המונח בעיקר רשות הרבים, מקום המיועד להליכת בהמות- משלמת רק מה שנהנית. לעומת זאת, אם אכלה מדבר המונח בצדדי רשות הרבים, מקום שאין בהמות הולכות שם- משלמת מה שהזיקה, למרות שמדובר ברשות הרבים. ועל פי אותו עיקרון, אם אכלה מפתח חנות, משלמת רק מה שהזיקה, למרות שמדובר ברשות הניזק, שכן זהו מקום הילוך של בהמות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם אכלה מדבר המונח בעיקר רשות הרבים, מקום המיועד להליכת בהמות- משלמת רק מה שנהנית. לעומת זאת, אם אכלה מדבר המונח בצדדי רשות הרבים, מקום שאין בהמות הולכות שם- משלמת מה שהזיקה, למרות שמדובר ברשות הרבים. ועל פי אותו עיקרון, אם אכלה מפתח חנות, משלמת רק מה שהזיקה, למרות שמדובר ברשות הניזק, שכן זהו מקום הילוך של בהמות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו האמוראים בהבנת המציאות של אכילה מצידי הרחבה עליה מחייבת המשנה נזק שלם. <strong>רב</strong> סובר שאפילו אם הבהמה עומדת בעיקרה של רה"ר ואוכלת מצידי הרחבה ("מחזרת" בלשון הגמרא), נחשב הדבר כאוכלת ברשות הניזק וחייבת נזק שלם. <strong>שמואל</strong> לעומתו סובר שאכילה מצידי הרחבה עליה מחייבת המשנה נזק שלם, היא מצב בו כל הבהמה עומדת בצידי הרחבה ואוכלת דבר המונח שם, אך כל עוד הבהמה עומדת בעיקרה של רשות הרבים, פטורה על הנזק וחייבת לשלם רק מה שנהנית<sup id="ref8"><a href="#fn8">[8]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נחלקו האמוראים בהבנת המציאות של אכילה מצידי הרחבה עליה מחייבת המשנה נזק שלם. <strong>רב</strong> סובר שאפילו אם הבהמה עומדת בעיקרה של רה"ר ואוכלת מצידי הרחבה ("מחזרת" בלשון הגמרא), נחשב הדבר כאוכלת ברשות הניזק וחייבת נזק שלם. <strong>שמואל</strong> לעומתו סובר שאכילה מצידי הרחבה עליה מחייבת המשנה נזק שלם, היא מצב בו כל הבהמה עומדת בצידי הרחבה ואוכלת דבר המונח שם, אך כל עוד הבהמה עומדת בעיקרה של רשות הרבים, פטורה על הנזק וחייבת לשלם רק מה שנהנית<sup id="ref8"><a href="#fn8">[8]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מביאה עוד הבנה אפשרית למחלוקת רב ושמואל, לפיה כולם מודים שאם הבהמה אוכלת מצידי רשות הרבים, חייבת אפילו אם עומדת ברשות הרבים. ונחלקו רב ושמואל במקרה שהפירות הניזוקים וגם הבהמה שהזיקתם היו כולם ברשות הניזק, אך חלק זה של רשות הניזק הוא המשך ישיר של רשות הרבים, כיון שהניזק כנס את המחיצה לתוך רשותו. <strong>רב</strong> אומר שפטור, ואילו <strong>שמואל</strong> אומר שחייב<sup id="ref9"><a href="#fn9">[9]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מביאה עוד הבנה אפשרית למחלוקת רב ושמואל, לפיה כולם מודים שאם הבהמה אוכלת מצידי רשות הרבים, חייבת אפילו אם עומדת ברשות הרבים. ונחלקו רב ושמואל במקרה שהפירות הניזוקים וגם הבהמה שהזיקתם היו כולם ברשות הניזק, אך חלק זה של רשות הניזק הוא המשך ישיר של רשות הרבים, כיון שהניזק כנס את המחיצה לתוך רשותו. <strong>רב</strong> אומר שפטור, ואילו <strong>שמואל</strong> אומר שחייב<sup id="ref9"><a href="#fn9">[9]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מסוף הסוגיה משמע שמחלוקת רב ושמואל היא כהבנה הראשונה, ופסק <strong>הרמב"ם</strong> כשמואל, וכן פסק ה<strong>רא"ש</strong>. ובעניין הכונס לרשותו, אומר ה<strong>רא"ש </strong>שמתוך כך שרב, המחמיר במחזרת, מקל בכונס לרשותו, הרי ששמואל, המקל במחזרת, בוודאי יקל בכונס לתוך רשותו. הרא"ש רואה את כך שהרמב"ם והרי"ף כלל לא הביאו את דין הכונס לתוך רשותו, כראיה לכך שאכן הלכה בכך להקל. אכן, ה<strong>שו"ע </strong>(שצא ט) פסק במחזרת כשמואל, שחייבת רק אם כולה ברשות הניזק, וגם במקרה של כונס לתוך רשותו פסק השו"ע (שם י) להקל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מסוף הסוגיה משמע שמחלוקת רב ושמואל היא כהבנה הראשונה, ופסק <strong>הרמב"ם</strong> כשמואל, וכן פסק ה<strong>רא"ש</strong>. ובעניין הכונס לרשותו, אומר ה<strong>רא"ש </strong>שמתוך כך שרב, המחמיר במחזרת, מקל בכונס לרשותו, הרי ששמואל, המקל במחזרת, בוודאי יקל בכונס לתוך רשותו. הרא"ש רואה את כך שהרמב"ם והרי"ף כלל לא הביאו את דין הכונס לתוך רשותו, כראיה לכך שאכן הלכה בכך להקל. אכן, ה<strong>שו"ע </strong>(שצא ט) פסק במחזרת כשמואל, שחייבת רק אם כולה ברשות הניזק, וגם במקרה של כונס לתוך רשותו פסק השו"ע (שם י) להקל.</p>
                     
                 </div>
                 
@@ -1334,37 +1334,37 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י':</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י':</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>היתה מהלכת ברשות הרבים ופשטה צוארה ואכלה מעל גבי חברתה ואפילו עמדה משלם מה שנהנית שכן דרך הבהמות לאכול זו מעל גבי זו, ואם קפצה ואכלה על גבי חברתה משלם מה שהזיקה שגבי חברתה כחצר הניזק הוא חשוב. </strong>
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קפצה ואכלה – גב הבהמה והאדם כרשות הניזק:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">קפצה ואכלה – גב הבהמה והאדם כרשות הניזק:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כ.) מביאה את דברי אילפא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (כ.) מביאה את דברי אילפא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"בהמה ברשות הרבים, ופשטה צוארה ואכלה מעל גבי חברתה - חייבת; מאי טעמא? גבי חברתה כחצר הניזק דמי."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"בהמה ברשות הרבים, ופשטה צוארה ואכלה מעל גבי חברתה - חייבת; מאי טעמא? גבי חברתה כחצר הניזק דמי."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מנסה להביא ראיה לדברי אילפא מהברייתא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מנסה להביא ראיה לדברי אילפא מהברייתא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"היתה קופתו מופשלת לאחוריו, ופשטה צוארה ואכלה ממנו – חייבת".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"היתה קופתו מופשלת לאחוריו, ופשטה צוארה ואכלה ממנו – חייבת".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם למסקנה, הגמרא אומרת שניתן להבין שברייתא זו מדברת דווקא במקרה מסויים בו קפצה הבהמה ואכלה מקופתו של הניזק, ואם לא קפצה, פטורה. הגמרא מציינת שהמחייב בבהמה שקפצה ואכלה ברשות הרבים הוא <strong>רבא</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם למסקנה, הגמרא אומרת שניתן להבין שברייתא זו מדברת דווקא במקרה מסויים בו קפצה הבהמה ואכלה מקופתו של הניזק, ואם לא קפצה, פטורה. הגמרא מציינת שהמחייב בבהמה שקפצה ואכלה ברשות הרבים הוא <strong>רבא</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בהבנת הדברים באופן משמעותי מאד. <strong>בעל המאור</strong><sup id="ref10"><a href="#fn10">[10]</a></sup> מפרש שהגמרא מעמידה את הברייתא המחייבת באכילה מתוך קופת הניזק ברה"ר במקרה בו הבהמה אכלה מתוך קפיצה. כלומר יש להבין את הברייתא כך- היתה קופתו מופשלת לאחוריו, ולכן קפצה הבהמה כדי לאכול ממנה, חייבת, והכוונה שחייבת חצי נזק כדין קרן ברשות הרבים, שכן קפיצתה שינוי היא, ואין הדבר קשור כלל לאכילה מעל גבי חברתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בהבנת הדברים באופן משמעותי מאד. <strong>בעל המאור</strong><sup id="ref10"><a href="#fn10">[10]</a></sup> מפרש שהגמרא מעמידה את הברייתא המחייבת באכילה מתוך קופת הניזק ברה"ר במקרה בו הבהמה אכלה מתוך קפיצה. כלומר יש להבין את הברייתא כך- היתה קופתו מופשלת לאחוריו, ולכן קפצה הבהמה כדי לאכול ממנה, חייבת, והכוונה שחייבת חצי נזק כדין קרן ברשות הרבים, שכן קפיצתה שינוי היא, ואין הדבר קשור כלל לאכילה מעל גבי חברתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ראשונים אחרים</strong> מקשים על הבנה זו, שהרי נאמר בגמרא (שם) שגם כל מה שעושה הבהמה כדי להשיג את מאכלה נקרא כדרכה (כאותה עז שקפצה על החבית כדי לאכול סלק שעליה, המשלמת נזק שלם אף על שבירת החבית למרות שבדרך כלל אין דרכה לשבור חביות).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ראשונים אחרים</strong> מקשים על הבנה זו, שהרי נאמר בגמרא (שם) שגם כל מה שעושה הבהמה כדי להשיג את מאכלה נקרא כדרכה (כאותה עז שקפצה על החבית כדי לאכול סלק שעליה, המשלמת נזק שלם אף על שבירת החבית למרות שבדרך כלל אין דרכה לשבור חביות).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לכן מפרשים אותם ראשונים, שהמשמעות של אכילה מתוך קפיצה היא לגבי הגדרת חצר המזיק. אם הבהמה יכולה להגיע לאוכל רק ע"י קפיצה, הרי שתבואה על גבי בהמה, או מאכל בקופה על שכמו של הניזק, נחשבים כבחצר הניזק, שכן הניזק הפריד אותם מרשות הרבים כך שהבהמה צריכה מאמץ מיוחד כדי להגיע אליהם. הנחת מאכל בצורה כזו אינה נחשבת שינוי אף ברשות הרבים. ולכן, העיקרון של רבא, שבקופצת ברשות הרבים חייב המזיק נזק שלם, הוא עיקרון ששייך גם לבהמה שאכלה מעל גבי חברתה, וגם לבהמה שאכלה מקופה המונחת על שכמו של אדם. כך מפרשים ה<strong>רי"ף</strong>, ה<strong>רמב"ם</strong> וה<strong>רא"ש</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לכן מפרשים אותם ראשונים, שהמשמעות של אכילה מתוך קפיצה היא לגבי הגדרת חצר המזיק. אם הבהמה יכולה להגיע לאוכל רק ע"י קפיצה, הרי שתבואה על גבי בהמה, או מאכל בקופה על שכמו של הניזק, נחשבים כבחצר הניזק, שכן הניזק הפריד אותם מרשות הרבים כך שהבהמה צריכה מאמץ מיוחד כדי להגיע אליהם. הנחת מאכל בצורה כזו אינה נחשבת שינוי אף ברשות הרבים. ולכן, העיקרון של רבא, שבקופצת ברשות הרבים חייב המזיק נזק שלם, הוא עיקרון ששייך גם לבהמה שאכלה מעל גבי חברתה, וגם לבהמה שאכלה מקופה המונחת על שכמו של אדם. כך מפרשים ה<strong>רי"ף</strong>, ה<strong>רמב"ם</strong> וה<strong>רא"ש</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי סברה זו פוסק ה<strong>רא"ש</strong>, שגם בקופצת חייב רק אם אי אפשר לה להגיע ללא קפיצה, שכן רק אז ניתן לומר שהניזק נקי מאחריות, שהרי הניח את המאכל במקום שרק בקפיצה ניתן להגיע אליו, ולכן אנו מתייחסים לגב הבהמה/האדם במקרים כאלה כאל חצר הניזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי סברה זו פוסק ה<strong>רא"ש</strong>, שגם בקופצת חייב רק אם אי אפשר לה להגיע ללא קפיצה, שכן רק אז ניתן לומר שהניזק נקי מאחריות, שהרי הניח את המאכל במקום שרק בקפיצה ניתן להגיע אליו, ולכן אנו מתייחסים לגב הבהמה/האדם במקרים כאלה כאל חצר הניזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצא יא) פסק כרי"ף וכרמב"ם, וה<strong>רמ"א </strong>אף הביא את הערת הרא"ש הנ"ל להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>(שצא יא) פסק כרי"ף וכרמב"ם, וה<strong>רמ"א </strong>אף הביא את הערת הרא"ש הנ"ל להלכה.</p>
                     
                 </div>
                 
@@ -1372,51 +1372,51 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יב:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא-יב:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בהמה שהוחלקה באבן או במימי רגליה ונפלה לגנה ונחבטה על גבי פירות וירקות או שאכלה משלם מה שנהנית, אפילו הלכה מערוגה לערוגה ואפילו נשארה שם כל היום כולו אינו משלם אלא מה שנהנית, ומה הנייה יש לה בחביטה שהרי מצאה מקום רך ולא נתרסקו איבריה, אבל אם ירדה כדרכה ואכלה משלם מה שהזיקה ואפילו טנפה פירות במי לידה משלם מה שהזיקה מפני שתחילתו בפשיעה, וכן אם דחפתה חברתה ונפלה משלם מה שהזיקה מפני שהיה לו להעבירן אחת אחת כדי שלא ידחפו זו את זו.</strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הוחלקה ונפלה ויצאת וחזרה לגנה אע"פ שחזרה שלא לדעת הבעלים משלם מה שהזיקה מפני שהיה לו לשמרה שלא תחזור שהדבר ידוע שכיון שידעה דרך הגנה הרי היא חוזרת מאליה. </strong>הוחלקה ונפלה ויצאת וחזרה וכו' מפני שהיה לו לשמרה שלא תחזור. א"א האי פירושא לא נהיר אלא הכי פירושו שאפילו נעל בפניה כראוי ויצתה ולא ידע היכן הלכה חייב איבעי ליה למידע דהתם אזלא.
                 </div>
                 
 
                 
                 <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שן ורגל בחצר הניזק, שפטור עליהן משום אונס:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שן ורגל בחצר הניזק, שפטור עליהן משום אונס:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (נה:) כותבת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (נה:) כותבת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"נפלה לגינה ונהנית - משלמת מה שנהנית, ירדה כדרכה והזיקה - משלמת מה שהזיקה.".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"נפלה לגינה ונהנית - משלמת מה שנהנית, ירדה כדרכה והזיקה - משלמת מה שהזיקה.".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם הבהמה הגיעה לגינה באונס, ע"י נפילה, אין היא צריכה לשלם אלא מדין זה נהנה וזה חסר, כבהמה שהזיקה בשן ורגל ברשות הרבים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם הבהמה הגיעה לגינה באונס, ע"י נפילה, אין היא צריכה לשלם אלא מדין זה נהנה וזה חסר, כבהמה שהזיקה בשן ורגל ברשות הרבים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (נז:) מבאר <strong>רב</strong>, שאף אם לא אכלה הבהמה מהפירות אלא רק נחבטה בהם, גם כן משלמת את הנאתה שהפירות בלמו את נפילתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (נז:) מבאר <strong>רב</strong>, שאף אם לא אכלה הבהמה מהפירות אלא רק נחבטה בהם, גם כן משלמת את הנאתה שהפירות בלמו את נפילתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך חולקים אמוראים בנסיבות הנפילה הנחשבות כאונס. <strong>רב</strong> <strong>כהנא</strong> סובר שרק החלקה במי רגלים של עצמה נחשב אונס, ואילו <strong>רבא</strong> סובר שגם אם בהמה אחרת דחפתה, נחשב הדבר לאונס, למרות שבעל הבהמות לא נזהר להעביר את בהמותיו אחת אחת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך חולקים אמוראים בנסיבות הנפילה הנחשבות כאונס. <strong>רב</strong> <strong>כהנא</strong> סובר שרק החלקה במי רגלים של עצמה נחשב אונס, ואילו <strong>רבא</strong> סובר שגם אם בהמה אחרת דחפתה, נחשב הדבר לאונס, למרות שבעל הבהמות לא נזהר להעביר את בהמותיו אחת אחת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד מביאה <strong>הגמרא</strong> מחלוקת אמוראים לגבי טווח הזמן של האירוע המוגדר כאונס. <strong>ר' כהנא</strong> סובר שרק אכילת הערוגה לתוכה נפלה הבהמה נחשבת עדיין כאונס, אך אם הלכה משם הבהמה ואכלה גם ערוגות אחרות, עליהן חייב בעל הבהמה, ואין אכילתן מוגדרת כאונס. לעומתו סובר <strong>ר' יוחנן</strong> שעד שתצא מהגינה, וידע מזה הבעלים, נמשכת הגדרת האונס, ולכן אף אם אכלה עוד ערוגות נוספות לפני שיצאה מהגינה, משלמת מה שנהנית בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד מביאה <strong>הגמרא</strong> מחלוקת אמוראים לגבי טווח הזמן של האירוע המוגדר כאונס. <strong>ר' כהנא</strong> סובר שרק אכילת הערוגה לתוכה נפלה הבהמה נחשבת עדיין כאונס, אך אם הלכה משם הבהמה ואכלה גם ערוגות אחרות, עליהן חייב בעל הבהמה, ואין אכילתן מוגדרת כאונס. לעומתו סובר <strong>ר' יוחנן</strong> שעד שתצא מהגינה, וידע מזה הבעלים, נמשכת הגדרת האונס, ולכן אף אם אכלה עוד ערוגות נוספות לפני שיצאה מהגינה, משלמת מה שנהנית בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' פפא</strong> מבאר את שיטת ר' יוחנן, ומסביר שאם יצאה הבהמה, וידע מזה בעליה, אף על פי שחזרה שוב לגינה ללא ידיעתו, בכל אופן חייב בעליה על מה שהזיקה כאשר חזרה שוב לגינה, וטעם הדברים הוא "דאמר ליה [הניזק לבעל הבהמה]: כיון דילפא, כל אימת דמשתמטא להתם רהטא". כלומר, כיוון שהבהמה מכירה את הדרך לגינה, יש לשומרה שלא תגיע לשם. בהבנת דברי ר' פפא נחלקו הראשונים, ומיד נפרטם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' פפא</strong> מבאר את שיטת ר' יוחנן, ומסביר שאם יצאה הבהמה, וידע מזה בעליה, אף על פי שחזרה שוב לגינה ללא ידיעתו, בכל אופן חייב בעליה על מה שהזיקה כאשר חזרה שוב לגינה, וטעם הדברים הוא "דאמר ליה [הניזק לבעל הבהמה]: כיון דילפא, כל אימת דמשתמטא להתם רהטא". כלומר, כיוון שהבהמה מכירה את הדרך לגינה, יש לשומרה שלא תגיע לשם. בהבנת דברי ר' פפא נחלקו הראשונים, ומיד נפרטם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך, מעירה הגמרא שאם ירדה כדרכה, אך אז אירע לה אונס כמו שטנפה פירות במי לידה, למ"ד שתחילתו בפשיעה וסופו באונס חייב, בוודאי שחייבת, שכן ירדה בפשיעה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך, מעירה הגמרא שאם ירדה כדרכה, אך אז אירע לה אונס כמו שטנפה פירות במי לידה, למ"ד שתחילתו בפשיעה וסופו באונס חייב, בוודאי שחייבת, שכן ירדה בפשיעה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כר' כהנא לגבי נסיבות הנפילה המוגדרות כאונס, וכר' יוחנן לגבי טווח הזמן המוגדר כאונס. עוד פוסק הרמב"ם כאן שוב, שתחילתו בפשיעה וסופו באונס חייב (עי' לעיל פ"ב הלכה טו).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק כר' כהנא לגבי נסיבות הנפילה המוגדרות כאונס, וכר' יוחנן לגבי טווח הזמן המוגדר כאונס. עוד פוסק הרמב"ם כאן שוב, שתחילתו בפשיעה וסופו באונס חייב (עי' לעיל פ"ב הלכה טו).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> פוסק כרבא לגבי הגדרת נפילת אונס.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> פוסק כרבא לגבי הגדרת נפילת אונס.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דברי ר' פפא המבארים את שיטת ר' יוחנן הם קשים להבנה, שהרי אם הבהמה יצאה מהגינה ושוב חזרה, פשוט שדינה כיורדת לגינה שלא באונס, ובהמה שכזו חייבים על נזקיה ללא קשר לטיעון שמביא ר' פפא לפיו משום שהיא מכירה את הגינה היא עלולה לחזור לשם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דברי ר' פפא המבארים את שיטת ר' יוחנן הם קשים להבנה, שהרי אם הבהמה יצאה מהגינה ושוב חזרה, פשוט שדינה כיורדת לגינה שלא באונס, ובהמה שכזו חייבים על נזקיה ללא קשר לטיעון שמביא ר' פפא לפיו משום שהיא מכירה את הגינה היא עלולה לחזור לשם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים אחדים הבינו מכאן, שהטיעון מובא בגמרא כדי לחייב את בעל הבהמה בשמירה טובה יותר מהרגיל, וזאת כנראה כי הנזק שייגרם לו תצליח הבהמה לברוח יהיה ברור וחמור מהמצוי, שכן היא יודעת בדיוק להיכן ללכת. כך ניתן להבין ב<strong>רש"י </strong>וגם ב<strong>רמב"ם</strong>. ה<strong>מגדל עוז</strong> הבין ברמב"ם באופן שונה מעט, והוא מסביר שמדובר על בהמה הרועה בחוץ, שכיוון שהדרך לגינה ידועה לה, יש לשומרה באופן טוב מהרגיל, אך עדיין אין סיבה לנעול בפניה כאשר היא בדיר יותר מהראוי והרגיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשונים אחדים הבינו מכאן, שהטיעון מובא בגמרא כדי לחייב את בעל הבהמה בשמירה טובה יותר מהרגיל, וזאת כנראה כי הנזק שייגרם לו תצליח הבהמה לברוח יהיה ברור וחמור מהמצוי, שכן היא יודעת בדיוק להיכן ללכת. כך ניתן להבין ב<strong>רש"י </strong>וגם ב<strong>רמב"ם</strong>. ה<strong>מגדל עוז</strong> הבין ברמב"ם באופן שונה מעט, והוא מסביר שמדובר על בהמה הרועה בחוץ, שכיוון שהדרך לגינה ידועה לה, יש לשומרה באופן טוב מהרגיל, אך עדיין אין סיבה לנעול בפניה כאשר היא בדיר יותר מהראוי והרגיל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד </strong>הבין באופן אחר. לשיטתו אין היכרותה של הבהמה את הגינה מחייבת נעילה בפניה יותר מהרגיל והראוי. חיוב השמירה היתרה כאן בא לידי ביטוי במקרה בו הבהמה ברחה. כרגיל במקרה כזה, אנו לא מצפים מבעל הבהמה שידע למצוא אותה מיד כדי למנוע נזק. אמנם כאן אנו מצפים שבעל הבהמה ידע ללכת לחפשה בגינת חברו, כיוון שהיא מכירה את הגינה, וסביר שהיא הלכה לשם להזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד </strong>הבין באופן אחר. לשיטתו אין היכרותה של הבהמה את הגינה מחייבת נעילה בפניה יותר מהרגיל והראוי. חיוב השמירה היתרה כאן בא לידי ביטוי במקרה בו הבהמה ברחה. כרגיל במקרה כזה, אנו לא מצפים מבעל הבהמה שידע למצוא אותה מיד כדי למנוע נזק. אמנם כאן אנו מצפים שבעל הבהמה ידע ללכת לחפשה בגינת חברו, כיוון שהיא מכירה את הגינה, וסביר שהיא הלכה לשם להזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם לעניין הגדרת נפילת אונס חלקו הראשונים. בעוד שה<strong>רמב"ם </strong>פסק להחמיר כר' כהנא, ה<strong>תוספות</strong> וה<strong>רא"ש </strong>פוסקים להקל, שנפילה בגלל דחיפת בהמה אחרת, אונס היא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם לעניין הגדרת נפילת אונס חלקו הראשונים. בעוד שה<strong>רמב"ם </strong>פסק להחמיר כר' כהנא, ה<strong>תוספות</strong> וה<strong>רא"ש </strong>פוסקים להקל, שנפילה בגלל דחיפת בהמה אחרת, אונס היא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצד,א) מביא את דברי הרמב"ם כלשונם, וה<strong>רמ"א </strong>פוסק כרא"ש וכתוס' לגבי הגדרת נפילת אונס. ה<strong>רמ"א </strong>מוסיף עוד (סעיף ב), שאם שמר את הבהמה שמירה מעולה פטור, וזאת להוציא מדעת הראב"ד, לפיו גם בשמירה מעולה, עדיין מוטלת על בעל הבהמה החובה לחפש את בהמתו בגינת הניזק (עי' ביאור הגר"א).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>(שצד,א) מביא את דברי הרמב"ם כלשונם, וה<strong>רמ"א </strong>פוסק כרא"ש וכתוס' לגבי הגדרת נפילת אונס. ה<strong>רמ"א </strong>מוסיף עוד (סעיף ב), שאם שמר את הבהמה שמירה מעולה פטור, וזאת להוציא מדעת הראב"ד, לפיו גם בשמירה מעולה, עדיין מוטלת על בעל הבהמה החובה לחפש את בהמתו בגינת הניזק (עי' ביאור הגר"א).</p>
                     
                 </div>
                 
@@ -1424,67 +1424,67 @@
             
             
             <div id="halacha-11" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכות יג-טו:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכות יג-טו:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הקדר שהכניס קדרותיו לחצר בעל הבית שלא ברשות ושברתן בהמתו של בעל הבית פטור, ואם הוזקה בהן בעל הקדרות חייב, ואם הכניס ברשות פטור, ואם קבל עליו בעל הבית לשמור את הקדרות בעל הבית חייב.</strong> ואם הכניס ברשות פטור. א"א אע"ג דהלכה כרבי אפילו הכי כיון דברשות הוי אקני ליה מקום בחצר והויא לה חצר המיוחדת לבעל חצר לשוורים ולקדרות ולזה לקדרות בלבד כיון דאיתחזיק ממילא איהו הוא דאזיק אנפשיה ומשום הכי פטור וכדאמרינן שניהם ברשות הוזקו זה בזה פטורין דאיבעי להו לעיוני ולמיזל.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן אם הכניס פירותיו לחצר בעל הבית שלא ברשות ואכלתן בהמתו של בעל הבית פטור, ואם הוחלקה בהן והוזקה בעל הפירות חייב, ואם הכניס ברשות פטור, ואם קבל עליו בעל הבית לשמור את הפירות בעל הבית חייב. הכניסן שלא ברשות ואכלתן בהמתו של בעל הבית והוזקה באכילתן בעל הפירות פטור מפני שהיה לה שלא תאכל, ואם הכניסן ברשות והניחו בעלי החצר את זה שהרשוהו בחצר לשמרו ואכלתן בהמתו של בעל הבית והוזקה באכילתן בעל הפירות חייב, שכיון שראה הבהמה אוכלת דברים המזיקין לה והניחה חייב שהרי אין בעלי החצר מצויין שם להעביר הבהמה מהן. ומעשה באשה שנכנסה לאפות בתנור בבית שכנותיה והניחוה ונתעלמו כדי שלא יביטו בה בעת לישתה ואפייתה ובא עז של בעל הבית ואכל הבצק ומת וחייבוה חכמים לשלם דמיו, וכן כל כיוצא בזה. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המגדיש בתוך שדה חבירו שלא ברשות ואכלתן בהמתו של בעל השדה פטור ואם הוחלקה בהן והוזקה בעל הפירות חייב, אכלתן והוזקה באכילתן פטור, ואם הגדיש ברשות, בעל השדה חייב אע"פ שלא קבל עליו לשמור, שהשומר בגרנות כיון שאמר לו הגדש בכאן כמי שאמר לו הגדש ואני אשמור לך הוא חשוב.</strong> המגדיש בתוך שדה חברו וכו' ואם הגדיש ברשות בעל השדה חייב ואע"פ שלא קבל עליו לשמור. א"א ודוקא בשומר את הגרנות.
                 </div>
                 
 
                 
                 <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הנכנס לחצר חברו ברשות ושלא ברשות, והזיק או שהוזק:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הנכנס לחצר חברו ברשות ושלא ברשות, והזיק או שהוזק:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (מז.) מביאה מקרים בהם הכניס אדם ברשות או שלא ברשות את רכושו לחצר חברו, והזיק ממונו את של חברו או הפוך. המשנה פוסקת, לדעת כולם, שאם נכנס שלא ברשות, למשל אם הכניס אדם פירותיו לחצר חברו, ידו של המכניס תמיד על התחתונה. כלומר, אם הוזקו הפירות ע"י שורו של בעל החצר, פטור בעל החצר, ואם הזיקו הפירות לשורו של בעל החצר, חייב המכניס. במקרה שהכניס את הפירות ברשות, והוזקו הפירות ע"י שורו של בעל החצר, חלקו ת"ק ורבי. <strong>ת"ק</strong> פוסק שבעל החצר חייב, ואילו <strong>רבי</strong> סובר שאין בעל החצר חייב, אפילו נתן רשות כניסה לחברו, עד שיקבל על עצמו אחריות שמירת הפירות במפורש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המשנה</strong> (מז.) מביאה מקרים בהם הכניס אדם ברשות או שלא ברשות את רכושו לחצר חברו, והזיק ממונו את של חברו או הפוך. המשנה פוסקת, לדעת כולם, שאם נכנס שלא ברשות, למשל אם הכניס אדם פירותיו לחצר חברו, ידו של המכניס תמיד על התחתונה. כלומר, אם הוזקו הפירות ע"י שורו של בעל החצר, פטור בעל החצר, ואם הזיקו הפירות לשורו של בעל החצר, חייב המכניס. במקרה שהכניס את הפירות ברשות, והוזקו הפירות ע"י שורו של בעל החצר, חלקו ת"ק ורבי. <strong>ת"ק</strong> פוסק שבעל החצר חייב, ואילו <strong>רבי</strong> סובר שאין בעל החצר חייב, אפילו נתן רשות כניסה לחברו, עד שיקבל על עצמו אחריות שמירת הפירות במפורש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המקרה שאינו נידון בפירוש במשנה, הוא המקרה של מכניס פירותיו ברשות, והזיקו פירותיו את בהמתו של בעל החצר. <strong>הגמרא</strong> (מז:) משלימה את המידע ע"י דיוק- מתוך כך שהמשנה חייבה את הנכנס רק אם הכניס שלא ברשות, משמע שאם הכניס ברשות, והזיקו פירותיו את שורו של בעל הבית, פטור. הדבר מעלה קושי, כיוון שהגמרא מניחה שלא יתכן שבעל החצר חייב על נזקים שניזוק הנכנס ברשות (שכך שיטת ת"ק), ומצד שני הנכנס יפטר על נזקים שהזיקו פירותיו את בעל החצר (שכן אם יודע בעל החצר שהנכנס פטור, מדוע שיקבל על עצמו להתחייב?).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המקרה שאינו נידון בפירוש במשנה, הוא המקרה של מכניס פירותיו ברשות, והזיקו פירותיו את בהמתו של בעל החצר. <strong>הגמרא</strong> (מז:) משלימה את המידע ע"י דיוק- מתוך כך שהמשנה חייבה את הנכנס רק אם הכניס שלא ברשות, משמע שאם הכניס ברשות, והזיקו פירותיו את שורו של בעל הבית, פטור. הדבר מעלה קושי, כיוון שהגמרא מניחה שלא יתכן שבעל החצר חייב על נזקים שניזוק הנכנס ברשות (שכך שיטת ת"ק), ומצד שני הנכנס יפטר על נזקים שהזיקו פירותיו את בעל החצר (שכן אם יודע בעל החצר שהנכנס פטור, מדוע שיקבל על עצמו להתחייב?).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מתרץ את הקושיה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> מתרץ את הקושיה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כולה רבנן היא, וברשות - שמירת קדירות קבל עליו בעל החצר ואפילו נשברו ברוח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כולה רבנן היא, וברשות - שמירת קדירות קבל עליו בעל החצר ואפילו נשברו ברוח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, יש מקום לאי סימטריה במקרה שנכנס ברשות. בעל החצר, לשיטת ת"ק, מקבל על עצמו אחריות כשומר על נזק שיארע לפירותיו של הנכנס אפילו אם לא יגרם מרכושו שלו, ובכל זאת, הנכנס אינו מקבל על עצמו לשמור על ממונו של בעל החצר. הראשונים חלקו מה טעם ההבדל בין בעל החצר לבין הנכנס-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, יש מקום לאי סימטריה במקרה שנכנס ברשות. בעל החצר, לשיטת ת"ק, מקבל על עצמו אחריות כשומר על נזק שיארע לפירותיו של הנכנס אפילו אם לא יגרם מרכושו שלו, ובכל זאת, הנכנס אינו מקבל על עצמו לשמור על ממונו של בעל החצר. הראשונים חלקו מה טעם ההבדל בין בעל החצר לבין הנכנס-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> מסביר זאת בכך שבעל החצר מצוי בה תדיר ויכול לשמור ולכן ההיתר שהוא נותן לנכנס מתפרש כהתחייבות שמירה. לעומתו הנכנס אינו מצוי בתדירות בחצר ולכן כניסתו לחצר אינה מתפרשת כהתחייבות מצידו לשמור על רכוש בעל החצר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> מסביר זאת בכך שבעל החצר מצוי בה תדיר ויכול לשמור ולכן ההיתר שהוא נותן לנכנס מתפרש כהתחייבות שמירה. לעומתו הנכנס אינו מצוי בתדירות בחצר ולכן כניסתו לחצר אינה מתפרשת כהתחייבות מצידו לשמור על רכוש בעל החצר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר בפשטות, שבעל החצר אמר לחבירו "היכנס" ובכך התחייב לשמור, ואילו הנכנס לא אמר כלום ולכן לא התחייב לכלום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר בפשטות, שבעל החצר אמר לחבירו "היכנס" ובכך התחייב לשמור, ואילו הנכנס לא אמר כלום ולכן לא התחייב לכלום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מביאה ה<strong>גמרא</strong> (מח.) מעשה באשה שנכנסה ברשות לאפות בצק בחצר של בעל הבית, ועז של בעל הבית אכלה את הבצק ומתה, וחייבו חכמים את האשה בנזק העז. הגמרא מסבירה שהאשה בעלת הבצק חייבת, משום שנכנסה ברשות וקיבלה על עצמה על ידי כך את שמירת רכושו של בעל החצר מנזק הבא על ידה. לכאורה, הדבר סותר את מה שדוייק מהמשנה- שהנכנס ברשות פטור על נזקים שהזיק את בעל החצר, ואמנם, הגמרא מבהירה, שלא בכל מקרה של כניסה ברשות מקבל עליו הנכנס אחריות שכזו בעצם כניסתו, אלא רק בסיטואציה מיוחדת בו הוא יודע שהיכולת של בעל החצר לשמור את רכושו, נפגעת בשל התארחותו שם, ולכן הוא צריך לדעת שהכניסה לחצר בסיטואציה כזו, כמוה כקבלת אחריות שמירה על רכושו של בעל החצר. גם בסיפור שלפנינו, בעל החצר יצא ממנה מטעמי צניעות, שלא לחזות באשה האופה, ולכן היתה האשה צריכה לשמור על העז שלו. כאמור, במקרה הכללי, לעומת זאת, אין אחריות נזק על הנכנס ברשות, כמדוייק במשנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מביאה ה<strong>גמרא</strong> (מח.) מעשה באשה שנכנסה ברשות לאפות בצק בחצר של בעל הבית, ועז של בעל הבית אכלה את הבצק ומתה, וחייבו חכמים את האשה בנזק העז. הגמרא מסבירה שהאשה בעלת הבצק חייבת, משום שנכנסה ברשות וקיבלה על עצמה על ידי כך את שמירת רכושו של בעל החצר מנזק הבא על ידה. לכאורה, הדבר סותר את מה שדוייק מהמשנה- שהנכנס ברשות פטור על נזקים שהזיק את בעל החצר, ואמנם, הגמרא מבהירה, שלא בכל מקרה של כניסה ברשות מקבל עליו הנכנס אחריות שכזו בעצם כניסתו, אלא רק בסיטואציה מיוחדת בו הוא יודע שהיכולת של בעל החצר לשמור את רכושו, נפגעת בשל התארחותו שם, ולכן הוא צריך לדעת שהכניסה לחצר בסיטואציה כזו, כמוה כקבלת אחריות שמירה על רכושו של בעל החצר. גם בסיפור שלפנינו, בעל החצר יצא ממנה מטעמי צניעות, שלא לחזות באשה האופה, ולכן היתה האשה צריכה לשמור על העז שלו. כאמור, במקרה הכללי, לעומת זאת, אין אחריות נזק על הנכנס ברשות, כמדוייק במשנה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> וה<strong>ראב"ד</strong> פוסקים שניהם כרבי, שאף אם נכנס הניזק ברשות, אם לא קיבל עליו בעל החצר שמירת נזקיו של הנכנס, פטור בעל החצר על נזקי הנכנס. אמנם, חלוקים הם בדין כאשר הנכנס ברשות הזיק את בעל החצר – ה<strong>רמב"ם</strong> משאיר על כנו את הדיוק שמדייקת הגמרא במשנה, ופוסק שהנכנס פטור על נזקים שמזיק לבעל החצר. לעומתו, ה<strong>ראב"ד</strong> אינו מסכים שכך הוא הדין תמיד. הראב"ד מדמה את הנכנס ברשות, לחצר השותפים, שאף בה לכל אחד הצדדים רשות שימוש בחצר. (להרחבת הדיון בשיטת הראב"ד עיין בדברנו פרק ז הלכה ה).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> וה<strong>ראב"ד</strong> פוסקים שניהם כרבי, שאף אם נכנס הניזק ברשות, אם לא קיבל עליו בעל החצר שמירת נזקיו של הנכנס, פטור בעל החצר על נזקי הנכנס. אמנם, חלוקים הם בדין כאשר הנכנס ברשות הזיק את בעל החצר – ה<strong>רמב"ם</strong> משאיר על כנו את הדיוק שמדייקת הגמרא במשנה, ופוסק שהנכנס פטור על נזקים שמזיק לבעל החצר. לעומתו, ה<strong>ראב"ד</strong> אינו מסכים שכך הוא הדין תמיד. הראב"ד מדמה את הנכנס ברשות, לחצר השותפים, שאף בה לכל אחד הצדדים רשות שימוש בחצר. (להרחבת הדיון בשיטת הראב"ד עיין בדברנו פרק ז הלכה ה).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמו ה<strong>רא"ש</strong>, פוסק גם ה<strong>רמב"ם</strong>, שהנכנס ברשות יהיה חייב בנזקי בעל החצר אפילו לרבי אם בעל החצר הניח את האורח לבדו, כמו במקרה הנ"ל של האשה שנכנסה לאפות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כמו ה<strong>רא"ש</strong>, פוסק גם ה<strong>רמב"ם</strong>, שהנכנס ברשות יהיה חייב בנזקי בעל החצר אפילו לרבי אם בעל החצר הניח את האורח לבדו, כמו במקרה הנ"ל של האשה שנכנסה לאפות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong>, ה<strong>טור</strong> ו<strong>ר"י </strong>חולקים על הרמב"ם. לדעתם הלכה כתנא קמא, ולכן בנתינת רשות הכניסה, מקבל בעל החצר על עצמו אחריות נזקין כלפי הנכנס. בהתאם לחילוקו של רבא (לשיטת הרא"ש, כמובא לעיל), בעל החצר מקבל על עצמו אחריות ע"י מתן רשות הכניסה, אך לעומתו, הנכנס אינו מקבל על עצמו אחריות, ופטור על נזקים שפירותיו עוללו לבעל החצר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong>, ה<strong>טור</strong> ו<strong>ר"י </strong>חולקים על הרמב"ם. לדעתם הלכה כתנא קמא, ולכן בנתינת רשות הכניסה, מקבל בעל החצר על עצמו אחריות נזקין כלפי הנכנס. בהתאם לחילוקו של רבא (לשיטת הרא"ש, כמובא לעיל), בעל החצר מקבל על עצמו אחריות ע"י מתן רשות הכניסה, אך לעומתו, הנכנס אינו מקבל על עצמו אחריות, ופטור על נזקים שפירותיו עוללו לבעל החצר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שצג א, שצח ה) פוסק כרמב"ם, וה<strong>רמ"א</strong> מביא את שיטת הטור. הרמ"א מוסיף שאף שלרבי הרשאת כניסה מצד בעל החצר כמוה כקבלת אחריות, מכל מקום אין בעל החצר מקבל עליו אחריות אלא על נזקים מרכושו שלו שיקרו בחצר, ולא על נזקים מממון של צד שלישי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שצג א, שצח ה) פוסק כרמב"ם, וה<strong>רמ"א</strong> מביא את שיטת הטור. הרמ"א מוסיף שאף שלרבי הרשאת כניסה מצד בעל החצר כמוה כקבלת אחריות, מכל מקום אין בעל החצר מקבל עליו אחריות אלא על נזקים מרכושו שלו שיקרו בחצר, ולא על נזקים מממון של צד שלישי.</p>
                     
                 </div>
                 
                 <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">"היה לה שלא תאכל" – נזקים שהביאה הבהמה על עצמה, בעטיו של רכוש הנכנס לחצר:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">"היה לה שלא תאכל" – נזקים שהביאה הבהמה על עצמה, בעטיו של רכוש הנכנס לחצר:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מובאים דברי <strong>רב</strong>, לפיהם לא תמיד חייב הנכנס שלא ברשות על נזקים שמזיק ממונו את בהמת בעל החצר. במקרה שהנזק הגיע לבהמה מתוך שאכלה את המאכל של הנכנס ללא רשות, פטור הנכנס שכן הוא טוען שלא היה לה לבהמה לאכול.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מובאים דברי <strong>רב</strong>, לפיהם לא תמיד חייב הנכנס שלא ברשות על נזקים שמזיק ממונו את בהמת בעל החצר. במקרה שהנזק הגיע לבהמה מתוך שאכלה את המאכל של הנכנס ללא רשות, פטור הנכנס שכן הוא טוען שלא היה לה לבהמה לאכול.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> וה<strong>טור</strong> מסבירים שמדובר דווקא על בהמה שניזוקה מאכילה מרובה, ולכן טענת הנכנס היא שאמנם הבהמה אכלה בגללו, אך הוא לא אחראי לכך שהפריזה לאכול וניזוקה בכך. ה<strong>תוס'</strong> לעומת זאת אינם מגבילים את הפטור לאכילה מופרזת. לדעתם הפטור מבוסס על כך שאין לחייב את הנכנס כאשר מעשה ההיזק בפועל נעשה ע"י הבהמה עצמה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> וה<strong>טור</strong> מסבירים שמדובר דווקא על בהמה שניזוקה מאכילה מרובה, ולכן טענת הנכנס היא שאמנם הבהמה אכלה בגללו, אך הוא לא אחראי לכך שהפריזה לאכול וניזוקה בכך. ה<strong>תוס'</strong> לעומת זאת אינם מגבילים את הפטור לאכילה מופרזת. לדעתם הפטור מבוסס על כך שאין לחייב את הנכנס כאשר מעשה ההיזק בפועל נעשה ע"י הבהמה עצמה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נראה שה<strong>רמב"ם </strong>פוסק כתוס'. וכן נפסק ב<strong>שו"ע</strong> (שצג ב).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נראה שה<strong>רמב"ם </strong>פוסק כתוס'. וכן נפסק ב<strong>שו"ע</strong> (שצג ב).</p>
                     
                 </div>
                 
                 <div id="topic-11-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נתינת רשות שהיא גם התחייבות לשמירה:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נתינת רשות שהיא גם התחייבות לשמירה:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדף נט: נמצאת משנה שהיא ההמשך הישיר של משנתנו. ה<strong>משנה</strong> אומרת שמי ששם גדיש ללא רשות בשדה חברו, חייב על הנזקים שהגדיש יעשה לבהמת חברו, ובעל השדה פטור על נזקים שבהמתו מזיקה את הגדיש. ה<strong>גמרא</strong> מציינת שבמקרה של גדיש מודה <strong>רבי</strong> שבעל השדה, עם נתינת הרשות מצידו לנכנס להניח שם את הגדיש, מתחייב בשמירת הגדיש, שכן אותו בעל שדה הוא שומר הגרנות, והרשות שהוא נותן כמוה כקבלת שמירה על הגדיש. ה<strong>רמב"ם </strong>פוסק שאכן אם בעל השדה הוא שומר הגרנות, נתינת הרשות מצידו כמוה כקבלת שמירה, ולכן נתינת רשות כמוה כקבלת אחריות נזקים. ה<strong>רא"ש</strong>, שפסק כאמור כתנא קמא, אינו מייחד את הדין לשומר גרנות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בדף נט: נמצאת משנה שהיא ההמשך הישיר של משנתנו. ה<strong>משנה</strong> אומרת שמי ששם גדיש ללא רשות בשדה חברו, חייב על הנזקים שהגדיש יעשה לבהמת חברו, ובעל השדה פטור על נזקים שבהמתו מזיקה את הגדיש. ה<strong>גמרא</strong> מציינת שבמקרה של גדיש מודה <strong>רבי</strong> שבעל השדה, עם נתינת הרשות מצידו לנכנס להניח שם את הגדיש, מתחייב בשמירת הגדיש, שכן אותו בעל שדה הוא שומר הגרנות, והרשות שהוא נותן כמוה כקבלת שמירה על הגדיש. ה<strong>רמב"ם </strong>פוסק שאכן אם בעל השדה הוא שומר הגרנות, נתינת הרשות מצידו כמוה כקבלת שמירה, ולכן נתינת רשות כמוה כקבלת אחריות נזקים. ה<strong>רא"ש</strong>, שפסק כאמור כתנא קמא, אינו מייחד את הדין לשומר גרנות.</p>
                     
                 </div>
                 
@@ -1492,7 +1492,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1541,6 +1541,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

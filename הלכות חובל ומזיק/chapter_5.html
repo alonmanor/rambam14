@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות חובל ומזיק - פרק ה'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ה')</h3>
                 <ul class="space-y-3">
@@ -972,7 +972,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -984,19 +984,19 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">עד עתה עסקו פרקים א-ד בדיון המשפטי כיצד והאם לשלם לאחר שפלוני חבל בחברו. פרק ה שונה בכך שהוא מתמקד בצד האיסורי/מוסרי של האיסור לחבול בחברו תוך דיון בכמה הלכות המסתעפות מעניין זה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">עד עתה עסקו פרקים א-ד בדיון המשפטי כיצד והאם לשלם לאחר שפלוני חבל בחברו. פרק ה שונה בכך שהוא מתמקד בצד האיסורי/מוסרי של האיסור לחבול בחברו תוך דיון בכמה הלכות המסתעפות מעניין זה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק פותח (הלכות א-ג) בדיון במקור לאיסור הכאת חברו, ומבאר שמלבד חיוב הממון, עובר המכה את חברו גם באיסור לאו הנלמד מהפסוק "לא יוסיף להכותו". לכן, כאשר אין מקום לתשלומים (בהכאה שאין בה שווה פרוטה) לוקה המזיק ככל עובר על לאו. כמו כן קיים איסור מדרבנן על אדם להכות את עצמו, אם כי מותר לאדם לבייש את עצמו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הפרק פותח (הלכות א-ג) בדיון במקור לאיסור הכאת חברו, ומבאר שמלבד חיוב הממון, עובר המכה את חברו גם באיסור לאו הנלמד מהפסוק "לא יוסיף להכותו". לכן, כאשר אין מקום לתשלומים (בהכאה שאין בה שווה פרוטה) לוקה המזיק ככל עובר על לאו. כמו כן קיים איסור מדרבנן על אדם להכות את עצמו, אם כי מותר לאדם לבייש את עצמו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ד-ה עוסקות במקרה בו טוען אדם שחברו חבל בו, ואין עדים שהיה כך, אך יש עדים שנכנס הטוען בריא למחיצת החובל ויצא כשהוא חבול. בדין זה תיקנו חכמים שישבע הנחבל ויטול כדבריו. הלכות ו-ח ממשיכות באותו עניין ומבארות שאם הודה החובל שחבל, כיוון שיש עדים חייב לשלם את כל חמשת התשלומים. אמנם, לדעת הרמב"ם, חובל שהודה מעצמו ללא עדים יפטר מתשלומי הצער והנזק, שכן הם נחשבים קנס ולא ממון. לעומתו, הראב"ד אינו מחלק בין התשלומים וטוען שכולם קנס או שכולם ממון.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ד-ה עוסקות במקרה בו טוען אדם שחברו חבל בו, ואין עדים שהיה כך, אך יש עדים שנכנס הטוען בריא למחיצת החובל ויצא כשהוא חבול. בדין זה תיקנו חכמים שישבע הנחבל ויטול כדבריו. הלכות ו-ח ממשיכות באותו עניין ומבארות שאם הודה החובל שחבל, כיוון שיש עדים חייב לשלם את כל חמשת התשלומים. אמנם, לדעת הרמב"ם, חובל שהודה מעצמו ללא עדים יפטר מתשלומי הצער והנזק, שכן הם נחשבים קנס ולא ממון. לעומתו, הראב"ד אינו מחלק בין התשלומים וטוען שכולם קנס או שכולם ממון.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ט-י חוזרות לדבר על איסור החבלה ומבארות שבנוסף לתשלומים, חייב החובל לבקש מחילה מהנחבל בכדי שימחֵל חטאו. חובת בקשת מחילה זו ייחודית למזיק את גוף חברו ולעומתה, המזיק ממון חברו, נמחל לו לאחר שפיצהו כספית. לאחר שביקש החובל מחילה כנה מהנחבל, מצווה על זה לסלוח לו במהרה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ט-י חוזרות לדבר על איסור החבלה ומבארות שבנוסף לתשלומים, חייב החובל לבקש מחילה מהנחבל בכדי שימחֵל חטאו. חובת בקשת מחילה זו ייחודית למזיק את גוף חברו ולעומתה, המזיק ממון חברו, נמחל לו לאחר שפיצהו כספית. לאחר שביקש החובל מחילה כנה מהנחבל, מצווה על זה לסלוח לו במהרה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">עוד הבדל בין נזקי גוף לנזקי ממון מועלה בהלכות יא-יב. הלכות אלה עוסקות באדם שאמר לחברו להזיק לגופו או לרכושו והלה עשה זאת. ההלכה מחלקת בין נזקי ממון, בהם המזיק פטור שכן סביר שאדם יבקש ברצינות מחברו להזיק לו, לבין נזקי גוף, בהם המזיק היה צריך להעריך שהניזק אינו מתכוון ברצינות  לדבריו, ולכן חייב אם הזיקו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">עוד הבדל בין נזקי גוף לנזקי ממון מועלה בהלכות יא-יב. הלכות אלה עוסקות באדם שאמר לחברו להזיק לגופו או לרכושו והלה עשה זאת. ההלכה מחלקת בין נזקי ממון, בהם המזיק פטור שכן סביר שאדם יבקש ברצינות מחברו להזיק לו, לבין נזקי גוף, בהם המזיק היה צריך להעריך שהניזק אינו מתכוון ברצינות  לדבריו, ולכן חייב אם הזיקו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכה יג פוסק הרמב"ם, שאם אדם אמר לחבירו להזיק לפלוני, ושמע לדבריו והזיק, חייב המזיק בפועל, ולא משלחו. אמנם המשלח נקרא רשע ועובר על בפני עיוור לא תתן מכשול.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בהלכה יג פוסק הרמב"ם, שאם אדם אמר לחבירו להזיק לפלוני, ושמע לדבריו והזיק, חייב המזיק בפועל, ולא משלחו. אמנם המשלח נקרא רשע ועובר על בפני עיוור לא תתן מכשול.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">עם סיום פרק זה נחתמת סדרת הפרקים העוסקים בדין החובל בגוף חבירו. הפרק הבא יתחיל בביאור המזיק את ממון חבירו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">עם סיום פרק זה נחתמת סדרת הפרקים העוסקים בדין החובל בגוף חבירו. הפרק הבא יתחיל בביאור המזיק את ממון חבירו.</p>
                 
             </div>
             
@@ -1004,80 +1004,80 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אסור לאדם לחבול בין בעצמו בין בחבירו, ולא החובל בלבד אלא כל המכה אדם כשר מישראל בין קטן בין גדול בין איש בין אשה דרך נציון הרי זה עובר בלא תעשה, </strong><strong>שנ</strong><strong>אמר</strong> <strong>"</strong><strong>לא יוסיף להכותו</strong><strong>" (</strong><strong>דברים כ"ה ג'</strong><strong>)</strong><strong>, אם הזהירה תורה שלא להוסיף בהכאת החוטא קל וחומר למכה את הצדיק. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אפילו להגביה ידו על חבירו אסור וכל המגביה ידו על חבירו אף על פי שלא הכהו הרי זה רשע. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המכה את חבירו הכאה שאין בה שוה פרוטה לוקה, שהרי אין כאן תשלומין כדי שיהיה לאו זה ניתן לתשלומין, ואפילו הכה עבד חבירו הכאה שאין בה שוה פרוטה לוקה שהרי ישנו במקצת מצות, </strong><strong>וגוי שהכה את ישראל חייב מיתה שנ</strong><strong>אמר</strong> <strong>"</strong><strong>ויפן כה וכה</strong><strong>...</strong><strong>ויך את המצרי</strong><strong>" (</strong><strong>שמות ב' י"ב</strong><strong>)</strong><strong>. </strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">האיסור על אדם לחבול בחברו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">האיסור על אדם לחבול בחברו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בכתובות (לב.:) מביאה את מחלוקת האמוראים האם אדם שהתחייב באותו מעשה ממון ומלקות לוקה ונפטר מהממון או משלם ונפטר מהמלקות. דין החובל בחבירו מועלה כדוגמא למקרה בו אדם עבר על לאו וגם נתחייב ממון, והרי הוא משלם ואינו לוקה. הגמרא מוכיחה שהחובל המשלם אינו לוקה על חטאו מדברי <strong>ר' יוחנן</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בכתובות (לב.:) מביאה את מחלוקת האמוראים האם אדם שהתחייב באותו מעשה ממון ומלקות לוקה ונפטר מהממון או משלם ונפטר מהמלקות. דין החובל בחבירו מועלה כדוגמא למקרה בו אדם עבר על לאו וגם נתחייב ממון, והרי הוא משלם ואינו לוקה. הגמרא מוכיחה שהחובל המשלם אינו לוקה על חטאו מדברי <strong>ר' יוחנן</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכהו הכאה שאין בה שוה פרוטה לוקה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הכהו הכאה שאין בה שוה פרוטה לוקה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, במקום בו ניתן לשלם על החבלה (כי ערכה גדול מפרוטה), פוטר הדבר את המכה מתשלומים, אך במקום בו ערך החבלה פחות מפרוטה, מתוך שאין החובל משלם, חייב הוא מלקות כי עבר על לאו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, במקום בו ניתן לשלם על החבלה (כי ערכה גדול מפרוטה), פוטר הדבר את המכה מתשלומים, אך במקום בו ערך החבלה פחות מפרוטה, מתוך שאין החובל משלם, חייב הוא מלקות כי עבר על לאו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא כותבת שלאו זה נלמד מהאזהרה לשליח בית הדין המכה את האדם שנתחייב מלקות, שלא להלקות אפילו מכה אחת יותר מהנדרש-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא כותבת שלאו זה נלמד מהאזהרה לשליח בית הדין המכה את האדם שנתחייב מלקות, שלא להלקות אפילו מכה אחת יותר מהנדרש-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אַרְבָּעִים יַכֶּנּוּ <strong>לֹא יֹסִיף</strong> פֶּן יֹסִיף לְהַכֹּתוֹ עַל אֵלֶּה מַכָּה רַבָּה וְנִקְלָה אָחִיךָ לְעֵינֶיךָ" (דברים כה ג)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אַרְבָּעִים יַכֶּנּוּ <strong>לֹא יֹסִיף</strong> פֶּן יֹסִיף לְהַכֹּתוֹ עַל אֵלֶּה מַכָּה רַבָּה וְנִקְלָה אָחִיךָ לְעֵינֶיךָ" (דברים כה ג)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>מסביר שהדברים קל וחומר- אם המכה את הרשע שנתחייב מלקות מכה אחת יתר על הראוי עובר בלאו, כל שכן המכה את הצדיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>מסביר שהדברים קל וחומר- אם המכה את הרשע שנתחייב מלקות מכה אחת יתר על הראוי עובר בלאו, כל שכן המכה את הצדיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> בסנהדרין (נח:) מובאים דברי <strong>ר' חנינא</strong>, הלומד ממשה שהרג את המצרי שהכה את העברי, שגוי שהכה את ישראל חייב מיתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> בסנהדרין (נח:) מובאים דברי <strong>ר' חנינא</strong>, הלומד ממשה שהרג את המצרי שהכה את העברי, שגוי שהכה את ישראל חייב מיתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (שם) ממשיכה ומביאה ממאמריהם של כמה אמוראים בגנות המרים יד על חבירו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (שם) ממשיכה ומביאה ממאמריהם של כמה אמוראים בגנות המרים יד על חבירו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ריש לקיש </strong>לומד מהנאמר לאיש העברי המכה מפי משה רבינו: "וַיֹּאמֶר לָרָשָׁע לָמָּה תַכֶּה רֵעֶךָ" (שמות ב יג), שהמרים יד על חברו, עוד לפני שהכהו נקרא רשע (שהרי הפסוק מדבר בלשון עבר- 'תכה' ולא 'היכית'). <strong>ר' חנינא</strong> קוראו "חוטא" מהנאמר בבני עלי "וְאִם לֹא לָקַחְתִּי בְחָזְקָה" (שמואל א ב טז), שאיימו לקחת בחזקה את הבשר מהמקריבים בשילה, ואף שלא הפעילו כח בסופו של דבר, הכתוב קוראם חוטאים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ריש לקיש </strong>לומד מהנאמר לאיש העברי המכה מפי משה רבינו: "וַיֹּאמֶר לָרָשָׁע לָמָּה תַכֶּה רֵעֶךָ" (שמות ב יג), שהמרים יד על חברו, עוד לפני שהכהו נקרא רשע (שהרי הפסוק מדבר בלשון עבר- 'תכה' ולא 'היכית'). <strong>ר' חנינא</strong> קוראו "חוטא" מהנאמר בבני עלי "וְאִם לֹא לָקַחְתִּי בְחָזְקָה" (שמואל א ב טז), שאיימו לקחת בחזקה את הבשר מהמקריבים בשילה, ואף שלא הפעילו כח בסופו של דבר, הכתוב קוראם חוטאים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מביא רק את דברי ריש לקיש. בהגהות מיימוניות מובא בשם <strong>ראב"ן</strong>, שהמשמעות של שם רשע של המרים יד על חברו להכותו היא שהוא פסול לעדות, ואף יש להכריז על רשעותו בבית הכנסת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מביא רק את דברי ריש לקיש. בהגהות מיימוניות מובא בשם <strong>ראב"ן</strong>, שהמשמעות של שם רשע של המרים יד על חברו להכותו היא שהוא פסול לעדות, ואף יש להכריז על רשעותו בבית הכנסת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהלכות מלכים (פרק י הלכה ו) פוסק ה<strong>רמב"ם </strong>שגוי שחבל בישראל חייב מיתה, אך מיתה זו בידי שמים היא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהלכות מלכים (פרק י הלכה ו) פוסק ה<strong>רמב"ם </strong>שגוי שחבל בישראל חייב מיתה, אך מיתה זו בידי שמים היא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ א-ב) כותב כרמב"ם, אך שלא כרמב"ם, הוא אינו מביא את דין גוי שהכה ישראל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ א-ב) כותב כרמב"ם, אך שלא כרמב"ם, הוא אינו מביא את דין גוי שהכה ישראל.</p>
                     
                 </div>
                 
                 <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">האיסור על אדם לחבול בעצמו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">האיסור על אדם לחבול בעצמו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (צ:) מביאה מדברי <strong>ר' עקיבא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (צ:) מביאה מדברי <strong>ר' עקיבא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"...החובל בעצמו אף על פי שאינו רשאי פטור..."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"...החובל בעצמו אף על פי שאינו רשאי פטור..."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (צא.:) מקשה מברייתא שם נאמרה גרסה אחרת בדברי ר' עקיבא, לפיה אדם רשאי לחבול בעצמו. הגמרא עונה שבמשנה מדובר על חבלה, שאין אדם רשאי לחבול בעצמו, ואילו בברייתא מדובר על בושת, שאדם רשאי לבייש את עצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (צא.:) מקשה מברייתא שם נאמרה גרסה אחרת בדברי ר' עקיבא, לפיה אדם רשאי לחבול בעצמו. הגמרא עונה שבמשנה מדובר על חבלה, שאין אדם רשאי לחבול בעצמו, ואילו בברייתא מדובר על בושת, שאדם רשאי לבייש את עצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong> העוסקת בדיני שבועות:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה <strong>ברייתא</strong> העוסקת בדיני שבועות:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"יכול נשבע להרע בעצמו ולא הרע יהא פטור? ת"ל 'לְהָרַע אוֹ לְהֵיטִיב', מה הטבה רשות אף הרעה רשות אביא נשבע להרע בעצמו ולא הרע"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"יכול נשבע להרע בעצמו ולא הרע יהא פטור? ת"ל 'לְהָרַע אוֹ לְהֵיטִיב', מה הטבה רשות אף הרעה רשות אביא נשבע להרע בעצמו ולא הרע"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כיוון שהנשבע לעשות דבר מה ולא עשהו, חייב רק אם אותו דבר הוא דבר הרשות (שאין שבועה חלה על דבר מצווה), אומרת הברייתא שמי שנשבע להרע לעצמו ולא עשה כך חייב. מה שאין כן מי שנשבע להרע לזולתו ולא עשה כך, שפטור, שהרי אסור לו להרע לזולתו ונמצא שלא נשבע על דבר הרשות. נמצאנו למדים, שהרעה לעצמו היא רשות. מהמשך הברייתא לומדת הגמרא שאותה הרעה כוללת אפילו חבלה, ועדיין מכנה הברייתא הרעה לעצמו בשם 'רשות'. מתוך כך מגיעה הגמרא למסקנה שמחלוקת התנאים היא האם מותר לאדם לחבול בעצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כיוון שהנשבע לעשות דבר מה ולא עשהו, חייב רק אם אותו דבר הוא דבר הרשות (שאין שבועה חלה על דבר מצווה), אומרת הברייתא שמי שנשבע להרע לעצמו ולא עשה כך חייב. מה שאין כן מי שנשבע להרע לזולתו ולא עשה כך, שפטור, שהרי אסור לו להרע לזולתו ונמצא שלא נשבע על דבר הרשות. נמצאנו למדים, שהרעה לעצמו היא רשות. מהמשך הברייתא לומדת הגמרא שאותה הרעה כוללת אפילו חבלה, ועדיין מכנה הברייתא הרעה לעצמו בשם 'רשות'. מתוך כך מגיעה הגמרא למסקנה שמחלוקת התנאים היא האם מותר לאדם לחבול בעצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מחפשת מקור לאיסור על אדם לחבול בעצמו, ולמסקנתה המקור הוא ממה שכותבת התורה בעניין נזיר:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מחפשת מקור לאיסור על אדם לחבול בעצמו, ולמסקנתה המקור הוא ממה שכותבת התורה בעניין נזיר:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"וְכִפֶּר עָלָיו מֵאֲשֶׁר חָטָא עַל הַנָּפֶשׁ"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"וְכִפֶּר עָלָיו מֵאֲשֶׁר חָטָא עַל הַנָּפֶשׁ"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שכיוון שציער הנזיר את עצמו נחשב הוא כחוטא. וכל שכן אדם החובל בעצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שכיוון שציער הנזיר את עצמו נחשב הוא כחוטא. וכל שכן אדם החובל בעצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לפנינו פוסק שאסור לאדם לחבול בין בעצמו ובין באחרים, ולא מחלק בין השנים. אמנם בהלכות שבועות (פרק ה הלכה יז) פוסק הרמב"ם שאדם שנשבע שיחבול בעצמו, חלה השבועה כדבר הרשות. ומסביר ה<strong>רדב"ז</strong> (שם), שלמרות שאסור לו לאדם לחבול בעצמו, כיוון שאיסור זה מדברי סופרים אין זה נחשב כשבועה על דבר מצווה שאינה חלה. כך הסביר גם ה<strong>מאירי</strong> על הסוגיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לפנינו פוסק שאסור לאדם לחבול בין בעצמו ובין באחרים, ולא מחלק בין השנים. אמנם בהלכות שבועות (פרק ה הלכה יז) פוסק הרמב"ם שאדם שנשבע שיחבול בעצמו, חלה השבועה כדבר הרשות. ומסביר ה<strong>רדב"ז</strong> (שם), שלמרות שאסור לו לאדם לחבול בעצמו, כיוון שאיסור זה מדברי סופרים אין זה נחשב כשבועה על דבר מצווה שאינה חלה. כך הסביר גם ה<strong>מאירי</strong> על הסוגיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> (מובא בשטמ"ק) פוסק להלכה שאדם רשאי לחבול בעצמו, אף שאינו רשאי לפגוע ברכושו. הוא לומד זאת מהמסופר בגמרא על ר' חסדא שכשהיה מהלך בין הקוצים היה מגביה שולי גלימתו כדי שינזקו רגליו ולא בגדיו באומרו שרגליו יתרפאו, אך הבגד אינו מתרפא<sup id="ref51"><a href="#fn51">[51]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"ה</strong> (מובא בשטמ"ק) פוסק להלכה שאדם רשאי לחבול בעצמו, אף שאינו רשאי לפגוע ברכושו. הוא לומד זאת מהמסופר בגמרא על ר' חסדא שכשהיה מהלך בין הקוצים היה מגביה שולי גלימתו כדי שינזקו רגליו ולא בגדיו באומרו שרגליו יתרפאו, אך הבגד אינו מתרפא<sup id="ref51"><a href="#fn51">[51]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ א-ב) מעתיק את לשון הרמב"ם אך משמיט את איסור החבלה של אדם בעצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ א-ב) מעתיק את לשון הרמב"ם אך משמיט את איסור החבלה של אדם בעצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"א</strong> בהלכות שבועות (יו"ד רלו ב) כותב את דברי הרמב"ם בהלכות שבועות, שאסור לאדם לחבול בעצמו, ובכל זאת אין זאת אלא מדברי סופרים ולכן נחשב הדבר כדבר הרשות ושבועה חלה עליו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"א</strong> בהלכות שבועות (יו"ד רלו ב) כותב את דברי הרמב"ם בהלכות שבועות, שאסור לאדם לחבול בעצמו, ובכל זאת אין זאת אלא מדברי סופרים ולכן נחשב הדבר כדבר הרשות ושבועה חלה עליו.</p>
                     
                 </div>
                 
@@ -1085,45 +1085,45 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>קנס קנסו חכמים לאלו השוטים בעלי זרוע שיהיה הנחבל נאמן ונשבע בנקיטת חפץ שזה חבל בו חבל זה ונוטל מה שראוי לו, והוא שיהיו שם עדים. כיצד, היו שני עדים מעידין אותו שנכנס לתוך ידו שלם ויצא חבול ולא ראוהו בעת שחבל בו והוא אומר לא חבלתי והלה אומר אתה חבלת בי הרי זה נשבע ונוטל. </strong>קנס קנסו חכמים. א"א לא היה קנס אלא שאין דרך בני אדם לחבל בעצמן ע"כ האמינוהו לזה בשבועה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>במה דברים אמורים בשהיתה המכה במקום שאפשר לו להכותה לעצמו או שהיה עמהם שלישי שאפשר שזה הנחבל אמר לו לחבול בו ולהתרעם על אחר, אבל אם אין עמהם אחר והיתה המכה במקום שאינו יכול לעשותה בעצמו כגון שהיתה נשיכה בין כתפיו וכיוצא בזה הרי זה נוטל בלא שבועה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נחבל שטוען- 'חבלת בי' והלה מכחיש</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נחבל שטוען- 'חבלת בי' והלה מכחיש</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בשבועות (מד:) מפרטת רשימה של טוענים שיש להם להישבע על טענתם וליטול כפי שטענו:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> בשבועות (מד:) מפרטת רשימה של טוענים שיש להם להישבע על טענתם וליטול כפי שטענו:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ואלו נשבעין ונוטלין השכיר והנגזל והנחבל...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ואלו נשבעין ונוטלין השכיר והנגזל והנחבל...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">...נחבל כיצד? היו מעידים אותו שנכנס תחת ידו שלם ויצא חבול, ואמר לו- חבלת בי! והוא אומר לא חבלתי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">...נחבל כיצד? היו מעידים אותו שנכנס תחת ידו שלם ויצא חבול, ואמר לו- חבלת בי! והוא אומר לא חבלתי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרי זה נשבע ונוטל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרי זה נשבע ונוטל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יהודה</strong> אומר עד שתהא שם מקצת הודאה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי יהודה</strong> אומר עד שתהא שם מקצת הודאה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כיצד? אמר לו חבלת בי שתים והלה אומר לא חבלתי בך אלא אחת."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כיצד? אמר לו חבלת בי שתים והלה אומר לא חבלתי בך אלא אחת."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לדברי <strong>תנא קמא</strong>, כאשר העדים לא ראו שחבל האחד בחברו, אך הם ראו שנכנס הנחבל לרשות אחת עם החובל כשהוא שלם, ויצא כשהוא חבול, יכול הנחבל להישבע שהחובל חבלו ולקבל תשלומים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, לדברי <strong>תנא קמא</strong>, כאשר העדים לא ראו שחבל האחד בחברו, אך הם ראו שנכנס הנחבל לרשות אחת עם החובל כשהוא שלם, ויצא כשהוא חבול, יכול הנחבל להישבע שהחובל חבלו ולקבל תשלומים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יהודה</strong> חולק, וסובר שבכדי להישבע וליטול יש צורך בהודאה במקצת, למשל, שיודה החובל בחלק מהנזק. <strong>רש"י</strong> מסביר שלפי ר' יהודה, ראוי היה שהנתבע ישבע ויפטר, כדין מודה במקצת, שנשבע ונפטר, אך במקרים בהם עוסקת המשנה מועברת שבועה זו על התובע שישבע ויטול.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יהודה</strong> חולק, וסובר שבכדי להישבע וליטול יש צורך בהודאה במקצת, למשל, שיודה החובל בחלק מהנזק. <strong>רש"י</strong> מסביר שלפי ר' יהודה, ראוי היה שהנתבע ישבע ויפטר, כדין מודה במקצת, שנשבע ונפטר, אך במקרים בהם עוסקת המשנה מועברת שבועה זו על התובע שישבע ויטול.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (מו:) מובא בשם <strong>שמואל</strong> שמזקיקים את הנחבל להישבע רק מחשש שמא חבל הוא בעצמו והוא רוצה לטפול את האשמה על חברו. לכן, במקרה בו החבלה היא באופן בו לא יכול אדם לחבול בעצמו (למשל כאשר מדובר על נשיכה בגבו וכדומה), וכמו כן לא היה שם אף אדם אחר חוץ מהנתבע, מחייבים את הנתבע אף בלי שישבע הנחבל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (מו:) מובא בשם <strong>שמואל</strong> שמזקיקים את הנחבל להישבע רק מחשש שמא חבל הוא בעצמו והוא רוצה לטפול את האשמה על חברו. לכן, במקרה בו החבלה היא באופן בו לא יכול אדם לחבול בעצמו (למשל כאשר מדובר על נשיכה בגבו וכדומה), וכמו כן לא היה שם אף אדם אחר חוץ מהנתבע, מחייבים את הנתבע אף בלי שישבע הנחבל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> (מובא בטור סי' צ) כותב שנוטל הנחבל ללא שבועה גם במקרה בו היה שם אדם נוסף, אך ברור לעדים שלא חבל בו אותו אדם נוסף, או באופן כללי, בכל מקרה בו ברור לעדים ולדיינים שלא היה יכול להיחבל בשום דרך אחרת אלא על ידי הנתבע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"ה</strong> (מובא בטור סי' צ) כותב שנוטל הנחבל ללא שבועה גם במקרה בו היה שם אדם נוסף, אך ברור לעדים שלא חבל בו אותו אדם נוסף, או באופן כללי, בכל מקרה בו ברור לעדים ולדיינים שלא היה יכול להיחבל בשום דרך אחרת אלא על ידי הנתבע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד כותב הרמ"ה, שכל דין המשנה, שיכול הנחבל להישבע שזה חבל בו וליטול, אמור בשנים שמראש ידוע שיש קטטה ביניהם, אך אם אין ביניהם קטטה, לא תיקנו חכמים לנחבל להישבע וליטול.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד כותב הרמ"ה, שכל דין המשנה, שיכול הנחבל להישבע שזה חבל בו וליטול, אמור בשנים שמראש ידוע שיש קטטה ביניהם, אך אם אין ביניהם קטטה, לא תיקנו חכמים לנחבל להישבע וליטול.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (צ טז) פוסק כת"ק במשנה, וכדברי שמואל בגמרא. את דברי הרמ"ה מביא השו"ע למחצה, ללא הדרישה שיהיו הנחבל והחובל שנים שידוע שיש קטטה ביניהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (צ טז) פוסק כת"ק במשנה, וכדברי שמואל בגמרא. את דברי הרמ"ה מביא השו"ע למחצה, ללא הדרישה שיהיו הנחבל והחובל שנים שידוע שיש קטטה ביניהם.</p>
                     
                 </div>
                 
@@ -1131,37 +1131,37 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו-ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הודה החובל שהוא חבל משלם חמשה דברים, שהרי העדים היו שם שנכנס לתוך ידו שלם בשעת המריבה ויצא חבול, אבל אם לא היו שם עדים כלל והוא אומר חבלת בי והודה מעצמו פטור מן הנזק ומן הצער וחייב בשבת  ובושת וריפוי על פי עצמו, לפיכך אם כפר ואמר לא חבלתי נשבע שבועת הסת. </strong>הודה החובל וכו' פטור מן הנזק ומן הצער. א"א לא ידעתי למה פטור מאלו ואולי יאמר מפני שצריך אומדנא וזה אף על פי שמודה לו בחבלה אינו יודע באומד לפיכך פטור מהם אבל השבת והריפוי שהם נראים לעין חייב ואינו מחוור שהכל צריך אומד הילכך חייב בכל או פטור מן הכל.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ולמה משלם אדם שלשה דברים אלו על פי עצמו, שהשבת והריפוי ממון הוא ואינו קנס, שאם לא יתן לו הרי חסרו ממון שהוא מתרפא בו ובטל ממלאכתו, והבושת לא הגיעה לו אלא בשעה שהודה בפנינו שהוא חבל בו, שהנחבל שלא חבל בו בפני בני אדם אין לו בושת והודאתו בבית דין היא שביישה אותו. </strong>והודאתו בבית דין היא שביישה אותו. א"א סוף דבר דינא דגיתי הוא זה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>נמצאת למד שאין הפרש בבושת בין בושה המגיעה לו אם חבל בו בפני אחרים ובין בושה המגיעה לו בעת שהודה בפני אחרים שחבל בו, לפיכך משלם אדם בושת על פי עצמו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חמשת תשלומי החובל, ממון או קנס?- דין המודה בחבלה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חמשת תשלומי החובל, ממון או קנס?- דין המודה בחבלה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ההבדל בין ממון לקנס הוא שבעוד שהממון עניינו פיצוי על נזק כספי בעזרת תגמול כספי מקביל לו, קנס אינו בא תחת הפסד כספי של מקבל התשלום, ולכן אפילו כשישנו הפסד כספי, יכול הקנס להיות גבוה יותר או נמוך יותר. דוגמאות לקנס הם למשל תשלומים קבועים שונים שחייבה תורה כקנס שלושים שקלים על נגיחת עבד, או תשלומים שאינם שווים לנזק כתשלומי כפל שמשלם גנב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ההבדל בין ממון לקנס הוא שבעוד שהממון עניינו פיצוי על נזק כספי בעזרת תגמול כספי מקביל לו, קנס אינו בא תחת הפסד כספי של מקבל התשלום, ולכן אפילו כשישנו הפסד כספי, יכול הקנס להיות גבוה יותר או נמוך יותר. דוגמאות לקנס הם למשל תשלומים קבועים שונים שחייבה תורה כקנס שלושים שקלים על נגיחת עבד, או תשלומים שאינם שווים לנזק כתשלומי כפל שמשלם גנב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין מיוחד לקנס, שאינו קיים בממון, הוא שהמודה בקנס לפני שבאו עדים והעידו לרעתו, פטור. דין זה נלמד מהנאמר בתשלומי כפל: "אֲשֶׁר יַרְשִׁיעֻן אֱלֹקִים יְשַׁלֵּם שְׁנַיִם לְרֵעֵהוּ" (שמות כב ח) 'ירשיעון'- פרט למרשיע את עצמו (בגמרא עה.).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דין מיוחד לקנס, שאינו קיים בממון, הוא שהמודה בקנס לפני שבאו עדים והעידו לרעתו, פטור. דין זה נלמד מהנאמר בתשלומי כפל: "אֲשֶׁר יַרְשִׁיעֻן אֱלֹקִים יְשַׁלֵּם שְׁנַיִם לְרֵעֵהוּ" (שמות כב ח) 'ירשיעון'- פרט למרשיע את עצמו (בגמרא עה.).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפרק המניח (כז:) מובא ב<strong>גמרא</strong> שר' חסדא רצה לחייב אדם שהכה את חברו במעדר ור' נחמן העיר לו שאין גובים קנסות בבבל. מכאן למד ה<strong>רמב"ם</strong>, שתשלומי הבושת, הנזק והצער אינם ממון אלא קנס<sup id="ref52"><a href="#fn52">[52]</a></sup>. את תשלומי הריפוי והשבת לא כלל הרמב"ם בגדר הקנס משום שתשלומים אלה הם פיצוי על הפסד כספי מוגדר שנגרם לניזק עקב הפסד השתכרות או הוצאות רפואיות, לכן הם מוגדרים ממון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפרק המניח (כז:) מובא ב<strong>גמרא</strong> שר' חסדא רצה לחייב אדם שהכה את חברו במעדר ור' נחמן העיר לו שאין גובים קנסות בבבל. מכאן למד ה<strong>רמב"ם</strong>, שתשלומי הבושת, הנזק והצער אינם ממון אלא קנס<sup id="ref52"><a href="#fn52">[52]</a></sup>. את תשלומי הריפוי והשבת לא כלל הרמב"ם בגדר הקנס משום שתשלומים אלה הם פיצוי על הפסד כספי מוגדר שנגרם לניזק עקב הפסד השתכרות או הוצאות רפואיות, לכן הם מוגדרים ממון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, סוברים ראשונים אחרים ובהם ה<strong>מגיד משנה</strong>, ה<strong>טור</strong> וה<strong>ראב"ד</strong>, שכל תשלומי החובל הם תשלומי ממון<sup id="ref53"><a href="#fn53">[53]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, סוברים ראשונים אחרים ובהם ה<strong>מגיד משנה</strong>, ה<strong>טור</strong> וה<strong>ראב"ד</strong>, שכל תשלומי החובל הם תשלומי ממון<sup id="ref53"><a href="#fn53">[53]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">למרות שהרמב"ם מחשיב את הבושת כקנס, עדיין מחייב הרמב"ם חובל שהודה ללא עדים בתשלומי בושת. הרמב"ם מסביר שהחובל מבייש את הנחבל בעצם הודאתו בבית הדין, ולכן שונה דינו מהמודה בקנס על דבר שנעשה כבר בעבר. שבעוד שזה האחרון פטור, המודה שבייש משלם בושת על פי עצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">למרות שהרמב"ם מחשיב את הבושת כקנס, עדיין מחייב הרמב"ם חובל שהודה ללא עדים בתשלומי בושת. הרמב"ם מסביר שהחובל מבייש את הנחבל בעצם הודאתו בבית הדין, ולכן שונה דינו מהמודה בקנס על דבר שנעשה כבר בעבר. שבעוד שזה האחרון פטור, המודה שבייש משלם בושת על פי עצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בכל תביעה ממונית בה הנתבע כופר בכל, תיקנו חכמים שישבע הנתבע שבועת היסת ויפטר, על בסיס ההנחה ש"אין אדם תובע אלא אם כן יש לו עליו" (שבועות מ:). אמנם, בתביעות בהן גם לו היה הנתבע מודה, היה פטור מלשלם, לא חייבו חכמים את הנתבע להישבע בנכונות כפירתו (עי' רמב"ם טוען ונטען פרק א הלכה כ). לכן, אם תובע האחד את חברו שחייב לו קנס, וכופר הנתבע, פטור משבועת היסת, כיוון שגם לו היה מודה, היה פטור, כדין מודה בקנס. כיוון שכאמור, חלק מתשלומי החובל הינם תשלומי ממון, פוסק הרמב"ם לפנינו שאם תובע האחד את חברו שחבל בו, והלה מכחיש מכל וכל, צריך הנתבע להישבע היסת על מנת להיפטר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בכל תביעה ממונית בה הנתבע כופר בכל, תיקנו חכמים שישבע הנתבע שבועת היסת ויפטר, על בסיס ההנחה ש"אין אדם תובע אלא אם כן יש לו עליו" (שבועות מ:). אמנם, בתביעות בהן גם לו היה הנתבע מודה, היה פטור מלשלם, לא חייבו חכמים את הנתבע להישבע בנכונות כפירתו (עי' רמב"ם טוען ונטען פרק א הלכה כ). לכן, אם תובע האחד את חברו שחייב לו קנס, וכופר הנתבע, פטור משבועת היסת, כיוון שגם לו היה מודה, היה פטור, כדין מודה בקנס. כיוון שכאמור, חלק מתשלומי החובל הינם תשלומי ממון, פוסק הרמב"ם לפנינו שאם תובע האחד את חברו שחבל בו, והלה מכחיש מכל וכל, צריך הנתבע להישבע היסת על מנת להיפטר.</p>
                     
                 </div>
                 
@@ -1169,47 +1169,47 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט-י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אינו דומה מזיק חבירו בגופו למזיק ממונו, שהמזיק ממון חבירו כיון ששלם מה שהוא חייב לשלם נתכפר לו אבל חובל בחבירו אף על פי שנתן לו חמשה דברים אין מתכפר לו ואפילו הקריב כל אילי נביות אין מתכפר לו ולא נמחל עונו עד שיבקש מן הנחבל וימחול לו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ואסור לנחבל להיות אכזרי ולא ימחול לו ואין זו דרך זרע ישראל אלא כיון שבקש ממנו החובל ונתחנן לו פעם ראשונה ושניה וידע שהוא שב מחטאו וניחם על רעתו ימחול לו, וכל הממהר למחול הרי הוא משובח ורוח חכמים נוחה הימנו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חובת בקשת המחילה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חובת בקשת המחילה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (צב.):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (צב.):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אף על פי שהוא נותן לו אין נמחל לו עד שיבקש ממנו שנאמר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אף על פי שהוא נותן לו אין נמחל לו עד שיבקש ממנו שנאמר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">'וְעַתָּה הָשֵׁב אֵשֶׁת הָאִישׁ כִּי נָבִיא הוּא וְיִתְפַּלֵּל בַּעַדְךָ וֶחְיֵה וְאִם אֵינְךָ מֵשִׁיב דַּע כִּי מוֹת תָּמוּת אַתָּה וְכָל אֲשֶׁר לָךְ' (בראשית כ ז).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">'וְעַתָּה הָשֵׁב אֵשֶׁת הָאִישׁ כִּי נָבִיא הוּא וְיִתְפַּלֵּל בַּעַדְךָ וֶחְיֵה וְאִם אֵינְךָ מֵשִׁיב דַּע כִּי מוֹת תָּמוּת אַתָּה וְכָל אֲשֶׁר לָךְ' (בראשית כ ז).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומנין שאם לא מחל לו שהוא אכזרי?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומנין שאם לא מחל לו שהוא אכזרי?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שנאמר 'וַיִּתְפַּלֵּל אַבְרָהָם אֶל הָאֱלֹהִים וַיִּרְפָּא אֱלֹהִים אֶת אֲבִימֶלֶךְ וְאֶת אִשְׁתּוֹ וְאַמְהֹתָיו וַיֵּלֵדוּ' (בראשית כ יז)"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שנאמר 'וַיִּתְפַּלֵּל אַבְרָהָם אֶל הָאֱלֹהִים וַיִּרְפָּא אֱלֹהִים אֶת אֲבִימֶלֶךְ וְאֶת אִשְׁתּוֹ וְאַמְהֹתָיו וַיֵּלֵדוּ' (בראשית כ יז)"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אבימלך הצטווה לא רק להחזיר את שרה, אלא לרצות את אברהם עד שיתפלל בעדו. מכאן לומדת המשנה שחובה על החובל לרצות את הנחבל ולבקש את מחילתו. מכך שאברהם אכן התרצה, לומדת המשנה שמידת החסד של אברהם אבינו מחייבת שימחול אדם לחברו, ואם לא מחל הרי שאין בו מידה זו, והרי הוא אכזרי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אבימלך הצטווה לא רק להחזיר את שרה, אלא לרצות את אברהם עד שיתפלל בעדו. מכאן לומדת המשנה שחובה על החובל לרצות את הנחבל ולבקש את מחילתו. מכך שאברהם אכן התרצה, לומדת המשנה שמידת החסד של אברהם אבינו מחייבת שימחול אדם לחברו, ואם לא מחל הרי שאין בו מידה זו, והרי הוא אכזרי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong> מקבילה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה <strong>ברייתא</strong> מקבילה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כל אלו שאמרו דמי בושתו אבל צערו אפילו הביא כל אילי נביות שבעולם אין נמחל לו עד שיבקש ממנו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כל אלו שאמרו דמי בושתו אבל צערו אפילו הביא כל אילי נביות שבעולם אין נמחל לו עד שיבקש ממנו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> וה<strong>טור</strong> פירשו, שכוונת הברייתא לומר שדמי הבושת שפסקה המשנה הקודמת (צ.) אינם מספיקים עבור מחילה, אלא יש לבקש מחילה מהמתבייש כדי שימחול על גרימת הצער הנפשי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> וה<strong>טור</strong> פירשו, שכוונת הברייתא לומר שדמי הבושת שפסקה המשנה הקודמת (צ.) אינם מספיקים עבור מחילה, אלא יש לבקש מחילה מהמתבייש כדי שימחול על גרימת הצער הנפשי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מפירושם משמע שדווקא על נזקים שחייב בהם בבושת יש לבקש מחילה, דהיינו, דווקא דברים שנתכוון להזיק, ולא דברים שנעשו בשוגג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מפירושם משמע שדווקא על נזקים שחייב בהם בבושת יש לבקש מחילה, דהיינו, דווקא דברים שנתכוון להזיק, ולא דברים שנעשו בשוגג.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בשיטה מקובצת מובא בשם <strong>גאון</strong>, שהכוונה בברייתא היא לצער ממש. כלומר, כאשר יש צער וכאב של הגוף, הניזק אינו מוחל ללא בקשת מחילה, מה שאין כן כאשר אין צער, אז הניזק מתרצה לסלוח גם ללא בקשת מחילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בשיטה מקובצת מובא בשם <strong>גאון</strong>, שהכוונה בברייתא היא לצער ממש. כלומר, כאשר יש צער וכאב של הגוף, הניזק אינו מוחל ללא בקשת מחילה, מה שאין כן כאשר אין צער, אז הניזק מתרצה לסלוח גם ללא בקשת מחילה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי ה<strong>רמב"ם</strong> משמע שבכל חבלה יש צורך לבקש מחילה כדי שיתכפר החטא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי ה<strong>רמב"ם</strong> משמע שבכל חבלה יש צורך לבקש מחילה כדי שיתכפר החטא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכב א) כתב כדברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכב א) כתב כדברי הרמב"ם.</p>
                     
                 </div>
                 
@@ -1217,85 +1217,85 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא-יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ועוד יש הפרש בין נזקי גופו לנזקי ממונו, שהאומר לחבירו סמא עיני קטע את ידי על מנת שאתה פטור הרי זה חייב בחמשה דברים שהדבר ידוע שאין אדם רוצה בכך. אבל האומר לחבירו קרע את כסותי שבר את כדי על מנת שאתה פטור הרי זה פטור, ואם לא אמר לו על מנת שאתה פטור הרי זה חייב לשלם אף על פי שהרשהו להשחית. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>במה דברים אמורים בשבאו הכלים לידו תחילה בתורת שמירה כגון שהיו שאולין או מופקדין אצלו ואמר לו שבר וקרע ועשה כן חייב לשלם עד שיאמר לו על מנת שאתה פטור, אבל אם אמר לו קח כלי זה ושברו, בגד זה וקרעו, ועשה כן הרי זה פטור. </strong>
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוחל על נזקיו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המוחל על נזקיו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (צב.) מציגה הבדל בין חבלות גוף לבין היזק לממון:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (צב.) מציגה הבדל בין חבלות גוף לבין היזק לממון:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"האומר סמא את עיני קטע את ידי שבר את רגלי- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"האומר סמא את עיני קטע את ידי שבר את רגלי- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על מנת לפטור- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על מנת לפטור- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">קרע את כסותי שבר את כדי- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">קרע את כסותי שבר את כדי- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על מנת לפטור פטור"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על מנת לפטור פטור"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם אדם אמר לחברו להטיל בו מום ועשה זאת חברו, חייב החבר אפילו אם אמר לו הנחבל שיהיה פטור, שכן אנו מניחים שלא התכוון למחול על הנזק אפילו שאמר זאת (בהמשך יבואר מדוע). לעומת זאת, אם אדם אמר לחברו להזיק לרכושו, אם אמר לו שיהיה פטור אם יעשה זאת, הוא אכן פטור על הנזק, ואנו מניחים שהנחבל התכוון באמת לדבריו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם אדם אמר לחברו להטיל בו מום ועשה זאת חברו, חייב החבר אפילו אם אמר לו הנחבל שיהיה פטור, שכן אנו מניחים שלא התכוון למחול על הנזק אפילו שאמר זאת (בהמשך יבואר מדוע). לעומת זאת, אם אדם אמר לחברו להזיק לרכושו, אם אמר לו שיהיה פטור אם יעשה זאת, הוא אכן פטור על הנזק, ואנו מניחים שהנחבל התכוון באמת לדבריו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה, כאמור, הובאו שני תרחישים קיצוניים, האחד אמור בנזק המטיל מום קבוע ("ראשי איברים"), והשני אמור בנזק לממון. ב<strong>ברייתא</strong> מובאת דוגמה לנזק הגוף שאינו קבוע:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במשנה, כאמור, הובאו שני תרחישים קיצוניים, האחד אמור בנזק המטיל מום קבוע ("ראשי איברים"), והשני אמור בנזק לממון. ב<strong>ברייתא</strong> מובאת דוגמה לנזק הגוף שאינו קבוע:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכני, פצעני, על מנת לפטור- פטור"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הכני, פצעני, על מנת לפטור- פטור"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, דין נזק זה הוא כדין נזק הממון שבמשנה, שאם אמר הניזק שיהיה המזיק פטור, הוא אכן נפטר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, דין נזק זה הוא כדין נזק הממון שבמשנה, שאם אמר הניזק שיהיה המזיק פטור, הוא אכן נפטר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (צג.) חלקו האמוראים מה ההבדל בין נזק גוף קבוע בו מחילתו של האדם אינה מועילה, לבין נזק ממון או נזק פציעה בו מחילתו מועילה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך (צג.) חלקו האמוראים מה ההבדל בין נזק גוף קבוע בו מחילתו של האדם אינה מועילה, לבין נזק ממון או נזק פציעה בו מחילתו מועילה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב ששת</strong> מסביר, שהמורה לחברו להטיל בו מום קבוע, יש לומר שאינו מתכוון לכך באמת משום שהדבר יוצר פגם לכל משפחתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב ששת</strong> מסביר, שהמורה לחברו להטיל בו מום קבוע, יש לומר שאינו מתכוון לכך באמת משום שהדבר יוצר פגם לכל משפחתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן שונה במקצת מסביר <strong>רבא</strong>, שמום קבוע גורם לצער גדול וקבוע עד שאנו מפרשים שהנחבל לא התכוון לדבריו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">באופן שונה במקצת מסביר <strong>רבא</strong>, שמום קבוע גורם לצער גדול וקבוע עד שאנו מפרשים שהנחבל לא התכוון לדבריו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מובאים דברי <strong>ר' יוחנן</strong>, המסביר שלעיתים אמירת 'כן' יכולה להתפרש כ'לא', והפוך. הגמרא מביאה <strong>ברייתא</strong> הממחישה זאת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מובאים דברי <strong>ר' יוחנן</strong>, המסביר שלעיתים אמירת 'כן' יכולה להתפרש כ'לא', והפוך. הגמרא מביאה <strong>ברייתא</strong> הממחישה זאת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">" 'הכני', 'פצעני', 'על מנת לפטור?' ואמר לו: 'הן?'- הרי יש הן שהוא כלאו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">" 'הכני', 'פצעני', 'על מנת לפטור?' ואמר לו: 'הן?'- הרי יש הן שהוא כלאו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">'קרע את כסותי', 'על מנת לפטור?' ואמר לו 'לאו?'- הרי לאו שהוא כהן"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">'קרע את כסותי', 'על מנת לפטור?' ואמר לו 'לאו?'- הרי לאו שהוא כהן"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאשר שאל המזיק 'האם אהיה פטור?' והשיב לו הניזק "כן?", בתמיהה, כוונתו היתה 'בוודאי שלא!', והפוך- אם השיב לו "לא?", כוונתו היתה ל'בוודאי שכן, וכי למה לא?'.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כאשר שאל המזיק 'האם אהיה פטור?' והשיב לו הניזק "כן?", בתמיהה, כוונתו היתה 'בוודאי שלא!', והפוך- אם השיב לו "לא?", כוונתו היתה ל'בוודאי שכן, וכי למה לא?'.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים בהבנת דברי ר' יוחנן וביחס בינם לבין דברי האמוראים הקודמים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נחלקו הראשונים בהבנת דברי ר' יוחנן וביחס בינם לבין דברי האמוראים הקודמים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שר' יוחנן בא, כמו האמוראים שלפניו, להסביר את ההבדל שמבדילה המשנה בין גוף לממון, אלא שהוא מסביר זאת בצורה שונה לגמרי מקודמיו. לדעת ר' יוחנן, אין הבדל של ממש בין ממון לבין ראשי איברים או גוף, אלא שהמשנה עוסקת במקרה כעין של הברייתא, בו שאל המזיק האם יפטר והשיב הניזק 'לא?' או 'כן?', ומשמיעה לנו המשנה, שכאשר 'לא' נאמר בלשון תמיהה, הרי משמעותו היא 'כן', והפוך. המשנה כתבה את אמירת ה'לא' שמשמעותה 'כן' דווקא בממון ואת אמירת ה'כן' שמשמעותה 'לא' דווקא בגוף רק משום שזהו המצב השכיח, שאנשים לא ימחלו על נזקי גופם אלא רק על נזקי ממונם, ולא משום שיש הבדל עקרוני בין גוף לבין ממון. במילים אחרות, אין לנו עניין להבין למה באמת התכוון הניזק, ואנו הולכים לפי דבריו, אלא שאנו כוללים את הנימה בה נאמרו הדברים בכלל תוכנם של הדברים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שר' יוחנן בא, כמו האמוראים שלפניו, להסביר את ההבדל שמבדילה המשנה בין גוף לממון, אלא שהוא מסביר זאת בצורה שונה לגמרי מקודמיו. לדעת ר' יוחנן, אין הבדל של ממש בין ממון לבין ראשי איברים או גוף, אלא שהמשנה עוסקת במקרה כעין של הברייתא, בו שאל המזיק האם יפטר והשיב הניזק 'לא?' או 'כן?', ומשמיעה לנו המשנה, שכאשר 'לא' נאמר בלשון תמיהה, הרי משמעותו היא 'כן', והפוך. המשנה כתבה את אמירת ה'לא' שמשמעותה 'כן' דווקא בממון ואת אמירת ה'כן' שמשמעותה 'לא' דווקא בגוף רק משום שזהו המצב השכיח, שאנשים לא ימחלו על נזקי גופם אלא רק על נזקי ממונם, ולא משום שיש הבדל עקרוני בין גוף לבין ממון. במילים אחרות, אין לנו עניין להבין למה באמת התכוון הניזק, ואנו הולכים לפי דבריו, אלא שאנו כוללים את הנימה בה נאמרו הדברים בכלל תוכנם של הדברים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> חולקים על דברי רש"י. אמנם, גם לדעתם ר' יוחנן בא להסביר מהו ההבדל בין גוף לבין ממון. כמו כן, גם לדעתם ר' יוחנן מפרש שהמשנה דיברה במקרה בו שאל המזיק האם יפטר וענה לו הניזק 'כן' או 'לא'. אולם בניגוד לרש"י, מסבירים התוספות שללא קשר לנימה בה נאמרו הדברים, אנו מפרשים ש'כן' הנאמר בנזקי גוף הכוונה ל'לא', כיוון שאדם לא מוחל על נזקי גופו, וש'לא' הנאמר בנזקי ממון הכוונה ל'כן', כיוון שיתכן שמוחל הוא, והוא אף פתח ואמר 'קרע כסותי'.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> חולקים על דברי רש"י. אמנם, גם לדעתם ר' יוחנן בא להסביר מהו ההבדל בין גוף לבין ממון. כמו כן, גם לדעתם ר' יוחנן מפרש שהמשנה דיברה במקרה בו שאל המזיק האם יפטר וענה לו הניזק 'כן' או 'לא'. אולם בניגוד לרש"י, מסבירים התוספות שללא קשר לנימה בה נאמרו הדברים, אנו מפרשים ש'כן' הנאמר בנזקי גוף הכוונה ל'לא', כיוון שאדם לא מוחל על נזקי גופו, וש'לא' הנאמר בנזקי ממון הכוונה ל'כן', כיוון שיתכן שמוחל הוא, והוא אף פתח ואמר 'קרע כסותי'.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם התוספות וגם רש"י סוברים שלדעת ר' יוחנן כל החילוק שבמשנה קיים רק במקרה ששאל הניזק האם יפטר וענה לו המזיק 'הן' או 'לאו'. במקרה שהאמירה היתה ברורה, בסגנון 'קטע ידי על מנת שתיפטר', יהיה הניזק פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם התוספות וגם רש"י סוברים שלדעת ר' יוחנן כל החילוק שבמשנה קיים רק במקרה ששאל הניזק האם יפטר וענה לו המזיק 'הן' או 'לאו'. במקרה שהאמירה היתה ברורה, בסגנון 'קטע ידי על מנת שתיפטר', יהיה הניזק פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שונה מהם מפרש ה<strong>רמב"ם</strong>. לדעתו ר' יוחנן לא בא לחלוק על האמוראים שלפניו. כלומר, אין המשנה יוצאת מידי פשוטה, ובה מדובר על ניזק שאמר את כל המשפט, למשל 'קטע ידי על מנת שתיפטר'. ואפילו אם אמר שיפטר המזיק, עדיין חייב הוא אם מדובר בהטלת מום, כיוון שברור שאין הניזק חפץ בכך ואמר זאת רק לשם היתול ומשום שלא חשב שיקח אותו המזיק ברצינות. גם לפי שיטת ר' יוחנן ההסבר להבדל בין הטלת מום לבין פציעה הוא או הסברו של רבא או של ר' ששת. ר' יוחנן רק חידש שכאשר אומרים 'כן' או 'לא' בלשון תמיהה, הכוונה יכולה להיות הפוכה. ה<strong>מגיד משנה</strong> מעיר שקביעה זו נראית מובנת מאליה לרמב"ם ולכן לא טרח לכתוב את דברי ר' יוחנן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שונה מהם מפרש ה<strong>רמב"ם</strong>. לדעתו ר' יוחנן לא בא לחלוק על האמוראים שלפניו. כלומר, אין המשנה יוצאת מידי פשוטה, ובה מדובר על ניזק שאמר את כל המשפט, למשל 'קטע ידי על מנת שתיפטר'. ואפילו אם אמר שיפטר המזיק, עדיין חייב הוא אם מדובר בהטלת מום, כיוון שברור שאין הניזק חפץ בכך ואמר זאת רק לשם היתול ומשום שלא חשב שיקח אותו המזיק ברצינות. גם לפי שיטת ר' יוחנן ההסבר להבדל בין הטלת מום לבין פציעה הוא או הסברו של רבא או של ר' ששת. ר' יוחנן רק חידש שכאשר אומרים 'כן' או 'לא' בלשון תמיהה, הכוונה יכולה להיות הפוכה. ה<strong>מגיד משנה</strong> מעיר שקביעה זו נראית מובנת מאליה לרמב"ם ולכן לא טרח לכתוב את דברי ר' יוחנן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong> העוסקת בדיני שואל, ודנה בפסוק "כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ כֶּסֶף אוֹ כֵלִים <strong>לִשְׁמֹר</strong>":</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה <strong>ברייתא</strong> העוסקת בדיני שואל, ודנה בפסוק "כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ כֶּסֶף אוֹ כֵלִים <strong>לִשְׁמֹר</strong>":</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">" 'לשמור'- ולא לאבד, 'לשמור'- ולא לקרוע, 'לשמור'- ולא לחלק לעניים"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">" 'לשמור'- ולא לאבד, 'לשמור'- ולא לקרוע, 'לשמור'- ולא לחלק לעניים"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, התורה חייבה את השומר כאשר הוא קיבל את הפיקדון כדי לשומרו, אך אם קיבלו כדי לאבדו או אפילו כדי לחלקו לעניים, ופשע בו ונגנב, אין הוא חייב עליו<sup id="ref54"><a href="#fn54">[54]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, התורה חייבה את השומר כאשר הוא קיבל את הפיקדון כדי לשומרו, אך אם קיבלו כדי לאבדו או אפילו כדי לחלקו לעניים, ופשע בו ונגנב, אין הוא חייב עליו<sup id="ref54"><a href="#fn54">[54]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ברייתא</strong> זו יוצרת קושי על דין המשנה, שכן במשנה נאמר שבאומר לחברו 'קרע כסותי' פטור הקורע רק אם אמר לו הניזק במפורש שיפטר, ואילו מהברייתא משמע שדי שיתן הבעלים את החפץ כדי שהמקבל יאבדו בכדי לפטור את המקבל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ברייתא</strong> זו יוצרת קושי על דין המשנה, שכן במשנה נאמר שבאומר לחברו 'קרע כסותי' פטור הקורע רק אם אמר לו הניזק במפורש שיפטר, ואילו מהברייתא משמע שדי שיתן הבעלים את החפץ כדי שהמקבל יאבדו בכדי לפטור את המקבל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מתרצת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מתרצת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הא (בברייתא, שפטור) דאתא לידיה בתורת שמירה,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הא (בברייתא, שפטור) דאתא לידיה בתורת שמירה,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הא (במשנה, שחייב אא"כ פטרו הבעלים בפירוש) דאתא לידיה בתורת קריעה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הא (במשנה, שחייב אא"כ פטרו הבעלים בפירוש) דאתא לידיה בתורת קריעה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהסבר תשובה זו חלקו הראשונים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהסבר תשובה זו חלקו הראשונים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "הא") מסבירים, שדברי המשנה, שפטרה את המזיק רק אם פטָרוֹ הבעלים בפירוש, אמורים כאשר מראש בא החפץ לידי המזיק לשם שמירה, ולאחר מכן נמלך הבעלים ואמר לשומר להזיקו. במקרה זה כיוון שהשומר קיבל עליו לשמור את החפץ, ומכיוון שמראש ידוע ששמירת החפץ היתה חשובה לבעליו (שהרי לכן נתנו לשומר), אנו פוטרים את המזיק רק אם אמר לו הבעלים מראש שיהיה פטור. אחרת, אנו מפרשים שרק רצה לשטות בו ולא נתכוון ברצינות לדבריו. בשונה מהמשנה, הברייתא מדברת על מקרה בו מראש נתן הבעלים את החפץ למזיק וביקש שיקרעהו. כאן סביר יותר שהבעלים מתכוון לדָבר ברצינות, שכן לא מינה את המקבל להיות שומר בשום שלב, ואף המזיק לא קיבל אחריות על החפץ בשום שלב. לכן פטור הקורע אפילו אם לא התנה הבעלים בפירוש שיפטר. בדרך זו פסק גם ה<strong>רמב"ם</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ד"ה "הא") מסבירים, שדברי המשנה, שפטרה את המזיק רק אם פטָרוֹ הבעלים בפירוש, אמורים כאשר מראש בא החפץ לידי המזיק לשם שמירה, ולאחר מכן נמלך הבעלים ואמר לשומר להזיקו. במקרה זה כיוון שהשומר קיבל עליו לשמור את החפץ, ומכיוון שמראש ידוע ששמירת החפץ היתה חשובה לבעליו (שהרי לכן נתנו לשומר), אנו פוטרים את המזיק רק אם אמר לו הבעלים מראש שיהיה פטור. אחרת, אנו מפרשים שרק רצה לשטות בו ולא נתכוון ברצינות לדבריו. בשונה מהמשנה, הברייתא מדברת על מקרה בו מראש נתן הבעלים את החפץ למזיק וביקש שיקרעהו. כאן סביר יותר שהבעלים מתכוון לדָבר ברצינות, שכן לא מינה את המקבל להיות שומר בשום שלב, ואף המזיק לא קיבל אחריות על החפץ בשום שלב. לכן פטור הקורע אפילו אם לא התנה הבעלים בפירוש שיפטר. בדרך זו פסק גם ה<strong>רמב"ם</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בעל המאור</strong> (מובא בשטמ"ק) מפרש שהברייתא והמשנה דיברו על דרכי נזק שונות. הברייתא מדברת במקרה בו קיבל המזיק את החפץ על מנת להשמידו, ופשע בו, ונגנב או נאבד. במקרה זה פטור השומר כי לא חלים חיובי שומרים אלא במקום בו קיבל השומר על עצמו לשמור את החפץ. מאידך, המשנה מדברת על מקרה בו הוזק החפץ בידיים ובכוונת מכוון. במקרה זה אין המזיק פטור אלא אם כן אמר לו הניזק במפורש לא רק שישמיד את החפץ אלא גם שיהיה פטור<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>בעל המאור</strong> (מובא בשטמ"ק) מפרש שהברייתא והמשנה דיברו על דרכי נזק שונות. הברייתא מדברת במקרה בו קיבל המזיק את החפץ על מנת להשמידו, ופשע בו, ונגנב או נאבד. במקרה זה פטור השומר כי לא חלים חיובי שומרים אלא במקום בו קיבל השומר על עצמו לשמור את החפץ. מאידך, המשנה מדברת על מקרה בו הוזק החפץ בידיים ובכוונת מכוון. במקרה זה אין המזיק פטור אלא אם כן אמר לו הניזק במפורש לא רק שישמיד את החפץ אלא גם שיהיה פטור<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> פסק כרמב"ם בין לגבי נזק ראשי איברים (תכא יב), ובין לגבי נזקי ממון (שפ א). ה<strong>רמ"א</strong> בשני המקומות מביא את שיטת התוספות. במחלוקת בעל המאור עם התוספות, פסק השו"ע כתוספות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> פסק כרמב"ם בין לגבי נזק ראשי איברים (תכא יב), ובין לגבי נזקי ממון (שפ א). ה<strong>רמ"א</strong> בשני המקומות מביא את שיטת התוספות. במחלוקת בעל המאור עם התוספות, פסק השו"ע כתוספות.</p>
                     
                 </div>
                 
@@ -1303,25 +1303,25 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>האומר לחבירו שבר כליו של פלוני על מנת שאתה פטור ועשה הרי זה חייב לשלם, וכאילו אמר לו סמא עינו של פלוני על מנת שאתה פטור, ואף על פי שהעושה הוא החייב לשלם הרי זה האומר לו שותפו בעון ורשע הוא שהרי הכשיל עור וחיזק ידי עוברי עבירה.</strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המורה לחברו להזיק אדם אחר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המורה לחברו להזיק אדם אחר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כותבת ה<strong>משנה</strong> (צב.):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כותבת ה<strong>משנה</strong> (צב.):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">" 'עשֵה כן לאיש פלוני על מנת לפטור'- חייב בין בגופו בין בממונו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">" 'עשֵה כן לאיש פלוני על מנת לפטור'- חייב בין בגופו בין בממונו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אדם המורה לחברו להזיק ממונו של אדם אחר או לחבול בו, חייב המזיק, למרות שהמצווה אותו הבטיח לו שיהיה פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אדם המורה לחברו להזיק ממונו של אדם אחר או לחבול בו, חייב המזיק, למרות שהמצווה אותו הבטיח לו שיהיה פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>רמב"ם </strong>"כאילו אמר לו סמא עינו..." משמע שחידושה של המשנה אינו נוגע לנזקי גוף, בהם כמובן שהחובל הוא החייב, משום שהתשלומים הם גם מצד העונש על עושה העבירה בפועל. חידושה של המשנה הוא דווקא בנזקי ממון, בהם יכולנו לומר שהוראתו של ההמצווה להזיק נחשבת כהתחייבות שהוא ישלם את הנזק. לכן באה המשנה ללמדנו שגם בנזקי ממון התשלום אינו כתשלום חוב בעלמא, בו אדם שאינו הלווה יכול לשעבד עצמו כערב, אלא יש קשר בין העבירה שבגרימת הנזק לבין התשלום, לכן דווקא הגורם את הנזק חייב לשלם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>רמב"ם </strong>"כאילו אמר לו סמא עינו..." משמע שחידושה של המשנה אינו נוגע לנזקי גוף, בהם כמובן שהחובל הוא החייב, משום שהתשלומים הם גם מצד העונש על עושה העבירה בפועל. חידושה של המשנה הוא דווקא בנזקי ממון, בהם יכולנו לומר שהוראתו של ההמצווה להזיק נחשבת כהתחייבות שהוא ישלם את הנזק. לכן באה המשנה ללמדנו שגם בנזקי ממון התשלום אינו כתשלום חוב בעלמא, בו אדם שאינו הלווה יכול לשעבד עצמו כערב, אלא יש קשר בין העבירה שבגרימת הנזק לבין התשלום, לכן דווקא הגורם את הנזק חייב לשלם.</p>
                     
                 </div>
                 
@@ -1329,7 +1329,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1378,6 +1378,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

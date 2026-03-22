@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">מלוה ולוה - פרק ה</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ה)</h3>
                 <ul class="space-y-3">
@@ -1080,7 +1080,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1092,27 +1092,27 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">חלקו הראשון של הפרק (הל' א-ז) עוסק בהיתר להלוות וללוות בריבית מגוי, ובהלכות שונות המסתעפות מכך. החלק השני דן במקרים הקשורים לריבית, מבלי שהריבית תהיה חלק מהלוואה. דבר זה קורה כאשר אדם נותן לחברו ממון או נכסים להתעסק בהם על מנת שיחלקו ברווחים (ח-י), כאשר רק לאחר ההלוואה מקבל המלווה טובת הנאה מהלווה (ריבית מאוחרת, יא-יג). הלכות יד-יז מקבצות עוד מקרים שהמשותף להם שהריבית אינה חלק מהלוואה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">חלקו הראשון של הפרק (הל' א-ז) עוסק בהיתר להלוות וללוות בריבית מגוי, ובהלכות שונות המסתעפות מכך. החלק השני דן במקרים הקשורים לריבית, מבלי שהריבית תהיה חלק מהלוואה. דבר זה קורה כאשר אדם נותן לחברו ממון או נכסים להתעסק בהם על מנת שיחלקו ברווחים (ח-י), כאשר רק לאחר ההלוואה מקבל המלווה טובת הנאה מהלווה (ריבית מאוחרת, יא-יג). הלכות יד-יז מקבצות עוד מקרים שהמשותף להם שהריבית אינה חלק מהלוואה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה א מציגה את הדין מדאורייתא, לפיו מותר להלוות וללוות בריבית מגוי. לפי דעת חלק מהראשונים אף יש מצוות עשה לקחת ריבית מגוי כאשר נותנים לו הלוואה. הלכה ב עוברת לעסוק במישור הדרבנן. בגמרא מובאות דעות המתירות הלוואה בריבית לגוי רק בהיקף מצומצם ("כדי חייו") או רק לאנשים מסויימים (תלמידי חכמים, שלא ילמדו ממעשיו של הגוי). אמנם, הלכה למעשה רבים מהראשונים מתירים הלוואה לגוי בריבית ללא סייג.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה א מציגה את הדין מדאורייתא, לפיו מותר להלוות וללוות בריבית מגוי. לפי דעת חלק מהראשונים אף יש מצוות עשה לקחת ריבית מגוי כאשר נותנים לו הלוואה. הלכה ב עוברת לעסוק במישור הדרבנן. בגמרא מובאות דעות המתירות הלוואה בריבית לגוי רק בהיקף מצומצם ("כדי חייו") או רק לאנשים מסויימים (תלמידי חכמים, שלא ילמדו ממעשיו של הגוי). אמנם, הלכה למעשה רבים מהראשונים מתירים הלוואה לגוי בריבית ללא סייג.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ג-ד עוסקות ב"הלוואות שרשרת". מקרה אחד הוא הלוואה מגוי ליהודי וממנו ליהודי אחר. במקרה זה הדבר מותר רק אם היהודי הראשון הוציא את עצמו לגמרי מלהיות צד בעניין, כך שיש קשר ישיר בין הגוי ליהודי השני. הראשונים נחלקו האם הדבר חייב להיעשות ע"י השבה פיזית של המעות לגוי, או שמעיקר הדין די בכך שיפטור הגוי את היהודי הראשון מאחריות בכדי שיהיה מותר לישראל השני ללוות את המעות. עוד נידונה הלוואה בריבית מיהודי לגוי וממנו ליהודי אחר. במקרה זה אם המעות הועברו ליהודי השני בהתערבות/נוכחות של היהודי המלווה הדבר אסור כיוון שנוצר קשר בין שני היהודים, ויש שאסרו רק אם הגוי החזיר לגמרי את המעות ליהודי שהלוה לו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ג-ד עוסקות ב"הלוואות שרשרת". מקרה אחד הוא הלוואה מגוי ליהודי וממנו ליהודי אחר. במקרה זה הדבר מותר רק אם היהודי הראשון הוציא את עצמו לגמרי מלהיות צד בעניין, כך שיש קשר ישיר בין הגוי ליהודי השני. הראשונים נחלקו האם הדבר חייב להיעשות ע"י השבה פיזית של המעות לגוי, או שמעיקר הדין די בכך שיפטור הגוי את היהודי הראשון מאחריות בכדי שיהיה מותר לישראל השני ללוות את המעות. עוד נידונה הלוואה בריבית מיהודי לגוי וממנו ליהודי אחר. במקרה זה אם המעות הועברו ליהודי השני בהתערבות/נוכחות של היהודי המלווה הדבר אסור כיוון שנוצר קשר בין שני היהודים, ויש שאסרו רק אם הגוי החזיר לגמרי את המעות ליהודי שהלוה לו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ה עוסקת בגוי המלווה ממעות של יהודי המצויות עימו. אם הגוי אינו אחראי למעות אלא רק עובד עבור בעל המעות הדבר אסור. במקרה ההפוך, בו יהודי מלווה ממעותיו של גוי, אם אין המלווה חייב באחריות המעות, מעיקר הדין הדבר מותר, אלא שגזרו חכמים משום מראית העין, שכן הרואה סובר שממעותיו של היהודי הוא מלווה לחבירו. עוד עוסק ההלכה בערבות בהלוואה בין יהודי לגוי, שהרי אם הגוי יגבה מהיהודי הערב, יגבה זה אחר כך מחבירו היהודי. בדין זה נפסק שאם פונים לערב רק לאחר שהלווה לא יכול לשלם, מותר. נחלקו הראשונים האם אסור להיות רק ערב קבלן, שהמלווה פונה קודם אליו, או שאפילו אם המלווה יכול לבחור למי לפנות בראשונה גם כן אסור.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ה עוסקת בגוי המלווה ממעות של יהודי המצויות עימו. אם הגוי אינו אחראי למעות אלא רק עובד עבור בעל המעות הדבר אסור. במקרה ההפוך, בו יהודי מלווה ממעותיו של גוי, אם אין המלווה חייב באחריות המעות, מעיקר הדין הדבר מותר, אלא שגזרו חכמים משום מראית העין, שכן הרואה סובר שממעותיו של היהודי הוא מלווה לחבירו. עוד עוסק ההלכה בערבות בהלוואה בין יהודי לגוי, שהרי אם הגוי יגבה מהיהודי הערב, יגבה זה אחר כך מחבירו היהודי. בדין זה נפסק שאם פונים לערב רק לאחר שהלווה לא יכול לשלם, מותר. נחלקו הראשונים האם אסור להיות רק ערב קבלן, שהמלווה פונה קודם אליו, או שאפילו אם המלווה יכול לבחור למי לפנות בראשונה גם כן אסור.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ו עוסקת בהלוואה בריבית בין גוי ליהודי, כאשר בין מועד ההלוואה למועד ההחזר התגייר הגוי. בשני מקרים התירו לגבות את הריבית. האחד, אם עוד קודם שהתגייר הגוי נכתב שטר חוב חדש הכולל את הקרן והריבית יחד. והשני, אם מדובר בגוי שלווה מישראל, כדי למנוע הוצאת לעז על המוטיבציה לגיור. הראשונים נחלקו האם במקרה זה ניתן לגבות גם בשטר המקורי שכתובה בו הריבית במפורש. עוד נחלקו מה דין הריבית השייכת לזמן שבין הגיור לגביה. הלכה ז מסכמת את חלקו הראשון של הפרק בקביעה שעדיף לאדם להלוות ליהודי מאשר להלוות לגוי ברבית.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ו עוסקת בהלוואה בריבית בין גוי ליהודי, כאשר בין מועד ההלוואה למועד ההחזר התגייר הגוי. בשני מקרים התירו לגבות את הריבית. האחד, אם עוד קודם שהתגייר הגוי נכתב שטר חוב חדש הכולל את הקרן והריבית יחד. והשני, אם מדובר בגוי שלווה מישראל, כדי למנוע הוצאת לעז על המוטיבציה לגיור. הראשונים נחלקו האם במקרה זה ניתן לגבות גם בשטר המקורי שכתובה בו הריבית במפורש. עוד נחלקו מה דין הריבית השייכת לזמן שבין הגיור לגביה. הלכה ז מסכמת את חלקו הראשון של הפרק בקביעה שעדיף לאדם להלוות ליהודי מאשר להלוות לגוי ברבית.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ח עוסקת באיסור חכמים לתת מעות או נכסים "קרוב לשכר ורחוק להפסד", ובהיתרו כאשר מדובר במעות יתומים. יש ראשונים שהבינו כפשוטו, שהכוונה להתנות שכל הפסד יושת על כתפי מקבל המעות. ראשונים אחרים פירשו שהכוונה לנותן לחבירו ממון להתעסק בו ומתחלק עימו בדיוק חצי בחצי, מבלי לממש את תקנת חכמים לתת למתעסק שכר נבדל. הלכות ט-י מתמצתות את תקנת חכמים זו (המפורטת באריכות בהלכות שותפין).</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ח עוסקת באיסור חכמים לתת מעות או נכסים "קרוב לשכר ורחוק להפסד", ובהיתרו כאשר מדובר במעות יתומים. יש ראשונים שהבינו כפשוטו, שהכוונה להתנות שכל הפסד יושת על כתפי מקבל המעות. ראשונים אחרים פירשו שהכוונה לנותן לחבירו ממון להתעסק בו ומתחלק עימו בדיוק חצי בחצי, מבלי לממש את תקנת חכמים לתת למתעסק שכר נבדל. הלכות ט-י מתמצתות את תקנת חכמים זו (המפורטת באריכות בהלכות שותפין).</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות יא-יג עוסקת באיסורי ריבית מוקדמת או מאוחרת. אלה מקרים בהם הלווה נותן ממון או טובת הנאה למלווה לפני ההלוואה (כריצוי) או לאחר הפירעון (כהודאה), כאשר ההלוואה עצמה אינה מותנית במתן טובת ההנאה. יש מהראשונים האוסרים רק אם צויין בפירוש שטובת ההנאה קשורה להלוואה, או שהנתינה היתה בין ההלוואה לפירעון. בנוסף, אם אין מדובר בהלוואה ממש אלא במכר עם תשלום מוקדם, יש דעות שאם הוסיף המוכר לקונה מעט הדבר מותר. לגבי טובות הנאה שאין להם ערך כספי משמעותי יש המחלקים ואוסרים דווקא דבר שבפרהסיא או שהלווה לא היה עושה אלמלא ההלוואה, ולעומת זה מתירים דברים שבצנעה או שהלווה היה עושה בלאו הכי עבור המלווה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות יא-יג עוסקת באיסורי ריבית מוקדמת או מאוחרת. אלה מקרים בהם הלווה נותן ממון או טובת הנאה למלווה לפני ההלוואה (כריצוי) או לאחר הפירעון (כהודאה), כאשר ההלוואה עצמה אינה מותנית במתן טובת ההנאה. יש מהראשונים האוסרים רק אם צויין בפירוש שטובת ההנאה קשורה להלוואה, או שהנתינה היתה בין ההלוואה לפירעון. בנוסף, אם אין מדובר בהלוואה ממש אלא במכר עם תשלום מוקדם, יש דעות שאם הוסיף המוכר לקונה מעט הדבר מותר. לגבי טובות הנאה שאין להם ערך כספי משמעותי יש המחלקים ואוסרים דווקא דבר שבפרהסיא או שהלווה לא היה עושה אלמלא ההלוואה, ולעומת זה מתירים דברים שבצנעה או שהלווה היה עושה בלאו הכי עבור המלווה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה יד עוסקת בדברים המזכירים בחיצוניותם ריבית, אך למעשה הם אינם ריבית ואף מותרים. ראשית, יכול אדם למכור שטר חוב לחבירו בפחות מסכום ההלוואה, שכן דבר זה הוא מכר, ובלבד שהשטר יהיה של הקונה לחלוטין, שאף אם לא יצליח לגבות את החוב לא יוכל לחזור בתביעה על מוכר השטר. עוד היתר נובע מכך שהתורה אסרה רק ריבית הבאה מלווה למלווה. לכן, מותר ללווה לשלם לאיש ביניים כדי שישכנע את המלווה להלוות, וכמו כן מותר לאיש ביניים לשלם למלווה בכדי שילווה ללווה. במקרה השני נחלקו הפוסקים איזה קשר מותר שיהיה בין איש הביניים לבין הלווה. יש שאסרו אם הלווה שיכנע את איש הביניים לשלם למלווה, שאז הוא שלוחו. מן העבר השני יש שהתירו אפילו אם הלווה רומז לאיש הביניים שיתגמל אותו כספית ואף משלם לו, לאחר מעשה, את דמי הריצוי שנתן למלווה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה יד עוסקת בדברים המזכירים בחיצוניותם ריבית, אך למעשה הם אינם ריבית ואף מותרים. ראשית, יכול אדם למכור שטר חוב לחבירו בפחות מסכום ההלוואה, שכן דבר זה הוא מכר, ובלבד שהשטר יהיה של הקונה לחלוטין, שאף אם לא יצליח לגבות את החוב לא יוכל לחזור בתביעה על מוכר השטר. עוד היתר נובע מכך שהתורה אסרה רק ריבית הבאה מלווה למלווה. לכן, מותר ללווה לשלם לאיש ביניים כדי שישכנע את המלווה להלוות, וכמו כן מותר לאיש ביניים לשלם למלווה בכדי שילווה ללווה. במקרה השני נחלקו הפוסקים איזה קשר מותר שיהיה בין איש הביניים לבין הלווה. יש שאסרו אם הלווה שיכנע את איש הביניים לשלם למלווה, שאז הוא שלוחו. מן העבר השני יש שהתירו אפילו אם הלווה רומז לאיש הביניים שיתגמל אותו כספית ואף משלם לו, לאחר מעשה, את דמי הריצוי שנתן למלווה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכה טו מדובר במקרה בו סכום ההלוואה קצוב והמלווה נותנו בשווה כסף, ואז קונה מהלווה את אותה הסחורה בפחות מסכום ההלוואה, כך שעתה הלווה מקבל לידיו פחות מעות זמינות מהסכום שיחזיר בסוף. מעיקר הדין אין בדבר ריבית, אך חכמים אסרו זאת משום הערמת ריבית. הראשונים נחלקו האם יש לדבר דין אבק ריבית, שאינו נידון בבי"ד, או שאפילו אבק ריבית אין כאן, ואם עברו ועשו את העסקה, בי"ד אוכף את קיומה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בהלכה טו מדובר במקרה בו סכום ההלוואה קצוב והמלווה נותנו בשווה כסף, ואז קונה מהלווה את אותה הסחורה בפחות מסכום ההלוואה, כך שעתה הלווה מקבל לידיו פחות מעות זמינות מהסכום שיחזיר בסוף. מעיקר הדין אין בדבר ריבית, אך חכמים אסרו זאת משום הערמת ריבית. הראשונים נחלקו האם יש לדבר דין אבק ריבית, שאינו נידון בבי"ד, או שאפילו אבק ריבית אין כאן, ואם עברו ועשו את העסקה, בי"ד אוכף את קיומה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה טז עוסקת בשאלה מה ההבדל בין שכירות, שהותרה, לבין ריבית שאסורה, אף שלמראית עין יש דמיון ביניהן- בשתיהן אדם נותן דבר מה לחבירו ומקבל ממנו יותר. בגמרא מוסבר שהמאפיינים של שכירות הם שהחפץ חוזר בעינו ושפחתו ניכר, מה שאין כן בהלוואת מעות. נחלקו הראשונים האם שני המאפיינים נצרכים, או שרק אם מותר לשוכר למכור את החפץ ולהחזיר אחר יש צורך שיהיה הפחת ניכר. יש אף שהצריכו רק את המאפיין הראשון.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה טז עוסקת בשאלה מה ההבדל בין שכירות, שהותרה, לבין ריבית שאסורה, אף שלמראית עין יש דמיון ביניהן- בשתיהן אדם נותן דבר מה לחבירו ומקבל ממנו יותר. בגמרא מוסבר שהמאפיינים של שכירות הם שהחפץ חוזר בעינו ושפחתו ניכר, מה שאין כן בהלוואת מעות. נחלקו הראשונים האם שני המאפיינים נצרכים, או שרק אם מותר לשוכר למכור את החפץ ולהחזיר אחר יש צורך שיהיה הפחת ניכר. יש אף שהצריכו רק את המאפיין הראשון.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה יז מסיימת את הפרק בדבר נוסף שנראה כריבית אך הוא מותר- לשלם את המיסים עבור אדם שלא שילם ולהשעבד בו בשווי גדול יותר.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה יז מסיימת את הפרק בדבר נוסף שנראה כריבית אך הוא מותר- לשלם את המיסים עבור אדם שלא שילם ולהשעבד בו בשווי גדול יותר.</p>
                 
             </div>
             
@@ -1120,110 +1120,110 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     העכו"ם וגר תושב לוין מהן ומלוין אותן ברבית שנאמר לא תשיך לאחיך לאחיך אסור ולשאר העולם מותר, ומצות עשה להשיך לעכו"ם שנאמר לנכרי תשיך מפי השמועה למדו שזו מצות עשה וזהו דין תורה. <strong>ומצות עשה להשיך וכו' עד וזהו דין תורה. א"א אני לא מצאתי שמועה זו ואולי טעה במה שמצא בספרי (פרשת כי תצא) שנאמר שם לנכרי תשיך זו מצות עשה ופירושו משום דהוה ליה לאו הבא מכלל עשה שלא ישיך לישראל עכ"ל.</strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסרו חכמים שיהיה ישראל מלוה את העכו"ם ברבית קצוצה אלא בכדי חייו גזרו שמא ילמוד ממעשיו ברוב ישיבתו עמו, לפיכך מותר ללוות מן העכו"ם ברבית שהרי הוא בורח מלפניו ואינו רגיל אצלו, ותלמיד חכם שאינו רגיל בו ללמוד ממעשיו מותר להלוות לעכו"ם ברבית אפילו להרויח, וכל אבק רבית עם העכו"ם מותרת לכל.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ריבית בין יהודי לגוי- דין תורה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ריבית בין יהודי לגוי- דין תורה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה (ע:) עוסקת בהלוואה בריבית לגוי ומגוי-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה (ע:) עוסקת בהלוואה בריבית לגוי ומגוי-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אין מקבלין צאן ברזל מישראל מפני שהוא רבית, אבל מקבלין צאן ברזל מן הנכרים,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אין מקבלין צאן ברזל מישראל מפני שהוא רבית, אבל מקבלין צאן ברזל מן הנכרים,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ולוין מהן ומלוין אותן ברבית</strong>, וכן בגר תושב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>ולוין מהן ומלוין אותן ברבית</strong>, וכן בגר תושב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בספרי דברים (כי תצא פיסקה רסג) נדרש המקור להבדל זה שבין יהודי לגוי-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בספרי דברים (כי תצא פיסקה רסג) נדרש המקור להבדל זה שבין יהודי לגוי-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>"לנכרי תשיך ולאחיך לא תשיך", לנכרי תשיך מצות עשה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>"לנכרי תשיך ולאחיך לא תשיך", לנכרי תשיך מצות עשה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם) דנה אף היא בפסוק זה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (שם) דנה אף היא בפסוק זה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>"לנכרי תשיך" מאי תשיך – לאו תִשוֹך?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>"לנכרי תשיך" מאי תשיך – לאו תִשוֹך?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא, תשיך. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא, תשיך. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא סגי דלאו הכי? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא סגי דלאו הכי? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לאפוקי אחיך דלא. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לאפוקי אחיך דלא. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אחיך בהדיא כתב ביה ולאחיך לא תשיך! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אחיך בהדיא כתב ביה ולאחיך לא תשיך! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לעבור עליו בעשה ולא תעשה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לעבור עליו בעשה ולא תעשה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבינה ש"תשיך" הכוונה- תִלווה ממנו בריבית, להבדיל מ"תִשוֹך"- נשוך אותו, שפירושו תָלווה לו בריבית. לפיכך הפסוק בפשטו מצווה ללוות מנוכרי בריבית. כיוון שפירוש זה אינו הגיוני מבארת הגמרא שהפסוק בא להטיל עשה על הלוואה בריבית ליהודי, כך שהמלווה או לווה בריבית מיהודי עובר בעשה ובלא תעשה<sup id="ref36"><a href="#fn36">[36]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מבינה ש"תשיך" הכוונה- תִלווה ממנו בריבית, להבדיל מ"תִשוֹך"- נשוך אותו, שפירושו תָלווה לו בריבית. לפיכך הפסוק בפשטו מצווה ללוות מנוכרי בריבית. כיוון שפירוש זה אינו הגיוני מבארת הגמרא שהפסוק בא להטיל עשה על הלוואה בריבית ליהודי, כך שהמלווה או לווה בריבית מיהודי עובר בעשה ובלא תעשה<sup id="ref36"><a href="#fn36">[36]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות דברי הגמרא מבין הרמב"ן (דברים טו ובהשגות על ספר המצוות שורש שישי) שאין כוונת הספרי שהמלווה לגוי בריבית מקיים בזה מצווה. כך מבין גם הראב"ד בהשגתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעקבות דברי הגמרא מבין הרמב"ן (דברים טו ובהשגות על ספר המצוות שורש שישי) שאין כוונת הספרי שהמלווה לגוי בריבית מקיים בזה מצווה. כך מבין גם הראב"ד בהשגתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, הרמב"ם מבין את דברי הספרי כפשוטם ומבין שמצוות עשה מהתורה היא להלוות בריבית לעכו"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם, הרמב"ם מבין את דברי הספרי כפשוטם ומבין שמצוות עשה מהתורה היא להלוות בריבית לעכו"ם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קנט א) כתב שמותר מהתורה להלוות לגוי אך לא שמצווה לעשות כן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קנט א) כתב שמותר מהתורה להלוות לגוי אך לא שמצווה לעשות כן.</p>
                     
                 </div>
                 
                 <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ריבית בין יהודי לגוי- מדברי חכמים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ריבית בין יהודי לגוי- מדברי חכמים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשלי (כח ח) נאמר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במשלי (כח ח) נאמר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מרבה הונו בנשך ותרבית לחונן דלים יקבצנו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מרבה הונו בנשך ותרבית לחונן דלים יקבצנו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הפסוק קובע שאדם שמרוויח על ידי ריבית, ממונו לא יהיה לו אלא לאחר, שהוא "חונן דלים".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הפסוק קובע שאדם שמרוויח על ידי ריבית, ממונו לא יהיה לו אלא לאחר, שהוא "חונן דלים".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם) דורשת את הפסוק-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (שם) דורשת את הפסוק-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מאי לחונן דלים? – אמר <strong>רב</strong>: כגון שבור מלכא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מאי לחונן דלים? – אמר <strong>רב</strong>: כגון שבור מלכא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שבור מלכא" היה מלך פרס, וכוונת רב היא שסופו של המלווה בריבית שהכסף שצבר ילקח על ידי המלכות<sup id="ref37"><a href="#fn37">[37]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שבור מלכא" היה מלך פרס, וכוונת רב היא שסופו של המלווה בריבית שהכסף שצבר ילקח על ידי המלכות<sup id="ref37"><a href="#fn37">[37]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב נחמן</strong>: אמר לי <strong>הונא</strong>: לא נצרכא, אלא דאפילו רבית דנכרי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב נחמן</strong>: אמר לי <strong>הונא</strong>: לא נצרכא, אלא דאפילו רבית דנכרי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב נחמן בשם רב הונא מחדש שהביקורת שמותח הפסוק על מלווי ריבית מתייחסת אפילו למלווים לגוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב נחמן בשם רב הונא מחדש שהביקורת שמותח הפסוק על מלווי ריבית מתייחסת אפילו למלווים לגוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על כך מיד מקשה הגמרא ממשנתנו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על כך מיד מקשה הגמרא ממשנתנו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איתיביה: לוין מהן ומלוין אותם ברבית, וכן בגר תושב! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איתיביה: לוין מהן ומלוין אותם ברבית, וכן בגר תושב! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדוע שהמלווה בריבית לגוי נכסיו יעברו לאחר? והרי עשה מעשיו בהיתר! האמוראים מציעים שתי תשובות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדוע שהמלווה בריבית לגוי נכסיו יעברו לאחר? והרי עשה מעשיו בהיתר! האמוראים מציעים שתי תשובות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב חייא בריה דרב הונא</strong>: לא נצרכא, אלא בכדי חייו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב חייא בריה דרב הונא</strong>: לא נצרכא, אלא בכדי חייו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבינא</strong> אמר: הכא בתלמידי חכמים עסקינן. טעמא מאי גזור רבנן – שמא ילמוד ממעשיו, וכיון דתלמיד חכם הוא – לא ילמוד ממעשיו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבינא</strong> אמר: הכא בתלמידי חכמים עסקינן. טעמא מאי גזור רבנן – שמא ילמוד ממעשיו, וכיון דתלמיד חכם הוא – לא ילמוד ממעשיו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשותף לשתי התשובות הוא שהיתר המשנה להלוות בריבית לגוי אינו היתר מוחלט וגורף. רב חייא אומר שמותר לאדם להלוות לגוי רק כמה שהוא צריך למחייתו ולא בכדי לקבוץ הון<sup id="ref38"><a href="#fn38">[38]</a></sup>. רבינא אומר שהמשנה מתירה דווקא לתלמיד חכם, שלא יבוא ללמוד ממעשיו של הגוי<sup id="ref39"><a href="#fn39">[39]</a></sup>, אך לאדם שאינו תלמיד חכם אסרו חכמים להלוות לגוי, ואם עושה כך סופו שהכסף שמרבה בכך יאבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשותף לשתי התשובות הוא שהיתר המשנה להלוות בריבית לגוי אינו היתר מוחלט וגורף. רב חייא אומר שמותר לאדם להלוות לגוי רק כמה שהוא צריך למחייתו ולא בכדי לקבוץ הון<sup id="ref38"><a href="#fn38">[38]</a></sup>. רבינא אומר שהמשנה מתירה דווקא לתלמיד חכם, שלא יבוא ללמוד ממעשיו של הגוי<sup id="ref39"><a href="#fn39">[39]</a></sup>, אך לאדם שאינו תלמיד חכם אסרו חכמים להלוות לגוי, ואם עושה כך סופו שהכסף שמרבה בכך יאבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה גם אפשרות אחרת להבין את ההקשר של הסתייגותו של רב הונא מהלוואה בריבית לגוי-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה גם אפשרות אחרת להבין את ההקשר של הסתייגותו של רב הונא מהלוואה בריבית לגוי-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איכא דמתני לה להא דרב הונא אהא,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איכא דמתני לה להא דרב הונא אהא,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דתני <strong>רב יוסף</strong>: "אם כסף תלוה את עמי את העני עמך"-</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>דתני <strong>רב יוסף</strong>: "אם כסף תלוה את עמי את העני עמך"-</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>עמי ונכרי – עמי קודם, עני ועשיר – עני קודם, ענייך ועניי עירך – ענייך קודמין, עניי עירך ועניי עיר אחרת – עניי עירך קודמין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>עמי ונכרי – עמי קודם, עני ועשיר – עני קודם, ענייך ועניי עירך – ענייך קודמין, עניי עירך ועניי עיר אחרת – עניי עירך קודמין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר מר: עמי ונכרי עמי קודם פשיטא! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר מר: עמי ונכרי עמי קודם פשיטא! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב נחמן</strong> אמר לי <strong>הונא</strong>: לא נצרכא דאפילו לנכרי ברבית ולישראל בחנם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב נחמן</strong> אמר לי <strong>הונא</strong>: לא נצרכא דאפילו לנכרי ברבית ולישראל בחנם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי דרך זו רב הונא אמר את דברו על רקע דברי ר' יוסף המחלק בין דרגות צדקה שונות וקובע שיש להעדיף הלוואה ליהודי על פני הלוואה לגוי. רב הונא מסביר שהחידוש הוא שיש להעדיף הלוואה ליהודי אפילו על פני הלוואה לגוי בריבית, כך שהמלווה בנותנו את כספו ליהודי, 'מפסיד' את הרווח שיכול היה לקבל מהגוי. על פי הבנה זו אין איסור בהלוואה בריבית לגוי, אלא שמי שמלווה, מצופה ממנו שיבכר להלוות ליהודי ללא ריבית על פני הלוואה לגוי בריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי דרך זו רב הונא אמר את דברו על רקע דברי ר' יוסף המחלק בין דרגות צדקה שונות וקובע שיש להעדיף הלוואה ליהודי על פני הלוואה לגוי. רב הונא מסביר שהחידוש הוא שיש להעדיף הלוואה ליהודי אפילו על פני הלוואה לגוי בריבית, כך שהמלווה בנותנו את כספו ליהודי, 'מפסיד' את הרווח שיכול היה לקבל מהגוי. על פי הבנה זו אין איסור בהלוואה בריבית לגוי, אלא שמי שמלווה, מצופה ממנו שיבכר להלוות ליהודי ללא ריבית על פני הלוואה לגוי בריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו מה דין הלוואה בריבית לגוי להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו מה דין הלוואה בריבית לגוי להלכה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם כתב כדברי רב חייא ורבינא כאחד לקולא. כלומר, לאדם שאינו תלמיד חכם מותר להלוות כדי חייו, ולתלמיד חכם מותר להלוות אף יותר מכך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם כתב כדברי רב חייא ורבינא כאחד לקולא. כלומר, לאדם שאינו תלמיד חכם מותר להלוות כדי חייו, ולתלמיד חכם מותר להלוות אף יותר מכך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, רבינו חננאל מבין שרבינא בא להוסיף על דברי רב חייא, ולכן פוסק כשניהם לחומרא. כלומר, מותר להלוות לגוי בריבית רק אם מדובר בתלמיד חכם המלווה כדי חייו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, רבינו חננאל מבין שרבינא בא להוסיף על דברי רב חייא, ולכן פוסק כשניהם לחומרא. כלומר, מותר להלוות לגוי בריבית רק אם מדובר בתלמיד חכם המלווה כדי חייו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התוספות (ע: ד"ה "תשיך") כותבים שהמנהג הוא להלוות לגוי בריבית ללא הגבלה, גם יותר מכדי חייו וגם כשהמלווה אינו תלמיד חכם. התוספות מסבירים שאפשר שמנהג זה מסתמך על הלישנא השניה בגמרא, לפיה אין איסור ממש בהלוואת ריבית לגוי, אלא רק מצווה להעדיף להלוות לישראל בחינם. עוד מסבירים התוספות שמתוך ריבוי המיסים כל השתכרות בזמן הזה נחשבת "כדי חייו". הסבר נוסף מעלים התוספות- שממילא אנו מצויים בין העמים ועוסקים איתם במו"מ, ולכן אין לאסור דווקא בריבית כדי שלא נלמד ממעשיהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">התוספות (ע: ד"ה "תשיך") כותבים שהמנהג הוא להלוות לגוי בריבית ללא הגבלה, גם יותר מכדי חייו וגם כשהמלווה אינו תלמיד חכם. התוספות מסבירים שאפשר שמנהג זה מסתמך על הלישנא השניה בגמרא, לפיה אין איסור ממש בהלוואת ריבית לגוי, אלא רק מצווה להעדיף להלוות לישראל בחינם. עוד מסבירים התוספות שמתוך ריבוי המיסים כל השתכרות בזמן הזה נחשבת "כדי חייו". הסבר נוסף מעלים התוספות- שממילא אנו מצויים בין העמים ועוסקים איתם במו"מ, ולכן אין לאסור דווקא בריבית כדי שלא נלמד ממעשיהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קנט א) כותב את עיקר הדין כדברי הרמב"ם, אך מוסיף, כדברי התוספות, שהיום מותר להלוות בריבית לגוי בכל אופן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קנט א) כותב את עיקר הדין כדברי הרמב"ם, אך מוסיף, כדברי התוספות, שהיום מותר להלוות בריבית לגוי בכל אופן.</p>
                     
                 </div>
                 
@@ -1231,139 +1231,139 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ישראל שלוה מעות מן העכו"ם ברבית וביקש להחזירם לו מצאו ישראל אחר ואמר לו תנם לי ואני מעלה לך כדרך שאתה מעלה לעכו"ם הרי זו רבית קצוצה אפילו העמידו אצל העכו"ם עד שיטול העכו"ם מעותיו ויחזור ויתנם ביד ישראל האחר.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     עכו"ם שלוה מעות מישראל ברבית וביקש להחזירם לו מצאו ישראל אחר ואמר לו תנם לי ואני מעלה לך כדרך שאתה מעלה לישראל הרי זה מותר, ואם העמידו אצל ישראל אף על פי שנתן העכו"ם המעות בידו הואיל ומדעת ישראל נתן הרי זו רבית קצוצה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסור לישראל לתלות מעותיו ביד עכו"ם כדי להלוותן ברבית לישראל, ועכו"ם שהלוה את ישראל ברבית אסור לישראל אחר להיות לו ערב שכיון שבדיניהם שתובע הערב תחלה נמצא הערב תובע את ישראל ברבית שהערב חייב בה לעכו"ם, לפיכך אם קבל עליו העכו"ם שלא יתבע את הערב תחלה הרי זה מותר.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תיווך של גוי בהלוואה בין ישראל לישראל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תיווך של גוי בהלוואה בין ישראל לישראל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה (ע-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במשנה (ע-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מלוה ישראל מעותיו של נכרי מדעת הנכרי, אבל לא מדעת ישראל</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מלוה ישראל מעותיו של נכרי מדעת הנכרי, אבל לא מדעת ישראל</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (עא מביאה ברייתא בנושא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (עא מביאה ברייתא בנושא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: מלוה ישראל מעותיו של נכרי מדעת הנכרי, אבל לא מדעת ישראל.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנו רבנן: מלוה ישראל מעותיו של נכרי מדעת הנכרי, אבל לא מדעת ישראל.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כיצד? ישראל שלוה מעות מן הנכרי ברבית, וביקש להחזירם לו. מצאו ישראל אחר ואמר לו: תנם לי, ואני אעלה לך כדרך שאתה מעלה לו – אסור. ואם העמידו אצל נכרי – מותר.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כיצד? ישראל שלוה מעות מן הנכרי ברבית, וביקש להחזירם לו. מצאו ישראל אחר ואמר לו: תנם לי, ואני אעלה לך כדרך שאתה מעלה לו – אסור. ואם העמידו אצל נכרי – מותר.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכן נכרי שלוה מעות מישראל ברבית, וביקש להחזירם לו, מצאו ישראל אחר ואמר לו: תנם לי, ואני אעלה לך כדרך שאתה מעלה לו – מותר. ואם העמידו אצל ישראל – אסור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>וכן נכרי שלוה מעות מישראל ברבית, וביקש להחזירם לו, מצאו ישראל אחר ואמר לו: תנם לי, ואני אעלה לך כדרך שאתה מעלה לו – מותר. ואם העמידו אצל ישראל – אסור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא מסבירה שהמשנה מדברת על ישראל שלווה בריבית מגוי, ועתה מלווה בריבית את המעות שלווה לישראל אחר. לכאורה הישראל המלווה אינו מרוויח דבר, כיוון שכל מה שהוא מקבל מהישראל השני עובר מיד לגוי. בכל זאת, הדבר אסור, כיוון שהישראל המלווה נחשב ישות ממונית עצמאית ולכן ההלוואה לישראל השני היא הלוואה בין יהודים ואסור שיהיה בה ריבית (כדברי המשנה "אבל לא מדעת ישראל"). לעומת זה, אם "העמידו אצל נוכרי", כיוון שמתן המעות מהישראל הראשון לשני נעשה במעמד הגוי ("מדעת הנכרי"), ברור לכל שהמעות הן של הגוי, ולכן מותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתא מסבירה שהמשנה מדברת על ישראל שלווה בריבית מגוי, ועתה מלווה בריבית את המעות שלווה לישראל אחר. לכאורה הישראל המלווה אינו מרוויח דבר, כיוון שכל מה שהוא מקבל מהישראל השני עובר מיד לגוי. בכל זאת, הדבר אסור, כיוון שהישראל המלווה נחשב ישות ממונית עצמאית ולכן ההלוואה לישראל השני היא הלוואה בין יהודים ואסור שיהיה בה ריבית (כדברי המשנה "אבל לא מדעת ישראל"). לעומת זה, אם "העמידו אצל נוכרי", כיוון שמתן המעות מהישראל הראשון לשני נעשה במעמד הגוי ("מדעת הנכרי"), ברור לכל שהמעות הן של הגוי, ולכן מותר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא מציגה גם את המצב ההפוך, נכרי שלווה בריבית מישראל, ועתה ישראל אחר לווה ממנו בריבית את אותן המעות. גם כאן, כיוון שהגוי הוא ישות עצמאית, יש כאן למעשה שתי הלוואות בריבית- בין ישראל לגוי ובין הגוי לישראל השני, והדבר מותר. לעומת זה, אם "העמידו אצל ישראל" כך שההלוואה השניה נחשבת כבאה ישירות מישראל לישראל, הרי זו ריבית ואסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתא מציגה גם את המצב ההפוך, נכרי שלווה בריבית מישראל, ועתה ישראל אחר לווה ממנו בריבית את אותן המעות. גם כאן, כיוון שהגוי הוא ישות עצמאית, יש כאן למעשה שתי הלוואות בריבית- בין ישראל לגוי ובין הגוי לישראל השני, והדבר מותר. לעומת זה, אם "העמידו אצל ישראל" כך שההלוואה השניה נחשבת כבאה ישירות מישראל לישראל, הרי זו ריבית ואסור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מקשה על ההיתר ברישא של הברייתא, העוסקת בישראל שלווה מהגוי ומתירה את העברת המעות לישראל אחר אם "העמידו אצל נוכרי"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מקשה על ההיתר ברישא של הברייתא, העוסקת בישראל שלווה מהגוי ומתירה את העברת המעות לישראל אחר אם "העמידו אצל נוכרי"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כיון דאין שליחות לנכרי – איהו ניהו דקא שקיל מיניה רביתא!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כיון דאין שליחות לנכרי – איהו ניהו דקא שקיל מיניה רביתא!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, העובדה שהיהודי הראשון מוסר את המעות לשני בנוכחות הגוי בעל המעות אינה אמורה להתיר, שכן "אין שליחות לנכרי", ולכן היהודי מוסר המעות אינו יכול להיחשב כבא כוחו של הגוי אף אם מסירת המעות נעשית במעמד שלושתם וממילא נמצא שיהודי מלווה לחבירו בריבית והדבר אמור להיות אסור. לכן נאלצים האמוראים לפרש מחדש את דברי הברייתא "מעמידו אצלו"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, העובדה שהיהודי הראשון מוסר את המעות לשני בנוכחות הגוי בעל המעות אינה אמורה להתיר, שכן "אין שליחות לנכרי", ולכן היהודי מוסר המעות אינו יכול להיחשב כבא כוחו של הגוי אף אם מסירת המעות נעשית במעמד שלושתם וממילא נמצא שיהודי מלווה לחבירו בריבית והדבר אמור להיות אסור. לכן נאלצים האמוראים לפרש מחדש את דברי הברייתא "מעמידו אצלו"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב הונא בר מנוח</strong> משמיה ד<strong>רב אחא בריה דרב איקא</strong>: הכא במאי עסקינן – כגון דאמר ליה: הניחם על גבי קרקע והיפטר...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב הונא בר מנוח</strong> משמיה ד<strong>רב אחא בריה דרב איקא</strong>: הכא במאי עסקינן – כגון דאמר ליה: הניחם על גבי קרקע והיפטר...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב פפא</strong>: כגון שנטל ונתן ביד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב פפא</strong>: כגון שנטל ונתן ביד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדובר בכגון שהיהודי הראשון הניח את המעות והסתלק או שהגוי נטל את המעות מהיהודי הראשון ונתנם לשני. בכך ההלוואה הראשונה מסתיימת, ועתה הגוי מלווה בעצמו ליהודי השני. הגמרא מסבירה שאפילו אם נפרש כרב פפא<sup id="ref40"><a href="#fn40">[40]</a></sup> יש חידוש בדבר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר בכגון שהיהודי הראשון הניח את המעות והסתלק או שהגוי נטל את המעות מהיהודי הראשון ונתנם לשני. בכך ההלוואה הראשונה מסתיימת, ועתה הגוי מלווה בעצמו ליהודי השני. הגמרא מסבירה שאפילו אם נפרש כרב פפא<sup id="ref40"><a href="#fn40">[40]</a></sup> יש חידוש בדבר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מהו דתימא: נכרי גופיה כי עביד – אדעתא דישראל קא גמיר ויהיב, קא משמע לן.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מהו דתימא: נכרי גופיה כי עביד – אדעתא דישראל קא גמיר ויהיב, קא משמע לן.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, היינו יכולים לומר שכיוון שהיהודי הראשון הביא את השני לגוי, נראה הדבר כאילו הגוי מלווה לשני בשליחותו של הראשון ונאסור<sup id="ref41"><a href="#fn41">[41]</a></sup> ובאה הבריתא ללמדנו שהדבר מותר בכ"ז.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, היינו יכולים לומר שכיוון שהיהודי הראשון הביא את השני לגוי, נראה הדבר כאילו הגוי מלווה לשני בשליחותו של הראשון ונאסור<sup id="ref41"><a href="#fn41">[41]</a></sup> ובאה הבריתא ללמדנו שהדבר מותר בכ"ז.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, בסיפא, בה יהודי מלווה תחילה לגוי ואז המעות עוברות ליהודי שני, פסקה הברייתא שאם "העמידו אצל ישראל- אסור". הראשונים נחלקו האם גם בזה, כמו ברישא, יש להבין שהגוי מניח את המעות ומסתלק, או שאפילו אם הגוי נתן בידיו ליהודי השני, עדיין כיוון שהדבר נעשה בנוכחותו של היהודי הראשון ונראה כנעשה על פיו, הדבר אסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאמור, בסיפא, בה יהודי מלווה תחילה לגוי ואז המעות עוברות ליהודי שני, פסקה הברייתא שאם "העמידו אצל ישראל- אסור". הראשונים נחלקו האם גם בזה, כמו ברישא, יש להבין שהגוי מניח את המעות ומסתלק, או שאפילו אם הגוי נתן בידיו ליהודי השני, עדיין כיוון שהדבר נעשה בנוכחותו של היהודי הראשון ונראה כנעשה על פיו, הדבר אסור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ר"ת (בתוס' ד"ה "כגון") כותב שאכן אם העמיד הגוי את היהודי השני אצל הראשון ומסר בעצמו את המעות ליהודי השני, אין בכך איסור, שכן יש להחשיב זאת כהלוואה מהגוי ליהודי השני. התוספות (שם ד"ה "מצאו") מסבירים שהדבר מותר משום שהגוי אינו יכול להיות שלוחו של היהודי הראשון להלוות ליהודי השני, ולכן אף שהיהודי הראשון עומד במחיצתם, נחשב הדבר כהלוואה בין הגוי לבין היהודי השני.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ר"ת (בתוס' ד"ה "כגון") כותב שאכן אם העמיד הגוי את היהודי השני אצל הראשון ומסר בעצמו את המעות ליהודי השני, אין בכך איסור, שכן יש להחשיב זאת כהלוואה מהגוי ליהודי השני. התוספות (שם ד"ה "מצאו") מסבירים שהדבר מותר משום שהגוי אינו יכול להיות שלוחו של היהודי הראשון להלוות ליהודי השני, ולכן אף שהיהודי הראשון עומד במחיצתם, נחשב הדבר כהלוואה בין הגוי לבין היהודי השני.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי רש"י (ד"ה "אדעתא") נראה שהוא חלוק על דברי ר"ת ומפרש שיש איסור (מדרבנן, ולחומרא), גם אם היהודי הראשון אינו נותן בעצמו ליהודי השני, כיוון שנראה הדבר כאילו הגוי הוא בא כוחו של היהודי הראשון, העמוד שם, להלוות לחבירו בריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי רש"י (ד"ה "אדעתא") נראה שהוא חלוק על דברי ר"ת ומפרש שיש איסור (מדרבנן, ולחומרא), גם אם היהודי הראשון אינו נותן בעצמו ליהודי השני, כיוון שנראה הדבר כאילו הגוי הוא בא כוחו של היהודי הראשון, העמוד שם, להלוות לחבירו בריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הרישא, בה מצריכה הברייתא שיביא היהודי הראשון את השני ויעמידו אצל הגוי המלווה, נחלקו הראשונים בשאלה מדוע יש צורך בצעד שכזה בכדי להעביר את ההלוואה להיות בין הגוי לבין היהודי השני והאם אפשר להסתפק גם בפחות מכך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי הרישא, בה מצריכה הברייתא שיביא היהודי הראשון את השני ויעמידו אצל הגוי המלווה, נחלקו הראשונים בשאלה מדוע יש צורך בצעד שכזה בכדי להעביר את ההלוואה להיות בין הגוי לבין היהודי השני והאם אפשר להסתפק גם בפחות מכך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ן אומר שעקרונית די בכך שהגוי יפטור את היהודי הראשון מהחזר ההלוואה. במקרה כזה כיוון שהיהודי הראשון כבר אינו חייב מול הגוי, ממילא נמצא שההלוואה אינה בין שני היהודים אלא בין היהודי השני לבין הגוי, ומותר. לכן אם אמר הגוי לראשון- "תן לשני והיפטר", ואח"כ אמר לשני שהוא מלווה לו את המעות שעתה בידו, הדבר מותר גם כן. הרמב"ן מסביר שהבעיה בנתינה ישירה של היהודי הראשון לשני היא בכך שהיהודי הראשון "פוטר את עצמו בריביתו של חבירו".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ן אומר שעקרונית די בכך שהגוי יפטור את היהודי הראשון מהחזר ההלוואה. במקרה כזה כיוון שהיהודי הראשון כבר אינו חייב מול הגוי, ממילא נמצא שההלוואה אינה בין שני היהודים אלא בין היהודי השני לבין הגוי, ומותר. לכן אם אמר הגוי לראשון- "תן לשני והיפטר", ואח"כ אמר לשני שהוא מלווה לו את המעות שעתה בידו, הדבר מותר גם כן. הרמב"ן מסביר שהבעיה בנתינה ישירה של היהודי הראשון לשני היא בכך שהיהודי הראשון "פוטר את עצמו בריביתו של חבירו".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרא"ש (סי' נד) כותב דברים דומים וכך לשונו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרא"ש (סי' נד) כותב דברים דומים וכך לשונו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אף על פי שלא יפרע עכשיו הלוה השני את הרבית כדי ליפטור הלוה הראשון שקבל המעות מידו שכבר פטרו הנכרי אפ"ה אסור. <strong>כיון שקבל המעות מיד ישראל ונתנם כדי ליפטר בכך מן הנכרי נראה כנותן רבית לנכרי בשבילו</strong>.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אף על פי שלא יפרע עכשיו הלוה השני את הרבית כדי ליפטור הלוה הראשון שקבל המעות מידו שכבר פטרו הנכרי אפ"ה אסור. <strong>כיון שקבל המעות מיד ישראל ונתנם כדי ליפטר בכך מן הנכרי נראה כנותן רבית לנכרי בשבילו</strong>.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נראה מדבריו שהוא מבין שאם היהודי הראשון נפטר מלשלם לגוי, כבר אין בעיה של ריבית מדאורייתא, ומה שנותר זה רק ריבית מדרבנן כי פטורו שלו בא ביחד עם חיובו של חבירו בריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נראה מדבריו שהוא מבין שאם היהודי הראשון נפטר מלשלם לגוי, כבר אין בעיה של ריבית מדאורייתא, ומה שנותר זה רק ריבית מדרבנן כי פטורו שלו בא ביחד עם חיובו של חבירו בריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרשב"א חולק. לדעת הרשב"א הבעיה נעוצה בכך ש"אין זוכין לגוי". כלומר, שהגוי אמנם יכול לפטור את היהודי הראשון מהחוב, אך המעות עדיין אינן מוחזרות לגוי כיוון שהן ניתנות ליהודי השני והוא אינו יכול לזכות בהן לטובת הגוי. נמצא שהמעות עדיין של היהודי הראשון, שאם ירצה יש לו רשות ליטלם מהיהודי השני ולהחזירם לגוי בעצמו. מתוך כך נובע שהיהודי הראשון הוא שמלווה את המעות בריבית לשני אא"כ יבצע החזרה פיזית לגוי ("העמידו אצלו"), שאז המעות כבר אינן שלו והגוי הוא שמלווה אותן ליהודי השני. רושם דומה עולה מדברי הרמב"ם המדגיש שכל עוד לא חזרו המעות פיזית לגוי, עובר היהודי הראשון על איסור ריבית מהתורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרשב"א חולק. לדעת הרשב"א הבעיה נעוצה בכך ש"אין זוכין לגוי". כלומר, שהגוי אמנם יכול לפטור את היהודי הראשון מהחוב, אך המעות עדיין אינן מוחזרות לגוי כיוון שהן ניתנות ליהודי השני והוא אינו יכול לזכות בהן לטובת הגוי. נמצא שהמעות עדיין של היהודי הראשון, שאם ירצה יש לו רשות ליטלם מהיהודי השני ולהחזירם לגוי בעצמו. מתוך כך נובע שהיהודי הראשון הוא שמלווה את המעות בריבית לשני אא"כ יבצע החזרה פיזית לגוי ("העמידו אצלו"), שאז המעות כבר אינן שלו והגוי הוא שמלווה אותן ליהודי השני. רושם דומה עולה מדברי הרמב"ם המדגיש שכל עוד לא חזרו המעות פיזית לגוי, עובר היהודי הראשון על איסור ריבית מהתורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קסח-קסט א-ג) כותב את דברי הרישא של הברייתא להלכה, על פי שני הסברי הראשונים. כלומר, צריך שההלוואה הראשונה שהלווה הגוי ליהודי הראשון תסתיים לגמרי, או ע"י השבת המעות לגוי או השבתם למקום נייטרלי (ע"ג קרקע), ורק אז יכול היהודי השני ללוות מהגוי. הרמ"א (שם ג) כותב להלכה כדברי הרמב"ן, שאפילו במקרה בו היהודי הראשון מסר ישירות לידי השני ונפטר, אם הלוואתו של השני החלה רק אח"כ (כגון שמסר הראשון לשני בתורת פיקדון ורק אח"כ אמר הגוי לשני- הריני מלווה לך את המעות שבידך), הדבר מותר, כיוון שלא בא פטורו של זה בחיובו של חבירו בריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קסח-קסט א-ג) כותב את דברי הרישא של הברייתא להלכה, על פי שני הסברי הראשונים. כלומר, צריך שההלוואה הראשונה שהלווה הגוי ליהודי הראשון תסתיים לגמרי, או ע"י השבת המעות לגוי או השבתם למקום נייטרלי (ע"ג קרקע), ורק אז יכול היהודי השני ללוות מהגוי. הרמ"א (שם ג) כותב להלכה כדברי הרמב"ן, שאפילו במקרה בו היהודי הראשון מסר ישירות לידי השני ונפטר, אם הלוואתו של השני החלה רק אח"כ (כגון שמסר הראשון לשני בתורת פיקדון ורק אח"כ אמר הגוי לשני- הריני מלווה לך את המעות שבידך), הדבר מותר, כיוון שלא בא פטורו של זה בחיובו של חבירו בריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (שם ו) פוסק השו"ע כשיטת רש"י, שאם יהודי הלווה לגוי ואח"כ הגוי העביר את המעות ליהודי אחר מדעת היהודי הראשון, הדבר אסור. הרמ"א מביא את דברי ר"ת שהקל בכך אם לא נטל היהודי הראשון מהגוי ונתן לידו של השני, וכותב שאין למחות ביד המקלים, אף שמעיקר הדבר הלכה כדעת רש"י.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך (שם ו) פוסק השו"ע כשיטת רש"י, שאם יהודי הלווה לגוי ואח"כ הגוי העביר את המעות ליהודי אחר מדעת היהודי הראשון, הדבר אסור. הרמ"א מביא את דברי ר"ת שהקל בכך אם לא נטל היהודי הראשון מהגוי ונתן לידו של השני, וכותב שאין למחות ביד המקלים, אף שמעיקר הדבר הלכה כדעת רש"י.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">"התולה מעותיו בגוי"- מעות ישראל ביד גוי המלווה אותן, והפוך</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">"התולה מעותיו בגוי"- מעות ישראל ביד גוי המלווה אותן, והפוך</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (סא:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (סא:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: למה לי דכתב רחמנא יציאת מצרים ברבית...? אמר הקדוש ברוך הוא: אני הוא שהבחנתי במצרים בין טפה של בכור לטפה שאינה של בכור – אני הוא שעתיד ליפרע ממי <strong>שתולה מעותיו בנכרי ומלוה אותם לישראל ברבית</strong>...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: למה לי דכתב רחמנא יציאת מצרים ברבית...? אמר הקדוש ברוך הוא: אני הוא שהבחנתי במצרים בין טפה של בכור לטפה שאינה של בכור – אני הוא שעתיד ליפרע ממי <strong>שתולה מעותיו בנכרי ומלוה אותם לישראל ברבית</strong>...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י מפרש שהכוונה לישראל המלווה בפירוש בריבית, אך מנסה להסוות את מעשיו ולומר שהמעות שמלווה אינם שלו אלא שהוא עובד עבור גוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רש"י מפרש שהכוונה לישראל המלווה בפירוש בריבית, אך מנסה להסוות את מעשיו ולומר שהמעות שמלווה אינם שלו אלא שהוא עובד עבור גוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם גורס "שתולה מעותיו ביד נכרי", והכוונה ליהודי המפקיד מעותיו אצל גוי, כדי שהאחרון ילווה אותן בריבית ליהודים אחרים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם גורס "שתולה מעותיו ביד נכרי", והכוונה ליהודי המפקיד מעותיו אצל גוי, כדי שהאחרון ילווה אותן בריבית ליהודים אחרים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התוספתא (פרק ה הל' יח-כ) מדברת על גוי המלווה בריבית מעות של ישראל וישראל המלווה בריבית מעות של גוי ומחלקת בין שלושה מצבים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">התוספתא (פרק ה הל' יח-כ) מדברת על גוי המלווה בריבית מעות של ישראל וישראל המלווה בריבית מעות של גוי ומחלקת בין שלושה מצבים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יח) ישראל שאמר לגוי הילך שכרך וצא והלוה מעותי בריבית אסור וגוי שאמר לישראל הילך שכרך והלווה מעותי ברבית מותר אבל אסור מפני מראית העין</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>יח) ישראל שאמר לגוי הילך שכרך וצא והלוה מעותי בריבית אסור וגוי שאמר לישראל הילך שכרך והלווה מעותי ברבית מותר אבל אסור מפני מראית העין</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יט) מעותיו של ישראל מופקדות אצל הגוי מותר להלוותן בריבית ושל גוי המופקדות אצל ישראל אסור להלוותן בריבית <strong>זה הכלל כל שבאחריות ישראל אסור וכל שבאחריות גוי מותר </strong></blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>יט) מעותיו של ישראל מופקדות אצל הגוי מותר להלוותן בריבית ושל גוי המופקדות אצל ישראל אסור להלוותן בריבית <strong>זה הכלל כל שבאחריות ישראל אסור וכל שבאחריות גוי מותר </strong></blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כ) ישראל שנעשה לו גוי אפוטרופוס או סנטר מותר ללוות הימנו בריבית וגוי שנעשה לו ישראל אפוטרופוס או סנטר אסור ללות הימנו בריבית ישראל הלוה מן הגוי וגוי הלוה מישראל אחר נעשה לו ערב ואינו חושש</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כ) ישראל שנעשה לו גוי אפוטרופוס או סנטר מותר ללוות הימנו בריבית וגוי שנעשה לו ישראל אפוטרופוס או סנטר אסור ללות הימנו בריבית ישראל הלוה מן הגוי וגוי הלוה מישראל אחר נעשה לו ערב ואינו חושש</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן כללי רמת האיסור תלויה בשאלה עד כמה המעות נחשבות ברשות המחזיק אותן. כך למשל, במקרה השני, כאשר המעות מופקדת אצל זה שמלווה אותן ובאחריותו, אם הוא יהודי אסור לו להלוות בריבית ליהודי אחר ואם הוא גוי אז מותר. מקרה הפוך הוא השלישי, בו המלווה הוא רק אפוטרופוס, כלומר מנהל כספים, שהכסף אינו שלו ואף אינו באחריותו. במקרה זה חשובה רק זהות בעל הכסף. מקרה שלישי זה קרוב למקרה הראשון בו המלווה מקבל שכר בכדי להלוות את מעותיו של מישהו אחר. גם כאן כיוון שהמלווה רק עובד בשביל בעל המעות האמיתי, יש לקחת בחשבון רק את זהות בעל המעות, אלא שבזה מחדשת התוספתא שאם המלווה הוא ישראל, כיוון שאין הדבר מפורסם כאפוטרופוס (גר"א קסח-קסט ס"ק לד) יש לחשוש משום מראית העין שהרואים יחשבו שהמעות באמת באחריתו שלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">באופן כללי רמת האיסור תלויה בשאלה עד כמה המעות נחשבות ברשות המחזיק אותן. כך למשל, במקרה השני, כאשר המעות מופקדת אצל זה שמלווה אותן ובאחריותו, אם הוא יהודי אסור לו להלוות בריבית ליהודי אחר ואם הוא גוי אז מותר. מקרה הפוך הוא השלישי, בו המלווה הוא רק אפוטרופוס, כלומר מנהל כספים, שהכסף אינו שלו ואף אינו באחריותו. במקרה זה חשובה רק זהות בעל הכסף. מקרה שלישי זה קרוב למקרה הראשון בו המלווה מקבל שכר בכדי להלוות את מעותיו של מישהו אחר. גם כאן כיוון שהמלווה רק עובד בשביל בעל המעות האמיתי, יש לקחת בחשבון רק את זהות בעל המעות, אלא שבזה מחדשת התוספתא שאם המלווה הוא ישראל, כיוון שאין הדבר מפורסם כאפוטרופוס (גר"א קסח-קסט ס"ק לד) יש לחשוש משום מראית העין שהרואים יחשבו שהמעות באמת באחריתו שלו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי רש"י לעיל משמע שלו היו המעות באמת של גוי היה מותר ליהודי להלוותם בריבית. הרשב"א מרחיב ומסביר שהכוונה שהיהודי יוצר מצג שוא שהוא אפוטרופוס של הגוי. אכן, אם היה הדבר נכון היה מותר להלוות את המעות בריבית, אך למעשה אלה מעות שלו עצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי רש"י לעיל משמע שלו היו המעות באמת של גוי היה מותר ליהודי להלוותם בריבית. הרשב"א מרחיב ומסביר שהכוונה שהיהודי יוצר מצג שוא שהוא אפוטרופוס של הגוי. אכן, אם היה הדבר נכון היה מותר להלוות את המעות בריבית, אך למעשה אלה מעות שלו עצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קסח-קסט כב-כד) פוסק כדברי התוספתא, והרמ"א מוסיף ומדגיש שבמקום שאסרה התוספתא משום מראית העין, אם בפועל אין בעיה של מראית עין כיוון שהכל יודעים שהישראל אינו מלווה ממעותיו שלו אלא משל גוי, מותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קסח-קסט כב-כד) פוסק כדברי התוספתא, והרמ"א מוסיף ומדגיש שבמקום שאסרה התוספתא משום מראית העין, אם בפועל אין בעיה של מראית עין כיוון שהכל יודעים שהישראל אינו מלווה ממעותיו שלו אלא משל גוי, מותר.</p>
                     
                 </div>
                 
                 <div id="topic-2-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ערבות לישראל שלווה בריבית מגוי</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ערבות לישראל שלווה בריבית מגוי</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התוספתא (ה, יא) מתירה ערבות בהלוואת ריבית-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">התוספתא (ה, יא) מתירה ערבות בהלוואת ריבית-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ישראל הלוה מן הגוי וגוי הלוה מישראל אחר נעשה לו ערב ואינו חושש</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ישראל הלוה מן הגוי וגוי הלוה מישראל אחר נעשה לו ערב ואינו חושש</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (עא.) דנה בעניין זה, ומציינת סייגים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (עא.) דנה בעניין זה, ומציינת סייגים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: "אל תקח מאתו נשך ותרבית" – אבל אתה נעשה לו ערב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנו רבנן: "אל תקח מאתו נשך ותרבית" – אבל אתה נעשה לו ערב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ערב למאן? אילימא ערב לישראל – והא תנא אלו עוברין בלא תעשה: המלוה והלוה, הערב והעדים!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ערב למאן? אילימא ערב לישראל – והא תנא אלו עוברין בלא תעשה: המלוה והלוה, הערב והעדים!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא לנכרי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא לנכרי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכיון דדיניה דנכרי דאזיל בתר ערבא – איהו ניהו דקא שקיל מיניה רביתא! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>וכיון דדיניה דנכרי דאזיל בתר ערבא – איהו ניהו דקא שקיל מיניה רביתא! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב ששת</strong>: שקיבל עליו לדון בדיני ישראל.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב ששת</strong>: שקיבל עליו לדון בדיני ישראל.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מובאת ברייתא המתירה ליהודי להיות ערב בהלוואת ריבית. הגמרא מבארת שמדובר בהלוואה בהיתר שמלווה גוי ליהודי. ועדיין, מבהירה הגמרא, שאם מדובר במצב בו המלווה הולך קודם לפרוע מהערב ואח"כ הערב פורע מהלווה, הדבר אסור, כיוון שאז יוצא שמלכתחילה היהודי הערב נחשב כמלוה בריבית לגבי היהודי הלווה. לכן, אם הגוי התנה שלא יפנה לגבות חובו בתחילה מהערב, הדבר מותר, שאם נוצר חוב בין הערב לבין הלווה, אין חוב זה קיים מתחילה אלא רק לאחר שפרע הערב את החוב למלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מובאת ברייתא המתירה ליהודי להיות ערב בהלוואת ריבית. הגמרא מבארת שמדובר בהלוואה בהיתר שמלווה גוי ליהודי. ועדיין, מבהירה הגמרא, שאם מדובר במצב בו המלווה הולך קודם לפרוע מהערב ואח"כ הערב פורע מהלווה, הדבר אסור, כיוון שאז יוצא שמלכתחילה היהודי הערב נחשב כמלוה בריבית לגבי היהודי הלווה. לכן, אם הגוי התנה שלא יפנה לגבות חובו בתחילה מהערב, הדבר מותר, שאם נוצר חוב בין הערב לבין הלווה, אין חוב זה קיים מתחילה אלא רק לאחר שפרע הערב את החוב למלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים מה גדר הערבות האסורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נחלקו הראשונים מה גדר הערבות האסורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י והראב"ד (מובאים דבריו ברשב"א) מסבירים שאם יש ביד המלווה לגבות ממי שירצה, הערב או הלווה, הדבר אסור, שכן ברמת הפוטנציאל נוצר כבר מתחילה חוב בין הערב ללווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רש"י והראב"ד (מובאים דבריו ברשב"א) מסבירים שאם יש ביד המלווה לגבות ממי שירצה, הערב או הלווה, הדבר אסור, שכן ברמת הפוטנציאל נוצר כבר מתחילה חוב בין הערב ללווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרשב"א מקל יותר ואומר שהערבות האסורה היא רק ערבות של "שלוף דוץ"<sup id="ref42"><a href="#fn42">[42]</a></sup>, כלומר ערבות בה המלווה חייב לגבות מהערב. רק בערבות כזו יש חוב שנוצר מתחילה בין הערב לבין הלווה. לעומ"ז, אם המלווה הגוי רשאי (אך לא חייב) לבחור לגבות מהערב, אין ערבות זו אסורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרשב"א מקל יותר ואומר שהערבות האסורה היא רק ערבות של "שלוף דוץ"<sup id="ref42"><a href="#fn42">[42]</a></sup>, כלומר ערבות בה המלווה חייב לגבות מהערב. רק בערבות כזו יש חוב שנוצר מתחילה בין הערב לבין הלווה. לעומ"ז, אם המלווה הגוי רשאי (אך לא חייב) לבחור לגבות מהערב, אין ערבות זו אסורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף, בעקבות דברי התוספתא קובעים הרשב"א והראב"ד (הביאו הרשב"א) שדין ערבות בהלוואה שמלווה ישראל לגוי בריבית שווה לחלוטין לדין ערבות בהלוואה שמלווה גוי לישראל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף, בעקבות דברי התוספתא קובעים הרשב"א והראב"ד (הביאו הרשב"א) שדין ערבות בהלוואה שמלווה ישראל לגוי בריבית שווה לחלוטין לדין ערבות בהלוואה שמלווה גוי לישראל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קע א) פוסק כדעת רש"י, לגבי גדר הערבות האסורה בגוי שהלוה לישראל ומביא את דעת הרשב"א בתור יש אומרים. בסעיף ב (שם) פוסק השו"ע שהאיסור הוא גם במקרה של ישראל שהלווה לגוי, והרמ"א מוסיף, כדעת הראב"ד שצריך שהמלווה יפנה לערב רק אם לא ימצא לפרוע מהלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קע א) פוסק כדעת רש"י, לגבי גדר הערבות האסורה בגוי שהלוה לישראל ומביא את דעת הרשב"א בתור יש אומרים. בסעיף ב (שם) פוסק השו"ע שהאיסור הוא גם במקרה של ישראל שהלווה לגוי, והרמ"א מוסיף, כדעת הראב"ד שצריך שהמלווה יפנה לערב רק אם לא ימצא לפרוע מהלווה.</p>
                     
                 </div>
                 
@@ -1371,63 +1371,63 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ישראל שלוה מעות מן העכו"ם ברבית וזקפן עליו במלוה ונתגייר אם עד שלא נתגייר זקפן עליו במלוה גובה את הקרן והרבית ואם משנתגייר זקפן עליו במלוה גובה את הקרן ולא הרבית, אבל עכו"ם שלוה מישראל ברבית וזקף עליו את הרבית במלוה אף על פי שזקפן עליו אחר שנתגייר גובה את הקרן ואת הרבית שלא יאמרו בשביל מעותיו נתגייר זה, וגובה הישראל ממנו אחר שנתגייר כל מעות הרבית שנתחייב בהן כשהיה עכו"ם.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גוי שהתגייר בין הלוואה לפירעון</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גוי שהתגייר בין הלוואה לפירעון</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (עב.) מביאה ברייתא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (עב.) מביאה ברייתא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ישראל שלוה מעות מן הנכרי ברבית, וזקפן עליו במלוה, ונתגייר,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ישראל שלוה מעות מן הנכרי ברבית, וזקפן עליו במלוה, ונתגייר,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם קודם שנתגייר זקפן עליו במלוה – גובה את הקרן וגובה את הרבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אם קודם שנתגייר זקפן עליו במלוה – גובה את הקרן וגובה את הרבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואם לאחר שנתגייר זקפן עליו במלוה – גובה את הקרן ואינו גובה את הרבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואם לאחר שנתגייר זקפן עליו במלוה – גובה את הקרן ואינו גובה את הרבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכן נכרי שלוה מעות מישראל ברבית וזקפן עליו במלוה ונתגייר,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>וכן נכרי שלוה מעות מישראל ברבית וזקפן עליו במלוה ונתגייר,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם עד שלא נתגייר זקפן עליו במלוה – גובה את הקרן וגובה את הרבית,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אם עד שלא נתגייר זקפן עליו במלוה – גובה את הקרן וגובה את הרבית,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם משנתגייר זקפן עליו במלוה – גובה את הקרן ואינו גובה את הרבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אם משנתגייר זקפן עליו במלוה – גובה את הקרן ואינו גובה את הרבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יוסי</strong> אומר: נכרי שלוה מעות מישראל ברבית – בין כך ובין כך גובה את הקרן וגובה את הרבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי יוסי</strong> אומר: נכרי שלוה מעות מישראל ברבית – בין כך ובין כך גובה את הקרן וגובה את הרבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"זקפן עליו במלוה" הכוונה שלאחר ההלוואה נכתב שטר חוב הכולל את הקרן והריבית לחוב אחד ואינו מפריד ביניהם. ברישא מדובר ביהודי שלווה מגוי והתגייר הגוי, ובסיפא יהודי הלווה לגוי שהתגייר. לדעת תנא קמא, אם בשעה שהתגייר הגוי כבר "זקפן עליו במלווה", יכול הגר לגבות קרן וריבית (ברישא) או לשלם ליהודי קרן וריבית (בסיפא).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"זקפן עליו במלוה" הכוונה שלאחר ההלוואה נכתב שטר חוב הכולל את הקרן והריבית לחוב אחד ואינו מפריד ביניהם. ברישא מדובר ביהודי שלווה מגוי והתגייר הגוי, ובסיפא יהודי הלווה לגוי שהתגייר. לדעת תנא קמא, אם בשעה שהתגייר הגוי כבר "זקפן עליו במלווה", יכול הגר לגבות קרן וריבית (ברישא) או לשלם ליהודי קרן וריבית (בסיפא).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ר' יוסי חולק במקרה שהיהודי הלווה לגוי, ואומר שבכל אופן, בין אם זקף במילווה לפני שהתגייר הגוי ובין אם לא, גובה היהודי את הקרן והריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ר' יוסי חולק במקרה שהיהודי הלווה לגוי, ואומר שבכל אופן, בין אם זקף במילווה לפני שהתגייר הגוי ובין אם לא, גובה היהודי את הקרן והריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבא פוסק כר' יוסי ומסביר את טעמו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רבא פוסק כר' יוסי ומסביר את טעמו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong> אמר רב חסדא אמר רב הונא: הלכה כרבי יוסי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong> אמר רב חסדא אמר רב הונא: הלכה כרבי יוסי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר רבא: מאי טעמא דרבי יוסי – כדי שלא יאמרו בשביל מעותיו נתגייר זה</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר רבא: מאי טעמא דרבי יוסי – כדי שלא יאמרו בשביל מעותיו נתגייר זה</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, טעמו של ר' יוסי הוא שלא יאמרו שהגוי התגייר רק כדי להציל את עצמו מתשלום הריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, טעמו של ר' יוסי הוא שלא יאמרו שהגוי התגייר רק כדי להציל את עצמו מתשלום הריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריטב"א מעיר שאיסור הריבית הוא רק מדרבנן, משום שבשעת ההלוואה היתה הריבית מותרת. לכן יכול ר' יוסי להתיר את הריבית מטעם צדדי. מאותה סיבה הלכה כמותו, כיוון שאין להחמיר בדבר שהוא מדרבנן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הריטב"א מעיר שאיסור הריבית הוא רק מדרבנן, משום שבשעת ההלוואה היתה הריבית מותרת. לכן יכול ר' יוסי להתיר את הריבית מטעם צדדי. מאותה סיבה הלכה כמותו, כיוון שאין להחמיר בדבר שהוא מדרבנן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו בשטמ"ק בשם שיטה מביא שיטה לפיה האיסור בעיקרו הוא מדאורייתא ולדעת ר' יוסי חכמים השתמשו בכוחם להפקיר ממון בכדי לאפשר את גביית הריבית במצב האמור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו בשטמ"ק בשם שיטה מביא שיטה לפיה האיסור בעיקרו הוא מדאורייתא ולדעת ר' יוסי חכמים השתמשו בכוחם להפקיר ממון בכדי לאפשר את גביית הריבית במצב האמור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים דנו בגדר דברי ר' יוסי-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים דנו בגדר דברי ר' יוסי-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרשב"א מבין שעל פי ר' יוסי, אפילו אם לא זקף עליו הריבית בשטר כלל, מתוך הטעם שלא יצא לעז על גיורו של אותו גוי, אינו גובה את הריבית מהיהודי. כך כותב גם הטור (קעא).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרשב"א מבין שעל פי ר' יוסי, אפילו אם לא זקף עליו הריבית בשטר כלל, מתוך הטעם שלא יצא לעז על גיורו של אותו גוי, אינו גובה את הריבית מהיהודי. כך כותב גם הטור (קעא).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, מדברי המאירי נראה שהוא מצדד שאם לא נזקף החוב, ועדיין מדובר בגביה בשטר בו יש ריבית מפורשת, אין הגוי שנתגייר גובה מהיהודי כלל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, מדברי המאירי נראה שהוא מצדד שאם לא נזקף החוב, ועדיין מדובר בגביה בשטר בו יש ריבית מפורשת, אין הגוי שנתגייר גובה מהיהודי כלל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, במקרה של גוי שלווה מישראל פוסק ר' יוסי שאפילו אם זקף עליו במילווה רק לאחר שהתגייר, עדיין גובה היהודי מהגר קרן וריבית, שלא יאמרו שהתגייר כדי לחסוך מעצמו את הריבית. נחלקו הראשונים במקרה בו הריבית הולכת ותופחת עם הזמן, מה דין חלק הריבית השייך לזמן שבין הגיור לבין הזקיפה במילווה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאמור, במקרה של גוי שלווה מישראל פוסק ר' יוסי שאפילו אם זקף עליו במילווה רק לאחר שהתגייר, עדיין גובה היהודי מהגר קרן וריבית, שלא יאמרו שהתגייר כדי לחסוך מעצמו את הריבית. נחלקו הראשונים במקרה בו הריבית הולכת ותופחת עם הזמן, מה דין חלק הריבית השייך לזמן שבין הגיור לבין הזקיפה במילווה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרא"ש (סי' נז) כותב שעל פי דברי ר' יוסי גובה היהודי אפילו חלק זה, כיוון שטעמו של ר' יוסי שייך גם בזה, ואפילו אם נאמר שיש בזה איסור תורה, כי ריבית זו נוצרה משנתגייר הגוי, בכל זאת "יש כח בחכמים לעקור דבר מן התורה ואפילו במקום עבירה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרא"ש (סי' נז) כותב שעל פי דברי ר' יוסי גובה היהודי אפילו חלק זה, כיוון שטעמו של ר' יוסי שייך גם בזה, ואפילו אם נאמר שיש בזה איסור תורה, כי ריבית זו נוצרה משנתגייר הגוי, בכל זאת "יש כח בחכמים לעקור דבר מן התורה ואפילו במקום עבירה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון הרמב"ם "וגובה הישראל ממנו אחר שנתגייר כל מעות הרבית שנתחייב בהן כשהיה עכו"ם" נראה שהוא חולק ושלדעתו ניתן לגבות רק את הריבית שהיתה קיימת ברגע הגיור. כך פוסק במפורש הרמ"ה (הביאו הטור).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון הרמב"ם "וגובה הישראל ממנו אחר שנתגייר כל מעות הרבית שנתחייב בהן כשהיה עכו"ם" נראה שהוא חולק ושלדעתו ניתן לגבות רק את הריבית שהיתה קיימת ברגע הגיור. כך פוסק במפורש הרמ"ה (הביאו הטור).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קעא א) העתיק את לשון הרמב"ם להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קעא א) העתיק את לשון הרמב"ם להלכה.</p>
                     
                 </div>
                 
@@ -1435,31 +1435,31 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מצוה להקדים הלואת ישראל בחנם להלואת עכו"ם ברבית.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הלוואת ישראל בחינם על פני הלוואת גוי בריבית</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הלוואת ישראל בחינם על פני הלוואת גוי בריבית</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (עא.)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (עא.)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תני <strong>רב יוסף</strong>: "אם כסף תלוה את עמי את העני עמך", עמי ונכרי – עמי קודם, עני ועשיר – עני קודם, ענייך ועניי עירך – ענייך קודמין, עניי עירך ועניי עיר אחרת – עניי עירך קודמין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תני <strong>רב יוסף</strong>: "אם כסף תלוה את עמי את העני עמך", עמי ונכרי – עמי קודם, עני ועשיר – עני קודם, ענייך ועניי עירך – ענייך קודמין, עניי עירך ועניי עיר אחרת – עניי עירך קודמין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר מר: עמי ונכרי עמי קודם פשיטא! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר מר: עמי ונכרי עמי קודם פשיטא! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב נחמן</strong> אמר לי <strong>הונא</strong>: לא נצרכא דאפילו לנכרי ברבית ולישראל בחנם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב נחמן</strong> אמר לי <strong>הונא</strong>: לא נצרכא דאפילו לנכרי ברבית ולישראל בחנם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב יוסף לומד מהפסוק העוסק במצוות צדקה כמה הלכות בנוגע לקדימויות בצדקה. ספציפית, הכתוב "את עמי" מלמד שהלוואה לישראל קודמת להלוואה לגוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב יוסף לומד מהפסוק העוסק במצוות צדקה כמה הלכות בנוגע לקדימויות בצדקה. ספציפית, הכתוב "את עמי" מלמד שהלוואה לישראל קודמת להלוואה לגוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מעירה שהדבר פשוט ואינו צריך לימוד מפסוק, ולכן מסביר רב נחמן שהחידוש הוא שיש להעדיף הלוואה לישראל, בה לא ניתן לקחת ריבית, על פני הלוואה בריבית לגוי, למרות שהעדפת הישראל גוררת את הפסד הרווח מריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מעירה שהדבר פשוט ואינו צריך לימוד מפסוק, ולכן מסביר רב נחמן שהחידוש הוא שיש להעדיף הלוואה לישראל, בה לא ניתן לקחת ריבית, על פני הלוואה בריבית לגוי, למרות שהעדפת הישראל גוררת את הפסד הרווח מריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באגרות משה (ג צג) כתב שהעדפה זו אינה מוחלטת, שהרי לפי זה לא ניתן ליהודי להתפרנס מהלוואה בריבית לגוי כי תמיד יש ישראל הזקוק להלוואה. אלא מדובר בסכומים קטנים שהריבית בהם קטנה, או בסיטואציה מזדמנת שאינה בהקשר של פרנסה קבועה<sup id="ref43"><a href="#fn43">[43]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">באגרות משה (ג צג) כתב שהעדפה זו אינה מוחלטת, שהרי לפי זה לא ניתן ליהודי להתפרנס מהלוואה בריבית לגוי כי תמיד יש ישראל הזקוק להלוואה. אלא מדובר בסכומים קטנים שהריבית בהם קטנה, או בסיטואציה מזדמנת שאינה בהקשר של פרנסה קבועה<sup id="ref43"><a href="#fn43">[43]</a></sup>.</p>
                     
                 </div>
                 
@@ -1467,39 +1467,39 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסור לאדם שיתן מעותיו קרוב לשכר ורחוק להפסד שזה אבק רבית הוא והעושה כן נקרא רשע, ואם נתן חולקין בשכר ובהפסד כדין העסק, והנותן מעותיו קרוב להפסד ורחוק לשכר הרי זה נקרא חסיד.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נתינת מעות קרוב לשכר ורחוק מהפסד</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נתינת מעות קרוב לשכר ורחוק מהפסד</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ע.)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ע.)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: קרוב לשכר ורחוק להפסד – רשע, קרוב להפסד ורחוק לשכר – חסיד, קרוב לזה ולזה, רחוק מזה ומזה – זו היא מדת כל אדם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנו רבנן: קרוב לשכר ורחוק להפסד – רשע, קרוב להפסד ורחוק לשכר – חסיד, קרוב לזה ולזה, רחוק מזה ומזה – זו היא מדת כל אדם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא שם אומרת שמותר להלוות מעות של יתומים קרוב לשכר ורחוק להפסד אף שבאדם רגיל הדבר אסור. והמפרשים הבינו מכך שאיסור קרוב לשכר ורחוק להפסד הוא מדרבנן בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא שם אומרת שמותר להלוות מעות של יתומים קרוב לשכר ורחוק להפסד אף שבאדם רגיל הדבר אסור. והמפרשים הבינו מכך שאיסור קרוב לשכר ורחוק להפסד הוא מדרבנן בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עניין זה מובא בירושלמי (פ"ה הל' ו) בהקשר של מעשה שהיה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עניין זה מובא בירושלמי (פ"ה הל' ו) בהקשר של מעשה שהיה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ר' לעזר</strong> יהב דינר לחד בר נש אמר ליה מה דהינון עבדין מיכן ועד חנוכה דידי. מתמן ולהלן לית לי עמך עסוק אין פחתין ואין יתרין דידך.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>ר' לעזר</strong> יהב דינר לחד בר נש אמר ליה מה דהינון עבדין מיכן ועד חנוכה דידי. מתמן ולהלן לית לי עמך עסוק אין פחתין ואין יתרין דידך.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בעא מיתן ליה בתר חנוכה ולא קביל.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בעא מיתן ליה בתר חנוכה ולא קביל.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ר' לעזר חשש על קרוב לשכר ורחוק להפסד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ר' לעזר חשש על קרוב לשכר ורחוק להפסד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ותני כן קירוב שכר וריחוק הפסד זו מידת רשעים קיר[ו]ב הפסד וריחוק שכר זו מדת צדיקים קרוב לזה ולזה רחוק לזה ולזה זו מידת כל אדם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ותני כן קירוב שכר וריחוק הפסד זו מידת רשעים קיר[ו]ב הפסד וריחוק שכר זו מדת צדיקים קרוב לזה ולזה רחוק לזה ולזה זו מידת כל אדם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ר' אלעזר נתן כסף לאדם אחד שיתעסק וירוויח בו, כאשר עד תאריך מסויים כל הרווח ילך לר' אלעזר, ומאותו הזמן ואילך המעות הופכות למילווה גמור, כך שאין חלק לבעל המעות (ר' אלעזר) בהפסד או ברווח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ר' אלעזר נתן כסף לאדם אחד שיתעסק וירוויח בו, כאשר עד תאריך מסויים כל הרווח ילך לר' אלעזר, ומאותו הזמן ואילך המעות הופכות למילווה גמור, כך שאין חלק לבעל המעות (ר' אלעזר) בהפסד או ברווח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י על הסוגיה בבבלי מסביר ש"קרוב לשכר ורחוק להפסד" הכוונה לנתינת כסף לאדם שיתעסק בו, כאשר ההסכם הוא שאם יהיה רווח יחלקו בו המתעסק ובעל המעות, אך אם יהיה הפסד יפסיד רק המתעסק ובעל המעות יקבל את מעותיו שנתן כבתחילה. כך גם משמע מדברי הרמב"ם בסוף הפרק הקודם. פירוש זה מעלה שאלה- מדוע אין מדובר בריבית של תורה, שהרי כל האחריות על מקבל המעות, ואם כן זו הלוואה, ומה שנותן לבעל המעות ברווח הוא לכאורה ריבית קצוצה! הרמב"ן (ע. ד"ה "הא דאמרינן") מתייחס לשאלה זו ואומר שיש כאן שילוב של שני אלמנטים שבעטיים מדובר על איסור דרבנן בלבד. ראשית, מה שמשלם המתעסק לבעל המעות אינו כסף שהיה בכיסו עוד מקודם, אלא רווח שהופק מהמעות עצמן<sup id="ref44"><a href="#fn44">[44]</a></sup>. שנית, אפשר שהמעות אינן נחשבות כמילווה אלא כפיקדון<sup id="ref45"><a href="#fn45">[45]</a></sup>, והמתעסק קיבל על עצמו להתחייב גם באונס כשואל<sup id="ref46"><a href="#fn46">[46]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רש"י על הסוגיה בבבלי מסביר ש"קרוב לשכר ורחוק להפסד" הכוונה לנתינת כסף לאדם שיתעסק בו, כאשר ההסכם הוא שאם יהיה רווח יחלקו בו המתעסק ובעל המעות, אך אם יהיה הפסד יפסיד רק המתעסק ובעל המעות יקבל את מעותיו שנתן כבתחילה. כך גם משמע מדברי הרמב"ם בסוף הפרק הקודם. פירוש זה מעלה שאלה- מדוע אין מדובר בריבית של תורה, שהרי כל האחריות על מקבל המעות, ואם כן זו הלוואה, ומה שנותן לבעל המעות ברווח הוא לכאורה ריבית קצוצה! הרמב"ן (ע. ד"ה "הא דאמרינן") מתייחס לשאלה זו ואומר שיש כאן שילוב של שני אלמנטים שבעטיים מדובר על איסור דרבנן בלבד. ראשית, מה שמשלם המתעסק לבעל המעות אינו כסף שהיה בכיסו עוד מקודם, אלא רווח שהופק מהמעות עצמן<sup id="ref44"><a href="#fn44">[44]</a></sup>. שנית, אפשר שהמעות אינן נחשבות כמילווה אלא כפיקדון<sup id="ref45"><a href="#fn45">[45]</a></sup>, והמתעסק קיבל על עצמו להתחייב גם באונס כשואל<sup id="ref46"><a href="#fn46">[46]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריטב"א חולק. לדבריו אם נותן המעות אינו נוטל בהפסד דבר אלא רק ברווח, הרי זו הלוואה גמורה, וממילא מה שהוא מקבל מהרווח זו ריבית של תורה<sup id="ref47"><a href="#fn47">[47]</a></sup>. להבנת דברי הריטב"א נקדים את המוסבר בהלכה הבאה (וביתר פירוט בהלכות שותפין פרק ח). במקרה בו אדם נותן ממון או רכוש מניב רווח לחבירו כדי שחבירו יעבוד ושניהם יתחלקו ברווח, תיקנו חכמים שצריך בעל הממון לתת למתעסק, מלבד חלקו, גם שכר כלשהו. הסיבה היא שחלק מהרכוש נחשב פיקדון וחלק מהרכוש נחשב להלוואה, ואם לא יקבל המתעסק שכר נבדל, נמצא שהוא עמל בחצי השייך לחבירו (המופקד בידו) כתמורה על ההלוואה שהלווה לו חבירו והדבר דומה לריבית. הריטב"א מסביר ש"קרוב לשכר ורחוק מהפסד" הכוונה לאי הקפדה על מתן תוספת השכר למתעסק<sup id="ref48"><a href="#fn48">[48]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הריטב"א חולק. לדבריו אם נותן המעות אינו נוטל בהפסד דבר אלא רק ברווח, הרי זו הלוואה גמורה, וממילא מה שהוא מקבל מהרווח זו ריבית של תורה<sup id="ref47"><a href="#fn47">[47]</a></sup>. להבנת דברי הריטב"א נקדים את המוסבר בהלכה הבאה (וביתר פירוט בהלכות שותפין פרק ח). במקרה בו אדם נותן ממון או רכוש מניב רווח לחבירו כדי שחבירו יעבוד ושניהם יתחלקו ברווח, תיקנו חכמים שצריך בעל הממון לתת למתעסק, מלבד חלקו, גם שכר כלשהו. הסיבה היא שחלק מהרכוש נחשב פיקדון וחלק מהרכוש נחשב להלוואה, ואם לא יקבל המתעסק שכר נבדל, נמצא שהוא עמל בחצי השייך לחבירו (המופקד בידו) כתמורה על ההלוואה שהלווה לו חבירו והדבר דומה לריבית. הריטב"א מסביר ש"קרוב לשכר ורחוק מהפסד" הכוונה לאי הקפדה על מתן תוספת השכר למתעסק<sup id="ref48"><a href="#fn48">[48]</a></sup>.</p>
                     
                 </div>
                 
@@ -1507,23 +1507,23 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט-י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אין מושיבין חנוני למחצית שכר ולא יתן מעות ליקח בהן פירות למחצית שכר ולא ביצים להושיב תחת התרנגולין שלו למחצית שכר ואין שמין עגלים וסייחין לפטמן למחצית שכר אלא א"כ נתן לו שכר עמלו ומזונו, או יהיה ריוח המתעסק יותר על הפסדו כמו שביארנו בענין השותפות.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המשתתף עם חבירו במעות או בקרקע או הנותן לו עסק לא יצרף השכר עם הקרן שמא לא יהיה שם שכר ונמצאו באין לידי רבית, וכן לא יתן לו מעות בתורת עסק או שותפות ויכתוב אותן מלוה שמא ימות ונמצא השטר ביד היורש וגובה בו את הרבית.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נתינת עסק למחצית שכר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נתינת עסק למחצית שכר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם פירט הלכות אלה בהלכות שותפין פרק ח, בע"ה יבוא שם באורנו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם פירט הלכות אלה בהלכות שותפין פרק ח, בע"ה יבוא שם באורנו.</p>
                     
                 </div>
                 
@@ -1531,111 +1531,111 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא-יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסור להקדים הרבית או לאחר אותו, כיצד נתן עיניו ללוות ממנו והיה משלח לו סבלונות בשביל שילוהו זו היא רבית מוקדמת, לוה ממנו והחזיר לו מעותיו והיה משלח לו סבלונות בשביל מעותיו שהיו בטילין אצלו זו היא רבית מאוחרת ואם עבר ועושה כן הרי זה אבק רבית.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מי שלוה מחבירו ולא היה רגיל מקודם להקדים לו שלום אסור להקדים לו שלום, ואצ"ל שיקלסו בדברים או ישכים לפתחו שנאמר נשך כל דבר אפילו דברים אסורים, וכן אסור לו ללמד את המלוה מקרא או גמרא כל זמן שמעותיו בידו אם לא היה רגיל בזה מקודם שנא' נשך כל דבר.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המלוה את חבירו לא יאמר לו דע אם בא איש פלוני ממקום פלוני (כלומר) שתכבדו ותאכילו ותשקהו כראוי וכן כל כיוצא בזה.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">טובות הנאה הבאות מהלווה למלווה שיש בהן משום ריבית</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">טובות הנאה הבאות מהלווה למלווה שיש בהן משום ריבית</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ריבית קצוצה "קלאסית" מתאפיינת בכך שההלוואה מותנית בתשלום הריבית. עם זאת, ישנם מקרים בהם יש מעבר של דמים או טובת הנאה מהלווה למלווה, אף שההלוואה אינה מותנית בהם (לפחות לא במפורש). לקמן נסקור כמה מקרים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ריבית קצוצה "קלאסית" מתאפיינת בכך שההלוואה מותנית בתשלום הריבית. עם זאת, ישנם מקרים בהם יש מעבר של דמים או טובת הנאה מהלווה למלווה, אף שההלוואה אינה מותנית בהם (לפחות לא במפורש). לקמן נסקור כמה מקרים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה (עה מלמדת את דין ריבית מוקדמת ומאוחרת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה (עה מלמדת את דין ריבית מוקדמת ומאוחרת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבן גמליאל</strong> אומר: יש רבית מוקדמת, ויש רבית מאוחרת.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבן גמליאל</strong> אומר: יש רבית מוקדמת, ויש רבית מאוחרת.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כיצד?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כיצד?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נתן עיניו ללוות הימנו, והוא משלח לו ואומר: בשביל שתלוני – זו היא רבית מוקדמת.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נתן עיניו ללוות הימנו, והוא משלח לו ואומר: בשביל שתלוני – זו היא רבית מוקדמת.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לוה הימנו והחזיר לו את מעותיו, והוא משלח לו, ואומר: בשביל מעותיך שהיו בטילות אצלי – זו היא רבית מאוחרת.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לוה הימנו והחזיר לו את מעותיו, והוא משלח לו, ואומר: בשביל מעותיך שהיו בטילות אצלי – זו היא רבית מאוחרת.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבן גמליאל מחדש שגם אם ההלוואה אינה מותנית בשכר המתנת מעות, אם הלווה מעביר למלווה מעות נוספות לפני או לאחר ההלוואה, אסור הדבר משום ריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רבן גמליאל מחדש שגם אם ההלוואה אינה מותנית בשכר המתנת מעות, אם הלווה מעביר למלווה מעות נוספות לפני או לאחר ההלוואה, אסור הדבר משום ריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו עד כמה העברת המעות צריכה להיות קשורה להלוואה באופן מפורש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו עד כמה העברת המעות צריכה להיות קשורה להלוואה באופן מפורש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרא"ש (סי עט) לומד מלשון "ואומר" שבמשנה שהאיסור הוא דווקא כאשר הלווה אומר במפורש שהמעות שהוא נותן למלווה נועדו כדי לשכנע אותו שילווה לו ("ריבית מוקדמת") או בכדי להודות לו על שהלווה לו ("ריבית מאוחרת"). כלומר, אם הלווה נותן לו מעות סתם, אף שאלה כוונותיו, אין איסור בדבר. עם זאת, מדברי הרא"ש בסימן סז עולה שאם הלווה נתן תוספת דמים במעמד הפירעון ממש, אפילו אם אינו אומר מאומה בפירוש, בכל זאת הדבר שקול להכרזה שבשל ההלוואה הוא נותן זאת, ואסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרא"ש (סי עט) לומד מלשון "ואומר" שבמשנה שהאיסור הוא דווקא כאשר הלווה אומר במפורש שהמעות שהוא נותן למלווה נועדו כדי לשכנע אותו שילווה לו ("ריבית מוקדמת") או בכדי להודות לו על שהלווה לו ("ריבית מאוחרת"). כלומר, אם הלווה נותן לו מעות סתם, אף שאלה כוונותיו, אין איסור בדבר. עם זאת, מדברי הרא"ש בסימן סז עולה שאם הלווה נתן תוספת דמים במעמד הפירעון ממש, אפילו אם אינו אומר מאומה בפירוש, בכל זאת הדבר שקול להכרזה שבשל ההלוואה הוא נותן זאת, ואסור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זה, מלשון הרמב"ם משמע שריבית מאוחרת ומוקדמת אסורה אפילו אם לא אמר הלווה בפירוש שהמעות קשורות להלוואה<sup id="ref49"><a href="#fn49">[49]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זה, מלשון הרמב"ם משמע שריבית מאוחרת ומוקדמת אסורה אפילו אם לא אמר הלווה בפירוש שהמעות קשורות להלוואה<sup id="ref49"><a href="#fn49">[49]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד שם במשנה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד שם במשנה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי שמעון</strong> אומר: יש רבית דברים; לא יאמר לו דע כי בא איש פלוני ממקום פלוני.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי שמעון</strong> אומר: יש רבית דברים; לא יאמר לו דע כי בא איש פלוני ממקום פלוני.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בפירוש הדברים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בפירוש הדברים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבינו יהונתן מפרש שהמלווה מבקש מהלווה שילך בעבורו למקום כלשהו לשאול על אדם מסויים. רבינו יהונתן מוסיף שהחידוש הוא שהדבר אסור אפילו אם הלווה הולך לאותו מקום ממילא כך שלא נוסף לו שום טורח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רבינו יהונתן מפרש שהמלווה מבקש מהלווה שילך בעבורו למקום כלשהו לשאול על אדם מסויים. רבינו יהונתן מוסיף שהחידוש הוא שהדבר אסור אפילו אם הלווה הולך לאותו מקום ממילא כך שלא נוסף לו שום טורח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש אחר מובא בשטמ"ק בשם שיטה, ולפיו הלווה אומר לשלוחו לבדוק אם הגיע המלווה למקומו בכדי לדרוש בשלומו (בדומה לדברי רשב"י להלן).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פירוש אחר מובא בשטמ"ק בשם שיטה, ולפיו הלווה אומר לשלוחו לבדוק אם הגיע המלווה למקומו בכדי לדרוש בשלומו (בדומה לדברי רשב"י להלן).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם מפרש שהמלווה מבקש מהלווה לארח ולדאוג למחסורו של איש אחר שהמלווה חפץ בטובתו. החידוש בדברים לפיכך, הוא שאפילו אם ההנאה אינה מגיעה למלווה עצמו, עדיין הדבר אסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם מפרש שהמלווה מבקש מהלווה לארח ולדאוג למחסורו של איש אחר שהמלווה חפץ בטובתו. החידוש בדברים לפיכך, הוא שאפילו אם ההנאה אינה מגיעה למלווה עצמו, עדיין הדבר אסור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מובאת ברייתא באותו עניין-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מובאת ברייתא באותו עניין-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תניא, <strong>רבי שמעון בן יוחי</strong> אומר: מנין לנושה בחבירו מנה, ואינו רגיל להקדים לו שלום שאסור להקדים לו שלום – תלמוד לומר נשך כל דבר אשר ישך – אפילו דיבור אסור</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תניא, <strong>רבי שמעון בן יוחי</strong> אומר: מנין לנושה בחבירו מנה, ואינו רגיל להקדים לו שלום שאסור להקדים לו שלום – תלמוד לומר נשך כל דבר אשר ישך – אפילו דיבור אסור</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אפילו אם טובת ההנאה הבאה בעקבות ההלוואה אינה אלא דיבור, הדבר אסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אפילו אם טובת ההנאה הבאה בעקבות ההלוואה אינה אלא דיבור, הדבר אסור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור נוסף המדבר על מקרה בו המלווה מקבל טובת הנאה מהלווה מובא בגמרא (עג-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקור נוסף המדבר על מקרה בו המלווה מקבל טובת הנאה מהלווה מובא בגמרא (עג-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבינא</strong> הוה יהיב זוזי לבני אקרא דשנוותא ושפכי ליה טפי כופיתא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבינא</strong> הוה יהיב זוזי לבני אקרא דשנוותא ושפכי ליה טפי כופיתא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אתא לקמיה ד<strong>רב אשי</strong>, אמר ליה: מי שרי? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אתא לקמיה ד<strong>רב אשי</strong>, אמר ליה: מי שרי? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: אין, אחולי הוא דקא מחלי גבך.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: אין, אחולי הוא דקא מחלי גבך.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבינא נתן תשלום מוקדם למוכרי יין בכדי שיספקו לו יין לאחר הבציר. כאשר סיפקו לו את היין, הוסיפו לו עוד תוספת מדעתם על הכמות שסוכמה. רבינא הלך להתייעץ עם רב אשי האם יש בדבר משום אבק ריבית, ורב אשי התיר את הדבר מתוך הבנה שהמוכרים מחלו את אותה תוספת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רבינא נתן תשלום מוקדם למוכרי יין בכדי שיספקו לו יין לאחר הבציר. כאשר סיפקו לו את היין, הוסיפו לו עוד תוספת מדעתם על הכמות שסוכמה. רבינא הלך להתייעץ עם רב אשי האם יש בדבר משום אבק ריבית, ורב אשי התיר את הדבר מתוך הבנה שהמוכרים מחלו את אותה תוספת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים התייחסו בדרכים שונות לשאלה מדוע מקרה זה אינו ריבית מאוחרת שכפי שראינו לעיל אסורה משום אבק ריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים התייחסו בדרכים שונות לשאלה מדוע מקרה זה אינו ריבית מאוחרת שכפי שראינו לעיל אסורה משום אבק ריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י (שם ד"ה "קמחלי") והתוספות (שם ד"ה "ושפכי") מסתמכים על ההבנה שריבית מוקדמת ומאוחרת אסורה רק כאשר נאמר בפירוש שתוספת הדמים באה בשל ההלוואה (עי' לעיל בשם הרא"ש). מתוך כך הם מסבירים שבמקרה של רבינא היתה התוספת שקיבל מותרת משום שלא נאמר במפורש שהיא תמורה על הקדמת המעות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רש"י (שם ד"ה "קמחלי") והתוספות (שם ד"ה "ושפכי") מסתמכים על ההבנה שריבית מוקדמת ומאוחרת אסורה רק כאשר נאמר בפירוש שתוספת הדמים באה בשל ההלוואה (עי' לעיל בשם הרא"ש). מתוך כך הם מסבירים שבמקרה של רבינא היתה התוספת שקיבל מותרת משום שלא נאמר במפורש שהיא תמורה על הקדמת המעות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריטב"א, תלמיד הר"פ (בשטמ"ק) וראשונים נוספים מסבירים שיש הבדל בין מקרה של לווה הפורע עם תוספת, שזו ריבית מאוחרת האסורה, לבין המקרה של רבינא, שבו מדובר במכר, בו המוכר יכול לקבוע את המחיר<sup id="ref50"><a href="#fn50">[50]</a></sup> <sup id="ref51"><a href="#fn51">[51]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הריטב"א, תלמיד הר"פ (בשטמ"ק) וראשונים נוספים מסבירים שיש הבדל בין מקרה של לווה הפורע עם תוספת, שזו ריבית מאוחרת האסורה, לבין המקרה של רבינא, שבו מדובר במכר, בו המוכר יכול לקבוע את המחיר<sup id="ref50"><a href="#fn50">[50]</a></sup> <sup id="ref51"><a href="#fn51">[51]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור נוסף העוסק באיסור הענקת טובת הנאה מהלווה למלווה נמצא במשנה ובסוגיית הגמרא (סד-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקור נוסף העוסק באיסור הענקת טובת הנאה מהלווה למלווה נמצא במשנה ובסוגיית הגמרא (סד-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במשנה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המלוה את חבירו לא ידור בחצרו חנם, ולא ישכור ממנו בפחות מפני שהוא רבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>המלוה את חבירו לא ידור בחצרו חנם, ולא ישכור ממנו בפחות מפני שהוא רבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ובגמרא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ובגמרא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יוסף בר מניומי</strong> אמר <strong>רב נחמן</strong>: אף על פי שאמרו הדר בחצר חבירו שלא מדעתו – אינו צריך להעלות לו שכר, הלוהו ודר בחצירו – צריך להעלות לו שכר.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב יוסף בר מניומי</strong> אמר <strong>רב נחמן</strong>: אף על פי שאמרו הדר בחצר חבירו שלא מדעתו – אינו צריך להעלות לו שכר, הלוהו ודר בחצירו – צריך להעלות לו שכר.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מתבאר שדברי רב יוסף בר מניומי מוסיפים על האיסור שבמשנה שני חידושים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מתבאר שדברי רב יוסף בר מניומי מוסיפים על האיסור שבמשנה שני חידושים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשית,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשית,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי ממתניתין הוה אמינא: הני מילי - בחצר דקיימא לאגרא, וגברא דעביד למיגר. אבל חצר דלא קיימא לאגרא, וגברא דלא עביד למיגר - אימא לא, קא משמע לן.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי ממתניתין הוה אמינא: הני מילי - בחצר דקיימא לאגרא, וגברא דעביד למיגר. אבל חצר דלא קיימא לאגרא, וגברא דלא עביד למיגר - אימא לא, קא משמע לן.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מהמשנה לבדה היינו מבינים שדווקא טובת הנאה של ממש אסורה, ולכן בא רב יוסף ומלמדנו שאפילו דבר שאין לו ערך כספי, כגון שהלווה אינו נוהג להשכיר את חצרו ומלווה שאינו נוהג לשכור, בכל זאת אסור כאשר הדבר נוגע לריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מהמשנה לבדה היינו מבינים שדווקא טובת הנאה של ממש אסורה, ולכן בא רב יוסף ומלמדנו שאפילו דבר שאין לו ערך כספי, כגון שהלווה אינו נוהג להשכיר את חצרו ומלווה שאינו נוהג לשכור, בכל זאת אסור כאשר הדבר נוגע לריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דבר נוסף שבא רב יוסף לחדש הוא שאפילו אם ההלוואה לא הותנתה מלכתחילה בכך שידור המלווה בחצרו של הלווה, אלא התחדש הדבר לאחר מעשה, בכל זאת הדבר אסור<sup id="ref52"><a href="#fn52">[52]</a></sup> <sup id="ref53"><a href="#fn53">[53]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דבר נוסף שבא רב יוסף לחדש הוא שאפילו אם ההלוואה לא הותנתה מלכתחילה בכך שידור המלווה בחצרו של הלווה, אלא התחדש הדבר לאחר מעשה, בכל זאת הדבר אסור<sup id="ref52"><a href="#fn52">[52]</a></sup> <sup id="ref53"><a href="#fn53">[53]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, לכאורה בניגוד לסוגיות שלעיל, מסוגיה זו עולה חומרה מרחיקת לכת- שאפילו דבר שאין בו טובת הנאה ממשית אסור ללווה לעשות למלווה. התוספות (ד"ה "אבל") מציעים שתי אפשרויות לסייג איסור זה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאמור, לכאורה בניגוד לסוגיות שלעיל, מסוגיה זו עולה חומרה מרחיקת לכת- שאפילו דבר שאין בו טובת הנאה ממשית אסור ללווה לעשות למלווה. התוספות (ד"ה "אבל") מציעים שתי אפשרויות לסייג איסור זה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דווקא דבר שבפרהסיה ויש לו קול אסור בכל אופן, כדוגמת דיורין בבית הלווה או שימוש בעבדו, אך דברים שבצנעה מותרים אם היה הלווה עושה אותם בכל אופן למלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דווקא דבר שבפרהסיה ויש לו קול אסור בכל אופן, כדוגמת דיורין בבית הלווה או שימוש בעבדו, אך דברים שבצנעה מותרים אם היה הלווה עושה אותם בכל אופן למלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיה שכאן מדובר על מלווה הדר בחצר הלווה שלא מדעתו. אלמלא היה מלווה לו לא היה מעיז לעשות כך, ולכן הדבר אסור אפילו אם החצר אינה מיועדת לשכירות ואין ללווה שום הפסד בכך. ברם, במקרה כללי טובת הנאה הבאה מהלווה למלווה מותרת אם היא לא משמעותית או שממילא היה עושה זאת אף אם לא הלווהו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגיה שכאן מדובר על מלווה הדר בחצר הלווה שלא מדעתו. אלמלא היה מלווה לו לא היה מעיז לעשות כך, ולכן הדבר אסור אפילו אם החצר אינה מיועדת לשכירות ואין ללווה שום הפסד בכך. ברם, במקרה כללי טובת הנאה הבאה מהלווה למלווה מותרת אם היא לא משמעותית או שממילא היה עושה זאת אף אם לא הלווהו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קס ו) פוסק בעניין ריבית מוקדמת ומאוחרת כרמב"ם, שהדבר אסור רק אם מפרש את הקשר להלוואה. הרמ"א (שם) מביא את שיטת הרא"ש, שאם לא פירש אין בכך חשש ריבית מוקדמת או מאוחרת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קס ו) פוסק בעניין ריבית מוקדמת ומאוחרת כרמב"ם, שהדבר אסור רק אם מפרש את הקשר להלוואה. הרמ"א (שם) מביא את שיטת הרא"ש, שאם לא פירש אין בכך חשש ריבית מוקדמת או מאוחרת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות המעשה ברבינא (סוגיה ב לעיל) כותב השו"ע (שם ד), שאם נתן הלווה למלווה מתנה בשעת הפירעון, אסור, והרמ"א כותב בעקבות הריטב"א שאם מדובר במכר, יכול הלווה (המוכר) להוסיף למלווה (הקונה).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעקבות המעשה ברבינא (סוגיה ב לעיל) כותב השו"ע (שם ד), שאם נתן הלווה למלווה מתנה בשעת הפירעון, אסור, והרמ"א כותב בעקבות הריטב"א שאם מדובר במכר, יכול הלווה (המוכר) להוסיף למלווה (הקונה).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי דברים שאין בהם טובת הנאה ממש, או שהיה עושה אותם הלווה למלווה בכל אופן, פוסק השו"ע (שם ז), שהדבר אסור דווקא כל עוד לא הגיע זמן הפירעון (טור, עי' הערה <strong>שגיאה! הסימניה אינה מוגדרת.</strong>), ודווקא על פי שני הגדרים שהובאו בתוספות, כלומר, שיהיה דבר של פרהסיה או שיהנה המלווה שלא מדעתו של הלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי דברים שאין בהם טובת הנאה ממש, או שהיה עושה אותם הלווה למלווה בכל אופן, פוסק השו"ע (שם ז), שהדבר אסור דווקא כל עוד לא הגיע זמן הפירעון (טור, עי' הערה <strong>שגיאה! הסימניה אינה מוגדרת.</strong>), ודווקא על פי שני הגדרים שהובאו בתוספות, כלומר, שיהיה דבר של פרהסיה או שיהנה המלווה שלא מדעתו של הלווה.</p>
                     
                 </div>
                 
@@ -1643,78 +1643,78 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     יש דברים שהן כמו רבית ומותרין כיצד לוקח אדם שטרותיו של חבירו בפחות ואינו חושש, ומותר לאדם ליתן לחבירו דינר כדי שילוה לפלוני מאה דינרין שלא אסרה תורה אלא רבית הבאה מן הלוה למלוה, וכן אומר אדם לחבירו הא לך דינר זה ואמור לפלוני שילוני שלא נתן אלא שכר אמירה.
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קניית חוב בפחות מערכו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">קניית חוב בפחות מערכו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בתוספתא (בבא מציעא פרק ד):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בתוספתא (בבא מציעא פרק ד):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יש דברים שהן רבית ואינן רבית לוקח אדם הלואתו של חבירו בפחות ושטרותיו בפחות</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>יש דברים שהן רבית ואינן רבית לוקח אדם הלואתו של חבירו בפחות ושטרותיו בפחות</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראובן חייב לשמעון סך מסויים ומועד הפרעון בעוד זמן מה, והסכים לוי לקנות משמעון את הזכות על החוב (כלומר, ראובן ישלם בסופו של דבר ללוי ולא לשמעון) בסכום שהוא נמוך מסכום ההלוואה. שמעון מוכן לעסקה למרות שהוא מפסיד מערכה המלא של ההלואה, בעיקר משום שהוא מקבל כסף בוודאות ובמקום, בעוד שפירעון ההלוואה עתידי ומסופק. האינטרס של לוי הוא להשקיע סכום נמוך בכדי לקבל לאחר זמן סכום גבוה יותר. הדמיון לריבית נובע מכך שלוי נותן כסף לשמעון ולאחר זמן מקבל יותר- את מלוא סכום ההלוואה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראובן חייב לשמעון סך מסויים ומועד הפרעון בעוד זמן מה, והסכים לוי לקנות משמעון את הזכות על החוב (כלומר, ראובן ישלם בסופו של דבר ללוי ולא לשמעון) בסכום שהוא נמוך מסכום ההלוואה. שמעון מוכן לעסקה למרות שהוא מפסיד מערכה המלא של ההלואה, בעיקר משום שהוא מקבל כסף בוודאות ובמקום, בעוד שפירעון ההלוואה עתידי ומסופק. האינטרס של לוי הוא להשקיע סכום נמוך בכדי לקבל לאחר זמן סכום גבוה יותר. הדמיון לריבית נובע מכך שלוי נותן כסף לשמעון ולאחר זמן מקבל יותר- את מלוא סכום ההלוואה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הטור (יו"ד קעג) מסביר שהדבר דומה לאדם המוכר סחורה וסוכם שהתשלום יהיה זמן מה לאחר זמן האספקה, שמותר לקונה להקדים את התשלום לפני למה שסוכם תמורת הפחתה בתשלום, שאין כאן שכר המתנת מעות אלא שכר הקדמתם. אף כאן, בתמורה לכך שלוי מוכן לתת לשמעון את שווי החוב לפני זמן הפירעון, מוכן שמעון לתגמל אותו ע"י הפחתת הסכום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הטור (יו"ד קעג) מסביר שהדבר דומה לאדם המוכר סחורה וסוכם שהתשלום יהיה זמן מה לאחר זמן האספקה, שמותר לקונה להקדים את התשלום לפני למה שסוכם תמורת הפחתה בתשלום, שאין כאן שכר המתנת מעות אלא שכר הקדמתם. אף כאן, בתמורה לכך שלוי מוכן לתת לשמעון את שווי החוב לפני זמן הפירעון, מוכן שמעון לתגמל אותו ע"י הפחתת הסכום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים רבים (מגיד משנה בשם הרמב"ן והטור שם) מבהירים שאם שמעון קיבל עליו אחריות, כלומר, אמר ללוי שאם לא יצליח לגבות את החוב, ישלם לו הוא, יש בדבר ריבית ואסור. זאת משום שבמקרה של קבלת אחריות אין כאן מכר אלא הלוואה. שמעון נשאר בעל החוב של ראובן וגם במקרה בו לא היה צורך לממש את האחריות, הכסף שיגבה לוי מראובן הוא למעשה כסף ששמעון משיב לו. נמצא ששמעון קיבל סכום מלוי ומחזיר לו סכום גבוה יותר והרי זו ריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשונים רבים (מגיד משנה בשם הרמב"ן והטור שם) מבהירים שאם שמעון קיבל עליו אחריות, כלומר, אמר ללוי שאם לא יצליח לגבות את החוב, ישלם לו הוא, יש בדבר ריבית ואסור. זאת משום שבמקרה של קבלת אחריות אין כאן מכר אלא הלוואה. שמעון נשאר בעל החוב של ראובן וגם במקרה בו לא היה צורך לממש את האחריות, הכסף שיגבה לוי מראובן הוא למעשה כסף ששמעון משיב לו. נמצא ששמעון קיבל סכום מלוי ומחזיר לו סכום גבוה יותר והרי זו ריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד כותב הטור (שם) ששמעון יכול למכור את החוב לא רק לאדם שלישי, אלא גם לראובן עצמו שלווה ממנו. כלומר, ראובן זוכה בפרעון מופחת כתמורה להקדמת הפרעון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד כותב הטור (שם) ששמעון יכול למכור את החוב לא רק לאדם שלישי, אלא גם לראובן עצמו שלווה ממנו. כלומר, ראובן זוכה בפרעון מופחת כתמורה להקדמת הפרעון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (יו"ד קעג ד) פוסק ככל הדברים הנ"ל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (יו"ד קעג ד) פוסק ככל הדברים הנ"ל.</p>
                     
                 </div>
                 
                 <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ריבית שאינה באה מלווה למלווה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ריבית שאינה באה מלווה למלווה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ב"מ סט:) מתיר רבא שני סוגים של הלוואות בהן המלווה מקבל תמורה על ההלוואה או שהלווה מאבד כסף בכדי שילוו לו, ובכל זאת הדבר מותר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ב"מ סט:) מתיר רבא שני סוגים של הלוואות בהן המלווה מקבל תמורה על ההלוואה או שהלווה מאבד כסף בכדי שילוו לו, ובכל זאת הדבר מותר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: שרי ליה לאיניש למימר ליה לחבריה: הילך ארבעה זוזי ואוזפיה לפלניא זוזי,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: שרי ליה לאיניש למימר ליה לחבריה: הילך ארבעה זוזי ואוזפיה לפלניא זוזי,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא אסרה תורה אלא רבית הבאה מלוה למלוה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא אסרה תורה אלא רבית הבאה מלוה למלוה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואמר <strong>רבא</strong>: שרי ליה לאיניש למימר ליה לחבריה: שקיל לך ארבעה זוזי ואמור ליה לפלוני לאוזפן זוזי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואמר <strong>רבא</strong>: שרי ליה לאיניש למימר ליה לחבריה: שקיל לך ארבעה זוזי ואמור ליה לפלוני לאוזפן זוזי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מאי טעמא - שכר אמירה קא שקיל.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מאי טעמא - שכר אמירה קא שקיל.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה הראשון המלווה מקבל כסף תמורת ההלוואה מאדם שאינו הלווה. והדבר מותר משום שהתורה אסרה רק ריבית הבאה מהלווה למלווה. במקרה השני הלווה נותן כסף לאדם שאינו המלווה בכדי שיאמר למלווה להלוות. בזה הדבר מותר משום שהתשלום אינו נחשב כשכר המתנת מעות אלא כשכר אמירה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה הראשון המלווה מקבל כסף תמורת ההלוואה מאדם שאינו הלווה. והדבר מותר משום שהתורה אסרה רק ריבית הבאה מהלווה למלווה. במקרה השני הלווה נותן כסף לאדם שאינו המלווה בכדי שיאמר למלווה להלוות. בזה הדבר מותר משום שהתשלום אינו נחשב כשכר המתנת מעות אלא כשכר אמירה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוגע למקרה הראשון נחלקו הראשונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוגע למקרה הראשון נחלקו הראשונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראב"ד (מובא בחידושי הרשב"א) כותב שאם הלווה שידל את האדם השלישי לתת כסף למלווה כדי שילווה, הדבר אסור, כיוון שאז נמצא שנותן הכסף הוא שלוחו של הלווה, והרי זו ריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראב"ד (מובא בחידושי הרשב"א) כותב שאם הלווה שידל את האדם השלישי לתת כסף למלווה כדי שילווה, הדבר אסור, כיוון שאז נמצא שנותן הכסף הוא שלוחו של הלווה, והרי זו ריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ן מביא שיטה זו וחולק עליה. לדעתו, כיוון שסוף סוף הלווה לא נתן משלו דבר למלווה, אין בדבר איסור. עם זאת, מודה הרמב"ן שאפילו אם רמז הלווה שיחזיר את הכסף לאותו אדם ששילם למלווה, כגון שאמר "כל המשלם לפלוני שילווני לא הפסיד", הדבר אסור, כי נמצא שבסופו של דבר סביר ששכר המתנת המעות יגיע מכיסו של הלווה לכיסו של המלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ן מביא שיטה זו וחולק עליה. לדעתו, כיוון שסוף סוף הלווה לא נתן משלו דבר למלווה, אין בדבר איסור. עם זאת, מודה הרמב"ן שאפילו אם רמז הלווה שיחזיר את הכסף לאותו אדם ששילם למלווה, כגון שאמר "כל המשלם לפלוני שילווני לא הפסיד", הדבר אסור, כי נמצא שבסופו של דבר סביר ששכר המתנת המעות יגיע מכיסו של הלווה לכיסו של המלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריטב"א מביא עוד דעה המקלה עוד יותר, לפיה מותר ללווה לומר "כל המשלם לפלוני שילווני לא הפסיד", משום שאינו מתחייב באמירה זו לשלם לאדם השלישי על דמי הריצוי שזה העביר למלווה. לכן, על אף שאותו אדם שילם למלווה כי ציפה שהלווה יחזיר לו את דמיו, כיוון שאין הלווה מחוייב לכך, אין זה נחשב ריבית הבאה מלווה למלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הריטב"א מביא עוד דעה המקלה עוד יותר, לפיה מותר ללווה לומר "כל המשלם לפלוני שילווני לא הפסיד", משום שאינו מתחייב באמירה זו לשלם לאדם השלישי על דמי הריצוי שזה העביר למלווה. לכן, על אף שאותו אדם שילם למלווה כי ציפה שהלווה יחזיר לו את דמיו, כיוון שאין הלווה מחוייב לכך, אין זה נחשב ריבית הבאה מלווה למלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהתאמה כותב הריטב"א עוד, שלאחר מעשה מותר ללווה להחזיר מעות לאותו אדם ששילם למלווה שילוונו, שכיוון שמרצונו הוא עושה זאת ואין לו חובה להחזיר כסף לאותו אדם, הדבר מותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהתאמה כותב הריטב"א עוד, שלאחר מעשה מותר ללווה להחזיר מעות לאותו אדם ששילם למלווה שילוונו, שכיוון שמרצונו הוא עושה זאת ואין לו חובה להחזיר כסף לאותו אדם, הדבר מותר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריטב"א והטור (יו"ד קס) מדגישים, שלכל הדעות, למרות ש"לא אסרה תורה אלא ריבית הבאה מלווה למלווה", אם המלווה התנה את ההלוואה בכך שיתן הלווה כסף לאדם אחר, שאינו המלווה, או אפילו לצדקה או אפילו שישליך כסף לים, הרי זו ריבית קצוצה ממש, שכיוון שהלווה עושה זאת מתוך ציוויו של המלווה, הרי הוא שלוחו בכך, והרי זה כאילו נתן למלווה והמלווה נתן לאדם אחר (או השליכו לים וכד').</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הריטב"א והטור (יו"ד קס) מדגישים, שלכל הדעות, למרות ש"לא אסרה תורה אלא ריבית הבאה מלווה למלווה", אם המלווה התנה את ההלוואה בכך שיתן הלווה כסף לאדם אחר, שאינו המלווה, או אפילו לצדקה או אפילו שישליך כסף לים, הרי זו ריבית קצוצה ממש, שכיוון שהלווה עושה זאת מתוך ציוויו של המלווה, הרי הוא שלוחו בכך, והרי זה כאילו נתן למלווה והמלווה נתן לאדם אחר (או השליכו לים וכד').</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוגע לנתינת שכר לאדם המשדל את המלווה להלוות, מובא מעשה בגמרא (שם)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוגע לנתינת שכר לאדם המשדל את המלווה להלוות, מובא מעשה בגמרא (שם)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כי הא דאבא מר בריה דרב פפא הוה שקיל אוגנא דקירא מקיראי, ואמר ליה לאבוה: אוזפינהו זוזי. אמרו ליה רבנן לרב פפא: אכיל בריה דמר רביתא! - אמר להו: כל כי האי רביתא ניכול, לא אסרה תורה אלא רבית הבאה מלוה למלוה. הכא שכר אמירה קא שקיל, ושרי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כי הא דאבא מר בריה דרב פפא הוה שקיל אוגנא דקירא מקיראי, ואמר ליה לאבוה: אוזפינהו זוזי. אמרו ליה רבנן לרב פפא: אכיל בריה דמר רביתא! - אמר להו: כל כי האי רביתא ניכול, לא אסרה תורה אלא רבית הבאה מלוה למלוה. הכא שכר אמירה קא שקיל, ושרי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנו של רב פפא היה מקבל, בחינם, סחורה ממוכרי שעווה ובתמורה היה אומר לאביו להלוות להם. רב פפא מסביר שהדבר מותר משום שבנו נוטל שכר אמירה בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנו של רב פפא היה מקבל, בחינם, סחורה ממוכרי שעווה ובתמורה היה אומר לאביו להלוות להם. רב פפא מסביר שהדבר מותר משום שבנו נוטל שכר אמירה בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריטב"א מעלה את השאלה מדוע במקרה של אדם המקבל כסף ומשדל את המלווה להלווה התיר רבא (לעיל) משום שמדובר בשכר אמירה ולא אמר ש"לא אסרה תורה אלא ריבית הבאה מלווה למלווה". הריטב"א מצביע על שני מקרים בהם הטעם השני אינו מספיק בכדי להתיר וחייבים את הטעם הראשון-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הריטב"א מעלה את השאלה מדוע במקרה של אדם המקבל כסף ומשדל את המלווה להלווה התיר רבא (לעיל) משום שמדובר בשכר אמירה ולא אמר ש"לא אסרה תורה אלא ריבית הבאה מלווה למלווה". הריטב"א מצביע על שני מקרים בהם הטעם השני אינו מספיק בכדי להתיר וחייבים את הטעם הראשון-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המלווה חפץ להלוות רק לאיש הביניים, ולכן הלווה קידם ונתן כסף לאיש הביניים כדי שיִלווה מהמלווה ויחזור וילווה את הכסף ללווה, הדבר מותר, משום שמה שנתן הלווה לאיש הביניים בתחילה אינו שכר המתנת מעות אלא שכר אמירה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המלווה חפץ להלוות רק לאיש הביניים, ולכן הלווה קידם ונתן כסף לאיש הביניים כדי שיִלווה מהמלווה ויחזור וילווה את הכסף ללווה, הדבר מותר, משום שמה שנתן הלווה לאיש הביניים בתחילה אינו שכר המתנת מעות אלא שכר אמירה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אפילו אם שכר האמירה הגיע בסוף לידיו של המלווה, שלא נתרצה להלוות עד שיקבל את מעות הריצוי לידיו, בכל זאת הדבר מותר משום שאותם דמים נחשבים כשייכים לאיש הביניים שקיבל אותם בשכר אמירתו, ולא ככספו של הלווה המגיע, כריבית, למלווה<sup id="ref54"><a href="#fn54">[54]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אפילו אם שכר האמירה הגיע בסוף לידיו של המלווה, שלא נתרצה להלוות עד שיקבל את מעות הריצוי לידיו, בכל זאת הדבר מותר משום שאותם דמים נחשבים כשייכים לאיש הביניים שקיבל אותם בשכר אמירתו, ולא ככספו של הלווה המגיע, כריבית, למלווה<sup id="ref54"><a href="#fn54">[54]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שיטה מרחיקת לכת בפרשנות של הכלל "לא אסרה תורה אלא רבית הבאה מלוה למלוה" מובאת במרדכי (רמז שלח) בשם רש"י. לדבריו, מותר ללווה לשלוח איש ביניים ללוות עבורו בריבית, ולהעביר את הריבית למלווה דרך אותו איש ביניים. הדבר מותר משום שהריבית אינה באה מהלווה למלווה אלא דרך השליח, והשליח עצמו אינו נחשב כמו הלווה כיוון שאין שליח לדבר עבירה<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שיטה מרחיקת לכת בפרשנות של הכלל "לא אסרה תורה אלא רבית הבאה מלוה למלוה" מובאת במרדכי (רמז שלח) בשם רש"י. לדבריו, מותר ללווה לשלוח איש ביניים ללוות עבורו בריבית, ולהעביר את הריבית למלווה דרך אותו איש ביניים. הדבר מותר משום שהריבית אינה באה מהלווה למלווה אלא דרך השליח, והשליח עצמו אינו נחשב כמו הלווה כיוון שאין שליח לדבר עבירה<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (יו"ד קס יג) פסק כרמב"ן, שמותר ללווה לשכנע אדם שלישי שיתן כסף למלווה כדי שילווה, ומביא כ"יש אומרים" גם את דעת הראב"ד המחמירה ואוסרת זאת. בסעיף יד הוסיף ופסק, כפי שהזכירו הריטב"א והטור, שאם ההלואה מותנית בנתינת ריבית, אפילו אם הריבית אינה ניתנת למלווה אלא להקדש, הרי זו ריבית קצוצה. בסעיף טז פוסק השו"ע את ההיתר לתת "שכר אמירה" לאדם שישכנע את המלווה להלוות והרמ"א מוסיף את דברי המגיד משנה, שאסור שאותם דמי אמירה יגיעו לכיסו של המלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (יו"ד קס יג) פסק כרמב"ן, שמותר ללווה לשכנע אדם שלישי שיתן כסף למלווה כדי שילווה, ומביא כ"יש אומרים" גם את דעת הראב"ד המחמירה ואוסרת זאת. בסעיף יד הוסיף ופסק, כפי שהזכירו הריטב"א והטור, שאם ההלואה מותנית בנתינת ריבית, אפילו אם הריבית אינה ניתנת למלווה אלא להקדש, הרי זו ריבית קצוצה. בסעיף טז פוסק השו"ע את ההיתר לתת "שכר אמירה" לאדם שישכנע את המלווה להלוות והרמ"א מוסיף את דברי המגיד משנה, שאסור שאותם דמי אמירה יגיעו לכיסו של המלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באותו סעיף מביא הרמ"א את דברי המרדכי, וכותב שאף שרבים עירערו עליהם, יש לפסוק כמותם בשעת הצורך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">באותו סעיף מביא הרמ"א את דברי המרדכי, וכותב שאף שרבים עירערו עליהם, יש לפסוק כמותם בשעת הצורך.</p>
                     
                 </div>
                 
@@ -1722,77 +1722,77 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     יש דברים שהן מותרין ואסור לעשותן מפני הערמת רבית, כיצד אמר לו הלוני מנה אמר לו מנה אין לי חטים יש לי במנה ונתן לו חטים במנה וחזר ולקחן ממנו בתשעים הרי זה מותר אבל אסרוהו מפני הערמת רבית שהרי נתן לו תשעים ולוקח מנה, ואם עבר ועשה כזה הרי הוא מוציא ממנו מאה בדין שאפילו אבק רבית אין כאן, וכן מי שהיתה שדה ממושכנת בידו לא יחזור וישכיר אותה לבעל השדה מפני הערמת רבית שהרי זה עומד בשדהו כשהיה ונותן לזה שכר בכל חדש בשביל מעותיו שהלוהו.
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מכר האסור משום הערמת ריבית</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מכר האסור משום הערמת ריבית</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה הראשונה בפרק "איזהו נשך" (ס:) מביאה דוגמה ל"תרבית" האסורה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה הראשונה בפרק "איזהו נשך" (ס:) מביאה דוגמה ל"תרבית" האסורה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איזהו תרבית? המרבה בפירות.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איזהו תרבית? המרבה בפירות.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כיצד?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כיצד?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לקח הימנו חטין בדינר זהב (=25 דינרים) הכור, וכן השער,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לקח הימנו חטין בדינר זהב (=25 דינרים) הכור, וכן השער,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>עמדו חטין בשלשים דינרין,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>עמדו חטין בשלשים דינרין,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו: תן לי חטיי, שאני רוצה למוכרן וליקח בהן יין,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר לו: תן לי חטיי, שאני רוצה למוכרן וליקח בהן יין,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו: הרי חטיך עשויות עלי בשלשים, והרי לך אצלי בהן יין, ויין אין לו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר לו: הרי חטיך עשויות עלי בשלשים, והרי לך אצלי בהן יין, ויין אין לו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהבנה הפשוטה, המשנה מדברת על מכירה בהקפה, כאשר הסחורה (חיטים) מתייקרת עד זמן האספקה ואז מומרת בסחורה אחרת (יין), כך שנמצא שהמוכר מקבל לידיו סכום נמוך מערך הסחורה שהוא נותן בסוף, ואף סחורה זו אינה הסחורה המקורית בה דובר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהבנה הפשוטה, המשנה מדברת על מכירה בהקפה, כאשר הסחורה (חיטים) מתייקרת עד זמן האספקה ואז מומרת בסחורה אחרת (יין), כך שנמצא שהמוכר מקבל לידיו סכום נמוך מערך הסחורה שהוא נותן בסוף, ואף סחורה זו אינה הסחורה המקורית בה דובר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בהמשך (סב:) מתקשה להבין מדוע הדבר אסור ולכן מעלה כמה אפשרויות להבנת המשנה<sup id="ref56"><a href="#fn56">[56]</a></sup>, ביניהם הצעתו של אביי המסביר את המשנה על פי ברייתא<sup id="ref57"><a href="#fn57">[57]</a></sup>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בהמשך (סב:) מתקשה להבין מדוע הדבר אסור ולכן מעלה כמה אפשרויות להבנת המשנה<sup id="ref56"><a href="#fn56">[56]</a></sup>, ביניהם הצעתו של אביי המסביר את המשנה על פי ברייתא<sup id="ref57"><a href="#fn57">[57]</a></sup>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דתני <strong>רב ספרא</strong> ברבית דבי <strong>רבי חייא</strong>:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>דתני <strong>רב ספרא</strong> ברבית דבי <strong>רבי חייא</strong>:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>יש דברים שהם מותרין, ואסורין מפני הערמת רבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>יש דברים שהם מותרין, ואסורין מפני הערמת רבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כיצד?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כיצד?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו: הלויני מנה! - אמר לו: מנה אין לי, חטין במנה יש לי, שאני נותן לך.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר לו: הלויני מנה! - אמר לו: מנה אין לי, חטין במנה יש לי, שאני נותן לך.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נתן לו חטין במנה, וחזר ולקחן הימנו בעשרים וארבע סלע<sup id="ref58"><a href="#fn58">[58]</a></sup> - מותר,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נתן לו חטין במנה, וחזר ולקחן הימנו בעשרים וארבע סלע<sup id="ref58"><a href="#fn58">[58]</a></sup> - מותר,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואסור לעשות כן מפני הערמת רבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואסור לעשות כן מפני הערמת רבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש המקרה- המלווה הלווה סחורה לחבירו, בערך ידוע, על מנת שיפרע לו את ערכה. לאחר מכן, חזר וקנה ממנו את הסחורה, במחיר נמוך יותר מאשר סכום הפירעון. מצד עיקר הדין העסקה המתוארת מותרת, שהרי מותר ללוות שווה כסף בסחורה ואז למכור אותה במחיר נמוך מחמת ההזדקקות למעות זמינות, ואין הבדל עקרוני אם הקונה הוא מישהו מן השוק או המלווה עצמו, כל עוד לא הותנה מראש שהלווה ימכור בזול למלווה. אמנם, רבי חייא ראה לנכון לאסור זאת, שכן בשיטה זו ניתן להערים ולהכשיר ריבית קצוצה של ממש, שהרי הלווה קיבל לידו 24 סלעים ומחויב להחזיר 25 סלעים<sup id="ref59"><a href="#fn59">[59]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פירוש המקרה- המלווה הלווה סחורה לחבירו, בערך ידוע, על מנת שיפרע לו את ערכה. לאחר מכן, חזר וקנה ממנו את הסחורה, במחיר נמוך יותר מאשר סכום הפירעון. מצד עיקר הדין העסקה המתוארת מותרת, שהרי מותר ללוות שווה כסף בסחורה ואז למכור אותה במחיר נמוך מחמת ההזדקקות למעות זמינות, ואין הבדל עקרוני אם הקונה הוא מישהו מן השוק או המלווה עצמו, כל עוד לא הותנה מראש שהלווה ימכור בזול למלווה. אמנם, רבי חייא ראה לנכון לאסור זאת, שכן בשיטה זו ניתן להערים ולהכשיר ריבית קצוצה של ממש, שהרי הלווה קיבל לידו 24 סלעים ומחויב להחזיר 25 סלעים<sup id="ref59"><a href="#fn59">[59]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אביי מפרש שהמשנה מדברת על מקרה דומה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אביי מפרש שהמשנה מדברת על מקרה דומה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הכא נמי, כגון דאמר הלויני שלשים דינרים.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הכא נמי, כגון דאמר הלויני שלשים דינרים.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: שלשים דינרים אין לי, חטין בשלשים דינרים יש לי, שאני נותן לך.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: שלשים דינרים אין לי, חטין בשלשים דינרים יש לי, שאני נותן לך.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נתן לו חטין בשלשים דינרים, וחזר ולקחם הימנו בדינר זהב<sup id="ref60"><a href="#fn60">[60]</a></sup>.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נתן לו חטין בשלשים דינרים, וחזר ולקחם הימנו בדינר זהב<sup id="ref60"><a href="#fn60">[60]</a></sup>.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי אית ליה חמרא ללוה דיהיב ליה בשלשים דינר - פירא הוא דקא שקיל מיניה, ולית לן בה. ואי לא, כיון דלית ליה חמרא - ודאי משקל זוזי מיניה, מחזי כרבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי אית ליה חמרא ללוה דיהיב ליה בשלשים דינר - פירא הוא דקא שקיל מיניה, ולית לן בה. ואי לא, כיון דלית ליה חמרא - ודאי משקל זוזי מיניה, מחזי כרבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הלווה לווה חיטים מהמלווה, והתחייב להשיב לו 30 דינרי כסף. לאחר מכן חזר המלווה וקנה מהלווה את החיטים תמורת 25 דינרי כסף. אם מחזיר הלווה 30 דינרי כסף, הרי זה בדיוק המקרה שאסר רבי חייא, אך המשנה אוסרת רק אם "יין אין לו", ומכאן לומד אביי, שאם יפרע הלווה את ההלוואה ביין בשווי 30 דינרים, כך שגם ההלוואה וגם הפירעון יהיו בפירות ולא במעות, אין אוסרים זאת, משום שאין הדבר דומה כל כך לריבית<sup id="ref61"><a href="#fn61">[61]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הלווה לווה חיטים מהמלווה, והתחייב להשיב לו 30 דינרי כסף. לאחר מכן חזר המלווה וקנה מהלווה את החיטים תמורת 25 דינרי כסף. אם מחזיר הלווה 30 דינרי כסף, הרי זה בדיוק המקרה שאסר רבי חייא, אך המשנה אוסרת רק אם "יין אין לו", ומכאן לומד אביי, שאם יפרע הלווה את ההלוואה ביין בשווי 30 דינרים, כך שגם ההלוואה וגם הפירעון יהיו בפירות ולא במעות, אין אוסרים זאת, משום שאין הדבר דומה כל כך לריבית<sup id="ref61"><a href="#fn61">[61]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על אף שפירושו של אביי למשנה לא התקבל, הדין שבברייתא נפסק להלכה על ידי כל הפוסקים. עם זאת, נחלקו המפרשים בהבנת רמת האיסור שבברייתא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על אף שפירושו של אביי למשנה לא התקבל, הדין שבברייתא נפסק להלכה על ידי כל הפוסקים. עם זאת, נחלקו המפרשים בהבנת רמת האיסור שבברייתא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ן (הביאו הרשב"א) מבין שמדובר באבק ריבית. מתוך כך, אף שאם הושלמה העיסקה אין בית דין מוציאים מהמלווה ללווה (רמת התערבות השמורה לריבית קצוצה האסורה מהתורה), אם עדיין לא הושלמה העיסקה, אין בית הדין כופים את הלווה לעמוד בהתחייבותו, שכן בית הדין אינם מקדמים עיסקה המוגדרת כאבק ריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ן (הביאו הרשב"א) מבין שמדובר באבק ריבית. מתוך כך, אף שאם הושלמה העיסקה אין בית דין מוציאים מהמלווה ללווה (רמת התערבות השמורה לריבית קצוצה האסורה מהתורה), אם עדיין לא הושלמה העיסקה, אין בית הדין כופים את הלווה לעמוד בהתחייבותו, שכן בית הדין אינם מקדמים עיסקה המוגדרת כאבק ריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מולו, אומר הרשב"א שיש להסיק מלשון הברייתא "מותרים ואסורים מפני הערמת ריבית", שאין בדבר אפילו אבק ריבית. על פי דרך זו בית דין כופים את הלווה לקיים את העיסקה, אף שלכתחילה אסור היה לו לערוך אותה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מולו, אומר הרשב"א שיש להסיק מלשון הברייתא "מותרים ואסורים מפני הערמת ריבית", שאין בדבר אפילו אבק ריבית. על פי דרך זו בית דין כופים את הלווה לקיים את העיסקה, אף שלכתחילה אסור היה לו לערוך אותה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד נחלקו הפוסקים בשאלה האם להלכה יש לסייג את דברי הברייתא על פי הצעתו של אביי, כלומר, האם העסקה מותרת כאשר החזר ההלוואה הוא בפירות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד נחלקו הפוסקים בשאלה האם להלכה יש לסייג את דברי הברייתא על פי הצעתו של אביי, כלומר, האם העסקה מותרת כאשר החזר ההלוואה הוא בפירות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ן פוסק שאכן, אף שדברי אביי נדחים מלהיות פירוש למשנה, מכל מקום הם מתקבלים להלכה במלואם ולכן אם הלווה מחזיר את ההלוואה בפירות העסקה מותרת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ן פוסק שאכן, אף שדברי אביי נדחים מלהיות פירוש למשנה, מכל מקום הם מתקבלים להלכה במלואם ולכן אם הלווה מחזיר את ההלוואה בפירות העסקה מותרת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זה, ר' אשר מלוניל (מובא בשיטת הקדמונים) כותב שכיוון שבהקשרים אחרים של הלכות ריבית אנו אומרים שאין הבדל בין כסף לבין שווה כסף<sup id="ref62"><a href="#fn62">[62]</a></sup>, אף כאן אין הבדל ולכן העיסקה אסורה אפילו אם הפירעון הוא בפירות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זה, ר' אשר מלוניל (מובא בשיטת הקדמונים) כותב שכיוון שבהקשרים אחרים של הלכות ריבית אנו אומרים שאין הבדל בין כסף לבין שווה כסף<sup id="ref62"><a href="#fn62">[62]</a></sup>, אף כאן אין הבדל ולכן העיסקה אסורה אפילו אם הפירעון הוא בפירות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרא"ש (סי' ח) והטור (יו"ד קסג) מחדשים שכל האיסור הוא דווקא אם מלכתחילה ערך ההלוואה נוסח במעות, כמו המקרה המובא בברייתא בו הלווה מבקש מנה ומקבל "חיטים במנה", אך במקרה בו מלכתחילה לווה הלווה כמות נקובה של חיטים, יכול אפילו להחזיר את דמיהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרא"ש (סי' ח) והטור (יו"ד קסג) מחדשים שכל האיסור הוא דווקא אם מלכתחילה ערך ההלוואה נוסח במעות, כמו המקרה המובא בברייתא בו הלווה מבקש מנה ומקבל "חיטים במנה", אך במקרה בו מלכתחילה לווה הלווה כמות נקובה של חיטים, יכול אפילו להחזיר את דמיהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (יו"ד קסג ג) פוסק כרמב"ן, שהאיסור הוא דווקא אם פרע במעות. וכרשב"א, שאיסור זה אינו מוגדר כאבק ריבית ולכן אם נעשתה עיסקה כזו בית דין גובים את החוב מהלווה כפי שסוכם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (יו"ד קסג ג) פוסק כרמב"ן, שהאיסור הוא דווקא אם פרע במעות. וכרשב"א, שאיסור זה אינו מוגדר כאבק ריבית ולכן אם נעשתה עיסקה כזו בית דין גובים את החוב מהלווה כפי שסוכם.</p>
                     
                 </div>
                 
@@ -1800,73 +1800,73 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסור להשכיר הדינרין שאין זה דומה למשכיר את הכלי שהכלי חוזר בעצמו וזה מוציא אלו ומביא דינרין אחרות ונמצא זה אבק רבית.
                 </div>
                 
 
                 
                 <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השכרת דינרים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">השכרת דינרים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בתוספתא (בבא מציעא פרק ד הלכה ב)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בתוספתא (בבא מציעא פרק ד הלכה ב)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מרבין על השכר ואין מרבין על המכר שנ' אם כסף תלוה את עמי וגו' כנשה מה מלוה מיוחדת לא מה שאת נותן לו את נוטל הימנו יצאו אילו שמא את נותן לו את נוטל ממנו...כיצד?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מרבין על השכר ואין מרבין על המכר שנ' אם כסף תלוה את עמי וגו' כנשה מה מלוה מיוחדת לא מה שאת נותן לו את נוטל הימנו יצאו אילו שמא את נותן לו את נוטל ממנו...כיצד?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>משכיר אדם מעותיו לשלחני להתנאות בהן ולהתלמד בהן ולהתעטר בהן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>משכיר אדם מעותיו לשלחני להתנאות בהן ולהתלמד בהן ולהתעטר בהן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נגנבו או אבדו חייב באחריותן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נגנבו או אבדו חייב באחריותן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ניטלו (נוטל) מלפניו באונס הרי הוא כנושא שכר</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ניטלו (נוטל) מלפניו באונס הרי הוא כנושא שכר</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נשתלט עליהם אסור משום רבית</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נשתלט עליהם אסור משום רבית</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התוספתא מסבירה שניתן להרבות (כלומר, לגבות דמים) על שכירות ("שכר") ואין הדבר נחשב כשכר המתנת מעות. ההבדל בין הלוואה לשכירות על פי דברי התוספתא הוא שבשכירות השוכר מחזיר את אותו החפץ שקיבל, ואילו בהלוואה הלווה אינו מחזיר את אותן המעות שלווה אלא מעות אחרות או שוות להן בערכן. הדבר בא לידי ביטוי באחרית של המקבל. בעוד שהשוכר פטור על אונס, הלווה חייב להחזיר אפילו אם אבדו המעות באונס. מתוך כך פוסקת התוספתא שניתן להשכיר מעות לשולחני, להשתמש בהם שימוש שאינו כרוך בהוצאתן, כך שאין אחריות אונס עליו. עם זאת, כאשר השולחני מוציא את המעות ("נשתלט עליהן") הופכים דמי השכירות לריבית ולכן אין לגבותם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">התוספתא מסבירה שניתן להרבות (כלומר, לגבות דמים) על שכירות ("שכר") ואין הדבר נחשב כשכר המתנת מעות. ההבדל בין הלוואה לשכירות על פי דברי התוספתא הוא שבשכירות השוכר מחזיר את אותו החפץ שקיבל, ואילו בהלוואה הלווה אינו מחזיר את אותן המעות שלווה אלא מעות אחרות או שוות להן בערכן. הדבר בא לידי ביטוי באחרית של המקבל. בעוד שהשוכר פטור על אונס, הלווה חייב להחזיר אפילו אם אבדו המעות באונס. מתוך כך פוסקת התוספתא שניתן להשכיר מעות לשולחני, להשתמש בהם שימוש שאינו כרוך בהוצאתן, כך שאין אחריות אונס עליו. עם זאת, כאשר השולחני מוציא את המעות ("נשתלט עליהן") הופכים דמי השכירות לריבית ולכן אין לגבותם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (סט:) מביאה מעשה ברב חמא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (סט:) מביאה מעשה ברב חמא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב חמא</strong> הוה מוגר זוזי בפשיטא ביומא, כלו זוזי דרב חמא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רב חמא</strong> הוה מוגר זוזי בפשיטא ביומא, כלו זוזי דרב חמא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הוא סבר: מאי שנא ממרא. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הוא סבר: מאי שנא ממרא. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ולא היא,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ולא היא,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מרא הדרא בעינא וידיע פחתיה, זוזי לא הדרי בעינייהו ולא ידיע פחתיה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מרא הדרא בעינא וידיע פחתיה, זוזי לא הדרי בעינייהו ולא ידיע פחתיה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב חמא היה משכיר זוז במחיר של פרוטה ליום. וכתוצאה מכך אבד ממונו. הגמרא מסבירה שסברתו של רב חמא היתה שזוזים אינם שונים מכלי כמו למשל מעדר ("מרא"), וכשם שניתן להשכיר כלי ולגבות עליו דמי שכירות, כך ניתן להשכיר מטבעות ולגבות עליהם דמי שימוש מבלי שהדבר יחשב כריבית. עם זאת, הגמרא דוחה את סברתו של רב חמא ומציינת שני הבדלים בין מעות לבין מעדר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב חמא היה משכיר זוז במחיר של פרוטה ליום. וכתוצאה מכך אבד ממונו. הגמרא מסבירה שסברתו של רב חמא היתה שזוזים אינם שונים מכלי כמו למשל מעדר ("מרא"), וכשם שניתן להשכיר כלי ולגבות עליו דמי שכירות, כך ניתן להשכיר מטבעות ולגבות עליהם דמי שימוש מבלי שהדבר יחשב כריבית. עם זאת, הגמרא דוחה את סברתו של רב חמא ומציינת שני הבדלים בין מעות לבין מעדר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשית, מעדר חוזר בעינו, כלומר, אותו המעדר שנתן המשכיר הוא המעדר שמחזיר השוכר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשית, מעדר חוזר בעינו, כלומר, אותו המעדר שנתן המשכיר הוא המעדר שמחזיר השוכר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שנית, במעדר, הפחת שנפחת מהשימוש ידוע ובמעות לא (להלן ביאור הדברים).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שנית, במעדר, הפחת שנפחת מהשימוש ידוע ובמעות לא (להלן ביאור הדברים).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בהבנת ההבדלים שבין השכרת מעות, האסורה לבין השכרת כלי עבודה, המותרת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בהבנת ההבדלים שבין השכרת מעות, האסורה לבין השכרת כלי עבודה, המותרת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י מסביר שבכדי שיהיה היתר בדבר צריכים להתקיים שני תנאים- הראשון, שיחזור החפץ עצמו שנמסר, ועוד, שיהיה מדובר בחפץ שהשימוש גורם לו לבלאי, כך שהשכר אינו נגבה על עצם החזקת החפץ אלא על הבלאי הנגרם מהשימוש בו. במשכיר מעות, אפילו אם הן חוזרות בעינן, הרי אינן כלי מלאכה ולכן השכר אינו נלקח על מלאכה כלשהי הנעשית בגופן, אלא על עצם החזקתן, ומתוך כך הדבר מוגדר כריבית ואסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רש"י מסביר שבכדי שיהיה היתר בדבר צריכים להתקיים שני תנאים- הראשון, שיחזור החפץ עצמו שנמסר, ועוד, שיהיה מדובר בחפץ שהשימוש גורם לו לבלאי, כך שהשכר אינו נגבה על עצם החזקת החפץ אלא על הבלאי הנגרם מהשימוש בו. במשכיר מעות, אפילו אם הן חוזרות בעינן, הרי אינן כלי מלאכה ולכן השכר אינו נלקח על מלאכה כלשהי הנעשית בגופן, אלא על עצם החזקתן, ומתוך כך הדבר מוגדר כריבית ואסור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מול שיטת רש"י עומדות שיטות לפיהן ההבדל העיקרי בין שכירות לבין ריבית בהלוואה הוא שבשכירות החפץ לא ניתן להוצאה ולעומת זה בהלוואה המעות ניתנו להוצאה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מול שיטת רש"י עומדות שיטות לפיהן ההבדל העיקרי בין שכירות לבין ריבית בהלוואה הוא שבשכירות החפץ לא ניתן להוצאה ולעומת זה בהלוואה המעות ניתנו להוצאה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בשיטה זו עומדים התוספות (ד"ה "מרא") המקשים על רש"י, שכן על פי דבריו נמצא שהשכרת כלים שאין השימוש בהם גורם לפחת, כגון כוס של זהב או טבעת, אסורה משום ריבית. עוד מקשים התוספות מדברי התוספתא דלעיל, שהתירה השכרת מעות כל עוד הן חוזרות בעיניהן למרות שאין בהן פחת. מתוך כך מציעים התוספות לפרש את ההבדל השני (ב) באופן אחר. לדברי התוספות כוונת הגמרא היא שהתנאי הראשון כשלעצמו, שהחפץ חוזר בעינו, די בו בכדי להגדיר את העיסקה כשכירות ולהתירה, התנאי השני בא לידי ביטוי במקרה בו מושכר כלי מלאכה שמותר לשוכר למכור, כך שיוחזר כלי אחר תמורתו. גם עיסקה כזו מוגדרת כשכירות ומותרת, משום שהשכר אינו על ההיתר להוציא את הכלי אלא על ההיתר לעבוד בו ולהחזירו פגום מחמת מלאכה<sup id="ref63"><a href="#fn63">[63]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בשיטה זו עומדים התוספות (ד"ה "מרא") המקשים על רש"י, שכן על פי דבריו נמצא שהשכרת כלים שאין השימוש בהם גורם לפחת, כגון כוס של זהב או טבעת, אסורה משום ריבית. עוד מקשים התוספות מדברי התוספתא דלעיל, שהתירה השכרת מעות כל עוד הן חוזרות בעיניהן למרות שאין בהן פחת. מתוך כך מציעים התוספות לפרש את ההבדל השני (ב) באופן אחר. לדברי התוספות כוונת הגמרא היא שהתנאי הראשון כשלעצמו, שהחפץ חוזר בעינו, די בו בכדי להגדיר את העיסקה כשכירות ולהתירה, התנאי השני בא לידי ביטוי במקרה בו מושכר כלי מלאכה שמותר לשוכר למכור, כך שיוחזר כלי אחר תמורתו. גם עיסקה כזו מוגדרת כשכירות ומותרת, משום שהשכר אינו על ההיתר להוציא את הכלי אלא על ההיתר לעבוד בו ולהחזירו פגום מחמת מלאכה<sup id="ref63"><a href="#fn63">[63]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם ריב"ן (מובא בתוספות הנ"ל) טוען שהקריטריון של "הדרא בעינייהו" הוא הקובע והוא מציע שלא לגרוס כלל את המילים "וידיע פחתיה" ו"לא ידיע פחתיה". מדברי הרמב"ם המביא רק את ההסבר שבתוספתא נראה שאף הוא גרס כך בגמרא, ואף המגיד משנה מדווח על נוסחאות כאלה הקיימות לפניו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם ריב"ן (מובא בתוספות הנ"ל) טוען שהקריטריון של "הדרא בעינייהו" הוא הקובע והוא מציע שלא לגרוס כלל את המילים "וידיע פחתיה" ו"לא ידיע פחתיה". מדברי הרמב"ם המביא רק את ההסבר שבתוספתא נראה שאף הוא גרס כך בגמרא, ואף המגיד משנה מדווח על נוסחאות כאלה הקיימות לפניו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שיטה קרובה אך מחמירה יותר מובאת בספר התרומות (שער מו, ח"ד, נה), הפוסק שמעות שהושכרו והמשכיר קיבל על עצמו אחריות אונסין, הדבר אסור משום ריבית אפילו אם המעות לא ניתנו להוצאה<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שיטה קרובה אך מחמירה יותר מובאת בספר התרומות (שער מו, ח"ד, נה), הפוסק שמעות שהושכרו והמשכיר קיבל על עצמו אחריות אונסין, הדבר אסור משום ריבית אפילו אם המעות לא ניתנו להוצאה<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי דרכם של התוספות ועל פי העולה מהתוספתא, שמותר להשכיר מעות שלא כדי להוציאן אלא כדי להיראות בהן וכו', עולה שרב חמא השכיר מעות במטרה להוציאן, ולכן עשה דבר שאין לעשותו. מתוך כך נשאלת השאלה, מה חשב רב חמא מלכתחילה? האם באמת חשב לעצמו שניתן לקחת שכר על הלוואת מעות לצורך הוצאה רק משום שהמלווה מכנה אותה בשם השכרה?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי דרכם של התוספות ועל פי העולה מהתוספתא, שמותר להשכיר מעות שלא כדי להוציאן אלא כדי להיראות בהן וכו', עולה שרב חמא השכיר מעות במטרה להוציאן, ולכן עשה דבר שאין לעשותו. מתוך כך נשאלת השאלה, מה חשב רב חמא מלכתחילה? האם באמת חשב לעצמו שניתן לקחת שכר על הלוואת מעות לצורך הוצאה רק משום שהמלווה מכנה אותה בשם השכרה?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התוספות עונים שרב חמא היה "מקבל עליו אחריות אונסין", ולכן חשב שהדבר מותר. כלומר, רב חמא סיכם עם הלווה שאם לא יוכל להחזיר את ההלוואה מחמת אונס, ייפטר מלהחזיר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">התוספות עונים שרב חמא היה "מקבל עליו אחריות אונסין", ולכן חשב שהדבר מותר. כלומר, רב חמא סיכם עם הלווה שאם לא יוכל להחזיר את ההלוואה מחמת אונס, ייפטר מלהחזיר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריטב"א מציע הסבר אחר. לדבריו רב חמא אכן השכיר מעות רק כדי להשתמש בגופן ולא למטרת הוצאה, אלא שנתן רשות לשוכר להוציא את המעות אם ירצה ולהשיב לו מעות אחרות תמורתן. רב חמא טעה לחשוב שמעשיו מותרים משום שדמי השכירות שגבה הוגדרו כתמורת השכירות בזמן שקודם הוצאת המעות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הריטב"א מציע הסבר אחר. לדבריו רב חמא אכן השכיר מעות רק כדי להשתמש בגופן ולא למטרת הוצאה, אלא שנתן רשות לשוכר להוציא את המעות אם ירצה ולהשיב לו מעות אחרות תמורתן. רב חמא טעה לחשוב שמעשיו מותרים משום שדמי השכירות שגבה הוגדרו כתמורת השכירות בזמן שקודם הוצאת המעות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">למחלוקת זו השלכה להלכה. תרומת הדשן (ס' שב) כותב שסברתו של רב חמא על פי התוספות לא היתה לגמרי לא נכונה. לדבריו, לו היה רב חמא מקבל על עצמו גם אחריות גניבה ואבידה, (כלומר, שאם הלווה לא יוכל להחזיר את החוב מחמת גניבה או אבידה יהיה פטור) אזי למרות שהמעות ניתנו להוצאה, בכל זאת אין כאן הלוואה ולכן ניתן לקחת שכירות על המעות מבלי שהדבר יהיה אסור משום ריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">למחלוקת זו השלכה להלכה. תרומת הדשן (ס' שב) כותב שסברתו של רב חמא על פי התוספות לא היתה לגמרי לא נכונה. לדבריו, לו היה רב חמא מקבל על עצמו גם אחריות גניבה ואבידה, (כלומר, שאם הלווה לא יוכל להחזיר את החוב מחמת גניבה או אבידה יהיה פטור) אזי למרות שהמעות ניתנו להוצאה, בכל זאת אין כאן הלוואה ולכן ניתן לקחת שכירות על המעות מבלי שהדבר יהיה אסור משום ריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עם זאת, על פי דברי הריטב"א דלעיל, ואף על פי לשון הרמב"ם נראה שכל מעות הניתנות להוצאה נחשבות הלוואה ואין לגבות עליהן שכירות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עם זאת, על פי דברי הריטב"א דלעיל, ואף על פי לשון הרמב"ם נראה שכל מעות הניתנות להוצאה נחשבות הלוואה ואין לגבות עליהן שכירות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (יו"ד קעו א) כותב כרמב"ם, שמותר לגבות שכירות על דבר החוזר בעינו, אפילו אם מדובר במעות (ששכרם להיראות בהם וכד'). בהלכה ב מוסיף השו"ע, על פי דברי התוספות, שהשכרת כל כלי מותרת, אף אם נותן לו רשות למוכרו כך שלא יחזור בעינו. הרמ"א (הלכה א) מביא להלכה את דברי תרומת הדשן, המתיר השכרת מעות להוצאה אם אחריותן מוטלת על המשכיר, אך הגר"א (ס"ק ב) סובר שכל מעות הניתנות להוצאה דינן כמילווה ואין לקחת ריבית עליהן. עוד מביא הרמ"א להלכה את חומרתו של ספר התרומות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (יו"ד קעו א) כותב כרמב"ם, שמותר לגבות שכירות על דבר החוזר בעינו, אפילו אם מדובר במעות (ששכרם להיראות בהם וכד'). בהלכה ב מוסיף השו"ע, על פי דברי התוספות, שהשכרת כל כלי מותרת, אף אם נותן לו רשות למוכרו כך שלא יחזור בעינו. הרמ"א (הלכה א) מביא להלכה את דברי תרומת הדשן, המתיר השכרת מעות להוצאה אם אחריותן מוטלת על המשכיר, אך הגר"א (ס"ק ב) סובר שכל מעות הניתנות להוצאה דינן כמילווה ואין לקחת ריבית עליהן. עוד מביא הרמ"א להלכה את חומרתו של ספר התרומות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דיון משלים בשאלת ההבדל בין שכירות לבין הלוואה בריבית יבוא בע"ה בפרק ח הלאה יא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דיון משלים בשאלת ההבדל בין שכירות לבין הלוואה בריבית יבוא בע"ה בפרק ח הלאה יא.</p>
                     
                 </div>
                 
@@ -1874,27 +1874,27 @@
             
             
             <div id="halacha-11" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מלך שהיו דיניו שכל מי שיתן המס הקצוב על כל איש ואיש ע"י זה שלא נתן ישתעבד בו ונתן על ידו דינר אף על פי שמשעבד בו יתר מדינר ה"ז מותר וכן כל כיוצא בזה.
                 </div>
                 
 
                 
                 <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הנאה ממלאכה של אדם תמורת פריעת מיסיו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הנאה ממלאכה של אדם תמורת פריעת מיסיו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (עג:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (עג:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב פפא</strong> ל<strong>רבא</strong>: חזי מר הני רבנן דיהבי זוזי אכרגא דאינשי ומשעבדי בהו טפי! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>רב פפא</strong> ל<strong>רבא</strong>: חזי מר הני רבנן דיהבי זוזי אכרגא דאינשי ומשעבדי בהו טפי! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: השתא איכו שכיבא לא אמרי לכו הא מילתא. הכי אמר <strong>רב ששת</strong>: מוהרקייהו דהני בטפסא דמלכא מנח, ומלכא אמר: מאן דלא יהיב כרגא לשתעביד למאן דיהיב כרגא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: השתא איכו שכיבא לא אמרי לכו הא מילתא. הכי אמר <strong>רב ששת</strong>: מוהרקייהו דהני בטפסא דמלכא מנח, ומלכא אמר: מאן דלא יהיב כרגא לשתעביד למאן דיהיב כרגא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בימי האמוראים בבבל הנוהג היה שמי שאינו נותן את מס הגולגולת שלו למלך, יכול אדם אחר לתת במקומו ובזה הוא יכול לשעבדו לתקופה ידועה. רב פפא חשש שאם גדול ערכה של העבודה שמשתעבד המשלם במי שעבורו שילם, ממיסי הגולגולת עצמם, נמצא המשעבד עובר על איסור ריבית, כיוון שנמצא שהעובד פורע בעזרת עבודתו את חובו ומוסיף יותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בימי האמוראים בבבל הנוהג היה שמי שאינו נותן את מס הגולגולת שלו למלך, יכול אדם אחר לתת במקומו ובזה הוא יכול לשעבדו לתקופה ידועה. רב פפא חשש שאם גדול ערכה של העבודה שמשתעבד המשלם במי שעבורו שילם, ממיסי הגולגולת עצמם, נמצא המשעבד עובר על איסור ריבית, כיוון שנמצא שהעובד פורע בעזרת עבודתו את חובו ומוסיף יותר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבא מסביר שאין חשש ריבית בדבר, ולומד זאת מדברי רב ששת, המלמד שזכות המלך לשעבד כל אדם, ומתוך שכך, אם המלך נותן רשות למשלם לשעבד את מי שעבורו שילמו, אין המשלם נוטל ריבית מהמשתעבד אלא מדובר בזכות שהוא מקבל מהמלך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רבא מסביר שאין חשש ריבית בדבר, ולומד זאת מדברי רב ששת, המלמד שזכות המלך לשעבד כל אדם, ומתוך שכך, אם המלך נותן רשות למשלם לשעבד את מי שעבורו שילמו, אין המשלם נוטל ריבית מהמשתעבד אלא מדובר בזכות שהוא מקבל מהמלך.</p>
                     
                 </div>
                 
@@ -1902,7 +1902,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -2071,6 +2071,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

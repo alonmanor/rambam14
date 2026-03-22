@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות רוצח ושמירת הנפש - פרק ב'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ב')</h3>
                 <ul class="space-y-3">
@@ -1014,7 +1014,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1027,78 +1027,78 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל ההורג חבירו בידו כגון שהכהו בסייף או באבן הממיתה, או שחנקו עד שמת, או שרפו באש, הואיל והרגו מכל מקום הוא בעצמו הרי זה נהרג בבית דין.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אבל השוכר הורג להרוג את חבירו, או ששלח עבדיו והרגוהו, או שכפת חבירו והניחו לפני הארי וכיוצא בו והרגתו החיה, וכן ההורג את עצמו, כל אחד מאלו שופך דמים הוא ועון הריגה בידו וחייב מיתה לשמים ואין בהן מיתת בית דין.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ומנין שכן הוא הדין, שהרי הוא אומר שופך דם האדם באדם דמו ישפך זה ההורג בעצמו שלא על ידי שליח, את דמכם לנפשותיכם אדרוש זה ההורג עצמו, מיד כל חיה אדרשנו זה המוסר חבירו לפני חיה לטרפו, מיד האדם מיד איש אחיו אדרוש את נפש האדם זה השוכר אחרים להרוג את חבירו, ובפירוש נאמר בשלשתן לשון דרישה, הרי דינם מסור לשמים.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההורג ע"י שליח</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ההורג ע"י שליח</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בקידושין (מג.) דנה ביחס בין אחריות השליח לבין אחריות משלחו במגוון הלכות. לעניין רצח ע"י שליח מובאת <strong>הברייתא</strong> הבאה<sup id="ref21"><a href="#fn21">[21]</a></sup>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בקידושין (מג.) דנה ביחס בין אחריות השליח לבין אחריות משלחו במגוון הלכות. לעניין רצח ע"י שליח מובאת <strong>הברייתא</strong> הבאה<sup id="ref21"><a href="#fn21">[21]</a></sup>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"האומר לשלוחו צא הרוג את הנפש הוא חייב ושולחיו פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"האומר לשלוחו צא הרוג את הנפש הוא חייב ושולחיו פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>שמאי הזקן</strong> אומר משום חגי הנביא שולחיו חייב שנאמר 'אותו הרגת בחרב בני עמון' (שמואל ב' יב)"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>שמאי הזקן</strong> אומר משום חגי הנביא שולחיו חייב שנאמר 'אותו הרגת בחרב בני עמון' (שמואל ב' יב)"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מחלוקת היא בין <strong>תנא קמא</strong> לבין <strong>שמאי הזקן</strong>, האם המשלח חייב ברצח, או שהשליח שרצח בפועל, הוא שחייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מחלוקת היא בין <strong>תנא קמא</strong> לבין <strong>שמאי הזקן</strong>, האם המשלח חייב ברצח, או שהשליח שרצח בפועל, הוא שחייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מעלה שתי אפשרויות להבין את המחלוקת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מעלה שתי אפשרויות להבין את המחלוקת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אפשרות אחת היא שהדברים כפשוטם, ושמאי הזקן מחייב את המשלח, בין אם משום שהוא סובר שבכל התורה כולה המשלח חייב<sup id="ref22"><a href="#fn22">[22]</a></sup>, ובין אם משום שהוא סובר שדין הרוצח הוא יוצא דופן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אפשרות אחת היא שהדברים כפשוטם, ושמאי הזקן מחייב את המשלח, בין אם משום שהוא סובר שבכל התורה כולה המשלח חייב<sup id="ref22"><a href="#fn22">[22]</a></sup>, ובין אם משום שהוא סובר שדין הרוצח הוא יוצא דופן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אפשרות אחרת היא שאף לדעת שמאי הזקן אין בית דין הורגים את המשלח לרצוח, וכולם מודים שמיתתו בידי שמים היא. ונחלקו התנאים בשאלה עד כמה גדולה אשמתו של המשלח, האם היא כמו אשמתו של הרוצח ממש, או פחותה ממנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אפשרות אחרת היא שאף לדעת שמאי הזקן אין בית דין הורגים את המשלח לרצוח, וכולם מודים שמיתתו בידי שמים היא. ונחלקו התנאים בשאלה עד כמה גדולה אשמתו של המשלח, האם היא כמו אשמתו של הרוצח ממש, או פחותה ממנה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעניין חיוב המשלח בדיני שמים חלקו הראשונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעניין חיוב המשלח בדיני שמים חלקו הראשונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (בתוספותיו קידושין מב: ד"ה "שלח") פוסק, שאפילו אם המשלח לא שכר את השליח, כך שהשליח לא היה חייב לעשות כדברי המשלח, עדיין חייב המשלח בדיני שמים<sup id="ref23"><a href="#fn23">[23]</a></sup>. לדבריו, דבר זה נלמד מכך שהברייתא העוסקת בשליחות לרצח אינה מגבילה את הדין לרוצח שכיר, אלא כל המצווה על רוצח לרצוח חייב, לדעת תנא קמא, בדיני שמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (בתוספותיו קידושין מב: ד"ה "שלח") פוסק, שאפילו אם המשלח לא שכר את השליח, כך שהשליח לא היה חייב לעשות כדברי המשלח, עדיין חייב המשלח בדיני שמים<sup id="ref23"><a href="#fn23">[23]</a></sup>. לדבריו, דבר זה נלמד מכך שהברייתא העוסקת בשליחות לרצח אינה מגבילה את הדין לרוצח שכיר, אלא כל המצווה על רוצח לרצוח חייב, לדעת תנא קמא, בדיני שמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>תוספות</strong> (ב"ק נו. ד"ה "אלא") מגבילים את החיוב בידי שמים למקרה בו המשלח שילם כסף לשליח לעשות את העבירה<sup id="ref24"><a href="#fn24">[24]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>תוספות</strong> (ב"ק נו. ד"ה "אלא") מגבילים את החיוב בידי שמים למקרה בו המשלח שילם כסף לשליח לעשות את העבירה<sup id="ref24"><a href="#fn24">[24]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>רמב"</strong><strong>ם</strong> שלפנינו משמע כדברי התוספות, שכן הרמב"ם כותב שדווקא השוכר רוצחים או מצווה על עבדיו לרצוח חייב בידי שמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>רמב"</strong><strong>ם</strong> שלפנינו משמע כדברי התוספות, שכן הרמב"ם כותב שדווקא השוכר רוצחים או מצווה על עבדיו לרצוח חייב בידי שמים.</p>
                     
                 </div>
                 
                 <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסורו של המאבד עצמו לדעת</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איסורו של המאבד עצמו לדעת</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בתוך הנאמר לנח ובניו היוצאים מן התיבה כותבת התורה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בתוך הנאמר לנח ובניו היוצאים מן התיבה כותבת התורה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְאַךְ אֶת דִּמְכֶם לְנַפְשֹׁתֵיכֶם אֶדְרֹשׁ מִיַּד כָּל חַיָּה אֶדְרְשֶׁנּוּ וּמִיַּד הָאָדָם מִיַּד אִישׁ אָחִיו אֶדְרֹשׁ אֶת נֶפֶשׁ הָאָדָם (בראשית ט ה)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְאַךְ אֶת דִּמְכֶם לְנַפְשֹׁתֵיכֶם אֶדְרֹשׁ מִיַּד כָּל חַיָּה אֶדְרְשֶׁנּוּ וּמִיַּד הָאָדָם מִיַּד אִישׁ אָחִיו אֶדְרֹשׁ אֶת נֶפֶשׁ הָאָדָם (בראשית ט ה)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מדרש רבה </strong>לפרשת נח (פרשה לד) דורש את הפסוק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מדרש רבה </strong>לפרשת נח (פרשה לד) דורש את הפסוק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">'אך'- להביא את החונק עצמו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">'אך'- להביא את החונק עצמו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">יכול כשאול? תלמוד לומר 'אך', יכול כחנניה מישאל ועזריה? תלמוד לומר 'אך',</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">יכול כשאול? תלמוד לומר 'אך', יכול כחנניה מישאל ועזריה? תלמוד לומר 'אך',</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">'מיד כל חיה', זה המוסר את חבירו לחיה להרגו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">'מיד כל חיה', זה המוסר את חבירו לחיה להרגו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">'מיד איש אחיו', זה השוכר את אחרים להרוג את חבירו</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">'מיד איש אחיו', זה השוכר את אחרים להרוג את חבירו</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, קיים איסור על אדם להרוג את עצמו<sup id="ref25"><a href="#fn25">[25]</a></sup>, אך ישנם יוצאים מן הכלל, הנלמדים משאול ומחנניה מישאל ועזריה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, קיים איסור על אדם להרוג את עצמו<sup id="ref25"><a href="#fn25">[25]</a></sup>, אך ישנם יוצאים מן הכלל, הנלמדים משאול ומחנניה מישאל ועזריה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הנלמד משאול כותב ה<strong>רמב"ן</strong> (תורת האדם שער הסוף- עניין ההספד) שלשאול היה מותר להרוג את עצמו<sup id="ref26"><a href="#fn26">[26]</a></sup> כיוון שרדפוהו להורגו<sup id="ref27"><a href="#fn27">[27]</a></sup>. ה<strong>רא"ש </strong>בסוף מועד קטן (סי' צד) מביא את דברי הרמב"ן ומוסיף ששאול חשש שיפקירוהו (כלומר יתעללו בו וייסרוהו)<sup id="ref28"><a href="#fn28">[28]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי הנלמד משאול כותב ה<strong>רמב"ן</strong> (תורת האדם שער הסוף- עניין ההספד) שלשאול היה מותר להרוג את עצמו<sup id="ref26"><a href="#fn26">[26]</a></sup> כיוון שרדפוהו להורגו<sup id="ref27"><a href="#fn27">[27]</a></sup>. ה<strong>רא"ש </strong>בסוף מועד קטן (סי' צד) מביא את דברי הרמב"ן ומוסיף ששאול חשש שיפקירוהו (כלומר יתעללו בו וייסרוהו)<sup id="ref28"><a href="#fn28">[28]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי חנניה מישאל ועזריה נחלקו הדעות כיצד להבין את דברי המדרש. יש האומרים שהכוונה היא שמה שמותר זה כמו שעשו חנניה מישאל ועזריה, שהביאו לכך שאחרים שלחו בהם יד, אך אל לאדם לשלוח יד בנפשו אפילו במצבים הקשים בהם חנניה מישאל ועזריה היו. אחרים מפרשים שהכוונה שאדם שהיה חושש שלא יעמוד בניסיון של העברה על דת, כפי שעמדו בו חנניה מישאל ועזריה, מותר לו להרוג את עצמו (שתי הדעות מובאות ב<strong>בדק הבית</strong> יו"ד קנז בשם ה<strong>אורחות חיים</strong>).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי חנניה מישאל ועזריה נחלקו הדעות כיצד להבין את דברי המדרש. יש האומרים שהכוונה היא שמה שמותר זה כמו שעשו חנניה מישאל ועזריה, שהביאו לכך שאחרים שלחו בהם יד, אך אל לאדם לשלוח יד בנפשו אפילו במצבים הקשים בהם חנניה מישאל ועזריה היו. אחרים מפרשים שהכוונה שאדם שהיה חושש שלא יעמוד בניסיון של העברה על דת, כפי שעמדו בו חנניה מישאל ועזריה, מותר לו להרוג את עצמו (שתי הדעות מובאות ב<strong>בדק הבית</strong> יו"ד קנז בשם ה<strong>אורחות חיים</strong>).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (יו"ד שמה ג) פוסק שהמאבד עצמו לדעת והוא אנוס, כשאול המלך, אין לו דין מאבד עצמו לדעת, ונוהגים בו ככל שנוהגים בנפטר רגיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (יו"ד שמה ג) פוסק שהמאבד עצמו לדעת והוא אנוס, כשאול המלך, אין לו דין מאבד עצמו לדעת, ונוהגים בו ככל שנוהגים בנפטר רגיל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">(בעניין דיני אבלות במאבד עצמו לדעת, עי' בהלכות אבל א, יב ובמה שנכתוב שם בעז"ה)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">(בעניין דיני אבלות במאבד עצמו לדעת, עי' בהלכות אבל א, יב ובמה שנכתוב שם בעז"ה)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין הכופת את חבירו לפני חיה או במקום סכנה אחר יבואר בעז"ה בפרק הבא</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דין הכופת את חבירו לפני חיה או במקום סכנה אחר יבואר בעז"ה בפרק הבא</p>
                     
                 </div>
                 
@@ -1106,31 +1106,31 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     וכל אלו הרצחנים וכיוצא בהן שאינן מחוייבים מיתת בית דין אם רצה מלך ישראל להרגם בדין המלכות ותקנת העולם הרשות בידו, וכן אם ראו בית דין להרוג אותן בהוראת שעה אם היתה השעה צריכה לכך הרי יש להם רשות כפי מה שיראו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הרי שלא הרגם המלך ולא היתה השעה צריכה לחזק הדבר הרי בית דין חייבין מכל מקום להכותם מכה רבה הקרובה למיתה ולאסור אותן במצור ובמצוק שנים רבות ולצערן בכל מיני צער כדי להפחיד ולאיים על שאר הרשעים שלא יהיה להם הדבר לפוקה ולמכשול לבב ויאמר הריני מסבב להרוג אויבי כדרך שעשה פלוני ואפטר.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דרך הטיפול ברוצחים שאינם נהרגים מן התורה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דרך הטיפול ברוצחים שאינם נהרגים מן התורה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסנהדרין (מו.) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסנהדרין (מו.) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי אליעזר בן יעקב</strong> אומר שמעתי שבית דין מכין ועונשין שלא מן התורה ולא לעבור על דברי תורה אלא כדי לעשות סייג לתורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי אליעזר בן יעקב</strong> אומר שמעתי שבית דין מכין ועונשין שלא מן התורה ולא לעבור על דברי תורה אלא כדי לעשות סייג לתורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומעשה באחד שרכב על סוס בשבת בימי יונים והביאוהו לבית דין וסקלוהו לא מפני שראוי לכך אלא שהשעה צריכה לכך</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומעשה באחד שרכב על סוס בשבת בימי יונים והביאוהו לבית דין וסקלוהו לא מפני שראוי לכך אלא שהשעה צריכה לכך</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר את הצורך במעשה המתואר בברייתא- שמתוך גזירות היוונים זילזלו ישראל במצוות, והיה צורך לגדור פרצה זו. ה<strong>רמב"ם</strong> (הלכות סנהדרין כד ד) פוסק כברייתא זו, ומסביר את הדברים "...לא לעבור על דברי תורה אלא כדי לעשות סייג לתורה", שהכוונה היא שיהיה ברור שמעשה בית הדין היא הוראת שעה בלבד לפי צורך העניין, ושאין לקובעו כהלכה לדורות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר את הצורך במעשה המתואר בברייתא- שמתוך גזירות היוונים זילזלו ישראל במצוות, והיה צורך לגדור פרצה זו. ה<strong>רמב"ם</strong> (הלכות סנהדרין כד ד) פוסק כברייתא זו, ומסביר את הדברים "...לא לעבור על דברי תורה אלא כדי לעשות סייג לתורה", שהכוונה היא שיהיה ברור שמעשה בית הדין היא הוראת שעה בלבד לפי צורך העניין, ושאין לקובעו כהלכה לדורות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד בעניין זה יבואר בעז"ה בהמשך, פרק ד הלכה ח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד בעניין זה יבואר בעז"ה בהמשך, פרק ד הלכה ח.</p>
                     
                 </div>
                 
@@ -1138,51 +1138,51 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אחד ההורג את הגדול או את הקטן בן יומו, בין זכר בין נקבה, הרי זה נהרג עליו אם הרג בזדון, או גולה אם הרג בשגגה, והוא שכלו לו חדשיו, אבל נולד לפחות מתשעה חדשים הרי הוא כנפל עד שישהה שלשים יום וההורגו בתוך שלשים יום אינו נהרג עליו.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההורג תינוק בן יומו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ההורג תינוק בן יומו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> במסכת נידה (מג:) מביאה כמה דינים השייכים לקטן בין יום אחד, וביניהם, שההורגו חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> במסכת נידה (מג:) מביאה כמה דינים השייכים לקטן בין יום אחד, וביניהם, שההורגו חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מד:) מסבירה שמקור הדין הוא מהכתוב "וְאִישׁ כִּי יַכֶּה <strong>כָּל</strong> נֶפֶשׁ אָדָם מוֹת יוּמָת" (ויקרא כד יז), ממנו משמע שכל שקרוי נפש אדם, אפילו הוא קטן בן יום אחד, חייבים מוות על הריגתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (מד:) מסבירה שמקור הדין הוא מהכתוב "וְאִישׁ כִּי יַכֶּה <strong>כָּל</strong> נֶפֶשׁ אָדָם מוֹת יוּמָת" (ויקרא כד יז), ממנו משמע שכל שקרוי נפש אדם, אפילו הוא קטן בן יום אחד, חייבים מוות על הריגתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בסנהדרין (פד:) מביאה מקור שונה במקצת- נאמר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בסנהדרין (פד:) מביאה מקור שונה במקצת- נאמר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כָּל מַכֵּה נֶפֶשׁ לְפִי עֵדִים יִרְצַח אֶת הָרֹצֵחַ וְעֵד אֶחָד לֹא יַעֲנֶה בְנֶפֶשׁ לָמוּת" (במדבר לה ל)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כָּל מַכֵּה נֶפֶשׁ לְפִי עֵדִים יִרְצַח אֶת הָרֹצֵחַ וְעֵד אֶחָד לֹא יַעֲנֶה בְנֶפֶשׁ לָמוּת" (במדבר לה ל)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ונאמר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ונאמר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"מַכֵּה אִישׁ וָמֵת מוֹת יוּמָת" (שמות כאי ב)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"מַכֵּה אִישׁ וָמֵת מוֹת יוּמָת" (שמות כאי ב)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהפסוק הראשון (מייתור המילה "כל") לומדת הגמרא שאפילו על הריגת קטן בן יומו חייב הרוצח<sup id="ref29"><a href="#fn29">[29]</a></sup>, ואילו מהפסוק השני לומדת הגמרא שעדיין, צריך המוכה להיות בבחינת "איש", ולכן ההורג נפל או תינוק שנולד לשמונה חודשים פטור<sup id="ref30"><a href="#fn30">[30]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מהפסוק הראשון (מייתור המילה "כל") לומדת הגמרא שאפילו על הריגת קטן בן יומו חייב הרוצח<sup id="ref29"><a href="#fn29">[29]</a></sup>, ואילו מהפסוק השני לומדת הגמרא שעדיין, צריך המוכה להיות בבחינת "איש", ולכן ההורג נפל או תינוק שנולד לשמונה חודשים פטור<sup id="ref30"><a href="#fn30">[30]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם מתייחס בקצרה לדין ההורג את הנולד לפחות מתשעה חודשים. הבעיה בולד שכזה הוא שקיים ספק האם מדובר בולד בר קיימא, או בנפל, שכן בימי חז"ל היתה מקובלת ללא עוררין ההנחה שולד הנולד לשמונה חודשים, למרות שהוא זז ונושם, הריהו נפל וחשוב כמת<sup id="ref31"><a href="#fn31">[31]</a></sup>, בעוד שולד הנולד לשבעה חודשים, הרי הוא בן קיימא<sup id="ref32"><a href="#fn32">[32]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם מתייחס בקצרה לדין ההורג את הנולד לפחות מתשעה חודשים. הבעיה בולד שכזה הוא שקיים ספק האם מדובר בולד בר קיימא, או בנפל, שכן בימי חז"ל היתה מקובלת ללא עוררין ההנחה שולד הנולד לשמונה חודשים, למרות שהוא זז ונושם, הריהו נפל וחשוב כמת<sup id="ref31"><a href="#fn31">[31]</a></sup>, בעוד שולד הנולד לשבעה חודשים, הרי הוא בן קיימא<sup id="ref32"><a href="#fn32">[32]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>תוספתא</strong> (שבת טו הלכה ז) נאמרה מחלוקת תנאים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>תוספתא</strong> (שבת טו הלכה ז) נאמרה מחלוקת תנאים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אי זהו בן שמונה? כל שלא יצאו לו חדשיו</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אי זהו בן שמונה? כל שלא יצאו לו חדשיו</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר</strong><strong>בי</strong> אומר סימניו נכרין בו צפרניו ושערו שלא גמרו...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר</strong><strong>בי</strong> אומר סימניו נכרין בו צפרניו ושערו שלא גמרו...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבן שמעון בן גמליאל</strong> אומ' כל ששהה שלשים יום באדם אינו נפל שנאמ' ופדוייו מבן חדש תפדה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבן שמעון בן גמליאל</strong> אומ' כל ששהה שלשים יום באדם אינו נפל שנאמ' ופדוייו מבן חדש תפדה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בשבת (קלו.) פוסקת כרשב"ג, ורוב הראשונים פסקו על פיה כרשב"ג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בשבת (קלו.) פוסקת כרשב"ג, ורוב הראשונים פסקו על פיה כרשב"ג.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בנדה (מד:), על המשנה הנ"ל<sup id="ref33"><a href="#fn33">[33]</a></sup>, טוענת בתחילה שהמשנה כרבנן ולא כרשב"ג, שכן היא מחשיבה ולד בן יומו כאדם שלם, מבלי לחכות שלושים יום. אמנם הגמרא ממשיכה ומתרצת, שהמשנה יכולה להיות כרשב"ג אם נפרש שמדובר במקרה בו ידוע לנו בודאות שעברו על הולד תשעה חודשי הריון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בנדה (מד:), על המשנה הנ"ל<sup id="ref33"><a href="#fn33">[33]</a></sup>, טוענת בתחילה שהמשנה כרבנן ולא כרשב"ג, שכן היא מחשיבה ולד בן יומו כאדם שלם, מבלי לחכות שלושים יום. אמנם הגמרא ממשיכה ומתרצת, שהמשנה יכולה להיות כרשב"ג אם נפרש שמדובר במקרה בו ידוע לנו בודאות שעברו על הולד תשעה חודשי הריון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכאן מסיקים ה<strong>תוספות</strong> (נידה מד: ד"ה "הא לא"), שרשב"ג אומר את דבריו בכל ולד, ולא רק בולד שנולד לשמונה. כלומר, סתם ולד, עד שלא עוברים עליו 30 ימים, אינו יוצא מגדר ספק (אלא אם כן ודאי לנו שנולד לתשעה). ואילו חכמים חלוקים ואומרים שאין כלל תועלת בהמתנת שלושים יום, כיוון שאם ידוע שהוא בן שמונה חודשים, אין 30 יום עוזרים להחשיבו כבן קיימא, ולחילופין, סתם ולד שאין ידוע אם כלו לו חודשיו או לו, אין צריך להמתין בו 30 יום, אלא מחזיקים אותו כבן קיימא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכאן מסיקים ה<strong>תוספות</strong> (נידה מד: ד"ה "הא לא"), שרשב"ג אומר את דבריו בכל ולד, ולא רק בולד שנולד לשמונה. כלומר, סתם ולד, עד שלא עוברים עליו 30 ימים, אינו יוצא מגדר ספק (אלא אם כן ודאי לנו שנולד לתשעה). ואילו חכמים חלוקים ואומרים שאין כלל תועלת בהמתנת שלושים יום, כיוון שאם ידוע שהוא בן שמונה חודשים, אין 30 יום עוזרים להחשיבו כבן קיימא, ולחילופין, סתם ולד שאין ידוע אם כלו לו חודשיו או לו, אין צריך להמתין בו 30 יום, אלא מחזיקים אותו כבן קיימא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כך גם פוסק ה<strong>רמב"ם</strong> לפנינו, שההורג ולד שנולד לאחר תשעה חודשי הריון נהרג עליו, אך אם אין ודאי שנולד לתשעה, נהרג ההורגו רק אם שהה שלושים יום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כך גם פוסק ה<strong>רמב"ם</strong> לפנינו, שההורג ולד שנולד לאחר תשעה חודשי הריון נהרג עליו, אך אם אין ודאי שנולד לתשעה, נהרג ההורגו רק אם שהה שלושים יום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">יוצאת דופן היא שיטת ה<strong>רא</strong><strong>"ש</strong> (תוס' הרא"ש שבת קלו: ד"ה "ואם"), שכתב שעיקר ההלכה כרבנן. לפי זה משמע שבן שמונה ודאי, אפילו אם שהה שלושים יום, ההורגו פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">יוצאת דופן היא שיטת ה<strong>רא</strong><strong>"ש</strong> (תוס' הרא"ש שבת קלו: ד"ה "ואם"), שכתב שעיקר ההלכה כרבנן. לפי זה משמע שבן שמונה ודאי, אפילו אם שהה שלושים יום, ההורגו פטור.</p>
                     
                 </div>
                 
@@ -1190,47 +1190,47 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז-ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אחד ההורג את הבריא או את החולה הנוטה למות, ואפילו הרג את הגוסס נהרג עליו, ואם היה גוסס בידי אדם כגון שהכוהו עד שנטה למות והרי הוא גוסס, ההורג אותו אין בית דין ממיתין אותו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ההורג את הטריפה אף על פי שאוכל ושותה ומהלך בשוק הרי זה פטור מדיני אדם, וכל אדם בחזקת שלם הוא וההורגו נהרג עד שיודע בודאי שזה טריפה ויאמרו הרופאים שמכה זו אין לה תעלה באדם ובה ימות אם לא ימיתנו דבר אחר.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההורג גוסס וההורג טריפה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ההורג גוסס וההורג טריפה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (סנהדרין עח.) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (סנהדרין עח.) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכוהו עשרה בני אדם בעשרה מקלות ומת בין בבת אחת בין בזה אחר זה פטורין</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הכוהו עשרה בני אדם בעשרה מקלות ומת בין בבת אחת בין בזה אחר זה פטורין</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יהודה בן בתירא</strong> אומר בזה אחר זה האחרון חייב מפני שקירב את מיתתו</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי יהודה בן בתירא</strong> אומר בזה אחר זה האחרון חייב מפני שקירב את מיתתו</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוחנן</strong> מסביר שתנא קמא ור' יהודה בן בתירא חולקים בהבנת הפסוק "וְאִישׁ כִּי יַכֶּה <strong>כָּל </strong>נֶפֶשׁ אָדָם מוֹת יוּמָת" (ויקרא כד יז). תנא קמא לומד מפסוק זה שההורג צריך להרוג "נפש שלימה", ולכן, כיוון שבנידון דנן היו שותפים בהריגה עשרה בני אדם, הרי שאף אחד מהם לא הרג את הנרצח כולו בעצמו. ר' יהודה בן בתירא, לעומת זאת, סובר שכוונת המילה "כל" שבפסוק לכלול אפילו מי שרק חלק מנפש חיותו עדיין מפעם בו, ולכן, כיוון שהאחרון הוא שגרם למוכה למות, הרי הוא חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יוחנן</strong> מסביר שתנא קמא ור' יהודה בן בתירא חולקים בהבנת הפסוק "וְאִישׁ כִּי יַכֶּה <strong>כָּל </strong>נֶפֶשׁ אָדָם מוֹת יוּמָת" (ויקרא כד יז). תנא קמא לומד מפסוק זה שההורג צריך להרוג "נפש שלימה", ולכן, כיוון שבנידון דנן היו שותפים בהריגה עשרה בני אדם, הרי שאף אחד מהם לא הרג את הנרצח כולו בעצמו. ר' יהודה בן בתירא, לעומת זאת, סובר שכוונת המילה "כל" שבפסוק לכלול אפילו מי שרק חלק מנפש חיותו עדיין מפעם בו, ולכן, כיוון שהאחרון הוא שגרם למוכה למות, הרי הוא חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מוסיף ומסביר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> מוסיף ומסביר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכל מודים בהורג את הטריפה שהוא פטור, בגוסס בידי שמים שהוא חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הכל מודים בהורג את הטריפה שהוא פטור, בגוסס בידי שמים שהוא חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לא נחלקו אלא בגוסס בידי אדם. מר מדמי ליה לטריפה ומר מדמי ליה לגוסס בידי שמים</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לא נחלקו אלא בגוסס בידי אדם. מר מדמי ליה לטריפה ומר מדמי ליה לגוסס בידי שמים</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מוסכם על כולם שההורג את הטריפה (שהוא אדם שיש בו אחד המומים ההופכים בהמה לטריפה), פטור. כמו כן מוסכם על כולם, שההורג גוסס בידי שמים, חייב. המחלוקת היא בכגון דנן, בהורג גוסס בידי אדם<sup id="ref34"><a href="#fn34">[34]</a></sup>. תנא קמא משווהו להורג טריפה, ואילו ר' יהודה בן בתירא משווה אותו להורג גוסס בידי שמים ומחייב. הגמרא ממשיכה ומסבירה שמצד אחד, הגוסס בידי אדם שונה מגוסס בידי שמים, שכן נעשה בו מעשה פיזי, אך מצד שני, הגוסס בידי אדם שונה גם מטריפה בכך שהטריפה חסר איברים או חלקי איברים חיוניים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מוסכם על כולם שההורג את הטריפה (שהוא אדם שיש בו אחד המומים ההופכים בהמה לטריפה), פטור. כמו כן מוסכם על כולם, שההורג גוסס בידי שמים, חייב. המחלוקת היא בכגון דנן, בהורג גוסס בידי אדם<sup id="ref34"><a href="#fn34">[34]</a></sup>. תנא קמא משווהו להורג טריפה, ואילו ר' יהודה בן בתירא משווה אותו להורג גוסס בידי שמים ומחייב. הגמרא ממשיכה ומסבירה שמצד אחד, הגוסס בידי אדם שונה מגוסס בידי שמים, שכן נעשה בו מעשה פיזי, אך מצד שני, הגוסס בידי אדם שונה גם מטריפה בכך שהטריפה חסר איברים או חלקי איברים חיוניים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בטעם הפטור של הרוצח טריפה, ובמהות ההבדל בין הטריפה לבין הגוסס-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בטעם הפטור של הרוצח טריפה, ובמהות ההבדל בין הטריפה לבין הגוסס-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שאדם טריפה, כיוון שניכר בו באופן פיזית חוסר באיברים חיוניים (כגון שנחתכו סימניו או ניקב הוושט או קרום המח וכן הלאה), נחשב הוא כאדם מת. לעומת זאת, הגוסס הוא "קרוב למות", אך אין ניכר בו חוסר באיברים חיוניים. במילים אחרות, מדברי רש"י משמע, שההבדל בין הגוסס לבין הטריפה אינו נעוץ בסבירות שהאדם ימות מבלי שהרגו הרוצח, אלא מדובר בעניין של הגדרה- אדם חסר איברים חיוניים חשוב הוא כמת ולכן ההורגו פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שאדם טריפה, כיוון שניכר בו באופן פיזית חוסר באיברים חיוניים (כגון שנחתכו סימניו או ניקב הוושט או קרום המח וכן הלאה), נחשב הוא כאדם מת. לעומת זאת, הגוסס הוא "קרוב למות", אך אין ניכר בו חוסר באיברים חיוניים. במילים אחרות, מדברי רש"י משמע, שההבדל בין הגוסס לבין הטריפה אינו נעוץ בסבירות שהאדם ימות מבלי שהרגו הרוצח, אלא מדובר בעניין של הגדרה- אדם חסר איברים חיוניים חשוב הוא כמת ולכן ההורגו פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שיטה זו, המשתמעת ברש"י, מובעת בפירוש ב<strong>תוספות</strong> (ד"ה ההורג), הכותבים שאפילו לפי השיטה לפיה טריפה חיה<sup id="ref35"><a href="#fn35">[35]</a></sup>, עדיין ההורג את הטריפה פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שיטה זו, המשתמעת ברש"י, מובעת בפירוש ב<strong>תוספות</strong> (ד"ה ההורג), הכותבים שאפילו לפי השיטה לפיה טריפה חיה<sup id="ref35"><a href="#fn35">[35]</a></sup>, עדיין ההורג את הטריפה פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחרת משתמע מדברי ה<strong>יד רמה</strong> (ד"ה "אמר רבא") המסביר שההבדל בין טריפה לבין גוסס הוא שטריפה ודאי שתמות, ואילו רוב גוססים למיתה אך מיעוטם חיים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחרת משתמע מדברי ה<strong>יד רמה</strong> (ד"ה "אמר רבא") המסביר שההבדל בין טריפה לבין גוסס הוא שטריפה ודאי שתמות, ואילו רוב גוססים למיתה אך מיעוטם חיים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כחכמים, שההורג גוסס בידי אדם פטור<sup id="ref36"><a href="#fn36">[36]</a></sup>, וכהערתו של רבא, שההורג גוסס בידי אדם ודאי שחייב, ושההורג את הטריפה ודאי שפטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כחכמים, שההורג גוסס בידי אדם פטור<sup id="ref36"><a href="#fn36">[36]</a></sup>, וכהערתו של רבא, שההורג גוסס בידי אדם ודאי שחייב, ושההורג את הטריפה ודאי שפטור.</p>
                     
                 </div>
                 
@@ -1238,31 +1238,31 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אדם טריפה שהרג את הנפש נהרג שנאמר "ובערת הרע מקרבך", והוא שיהרוג בפני בית דין אבל בפני עדים פטור שמא יוזמו העדים ואם הוזמו אינן נהרגין שהרי לא זממו להרוג אלא טריפה וכל עדות שאינה ראויה להזמה אינה עדות בדיני נפשות.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אדם טריפה שהרג</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אדם טריפה שהרג</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך הסוגיה הנ"ל עוסק <strong>רבא</strong> באדם טריפה שרצח, ומחלק בין שני מצבים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך הסוגיה הנ"ל עוסק <strong>רבא</strong> באדם טריפה שרצח, ומחלק בין שני מצבים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם רצח שלא בפני בית הדין, אינו נהרג. והטעם הוא, משום שבכדי להורגו בבית דין יש צורך שיעידו עליו, ואותה עדות, עדות שלא ניתן להזימה היא. פירוש- בדרך כלל, כאשר עדים מעידים על אחד שהרג את הנפש, הרי שאם יוזמו, יהרגו הם כדרך שזממו לעשות לאחיהם. לעומת זאת, כאשר מעידים הם על טריפה שהרג את הנפש, לא ניתן לבצע בהם את אשר זממו, שכן הם זממו להרוג טריפה, והם אנשים שלמים. על כן, כיוון שעדות שלא ניתן להזימה (הכוונה שלא ניתן לקיים בעדים הזוממים את הדין אותו זממו לעשות בנאשם) אינה עדות, אין בית הדין יכולים להרוג את אותו טריפה שהרג בפני עדים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם רצח שלא בפני בית הדין, אינו נהרג. והטעם הוא, משום שבכדי להורגו בבית דין יש צורך שיעידו עליו, ואותה עדות, עדות שלא ניתן להזימה היא. פירוש- בדרך כלל, כאשר עדים מעידים על אחד שהרג את הנפש, הרי שאם יוזמו, יהרגו הם כדרך שזממו לעשות לאחיהם. לעומת זאת, כאשר מעידים הם על טריפה שהרג את הנפש, לא ניתן לבצע בהם את אשר זממו, שכן הם זממו להרוג טריפה, והם אנשים שלמים. על כן, כיוון שעדות שלא ניתן להזימה (הכוונה שלא ניתן לקיים בעדים הזוממים את הדין אותו זממו לעשות בנאשם) אינה עדות, אין בית הדין יכולים להרוג את אותו טריפה שהרג בפני עדים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם רצח בפני בית הדין עצמם פוסק רבא, שאין בית הדין נזקקים לעדים ולכן יכולים להרוג את הרוצח. כמקור לכך שבית הדין דנים ללא צורך בעדים מובא הפסוק "וביערת הרע מקירבך".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם רצח בפני בית הדין עצמם פוסק רבא, שאין בית הדין נזקקים לעדים ולכן יכולים להרוג את הרוצח. כמקור לכך שבית הדין דנים ללא צורך בעדים מובא הפסוק "וביערת הרע מקירבך".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהקשר של הטריפה שהרג בפני בית הדין, נחלקו הראשונים באשר ליכולת של בית הדין לדונו מבלי להזדקק לעדים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהקשר של הטריפה שהרג בפני בית הדין, נחלקו הראשונים באשר ליכולת של בית הדין לדונו מבלי להזדקק לעדים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "בפני בית דין") מפנים לדברי הגמרא בבבא קמא (צ:). הגמרא שם מביאה מחלוקת תנאים לגבי בית דין שראו אחד שהרג את הנפש. <strong>ר' עקיבא</strong> סובר שאין הם יכולים לדונו, שכן אין עד נעשה דיין, ואילו <strong>ר' טרפון</strong> סובר שיכולים שנים מהם להעיד בפני השאר. הגמרא שם ממשיכה ואומרת, שכל מחלוקת התנאים אמורה במקרה בו ראו את הרצח בלילה, בזמן שאין בית דין יכול לדון בו, אך אם ראו ביום, יכולים לדון ללא עדים כלל. ממסקנה זו מוכיחים התוספות שכאן, בית דין שראו את הטריפה יכולים לדונו למיתה ללא עדים רק אם ראוהו ביום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ד"ה "בפני בית דין") מפנים לדברי הגמרא בבבא קמא (צ:). הגמרא שם מביאה מחלוקת תנאים לגבי בית דין שראו אחד שהרג את הנפש. <strong>ר' עקיבא</strong> סובר שאין הם יכולים לדונו, שכן אין עד נעשה דיין, ואילו <strong>ר' טרפון</strong> סובר שיכולים שנים מהם להעיד בפני השאר. הגמרא שם ממשיכה ואומרת, שכל מחלוקת התנאים אמורה במקרה בו ראו את הרצח בלילה, בזמן שאין בית דין יכול לדון בו, אך אם ראו ביום, יכולים לדון ללא עדים כלל. ממסקנה זו מוכיחים התוספות שכאן, בית דין שראו את הטריפה יכולים לדונו למיתה ללא עדים רק אם ראוהו ביום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> (מכות יב. ד"ה "מנין") כותב שמדברי ר' עקיבא המובאים שם<sup id="ref37"><a href="#fn37">[37]</a></sup>, משמע שר' עקיבא אומר שאין בית הדין יכול לדון את הרוצח ללא עדים, על סמך ראייתם בלבד, בין אם ראוהו בלילה ובין אם ראוהו ביום<sup id="ref38"><a href="#fn38">[38]</a></sup>. מתוך כך הוא מסביר שדברי רבא בסוגייתנו, לפיהם אם ראו טריפה שהרג דנים אותו למיתה אף ללא עדים, אמורים דווקא בטריפה, שכן במקרה של טריפה לא ניתן להעביר את דינו לבית דין אחר שיקבלו עדים עליו (שכן, כאמור, מדובר בעדות שאי אפשר להזימה). לכן נזקקת הגמרא לפסוק "וביערת הרע מקרבך", שמשמעותו היא שאם לא ניתן להרוג את הרוצח בעדות, כדרך המקובלת, יש לדון אותו ע"י בית הדין שראוהו, ללא הליך רגיל של קבלת עדים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ן</strong> (מכות יב. ד"ה "מנין") כותב שמדברי ר' עקיבא המובאים שם<sup id="ref37"><a href="#fn37">[37]</a></sup>, משמע שר' עקיבא אומר שאין בית הדין יכול לדון את הרוצח ללא עדים, על סמך ראייתם בלבד, בין אם ראוהו בלילה ובין אם ראוהו ביום<sup id="ref38"><a href="#fn38">[38]</a></sup>. מתוך כך הוא מסביר שדברי רבא בסוגייתנו, לפיהם אם ראו טריפה שהרג דנים אותו למיתה אף ללא עדים, אמורים דווקא בטריפה, שכן במקרה של טריפה לא ניתן להעביר את דינו לבית דין אחר שיקבלו עדים עליו (שכן, כאמור, מדובר בעדות שאי אפשר להזימה). לכן נזקקת הגמרא לפסוק "וביערת הרע מקרבך", שמשמעותו היא שאם לא ניתן להרוג את הרוצח בעדות, כדרך המקובלת, יש לדון אותו ע"י בית הדין שראוהו, ללא הליך רגיל של קבלת עדים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> אינו מחלק בין יום לבין לילה ופוסק שכל טריפה שהרג לעיני בית הדין, נהרג. ואפשר שסובר הוא כרמב"ן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> אינו מחלק בין יום לבין לילה ופוסק שכל טריפה שהרג לעיני בית הדין, נהרג. ואפשר שסובר הוא כרמב"ן.</p>
                     
                 </div>
                 
@@ -1270,56 +1270,56 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י-יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י-יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אחד ההורג את ישראל או ההורג עבד כנעני הרי זה נהרג עליו, ואם הרג בשגגה גולה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ישראל שהרג גר תושב אינו נהרג עליו בבית דין שנאמר "וכי יזיד איש על רעהו" (שמות כ"א י"ד), ואין צריך לומר שאינו נהרג על הגוי, ואחד ההורג את עבד אחרים או ההורג עבדו הרי זה נהרג עליו, שהעבד כבר קבל עליו מצות ונוסף על נחלת ה'.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מה בין עבדו לעבד אחרים, שעבדו יש לו רשות להכותו לפיכך אם הכהו הכייה שיש בה כדי להמית ונטה למות ועמד עשרים וארבע שעות ואחר כך מת אינו נהרג עליו אף על פי שמת מחמת המכה שנאמר לא יוקם כי כספו הוא (שמות כ"א כ"א), ומה הוא יום או יומים יום שהוא כיומים שהוא מעת לעת.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אבל המכה עבד שאינו שלו אפילו מת לאחר כמה ימים מחמת המכה הואיל והכהו כדי להמית הרי זה נהרג עליו כשאר בני חורין.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההורג עבד כנעני וההורג גר תושב</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ההורג עבד כנעני וההורג גר תושב</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפרשת משפטים (שמות כא, כ-כא) מתפרש דין ההורג עבד כנעני שלו:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפרשת משפטים (שמות כא, כ-כא) מתפרש דין ההורג עבד כנעני שלו:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְכִי יַכֶּה אִישׁ אֶת עַבְדּוֹ אוֹ אֶת אֲמָתוֹ בַּשֵּׁבֶט וּמֵת תַּחַת יָדוֹ נָקֹם יִנָּקֵם:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְכִי יַכֶּה אִישׁ אֶת עַבְדּוֹ אוֹ אֶת אֲמָתוֹ בַּשֵּׁבֶט וּמֵת תַּחַת יָדוֹ נָקֹם יִנָּקֵם:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אַךְ אִם יוֹם אוֹ יוֹמַיִם יַעֲמֹד לֹא יֻקַּם כִּי כַסְפּוֹ הוּא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אַךְ אִם יוֹם אוֹ יוֹמַיִם יַעֲמֹד לֹא יֻקַּם כִּי כַסְפּוֹ הוּא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>במכילתא</strong> <strong>דרבי ישמעאל</strong>, (משפטים, מסכתא דנזיקין, פרשה ז) נדרשו פסוקים אלה, ומוכח שאין מדובר בעבד עברי אלא בעבד כנעני, שהוא בכלל "כספו" של אדונו. כמו כן מוסיפה המכילתא, שלמרות שדין ההורג עבד נכלל בדין הרוצח הכללי- "מכה איש ומת מות יומת", אלא שבא כאן בכדי ללמדנו דין "יום או יומיים", לפיו, אם לא נהרג העבד מיד, פטור בעליו ממיתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>במכילתא</strong> <strong>דרבי ישמעאל</strong>, (משפטים, מסכתא דנזיקין, פרשה ז) נדרשו פסוקים אלה, ומוכח שאין מדובר בעבד עברי אלא בעבד כנעני, שהוא בכלל "כספו" של אדונו. כמו כן מוסיפה המכילתא, שלמרות שדין ההורג עבד נכלל בדין הרוצח הכללי- "מכה איש ומת מות יומת", אלא שבא כאן בכדי ללמדנו דין "יום או יומיים", לפיו, אם לא נהרג העבד מיד, פטור בעליו ממיתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקום אחר דנה <strong>ה</strong><strong>מכילתא</strong> (שם, פרשה ד) בהורג את מי שאינו יהודי, ודורשת את הפסוק "וְכִי יָזִד אִישׁ עַל רֵעֵהוּ לְהָרְגוֹ בְעָרְמָה מֵעִם מִזְבְּחִי תִּקָּחֶנּוּ לָמוּת"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקום אחר דנה <strong>ה</strong><strong>מכילתא</strong> (שם, פרשה ד) בהורג את מי שאינו יהודי, ודורשת את הפסוק "וְכִי יָזִד אִישׁ עַל רֵעֵהוּ לְהָרְגוֹ בְעָרְמָה מֵעִם מִזְבְּחִי תִּקָּחֶנּוּ לָמוּת"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"רעהו", להוציא את אחרים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"רעהו", להוציא את אחרים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>איסי בן עקיבא</strong> אומר, קודם מתן תורה, היינו מוזהרים על שפיכות דמים, לאחר מתן תורה תחת שהוחמרו הוקלו?! באמת אמרו, פטור מדיני בשר ודם, ודינו מסור לשמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>איסי בן עקיבא</strong> אומר, קודם מתן תורה, היינו מוזהרים על שפיכות דמים, לאחר מתן תורה תחת שהוחמרו הוקלו?! באמת אמרו, פטור מדיני בשר ודם, ודינו מסור לשמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב"אחרים" הכוונה למי שאינו בכלל "רעהו", כלומר לגוי, ומבואר שההורגו אינו נהרג בבית דין. מלשון המכילתא משמע שמוסכם על הכל, שההורג גוי אמנם פטור מדיני אדם, אך חייב בדיני שמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב"אחרים" הכוונה למי שאינו בכלל "רעהו", כלומר לגוי, ומבואר שההורגו אינו נהרג בבית דין. מלשון המכילתא משמע שמוסכם על הכל, שההורג גוי אמנם פטור מדיני אדם, אך חייב בדיני שמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מסביר, שההבדל בין עבד כנעני, שעל הריגתו חייבים מיתה בבי"ד, לבין גוי, שדינו מסור לשמים, הוא שעבד חייב חלקית במצוות ונחשב חלק מ"נחלת ה'".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מסביר, שההבדל בין עבד כנעני, שעל הריגתו חייבים מיתה בבי"ד, לבין גוי, שדינו מסור לשמים, הוא שעבד חייב חלקית במצוות ונחשב חלק מ"נחלת ה'".</p>
                     
                 </div>
                 
                 <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המכה את עבדו שלו, ועמד זמן מה לפני שמת – דין "יום או יומיים"</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המכה את עבדו שלו, ועמד זמן מה לפני שמת – דין "יום או יומיים"</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי הפסוקים הנ"ל, שונה דין המכה את עבדו שלו ומת, מדין המכה עבד של חברו. בעוד שהמכה עבד כנעני שלו, ולא מת מיד אלא שהה מעת לעת, אין נהרג בבי"ד, המכה עבד כנעני של חברו, ומת, אפילו שהה, עדיין נהרג ההורג בבית הדין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי הפסוקים הנ"ל, שונה דין המכה את עבדו שלו ומת, מדין המכה עבד של חברו. בעוד שהמכה עבד כנעני שלו, ולא מת מיד אלא שהה מעת לעת, אין נהרג בבי"ד, המכה עבד כנעני של חברו, ומת, אפילו שהה, עדיין נהרג ההורג בבית הדין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי שיעור הזמן, שאינו ברור לגמרי מהפסוק, כותבת המכילתא, שכוונת הפסוק ל"יום שהוא כיומיים", כלומר, לשהות של עשרים וארבע שעות, מעת לעת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי שיעור הזמן, שאינו ברור לגמרי מהפסוק, כותבת המכילתא, שכוונת הפסוק ל"יום שהוא כיומיים", כלומר, לשהות של עשרים וארבע שעות, מעת לעת.</p>
                     
                 </div>
                 
@@ -1327,21 +1327,21 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     יראה לי שהמכה את עבדו בסכין וסייף או באבן ואגרוף וכיוצא בהן ואמדוהו למיתה ומת אינו בדין יום או יומים אלא אפילו מת לאחר שנה נהרג עליו, לכך נאמר "בשבט" (שמות כ"א כ') שלא נתנה לו תורה רשות להכותו אלא בשבט ומקל ורצועה וכיוצא בהן לא הכיית רציחה.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המכה את עבדו "הכיית רציחה" ומת</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המכה את עבדו "הכיית רציחה" ומת</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לומד מהייתור שבפסוק- "בשבט", שאם רבו של העבד הכהו בסכין וחרב או באבן ובאגרוף, אין דין "יום או יומיים" אמור בו, ולכן אם מת מהמכה אפילו לאחר שנה, נהרג רבו עליו. הרמב"ם מבאר, שדין "יום או יומיים" נובע מכך שהתורה נתנה רשות לבעל העבד להכותו לצורכי מוסר בשבט ורצועה וכיוצא בהם, אך לא מכת רציחה שמטרתה הפגיעה כשלעצמה. כמותו כותב ה<strong>רשב"ם</strong> (שמות כא כ).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לומד מהייתור שבפסוק- "בשבט", שאם רבו של העבד הכהו בסכין וחרב או באבן ובאגרוף, אין דין "יום או יומיים" אמור בו, ולכן אם מת מהמכה אפילו לאחר שנה, נהרג רבו עליו. הרמב"ם מבאר, שדין "יום או יומיים" נובע מכך שהתורה נתנה רשות לבעל העבד להכותו לצורכי מוסר בשבט ורצועה וכיוצא בהם, אך לא מכת רציחה שמטרתה הפגיעה כשלעצמה. כמותו כותב ה<strong>רשב"ם</strong> (שמות כא כ).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אור החיים</strong> (שם) מבין שלדברי הרמב"ם דין "יום או יומיים" אמור רק בהכאה בדבר שאינו ממית (שבט וכיוצ"ב), ולפי זה מוקשה לו- מדוע כאשר הרגו במקום ולא עמד מעת לעת, נהרג עליו? והרי אין הרוצח נהרג אא"כ הרג בעזרת דבר שראוי להרוג (כמבואר לקמן תחילת פרק ג)! לכן מפרש הוא, שאף אם הכה רבו של העבד את עבדו בדבר שיש בו בכדי להרוג כסכין או חרב, עדיין יש בו דין "יום או יומיים", ורק אם גם מדרך ההכאה (דקירה במרכז הגוף או חיתוך איברים חיוניים) משמע שכוונת בעליו של העבד היתה להורגו, רק אז אין הרוצח בדין "יום או יומיים", ואף אם נפח העבד את נשמתו לאחר שנה, יהרג בעליו עליו<sup id="ref39"><a href="#fn39">[39]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אור החיים</strong> (שם) מבין שלדברי הרמב"ם דין "יום או יומיים" אמור רק בהכאה בדבר שאינו ממית (שבט וכיוצ"ב), ולפי זה מוקשה לו- מדוע כאשר הרגו במקום ולא עמד מעת לעת, נהרג עליו? והרי אין הרוצח נהרג אא"כ הרג בעזרת דבר שראוי להרוג (כמבואר לקמן תחילת פרק ג)! לכן מפרש הוא, שאף אם הכה רבו של העבד את עבדו בדבר שיש בו בכדי להרוג כסכין או חרב, עדיין יש בו דין "יום או יומיים", ורק אם גם מדרך ההכאה (דקירה במרכז הגוף או חיתוך איברים חיוניים) משמע שכוונת בעליו של העבד היתה להורגו, רק אז אין הרוצח בדין "יום או יומיים", ואף אם נפח העבד את נשמתו לאחר שנה, יהרג בעליו עליו<sup id="ref39"><a href="#fn39">[39]</a></sup>.</p>
                     
                 </div>
                 
@@ -1349,51 +1349,51 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המוכר את עבדו ופסק עמו שישמשנו שלשים יום והכהו אחד מהן בתוך השלשים יום והמיתו, הרי זה נהרג עליו ואינו בדין יום או יומים, הראשון לפי שאינו כספו המיוחד לו, והשני לפי שעדיין אינו תחתיו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     וכן מי שחציו עבד וחציו בן חורין ועבד של שני שותפין אינו בדין יום או יומים, שהרי אינו לאחד מהן כספו המיוחד לו ולפיכך נהרג עליו כשאר העם.
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המכה את עבדו שאינו שלו לגמרי- עוד בדין יום או יומיים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המכה את עבדו שאינו שלו לגמרי- עוד בדין יום או יומיים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא קמא צ.) מובאת <strong>ברייתא</strong> העוסקת במקרה בו אדם מוכר את עברו הכנעני לחברו אך מתנה שישאר בינתיים אצלו לזמן מסויים, והרגוהו הראשון או השני בתוך זמן זה. בברייתא מובאות ארבע דעות שונות של התנאים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (בבא קמא צ.) מובאת <strong>ברייתא</strong> העוסקת במקרה בו אדם מוכר את עברו הכנעני לחברו אך מתנה שישאר בינתיים אצלו לזמן מסויים, והרגוהו הראשון או השני בתוך זמן זה. בברייתא מובאות ארבע דעות שונות של התנאים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המוכר עבדו לאחר ופסק עמו על מנת שישמשנו שלשים יום</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המוכר עבדו לאחר ופסק עמו על מנת שישמשנו שלשים יום</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר</strong><strong>בי </strong><strong>מ</strong><strong>איר</strong> אומר ראשון ישנו בדין יום או יומים מפני שהוא תחתיו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר</strong><strong>בי </strong><strong>מ</strong><strong>איר</strong> אומר ראשון ישנו בדין יום או יומים מפני שהוא תחתיו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יהודה</strong> אומר שני ישנו בדין יום או יומים מפני שהוא כספו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי יהודה</strong> אומר שני ישנו בדין יום או יומים מפני שהוא כספו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יוסי</strong> אומר שניהם ישנן בדין יום או יומים זה מפני שהוא תחתיו וזה מפני שהוא כספו</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי יוסי</strong> אומר שניהם ישנן בדין יום או יומים זה מפני שהוא תחתיו וזה מפני שהוא כספו</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי אליעזר</strong> אומר שניהם אינן בדין יום או יומים זה לפי שאינו תחתיו וזה לפי שאינו כספו</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי אליעזר</strong> אומר שניהם אינן בדין יום או יומים זה לפי שאינו תחתיו וזה לפי שאינו כספו</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, התנאים חולקים ביחס להבנת התנאים המופיעים בפסוק, הראשון- "ומת תחת ידו", והשני "כי כספו הוא". התנאי הראשון מובן באופן שהעבד צריך להיות תחת רשות ההורג, ואילו התנאי השני מחייב שיהיה העבד רכושו. המחלוקת היא האם אחד התנאים חיוני והשני לא, האם כל אחד מהם מספיק עבור דין "יום או יומיים", או האם יש צורך בשניהם כאחד לדין זה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, התנאים חולקים ביחס להבנת התנאים המופיעים בפסוק, הראשון- "ומת תחת ידו", והשני "כי כספו הוא". התנאי הראשון מובן באופן שהעבד צריך להיות תחת רשות ההורג, ואילו התנאי השני מחייב שיהיה העבד רכושו. המחלוקת היא האם אחד התנאים חיוני והשני לא, האם כל אחד מהם מספיק עבור דין "יום או יומיים", או האם יש צורך בשניהם כאחד לדין זה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שמאחורי מחלוקתם הספיציפית בהבנת תנאי הדין, חלוקים שלושת התנאים הראשונים מבין הארבעה בשאלה הכללית האם קניין פירות הוא כקניין הגוף. כלומר, האם רשות שימוש בנכס מגדירה את בעל רשות השימוש כבעלים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שמאחורי מחלוקתם הספיציפית בהבנת תנאי הדין, חלוקים שלושת התנאים הראשונים מבין הארבעה בשאלה הכללית האם קניין פירות הוא כקניין הגוף. כלומר, האם רשות שימוש בנכס מגדירה את בעל רשות השימוש כבעלים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' מאיר</strong> מבין שקניין פירות הוא כקניין הגוף, ולכן הראשון, שהעבד תחתיו, יש בו דין יום או יומיים<sup id="ref40"><a href="#fn40">[40]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' מאיר</strong> מבין שקניין פירות הוא כקניין הגוף, ולכן הראשון, שהעבד תחתיו, יש בו דין יום או יומיים<sup id="ref40"><a href="#fn40">[40]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יהודה</strong> סובר שקניין פירות אינו כקניין הגוף, ולכן רק השני, שהעבד קנוי לו ממש, יש בו דין יום או יומיים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יהודה</strong> סובר שקניין פירות אינו כקניין הגוף, ולכן רק השני, שהעבד קנוי לו ממש, יש בו דין יום או יומיים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוסי</strong> מסופק, ולכן, משום שספק נפשות להקל, הוא סובר שלשניהם יש דין יום או יומיים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יוסי</strong> מסופק, ולכן, משום שספק נפשות להקל, הוא סובר שלשניהם יש דין יום או יומיים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בטעמו של <strong>ר' אליעזר</strong> מסבירה הגמרא, שהוא דורש שהעבד בו שייך דין יום או יומיים יהיה ככספו של המכה- מיוחד לו. כלומר, צריך שהעבד יהיה מיוחד לבעליו שהרגו, ולו בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בטעמו של <strong>ר' אליעזר</strong> מסבירה הגמרא, שהוא דורש שהעבד בו שייך דין יום או יומיים יהיה ככספו של המכה- מיוחד לו. כלומר, צריך שהעבד יהיה מיוחד לבעליו שהרגו, ולו בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>מכילתא</strong> (שם, פרשה ז) מובא כדעת ר' אליעזר (בשם ר' יצחק) שבכדי שיחול דין "יום או יומיים", צריך המכה את העבד להיות בעליו לחלוטין, ולכן, אם העבד המוכה הוא עבד של שני שותפים, אין לאף אחד מהם דין "יום או יומיים". כמו כן, אם מדובר בחציו עבד וחציו ב"ח, אומרת המכילתא, מאותו הטעם, שאין לרבו דין "יום או יומיים" אפילו ביום בו הוא עובד עבור מכהו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>מכילתא</strong> (שם, פרשה ז) מובא כדעת ר' אליעזר (בשם ר' יצחק) שבכדי שיחול דין "יום או יומיים", צריך המכה את העבד להיות בעליו לחלוטין, ולכן, אם העבד המוכה הוא עבד של שני שותפים, אין לאף אחד מהם דין "יום או יומיים". כמו כן, אם מדובר בחציו עבד וחציו ב"ח, אומרת המכילתא, מאותו הטעם, שאין לרבו דין "יום או יומיים" אפילו ביום בו הוא עובד עבור מכהו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים, ובכללם ה<strong>רמב"ם</strong> וה<strong>מאירי</strong>, פסקו כר' אליעזר, ללא קשר למחלוקת האם קניין פירות כקניין הגוף.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רוב הראשונים, ובכללם ה<strong>רמב"ם</strong> וה<strong>מאירי</strong>, פסקו כר' אליעזר, ללא קשר למחלוקת האם קניין פירות כקניין הגוף.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם פסק ה<strong>רשב"א</strong> כר' יהודה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם פסק ה<strong>רשב"א</strong> כר' יהודה.</p>
                     
                 </div>
                 
@@ -1401,7 +1401,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1525,6 +1525,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

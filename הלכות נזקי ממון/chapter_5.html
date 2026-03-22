@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ה</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ה)</h3>
                 <ul class="space-y-3">
@@ -1016,7 +1016,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1029,29 +1029,29 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בהמה שהיתה רועה ופרשה ונכנסה בשדות ובכרמים אע"פ שעדיין לא הזיקה מתרין בבעליה שלשה פעמים, אם לא שמר בהמתו ולא מנעה מלרעות יש רשות לבעל השדה לשחוט אותה שחיטה כשרה ואומר לבעליה בואו ומכרו בשר שלכם, מפני שאסור לאדם להזיק ולשלם מה שהזיק, אפילו לגרום הנזק אסור. </strong>בהמה שהיתה רועה וכו' יש רשות לבעל השדה לשחוט אותה. א"א דברים הללו לא נאמרו בגמרא /בבא קמא/ (כג) אלא בעיזי דשוקא שעומדות לשחיטה ואין להם רועה אבל במי שיש לו עדר של בהמות אין שוחטין לו כל עדרו אלא אם יזיק לעולם ישלם בלא שום התראה.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מניעת נזק אקטיבית מצד הניזק:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מניעת נזק אקטיבית מצד הניזק:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כג:) מביאה את דברי ר' יוסף שעיזים שבשוק המפסידות נכסי אחרים, מתרים בבעליהם פעמיים ושלוש ואם עדיין אינו שומר את עיזיו מלהזיק, שוחטים אותן ומוסרים לו את דמי הבשר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (כג:) מביאה את דברי ר' יוסף שעיזים שבשוק המפסידות נכסי אחרים, מתרים בבעליהם פעמיים ושלוש ואם עדיין אינו שומר את עיזיו מלהזיק, שוחטים אותן ומוסרים לו את דמי הבשר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>מבין שמדובר על עיזים סתם, המיועדות גם לחלב ולגז, ושורש הדין הוא רשות שניתנה לניזק להגן על עצמו אפילו על חשבון המזיק, אם המזיק מתרשל בשמירה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>מבין שמדובר על עיזים סתם, המיועדות גם לחלב ולגז, ושורש הדין הוא רשות שניתנה לניזק להגן על עצמו אפילו על חשבון המזיק, אם המזיק מתרשל בשמירה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, <strong>רש"י</strong>, וה<strong>תוספות</strong> מבינים שמדובר על עיזים המיועדות ממילא לשחיטה, והקצב מאחר את שחיטתן עד ליום השוק, ודווקא בכגון זה, שאין הפסד משמעותי לניזק, יש רשות למזיק להגן על עצמו בשחיטת בהמות המזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, <strong>רש"י</strong>, וה<strong>תוספות</strong> מבינים שמדובר על עיזים המיועדות ממילא לשחיטה, והקצב מאחר את שחיטתן עד ליום השוק, ודווקא בכגון זה, שאין הפסד משמעותי לניזק, יש רשות למזיק להגן על עצמו בשחיטת בהמות המזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התוספות מוכיחים את דבריהם ממעשה שמסופר בגמרא (שם) על עיזים שהיו מזיקות בחצרו של ר' יוסף, ולכן הוא שלח את אביי לבקש מבעלי העיזים שישמרו עליהם. ומכך שלא שלח את אביי לשחוט את העיזים יש ללמוד שאין רשות לשחוט סתם עיזים המזיקות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">התוספות מוכיחים את דבריהם ממעשה שמסופר בגמרא (שם) על עיזים שהיו מזיקות בחצרו של ר' יוסף, ולכן הוא שלח את אביי לבקש מבעלי העיזים שישמרו עליהם. ומכך שלא שלח את אביי לשחוט את העיזים יש ללמוד שאין רשות לשחוט סתם עיזים המזיקות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד </strong>סובר אף הוא כרש"י וכתוספות, אך הוא מבאר עוד שמדובר בעיזים שאין להם רועה, ולכן הקלו בהם יותר לשוחטן, כי אין אדם קבוע ששומר עליהן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד </strong>סובר אף הוא כרש"י וכתוספות, אך הוא מבאר עוד שמדובר בעיזים שאין להם רועה, ולכן הקלו בהם יותר לשוחטן, כי אין אדם קבוע ששומר עליהן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצז ב) פוסק כרש"י וכתוס', שמדובר אכן רק בעיזים המיועדות לשחיטה בלאו הכי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>(שצז ב) פוסק כרש"י וכתוס', שמדובר אכן רק בעיזים המיועדות לשחיטה בלאו הכי.</p>
                     
                 </div>
                 
@@ -1059,31 +1059,31 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>לפיכך אסרו חכמים לגדל בהמה דקה וחיה דקה בארץ ישראל במקום השדות והכרמים אלא ביערים ובמדברות שבארץ ישראל, ומגדלין בסוריא בכל מקום. </strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור גידול בהמה דקה:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איסור גידול בהמה דקה:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (עט:) כותבת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (עט:) כותבת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אין מגדלין בהמה דקה בא"י, אבל מגדלין בסוריא ובמדברות של ארץ ישראל".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אין מגדלין בהמה דקה בא"י, אבל מגדלין בסוריא ובמדברות של ארץ ישראל".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (פ.) מובאת דעת <strong>רב</strong>, שמאז שרב הגיע לבבל, תקפה תקנה זו גם בבבל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (פ.) מובאת דעת <strong>רב</strong>, שמאז שרב הגיע לבבל, תקפה תקנה זו גם בבבל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלקו הראשונים מה טעם האיסור, וממילא מדוע בסוריא ובמדברות התירו- <strong>רש"י</strong> על המשנה מסביר שטעם האיסור הוא משום מצוות יישוב ארץ ישראל. כלומר, כיוון שסתם שדות בארץ, של יהודים הם, אסרו לגדל בהמה דקה בכל הארץ, ממילא בחו"ל לא קיים טעם זה. כמו כן במדברות שבארץ ישראל אין שדות של ישראל ולכן גם שם הרעיה מותרת. מפירוש זה משמע, שאם יש מקום בחו"ל שרוב השדות שם של יהודים, אף שם יש מקום לגזירה, וכך מסביר רש"י את שיטת רב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חלקו הראשונים מה טעם האיסור, וממילא מדוע בסוריא ובמדברות התירו- <strong>רש"י</strong> על המשנה מסביר שטעם האיסור הוא משום מצוות יישוב ארץ ישראל. כלומר, כיוון שסתם שדות בארץ, של יהודים הם, אסרו לגדל בהמה דקה בכל הארץ, ממילא בחו"ל לא קיים טעם זה. כמו כן במדברות שבארץ ישראל אין שדות של ישראל ולכן גם שם הרעיה מותרת. מפירוש זה משמע, שאם יש מקום בחו"ל שרוב השדות שם של יהודים, אף שם יש מקום לגזירה, וכך מסביר רש"י את שיטת רב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (פ. ד"ה 'מכי אתא') חולקים, ומסבירים שרב אומר שהתקנה נוהגת בבבל משום שיש שם רוב יהודים, ודינה לעניין זה כדין ארץ ישראל, ולאו דווקא משום שרוב השדות שם של יהודים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (פ. ד"ה 'מכי אתא') חולקים, ומסבירים שרב אומר שהתקנה נוהגת בבבל משום שיש שם רוב יהודים, ודינה לעניין זה כדין ארץ ישראל, ולאו דווקא משום שרוב השדות שם של יהודים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מה<strong>רמב"ם </strong>לפנינו (שפתח ב"לפיכך...") משמע שטעם האיסור הוא כי אסור לאדם להזיק אפילו על מנת לשלם. כלומר, תיקנו שלא לגדל בהמה דקה כדי להימנע מנזק לאנשים פרטיים. במדברות שבא"י מותר כיוון שאין בזה כל נזק לאנשים, ומהמשך הרמב"ם (הלכה ח' וראה להלן), משמע שההבדל בין חו"ל לבין א"י הוא שבא"י יש ריבוי של יישוב יהודי, משא"כ בחו"ל, ולכן בארץ ישראל יש סיכוי יותר גבוה לנזק ליהודים, שאותו אנו חפצים למנוע, כדברי רש"י.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מה<strong>רמב"ם </strong>לפנינו (שפתח ב"לפיכך...") משמע שטעם האיסור הוא כי אסור לאדם להזיק אפילו על מנת לשלם. כלומר, תיקנו שלא לגדל בהמה דקה כדי להימנע מנזק לאנשים פרטיים. במדברות שבא"י מותר כיוון שאין בזה כל נזק לאנשים, ומהמשך הרמב"ם (הלכה ח' וראה להלן), משמע שההבדל בין חו"ל לבין א"י הוא שבא"י יש ריבוי של יישוב יהודי, משא"כ בחו"ל, ולכן בארץ ישראל יש סיכוי יותר גבוה לנזק ליהודים, שאותו אנו חפצים למנוע, כדברי רש"י.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תט א) כותב את דברי המשנה, ומוסיף, שבזמן שאין לישראל שדות בארץ ישראל, מותר לגדל, וזאת על פי סברת רש"י והרמב"ם. אמנם, הגר"א מעיר, שעל פי סברת התוספות אין הדבר כך, שכן אין התקנה תלויה ישירות בנזק לשדותיהם של ישראל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תט א) כותב את דברי המשנה, ומוסיף, שבזמן שאין לישראל שדות בארץ ישראל, מותר לגדל, וזאת על פי סברת רש"י והרמב"ם. אמנם, הגר"א מעיר, שעל פי סברת התוספות אין הדבר כך, שכן אין התקנה תלויה ישירות בנזק לשדותיהם של ישראל.</p>
                     
                 </div>
                 
@@ -1091,79 +1091,79 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>עשרה תנאים התנה יהושע ובית דינו בשעה שחלק את הארץ, ואלו הן: </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>התנה שמרעין בהמה דקה ביערים שאילניהן גסין, אבל אין מרעין שם בהמה גסה, ויער שאילניו דקים אין מרעין בו לא גסה ולא דקה אלא מדעת בעליו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן התנה שיהיה כל אדם מותר ללקט עצים משדה חבירו והוא שיהיו עצים פחותים וקרובים להיות קוצים כגון היזמי והיגי והוא שיהיו לחים ומחוברין, ובלבד שלא ישרש, אבל שאר עצים אסור. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן התנה שיהיה כל אדם מותר ללקט עשבים העולין מאיליהן בכל מקום חוץ משדה תלתן שזרעה לבהמה.</strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן התנה שיהיה אדם קוטם נטיעה בכל מקום חוץ מגרופיות של זית ואינו קוטם מן האילנות אלא בזית כביצה ובקנים ובגפנים מן הפקק ולמעלה ובשאר האילן מחובו של אילן לא מחודו, וכשהתיר לקטום לא התיר אלא מחדש שאינו עושה פירות אבל לא מישן שעושה פירות, ואינו קוטם אלא ממקום שאינו רואה פני חמה. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן התנה שהמעיין היוצא בתחילה בני אותה העיר שיצא בגבולם מסתפקין ממנו אע"פ שאין עיקרו בחלקם, ואין לאחרים להסתפק עמהם ממנו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן התנה שיהיה כל אדם מותר לצוד דגים מים טבריה והוא שיצוד בחכה בלבד, אבל לא יפרוש קלע ויעמיד ספינה שם אלא בני השבט שהגיע אותו הים בחלקם. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן התנה שכל אדם שצריך לנקביו מסתלק מן הדרך ונכנס אחורי הגדר שפגע בו ונפנה שם ואפילו בשדה מליאה כרכום ונוטל משם צרור ומקנח. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן התנה שכל התועה בין הכרמים וכיוצא בהו מפסג ועולה מפסג ויורד עד שיצא לדרכו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן התנה שבזמן שירבה הטיט בדרכי הרבים או נקיעי מים יש לעוברי דרכים להסתלק לצדדי הדרכים ומהלכין שם אע"פ שהן מהלכין בדרך שיש לה בעלים. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן התנה שמת מצוה קונה מקומו ונקבר במקום שימצא בו והוא שלא יהיה מוטל על המצר ולא בתוך תחום המדינה, אבל אם נמצא על המצר או שהיה בתוך התחום מביאו לבית הקברות. </strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עשרה תנאים שהתנה יהושע:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עשרה תנאים שהתנה יהושע:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (פ: למטה) מובאים עשרה תנאים שהתנה יהושע. הקו המנחה של אותם תנאים הוא מידה של שיתופיות בבעלות על הארץ. להלן התקנות בלשון הגמרא ופירושיהן:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (פ: למטה) מובאים עשרה תנאים שהתנה יהושע. הקו המנחה של אותם תנאים הוא מידה של שיתופיות בבעלות על הארץ. להלן התקנות בלשון הגמרא ופירושיהן:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>שיהו מרעין בחורשין</strong> – הכוונה לרעייה ביערות פרטיים, שאינה מזיקה את בעל היער, שבין כה לא היה משתמש בעלים שעל העצים. בגמרא מעיר <strong>ר' פפא</strong>, שהמותר הוא דווקא בבהמות דקות ביער גס (עב עצים). אך לא בבהמות גסות ביער גס או בבהמות דקות ביער דק עצים, שכן במקרים אלה היער נפגע פגיעה של ממש כתוצאה מהרעייה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>שיהו מרעין בחורשין</strong> – הכוונה לרעייה ביערות פרטיים, שאינה מזיקה את בעל היער, שבין כה לא היה משתמש בעלים שעל העצים. בגמרא מעיר <strong>ר' פפא</strong>, שהמותר הוא דווקא בבהמות דקות ביער גס (עב עצים). אך לא בבהמות גסות ביער גס או בבהמות דקות ביער דק עצים, שכן במקרים אלה היער נפגע פגיעה של ממש כתוצאה מהרעייה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>מלקטים עצים בשדותיהם</strong> – מותר לכל אדם ללקט עצים בשדהו של חברו, ובלבד שיהיו אלה עצים פחותים, ושיהיו לחים (שיבשים דעת בעל השדה עליהם להסקה), ומחוברים (שהתלוש תלשו בעל השדה לצורך הסקה). ובלבד שלא יעקור את העצים מכל וכל, אלא יש להשאיר שורש שיאפשר גדילה מחדש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>מלקטים עצים בשדותיהם</strong> – מותר לכל אדם ללקט עצים בשדהו של חברו, ובלבד שיהיו אלה עצים פחותים, ושיהיו לחים (שיבשים דעת בעל השדה עליהם להסקה), ומחוברים (שהתלוש תלשו בעל השדה לצורך הסקה). ובלבד שלא יעקור את העצים מכל וכל, אלא יש להשאיר שורש שיאפשר גדילה מחדש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>מלקטין עשבים ב</strong><strong>כל מקום חוץ</strong> <strong>מתלתן</strong> – סתם עשבים אין בעל השדה זקוק להם, ולכן מותר לכל אדם ללקטם. אמנם עשבים בשדה תלתן אין מלקטין אותם. ה<strong>גמרא</strong> מביאה שתי סיבות ליוצא מן הכלל זה- האחת, שעשבים מועילים לתלתן הגדל לאכילה. השניה, שהמגדל תלתן לבהמתו, סימן שמעוניין הוא גם בעשבים, כי הוא נותנם לפני בהמתו ביחד. <strong>הרמב"ם</strong> פסק רק לפי האפשרות השניה, ולכן, אם התלתן אינו מיועד ללבהמה, מותר ללקט את העשבים שלידו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>מלקטין עשבים ב</strong><strong>כל מקום חוץ</strong> <strong>מתלתן</strong> – סתם עשבים אין בעל השדה זקוק להם, ולכן מותר לכל אדם ללקטם. אמנם עשבים בשדה תלתן אין מלקטין אותם. ה<strong>גמרא</strong> מביאה שתי סיבות ליוצא מן הכלל זה- האחת, שעשבים מועילים לתלתן הגדל לאכילה. השניה, שהמגדל תלתן לבהמתו, סימן שמעוניין הוא גם בעשבים, כי הוא נותנם לפני בהמתו ביחד. <strong>הרמב"ם</strong> פסק רק לפי האפשרות השניה, ולכן, אם התלתן אינו מיועד ללבהמה, מותר ללקט את העשבים שלידו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>קוטמין נטיעה בכל מקום חוץ מגרופיות של זית</strong> – נטיעה היא ייחור- ענף מעץ שלם, אותו קוטמים כדי להרכיבו באילן קיים. גם כאן הותר הדבר מכיוון שאין בעל האילן מפסיד כמעט מאומה. ה<strong>גמרא</strong> מסייגת היתר זה בכמה סייגים – ראשית, ישנה הגבלה על כמות הקטימה- בזית יש להשאיר מהענף שיעור של ביצה (כך ב<strong>רש"י</strong>, וה<strong>רמב"ם </strong>נראה שמפרש שהחלק הקטום הוא לכל היותר בשיעור ביצה), בקנים ובגפנים מותר לקטום רק מהמפרק שבענף והלאה (כך הענף מתחדש ביתר קלות), ובשאר סוגי אילנות יש ליטול את הייחור מהחלק העבות והמפותח של האילן ולא מראשו הגדל. כמו כן לוקחים ייחור חדש, שעוד אינו עושה פירות, ולא כזה שכבר עושה פירות, כדי שלא יקופח בעל העץ באופן מיידי מיכולת התפוקה של העץ. בנוסף, לוקחים ממקום שאינו חשוף לאור שמש ישיר, שבו ממילא גדלים פירות פחות טובים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>קוטמין נטיעה בכל מקום חוץ מגרופיות של זית</strong> – נטיעה היא ייחור- ענף מעץ שלם, אותו קוטמים כדי להרכיבו באילן קיים. גם כאן הותר הדבר מכיוון שאין בעל האילן מפסיד כמעט מאומה. ה<strong>גמרא</strong> מסייגת היתר זה בכמה סייגים – ראשית, ישנה הגבלה על כמות הקטימה- בזית יש להשאיר מהענף שיעור של ביצה (כך ב<strong>רש"י</strong>, וה<strong>רמב"ם </strong>נראה שמפרש שהחלק הקטום הוא לכל היותר בשיעור ביצה), בקנים ובגפנים מותר לקטום רק מהמפרק שבענף והלאה (כך הענף מתחדש ביתר קלות), ובשאר סוגי אילנות יש ליטול את הייחור מהחלק העבות והמפותח של האילן ולא מראשו הגדל. כמו כן לוקחים ייחור חדש, שעוד אינו עושה פירות, ולא כזה שכבר עושה פירות, כדי שלא יקופח בעל העץ באופן מיידי מיכולת התפוקה של העץ. בנוסף, לוקחים ממקום שאינו חשוף לאור שמש ישיר, שבו ממילא גדלים פירות פחות טובים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>מעין היוצא בתחילה, בני העיר מסתפקין הימנו</strong> – חלקו הראשונים למה הכוונה. לפי ה<strong>תוספות</strong> (ד"ה ומעיין), מדובר על מעיין שלמרות שיצא מעצמו בשדהו הפרטי של אדם, יש רשות לכל בני העיר להשתמש בו (עפ"י פירוש זה, יש לדין זה משמעות דומה לסמוכים לו, המדברים על מאפיינים של בעלות קולקטיבית בארץ ישראל). כך גם נראה לפי <strong>רש"י</strong>. אמנם ה<strong>רמב"ם </strong>מסביר שמדובר במעיין היוצא במקום מסויים, אך נמשך, ועיקרו מצוי במקום אחר הלאה משם. הדין מקנה לבני העיר בה יצא המעיין את זכויות השימוש במים, ואוסר את השימוש על בני המקום בו נמשך עיקרו של המעיין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>מעין היוצא בתחילה, בני העיר מסתפקין הימנו</strong> – חלקו הראשונים למה הכוונה. לפי ה<strong>תוספות</strong> (ד"ה ומעיין), מדובר על מעיין שלמרות שיצא מעצמו בשדהו הפרטי של אדם, יש רשות לכל בני העיר להשתמש בו (עפ"י פירוש זה, יש לדין זה משמעות דומה לסמוכים לו, המדברים על מאפיינים של בעלות קולקטיבית בארץ ישראל). כך גם נראה לפי <strong>רש"י</strong>. אמנם ה<strong>רמב"ם </strong>מסביר שמדובר במעיין היוצא במקום מסויים, אך נמשך, ועיקרו מצוי במקום אחר הלאה משם. הדין מקנה לבני העיר בה יצא המעיין את זכויות השימוש במים, ואוסר את השימוש על בני המקום בו נמשך עיקרו של המעיין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>מחכין </strong><strong>(מלשון חכה</strong><strong>, דהיינו </strong><strong>צדים</strong><strong> דגים</strong><strong>) </strong><strong>בימה של טבריא ובלבד שלא יפרוס קלע ויעמיד את</strong> <strong>הספינה</strong> – למרות שחוף הכינרת נפל בגבול שבט נפתלי, מותר לכל אדם מישראל לדוג דגים בכינרת, ובלבד שידוג בעזרת חכה, ולא בעזרת קלע. ה<strong>גמרא</strong> מביאה ברייתא ממנה משמע שקלע אסור, אך לדוג בעזרת רשת ומכמורת דווקא מותר<strong>. רש"י</strong> מבין שקלע הם קנים שתוקעים במים כעין משוכה ובעזרתם לוכדים דגים. בהתאמה, מפרש רש"י ש"ויעמיד את הספינה" היא הסיבה לכך שקלע אסור- כיוון שהדבר גורם לספינות להיתקע. לפי פירושו, אין הבדל בין בני נפתלי לבין שאר השבטים, וכמו כן זכות הדיג בכינרת אינה מוגבלת כשלעצמה. ה<strong>רמב"ם </strong>מפרש שקלע הוא סוג של מכמורת בה ניתן לתפוס הרבה מאד דגים. מכיוון שעיקר פרנסת נפתלי היא על דיג הכינרת, אסור לאדם אחר מישראל לדוג בשיטה בה דגים כמות רבה, כי אז פרנסתם תקופח. בהתאמה, מפרש הרמב"ם שהעמדת ספינה היא צורת דיג משוכללת נוספת, שאף היא נאסרה למי שאינו שייך לשבט נפתלי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>מחכין </strong><strong>(מלשון חכה</strong><strong>, דהיינו </strong><strong>צדים</strong><strong> דגים</strong><strong>) </strong><strong>בימה של טבריא ובלבד שלא יפרוס קלע ויעמיד את</strong> <strong>הספינה</strong> – למרות שחוף הכינרת נפל בגבול שבט נפתלי, מותר לכל אדם מישראל לדוג דגים בכינרת, ובלבד שידוג בעזרת חכה, ולא בעזרת קלע. ה<strong>גמרא</strong> מביאה ברייתא ממנה משמע שקלע אסור, אך לדוג בעזרת רשת ומכמורת דווקא מותר<strong>. רש"י</strong> מבין שקלע הם קנים שתוקעים במים כעין משוכה ובעזרתם לוכדים דגים. בהתאמה, מפרש רש"י ש"ויעמיד את הספינה" היא הסיבה לכך שקלע אסור- כיוון שהדבר גורם לספינות להיתקע. לפי פירושו, אין הבדל בין בני נפתלי לבין שאר השבטים, וכמו כן זכות הדיג בכינרת אינה מוגבלת כשלעצמה. ה<strong>רמב"ם </strong>מפרש שקלע הוא סוג של מכמורת בה ניתן לתפוס הרבה מאד דגים. מכיוון שעיקר פרנסת נפתלי היא על דיג הכינרת, אסור לאדם אחר מישראל לדוג בשיטה בה דגים כמות רבה, כי אז פרנסתם תקופח. בהתאמה, מפרש הרמב"ם שהעמדת ספינה היא צורת דיג משוכללת נוספת, שאף היא נאסרה למי שאינו שייך לשבט נפתלי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>נפנין לאחורי הגדר ואפילו בשדה מליאה כרכום</strong> – <strong>הגמרא</strong> מעירה על כך: "לא נצרכה אלא ליטול ממנו צרור (גוש עפר)". כלומר, ליטול צרור עפר לקינוח. <strong>רש"י</strong> מפרש, ש"ממנו" הכוונה לגדר. כלומר, על נטילת צרור מהגדר של חבירו, למרות שזה פוגם בה במידת מה, שכן עצם ההיתר להתפנות בשדה חברו, ואף ליטול צרור מהקרקע, אין בזה שום חידוש. ה<strong>רמב"ם </strong>מפרש ש"ממנו" הכוונה לשדה חברו. כלומר, אדם נכנס להִפנות בשדה חברו ליד הגדר משום צניעות, ואפילו אם זה שדה כרכום מותר לו ליטול צרור מהקרקע לקינוח, דבר המזיק לשדה כרכום, ויש חידוש בהיתרו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>נפנין לאחורי הגדר ואפילו בשדה מליאה כרכום</strong> – <strong>הגמרא</strong> מעירה על כך: "לא נצרכה אלא ליטול ממנו צרור (גוש עפר)". כלומר, ליטול צרור עפר לקינוח. <strong>רש"י</strong> מפרש, ש"ממנו" הכוונה לגדר. כלומר, על נטילת צרור מהגדר של חבירו, למרות שזה פוגם בה במידת מה, שכן עצם ההיתר להתפנות בשדה חברו, ואף ליטול צרור מהקרקע, אין בזה שום חידוש. ה<strong>רמב"ם </strong>מפרש ש"ממנו" הכוונה לשדה חברו. כלומר, אדם נכנס להִפנות בשדה חברו ליד הגדר משום צניעות, ואפילו אם זה שדה כרכום מותר לו ליטול צרור מהקרקע לקינוח, דבר המזיק לשדה כרכום, ויש חידוש בהיתרו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>התועה בין הכרמים מפסיג ועולה, מפסיג ויורד</strong> – כלומר, מותר לאדם התועה בין הכרמים לנתק אגב הילוכו זמורות גפנים המעכבות אותו. הגמרא מבארת, שמדובר אפילו במקרה שהאדם התועה איננו יודע את הכיוון, ויש חשש שינתק הרבה לפני שימצא את דרכו. וה<strong>רמב"ם </strong>כלל זאת במילה "כל התועה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>התועה בין הכרמים מפסיג ועולה, מפסיג ויורד</strong> – כלומר, מותר לאדם התועה בין הכרמים לנתק אגב הילוכו זמורות גפנים המעכבות אותו. הגמרא מבארת, שמדובר אפילו במקרה שהאדם התועה איננו יודע את הכיוון, ויש חשש שינתק הרבה לפני שימצא את דרכו. וה<strong>רמב"ם </strong>כלל זאת במילה "כל התועה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>מסתלקין לצידי הדרכים מפני יתדות הדרכים</strong> – כלומר, כאשר הדרך קשה להליכה מחמת טיט שבה, מותר ללכת בצד הדרך, למרות שהשטח שם שייך לאדם פרטי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>מסתלקין לצידי הדרכים מפני יתדות הדרכים</strong> – כלומר, כאשר הדרך קשה להליכה מחמת טיט שבה, מותר ללכת בצד הדרך, למרות שהשטח שם שייך לאדם פרטי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>מת מצווה קונה מקומו</strong> – מת מצוה הוא מת שמצאוהו ואין לו קוברים. והוא קונה מקומו במובן זה שניתן לקוברו במקום בו נמצא, ואין לבעל השדה רשות לעכבו מלהיקבר שם. ה<strong>גמרא</strong> מביאה ברייתא ממנה משמע שאם נמצא המת על המיצר, מפנהו לכל מקום שירצה. <strong>רש"י</strong> מסביר שנמצא על המיצר הכוונה למת המוטל במקום בו עוברים הרבים. מת זה מטמא את טהרותיהם של העוברים והשבים המאהילים עליו, ולכן מותר להעביר אותו לאחד הצדדים, כשעדיף להעבירו לשדה בור, או לפחות לשדה שאינה זרועה. אם כל השדות הגובלים במצר הם באותו המצב, ניתן לפנותו להיכן שרוצים. ה<strong>רמב"ם </strong>כותב שמת שנמצא על המיצר דינו כמת הנמצא בתוך התחום ונקבר בבית הקברות. מצד שני, בהלכות טומאת מת (פ"ח ה"ז) מפרש הרמב"ם שמת הנמצא על המיצר נקבר באחד השדות הגובלים במיצר לפי סדרי העדיפות הנ"ל, ואם שניהם שקולים "קוברו לאיזה צד שירצה". כך או כך, בעוד ש<strong>רש"י </strong>מפרש שמיצר הוא מקום הילוך הרבים, ב<strong>רמב"ם </strong>מיצר אינו אלא הגבול בין שני שדות. מדברי ה<strong>שו"ע</strong> (יו"ד שסד ג) משמע שמבין עניין המיצר כרש"י. ועוד פסק על פי הירושלמי (נזיר פ"ז) שאם מצאו בתוך תום העיר, יש להביאו לבית הקברות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>מת מצווה קונה מקומו</strong> – מת מצוה הוא מת שמצאוהו ואין לו קוברים. והוא קונה מקומו במובן זה שניתן לקוברו במקום בו נמצא, ואין לבעל השדה רשות לעכבו מלהיקבר שם. ה<strong>גמרא</strong> מביאה ברייתא ממנה משמע שאם נמצא המת על המיצר, מפנהו לכל מקום שירצה. <strong>רש"י</strong> מסביר שנמצא על המיצר הכוונה למת המוטל במקום בו עוברים הרבים. מת זה מטמא את טהרותיהם של העוברים והשבים המאהילים עליו, ולכן מותר להעביר אותו לאחד הצדדים, כשעדיף להעבירו לשדה בור, או לפחות לשדה שאינה זרועה. אם כל השדות הגובלים במצר הם באותו המצב, ניתן לפנותו להיכן שרוצים. ה<strong>רמב"ם </strong>כותב שמת שנמצא על המיצר דינו כמת הנמצא בתוך התחום ונקבר בבית הקברות. מצד שני, בהלכות טומאת מת (פ"ח ה"ז) מפרש הרמב"ם שמת הנמצא על המיצר נקבר באחד השדות הגובלים במיצר לפי סדרי העדיפות הנ"ל, ואם שניהם שקולים "קוברו לאיזה צד שירצה". כך או כך, בעוד ש<strong>רש"י </strong>מפרש שמיצר הוא מקום הילוך הרבים, ב<strong>רמב"ם </strong>מיצר אינו אלא הגבול בין שני שדות. מדברי ה<strong>שו"ע</strong> (יו"ד שסד ג) משמע שמבין עניין המיצר כרש"י. ועוד פסק על פי הירושלמי (נזיר פ"ז) שאם מצאו בתוך תום העיר, יש להביאו לבית הקברות.</p>
                     
                 </div>
                 
@@ -1171,25 +1171,25 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכות ד, ו:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכות ד, ו:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שלמה תקן שיהיו עוברי דרכים מותרין בימות החמה להלך בשבילין שבשדות שיש להן בעלים עד שתרד רביעה שנייה.</strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ומשירד הטל בבבל אסור להלך בשבילין שיש להן בעלים.</strong>
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תקנת שלמה:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תקנת שלמה:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד תקנה אחת, בעלת האופי הכללי של תקנות יהושע, מיוחסת בגמרא לשלמה המלך, והיא, שבזמן הקיץ לאחר הקציר, ועד יז במרחשוון, שהוא זמן הרביעה השניה של הגשמים (שאז הדריכה מזיקה לזרעים שבשדה), מותר לכל אדם ללכת בשדות אחרים. ה<strong>גמרא</strong> מבארת שטעם הדבר הוא שאין שום הפסד לבעל השדה בכך ולכן אין ראוי שיאסור על כך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד תקנה אחת, בעלת האופי הכללי של תקנות יהושע, מיוחסת בגמרא לשלמה המלך, והיא, שבזמן הקיץ לאחר הקציר, ועד יז במרחשוון, שהוא זמן הרביעה השניה של הגשמים (שאז הדריכה מזיקה לזרעים שבשדה), מותר לכל אדם ללכת בשדות אחרים. ה<strong>גמרא</strong> מבארת שטעם הדבר הוא שאין שום הפסד לבעל השדה בכך ולכן אין ראוי שיאסור על כך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מוסיפה שבבבל דריכה בקרקע לאחר שירד עליה טל מזיקה לה, ולכן אין ללכת בשדה אחר לאחר רדת הטל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מוסיפה שבבבל דריכה בקרקע לאחר שירד עליה טל מזיקה לה, ולכן אין ללכת בשדה אחר לאחר רדת הטל.</p>
                     
                 </div>
                 
@@ -1197,19 +1197,19 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ותקנות אלו כולן נוהגות בכל מקום אפילו בחוצה לארץ.</strong>
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שייכות תקנות יהושע בחו"ל:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שייכות תקנות יהושע בחו"ל:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> נפסק שתנאי יהושע שייכים גם בחו"ל וכל שכן בבבל. <strong>רש"י</strong> מפרש שיהושע כלל את חו"ל בתקנותיו כיוון שמצויים שם שיירות של ישראל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> נפסק שתנאי יהושע שייכים גם בחו"ל וכל שכן בבבל. <strong>רש"י</strong> מפרש שיהושע כלל את חו"ל בתקנותיו כיוון שמצויים שם שיירות של ישראל.</p>
                     
                 </div>
                 
@@ -1217,19 +1217,19 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אע"פ שאין מגדלין בהמה דקה בארץ ישראל מותר לשהותה קודם לרגל שלשים יום וקודם למשתה בנו שלשים יום והטבח לוקח ושוחט לוקח ומשהה עד שישחוט מעט מעט, ובלבד שלא תצא ותרעה בעדר אלא כל המשהה משהה בתוך ביתו כדי שלא תזיק.</strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מתי מותר לגדל בהמה דקה בארץ ישראל:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מתי מותר לגדל בהמה דקה בארץ ישראל:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מביאה כמה מקרים בהם מותר לגדל בהמה דקה לזמן מוגבל. לפני הרגל או לפני מסיבה גדולה, מותר לקנות בהמות ולשהותן עד שלושים יום, ובלבד שלא ישהה לאחר הרגל או המסיבה. כמו כן הטבח השוחט את הבהמות למוכרן ביום השוק, לא מותר לו לקנות בהמות רבות יחד ולשהותן עד יום השוק, ובלבד שלא ישהה בהמה לאחר יום השוק. ה<strong>רמב"ם </strong>לא כתב הגבלה זו בטבח, אלא כתב בפשטות שמותר לטבח לשחוט מעט מעט, ולהשהות לפני שהוא שוחט.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מביאה כמה מקרים בהם מותר לגדל בהמה דקה לזמן מוגבל. לפני הרגל או לפני מסיבה גדולה, מותר לקנות בהמות ולשהותן עד שלושים יום, ובלבד שלא ישהה לאחר הרגל או המסיבה. כמו כן הטבח השוחט את הבהמות למוכרן ביום השוק, לא מותר לו לקנות בהמות רבות יחד ולשהותן עד יום השוק, ובלבד שלא ישהה בהמה לאחר יום השוק. ה<strong>רמב"ם </strong>לא כתב הגבלה זו בטבח, אלא כתב בפשטות שמותר לטבח לשחוט מעט מעט, ולהשהות לפני שהוא שוחט.</p>
                     
                 </div>
                 
@@ -1237,19 +1237,19 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכבר עשו בבל כארץ ישראל לאסור בה גידול בהמה דקה וחיה דקה מפני שהיו רוב השדות והכרמים שם באותן הימים של ישראל.</strong>
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור גידול בהמה דקה בבבל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איסור גידול בהמה דקה בבבל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (פ.) מובאים דברי <strong>ר' הונא</strong>, שמאז בואו של רב לבבל דין בבל כדין ארץ ישראל לעניין איסור גידול בהמה דקה. <strong>רש"י</strong>, בעקבות הבנתו שטעם האיסור הוא משום יישוב הארץ, מסביר שטעם החלתו של האיסור על בבל הוא משום שרבו המתיישבים שם סביב בואו של רב, או משום שרוב ישראל ישובים שם. ואף ה<strong>רמב"ם </strong>מסביר, שרוב הכרמים והשדות בבבל היו של ישראל, וגזרו על גידול בהמה דקה כדי לשמור על ממון ישראל, מאותה הסיבה בדיוק שגזרו בארץ ישראל עצמה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (פ.) מובאים דברי <strong>ר' הונא</strong>, שמאז בואו של רב לבבל דין בבל כדין ארץ ישראל לעניין איסור גידול בהמה דקה. <strong>רש"י</strong>, בעקבות הבנתו שטעם האיסור הוא משום יישוב הארץ, מסביר שטעם החלתו של האיסור על בבל הוא משום שרבו המתיישבים שם סביב בואו של רב, או משום שרוב ישראל ישובים שם. ואף ה<strong>רמב"ם </strong>מסביר, שרוב הכרמים והשדות בבבל היו של ישראל, וגזרו על גידול בהמה דקה כדי לשמור על ממון ישראל, מאותה הסיבה בדיוק שגזרו בארץ ישראל עצמה.</p>
                     
                 </div>
                 
@@ -1257,21 +1257,21 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן אסרו חכמים לגדל חזירים בכל מקום, ולא את הכלב אלא אם כן היה קשור בשלשלת, אבל מגדל הוא כלבים בעיר הסמוכה לספר, ביום קושרו ובלילה מתירו, ואמרו חכמים ארור מגדל כלבים וחזירים מפני שהזיקן מרובה ומצוי.</strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור גידול כלבים וחזירים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איסור גידול כלבים וחזירים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (עט:) אוסרת גידול חזירים בכל מקום, ואף גידול כלבים אלא אם כן היו קשורים בשלשלת. ב<strong>גמרא</strong> (פג.) משמע שגידול כלבים אסור מפני הסכנה שהם מהווים לאנשים, ולכן מותר אם קשור בשלשלת, ובעיר הקרובה לספר מותר אף לשחררו בלילה לצרכי שמירה. הטעם המובא (פב:) לאיסור גידול חזירים הוא משום מעשה שהיה בימי מצור יהודה אריסטובלוס על יוחנן הורקנוס בירושלים, שהיו הצרים מעלים את קרבן התמיד לנצורים, עד שפעם אחת, כדי להפסיק את העבודה ולנצחם במלחמה, העלו להם חזיר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (עט:) אוסרת גידול חזירים בכל מקום, ואף גידול כלבים אלא אם כן היו קשורים בשלשלת. ב<strong>גמרא</strong> (פג.) משמע שגידול כלבים אסור מפני הסכנה שהם מהווים לאנשים, ולכן מותר אם קשור בשלשלת, ובעיר הקרובה לספר מותר אף לשחררו בלילה לצרכי שמירה. הטעם המובא (פב:) לאיסור גידול חזירים הוא משום מעשה שהיה בימי מצור יהודה אריסטובלוס על יוחנן הורקנוס בירושלים, שהיו הצרים מעלים את קרבן התמיד לנצורים, עד שפעם אחת, כדי להפסיק את העבודה ולנצחם במלחמה, העלו להם חזיר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, ה<strong>רמב"ם </strong>כותב שאיסור גידול חזירים הוא גם כן מפני הנזק שהם גורמים. ונראה שהרמב"ם הבין את הסיפור שבגמרא כטעם מוסף על הטעם שהוא מביא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, ה<strong>רמב"ם </strong>כותב שאיסור גידול חזירים הוא גם כן מפני הנזק שהם גורמים. ונראה שהרמב"ם הבין את הסיפור שבגמרא כטעם מוסף על הטעם שהוא מביא.</p>
                     
                 </div>
                 
@@ -1279,19 +1279,19 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>רועה שעשה תשובה אין מחייבין אותו למכור מיד אלא מוכר על יד על יד, וכן מי שנפלו לו כלבים וחזירים בירושה אין מחייבין אותו למכור מיד אלא מעט מעט.</strong>
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רועה שעשה תשובה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">רועה שעשה תשובה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור הדין ב<strong>ברייתא</strong> (פ.), בה נאמר שאם מישהו מצא עצמו עם הרבה חזירים, כלבים או בהמה דקה, בין אם נפלו לו בהיתר (ירושת גר), ובין באיסור (רועה בהמה דקה שעשה תשובה), לא הכריחו אותו להיפטר מכולם בבת אחת, כי אז יצטרך למוכרן בזול ולהפסיד, אלא יכול למכור מעט מעט.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקור הדין ב<strong>ברייתא</strong> (פ.), בה נאמר שאם מישהו מצא עצמו עם הרבה חזירים, כלבים או בהמה דקה, בין אם נפלו לו בהיתר (ירושת גר), ובין באיסור (רועה בהמה דקה שעשה תשובה), לא הכריחו אותו להיפטר מכולם בבת אחת, כי אז יצטרך למוכרן בזול ולהפסיד, אלא יכול למכור מעט מעט.</p>
                     
                 </div>
                 
@@ -1316,6 +1316,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות רוצח ושמירת הנפש - פרק ג'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ג')</h3>
                 <ul class="space-y-3">
@@ -954,7 +954,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -967,73 +967,73 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המכה את חבירו בזדון באבן או בעץ והמיתו, אומדין דבר שהכהו בו ומקום שהכהו עליו אם ראוי אותו חפץ להמית באבר זה או אינו ראוי, שנאמר "באבן יד אשר ימות בה הכהו או בכלי עץ יד אשר ימות בו הכהו" (במדבר ל"ה י"ז - י"ח) עד שיהיה בו כדי להמית, ואינו דומה מכהו על לבו למכהו על ירכו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הואיל ונאמר אשר ימות בה מכאן שאומדין מקום המכה. כשם שאומדין החפץ שהכה בו ומקום המכה כך אומדין כח ההכייה שנאמר "באבן יד" מכאן שמשערין את היד, אינו דומה זורק אבן בחבירו ברחוק שתי אמות לזורק בו ברחוק עשר שברחוק עשר יהיה כחה יתר, ואינו דומה זורק ברחוק עשר לזורק ברחוק מאה שברחוק המקום ביותר יתמעט כח ההכייה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     וכן משערין המכה עצמה ומשערין כח ההורג וכח הנהרג, אם הוא גדול או קטן, או חזק או חלש, או בריא או חולה וכן כל כיוצא בזה, שנאמר "אשר ימות בה", מיתתו של זה משערין כל סבותיה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כלי ברזל לא נתנה לו תורה שיעור, שנאמר "ואם בכלי ברזל הכהו וימות רוצח הוא" (במדבר ל"ה ט"ז) ואפילו במחט, והוא שיהיה לו חוד כמו מחט או שפוד או סכין וכיוצא בהן, אבל אם הכהו בעשת של ברזל וכיוצא בה אומדין אותה כדרך שאומדין האבן או העץ.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המכה את חבירו בלא כלי והמיתו, כגון שהכהו בידו או ברגלו או נגפו בראשו והמיתו משערין כח המכה וכח הנהרג ומקום המכה, אינו דומה דוחף חבירו באצבעו לבועט בו ברגלו בכל כחו, ואינו דומה מכהו על לבו למכהו על מתניו, ואינו דומה חלש המכה את הבריא החזק לבריא חזק המכה חלש או חולה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ומנין שמשערין בכל אלו שנאמר "או באיבה הכהו בידו וימות מות יומת המכה" (במדבר ל"ה כ"א), אף על פי שנאמר בידו הצריך הכתוב להיות ההכייה באיבה מכלל שמשערין כח ההכייה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     וכן הדוחף את חבירו מראש הגג ונפל ומת משערין גובה המקום שהפילו מעליו וכח הנדחף, שאינו דומה בן יומו שנפל לגדול שנפל, ומנין שמשערין גובה המקום, שנאמר "ואם בשנאה יהדפנו" (במדבר ל"ה כ'), ויראה לי שכל מקום שאין בגבהו עשרה טפחים אין בו כדי להמית כדרך שאמרו בבור לענין בהמה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אחד המכה את חבירו באבן או בעץ או שהכהו בגוש של אדמה או בגוש של מלח וגפרית או בסל מלא עפר או צרורות ואפילו בפלח של דבילה, שנאמר "אשר ימות בה" (במדבר ל"ה כ'), כל שהוא ראוי להמית, והכובד הוא שממית.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אומד מעשה הרוצח</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אומד מעשה הרוצח</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המדרש</strong> (ספרי במדבר פרשת מסעי פיסקה קס) עוסק בהרחבה בפסוקים המתארים את הרוצח במזיד ובייחוד בהדגשה שמדגישה התורה את כלי הרצח. מהביטוי "אשר ימות בה" אשר חוזר על עצמו בין במכה חבירו למוות על ידי כלי אבן ובין במכה חברו בכלי עץ, לומד הספרי שיש צורך לאמוד שאכן בכלי בו השתמש הרוצח היה די בכדי להרוג את הנרצח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המדרש</strong> (ספרי במדבר פרשת מסעי פיסקה קס) עוסק בהרחבה בפסוקים המתארים את הרוצח במזיד ובייחוד בהדגשה שמדגישה התורה את כלי הרצח. מהביטוי "אשר ימות בה" אשר חוזר על עצמו בין במכה חבירו למוות על ידי כלי אבן ובין במכה חברו בכלי עץ, לומד הספרי שיש צורך לאמוד שאכן בכלי בו השתמש הרוצח היה די בכדי להרוג את הנרצח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, העובדה שהכלי בו בוצע הרצח צריך להיות מסוגל להרוג אין בה די, אלא צריך שהמקום בו הכה הרוצח יהיה בו בכדי להרוג. דבר זה לומד המדרש מהנאמר בספר דברים (יט יא): "וְכִי יִהְיֶה אִישׁ שֹׂנֵא לְרֵעֵהוּ וְאָרַב לוֹ וְקָם עָלָיו וְהִכָּהוּ נֶפֶשׁ...", ממנו משמע שהרוצח במזיד הוא כזה שמכוון את מקום המכה בכדי להרוג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, העובדה שהכלי בו בוצע הרצח צריך להיות מסוגל להרוג אין בה די, אלא צריך שהמקום בו הכה הרוצח יהיה בו בכדי להרוג. דבר זה לומד המדרש מהנאמר בספר דברים (יט יא): "וְכִי יִהְיֶה אִישׁ שֹׂנֵא לְרֵעֵהוּ וְאָרַב לוֹ וְקָם עָלָיו וְהִכָּהוּ נֶפֶשׁ...", ממנו משמע שהרוצח במזיד הוא כזה שמכוון את מקום המכה בכדי להרוג.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד נשנית <strong>משנה</strong> בנושא זה (סנהדרין עח:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד נשנית <strong>משנה</strong> בנושא זה (סנהדרין עח:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוין להרוג את הבהמה והרג את האדם, לנכרי והרג את ישראל, לנפלים והרג את בן קיימא- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוין להרוג את הבהמה והרג את האדם, לנכרי והרג את ישראל, לנפלים והרג את בן קיימא- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוין להכותו על מתניו ולא היה בה כדי להמיתו על מתניו, והלכה לה על לבו והיה בה כדי להמיתו על לבו ומת- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוין להכותו על מתניו ולא היה בה כדי להמיתו על מתניו, והלכה לה על לבו והיה בה כדי להמיתו על לבו ומת- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוין להכותו על לבו והיה בה כדי להמית על לבו, והלכה לה על מתניו ולא היה בה כדי להמית על מתניו, ומת- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוין להכותו על לבו והיה בה כדי להמית על לבו, והלכה לה על מתניו ולא היה בה כדי להמית על מתניו, ומת- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוון להכות את הגדול ולא היה בה כדי להמית הגדול, והלכה לה על הקטן והיה בה כדי להמית את הקטן ומת- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוון להכות את הגדול ולא היה בה כדי להמית הגדול, והלכה לה על הקטן והיה בה כדי להמית את הקטן ומת- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכון להכות את הקטן והיה בה כדי להמית את הקטן, והלכה לה על הגדול ולא היה בה כדי להמית את הגדול ומת- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכון להכות את הקטן והיה בה כדי להמית את הקטן, והלכה לה על הגדול ולא היה בה כדי להמית את הגדול ומת- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אבל,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אבל,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוון להכות על מתניו והיה בה כדי להמית על מתניו והלכה לה על לבו ומת- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוון להכות על מתניו והיה בה כדי להמית על מתניו והלכה לה על לבו ומת- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוון להכות את הגדול והיה בה כדי להמית את הגדול והלכה לה על הקטן ומת- חייב</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוון להכות את הגדול והיה בה כדי להמית את הגדול והלכה לה על הקטן ומת- חייב</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ממשנה זו נמצאנו למדים, ראשית כל, שיש לאמוד לא רק את מקום הפגיעה, אם ראוי הוא להמית או לא, אלא גם את הנפגע, אם ראוי הוא למות ממכה כעין זו שקיבל. ואינו דומה קטן לגדול.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ממשנה זו נמצאנו למדים, ראשית כל, שיש לאמוד לא רק את מקום הפגיעה, אם ראוי הוא להמית או לא, אלא גם את הנפגע, אם ראוי הוא למות ממכה כעין זו שקיבל. ואינו דומה קטן לגדול.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שנית, מלמדת אותנו המשנה, שבכדי שיהיה הרוצח חייב מיתה בבית דין, חייבים להתקיים כמה תנאים- ראשית, צריך שאכן יתכוון הרוצח מלכתחילה להרוג אדם בישראל. שנית, יש צורך שבין המעשה <strong>שנתכוון</strong> לו, ובין המעשה <strong>שעשה בפועל</strong> די בהם בכדי להרוג. אכן, אם <strong>שניהם</strong>, גם המעשה אליו התכוון, וגם המעשה אותו ביצע בפועל, די בהם בכדי להרוג, חייב הרוצח, אף אם בפועל לא נעשה בדיוק המעשה לו התכוון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שנית, מלמדת אותנו המשנה, שבכדי שיהיה הרוצח חייב מיתה בבית דין, חייבים להתקיים כמה תנאים- ראשית, צריך שאכן יתכוון הרוצח מלכתחילה להרוג אדם בישראל. שנית, יש צורך שבין המעשה <strong>שנתכוון</strong> לו, ובין המעשה <strong>שעשה בפועל</strong> די בהם בכדי להרוג. אכן, אם <strong>שניהם</strong>, גם המעשה אליו התכוון, וגם המעשה אותו ביצע בפועל, די בהם בכדי להרוג, חייב הרוצח, אף אם בפועל לא נעשה בדיוק המעשה לו התכוון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי השיעור הממית בכלי ברזל, לומד <strong>הספרי</strong> מכך שלגבי כלי ברזל לא נאמר "יד", שלכלי ברזל אין שיעור, אלא אפילו כלשהו ממית. ב<strong>גמרא</strong> (סנהדרין עו:) מובא גם כן דין זה, ושם הגמרא מדגישה שמדובר דווקא במכשיר ברזל חד, אך בכלי ברזל קהה, לא בכל שיעור יש בו בכדי להרוג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי השיעור הממית בכלי ברזל, לומד <strong>הספרי</strong> מכך שלגבי כלי ברזל לא נאמר "יד", שלכלי ברזל אין שיעור, אלא אפילו כלשהו ממית. ב<strong>גמרא</strong> (סנהדרין עו:) מובא גם כן דין זה, ושם הגמרא מדגישה שמדובר דווקא במכשיר ברזל חד, אך בכלי ברזל קהה, לא בכל שיעור יש בו בכדי להרוג.</p>
                     
                 </div>
                 
@@ -1041,74 +1041,74 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט-י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הדוחף את חבירו לתוך המים או לתוך האש אומדין אותו אם יכול לעלות משם פטור ממיתת בית דין ואם אינו יכול לעלות חייב, וכן אם כבש עליו בתוך הים או בתוך האש עד שלא נשאר בו כח לעלות ומת חייב אף על פי שאינו הוא הדוחף בתחילה. והוא הדין למניח ידו על פי חבירו וחוטמו עד שהניחו מפרפר ואינו יכול לחיות, או שכפתו והניחו בצנה או בחמה עד שמת, או שבנה עליו מקום עד שמנע ממנו הרוח, או שהכניסו למערה או לבית ועישן עליו עד שמת, או שהכניסו לבית של שיש והדליק עליו נר עד שהמיתו ההבל, בכל אלו נהרג עליו שזה כמי שחנקו בידו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אבל הכופת את חבירו והניחו ברעב עד שמת, או שכפתו והניחו במקום שסוף הצנה או החמה לבוא לשם ובאה והמיתתו, או שכפה עליו גיגית, או שפרע עליו את המעזיבה, או שהשיך בו את הנחש, ואין צריך לומר אם שסה בו כלב או נחש, בכל אלו אין בית דין ממיתין אותו, והרי הוא רוצח ודורש דמים דורש ממנו דם.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המעכב את חבירו במקום סכנה, ומת</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המעכב את חבירו במקום סכנה, ומת</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (סנהדרין עו:):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (סנהדרין עו:):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">...כבש עליו לתוך המים או לתוך האור, ואינו יכול לעלות משם ומת- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">...כבש עליו לתוך המים או לתוך האור, ואינו יכול לעלות משם ומת- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דחפו לתוך המים או לתוך האור, ויכול לעלות משם ומת- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דחפו לתוך המים או לתוך האור, ויכול לעלות משם ומת- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אפילו אם לא ההורג הוא שהכניסו לנהרג לתוך האש או המים, כיוון שהוא מונע ממנו מלצאת משם ומת- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אפילו אם לא ההורג הוא שהכניסו לנהרג לתוך האש או המים, כיוון שהוא מונע ממנו מלצאת משם ומת- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקביל, ה<strong>ספרי</strong> (שם) לומד מתוך הצד השווה של כלי העץ, האבן והברזל המוזכרים בפסוק (עי' בפסוקים שבתחילת הפרק), שלא תמיד יתחייב הרוצח-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקביל, ה<strong>ספרי</strong> (שם) לומד מתוך הצד השווה של כלי העץ, האבן והברזל המוזכרים בפסוק (עי' בפסוקים שבתחילת הפרק), שלא תמיד יתחייב הרוצח-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">...הצד השוה שבשלשתם שהוא מחמת הממיתים והמית [הרי הוא חייב אף כל שהוא מחמת הממיתין והמית] הרי זה חייב</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">...הצד השוה שבשלשתם שהוא מחמת הממיתים והמית [הרי הוא חייב אף כל שהוא מחמת הממיתין והמית] הרי זה חייב</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">יצא את שדחפו לתוך המים או לתוך האור [ושיסה בו את הכלב] ושיסה בו את הנחש שדינו מסור לשמים</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">יצא את שדחפו לתוך המים או לתוך האור [ושיסה בו את הכלב] ושיסה בו את הנחש שדינו מסור לשמים</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סביר לפרש שהספרי והמשנה אמרו דבר אחד, ומדובר בספרי במקום בו יכול הנהרג לעלות, ולא עלה. לפיכך, הרי שהספרי נותן טעם לדין המשנה- יש צורך שגורם המוות <strong>הישי</strong><strong>ר</strong> וה<strong>בלעדי</strong> יהיה מעשהו של ההורג ("מחמת הממיתים"). לכן, כאשר הנחש, הכלב, או העובדה שיכול היה הנהרג לעלות ולא עלה הם גורמי הנזק, פטור ההורג ממיתת בי"ד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">סביר לפרש שהספרי והמשנה אמרו דבר אחד, ומדובר בספרי במקום בו יכול הנהרג לעלות, ולא עלה. לפיכך, הרי שהספרי נותן טעם לדין המשנה- יש צורך שגורם המוות <strong>הישי</strong><strong>ר</strong> וה<strong>בלעדי</strong> יהיה מעשהו של ההורג ("מחמת הממיתים"). לכן, כאשר הנחש, הכלב, או העובדה שיכול היה הנהרג לעלות ולא עלה הם גורמי הנזק, פטור ההורג ממיתת בי"ד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (עו:) מביא <strong>שמואל</strong> טעם מדוע הכובש על חבירו, ומונע ממנו לעלות מהמים, נחשב כעושה מעשה ישיר, למרות שמבחינה פיזית הרי אינו מבצע תנועה, וזאת מהנאמר בפסוק: "<strong>אוֹ </strong><strong>בְאֵיבָה</strong> הִכָּהוּ בְיָדוֹ וַיָּמֹת מוֹת יוּמַת הַמַּכֶּה" (במדבר לה כא). (<strong>רש"י</strong> מסביר שלומדים מהייתור "או"<sup id="ref41"><a href="#fn41">[41]</a></sup>).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (עו:) מביא <strong>שמואל</strong> טעם מדוע הכובש על חבירו, ומונע ממנו לעלות מהמים, נחשב כעושה מעשה ישיר, למרות שמבחינה פיזית הרי אינו מבצע תנועה, וזאת מהנאמר בפסוק: "<strong>אוֹ </strong><strong>בְאֵיבָה</strong> הִכָּהוּ בְיָדוֹ וַיָּמֹת מוֹת יוּמַת הַמַּכֶּה" (במדבר לה כא). (<strong>רש"י</strong> מסביר שלומדים מהייתור "או"<sup id="ref41"><a href="#fn41">[41]</a></sup>).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בשאלה מהו גדר הכובש את חבירו לתוך המים או האש, בו מחייבת המשנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בשאלה מהו גדר הכובש את חבירו לתוך המים או האש, בו מחייבת המשנה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון <strong>רש"י</strong> משמע, שמדובר באדם המחזיק בחבירו, ואוחזו כך שאינו יכול לצאת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון <strong>רש"י</strong> משמע, שמדובר באדם המחזיק בחבירו, ואוחזו כך שאינו יכול לצאת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, ה<strong>מאירי</strong> על משנתנו כותב, שהוא הדין אם לא נגע בו, ורק מנע ממנו לצאת בדרך אחרת, כגון שעמד על המקום ממנו צריך לצאת וכיוצא בכך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת, ה<strong>מאירי</strong> על משנתנו כותב, שהוא הדין אם לא נגע בו, ורק מנע ממנו לצאת בדרך אחרת, כגון שעמד על המקום ממנו צריך לצאת וכיוצא בכך.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הכופת את חבירו במקום סכנה- ההבדל בין סכנה מיידית לבין סכנה שתבוא לאחר זמן</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הכופת את חבירו במקום סכנה- ההבדל בין סכנה מיידית לבין סכנה שתבוא לאחר זמן</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך לדברי המשנה על הכובש את חבירו ומונעו מלצאת מהמים, מובאים בגמרא (עז.) שלושה דינים שנאמרו בשם <strong>רבא</strong>, בעניין הכופת את חברו ומניחו במקום סכנה כך שאינו יכול לברוח, ומת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך לדברי המשנה על הכובש את חבירו ומונעו מלצאת מהמים, מובאים בגמרא (עז.) שלושה דינים שנאמרו בשם <strong>רבא</strong>, בעניין הכופת את חברו ומניחו במקום סכנה כך שאינו יכול לברוח, ומת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כפתו ומת ברעב פטור".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כפתו ומת ברעב פטור".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כפתו בחמה ומת בצינה ומת חייב, סוף חמה לבא סוף צינה לבא פטור".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כפתו בחמה ומת בצינה ומת חייב, סוף חמה לבא סוף צינה לבא פטור".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>רבא</strong> כפתו לפני ארי פטור לפני יתושין חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אמר <strong>רבא</strong> כפתו לפני ארי פטור לפני יתושין חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב אשי</strong> אמר אפילו לפני יתושין נמי פטור הני אזלי והני אתו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב אשי</strong> אמר אפילו לפני יתושין נמי פטור הני אזלי והני אתו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ככלל, על פי רבא, כאשר כפת אדם את חבירו במקום בו הגורם הממית נמצא כרגע, חייב הכופת ונהרג עליו בבית דין, כיוון שמעשה הכפיתה מתחיל להרוג מיד ונחשב כמעשה הריגה. לעומת זאת, אם הגורם הממית אינו קיים שם ברגע זה, אלא יגיע לשם כעבור זמן מה, כגון מקום בו תהיה חמה או צינה לאחר זמן מה, פטור הכופת ממיתת בית דין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ככלל, על פי רבא, כאשר כפת אדם את חבירו במקום בו הגורם הממית נמצא כרגע, חייב הכופת ונהרג עליו בבית דין, כיוון שמעשה הכפיתה מתחיל להרוג מיד ונחשב כמעשה הריגה. לעומת זאת, אם הגורם הממית אינו קיים שם ברגע זה, אלא יגיע לשם כעבור זמן מה, כגון מקום בו תהיה חמה או צינה לאחר זמן מה, פטור הכופת ממיתת בית דין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי עיקרון זה מסביר ה<strong>יד רמ"ה</strong>, שהכופת את חבירו לפני ארי פטור משום שאין זה דומה להבאת הגורם הממית בידיים<sup id="ref42"><a href="#fn42">[42]</a></sup>. בתור אפשרות נוספת הוא מסביר, שבעוד שיתושים בוודאי יזיקו, האריה לא יזיק אם אינו רעב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי עיקרון זה מסביר ה<strong>יד רמ"ה</strong>, שהכופת את חבירו לפני ארי פטור משום שאין זה דומה להבאת הגורם הממית בידיים<sup id="ref42"><a href="#fn42">[42]</a></sup>. בתור אפשרות נוספת הוא מסביר, שבעוד שיתושים בוודאי יזיקו, האריה לא יזיק אם אינו רעב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, <strong>רש"י</strong> מפרש, שפטורו של הכופת את חבירו לפני ארי אינו מהטעמים הנ"ל, אלא מתוך כך שאף אם לא היה כפות לא היה יכול להינצל מהארי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, <strong>רש"י</strong> מפרש, שפטורו של הכופת את חבירו לפני ארי אינו מהטעמים הנ"ל, אלא מתוך כך שאף אם לא היה כפות לא היה יכול להינצל מהארי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד מובאת בגמרא מחלוקת אמוראים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד מובאת בגמרא מחלוקת אמוראים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפה עליו גיגית ופרע עליו מעזיבה <strong>רבא</strong> ו<strong>רבי זירא </strong>חד אמר חייב וחד אמר פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפה עליו גיגית ופרע עליו מעזיבה <strong>רבא</strong> ו<strong>רבי זירא </strong>חד אמר חייב וחד אמר פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדובר במקרה בו ההורג כפה על הנהרג כלי גדול, ומת הנהרג (כנראה מחוסר חמצן), או שהיה הנהרג בבית, והסיר ההורג את ציפוי התקרה שמעליו, והנהרג מת מקור<sup id="ref43"><a href="#fn43">[43]</a></sup> וכדומה. הגמרא מגיעה למסקנה, שרבא הוא שפוטר וזאת על פי על פי העיקרון שהביא קודם לכן, כלומר, כיוון שהגורם הממית לא היה במלואו ברגע המעשה של ההורג, פטור הוא ממיתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר במקרה בו ההורג כפה על הנהרג כלי גדול, ומת הנהרג (כנראה מחוסר חמצן), או שהיה הנהרג בבית, והסיר ההורג את ציפוי התקרה שמעליו, והנהרג מת מקור<sup id="ref43"><a href="#fn43">[43]</a></sup> וכדומה. הגמרא מגיעה למסקנה, שרבא הוא שפוטר וזאת על פי על פי העיקרון שהביא קודם לכן, כלומר, כיוון שהגורם הממית לא היה במלואו ברגע המעשה של ההורג, פטור הוא ממיתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "סוף חמה") מקשים על העיקרון של רבא (המחלק בין דבר ממית שהוא כבר בנמצא, לבין דבר הממית שסופו לבוא אך עדיין אינו נוכח), שהרי כל סכנה שעוד אינה כאן אך היא קרבה ובאה דומה היא לאש, שאדם מדליקה במקום אחד, והיא מתקדמת מאליה, ובאש מוכיחים התוספות, שאין הבדל בין המצית לבין המקרב את החפץ הניזוק לאש. בנוסף טוענים התוספות שלפי הנפסק להלכה שהדלקת האש כמוה כיריית חץ ונזק האש נחשב נזק ישיר ("אישו משום חיציו"<sup id="ref44"><a href="#fn44">[44]</a></sup>), הרי שהמדליק אש בריחוק מקום ועברה והמיתה, חייב מיתה כיורה חץ בחבירו. לכן מבארים התוספות, שדווקא אם כפתו במקום בו סוף חמה לבוא פטור, אך אם כפתו ואז הניחו במקום שסוף חמה לבוא, הרי שההבאה היא כקירוב לאש, וחייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ד"ה "סוף חמה") מקשים על העיקרון של רבא (המחלק בין דבר ממית שהוא כבר בנמצא, לבין דבר הממית שסופו לבוא אך עדיין אינו נוכח), שהרי כל סכנה שעוד אינה כאן אך היא קרבה ובאה דומה היא לאש, שאדם מדליקה במקום אחד, והיא מתקדמת מאליה, ובאש מוכיחים התוספות, שאין הבדל בין המצית לבין המקרב את החפץ הניזוק לאש. בנוסף טוענים התוספות שלפי הנפסק להלכה שהדלקת האש כמוה כיריית חץ ונזק האש נחשב נזק ישיר ("אישו משום חיציו"<sup id="ref44"><a href="#fn44">[44]</a></sup>), הרי שהמדליק אש בריחוק מקום ועברה והמיתה, חייב מיתה כיורה חץ בחבירו. לכן מבארים התוספות, שדווקא אם כפתו במקום בו סוף חמה לבוא פטור, אך אם כפתו ואז הניחו במקום שסוף חמה לבוא, הרי שההבאה היא כקירוב לאש, וחייב.</p>
                     
                 </div>
                 
@@ -1116,46 +1116,46 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     וכן הדוחף חבירו לבור והיה שם סולם בבור שיכול לעלות עליו, או שזרק בו חץ והיה תריס בידו להגן עליו ובא אחר וסלק את הסולם והסיר את התריס, שניהן אינן נהרגין בבית דין, אפילו היה הדוחף עצמו הוא שחזר וסלק הסולם פטור ממיתת בית דין ונדרש ממנו דם.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עוד מקרים בהם ברגע גרימת המוות, היה הנהרג יכול להציל את עצמו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עוד מקרים בהם ברגע גרימת המוות, היה הנהרג יכול להציל את עצמו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (סנהדרין עו:) נתבאר, כאמור, שאם זרק האחד את חבירו למים, ויכול היה לעלות מהמים ולא עלה ומת, פטור המשליכו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (סנהדרין עו:) נתבאר, כאמור, שאם זרק האחד את חבירו למים, ויכול היה לעלות מהמים ולא עלה ומת, פטור המשליכו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מוסיף עוד כמה מקרים בהם קיים אותו הגיון-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> מוסיף עוד כמה מקרים בהם קיים אותו הגיון-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דחף את חבירו לבור, והיה סולם בבור, ואדם אחר נטל את הסולם, ומת זה שבבור, פטור הדוחף, שכן בשעה שדחף יכול היה הנדחף לעלות מן הבור. במקביל, הנוטל את הסולם גם הוא פטור, כיוון שלא הרג ישירות, אלא בגרמא. הגמרא מחדשת שאפילו אם הזורק עצמו הוא שנטל את הסולם, הרי שהוא פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דחף את חבירו לבור, והיה סולם בבור, ואדם אחר נטל את הסולם, ומת זה שבבור, פטור הדוחף, שכן בשעה שדחף יכול היה הנדחף לעלות מן הבור. במקביל, הנוטל את הסולם גם הוא פטור, כיוון שלא הרג ישירות, אלא בגרמא. הגמרא מחדשת שאפילו אם הזורק עצמו הוא שנטל את הסולם, הרי שהוא פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ירה חץ בחבירו בעוד שחבירו מוגן במגן, ובא אדם אחר ולקח את המגן, גם כאן פטורים<sup id="ref45"><a href="#fn45">[45]</a></sup> שניהם<sup id="ref46"><a href="#fn46">[46]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ירה חץ בחבירו בעוד שחבירו מוגן במגן, ובא אדם אחר ולקח את המגן, גם כאן פטורים<sup id="ref45"><a href="#fn45">[45]</a></sup> שניהם<sup id="ref46"><a href="#fn46">[46]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כנ"ל, כאשר ירה חץ בחבירו, והיתה תרופה ביד חבירו שמרפאת בוודאות<sup id="ref47"><a href="#fn47">[47]</a></sup>, ובא אחר ופיזר את התרופה מידו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כנ"ל, כאשר ירה חץ בחבירו, והיתה תרופה ביד חבירו שמרפאת בוודאות<sup id="ref47"><a href="#fn47">[47]</a></sup>, ובא אחר ופיזר את התרופה מידו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהקשר לדין האחרון מחדש <strong>ר' אשי</strong>, שאפילו אם התרופה זמינה לקנייה בשוק, פטור היורה, שכן אין מעשהו מביא למיתה אם ישתמש הנפגע בתרופה הזמינה לו. ר' אשי גם מחווה את דעתו באשר למקרה בו לא היתה התרופה זמינה בשעה שירה בו חץ, אך בהמשך היתה זמינה<sup id="ref48"><a href="#fn48">[48]</a></sup>, ולא רצה הנהרג ליטלה, ומת. גם במקרה זה פוסק ר' אשי שפטור היורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהקשר לדין האחרון מחדש <strong>ר' אשי</strong>, שאפילו אם התרופה זמינה לקנייה בשוק, פטור היורה, שכן אין מעשהו מביא למיתה אם ישתמש הנפגע בתרופה הזמינה לו. ר' אשי גם מחווה את דעתו באשר למקרה בו לא היתה התרופה זמינה בשעה שירה בו חץ, אך בהמשך היתה זמינה<sup id="ref48"><a href="#fn48">[48]</a></sup>, ולא רצה הנהרג ליטלה, ומת. גם במקרה זה פוסק ר' אשי שפטור היורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק את שני הדינים הראשונים להלכה, ומוסיף שאמנם אינם חייבים מיתה בבית דין, אך חייבים מיתה בידי שמים. כך מוסיף הרמב"ם גם לגבי הרוצחים בעקיפין שבשתי ההלכות הקודמות. מקורו של הרמב"ם בדברי במדרש רבה שהובאו לעיל (עמוד איסורו של המאבד עצמו לדעת23) המחייבים מיתה בידי שמים את המוסר חבירו למיתה בידי חיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק את שני הדינים הראשונים להלכה, ומוסיף שאמנם אינם חייבים מיתה בבית דין, אך חייבים מיתה בידי שמים. כך מוסיף הרמב"ם גם לגבי הרוצחים בעקיפין שבשתי ההלכות הקודמות. מקורו של הרמב"ם בדברי במדרש רבה שהובאו לעיל (עמוד איסורו של המאבד עצמו לדעת23) המחייבים מיתה בידי שמים את המוסר חבירו למיתה בידי חיה.</p>
                     
                 </div>
                 
                 <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היחס בין גרימת נזק עקיפה לבין גרימת מוות עקיפה במזיד</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">היחס בין גרימת נזק עקיפה לבין גרימת מוות עקיפה במזיד</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המקרים האחרונים שעסקנו בהם לעיל בהלכות י-יא, עניינם הוא דין הרוצח כאשר מעשה ההרג לא נעשה ישירות, אלא ע"י כפיתה במקום סכנה, נטילת מגן וכדומה. נושא זה של מעשים שאינם ישירים נידון גם בהקשר של דיני הנזיקין תחת הכותרת של גרמא וגרמי (עי' בדברינו על הלכות חובל ומזיק פרק ז הלכה ז שהארכנו יותר שם). לפי רוב הראשונים, גרמי הוא נזק עליו חייבים כעל נזק ישיר, ולעומתו על גרמא פטורים. ניתן לחלק את שיטות הראשונים בהסבר ההבדל בין גרמא לגרמי לשתי קבוצות. לפי האחת, בעיקרון, על כל מעשה שאינו ישיר, פטור המזיק, ואין שום הבדל עקרוני בין גרמא לגרמי, ורק חכמים הם תקנו שיהיה המזיק חייב בתנאים מסויימים, ובמקרים מסויימים, לפי הצורך. לפי הדרך השניה, נזק על ידי גרמי שקול למעשה לנזק ישיר, וחייבים עליו מהתורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המקרים האחרונים שעסקנו בהם לעיל בהלכות י-יא, עניינם הוא דין הרוצח כאשר מעשה ההרג לא נעשה ישירות, אלא ע"י כפיתה במקום סכנה, נטילת מגן וכדומה. נושא זה של מעשים שאינם ישירים נידון גם בהקשר של דיני הנזיקין תחת הכותרת של גרמא וגרמי (עי' בדברינו על הלכות חובל ומזיק פרק ז הלכה ז שהארכנו יותר שם). לפי רוב הראשונים, גרמי הוא נזק עליו חייבים כעל נזק ישיר, ולעומתו על גרמא פטורים. ניתן לחלק את שיטות הראשונים בהסבר ההבדל בין גרמא לגרמי לשתי קבוצות. לפי האחת, בעיקרון, על כל מעשה שאינו ישיר, פטור המזיק, ואין שום הבדל עקרוני בין גרמא לגרמי, ורק חכמים הם תקנו שיהיה המזיק חייב בתנאים מסויימים, ובמקרים מסויימים, לפי הצורך. לפי הדרך השניה, נזק על ידי גרמי שקול למעשה לנזק ישיר, וחייבים עליו מהתורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי השיטה הראשונה, אין הכרח לומר שחיוב בדיני הריגה דורש ישירוּת גבוהה יותר מאשר בדיני נזיקין. בכל מקום, כאשר לא עשה המזיק/רוצח את מעשהו בגוף החפץ הניזוק/נרצח, הרי שמדאורייתא פטור הוא מתשלומים/מיתה. כך למשל, בסוגיית הנוטל כרים וכסתות מתחת כד נופל, פטרו ראשונים רבים את הנוטל כיוון שלא עשה מעשה בכד עצמו. לפיהם ברור מכל שכן מדוע במקרים המקבילים בדיני הרוצח (נטילת מגן מלפני אדם כך שחץ יפגע בו, נטילת סולם כך שהנופל לא יוכל לעלות בו או כפיתה של אדם במקום סכנה) אין בית הדין הורגים את הרוצח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי השיטה הראשונה, אין הכרח לומר שחיוב בדיני הריגה דורש ישירוּת גבוהה יותר מאשר בדיני נזיקין. בכל מקום, כאשר לא עשה המזיק/רוצח את מעשהו בגוף החפץ הניזוק/נרצח, הרי שמדאורייתא פטור הוא מתשלומים/מיתה. כך למשל, בסוגיית הנוטל כרים וכסתות מתחת כד נופל, פטרו ראשונים רבים את הנוטל כיוון שלא עשה מעשה בכד עצמו. לפיהם ברור מכל שכן מדוע במקרים המקבילים בדיני הרוצח (נטילת מגן מלפני אדם כך שחץ יפגע בו, נטילת סולם כך שהנופל לא יוכל לעלות בו או כפיתה של אדם במקום סכנה) אין בית הדין הורגים את הרוצח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, לפי שיטת הסוברים שמעשה המוגדר כגרמי נחשב כמעשה ישיר, יש לעמוד על ההבדל שקיים בין דיני הנזיקין לבין דיני הרוצח. בעוד שבראשונים מעשה של גרמי מחייב כמעשה ישיר ממש, בשני אנו דורשים ישירות מיוחדת במעשה הנזק. הקריטריונים הרגילים המוצעים בראשונים להגדרת גרמי (כגון הכרחיות התוצאה, היעדר תלות בגורם אחר ועוד), אין בהם די לחיוב מיתה בבית דין על רצח על ידי מעשה שלא נעשה בגוף הנהרג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת, לפי שיטת הסוברים שמעשה המוגדר כגרמי נחשב כמעשה ישיר, יש לעמוד על ההבדל שקיים בין דיני הנזיקין לבין דיני הרוצח. בעוד שבראשונים מעשה של גרמי מחייב כמעשה ישיר ממש, בשני אנו דורשים ישירות מיוחדת במעשה הנזק. הקריטריונים הרגילים המוצעים בראשונים להגדרת גרמי (כגון הכרחיות התוצאה, היעדר תלות בגורם אחר ועוד), אין בהם די לחיוב מיתה בבית דין על רצח על ידי מעשה שלא נעשה בגוף הנהרג.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אכן, ה<strong>מאירי</strong> (סנהדרין עז: ד"ה "דחפו") עומד על נקודה זו וכותב שגם על מעשים שבנזיקין מוגדרים כגרמי, ומחייבים עליהם, בהריגה אין בהם בכדי לחייב את ההורג מיתה. כדוגמה הוא מקביל את דין המסלק כרים וכסתות מתחת לכלי הנופל, שחייב בנזקו לפי ראשונים רבים, לדין המסלק סולם מבור או המסיט מגן בכדי שחץ יפגע בחבירו, שבשני אלה, כמבואר לעיל, אין ההורג מחוייב מיתה בבית דין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אכן, ה<strong>מאירי</strong> (סנהדרין עז: ד"ה "דחפו") עומד על נקודה זו וכותב שגם על מעשים שבנזיקין מוגדרים כגרמי, ומחייבים עליהם, בהריגה אין בהם בכדי לחייב את ההורג מיתה. כדוגמה הוא מקביל את דין המסלק כרים וכסתות מתחת לכלי הנופל, שחייב בנזקו לפי ראשונים רבים, לדין המסלק סולם מבור או המסיט מגן בכדי שחץ יפגע בחבירו, שבשני אלה, כמבואר לעיל, אין ההורג מחוייב מיתה בבית דין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו מסביר <strong>רש"י</strong> בכמה מקומות בסוגייתנו<sup id="ref49"><a href="#fn49">[49]</a></sup>, שטעם הפטור במעשה רצח בלתי ישיר הוא שמדובר בגרמא<sup id="ref50"><a href="#fn50">[50]</a></sup>, ומשמע שבכדי לחייב מיתה את הרוצח די לנו שמעשיו לא יהיו בחזקת גרמא, ואין כאן דרישה נוספת. מה שחייב עליו מהתורה בנזיקין, יהיה חייב עליו מהתורה גם ברצח. נמצא, שלפי שיטה זו, כל המקרים המיוחדים של רצח בעקיפין הנידונים בסוגייתנו אינם חושפים תכונה מיוחדת של הלכות רוצח, וכולם יכולים, עקרונית, להיאמר גם בהלכות נזיקין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו מסביר <strong>רש"י</strong> בכמה מקומות בסוגייתנו<sup id="ref49"><a href="#fn49">[49]</a></sup>, שטעם הפטור במעשה רצח בלתי ישיר הוא שמדובר בגרמא<sup id="ref50"><a href="#fn50">[50]</a></sup>, ומשמע שבכדי לחייב מיתה את הרוצח די לנו שמעשיו לא יהיו בחזקת גרמא, ואין כאן דרישה נוספת. מה שחייב עליו מהתורה בנזיקין, יהיה חייב עליו מהתורה גם ברצח. נמצא, שלפי שיטה זו, כל המקרים המיוחדים של רצח בעקיפין הנידונים בסוגייתנו אינם חושפים תכונה מיוחדת של הלכות רוצח, וכולם יכולים, עקרונית, להיאמר גם בהלכות נזיקין.</p>
                     
                 </div>
                 
@@ -1163,85 +1163,85 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב-יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב-יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הזורק צרור בכותל וחזרה האבן לאחוריה והרגה חייב מיתת בית דין, שמכחו היא באה, וכן אלו שמשחקין בכדור שהתרו בהן והרגו בתוך ארבע אמות פטורין, חוץ לארבע אמות אפילו לסוף מאה אמה חייבין, והוא שיש בה כדי להמית כמו שביארנו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     זרק אבן למעלה והלכה לצדדין והרגה חייב.. הכופת את חבירו והניחו במקום שאינו יכול לברוח והציף עליו מים ומת הרי זה נהרג עליו, והוא שימות מכח ראשון הבא ממעשיו.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הזורק אבן בכותל וחזרה לאחוריה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הזורק אבן בכותל וחזרה לאחוריה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (סנהדרין עז:) מובא עוד דין בשם <strong>רבא</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (סנהדרין עז:) מובא עוד דין בשם <strong>רבא</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"זרק צרור בכותל וחזרה לאחוריה והרגה חייב."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"זרק צרור בכותל וחזרה לאחוריה והרגה חייב."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כתמיכה לדבריו מצוטטות שתי <strong>ברייתות</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כתמיכה לדבריו מצוטטות שתי <strong>ברייתות</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כגון אלו המשחקין בכדור שהרגו, במזיד- נהרגין, בשוגג- גולין"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כגון אלו המשחקין בכדור שהרגו, במזיד- נהרגין, בשוגג- גולין"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כגון אלו המשחקין בכדור שהרגו, תוך ארבע אמות- פטור, חוץ לארבע אמות- חייב"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כגון אלו המשחקין בכדור שהרגו, תוך ארבע אמות- פטור, חוץ לארבע אמות- חייב"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בכדי להתחייב צריך שהנפגע יפגע מהכדור בתוך ארבע אמות מהכותל, ושיהיה הדבר במזיד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, בכדי להתחייב צריך שהנפגע יפגע מהכדור בתוך ארבע אמות מהכותל, ושיהיה הדבר במזיד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הגמרא</strong> מבארת שטעם ההבדל בין תוך ארבע אמות לחוץ מארבע אמות הוא משום שסתם המשחקים בכדור, מתכוונים בהטלתו לקיר שילך למרחוק בחזרתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>הגמרא</strong> מבארת שטעם ההבדל בין תוך ארבע אמות לחוץ מארבע אמות הוא משום שסתם המשחקים בכדור, מתכוונים בהטלתו לקיר שילך למרחוק בחזרתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בהבנת דין חוץ/תוך ארבע אמות, ובהבנת טעמו. וניתן לחלק את דעותיהם לשתי קבוצות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בהבנת דין חוץ/תוך ארבע אמות, ובהבנת טעמו. וניתן לחלק את דעותיהם לשתי קבוצות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים שפירשו שההבדל בין שהרגה בתוך ד' אמות לבין חוץ לד' אמות נובע מדרישה שמעשהו של ההורג בפועל יבטא את המחשבה שחשב לעשות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשונים שפירשו שההבדל בין שהרגה בתוך ד' אמות לבין חוץ לד' אמות נובע מדרישה שמעשהו של ההורג בפועל יבטא את המחשבה שחשב לעשות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י <strong>בפירושו הראשון</strong> מסביר, שהחילוק בין בתוך ארבע אמות לבין מחוץ לארבע אמות אמור ברוצח בשוגג. בהתאמה, החיוב והפטור אמורים לגבי גלות. <strong>רש"י</strong> מתבסס על הדין הנפסק בבבא קמא (כו:), לפיו המתכוון לזרוק 2 אמות וזרק 4 והרג פטור מגלות (ומניח שבכל מקום בו לא נעשתה מחשבת הזורק הדין כך). לפיכך, אם הכדור שבסוגייתנו, שחזר מהקיר, הרג בקירוב ארבע אמות לקיר, פטור הזורקו, כיוון שהוא נתכוון שהכדור יפגע בריחוק מקום. לעומת זאת, אם הכדור פגע בריחוק מקום, כיוון שנעשית מחשבתו של הזורק, הרי הוא חייב גלות. כהסבר זה ביארו גם ה<strong>תוספות</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רש"י <strong>בפירושו הראשון</strong> מסביר, שהחילוק בין בתוך ארבע אמות לבין מחוץ לארבע אמות אמור ברוצח בשוגג. בהתאמה, החיוב והפטור אמורים לגבי גלות. <strong>רש"י</strong> מתבסס על הדין הנפסק בבבא קמא (כו:), לפיו המתכוון לזרוק 2 אמות וזרק 4 והרג פטור מגלות (ומניח שבכל מקום בו לא נעשתה מחשבת הזורק הדין כך). לפיכך, אם הכדור שבסוגייתנו, שחזר מהקיר, הרג בקירוב ארבע אמות לקיר, פטור הזורקו, כיוון שהוא נתכוון שהכדור יפגע בריחוק מקום. לעומת זאת, אם הכדור פגע בריחוק מקום, כיוון שנעשית מחשבתו של הזורק, הרי הוא חייב גלות. כהסבר זה ביארו גם ה<strong>תוספות</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפירושו השני מסביר רש"י <strong>שמדובר ברוצח </strong>במזיד<strong>, שהתרו בו לפני זריקת הכדור, ואמרו לו שהוא עלול לפגוע ולהרוג כי יש אנשים באיזור, והוא בכל זאת זרק. כיוון שדרך זורקי כדור לזרוק כך שיחזור מהכותל דרך רבה, הרי שאם הרג בריחוק מהקיר, חזקה שנעשה מה שהתכוון לעשות והרי הוא חייב מיתה. לעומת זאת, אם פגע בקרבת הקיר, אין דינו כמזיד גמור, כיוון שלא נעשתה מחשבתו, והרי הוא פטור ממיתה.</strong></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפירושו השני מסביר רש"י <strong>שמדובר ברוצח </strong>במזיד<strong>, שהתרו בו לפני זריקת הכדור, ואמרו לו שהוא עלול לפגוע ולהרוג כי יש אנשים באיזור, והוא בכל זאת זרק. כיוון שדרך זורקי כדור לזרוק כך שיחזור מהכותל דרך רבה, הרי שאם הרג בריחוק מהקיר, חזקה שנעשה מה שהתכוון לעשות והרי הוא חייב מיתה. לעומת זאת, אם פגע בקרבת הקיר, אין דינו כמזיד גמור, כיוון שלא נעשתה מחשבתו, והרי הוא פטור ממיתה.</strong></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים אחרים פירשו שהחילוק תוך/חוץ לד' אמות, כמו גם עצם המקרה של הזורק בקיר וחזרה, נובע מהשאלה מתי נחשב החפץ החוזר מהקיר כנע מכוחו של הזורק, כפי שיתבאר להלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשונים אחרים פירשו שהחילוק תוך/חוץ לד' אמות, כמו גם עצם המקרה של הזורק בקיר וחזרה, נובע מהשאלה מתי נחשב החפץ החוזר מהקיר כנע מכוחו של הזורק, כפי שיתבאר להלן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שראינו בהלכות הקודמות, בחיוב רוצח במזיד, תנאי הוא שהנהרג יהרג מכוחו הישיר של ההורג. לכן בא רבא ומחדש, שגם חפץ החוזר מקיר, נחשב ככוחו של הזורק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שראינו בהלכות הקודמות, בחיוב רוצח במזיד, תנאי הוא שהנהרג יהרג מכוחו הישיר של ההורג. לכן בא רבא ומחדש, שגם חפץ החוזר מקיר, נחשב ככוחו של הזורק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מסביר, שכאשר אבן המושלכת על הקיר חוזרת ממנו בעוצמה, ופוגעת בריחוק מקום, הרי זהו באופן מובהק כוחו של הזורק. לעומת זאת, כאשר האבן פוגעת בקירוב מקום, אין בה את כוחו של הזורק, מכיוון שכל אבן הנוגעת בקיר עלולה להינתז ממנו למרחק קטן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> מסביר, שכאשר אבן המושלכת על הקיר חוזרת ממנו בעוצמה, ופוגעת בריחוק מקום, הרי זהו באופן מובהק כוחו של הזורק. לעומת זאת, כאשר האבן פוגעת בקירוב מקום, אין בה את כוחו של הזורק, מכיוון שכל אבן הנוגעת בקיר עלולה להינתז ממנו למרחק קטן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם מלשון ה<strong>רמב"ם</strong>, הפוסק כדברי רבא וכברייתות, משמע שהוא מסביר שהחידוש בדין האבן החוזרת מהקיר הוא שמדובר בכוחו של הזורק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם מלשון ה<strong>רמב"ם</strong>, הפוסק כדברי רבא וכברייתות, משמע שהוא מסביר שהחידוש בדין האבן החוזרת מהקיר הוא שמדובר בכוחו של הזורק.</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">זרק אבן למעלה וחזרה והרגה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">זרק אבן למעלה וחזרה והרגה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בגמרא</strong> (עז:) מובאים דברי <strong>ר</strong><strong>ב</strong><strong> פפא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>בגמרא</strong> (עז:) מובאים דברי <strong>ר</strong><strong>ב</strong><strong> פפא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>רב פפא</strong> זרק צרור למעלה והלכה לצדדין והרגה חייב</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמר <strong>רב פפא</strong> זרק צרור למעלה והלכה לצדדין והרגה חייב</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מניחה שחייב משום שהאבן נחשבת ככוחו של הזורק. אמנם, הנחה זו יוצרת בעיה שהרי הזורק זרק את האבן כלפי מעלה, ואילו האבן פגעה כאשר נעה כלפי מטה. הגמרא מסיימת ומסבירה שבכל זאת חייב הזורק משום ש"כח כחוש הוא".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מניחה שחייב משום שהאבן נחשבת ככוחו של הזורק. אמנם, הנחה זו יוצרת בעיה שהרי הזורק זרק את האבן כלפי מעלה, ואילו האבן פגעה כאשר נעה כלפי מטה. הגמרא מסיימת ומסבירה שבכל זאת חייב הזורק משום ש"כח כחוש הוא".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר ש"כח כחוש" הכוונה לכך שעדיין האבן נעה לצדדים מכוחו של הזורק, ולכן נחשבת היא כפוגעת מכוחו והרי הוא חייב מיתה. אמנם, אם זרק את האבן ישירות למעלה, וירדה ופגעה באדם (כגון שהלך הזורק ובא אדם אחר), משמע מרש"י שפטור ממיתה, משום שאין כאן כוחו כלל. <strong>מלשון הרמב"ם</strong> משמע שאף הוא מחייב רק אם הלכה האבן לצדדים<sup id="ref51"><a href="#fn51">[51]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר ש"כח כחוש" הכוונה לכך שעדיין האבן נעה לצדדים מכוחו של הזורק, ולכן נחשבת היא כפוגעת מכוחו והרי הוא חייב מיתה. אמנם, אם זרק את האבן ישירות למעלה, וירדה ופגעה באדם (כגון שהלך הזורק ובא אדם אחר), משמע מרש"י שפטור ממיתה, משום שאין כאן כוחו כלל. <strong>מלשון הרמב"ם</strong> משמע שאף הוא מחייב רק אם הלכה האבן לצדדים<sup id="ref51"><a href="#fn51">[51]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הרמ"ה </strong>מסכים לפירושו של רש"י, ומדגיש, ששונה דין הזורק אבן ישירות למעלה וחזרה ונפלה והרגה, מדין העוזב אבן למעלה ונפלה למטה והרגה. במקרה הראשון, על פי סוגייתנו, פטור המשליך, כיוון שכלה כוחו והאבן נופלת מכח המשיכה, אמנם במקרה של עזיבת אבן בגובה, חייב העוזב, כי האבן נחשבת כחיציו שלו. הרמ"ה מסביר שדומה הדבר לדין המציף על חבירו זרם מים (עיין בנושא הבא).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>הרמ"ה </strong>מסכים לפירושו של רש"י, ומדגיש, ששונה דין הזורק אבן ישירות למעלה וחזרה ונפלה והרגה, מדין העוזב אבן למעלה ונפלה למטה והרגה. במקרה הראשון, על פי סוגייתנו, פטור המשליך, כיוון שכלה כוחו והאבן נופלת מכח המשיכה, אמנם במקרה של עזיבת אבן בגובה, חייב העוזב, כי האבן נחשבת כחיציו שלו. הרמ"ה מסביר שדומה הדבר לדין המציף על חבירו זרם מים (עיין בנושא הבא).</p>
                     
                 </div>
                 
                 <div id="topic-4-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המציף מים על חבירו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המציף מים על חבירו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בגמרא</strong> (עז:) מובא עוד בשם <strong>ר' פפא</strong>, שהכופת את חבירו ומסיט לכיוונו זרם מים ומת, חייב, שכן למרות שהמים זרמו מכח הכבידה, בכל זאת נחשבים הם ככוחו, והרי הם כחיציו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>בגמרא</strong> (עז:) מובא עוד בשם <strong>ר' פפא</strong>, שהכופת את חבירו ומסיט לכיוונו זרם מים ומת, חייב, שכן למרות שהמים זרמו מכח הכבידה, בכל זאת נחשבים הם ככוחו, והרי הם כחיציו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עם זאת, מחלקת הגמרא ואומרת, שההורג חייב מיתה דווקא אם הרגו המים את הנהרג "בכח ראשון" אך אם הרגוהו "בכח שני" מדובר בגרמא ופטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עם זאת, מחלקת הגמרא ואומרת, שההורג חייב מיתה דווקא אם הרגו המים את הנהרג "בכח ראשון" אך אם הרגוהו "בכח שני" מדובר בגרמא ופטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בהבנת המציאות של "כח ראשון" לעומת "כח שני"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בהבנת המציאות של "כח ראשון" לעומת "כח שני"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> וה<strong>מאירי</strong> מפרשים, שב"כח ראשון", מיד עם הסרת המחסום מהמים ותחילת זרימתם, נפגע הנהרג, כגון שהיה קרוב מאד למקום בו היו המים טרם שוחררו לזרום לכיוונו. לעומת זאת "כח שני" הוא כגון שעבר זמן משמעותי בין מעשה שחרור זרם המים לבין פגיעתם בנהרג, ובלשונו של רש"י- "לא נפלו המים מיד בצאתו מגדרותיהן עליו, אלא לאחר מכאן הלכו על המקום שהוא שם...".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> וה<strong>מאירי</strong> מפרשים, שב"כח ראשון", מיד עם הסרת המחסום מהמים ותחילת זרימתם, נפגע הנהרג, כגון שהיה קרוב מאד למקום בו היו המים טרם שוחררו לזרום לכיוונו. לעומת זאת "כח שני" הוא כגון שעבר זמן משמעותי בין מעשה שחרור זרם המים לבין פגיעתם בנהרג, ובלשונו של רש"י- "לא נפלו המים מיד בצאתו מגדרותיהן עליו, אלא לאחר מכאן הלכו על המקום שהוא שם...".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> מביא פירוש זה, וחולק עליו. לדבריו, גם אם פגעו המים בנהרג כעבור זמן ממעשה ההורג, עדיין חיציו שלו הם נחשבים, שהרי גם חיצים ממש, אפילו אם נורים הם ממרחק, נחשבים ככוחו של ההורג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"ה</strong> מביא פירוש זה, וחולק עליו. לדבריו, גם אם פגעו המים בנהרג כעבור זמן ממעשה ההורג, עדיין חיציו שלו הם נחשבים, שהרי גם חיצים ממש, אפילו אם נורים הם ממרחק, נחשבים ככוחו של ההורג.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לכן מפרש הרמ"ה אחרת, ומציע שני פירושים, שלדבריו שניהם נכונים להלכה. לפי פירושו הראשון, "כח ראשון" הוא כוחם של המים שהשתחררו מיד עם פתיחת המחסום. מים אלה, אפילו אם עברו דרך רבה עד שפגעו בנהרג, נחשבים חיציו של ההורג. לעומת זאת, המים הבאים אחריהם ("כח שני") כבר אינם תוצאה מיידית של מעשהו של ההורג, ואם דווקא הם שגרמו למוות, פטור ההורג. לפי פירושו השני, "כח ראשון" הוא כאשר הלכו המים בלי עיכוב ומבלי להיעצר באף מכשול בדרך, מה שאין כן כאשר נעצרו בדרך והתעכבו עד שהמשיכו והגיעו לנהרג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לכן מפרש הרמ"ה אחרת, ומציע שני פירושים, שלדבריו שניהם נכונים להלכה. לפי פירושו הראשון, "כח ראשון" הוא כוחם של המים שהשתחררו מיד עם פתיחת המחסום. מים אלה, אפילו אם עברו דרך רבה עד שפגעו בנהרג, נחשבים חיציו של ההורג. לעומת זאת, המים הבאים אחריהם ("כח שני") כבר אינם תוצאה מיידית של מעשהו של ההורג, ואם דווקא הם שגרמו למוות, פטור ההורג. לפי פירושו השני, "כח ראשון" הוא כאשר הלכו המים בלי עיכוב ומבלי להיעצר באף מכשול בדרך, מה שאין כן כאשר נעצרו בדרך והתעכבו עד שהמשיכו והגיעו לנהרג.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>רמב"ם</strong> "והוא שימות מכח ראשון <strong>הבא ממעשיו</strong>", נראה לדייק שהוא סובר כאחד מפירושי רמ"ה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>רמב"ם</strong> "והוא שימות מכח ראשון <strong>הבא ממעשיו</strong>", נראה לדייק שהוא סובר כאחד מפירושי רמ"ה.</p>
                     
                 </div>
                 
@@ -1249,7 +1249,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1328,6 +1328,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות חובל ומזיק - פרק ח'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ח')</h3>
                 <ul class="space-y-3">
@@ -1038,7 +1038,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1050,23 +1050,23 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">פרק זה מתחלק לשנים. עד הלכה יא הפרק עוסק בדיני המוסר, ומהלכה יב עד סופו עוסק הפרק בהיבטים ממוניים שונים של דיני הרודף.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">פרק זה מתחלק לשנים. עד הלכה יא הפרק עוסק בדיני המוסר, ומהלכה יב עד סופו עוסק הפרק בהיבטים ממוניים שונים של דיני הרודף.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">המוסר ממון חבירו הוא הגורם לכך שאדם שלישי (ה"אנס") יקח את ממון חבירו. הלכה א מלמדת את הדין העקרוני, שהמוסר ממון חבירו, אפילו בדיבור בלבד, חייב כאילו הזיקו. לדעת הרמב"ם ועוד ראשונים חיובו הוא מעיקר הדין, כאדם המזיק, כיון שמדובר על גרמי, ואילו לדעת ראשונים אחרים, חיובו הוא מדרבנן, כקנס.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">המוסר ממון חבירו הוא הגורם לכך שאדם שלישי (ה"אנס") יקח את ממון חבירו. הלכה א מלמדת את הדין העקרוני, שהמוסר ממון חבירו, אפילו בדיבור בלבד, חייב כאילו הזיקו. לדעת הרמב"ם ועוד ראשונים חיובו הוא מעיקר הדין, כאדם המזיק, כיון שמדובר על גרמי, ואילו לדעת ראשונים אחרים, חיובו הוא מדרבנן, כקנס.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ב-ד עוסקות באדם שמסר את ממון חבירו מתוך אונס, כלומר, שאיימו עליו שאם לא יסגיר את ממון חבירו, יקחו את ממונו שלו או שחמור מכך, יזיקו את גופו. ההלכה העקרונית במקרה שכזה היא שהמוסר פטור כל עוד מסר בדיבור (כלומר, הסגיר את מיקום ממון חבירו) ולא נטל את הממון במעשה ממש. אמנם התלבטו ראשונים מה היחס בין הלכה זו, לבין ההלכה הידועה שהמציל את עצמו בממון חבירו חייב. ניתן לחלק את שיטות הפוסקים לשלוש קבוצות. לפי האחת יש להתנות את <strong>הפטור</strong> בכך שהדרישה המקורית של האנס תהיה מכוונת לממון החבר, וגם שההסגרה של ממון החבר תהיה בדיבור ולא במעשה. השיטה הנגדית היא, שבכדי <strong>לחייב</strong> את המוסר מתוך אונסו צריך שיהיה במעשה וגם שהדרישה המקורית לא תהיה לממון חבירו בדווקא. שיטת הביניים היא שהמוסר בדיבור מתוך אונסו פטור תמיד, והמוסר במעשה חייב תמיד.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ב-ד עוסקות באדם שמסר את ממון חבירו מתוך אונס, כלומר, שאיימו עליו שאם לא יסגיר את ממון חבירו, יקחו את ממונו שלו או שחמור מכך, יזיקו את גופו. ההלכה העקרונית במקרה שכזה היא שהמוסר פטור כל עוד מסר בדיבור (כלומר, הסגיר את מיקום ממון חבירו) ולא נטל את הממון במעשה ממש. אמנם התלבטו ראשונים מה היחס בין הלכה זו, לבין ההלכה הידועה שהמציל את עצמו בממון חבירו חייב. ניתן לחלק את שיטות הפוסקים לשלוש קבוצות. לפי האחת יש להתנות את <strong>הפטור</strong> בכך שהדרישה המקורית של האנס תהיה מכוונת לממון החבר, וגם שההסגרה של ממון החבר תהיה בדיבור ולא במעשה. השיטה הנגדית היא, שבכדי <strong>לחייב</strong> את המוסר מתוך אונסו צריך שיהיה במעשה וגם שהדרישה המקורית לא תהיה לממון חבירו בדווקא. שיטת הביניים היא שהמוסר בדיבור מתוך אונסו פטור תמיד, והמוסר במעשה חייב תמיד.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ה עוסקת באנשים שרבו על רכוש, ועמד אחד מהם ומסרו לגוי. בהלכה זו נפסק, שחובה על המוסר לפדות את הרכוש ולהביא את הסכסוך להכרעת בית דין של תורה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ה עוסקת באנשים שרבו על רכוש, ועמד אחד מהם ומסרו לגוי. בהלכה זו נפסק, שחובה על המוסר לפדות את הרכוש ולהביא את הסכסוך להכרעת בית דין של תורה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ו דנה במקרה בו ממון שאמור היה להילקח מאדם אחד נלקח מאדם אחר. במקרה זה, אם מדובר בממון השווה לכל נפש, כמו למשל מס הגולגולת הקבוע, צריך האדם עבורו שולם, לשלם לזה שנלקח ממנו הכסף.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ו דנה במקרה בו ממון שאמור היה להילקח מאדם אחד נלקח מאדם אחר. במקרה זה, אם מדובר בממון השווה לכל נפש, כמו למשל מס הגולגולת הקבוע, צריך האדם עבורו שולם, לשלם לזה שנלקח ממנו הכסף.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ז עוסקת במקרה בו המוסר אינו מודה לניזק באשר לכמות הנכסים שלאובדנם גרם. במקרה זה מתלבטת הגמרא האם תיקנו שישבע הניזק ויטול כדבריו, ונשארת בספק. לכן פוסק הרמב"ם שאם תפס הניזק, ישבע ודיו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ז עוסקת במקרה בו המוסר אינו מודה לניזק באשר לכמות הנכסים שלאובדנם גרם. במקרה זה מתלבטת הגמרא האם תיקנו שישבע הניזק ויטול כדבריו, ונשארת בספק. לכן פוסק הרמב"ם שאם תפס הניזק, ישבע ודיו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכות ח-יא נלמדות הלכות הקשורות לאיסור למסור ממון ישראל ולסנקציות הננקטות כנגד מוסרים (שמסרו שלא באונס). ראשית, המוסר פסול לעדות. שנית, מוסר שידוע שעומד למסור ממון חבירו, מצווה להורגו כדי למנוע זאת לפי הרא"ש טעם הדבר הוא שמתוך שמוסר לעניין ממון, מסכן גם את נפשו של חבירו. לגבי האיסור למסור, ישנו היתר למסור אדם מישראל לגויים רק אם מדובר באדם המיצר לציבור כולו ומצערו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בהלכות ח-יא נלמדות הלכות הקשורות לאיסור למסור ממון ישראל ולסנקציות הננקטות כנגד מוסרים (שמסרו שלא באונס). ראשית, המוסר פסול לעדות. שנית, מוסר שידוע שעומד למסור ממון חבירו, מצווה להורגו כדי למנוע זאת לפי הרא"ש טעם הדבר הוא שמתוך שמוסר לעניין ממון, מסכן גם את נפשו של חבירו. לגבי האיסור למסור, ישנו היתר למסור אדם מישראל לגויים רק אם מדובר באדם המיצר לציבור כולו ומצערו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות יב-יד מבארות את דינו של רודף, נרדף ומציל, שהזיקו תוך כדי המרדף. במקרה של רודף שרדף אחר חבירו להורגו והזיק תוך כדי כך, כיוון שמצווה להרוג את הרודף בכדי להציל את הנרדף, פטור הרודף על ממון שהזיק, מדין חייבי מיתות הפטורים מממון אפילו הם שוגגין. במקרה שהנרדף הזיק את ממון הרודף, פטור אף הוא, כי אפילו להורגו יש לו רשות. במקרה שאדם שלישי שמנסה להציל את הנרדף הזיק תוך כדי מאמצי ההצלה, פטור הוא, אפילו הזיק ממון של אדם אחר, וזאת מתקנת חכמים, כדי שאנשים לא ימנעו מלהציל.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות יב-יד מבארות את דינו של רודף, נרדף ומציל, שהזיקו תוך כדי המרדף. במקרה של רודף שרדף אחר חבירו להורגו והזיק תוך כדי כך, כיוון שמצווה להרוג את הרודף בכדי להציל את הנרדף, פטור הרודף על ממון שהזיק, מדין חייבי מיתות הפטורים מממון אפילו הם שוגגין. במקרה שהנרדף הזיק את ממון הרודף, פטור אף הוא, כי אפילו להורגו יש לו רשות. במקרה שאדם שלישי שמנסה להציל את הנרדף הזיק תוך כדי מאמצי ההצלה, פטור הוא, אפילו הזיק ממון של אדם אחר, וזאת מתקנת חכמים, כדי שאנשים לא ימנעו מלהציל.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה טו עוסקת במקרה בו הושלכה סחורה מספינה המחשבת לטבוע. הרמב"ם פוסק שמשליך הסחורה פטור, כיוון שהסחורה נחשבת כרודף. רבים מהראשונים כתבו, שדין זה אמור דווקא כאשר הסחורה האמורה הוכנסה בפשיעה לספינה, כגון שאין הדבר נהוג, או שהוכנסה כשכבר היתה הספינה מלאה עד המקסימום.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה טו עוסקת במקרה בו הושלכה סחורה מספינה המחשבת לטבוע. הרמב"ם פוסק שמשליך הסחורה פטור, כיוון שהסחורה נחשבת כרודף. רבים מהראשונים כתבו, שדין זה אמור דווקא כאשר הסחורה האמורה הוכנסה בפשיעה לספינה, כגון שאין הדבר נהוג, או שהוכנסה כשכבר היתה הספינה מלאה עד המקסימום.</p>
                 
             </div>
             
@@ -1074,37 +1074,37 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המוסר ממון חבירו ביד אנס חייב לשלם מן היפה שבנכסיו, ואם מת גובין מיורשיו כשאר כל המזיקין, בין שהיה האנס גוי בין שהיה ישראל הרי זה המוסר חייב לשלם כל מה שלקח האנס אף על פי שלא נשא המוסר ולא נתן בידו אלא הרגיל בלבד. </strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוסר ממון חבירו – מבוא</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המוסר ממון חבירו – מבוא</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שנינו ב<strong>משנה</strong> (קטז:):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שנינו ב<strong>משנה</strong> (קטז:):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הגוזל שדה מחבירו ונטלוה מסיקין-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הגוזל שדה מחבירו ונטלוה מסיקין-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם מכת מדינה היא אומר לו הרי שלך לפניך,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם מכת מדינה היא אומר לו הרי שלך לפניך,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם מחמת הגזלן חייב להעמיד לו שדה אחר"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם מחמת הגזלן חייב להעמיד לו שדה אחר"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם שדה נלקחה (ע"י המלך וכדומה) ממי שגזלה, באופן שאף לו לא היה גוזלה, היתה נלקחת מבעליה, הגזלן אינו חייב להעמיד לנגזל שדה אחרת. אמנם, אם נלקחה השדה מהגזלן באופן בו לו היתה נשארת אצל הנגזל לא היתה נלקחת, חייב הגזלן להעמיד לו שדה אחרת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם שדה נלקחה (ע"י המלך וכדומה) ממי שגזלה, באופן שאף לו לא היה גוזלה, היתה נלקחת מבעליה, הגזלן אינו חייב להעמיד לנגזל שדה אחרת. אמנם, אם נלקחה השדה מהגזלן באופן בו לו היתה נשארת אצל הנגזל לא היתה נלקחת, חייב הגזלן להעמיד לו שדה אחרת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מפרשת, שהסיפא של המשנה ("אם מחמת הגזלן...") כוללת גם מצב בו אדם מסר שדה של חברו לידי המלך, אפילו שלא עשה דבר בידיו בפועל, אלא רק גרם בדיבורו לכך שהמלך, או ליסטים וכיוצא בהם יטלו את השדה (בלשון הגמרא- "דאחוי אחוויי"- שהראה להם את השדה), וגם במצב כזה מחייבת המשנה את המוסר לפצות את הבעלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מפרשת, שהסיפא של המשנה ("אם מחמת הגזלן...") כוללת גם מצב בו אדם מסר שדה של חברו לידי המלך, אפילו שלא עשה דבר בידיו בפועל, אלא רק גרם בדיבורו לכך שהמלך, או ליסטים וכיוצא בהם יטלו את השדה (בלשון הגמרא- "דאחוי אחוויי"- שהראה להם את השדה), וגם במצב כזה מחייבת המשנה את המוסר לפצות את הבעלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא ממשיכה ומספרת על <strong>ר' נחמן</strong> שחייב אדם שהראה ערימת חיטים של ריש גלותא לגזלנים. כשנשאל ר' נחמן האם מדובר בקנס או בדין של ממש, ענה שמקור הדין הוא ממשנתנו, ומשמע שכוונתו היא שמדובר על דין ממש, ולא רק על קנס.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא ממשיכה ומספרת על <strong>ר' נחמן</strong> שחייב אדם שהראה ערימת חיטים של ריש גלותא לגזלנים. כשנשאל ר' נחמן האם מדובר בקנס או בדין של ממש, ענה שמקור הדין הוא ממשנתנו, ומשמע שכוונתו היא שמדובר על דין ממש, ולא רק על קנס.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכאן יש מהראשונים (וה<strong>רמב"ם</strong> בכללם), שהבינו שגרימת נזק (גרמי) היא נזק לכל דבר, וחייבים עליה כעל נזק בידיים, לדידם דין המוסר הוא משום מזיק בגרמי. לכן, אין דינו שונה משל כל מזיק אחר, ולאחר מותו יש לחייב את בנו תחתיו. לעומתם, הראשונים שפסקו שכל חיוב בגרימת נזק בלתי ישירה אינו אלא מתקנת חכמים, הבינו שאף דין המוסר בכלל זה, ומתוך שקונסים את המוסר, ולא את בנו, הרי שאם מת המוסר, בנו פטור מלשלם. (עוד בעניין מחלוקת זו יעויין לעיל פרק ז הלכות ז-ח).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכאן יש מהראשונים (וה<strong>רמב"ם</strong> בכללם), שהבינו שגרימת נזק (גרמי) היא נזק לכל דבר, וחייבים עליה כעל נזק בידיים, לדידם דין המוסר הוא משום מזיק בגרמי. לכן, אין דינו שונה משל כל מזיק אחר, ולאחר מותו יש לחייב את בנו תחתיו. לעומתם, הראשונים שפסקו שכל חיוב בגרימת נזק בלתי ישירה אינו אלא מתקנת חכמים, הבינו שאף דין המוסר בכלל זה, ומתוך שקונסים את המוסר, ולא את בנו, הרי שאם מת המוסר, בנו פטור מלשלם. (עוד בעניין מחלוקת זו יעויין לעיל פרק ז הלכות ז-ח).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> (קונטרס דינא דגרמי ד"ה "שיסה בו") מבהיר, שהמוסר חייב רק אם היה ממון חברו מכוסה ושמור, ובדיבורו גילהו וחשף אותו לחומסים. לעומת זה, אם הממון היה גלוי, כך שהגזלנים יכלו לקחתו גם מעצמם, והמוסר רק שיכנע אותם לעשות זאת, אין זה אלא גרמא<sup id="ref103"><a href="#fn103">[103]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ן</strong> (קונטרס דינא דגרמי ד"ה "שיסה בו") מבהיר, שהמוסר חייב רק אם היה ממון חברו מכוסה ושמור, ובדיבורו גילהו וחשף אותו לחומסים. לעומת זה, אם הממון היה גלוי, כך שהגזלנים יכלו לקחתו גם מעצמם, והמוסר רק שיכנע אותם לעשות זאת, אין זה אלא גרמא<sup id="ref103"><a href="#fn103">[103]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפח ב) פסק כראשונים הסוברים שהמוסר הוא מזיק ממש, ולכן חייב את בן המוסר לאחר מיתתו. לעומתו, ה<strong>רמ"א</strong> פסק כדעה החולקת, ולכן חייב את הבן לאחר מות האב, רק אם כבר עמד האב בדין ונתחייב, שאז הרי זה כחוב ממוני העובר לבן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפח ב) פסק כראשונים הסוברים שהמוסר הוא מזיק ממש, ולכן חייב את בן המוסר לאחר מיתתו. לעומתו, ה<strong>רמ"א</strong> פסק כדעה החולקת, ולכן חייב את הבן לאחר מות האב, רק אם כבר עמד האב בדין ונתחייב, שאז הרי זה כחוב ממוני העובר לבן.</p>
                     
                 </div>
                 
@@ -1112,49 +1112,49 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב-ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב-ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>במה דברים אמורים בשהראה המוסר מעצמו אבל אם אנסוהו גוים או ישראל אנס להראות והראה הרי זה פטור מן התשלומין, ואם נשא ונתן ביד אף על פי שהוא אנוס חייב לשלם, שהמציל עצמו בממון חבירו חייב לשלם. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כיצד, הרי שגזר המלך להביא לו יין או תבן וכיוצא בדברים אלו ועמד מוסר ואמר הרי יש לפלוני אוצר יין או תבן במקום פלוני והלכו ולקחוהו חייב לשלם, אנסו המלך למוסר זה עד שיראה לו אוצרות יין או תבן או עד שיראה לו ממון פלוני שהוא בורח מלפניו והראה לו מפני האונס הרי זה פטור, שאם לא יראה לו יכהו או ימיתהו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>נשא ממון חבירו בידו ונתנו לאנס חייב לשלם מכל מקום אף על פי שהמלך אנסו להביא, במה דברים אמורים שאם אנסו להביא והביא חייב בשלא הגיע הממון לרשות האנס, אבל אנס שאנס ישראל עד שהראהו ועמד האנס על הממון ונעשה ברשותו ואנס את ישראל עד שהוליכו לו למקום אחר, ואפילו הוליכו זה המוסר שהראה הרי זה פטור מלשלם, שכיון שעמד האנס בצד האוצר כבר אבד כל מה שיש בו וכאילו נשרף. </strong>נשא ממון חבירו בידו ונתנו לאנס חייב לשלם מכל מקום אף על פי שהמלך אנסו להביא. א"א גם בזה על דרך הרב הוא הולך ואין הגאון מודה לו וכן בדין שאין לך דבר שעומד בפני פיקוח נפש ומאין יתחייב לו זה שימות בשביל ממון חבירו הואיל וייחדו לו בפירוש וכבר הרחבנו בדברים האלו בפירוש בבא קמא.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוסר ממון חברו מתוך אונס</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המוסר ממון חברו מתוך אונס</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קיז.) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (קיז.) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ישראל שאנסוהו עובדי כוכבים והראה ממון חבירו- פטור,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ישראל שאנסוהו עובדי כוכבים והראה ממון חבירו- פטור,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם נטל ונתן ביד חייב"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם נטל ונתן ביד חייב"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המוסר ממון חברו חייב רק אם היתה לו ברירה, אך אם אנסוהו לכך (למשל, על ידי איומים במוות או הכאה)- פטור. אמנם, אם מסירת הממון לא היתה רק על ידי דיבור, אלא על ידי מעשה בפועל, חייב המוסר אפילו אם אנסוהו הגויים לעשות כך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, המוסר ממון חברו חייב רק אם היתה לו ברירה, אך אם אנסוהו לכך (למשל, על ידי איומים במוות או הכאה)- פטור. אמנם, אם מסירת הממון לא היתה רק על ידי דיבור, אלא על ידי מעשה בפועל, חייב המוסר אפילו אם אנסוהו הגויים לעשות כך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על ברייתא זו מעיר <strong>רבה</strong> ש"אם הראה מעצמו כנשא ונתן ביד דמי". כלומר, אם הראה ממון חברו שלא מתוך אונס, הרי זה כאילו גזלו ביד ממש, וחייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על ברייתא זו מעיר <strong>רבה</strong> ש"אם הראה מעצמו כנשא ונתן ביד דמי". כלומר, אם הראה ממון חברו שלא מתוך אונס, הרי זה כאילו גזלו ביד ממש, וחייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבהירה עוד וקובעת שאם לאחר שגילה המוסר מתוך אונסו את מקום הרכוש, יכול האנס בעצמו לקחת את הרכוש, פטור המוסר אפילו אם לקח בידיו את הרכוש ונתנו לאנס, שכן אין מניעה לאנס לקחת בעצמו גם ללא עזרת המוסר, ונמצא שלקיחת המוסר אינה כלום. רק כאשר לא היה האנס יכול להגיע לרכוש לולא היה המוסר נושא ונותן ביד, חייב המוסר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מבהירה עוד וקובעת שאם לאחר שגילה המוסר מתוך אונסו את מקום הרכוש, יכול האנס בעצמו לקחת את הרכוש, פטור המוסר אפילו אם לקח בידיו את הרכוש ונתנו לאנס, שכן אין מניעה לאנס לקחת בעצמו גם ללא עזרת המוסר, ונמצא שלקיחת המוסר אינה כלום. רק כאשר לא היה האנס יכול להגיע לרכוש לולא היה המוסר נושא ונותן ביד, חייב המוסר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (קיז:) מובא מקרה בו אדם שהפקידו אצלו גביע כסף, נתנו לגנבים שבאו לביתו בכדי להציל את עצמו. ר' אשי פוסק במקרה כזה, שאם מדובר באדם אמיד, יש להניח שהגנבים באו בכדי לגנוב ממנו, ונמצא שהציל את עצמו בממון חברו. לעומת זה, אם הוא עני, סביר שהגנבים באו לגנוב את אותו גביע הכסף המופקד אצלו שנתן להם, ולכן פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך (קיז:) מובא מקרה בו אדם שהפקידו אצלו גביע כסף, נתנו לגנבים שבאו לביתו בכדי להציל את עצמו. ר' אשי פוסק במקרה כזה, שאם מדובר באדם אמיד, יש להניח שהגנבים באו בכדי לגנוב ממנו, ונמצא שהציל את עצמו בממון חברו. לעומת זה, אם הוא עני, סביר שהגנבים באו לגנוב את אותו גביע הכסף המופקד אצלו שנתן להם, ולכן פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שיטות הראשונים השונות עומדות על ההבדלים בין מסירה במעשה למסירה בדיבור וכמו כן, בין מקרה בו האנס חפץ מראש בממון חברו לבין מקרה בו האנס חפץ בממון הנאנס עצמו (או בסתם ממון)<sup id="ref104"><a href="#fn104">[104]</a></sup>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שיטות הראשונים השונות עומדות על ההבדלים בין מסירה במעשה למסירה בדיבור וכמו כן, בין מקרה בו האנס חפץ מראש בממון חברו לבין מקרה בו האנס חפץ בממון הנאנס עצמו (או בסתם ממון)<sup id="ref104"><a href="#fn104">[104]</a></sup>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong> פסק, שכל הפטור שפוטרת הגמרא את המוסר ממון חברו מתוך אונס, אינו אלא במקום בו האנס ביקש את ממון החבר<sup id="ref105"><a href="#fn105">[105]</a></sup>, אך אם האנס ביקש ממון סתם, וכדי להינצל מהאנס גילה לו הנאנס היכן נמצא ממון חברו, חייב, שכן הציל עצמו בממון חברו. לגבי ההבדל בין מסירה במעשה למסירה בדיבור פוסק הרשב"א שעל כל מסירה במעשה חייב המוסר, אפילו אם נעשית מתוך אונס, ואפילו אם מראש בא האנס לבקש את ממון חבירו. וכן משמע מלשון ה<strong>טור</strong> (שפח).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"א</strong> פסק, שכל הפטור שפוטרת הגמרא את המוסר ממון חברו מתוך אונס, אינו אלא במקום בו האנס ביקש את ממון החבר<sup id="ref105"><a href="#fn105">[105]</a></sup>, אך אם האנס ביקש ממון סתם, וכדי להינצל מהאנס גילה לו הנאנס היכן נמצא ממון חברו, חייב, שכן הציל עצמו בממון חברו. לגבי ההבדל בין מסירה במעשה למסירה בדיבור פוסק הרשב"א שעל כל מסירה במעשה חייב המוסר, אפילו אם נעשית מתוך אונס, ואפילו אם מראש בא האנס לבקש את ממון חבירו. וכן משמע מלשון ה<strong>טור</strong> (שפח).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>רמב"ם</strong> משמע שהמוסר ממון חברו בדיבור ומתוך אונס, פטור אפילו אם לא נתבקש לתת דווקא את ממון החבר אלא ממון באופן כללי<sup id="ref106"><a href="#fn106">[106]</a></sup> (ובלבד שלנאנס אין ממון משל עצמו לתת<sup id="ref107"><a href="#fn107">[107]</a></sup>). בכך חלוק הרמב"ם על הרשב"א. אמנם מודה הרמב"ם לרשב"א לעניין זה שהמוסר במעשה חייב תמיד, אפילו אם עשה זאת מתוך אונס<sup id="ref108"><a href="#fn108">[108]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>רמב"ם</strong> משמע שהמוסר ממון חברו בדיבור ומתוך אונס, פטור אפילו אם לא נתבקש לתת דווקא את ממון החבר אלא ממון באופן כללי<sup id="ref106"><a href="#fn106">[106]</a></sup> (ובלבד שלנאנס אין ממון משל עצמו לתת<sup id="ref107"><a href="#fn107">[107]</a></sup>). בכך חלוק הרמב"ם על הרשב"א. אמנם מודה הרמב"ם לרשב"א לעניין זה שהמוסר במעשה חייב תמיד, אפילו אם עשה זאת מתוך אונס<sup id="ref108"><a href="#fn108">[108]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינו חננאל</strong> (מובא ברשב"א), <strong>רב האי גאון</strong> ו<strong>רבינו אפרים</strong> (מובא ב<strong>בעל המאור</strong>) פוסקים שהברייתא הפוטרת את המוסר ממון חברו בדיבור והמחייבת את הנושא ונותן ביד, אמורה דווקא במקרה שהאנס לא ביקש במפורש את ממון החבר, אך אם האנס ביקש את ממון חבירו פטור המוסר בכל מקרה, אפילו אם מסר במעשה ממש, שכן אין זה בכלל המציל את עצמו בממון חבירו, כיוון שמראש דרישת האנס התכוונה לממון חבירו<sup id="ref109"><a href="#fn109">[109]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבינו חננאל</strong> (מובא ברשב"א), <strong>רב האי גאון</strong> ו<strong>רבינו אפרים</strong> (מובא ב<strong>בעל המאור</strong>) פוסקים שהברייתא הפוטרת את המוסר ממון חברו בדיבור והמחייבת את הנושא ונותן ביד, אמורה דווקא במקרה שהאנס לא ביקש במפורש את ממון החבר, אך אם האנס ביקש את ממון חבירו פטור המוסר בכל מקרה, אפילו אם מסר במעשה ממש, שכן אין זה בכלל המציל את עצמו בממון חבירו, כיוון שמראש דרישת האנס התכוונה לממון חבירו<sup id="ref109"><a href="#fn109">[109]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפח ב) פסק כדברי הרמב"ם במחלוקת זו, וה<strong>רמ"א</strong> פסק כדברי הטור והרשב"א.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפח ב) פסק כדברי הרמב"ם במחלוקת זו, וה<strong>רמ"א</strong> פסק כדברי הטור והרשב"א.</p>
                     
                 </div>
                 
@@ -1162,35 +1162,35 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בעלי דין שהיתה ביניהם מריבה על קרקע או על מטלטלין, זה אומר שלי וזה אומר שלי, ועמד אחד מהן ומסרה ביד גוים מנדין אותו עד שיחזיר הדבר לכמות שהיה ויסלק יד האנס מביניהם ויעשו דין בישראל. </strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוסר ממון המוטל בספק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המוסר ממון המוטל בספק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (קיז.) מעלה מקרה של שניים שרבו על מכמורת, כל אחד מהם טוען לבעלות עליה. עד שבסופו של דבר האחד מסרה למלכות. וחלקו האמוראים בדבר:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (קיז.) מעלה מקרה של שניים שרבו על מכמורת, כל אחד מהם טוען לבעלות עליה. עד שבסופו של דבר האחד מסרה למלכות. וחלקו האמוראים בדבר:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אביי</strong> אומר שיכול המוסר לומר שאת שלו הוא מוסר, וכיוון שאין לנו הוכחות שהמכמורת שייכת דווקא לחברו ולא לו, אין באפשרותנו להפעיל כנגדו שום סנקציה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אביי</strong> אומר שיכול המוסר לומר שאת שלו הוא מוסר, וכיוון שאין לנו הוכחות שהמכמורת שייכת דווקא לחברו ולא לו, אין באפשרותנו להפעיל כנגדו שום סנקציה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> לעומתו, סובר שיש לנדות את המוסר עד שיפדה את הנכס ויבררו את המחלוקת שביניהם בבית דין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> לעומתו, סובר שיש לנדות את המוסר עד שיפדה את הנכס ויבררו את המחלוקת שביניהם בבית דין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א </strong>מבאר, שמחלוקת אביי ורבא היא רק כאשר סביר שפסק בית הדין יהיה 'כל דאלים גבר'<sup id="ref110"><a href="#fn110">[110]</a></sup>, כלומר אביי מפרש שהמסירה לגוי היא מימוש של 'כל דאלים גבר' ולכן אין לנו להתערב בה, ואילו רבא סובר שכל עוד לא פסקו בית הדין במפורש ש'כל דאלים גבר', אין לאף צד את הרשות למסור את הרכוש לגוי חזק. משמע מדברים אלה, שלאחר שבית דין פסקו 'כל דאלים גבר' מסכימים כולם שיכול אחד מהצדדים למסור את השדה ואין מנדים אותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"א </strong>מבאר, שמחלוקת אביי ורבא היא רק כאשר סביר שפסק בית הדין יהיה 'כל דאלים גבר'<sup id="ref110"><a href="#fn110">[110]</a></sup>, כלומר אביי מפרש שהמסירה לגוי היא מימוש של 'כל דאלים גבר' ולכן אין לנו להתערב בה, ואילו רבא סובר שכל עוד לא פסקו בית הדין במפורש ש'כל דאלים גבר', אין לאף צד את הרשות למסור את הרכוש לגוי חזק. משמע מדברים אלה, שלאחר שבית דין פסקו 'כל דאלים גבר' מסכימים כולם שיכול אחד מהצדדים למסור את השדה ואין מנדים אותו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד </strong>(מובא בשטמ"ק) חולק ומסביר שמדובר במקרה שבית הדין כבר פסקו 'כל דאלים גבר', ובכל זאת אסור למסור את הנכס, וכמו כן אין להורישו או למוכרו, אלא כל זמן שאנו בספק כל המחזיק בנכס (מבין שני הצדדים הניצים) זכה. עוד מוסיף הראב"ד, שכאשר שניהם אוחזים בנכס, שאז הדין בממון המוטל בספק הוא 'יחלוקו', בוודאי שאם אחד מהם מסר לגוי, דין מוסר יש לו בין לרבא ובין לאביי, וחייב לפצות את חברו על חלקו שהפסידו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד </strong>(מובא בשטמ"ק) חולק ומסביר שמדובר במקרה שבית הדין כבר פסקו 'כל דאלים גבר', ובכל זאת אסור למסור את הנכס, וכמו כן אין להורישו או למוכרו, אלא כל זמן שאנו בספק כל המחזיק בנכס (מבין שני הצדדים הניצים) זכה. עוד מוסיף הראב"ד, שכאשר שניהם אוחזים בנכס, שאז הדין בממון המוטל בספק הוא 'יחלוקו', בוודאי שאם אחד מהם מסר לגוי, דין מוסר יש לו בין לרבא ובין לאביי, וחייב לפצות את חברו על חלקו שהפסידו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שאלה נוספת העולה בראשונים היא האם רבא מתכוון שיש למוסר במקרה דנן דין מוסר ממש, כלומר, אם לא יצליח לפדות את הנכס מהגוי, האם יאלץ לשלם לחבירו או לא, וכמו כן, האם חלות עליו הסנקציות כדין המוסר כמבואר לקמן בהלכות ח' ו-י'-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שאלה נוספת העולה בראשונים היא האם רבא מתכוון שיש למוסר במקרה דנן דין מוסר ממש, כלומר, אם לא יצליח לפדות את הנכס מהגוי, האם יאלץ לשלם לחבירו או לא, וכמו כן, האם חלות עליו הסנקציות כדין המוסר כמבואר לקמן בהלכות ח' ו-י'-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מרדכי</strong> (סי' קצג) מביא בשם ר' אליעזר מטולא, שכאשר המוסר עשה את מעשיו לא בכדי להזיק לחברו אלא בכדי לחלץ ממון שלפי דעתו שייך לו, אין לו דין מוסר, וההלכה שמנדים אותו עד שיתקן את מעשיו מטרתה רק למנוע מעשים כאלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מרדכי</strong> (סי' קצג) מביא בשם ר' אליעזר מטולא, שכאשר המוסר עשה את מעשיו לא בכדי להזיק לחברו אלא בכדי לחלץ ממון שלפי דעתו שייך לו, אין לו דין מוסר, וההלכה שמנדים אותו עד שיתקן את מעשיו מטרתה רק למנוע מעשים כאלה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זה, ה<strong>רא"ש</strong> (בשו"ת כלל יז סימן ד) כותב, שמי שמוסר דינו לפני בית דין של גויים בשעה שבעל דינו מוכן לדון עימו בדין ישראל יש לו דין מוסר וניתן לנהוג כנגדו בסנקציות הנוהגות כלפי מוסרים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זה, ה<strong>רא"ש</strong> (בשו"ת כלל יז סימן ד) כותב, שמי שמוסר דינו לפני בית דין של גויים בשעה שבעל דינו מוכן לדון עימו בדין ישראל יש לו דין מוסר וניתן לנהוג כנגדו בסנקציות הנוהגות כלפי מוסרים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפח ה) פוסק כדברי הרמב"ם, שכתב את הדין בפשטות ולא חילק בין סוגי ממון המוטל בספק. ה<strong>רמ"א</strong> מביא את שתי הדעות לגבי הגדרתו כמוסר של אדם שמסר ממון ששייך לו לפי דעתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפח ה) פוסק כדברי הרמב"ם, שכתב את הדין בפשטות ולא חילק בין סוגי ממון המוטל בספק. ה<strong>רמ"א</strong> מביא את שתי הדעות לגבי הגדרתו כמוסר של אדם שמסר ממון ששייך לו לפי דעתו.</p>
                     
                 </div>
                 
@@ -1198,33 +1198,33 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מי שנתפש על חבירו ולקחו ממנו גוים ממון בגלל חבירו אין חבירו חייב לשלם, ואין לך מי שנתפש על חבירו ויהיה חבירו חייב לשלם לו חוץ מן הנתפש מפני המס הקצוב על כל איש ואיש בכל שנה, או הנתפש על התשורה שנותן כל איש ואיש למלך כשיעבור עליהם הוא או חיילותיו הרי זה חייב לשלם לו, והוא שיקחו ממנו בפירוש בגלל פלוני בפני עדים. </strong>
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מי שלקחו ממנו כסף שהיה אמור להילקח מחברו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מי שלקחו ממנו כסף שהיה אמור להילקח מחברו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ירושלמי</strong> (פרק י הלכה ו) מובאת מחלוקת אמוראים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>ירושלמי</strong> (פרק י הלכה ו) מובאת מחלוקת אמוראים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"<strong>ר' יהושע בן לוי</strong> אמר אין אדם נתפש על חבירו חייב ליתן לו אלא בארנון וגולגולת</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"<strong>ר' יהושע בן לוי</strong> אמר אין אדם נתפש על חבירו חייב ליתן לו אלא בארנון וגולגולת</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב</strong> אמר יכיל מימר ליה את שרי עביטיך מיני"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב</strong> אמר יכיל מימר ליה את שרי עביטיך מיני"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדובר על אדם שנתפש על חברו, כלומר, שרצתה המלכות לקחת כסף מחברו, וכיוון שלא מצאו את חברו, לקחו כסף זה ממנו. <strong>ר' יהושע בן לוי</strong> פוסק, שחייב אותו חבר להחזיר כסף לאדם ששילם במקומו רק אם מדובר במיסים הקבועים שעל כל אדם לתת, לעומת זאת <strong>רב</strong> פוסק שבכל מקרה צריך אותו אחד שהיה אמור לשלם להחזיר כסף לזה ששילם במקומו, כיוון שנהנה זה מרכושו של זה, שנפטר מלשלם למלכות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר על אדם שנתפש על חברו, כלומר, שרצתה המלכות לקחת כסף מחברו, וכיוון שלא מצאו את חברו, לקחו כסף זה ממנו. <strong>ר' יהושע בן לוי</strong> פוסק, שחייב אותו חבר להחזיר כסף לאדם ששילם במקומו רק אם מדובר במיסים הקבועים שעל כל אדם לתת, לעומת זאת <strong>רב</strong> פוסק שבכל מקרה צריך אותו אחד שהיה אמור לשלם להחזיר כסף לזה ששילם במקומו, כיוון שנהנה זה מרכושו של זה, שנפטר מלשלם למלכות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף נאמר ב<strong>בבלי</strong> (ב"ק קיג:):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף נאמר ב<strong>בבלי</strong> (ב"ק קיג:):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>רבא</strong> בר מתא אבר מתא מיעבט"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אמר <strong>רבא</strong> בר מתא אבר מתא מיעבט"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ויש מן הראשונים (<strong>רש"י</strong>, <strong>רמ"ה</strong>) שפירשו, שהכוונה היא שרשות יש ביד הגובה את מיסי המלך הקבועים, המוטלים על אדם או על קרקע, לקחת מאדם אחד מס שהיה אמור חברו לשלם, ואותו אדם יכול לתבוע החזר מהחבר ששילם תמורתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ויש מן הראשונים (<strong>רש"י</strong>, <strong>רמ"ה</strong>) שפירשו, שהכוונה היא שרשות יש ביד הגובה את מיסי המלך הקבועים, המוטלים על אדם או על קרקע, לקחת מאדם אחד מס שהיה אמור חברו לשלם, ואותו אדם יכול לתבוע החזר מהחבר ששילם תמורתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כר' יהושע בן לוי. וכן פסק ב<strong>שו"ע</strong> (קכח ב)<sup id="ref111"><a href="#fn111">[111]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כר' יהושע בן לוי. וכן פסק ב<strong>שו"ע</strong> (קכח ב)<sup id="ref111"><a href="#fn111">[111]</a></sup>.</p>
                     
                 </div>
                 
@@ -1232,37 +1232,37 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז-ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מי שיש עליו עדים שמסר ממון חבירו כגון שהראה מעצמו או שנאנס ונשא ונתן ביד ולא ידעו העדים כמה הפסידו במסירתו והנמסר טוען כך וכך הפסידני והמוסר כופר במה שטענו, אם תפש הנמסר אין מוציאין מידו אלא נשבע בנקיטת חפץ וזוכה במה שתפש ואם לא תפש אין מוציאין מן המוסר אלא בראיה ברורה. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ואין משביעין את המוסר שהראה מעצמו לא שבועה חמורה ולא שבועת הסת, מפני שהוא רשע ואין לך פסול  יתר מזה, אבל המוסר שאנסוהו להראות או להביא ונשא ונתן ביד, אף על פי שהוא חייב לשלם אינו רשע אלא בן תשלומין הוא בלבד ומשביעין אותו כשאר הכשרין. </strong>
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תקנת נגזל במוסר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תקנת נגזל במוסר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תקנו חכמים שכאשר ישנם עדים שפלוני גזל את חברו, וחולקים הגזלן והנגזל, הנגזל אומר כך וכך גזלת ממני, והגזלן אומר שלא גזל כלום או שגזל פחות, ישבע הנגזל על דבריו ויטול כפי דבריו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תקנו חכמים שכאשר ישנם עדים שפלוני גזל את חברו, וחולקים הגזלן והנגזל, הנגזל אומר כך וכך גזלת ממני, והגזלן אומר שלא גזל כלום או שגזל פחות, ישבע הנגזל על דבריו ויטול כפי דבריו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (סב.) מעלה את השאלה האם גם במוסר ממון חברו עשו תקנה דומה, כלומר, האם יכול הנמסר (הניזק) להישבע כמה איבד מממונו כתוצאה ממעשי המוסר, ולקבל סכום זה מהמוסר. הגמרא אינה מגיעה למסקנה בעניין, ונשארת בתיקו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (סב.) מעלה את השאלה האם גם במוסר ממון חברו עשו תקנה דומה, כלומר, האם יכול הנמסר (הניזק) להישבע כמה איבד מממונו כתוצאה ממעשי המוסר, ולקבל סכום זה מהמוסר. הגמרא אינה מגיעה למסקנה בעניין, ונשארת בתיקו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלקו הראשונים בשאלה האם גם כאשר המוסר אינו יודע כמה הפסיד לנמסר הגמרא עומדת בספק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חלקו הראשונים בשאלה האם גם כאשר המוסר אינו יודע כמה הפסיד לנמסר הגמרא עומדת בספק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"ת</strong> (בתוד"ה "עשו") מפרש שאם המוסר אינו יודע את הסכום, בוודאי שנשבע הנמסר ונוטל, הגמרא מתלבטת רק במקרה בו המוסר טוען טענת ברי, שהנמסר הוזק בסכום נמוך ממה שהוא טוען.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר"ת</strong> (בתוד"ה "עשו") מפרש שאם המוסר אינו יודע את הסכום, בוודאי שנשבע הנמסר ונוטל, הגמרא מתלבטת רק במקרה בו המוסר טוען טענת ברי, שהנמסר הוזק בסכום נמוך ממה שהוא טוען.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"י</strong> (שם) מפרש שהתלבטות הגמרא אמורה גם במקרה בו המוסר אינו יודע כמה מסר<sup id="ref112"><a href="#fn112">[112]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר"י</strong> (שם) מפרש שהתלבטות הגמרא אמורה גם במקרה בו המוסר אינו יודע כמה מסר<sup id="ref112"><a href="#fn112">[112]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>רמב"ם</strong> משמע, כדברי ר"ת, שהתלבטות הגמרא היא במקרה בו טוען המוסר טענת ברי כנגד הנמסר<sup id="ref113"><a href="#fn113">[113]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>רמב"ם</strong> משמע, כדברי ר"ת, שהתלבטות הגמרא היא במקרה בו טוען המוסר טענת ברי כנגד הנמסר<sup id="ref113"><a href="#fn113">[113]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פסק כבכל ספק<sup id="ref114"><a href="#fn114">[114]</a></sup>, שאם תפס הנמסר, אין מוציאין מידו, אלא נשבע כתקנת הנגזל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פסק כבכל ספק<sup id="ref114"><a href="#fn114">[114]</a></sup>, שאם תפס הנמסר, אין מוציאין מידו, אלא נשבע כתקנת הנגזל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפח ז) כותב את דברי הרמב"ם, ואת דברי ר"ת מביא כ'יש אומרים'.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפח ז) כותב את דברי הרמב"ם, ואת דברי ר"ת מביא כ'יש אומרים'.</p>
                     
                 </div>
                 
@@ -1270,63 +1270,63 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט-יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אסור למסור ישראל ביד גוים בין בגופו בין בממונו, ואפילו היה רשע ובעל עבירות ואפילו היה מיצר לו ומצערו, וכל המוסר ישראל ביד גוים בין בגופו בין בממונו אין לו חלק לעולם הבא. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מותר להרוג המוסר בכל מקום ואפילו בזמן הזה שאין דנין דיני נפשות, ומותר להרגו קודם שימסור אלא כשאמר הריני מוסר פלוני בגופו או בממונו ואפילו ממון קל הרי התיר עצמו למיתה, ומתרין בו ואומרין לו אל תמסור, אם העיז פניו ואמר לא כי אלא אמסרנו מצוה להרגו וכל הקודם להרגו זכה. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>עשה המוסר אשר זמם ומסר יראה לי שאסור להרגו אלא אם כן הוחזק למסור הרי זה יהרג שמא ימסור אחרים, ומעשים בכל זמן בערי המערב להרוג המוסרים שהוחזקו למסור ממון ישראל ולמסור את המוסרים ביד הגוים להרגם ולהכותם ולאסרם כפי רשעם. וכן כל המיצר לציבור ומצער אותן מותר למסרו ביד גוים להכותו ולאסרו ולקנסו, אבל מפני צער יחיד אסור למסרו, ואסור לאבד ממונו של מסור ואף על פי שמותר לאבד גופו שהרי ממונו ראוי ליורשיו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">האיסור למסור ממון ישראל לגויים ועונש המוסרם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">האיסור למסור ממון ישראל לגויים ועונש המוסרם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במסכת גיטין (ז.) מופיע ש<strong>מר עוקבא</strong> שקל למסור את גניבא שהציק לו ו<strong>ר' אלעזר</strong> פסק לו שלא לעשות כן. מכאן פוסק ה<strong>רמב"ם</strong> לפנינו, שאין הצדקה למסור ישראל ביד גויים אפילו בשעה שמיצר לו ומצערו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במסכת גיטין (ז.) מופיע ש<strong>מר עוקבא</strong> שקל למסור את גניבא שהציק לו ו<strong>ר' אלעזר</strong> פסק לו שלא לעשות כן. מכאן פוסק ה<strong>רמב"ם</strong> לפנינו, שאין הצדקה למסור ישראל ביד גויים אפילו בשעה שמיצר לו ומצערו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במסכת עבודה זרה (כו:) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במסכת עבודה זרה (כו:) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"העובדי כוכבים ורועי בהמה דקה לא מעלין,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"העובדי כוכבים ורועי בהמה דקה לא מעלין,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אבל המינין <strong>והמסורות</strong> והמומרים היו מורידין ולא מעלין"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אבל המינין <strong>והמסורות</strong> והמומרים היו מורידין ולא מעלין"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בעוד שאת המופיעים ברשימה שברישא (עכו"ם ורועי בהמה דקה<sup id="ref115"><a href="#fn115">[115]</a></sup>) אין להתאמץ להציל, אך גם אין לדאוג להורגם באופן אקטיבי, את המופיעים בסוף הרשימה יש לדאוג להרוג באופן אקטיבי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, בעוד שאת המופיעים ברשימה שברישא (עכו"ם ורועי בהמה דקה<sup id="ref115"><a href="#fn115">[115]</a></sup>) אין להתאמץ להציל, אך גם אין לדאוג להורגם באופן אקטיבי, את המופיעים בסוף הרשימה יש לדאוג להרוג באופן אקטיבי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקביל מביאה ה<strong>גמרא</strong> (קיז.) מעשה באדם שהכריז בפני רב שברצונו למסור את ממון חבירו, וקם ר' כהנא, שבאותה שעה ישב לפני רב, והרגו. כתגובה קרא עליו רב את הפסוק "בָּנַיִךְ עֻלְּפוּ שָׁכְבוּ בְּרֹאשׁ כָּל חוּצוֹת כְּתוֹא מִכְמָר הַמְלֵאִים חֲמַת יְקֹוָק גַּעֲרַת אֱלֹהָיִךְ" (ישעיהו נא כ) ודרשו- "מה תוא (=תְאוֹ) זה כיון שנפל במכמר (=במכמורת-מלכודת) אין מרחמין עליו אף ממון של ישראל כיון שנפל ביד עובדי כוכבים אין מרחמין עליו" (ביאור הדברים בהמשך)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקביל מביאה ה<strong>גמרא</strong> (קיז.) מעשה באדם שהכריז בפני רב שברצונו למסור את ממון חבירו, וקם ר' כהנא, שבאותה שעה ישב לפני רב, והרגו. כתגובה קרא עליו רב את הפסוק "בָּנַיִךְ עֻלְּפוּ שָׁכְבוּ בְּרֹאשׁ כָּל חוּצוֹת כְּתוֹא מִכְמָר הַמְלֵאִים חֲמַת יְקֹוָק גַּעֲרַת אֱלֹהָיִךְ" (ישעיהו נא כ) ודרשו- "מה תוא (=תְאוֹ) זה כיון שנפל במכמר (=במכמורת-מלכודת) אין מרחמין עליו אף ממון של ישראל כיון שנפל ביד עובדי כוכבים אין מרחמין עליו" (ביאור הדברים בהמשך)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי ממונו של המסור חלקו האמוראים (קיט.):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי ממונו של המסור חלקו האמוראים (קיט.):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ממון מסור. <strong>רב הונא</strong> ו<strong>רב יהודה</strong> חד אמר מותר לאבדו ביד וחד אמר אסור לאבדו ביד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ממון מסור. <strong>רב הונא</strong> ו<strong>רב יהודה</strong> חד אמר מותר לאבדו ביד וחד אמר אסור לאבדו ביד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מאן דאמר 'מותר לאבדו ביד' (טעמו הוא-) לא יהא ממונו חמור מגופו</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מאן דאמר 'מותר לאבדו ביד' (טעמו הוא-) לא יהא ממונו חמור מגופו</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומאן דאמר 'אסור לאבדו' (טעמו הוא-) דלמא הוה ליה זרעא מעליא וכתיב 'יכין (רשע) וצדיק ילבש' (איוב כז יז)"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומאן דאמר 'אסור לאבדו' (טעמו הוא-) דלמא הוה ליה זרעא מעליא וכתיב 'יכין (רשע) וצדיק ילבש' (איוב כז יז)"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, חלקו האמוראים האם כפי שמותר להרוג את המוסר, כל שכן שגם ממונו מותר לכל, או שמא כיוון שממונו ראוי ליורשיו אין להפסידם בנטילת ממונו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, חלקו האמוראים האם כפי שמותר להרוג את המוסר, כל שכן שגם ממונו מותר לכל, או שמא כיוון שממונו ראוי ליורשיו אין להפסידם בנטילת ממונו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף</strong> (מו. מדפיו) פסק כדעה שאין ליטול את ממונו של המוסר, והוא מוכיח זאת מכך שהגמרא דנה האם יכול הנמסר ליטול מהמוסר בשבועה את מה שהפסידו (עי' לעיל הלכה ז-ח), ואילו היה ממונו של המוסר מותר לכל, היתה שאלה זו מיותרת, כיוון שאז בוודאי שיכול הנמסר ליטול אף ללא שבועה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רי"ף</strong> (מו. מדפיו) פסק כדעה שאין ליטול את ממונו של המוסר, והוא מוכיח זאת מכך שהגמרא דנה האם יכול הנמסר ליטול מהמוסר בשבועה את מה שהפסידו (עי' לעיל הלכה ז-ח), ואילו היה ממונו של המוסר מותר לכל, היתה שאלה זו מיותרת, כיוון שאז בוודאי שיכול הנמסר ליטול אף ללא שבועה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מרדכי</strong> (סי' קצד) מביא בשם רבו, שמחלוקת האמוראים אמורה בשאלה האם יש להשמיד את ממונו, אך כולם מודים שמותר לקחת את ממונו<sup id="ref116"><a href="#fn116">[116]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מרדכי</strong> (סי' קצד) מביא בשם רבו, שמחלוקת האמוראים אמורה בשאלה האם יש להשמיד את ממונו, אך כולם מודים שמותר לקחת את ממונו<sup id="ref116"><a href="#fn116">[116]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בטעם דין הריגת המוסר חלקו הראשונים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בטעם דין הריגת המוסר חלקו הראשונים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סי' כז) מפרש שכוונת דברי רב בדרשתו מהפסוק (בגמרא קיז.) היא שכיוון שעובדי הכוכבים שיבואו לקחת את ממון הנמסר לא ירחמו עליו, יש חשש גם לסכנת נפשות. לכן, מעשהו של ר' כהנא היה ראוי, שכן היה נכון להרוג את אותו מוסר פוטנציאלי מדין רודף. נמצא לפי דעתו, שאין מקום להרוג את המוסר כאשר אין סכנת נפשות במעשהו, למשל, כאשר הוא מוסר ממון ישראל לידי ישראל. כמו כן משמע שדיני המוסר צריכים להיות כפופים לדיני הרודף אחר חבירו להורגו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סי' כז) מפרש שכוונת דברי רב בדרשתו מהפסוק (בגמרא קיז.) היא שכיוון שעובדי הכוכבים שיבואו לקחת את ממון הנמסר לא ירחמו עליו, יש חשש גם לסכנת נפשות. לכן, מעשהו של ר' כהנא היה ראוי, שכן היה נכון להרוג את אותו מוסר פוטנציאלי מדין רודף. נמצא לפי דעתו, שאין מקום להרוג את המוסר כאשר אין סכנת נפשות במעשהו, למשל, כאשר הוא מוסר ממון ישראל לידי ישראל. כמו כן משמע שדיני המוסר צריכים להיות כפופים לדיני הרודף אחר חבירו להורגו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריגת המוסר מדין רודף עולה גם מדברי ה<strong>רמב"ם</strong>- הרמב"ם כותב שמותר להרוג את המוסר רק לפני שמסר או אם הוחזק לשוב ולמסור, כאמצעי מנע, אך אין להורגו לשם ענישה על מה שכבר עשה. ה<strong>מגיד משנה</strong> מסביר שדין זה נלמד מדין הרודף, שאף אותו מותר להרוג רק לשם מניעה, ולא משעשה את זממו. כמו כן מסביר המגיד משנה שהברייתא הפוסקת ש"מורידים ולא מעלים" את המוסר, מדברת גם כן לשם מניעה, ובמוסר שהוחזק למסור שוב ושוב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הריגת המוסר מדין רודף עולה גם מדברי ה<strong>רמב"ם</strong>- הרמב"ם כותב שמותר להרוג את המוסר רק לפני שמסר או אם הוחזק לשוב ולמסור, כאמצעי מנע, אך אין להורגו לשם ענישה על מה שכבר עשה. ה<strong>מגיד משנה</strong> מסביר שדין זה נלמד מדין הרודף, שאף אותו מותר להרוג רק לשם מניעה, ולא משעשה את זממו. כמו כן מסביר המגיד משנה שהברייתא הפוסקת ש"מורידים ולא מעלים" את המוסר, מדברת גם כן לשם מניעה, ובמוסר שהוחזק למסור שוב ושוב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הבנה שונה משל הרא"ש והרמב"ם עולה מדברי <strong>מהר"ם מרוטנבורג</strong> (מובא בסוף דברי המרדכי סי קצו). לשיטתו, אף לאחר שעשה המוסר את זממו מותר להורגו (כלומר, אפילו שלא כצעד מונע)<sup id="ref117"><a href="#fn117">[117]</a></sup>. מכאן עולה שחמור דינו של המוסר מדין הרודף- בעוד שהריגת הרודף היא בכדי למנוע ממנו מלבצע את זממו, הריגת המוסר היא עונש הרתעתי שתפקידו למנוע גם <strong>אחרים</strong> מלעשות כמעשהו<sup id="ref118"><a href="#fn118">[118]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הבנה שונה משל הרא"ש והרמב"ם עולה מדברי <strong>מהר"ם מרוטנבורג</strong> (מובא בסוף דברי המרדכי סי קצו). לשיטתו, אף לאחר שעשה המוסר את זממו מותר להורגו (כלומר, אפילו שלא כצעד מונע)<sup id="ref117"><a href="#fn117">[117]</a></sup>. מכאן עולה שחמור דינו של המוסר מדין הרודף- בעוד שהריגת הרודף היא בכדי למנוע ממנו מלבצע את זממו, הריגת המוסר היא עונש הרתעתי שתפקידו למנוע גם <strong>אחרים</strong> מלעשות כמעשהו<sup id="ref118"><a href="#fn118">[118]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעניין דרך הריגת המוסר, מלשון ה<strong>רמב"ם</strong> משמע שניתן להורגו בידיים ממש, לעומתו <strong>ר' חננאל</strong> (מובא בשו"ת הרא"ש יז א) פירש ש"מורידין ולא מעלין" הכוונה שממיתים את המוסר בגרמא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעניין דרך הריגת המוסר, מלשון ה<strong>רמב"ם</strong> משמע שניתן להורגו בידיים ממש, לעומתו <strong>ר' חננאל</strong> (מובא בשו"ת הרא"ש יז א) פירש ש"מורידין ולא מעלין" הכוונה שממיתים את המוסר בגרמא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפח י-יא) פוסק כרמב"ם, שיש היתר להרוג את המוסר רק כאמצעי מנע, ולא כאשר כבר עשה את זממו ואין חשש שיעשה כדבר הזה שוב. ה<strong>רמ"א</strong> (שם טו) פוסק כרבינו חננאל שאין להרוג את המוסר בידיים ממש, אלא רק ע"י גרמא. לעניין ממונו של המוסר, פוסק ה<strong>שו"ע</strong> (שם יג) כרמב"ם, וה<strong>רמ"א</strong> פוסק כמרדכי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפח י-יא) פוסק כרמב"ם, שיש היתר להרוג את המוסר רק כאמצעי מנע, ולא כאשר כבר עשה את זממו ואין חשש שיעשה כדבר הזה שוב. ה<strong>רמ"א</strong> (שם טו) פוסק כרבינו חננאל שאין להרוג את המוסר בידיים ממש, אלא רק ע"י גרמא. לעניין ממונו של המוסר, פוסק ה<strong>שו"ע</strong> (שם יג) כרמב"ם, וה<strong>רמ"א</strong> פוסק כמרדכי.</p>
                     
                 </div>
                 
@@ -1334,37 +1334,37 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>רודף שהיה רודף אחר חבירו להרגו או לדבר עבירה ושבר את הכלים בין של נרדף בין של כל אדם פטור מן התשלומין מפני שהוא מתחייב בנפשו, שכיון שרדף התיר עצמו למיתה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רודף אחר חברו להרגו, ששבר את הכלים- דין קים ליה בדרבה מיניה ברודף</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">רודף אחר חברו להרגו, ששבר את הכלים- דין קים ליה בדרבה מיניה ברודף</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (סנהדרין עג.) וב<strong>גמרא</strong> (שם) מבואר דין הרודף אחר חברו להורגו (או אחר אחת העריות לאונסה), שכל ישראל מצווים להציל את הנרדף אפילו במחיר הריגת הרודף (עי' בהלכות רוצח פ"א הלכה ו והלאה).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (סנהדרין עג.) וב<strong>גמרא</strong> (שם) מבואר דין הרודף אחר חברו להורגו (או אחר אחת העריות לאונסה), שכל ישראל מצווים להציל את הנרדף אפילו במחיר הריגת הרודף (עי' בהלכות רוצח פ"א הלכה ו והלאה).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (שם עד.) מובאת דעת <strong>ר' יונתן בן שאול</strong>, שאם ניתן להציל את הרודף מהנרדף בלי להורגו, אסור להרוג את הרודף.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (שם עד.) מובאת דעת <strong>ר' יונתן בן שאול</strong>, שאם ניתן להציל את הרודף מהנרדף בלי להורגו, אסור להרוג את הרודף.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מביאה הוכחה לדעתו של ר' יונתן בן שאול- בפסוק המתאר את נגיפת האשה ההרה נאמר "וְכִי יִנָּצוּ אֲנָשִׁים וְנָגְפוּ אִשָּׁה הָרָה וְיָצְאוּ יְלָדֶיהָ וְלֹא יִהְיֶה אָסוֹן עָנוֹשׁ יֵעָנֵשׁ" (שמות כא כב, כש"יענש" הכוונה שישלם הנוגף את דמי הוולדות<sup id="ref119"><a href="#fn119">[119]</a></sup>). ר' יונתן בן שאול מפרש שמדובר באדם המנסה להרוג את חברו, והתורה כותבת שאם בסופו של דבר לא הרג את חברו ("לא יהיה אסון") אך תוך כדי מריבה פגע באשה וגרם לה להפלה, חייב ממון על הנזק שגרם. בנוסף, מניחה הגמרא, שכיוון שהרודף אחר חבירו להורגו מתחייב בנפשו תוך כדי רדיפה (כי מותר להורגו בכדי למנוע בעדו מלבצע את זממו), הרי שהוא פטור על נזקי ממון שהוא עושה תוך כדי רדיפתו מדין 'קים ליה בדרבה מיניה'<sup id="ref120"><a href="#fn120">[120]</a></sup>. וכיוון שבכל זאת, אנו רואים שהתורה מחייבת את הנוגף ממון על נזק הוולדות שעשה תוך כדי רדיפה, יש לפרש שהפסוק מדבר במקרה בו היה ניתן להציל את הנרדף מיד הרודף על ידי הטלת מום וכיוצא בו, ולא היה צורך להורגו. כלומר, אותו רודף שבפסוק אינו בגדר "מתחייב בנפשו", ומתוך כך מתחייב בתשלומים על נזקי ממון (-דמי ולדות) שעשה תוך כדי רדיפתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מביאה הוכחה לדעתו של ר' יונתן בן שאול- בפסוק המתאר את נגיפת האשה ההרה נאמר "וְכִי יִנָּצוּ אֲנָשִׁים וְנָגְפוּ אִשָּׁה הָרָה וְיָצְאוּ יְלָדֶיהָ וְלֹא יִהְיֶה אָסוֹן עָנוֹשׁ יֵעָנֵשׁ" (שמות כא כב, כש"יענש" הכוונה שישלם הנוגף את דמי הוולדות<sup id="ref119"><a href="#fn119">[119]</a></sup>). ר' יונתן בן שאול מפרש שמדובר באדם המנסה להרוג את חברו, והתורה כותבת שאם בסופו של דבר לא הרג את חברו ("לא יהיה אסון") אך תוך כדי מריבה פגע באשה וגרם לה להפלה, חייב ממון על הנזק שגרם. בנוסף, מניחה הגמרא, שכיוון שהרודף אחר חבירו להורגו מתחייב בנפשו תוך כדי רדיפה (כי מותר להורגו בכדי למנוע בעדו מלבצע את זממו), הרי שהוא פטור על נזקי ממון שהוא עושה תוך כדי רדיפתו מדין 'קים ליה בדרבה מיניה'<sup id="ref120"><a href="#fn120">[120]</a></sup>. וכיוון שבכל זאת, אנו רואים שהתורה מחייבת את הנוגף ממון על נזק הוולדות שעשה תוך כדי רדיפה, יש לפרש שהפסוק מדבר במקרה בו היה ניתן להציל את הנרדף מיד הרודף על ידי הטלת מום וכיוצא בו, ולא היה צורך להורגו. כלומר, אותו רודף שבפסוק אינו בגדר "מתחייב בנפשו", ומתוך כך מתחייב בתשלומים על נזקי ממון (-דמי ולדות) שעשה תוך כדי רדיפתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלבד ההוכחה לדברי ר' יונתן בן שאול, נמצאנו למדים מההנחה המובלעת בדברי הגמרא, שרודף שיש רשות לעוצרו ע"י הריגתו, מתוך שמתחייב בנפשו בשעת הרדיפה, פטור על נזקי ממון שעושה תוך כדי רדיפתו<sup id="ref121"><a href="#fn121">[121]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלבד ההוכחה לדברי ר' יונתן בן שאול, נמצאנו למדים מההנחה המובלעת בדברי הגמרא, שרודף שיש רשות לעוצרו ע"י הריגתו, מתוך שמתחייב בנפשו בשעת הרדיפה, פטור על נזקי ממון שעושה תוך כדי רדיפתו<sup id="ref121"><a href="#fn121">[121]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין זה הנמצא כהנחה מובלעת בהוכחת הגמרא לדברי ר' יונתן, מובא בפירוש בהמשך הגמרא בדברי <strong>רבא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דין זה הנמצא כהנחה מובלעת בהוכחת הגמרא לדברי ר' יונתן, מובא בפירוש בהמשך הגמרא בדברי <strong>רבא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>רבא</strong> רודף שהיה רודף אחר חבירו ושיבר את הכלים בין של נרדף ובין של כל אדם פטור מאי טעמא מתחייב בנפשו הוא"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אמר <strong>רבא</strong> רודף שהיה רודף אחר חבירו ושיבר את הכלים בין של נרדף ובין של כל אדם פטור מאי טעמא מתחייב בנפשו הוא"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> (הלכות רוצח פרק א הלכה יג) ורוב הראשונים פסקו כר' יונתן בן שאול, וכדברי הגמרא הפוטרת את הרודף מנזקי ממון שעשה תוך כדי רדיפתו (כך ברמב"ם לפנינו). מתוך כך סביר שבמקום בו אין להרוג את הרודף, כיוון שניתן להציל את הנרדף בדרך אחרת, לא יפטור הרמב"ם את הרודף מנזקי ממון שעשה תוך כדי רדיפתו. אכן, מלשון הרמב"ם שלפנינו-"כיון שרדף התיר עצמו למיתה" משמע שדווקא המתיר עצמו למיתה נפטר מממון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> (הלכות רוצח פרק א הלכה יג) ורוב הראשונים פסקו כר' יונתן בן שאול, וכדברי הגמרא הפוטרת את הרודף מנזקי ממון שעשה תוך כדי רדיפתו (כך ברמב"ם לפנינו). מתוך כך סביר שבמקום בו אין להרוג את הרודף, כיוון שניתן להציל את הנרדף בדרך אחרת, לא יפטור הרמב"ם את הרודף מנזקי ממון שעשה תוך כדי רדיפתו. אכן, מלשון הרמב"ם שלפנינו-"כיון שרדף התיר עצמו למיתה" משמע שדווקא המתיר עצמו למיתה נפטר מממון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ן</strong><sup id="ref122"><a href="#fn122">[122]</a></sup> (בתשובותיו סי' נא) חולק על רוב הראשונים, ופוסק שלא כרבי יונתן בן שאול. טענתו היא, שכיוון שרבא לא חילק בדבריו, הרי שלהלכה, בכל מקרה פטור הרודף על נזקי ממון, ומתוך כך יש לומר שבכל מקרה ניתן להציל את הנרדף בנפשו של רודף.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ן</strong><sup id="ref122"><a href="#fn122">[122]</a></sup> (בתשובותיו סי' נא) חולק על רוב הראשונים, ופוסק שלא כרבי יונתן בן שאול. טענתו היא, שכיוון שרבא לא חילק בדבריו, הרי שלהלכה, בכל מקרה פטור הרודף על נזקי ממון, ומתוך כך יש לומר שבכל מקרה ניתן להציל את הנרדף בנפשו של רודף.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפ ג) פסק כלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפ ג) פסק כלשון הרמב"ם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">(עוד בהלכות הרודף נבאר אם יזכנו ה' בפרק א' מהלכות רוצח.)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">(עוד בהלכות הרודף נבאר אם יזכנו ה' בפרק א' מהלכות רוצח.)</p>
                     
                 </div>
                 
@@ -1372,35 +1372,35 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>נרדף ששבר כלים של רודף פטור, לא יהא ממונו חביב מגופו, ואם שבר כלי אחרים חייב, שהמציל עצמו בממון חבירו חייב. </strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נרדף ששבר כלים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נרדף ששבר כלים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (סנהדרין עד.) ממשיך <strong>רבא</strong> ופוסק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (סנהדרין עד.) ממשיך <strong>רבא</strong> ופוסק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"נרדף ששיבר את הכלים של רודף- פטור, של כל אדם- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"נרדף ששיבר את הכלים של רודף- פטור, של כל אדם- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">של רודף פטור- שלא יהא ממונו חביב עליו מגופו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">של רודף פטור- שלא יהא ממונו חביב עליו מגופו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">של כל אדם חייב- שמציל עצמו בממון חבירו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">של כל אדם חייב- שמציל עצמו בממון חבירו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם הנרדף שבר כלים במהלך בריחתו מהרודף אחריו להורגו או לאונסו, אנו מחלקים בין שני מצבים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם הנרדף שבר כלים במהלך בריחתו מהרודף אחריו להורגו או לאונסו, אנו מחלקים בין שני מצבים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאשר שבר את כלי הרודף, פטור עליהם, שכן אם רשאי הוא וכל אדם להרוג את הרודף, כל שכן שרשאי הוא לשבור את כליו (וכן כל אדם רשאי, כמו שיבואר בהלכה הבאה).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאשר שבר את כלי הרודף, פטור עליהם, שכן אם רשאי הוא וכל אדם להרוג את הרודף, כל שכן שרשאי הוא לשבור את כליו (וכן כל אדם רשאי, כמו שיבואר בהלכה הבאה).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם לעומת זאת שבר כלים של אדם אחר, חייב לשלם, כיוון שאדם המציל עצמו בממון חבירו, אף על פי שרשאי לעשות כן, חייב לשלם<sup id="ref123"><a href="#fn123">[123]</a></sup> .</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם לעומת זאת שבר כלים של אדם אחר, חייב לשלם, כיוון שאדם המציל עצמו בממון חבירו, אף על פי שרשאי לעשות כן, חייב לשלם<sup id="ref123"><a href="#fn123">[123]</a></sup> .</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (שם ד"ה "שלא") מסבירים שהנרדף פטור על כלי הרודף רק אם שבר כלים לשם הצלתו ומחוסר ברירה, כשם שרשאי להרוג את הרודף רק אם זו הדרך היחידה למנוע ממנו מלהורגו. ניתן להבין כך גם מהרמב"ם, אולם אין הוא אומר זאת במפורש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (שם ד"ה "שלא") מסבירים שהנרדף פטור על כלי הרודף רק אם שבר כלים לשם הצלתו ומחוסר ברירה, כשם שרשאי להרוג את הרודף רק אם זו הדרך היחידה למנוע ממנו מלהורגו. ניתן להבין כך גם מהרמב"ם, אולם אין הוא אומר זאת במפורש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפ ג) העתיק את דברי הרמב"ם להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפ ג) העתיק את דברי הרמב"ם להלכה.</p>
                     
                 </div>
                 
@@ -1408,27 +1408,27 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מי שרדף אחר הרודף להושיע הנרדף ושבר את הכלים בין של רודף בין של כל אדם פטור, ולא מן הדין אלא תקנה היא שלא ימנע מלהציל או יתמהמה ויעיין בעת שירדוף. </strong>
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המזיק תוך כדי הצלה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המזיק תוך כדי הצלה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הלכה שלישית שנאמרה מפי <strong>רבא</strong> בגמרא (שם):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הלכה שלישית שנאמרה מפי <strong>רבא</strong> בגמרא (שם):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ורודף שהיה רודף אחר רודף להצילו ושיבר את הכלים בין של רודף בין של נרדף בין של כל אדם פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ורודף שהיה רודף אחר רודף להצילו ושיבר את הכלים בין של רודף בין של נרדף בין של כל אדם פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ולא מן הדין. שאם אי אתה אומר כן נמצא אין לך כל אדם שמציל את חבירו מיד הרודף"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ולא מן הדין. שאם אי אתה אומר כן נמצא אין לך כל אדם שמציל את חבירו מיד הרודף"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, תיקנו חכמים שהשובר כלים תוך כדי הצלת הנרדף מהרודף יהיה פטור עליהם, וזאת כדי שלא ימנעו אנשים מהצלה מתוך חשש שיחייבו אותם ממון לאחר מכן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, תיקנו חכמים שהשובר כלים תוך כדי הצלת הנרדף מהרודף יהיה פטור עליהם, וזאת כדי שלא ימנעו אנשים מהצלה מתוך חשש שיחייבו אותם ממון לאחר מכן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפ ג) פסק זאת להלכה<sup id="ref124"><a href="#fn124">[124]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפ ג) פסק זאת להלכה<sup id="ref124"><a href="#fn124">[124]</a></sup>.</p>
                     
                 </div>
                 
@@ -1436,65 +1436,65 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ספינה שחשבה להשבר מכובד המשוי ועמד אחד מהן והקל ממשאה והשליך בים פטור, שהמשא שבה כמו רודף אחריהם להרג</strong><strong>ם ומצוה רבה עשה שהשליך והושיעם.</strong> ספינה שחשבה וכו' שהמשא שבה כמו רודף אחריהם להרגם. א"א אין כאן לא מלח ולא תבלין שאין כאן דין רודף כלל ואין זה דומה למעשה דחמרא דפרק הגוזל ודין זה שהטיל לים אף על פי שהטיל משל איש אחד מחשבין על כולם לפי משאם כדאיתא בגמרא.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בריך רחמנא דסייען.</strong>
                 </div>
                 
 
                 
                 <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המציל ספינה על ידי השלכת מטען חורג לים – המציל עצמו בממון חברו כאשר הממון נחשב לרודף.</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המציל ספינה על ידי השלכת מטען חורג לים – המציל עצמו בממון חברו כאשר הממון נחשב לרודף.</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קטז:) מובאת <strong>ברייתא</strong> העוסקת בדרך בה הפסד השלכת סחורה מספינה הנמצאת בסכנת טביעה, אמור להתחלק בין הנוסעים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (קטז:) מובאת <strong>ברייתא</strong> העוסקת בדרך בה הפסד השלכת סחורה מספינה הנמצאת בסכנת טביעה, אמור להתחלק בין הנוסעים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ספינה שהיתה מהלכת בים. עמד עליה נחשול לטובעה והקילו ממשאה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ספינה שהיתה מהלכת בים. עמד עליה נחשול לטובעה והקילו ממשאה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מחשבין לפי משאוי ואין מחשבין לפי ממון"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מחשבין לפי משאוי ואין מחשבין לפי ממון"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם יש צורך להטיל משא לים בכדי להציל את הספינה, כל אחד צריך לשאת בהפסד לפי משקל. למשל, אם החליטו שיש לזרוק טון למים, ויש עשרה אנשים שלכל אחד מהם טון סחורה, כל אחד צריך להשליך עשירית מהמטען שלו, בין אם מדובר במטען של זהב ובין אם מדובר במטען של חול. לכן, אם אחד מהם השליך, וחסך לכולם, כולם מחוייבים להשתתף בהוצאות בשיעור אותו הם מחוייבים לזרוק מסחורתם שלהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם יש צורך להטיל משא לים בכדי להציל את הספינה, כל אחד צריך לשאת בהפסד לפי משקל. למשל, אם החליטו שיש לזרוק טון למים, ויש עשרה אנשים שלכל אחד מהם טון סחורה, כל אחד צריך להשליך עשירית מהמטען שלו, בין אם מדובר במטען של זהב ובין אם מדובר במטען של חול. לכן, אם אחד מהם השליך, וחסך לכולם, כולם מחוייבים להשתתף בהוצאות בשיעור אותו הם מחוייבים לזרוק מסחורתם שלהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (קיז:) מובא מעשה שהיה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (קיז:) מובא מעשה שהיה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ההוא גברא דאקדים ואסיק חמרא למברא קמי דסליקו אינשי במברא</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ההוא גברא דאקדים ואסיק חמרא למברא קמי דסליקו אינשי במברא</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעי לאטבועי. אתא ההוא גברא מלח ליה לחמרא דההוא גברא ושדייה לנהרא וטבע</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעי לאטבועי. אתא ההוא גברא מלח ליה לחמרא דההוא גברא ושדייה לנהרא וטבע</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אתא לקמיה ד<strong>רבה</strong>- פטריה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אתא לקמיה ד<strong>רבה</strong>- פטריה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר ליה <strong>אביי</strong>: והא מציל עצמו בממון חבירו הוא!</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמר ליה <strong>אביי</strong>: והא מציל עצמו בממון חבירו הוא!</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">א"ל: האי מעיקרא רודף הוה."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">א"ל: האי מעיקרא רודף הוה."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש- מדובר באדם שהכניס את חמורו למעבורת נהר, ומכיוון שחישבה המעבורת לטבוע השליך אחד הנוסעים את החמור למים וטבע החמור. בעל החמור תבע את המשליך ו<strong>אביי</strong> רצה לחייבו משום שהציל את עצמו בממון חברו. לעומת זאת <strong>רבה</strong> פטרו וטען שדין רודף לפנינו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פירוש- מדובר באדם שהכניס את חמורו למעבורת נהר, ומכיוון שחישבה המעבורת לטבוע השליך אחד הנוסעים את החמור למים וטבע החמור. בעל החמור תבע את המשליך ו<strong>אביי</strong> רצה לחייבו משום שהציל את עצמו בממון חברו. לעומת זאת <strong>רבה</strong> פטרו וטען שדין רודף לפנינו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> (קיז: ד"ה 'ספינה') מסביר את ההבדל בין שני המקורות. לדבריו המקרה בו הושלך החמור לים עסק במצב בו בעל החמור הכניס את חמורו לאחר שכל הנוסעים האחרים העלו את שלהם, כאשר הספינה כבר היתה עמוסה, כך שבמעשיו, שנעשו שלא כראוי, סיכן את כל הנוסעים, ומן הדין שלא יפוצה על השלכת חמורו. לעומת זאת, בדף קטז (דין 'מחשבין לפי משאוי') עוסקת הגמרא במקרה בו אין את מי להאשים מבין הנוסעים, כי הספינה אינה עמוסה יותר מהראוי, או לחילופין, שנכנסו כולם ביחד, וכולם אשמים באותה המידה. במקרה זה, אם הושלכה סחורה של אחד הנוסעים, חובה על האחרים לפצותו בסכום הסחורה אותה היו הם נדרשים להשליך, כנ"ל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> (קיז: ד"ה 'ספינה') מסביר את ההבדל בין שני המקורות. לדבריו המקרה בו הושלך החמור לים עסק במצב בו בעל החמור הכניס את חמורו לאחר שכל הנוסעים האחרים העלו את שלהם, כאשר הספינה כבר היתה עמוסה, כך שבמעשיו, שנעשו שלא כראוי, סיכן את כל הנוסעים, ומן הדין שלא יפוצה על השלכת חמורו. לעומת זאת, בדף קטז (דין 'מחשבין לפי משאוי') עוסקת הגמרא במקרה בו אין את מי להאשים מבין הנוסעים, כי הספינה אינה עמוסה יותר מהראוי, או לחילופין, שנכנסו כולם ביחד, וכולם אשמים באותה המידה. במקרה זה, אם הושלכה סחורה של אחד הנוסעים, חובה על האחרים לפצותו בסכום הסחורה אותה היו הם נדרשים להשליך, כנ"ל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מרדכי</strong> (סי' קצג) ו<strong>ר' יונתן</strong> (מובא בשטמ"ק ד"ה "מלח ליה") מפרשים בצורה דומה, ומסבירים, שבמקרה של משליך החמור מדובר במקרה בו אין מקובל להכניס חמור למעבורת, או במקרה בו בעל החמור ידע שיכול להיות שהחמור ישתולל ויסכן את הנוסעים, ולכן מן הראוי להשליך את החמור ולא לפצות את בעליו. המרדכי מסיק מכאן, שבמקום בו מקובל להסיע חמורים במעבורת, יש לפצות את בעל החמור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מרדכי</strong> (סי' קצג) ו<strong>ר' יונתן</strong> (מובא בשטמ"ק ד"ה "מלח ליה") מפרשים בצורה דומה, ומסבירים, שבמקרה של משליך החמור מדובר במקרה בו אין מקובל להכניס חמור למעבורת, או במקרה בו בעל החמור ידע שיכול להיות שהחמור ישתולל ויסכן את הנוסעים, ולכן מן הראוי להשליך את החמור ולא לפצות את בעליו. המרדכי מסיק מכאן, שבמקום בו מקובל להסיע חמורים במעבורת, יש לפצות את בעל החמור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כל השיטות הנ"ל מתייחדות בכך שהן סוברות שמטען נחשב רודף, והמשליכו פטור רק אם בעליו פשע<sup id="ref125"><a href="#fn125">[125]</a></sup> (בהעמסת יתר, או במטען בעייתי).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כל השיטות הנ"ל מתייחדות בכך שהן סוברות שמטען נחשב רודף, והמשליכו פטור רק אם בעליו פשע<sup id="ref125"><a href="#fn125">[125]</a></sup> (בהעמסת יתר, או במטען בעייתי).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק מצד אחד כרבה, לגבי משליך החמור, אך מצד שני הרמב"ם בהלכות גזילה ואבדה (יב, יד) פוסק כברייתא בדף קטז, הדורשת חלוקה שווה של הפסד ההשלכה בין נוסעי הספינה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק מצד אחד כרבה, לגבי משליך החמור, אך מצד שני הרמב"ם בהלכות גזילה ואבדה (יב, יד) פוסק כברייתא בדף קטז, הדורשת חלוקה שווה של הפסד ההשלכה בין נוסעי הספינה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפיתרון דברי הרמב"ם מצאנו חילוקי דעות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפיתרון דברי הרמב"ם מצאנו חילוקי דעות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong> מסביר את דברי הרמב"ם באופן דומה להסברים הנ"ל, כלומר, המשליך את החמור פטור רק אם החמור הוא מטען עודף, ואז בעליו שהכניס מטען עודף כזה, צריך לשאת בעלות השלכתו לים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong> מסביר את דברי הרמב"ם באופן דומה להסברים הנ"ל, כלומר, המשליך את החמור פטור רק אם החמור הוא מטען עודף, ואז בעליו שהכניס מטען עודף כזה, צריך לשאת בעלות השלכתו לים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם ה<strong>נימוקי יוסף</strong> (מד: מדפי הרי"ף) טוען שמתוך שהרמב"ם לא חילק בדין החמור משמע, שבעל החמור לא צריך לחטוא בהעמסת מטען עודף בכדי שהמשליך את החמור לים יהיה פטור. לפיכך, ממשיך הנימוקי יוסף, לא ברור מדוע מצד אחד פסק הרמב"ם (גזלה ואבדה יב, יד) שכל בני הספינה מתחלקים בהוצאות השלכת סחורה לים, ואילו במקרה של החמור פטר הרמב"ם את המשליך. חוסר בהירות זו מובעת בהשגת הראב"ד כאן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם ה<strong>נימוקי יוסף</strong> (מד: מדפי הרי"ף) טוען שמתוך שהרמב"ם לא חילק בדין החמור משמע, שבעל החמור לא צריך לחטוא בהעמסת מטען עודף בכדי שהמשליך את החמור לים יהיה פטור. לפיכך, ממשיך הנימוקי יוסף, לא ברור מדוע מצד אחד פסק הרמב"ם (גזלה ואבדה יב, יד) שכל בני הספינה מתחלקים בהוצאות השלכת סחורה לים, ואילו במקרה של החמור פטר הרמב"ם את המשליך. חוסר בהירות זו מובעת בהשגת הראב"ד כאן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסבר בדעת הרמב"ם הפותר את תמיהת הנימוקי יוסף מובא ב<strong>אבן האזל</strong> (על הלכה זו). לדבריו, כאשר ישנה סחורה המסכנת את הנוסעים ואת הספינה, יש להשליך אותה בכל מקרה. אמנם, בהלכה שלפנינו יש סחורה כבדה רק לאדם אחד, הלוא הוא בעל החמור, ולכן רק הוא נושא בהוצאות השלכתה. לעומת זאת, ההלכה בהלכות גזילה ואבידה עוסקת במקרה בו יש לכמה אנשים סחורה, ולכן יש לחלק את ההוצאות בין כל ה'רודפים' בעלי הסחורה, והחלוקה היא על פי משקל<sup id="ref126"><a href="#fn126">[126]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הסבר בדעת הרמב"ם הפותר את תמיהת הנימוקי יוסף מובא ב<strong>אבן האזל</strong> (על הלכה זו). לדבריו, כאשר ישנה סחורה המסכנת את הנוסעים ואת הספינה, יש להשליך אותה בכל מקרה. אמנם, בהלכה שלפנינו יש סחורה כבדה רק לאדם אחד, הלוא הוא בעל החמור, ולכן רק הוא נושא בהוצאות השלכתה. לעומת זאת, ההלכה בהלכות גזילה ואבידה עוסקת במקרה בו יש לכמה אנשים סחורה, ולכן יש לחלק את ההוצאות בין כל ה'רודפים' בעלי הסחורה, והחלוקה היא על פי משקל<sup id="ref126"><a href="#fn126">[126]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי הסבר זה השלכת הסחורה המוגדרת כ'רודף' אינה מותנית בפשיעה של בעל הסחורה, וזאת להבדיל משיטות המאירי, ר' יונתן והמרדכי שהובאו לעיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי הסבר זה השלכת הסחורה המוגדרת כ'רודף' אינה מותנית בפשיעה של בעל הסחורה, וזאת להבדיל משיטות המאירי, ר' יונתן והמרדכי שהובאו לעיל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפ ד) העתיק את לשון הרמב"ם להלכה. ה<strong>רמ"א</strong> הסביר את הדברים על פי הבנת המגיד משנה ברמב"ם. ה<strong>רמ"א</strong> מוסיף ומביא את דברי המרדכי, שאם לא פשע בעל החמור בהכניסו את החמור לספינה, יש לפצותו על חמורו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפ ד) העתיק את לשון הרמב"ם להלכה. ה<strong>רמ"א</strong> הסביר את הדברים על פי הבנת המגיד משנה ברמב"ם. ה<strong>רמ"א</strong> מוסיף ומביא את דברי המרדכי, שאם לא פשע בעל החמור בהכניסו את החמור לספינה, יש לפצותו על חמורו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ברוך הרחמן שסייעני לסיים הלכות חובל ומזיק</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ברוך הרחמן שסייעני לסיים הלכות חובל ומזיק</p>
                     
                 </div>
                 
@@ -1502,7 +1502,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1646,6 +1646,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

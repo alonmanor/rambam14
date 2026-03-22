@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">מלוה ולוה - פרק יז</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק יז)</h3>
                 <ul class="space-y-3">
@@ -942,7 +942,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -954,11 +954,11 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">רוב ההלכות בפרק עוסקות בגבית החוב כאשר הלוה או המלווה או שניהם כבר אינם בחיים בשעת הגביה. כאשר נפרעים מיורשי הלווה יש בעייתיות הנובעת מכך שיש מקום לחשש שמא אביהם כבר פרע את החוב לפני שמת ומשום מה לא לקח אליו את השטר. לכן, כמו בכל פרעון מהיורשים צריך הנפרע להישבע. גם במקום בו המלווה מת ויורשיו הם הנפרעים קיימת בעייתיות כי יורשיו אינם יכולים להישבע בוודאות שהמלווה לא פרע כבר את החוב. לכן, במקרים בהם הם צריכים להישבע תוקנה "שבועת היורשים" בה הם נשבעים שאביהם לא אמר להם או לאדם אחר הידוע להם שהשטר פרוע וכמו כן שלא מצאו בעזבונו אינדיקציות לכך שהשטר פרוע. דין זה מוצג בשלוש ההלכות הראשונות.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">רוב ההלכות בפרק עוסקות בגבית החוב כאשר הלוה או המלווה או שניהם כבר אינם בחיים בשעת הגביה. כאשר נפרעים מיורשי הלווה יש בעייתיות הנובעת מכך שיש מקום לחשש שמא אביהם כבר פרע את החוב לפני שמת ומשום מה לא לקח אליו את השטר. לכן, כמו בכל פרעון מהיורשים צריך הנפרע להישבע. גם במקום בו המלווה מת ויורשיו הם הנפרעים קיימת בעייתיות כי יורשיו אינם יכולים להישבע בוודאות שהמלווה לא פרע כבר את החוב. לכן, במקרים בהם הם צריכים להישבע תוקנה "שבועת היורשים" בה הם נשבעים שאביהם לא אמר להם או לאדם אחר הידוע להם שהשטר פרוע וכמו כן שלא מצאו בעזבונו אינדיקציות לכך שהשטר פרוע. דין זה מוצג בשלוש ההלכות הראשונות.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ד-ה עוסקות בבעיה המיוחדת הצצה במקרה בו מת הלווה ואז מת המלווה. בשעה שמת הלווה כבר התחייב המלווה להישבע ליורשים שודאי לו שהשטר טרם נפרע. בהמשך כאשר מת המלווה נותרו רק יורשיו והם לא יכולים להישבע בוודאות על כך. לכן, לדעת רב ושמואל, אין יורשי המלווה יכולים לגבות מיורשי הלווה. אמוראים אחרים נחלקו על פסק זה מכל וכל או שהגבילוהו למקרה בו כבר הספיק המלווה לתבוע את יורשי הלווה לפני שמת. מתוך מחלוקת זו נותר הפסק שההכרעה בדין זה היא על פי הדיין, ולכן גם בית דין שאינם גובים במקרים כאלו, אינם קורעים את השטר כי בית דין אחר אולי יגבו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ד-ה עוסקות בבעיה המיוחדת הצצה במקרה בו מת הלווה ואז מת המלווה. בשעה שמת הלווה כבר התחייב המלווה להישבע ליורשים שודאי לו שהשטר טרם נפרע. בהמשך כאשר מת המלווה נותרו רק יורשיו והם לא יכולים להישבע בוודאות על כך. לכן, לדעת רב ושמואל, אין יורשי המלווה יכולים לגבות מיורשי הלווה. אמוראים אחרים נחלקו על פסק זה מכל וכל או שהגבילוהו למקרה בו כבר הספיק המלווה לתבוע את יורשי הלווה לפני שמת. מתוך מחלוקת זו נותר הפסק שההכרעה בדין זה היא על פי הדיין, ולכן גם בית דין שאינם גובים במקרים כאלו, אינם קורעים את השטר כי בית דין אחר אולי יגבו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ו-ז עוסקות ביורשי הלווה הנתבעים בשטר ובתגובה אומרים שאביהם אמר שמעולם לא לווה. במקרה זה חל הכלל "כל האומר לא לוויתי כאומר לא פרעתי". כלומר, כיוון שיש ראיה כנגד הנתבעים האומרת שלווה אביהם, נדחית טענתם. לא רק שהטענה נדחית אלא היא אף שקולה להודאה שהחוב לא נפרע ולכן עליהם לשלם בין אם למלווה ובין אם ליורשיו. בהלכה ח נידון מקרה בו מת מלווה והשאיר יתומים קטנים. לאחר מות המלווה הוציא הלווה שובר ועליו עדים המעיד על פרעון השטר. האמוראים נחלקו האם הולכים על פי השובר וקורעים את השטר, או שהתזמון החשוד של הוצאת השובר לאחר מות המלווה מעלה חשש לזיוף ולכן יש לחכות שיגדלו יתומי המלווה ויוכלו לברר ולטעון. גם הראשונים נחלקו האם גם בשובר מקויים הדין זהה ומה צריך להיות התזמון המדוייק של הוצאת השובר על מנת ליצור חשש סביר לזיוף. ההלכה האחרונה מדברת על מציאות בה לאותו שם של מטבע יש ערכים שונים ואז מתעוררת השאלה לפי איזה מטבע לפרוע. אם מצויין בשטר מקום כתיבתו יש לפרוע על פי שווי המטבע באותו מקום, אך אם הדבר לא מצויין בשטר יש ללכת על פי מקום הגבייה. הראשונים נחלקו בהבנת הדין. יש שהבינו שהולכים אחר מקום הכתיבה כי מניחים שלשיעור זה הסכים הלווה, וממילא אם לא צויין מקום הכתיבה הלווה מסכים במובלע לפרוע כבמקום הגביה. ראשונים אחרים הסבירו שהולכים אחר הערך שקיבל הלווה ולכן כל ראיה למקום הגביה, אפילו אם אין הוא כתוב בשטר, מצדיקה גביה לפי השיעור במקום בו נכתב. על פי שיטה זו, במקרה בו לא ידוע היכן נכתב יש ללכת על פי השיעור במקום הגביה משום שיש להניח שמקום הגביה הוא מקום הכתיבה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ו-ז עוסקות ביורשי הלווה הנתבעים בשטר ובתגובה אומרים שאביהם אמר שמעולם לא לווה. במקרה זה חל הכלל "כל האומר לא לוויתי כאומר לא פרעתי". כלומר, כיוון שיש ראיה כנגד הנתבעים האומרת שלווה אביהם, נדחית טענתם. לא רק שהטענה נדחית אלא היא אף שקולה להודאה שהחוב לא נפרע ולכן עליהם לשלם בין אם למלווה ובין אם ליורשיו. בהלכה ח נידון מקרה בו מת מלווה והשאיר יתומים קטנים. לאחר מות המלווה הוציא הלווה שובר ועליו עדים המעיד על פרעון השטר. האמוראים נחלקו האם הולכים על פי השובר וקורעים את השטר, או שהתזמון החשוד של הוצאת השובר לאחר מות המלווה מעלה חשש לזיוף ולכן יש לחכות שיגדלו יתומי המלווה ויוכלו לברר ולטעון. גם הראשונים נחלקו האם גם בשובר מקויים הדין זהה ומה צריך להיות התזמון המדוייק של הוצאת השובר על מנת ליצור חשש סביר לזיוף. ההלכה האחרונה מדברת על מציאות בה לאותו שם של מטבע יש ערכים שונים ואז מתעוררת השאלה לפי איזה מטבע לפרוע. אם מצויין בשטר מקום כתיבתו יש לפרוע על פי שווי המטבע באותו מקום, אך אם הדבר לא מצויין בשטר יש ללכת על פי מקום הגבייה. הראשונים נחלקו בהבנת הדין. יש שהבינו שהולכים אחר מקום הכתיבה כי מניחים שלשיעור זה הסכים הלווה, וממילא אם לא צויין מקום הכתיבה הלווה מסכים במובלע לפרוע כבמקום הגביה. ראשונים אחרים הסבירו שהולכים אחר הערך שקיבל הלווה ולכן כל ראיה למקום הגביה, אפילו אם אין הוא כתוב בשטר, מצדיקה גביה לפי השיעור במקום בו נכתב. על פי שיטה זו, במקרה בו לא ידוע היכן נכתב יש ללכת על פי השיעור במקום הגביה משום שיש להניח שמקום הגביה הוא מקום הכתיבה.</p>
                 
             </div>
             
@@ -966,134 +966,134 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מלוה שמת ובא היורש לתבוע את הלוה בשטר שעליו ואמר פרעתי לאביך והיורש אומר איני יודע אומרים לו עמוד ושלם לו, אמר ישבע לי ה"ז נשבע בנקיטת חפץ שלא פקדנו אבא על ידי אחר ושלא אמר לנו אבא בפיו ושלא מצינו בין שטרותיו של אבא ששטר זה פרוע וגובה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מת הלוה אחר שמת המלוה ובא היורש להפרע מן היורש לא יפרע אלא בשבועה ואומר לו תחלה ישבע שלא פקדנו אבא ושלא אמר לנו אבא ולא מצינו בין שטרותיו של אבא ששטר זה פרוע ואפילו היה היורש קטן המוטל בעריסה כשמת מורישו ה"ז נשבע ונוטל, ואם צוה המלוה בשעת מיתתו ששטר זה אינו פרוע יפרע היורש בלא שבועה אפילו מן היורש.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מת הלוה תחלה ואחר כך מת המלוה אין יורשי מלוה נוטלין מיורשי לוה כלום שבשעה שמת הלוה נתחייב המלוה להשבע ואח"כ יטול כמו שביארנו וכבר מת ואין אדם מוריש שבועה לבניו שאינן יכולין להשבע שלא נפרע אביהם כלום, ואם עבר הדיין והשביע יורשי מלוה וגבו את חובן אין מוציאין מידם לפיכך שטר חוב של יתומים הבאים להפרע מן היתומים שמת אביהן הלוה תחלה אין קורעין אותו ואין מגבין בו, אין גובין בו שאין אדם מוריש שבועה לבניו כמו שביארנו ואין קורעין אותו שמא יבא דיין שידון ויוציא בו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אפילו היה שם ערב ומת הלוה תחלה לא יפרעו יורשי המלוה מן הערב, שאם תאמר יפרעו מן הערב הרי הערב חוזר ונפרע מיורשי לוה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אין דנין מדין זה לכל הדומה לו אלא הרי הפוגם את שטרו ומת אף על פי שאינו גובה אלא בשבועה הרי בניו נשבעין שלא פקדנו אבא ולא צונו אבא ולא מצינו בין שטרותיו של אבא שכל השטר הזה פרוע וגובין את שאר השטר בין מן המלוה בין מיורשיו.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גביה לאחר שמתו המלווה או הלווה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גביה לאחר שמתו המלווה או הלווה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה בשבועות (מה.)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במשנה בשבועות (מה.)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כשם שאמרו: הפוגמת כתובתה - לא תפרע אלא בשבועה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כשם שאמרו: הפוגמת כתובתה - לא תפרע אלא בשבועה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ועד אחד מעידה שהיא פרועה - לא תפרע אלא בשבועה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ועד אחד מעידה שהיא פרועה - לא תפרע אלא בשבועה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מנכסים משועבדים ומנכסי יתומים - לא תפרע אלא בשבועה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מנכסים משועבדים ומנכסי יתומים - לא תפרע אלא בשבועה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והנפרעת שלא בפניו - לא תפרע אלא בשבועה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והנפרעת שלא בפניו - לא תפרע אלא בשבועה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכן היתומים לא יפרעו אלא בשבועה- שבועה שלא פקדנו אבא, ולא אמר לנו אבא, שלא מצינו בין שטרותיו של אבא ששטר זה פרוע;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>וכן היתומים לא יפרעו אלא בשבועה- שבועה שלא פקדנו אבא, ולא אמר לנו אבא, שלא מצינו בין שטרותיו של אבא ששטר זה פרוע;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ר' יוחנן בן ברוקה אומר: אפי' נולד הבן לאחר מיתת האב - הרי זה נשבע ונוטל;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ר' יוחנן בן ברוקה אומר: אפי' נולד הבן לאחר מיתת האב - הרי זה נשבע ונוטל;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ר' שמעון בן גמליאל: אם יש עדים שאמר האב בשעת מיתתו שטר זה אינו פרוע - הוא נוטל שלא בשבועה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ר' שמעון בן גמליאל: אם יש עדים שאמר האב בשעת מיתתו שטר זה אינו פרוע - הוא נוטל שלא בשבועה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה מציינת שורה ארוכה של מקרים בהם התובע פורע בשבועה אעפ"י שיש שטר מקויים בידו. מקרים אלה כוללים אשה הפוגמת כתובתה<sup id="ref251"><a href="#fn251">[251]</a></sup>, או שעד אחד מעיד שהכתובה פרועה, או הגובה מנכסי יתומים/נכסים משועבדים או הגובה שלא בפני בעל חובו. המשנה אומרת שכשם שבמקרים אלה, התובע גובה בשבועה, כך "היתומים לא יפרעו אלא בשבועה". כלומר, יורשיו של המלווה שמצאו שטר בעזבונו, אינם יכולים לגבותו מהלווה מבלי שישבעו שאביהם לא אמר להם להם לפני מותו, לא ישירות ולא ע"י אדם אחר, ששטר זה פרוע, ושלא מצאו בעזבונו של האב מסמך המעיד על כך שהשטר פרוע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה מציינת שורה ארוכה של מקרים בהם התובע פורע בשבועה אעפ"י שיש שטר מקויים בידו. מקרים אלה כוללים אשה הפוגמת כתובתה<sup id="ref251"><a href="#fn251">[251]</a></sup>, או שעד אחד מעיד שהכתובה פרועה, או הגובה מנכסי יתומים/נכסים משועבדים או הגובה שלא בפני בעל חובו. המשנה אומרת שכשם שבמקרים אלה, התובע גובה בשבועה, כך "היתומים לא יפרעו אלא בשבועה". כלומר, יורשיו של המלווה שמצאו שטר בעזבונו, אינם יכולים לגבותו מהלווה מבלי שישבעו שאביהם לא אמר להם להם לפני מותו, לא ישירות ולא ע"י אדם אחר, ששטר זה פרוע, ושלא מצאו בעזבונו של האב מסמך המעיד על כך שהשטר פרוע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (מח.) מבררת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (מח.) מבררת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ממאן? (=ממי נפרעים יתומי המלווה)?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ממאן? (=ממי נפרעים יתומי המלווה)?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אילימא מלוה, אבוהון שקיל בלא שבועה ואינהו בשבועה?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אילימא מלוה, אבוהון שקיל בלא שבועה ואינהו בשבועה?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הכי קאמר: וכן היתומים מן היתומים לא יפרעו אלא בשבועה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הכי קאמר: וכן היתומים מן היתומים לא יפרעו אלא בשבועה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא אינה מקבלת את האפשרות שיתומיו של המלווה יאלצו להישבע ללווה כאשר הוא עצמו יכול היה לגבות את השטר מבלי שישבע, שהרי אין היגיון בדבר. לכן היא מעמידה את המשנה במקרה בו מתו גם הלוה וגם המלווה ולכן על יורשי המלווה חל הכלל שכבר הוזכר במשנה, שמנכסי יתומים אין נפרעים אלא בשבועה. אמנם, בניגוד לאביהם המלווה המנוח, היתומים אינם יכולים לדעת בוודאות וכל שכן להישבע שהשטר לא נפרע, אך חייבים הם לפחות להישבע שאינם יודעים על שום אינדיקציה לכך שהשטר נפרע. שבועה זו נקראת שבועת היורשים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא אינה מקבלת את האפשרות שיתומיו של המלווה יאלצו להישבע ללווה כאשר הוא עצמו יכול היה לגבות את השטר מבלי שישבע, שהרי אין היגיון בדבר. לכן היא מעמידה את המשנה במקרה בו מתו גם הלוה וגם המלווה ולכן על יורשי המלווה חל הכלל שכבר הוזכר במשנה, שמנכסי יתומים אין נפרעים אלא בשבועה. אמנם, בניגוד לאביהם המלווה המנוח, היתומים אינם יכולים לדעת בוודאות וכל שכן להישבע שהשטר לא נפרע, אך חייבים הם לפחות להישבע שאינם יודעים על שום אינדיקציה לכך שהשטר נפרע. שבועה זו נקראת שבועת היורשים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכלל דברי הגמרא משמע שבמקום בו היה המלווה נאלץ להישבע, חייבים גם יורשיו להישבע שבועת היורשים. לכן פוסק הרמב"ם שבמקרה בו הלווה טוען שהשטר פרוע, כפי שיכול לדרוש שבועה מהמלווה (כפי שהתבאר לעיל בפרק יד), כך יכול להשביע את יורשיו שבועת יורשים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכלל דברי הגמרא משמע שבמקום בו היה המלווה נאלץ להישבע, חייבים גם יורשיו להישבע שבועת היורשים. לכן פוסק הרמב"ם שבמקרה בו הלווה טוען שהשטר פרוע, כפי שיכול לדרוש שבועה מהמלווה (כפי שהתבאר לעיל בפרק יד), כך יכול להשביע את יורשיו שבועת יורשים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי דברי ר' יוחנן בן ברוקא במשנה, יכול היורש להישבע שבועת יורשים אפילו אם לא היה בר דעת בעת מיתת האב וממילא שבועתו מספקת פחות מידע ביחס למה שאירע, ומכיוון שלא משמע שיש החולקים עליו, פוסקים כמותו המפרשים ובכללם הרמב"ם<sup id="ref252"><a href="#fn252">[252]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי דברי ר' יוחנן בן ברוקא במשנה, יכול היורש להישבע שבועת יורשים אפילו אם לא היה בר דעת בעת מיתת האב וממילא שבועתו מספקת פחות מידע ביחס למה שאירע, ומכיוון שלא משמע שיש החולקים עליו, פוסקים כמותו המפרשים ובכללם הרמב"ם<sup id="ref252"><a href="#fn252">[252]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רשב"ג פוסק במשנה שאם יש עדים שהמלווה אמר בשעת מיתתו שהשטר אינו פרוע, אין צריך היורש להישבע שבועת יורשים. וכן פסקו הרמב"ם והטור<sup id="ref253"><a href="#fn253">[253]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רשב"ג פוסק במשנה שאם יש עדים שהמלווה אמר בשעת מיתתו שהשטר אינו פרוע, אין צריך היורש להישבע שבועת יורשים. וכן פסקו הרמב"ם והטור<sup id="ref253"><a href="#fn253">[253]</a></sup>.</p>
                     
                 </div>
                 
                 <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מת לוה בחיי מלוה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מת לוה בחיי מלוה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהקשר זה מובאים דברי רב ושמואל-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהקשר זה מובאים דברי רב ושמואל-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב</strong> ו<strong>שמואל</strong> דאמרי תרוייהו: לא שנו אלא שמת מלוה בחיי לוה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רב</strong> ו<strong>שמואל</strong> דאמרי תרוייהו: לא שנו אלא שמת מלוה בחיי לוה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אבל מת לוה בחיי מלוה - כבר נתחייב מלוה לבני לוה שבועה, ואין אדם מוריש שבועה לבניו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אבל מת לוה בחיי מלוה - כבר נתחייב מלוה לבני לוה שבועה, ואין אדם מוריש שבועה לבניו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, ניתן לגבות מיתומי הלווה בשבועת היורשים ("שלא פקדנו...") רק אם מת מלוה בחיי לווה, אך אם מת הלווה ואח"כ מת המלווה, כיוון שלו היה המלווה גובה, היה נאלץ להישבע ליתומי הלווה שהשטר לא פרוע, כך גם יורשיו צריכים להישבע שבועה כזו, ואין מקלים עליהם להישבע שבועת היורשים. מעשית, מכיוון שככלל אין יורשי המלווה יכולים להישבע שהשטר אינו פרוע, משמעות הפסק היא שלא ניתן לפרוע בשטר זה מעזבונו של הלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, ניתן לגבות מיתומי הלווה בשבועת היורשים ("שלא פקדנו...") רק אם מת מלוה בחיי לווה, אך אם מת הלווה ואח"כ מת המלווה, כיוון שלו היה המלווה גובה, היה נאלץ להישבע ליתומי הלווה שהשטר לא פרוע, כך גם יורשיו צריכים להישבע שבועה כזו, ואין מקלים עליהם להישבע שבועת היורשים. מעשית, מכיוון שככלל אין יורשי המלווה יכולים להישבע שהשטר אינו פרוע, משמעות הפסק היא שלא ניתן לפרוע בשטר זה מעזבונו של הלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהמשך הגמרא משמע שפסקם של רב ושמואל שנוי במחלוקת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מהמשך הגמרא משמע שפסקם של רב ושמואל שנוי במחלוקת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שלחוה קמיה ד<strong>ר' אלעזר</strong>: שבועה זו מה טיבה? שלח להו: יורשין נשבעין שבועת יורשין ונוטלין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שלחוה קמיה ד<strong>ר' אלעזר</strong>: שבועה זו מה טיבה? שלח להו: יורשין נשבעין שבועת יורשין ונוטלין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שלחוה בימי <strong>רבי אמי</strong>, אמר... הואיל ואתא לידן נימא בה מילתא: עמד בדין ומת - כבר נתחייב מלוה לבני לוה שבועה, ואין אדם מוריש שבועה לבניו, לא עמד בדין ומת - יורשין נשבעין שבועת יורשין ונוטלין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שלחוה בימי <strong>רבי אמי</strong>, אמר... הואיל ואתא לידן נימא בה מילתא: עמד בדין ומת - כבר נתחייב מלוה לבני לוה שבועה, ואין אדם מוריש שבועה לבניו, לא עמד בדין ומת - יורשין נשבעין שבועת יורשין ונוטלין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מתקיף לה <strong>רב נחמן</strong>: אטו בי דינא קא מחייבי ליה שבועה? מעידנא דשכיב לוה איחייב ליה מלוה לבני לוה שבועה! אלא אמר רב נחמן: אי איתא לדרב ודשמואל - איתא, אי ליתא - ליתא...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מתקיף לה <strong>רב נחמן</strong>: אטו בי דינא קא מחייבי ליה שבועה? מעידנא דשכיב לוה איחייב ליה מלוה לבני לוה שבועה! אלא אמר רב נחמן: אי איתא לדרב ודשמואל - איתא, אי ליתא - ליתא...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ר' אלעזר חלק בפירוש על דברי רב ושמואל ואמר שהיורשים תמיד נשבעים שבועת יורשים ונוטלים<sup id="ref254"><a href="#fn254">[254]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ר' אלעזר חלק בפירוש על דברי רב ושמואל ואמר שהיורשים תמיד נשבעים שבועת יורשים ונוטלים<sup id="ref254"><a href="#fn254">[254]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ר' אמי ניסה להציע מעין פשרה ולהגביל את דברי רב ושמואל למקרים בהם הלווה מת ונידונה תביעת המלווה בבית דין ולאחר שבית הדין חייב את המלווה להישבע שהשטר אינו פרוע מת גם הוא ונשארה חובת השבועה על היתומים. אמנם, במקרים בהם התביעה הגיעה לבית הדין רק לאחר מיתת שניהם, ישבעו יורשי המלווה שבות יורשים ויטלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ר' אמי ניסה להציע מעין פשרה ולהגביל את דברי רב ושמואל למקרים בהם הלווה מת ונידונה תביעת המלווה בבית דין ולאחר שבית הדין חייב את המלווה להישבע שהשטר אינו פרוע מת גם הוא ונשארה חובת השבועה על היתומים. אמנם, במקרים בהם התביעה הגיעה לבית הדין רק לאחר מיתת שניהם, ישבעו יורשי המלווה שבות יורשים ויטלו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב נחמן אינו מסכים להצעתו של ר' אמי משום שמשעה שמת הלווה כבר התחייב המלווה שבועה ליורשי הלווה, ללא קשר להבאת הדברים לבית הדין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב נחמן אינו מסכים להצעתו של ר' אמי משום שמשעה שמת הלווה כבר התחייב המלווה שבועה ליורשי הלווה, ללא קשר להבאת הדברים לבית הדין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מתוך ההסתייגות מדברי רב ושמואל מוצעים בגמרא גדרים המגבילים אותם-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מתוך ההסתייגות מדברי רב ושמואל מוצעים בגמרא גדרים המגבילים אותם-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איקלע רב נחמן לסורא, עול לגביה <strong>רב חסדא</strong> ו<strong>רבה בר רב הונא</strong>; אמרו ליה: ליתי מר נעקרא להא דרב ושמואל, אמר להו: איכפלי ואתאי כל הני פרסי למעקרא להא דרב ושמואל? אלא הבו דלא לוסיף עלה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איקלע רב נחמן לסורא, עול לגביה <strong>רב חסדא</strong> ו<strong>רבה בר רב הונא</strong>; אמרו ליה: ליתי מר נעקרא להא דרב ושמואל, אמר להו: איכפלי ואתאי כל הני פרסי למעקרא להא דרב ושמואל? אלא הבו דלא לוסיף עלה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כגון מאי? דאמר <strong>רב פפא</strong>: הפוגם את שטרו ומת - יורשין נשבעין שבועת יורשין ונוטלין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כגון מאי? דאמר <strong>רב פפא</strong>: הפוגם את שטרו ומת - יורשין נשבעין שבועת יורשין ונוטלין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב נחמן לא רצה לעקור את פסקם של רב ושמואל, אך כן הורה להגבילו למקרה בו נאמר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב נחמן לא רצה לעקור את פסקם של רב ושמואל, אך כן הורה להגבילו למקרה בו נאמר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות כך פוסק ר' פפא, שכאשר תובע התחייב שבועה בנסיבות אחרות, למשל אם פגם את שטרו (טען ששטרו נפרע כבר חלקית), ובכך התחייב להישבע שבועה שכל השאר טרם נפרע, ואז מת, יורשיו יכולים להסתפק בשבועת היורשים ויכולים לגבות בעזרתה מהנתבע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעקבות כך פוסק ר' פפא, שכאשר תובע התחייב שבועה בנסיבות אחרות, למשל אם פגם את שטרו (טען ששטרו נפרע כבר חלקית), ובכך התחייב להישבע שבועה שכל השאר טרם נפרע, ואז מת, יורשיו יכולים להסתפק בשבועת היורשים ויכולים לגבות בעזרתה מהנתבע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מתלבטת לגבי שני מקרים האם הם חלק מפסקם המקורי של רב ושמואל, או מקרים אחרים בהם על פי העיקרון שהציע ר' נחמן, אין הכרח לפסוק כרב ושמואל-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מתלבטת לגבי שני מקרים האם הם חלק מפסקם המקורי של רב ושמואל, או מקרים אחרים בהם על פי העיקרון שהציע ר' נחמן, אין הכרח לפסוק כרב ושמואל-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא דשכיב ושבק ערבא, סבר <strong>רב פפא</strong> למימר: הא נמי דלא לוסיף עלה הוא, אמר ליה <strong>רב הונא בריה דרב יהושע </strong>לרב פפא: אטו ערבא לאו בתר יתמי אזיל?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא דשכיב ושבק ערבא, סבר <strong>רב פפא</strong> למימר: הא נמי דלא לוסיף עלה הוא, אמר ליה <strong>רב הונא בריה דרב יהושע </strong>לרב פפא: אטו ערבא לאו בתר יתמי אזיל?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא דשכיב ושבק אחא, סבר <strong>רמי בר חמא</strong> למימר: הא נמי דלא לוסיף עלה הוא, אמר ליה <strong>רבא</strong>: מה לי שלא פקדני אבא, ומה לי שלא פקדני אחי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא דשכיב ושבק אחא, סבר <strong>רמי בר חמא</strong> למימר: הא נמי דלא לוסיף עלה הוא, אמר ליה <strong>רבא</strong>: מה לי שלא פקדני אבא, ומה לי שלא פקדני אחי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה הראשון הלווה המלווה ללווה ע"י ערב, בהמשך מת הלווה ואחריו מת המלווה. כעת באים יורשי המלווה להיפרע מהערב והוא דורש שישבעו שהחוב עדיין לא נפרע. רב פפא חשב להחריג מקרה זה מפסקם של רב ושמואל ולאפשר ליורשי המלווה להישבע שבועה מותאמת, אך רב <strong>הונא</strong> אינו רואה הבדל בין מקרה זה לבין המקרה הרגיל שהרי סוף סוף הערב אינו אלא חוליה מקשרת. יורשי המלווה גובים ממנו, אך הוא ממשיך ותובע את יורשי הלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה הראשון הלווה המלווה ללווה ע"י ערב, בהמשך מת הלווה ואחריו מת המלווה. כעת באים יורשי המלווה להיפרע מהערב והוא דורש שישבעו שהחוב עדיין לא נפרע. רב פפא חשב להחריג מקרה זה מפסקם של רב ושמואל ולאפשר ליורשי המלווה להישבע שבועה מותאמת, אך רב <strong>הונא</strong> אינו רואה הבדל בין מקרה זה לבין המקרה הרגיל שהרי סוף סוף הערב אינו אלא חוליה מקשרת. יורשי המלווה גובים ממנו, אך הוא ממשיך ותובע את יורשי הלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה השני אין מדובר ביתומי המלווה אלא ביורש אחר (אחיו). גם בזה המסקנה היא שיש להחיל את דינם של רב ושמואל משום שאותו יורש, כמו היתומים, יכול להישבע רק שבועת היורשים ולא את שבועת המלווה המקורית שרב ושמואל דורשים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה השני אין מדובר ביתומי המלווה אלא ביורש אחר (אחיו). גם בזה המסקנה היא שיש להחיל את דינם של רב ושמואל משום שאותו יורש, כמו היתומים, יכול להישבע רק שבועת היורשים ולא את שבועת המלווה המקורית שרב ושמואל דורשים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם לגבי פסיקת ההלכה המעשית הגמרא מציירת מצב ללא הכרעה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם לגבי פסיקת ההלכה המעשית הגמרא מציירת מצב ללא הכרעה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב חמא</strong>: השתא דלא איתמר הלכתא לא כרב ושמואל ולא כרבי אלעזר, האי דיינא דעבד כרב ושמואל - עבד, דעבד כרבי אלעזר - עבד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב חמא</strong>: השתא דלא איתמר הלכתא לא כרב ושמואל ולא כרבי אלעזר, האי דיינא דעבד כרב ושמואל - עבד, דעבד כרבי אלעזר - עבד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב פפא</strong>: האי שטרא דיתמי, לא מקרע קרעינן ליה ולא אגבויי מגבינן ביה; אגבויי לא מגבינן ביה, דלמא סבירא לן כרב ושמואל; ומקרע לא קרעינן ליה, דהאי דיינא דעבד כרבי אלעזר - עבד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב פפא</strong>: האי שטרא דיתמי, לא מקרע קרעינן ליה ולא אגבויי מגבינן ביה; אגבויי לא מגבינן ביה, דלמא סבירא לן כרב ושמואל; ומקרע לא קרעינן ליה, דהאי דיינא דעבד כרבי אלעזר - עבד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב חמא אומר שהכרעת הדין נתונה לדעתו של הדיין הספציפי לפניו הדין נידון. רב פפא אומר, שאין לגבות במקרה בו מת הלווה בחיי המלווה, כי אפשר שהלכה כרב ושמואל, ואז אין היורש יכול להישבע שבועת היורשים, אך גם אין לקרוע את השטר, כיוון שאפשר שהלכה כר' אלעזר ודיין שידון כמותו יגבה את החוב בשבועת היורשים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב חמא אומר שהכרעת הדין נתונה לדעתו של הדיין הספציפי לפניו הדין נידון. רב פפא אומר, שאין לגבות במקרה בו מת הלווה בחיי המלווה, כי אפשר שהלכה כרב ושמואל, ואז אין היורש יכול להישבע שבועת היורשים, אך גם אין לקרוע את השטר, כיוון שאפשר שהלכה כר' אלעזר ודיין שידון כמותו יגבה את החוב בשבועת היורשים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הבנת סברתם של רב ושמואל נחלקו המפרשים<sup id="ref255"><a href="#fn255">[255]</a></sup></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי הבנת סברתם של רב ושמואל נחלקו המפרשים<sup id="ref255"><a href="#fn255">[255]</a></sup></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י כותב</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רש"י כותב</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אין אדם מוריש ממון שהוא מחויב עליו שבועה לבניו לפי שאין הבנים יכולים לישבע שבועה זו שנתחייב אביהם</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אין אדם מוריש ממון שהוא מחויב עליו שבועה לבניו לפי שאין הבנים יכולים לישבע שבועה זו שנתחייב אביהם</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדבריו משמע שהלשון "מוריש שבועה לבניו" אינה מדוייקת. רב ושמואל התכוונו לומר שבניו של המלווה אינם יורשים ממון כאשר אביהם היה חייב שבועה עליו שהם אינם יכולים להישבע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדבריו משמע שהלשון "מוריש שבועה לבניו" אינה מדוייקת. רב ושמואל התכוונו לומר שבניו של המלווה אינם יורשים ממון כאשר אביהם היה חייב שבועה עליו שהם אינם יכולים להישבע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש כזה בגמרא, עם מסקנה הלכתית קיצונית יותר עולה מדברי <strong>ר' יהודה אלברצלוני</strong> (הביאוהו הרמב"ן והרשב"א) המתייחס למקרה בו מת המלווה לפני הלווה, כך שבן המלווה יכול להישבע שבועת היורשים, אלא שאז מת אף הוא. במקרה זה הוא פוסק שאין בנו (נכד המלווה) יכול לגבות את החוב, למרות שהשבועה שהנכד יכול היה להישבע אינה שונה משמעותית מזו של הבן<sup id="ref256"><a href="#fn256">[256]</a></sup>. כלומר, ממון שאדם חייב עליו שבועה כדי לגבותו, אין הוא מוריש לבניו כלל. כדברים אלה נראה שפסק גם הרשב"א.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פירוש כזה בגמרא, עם מסקנה הלכתית קיצונית יותר עולה מדברי <strong>ר' יהודה אלברצלוני</strong> (הביאוהו הרמב"ן והרשב"א) המתייחס למקרה בו מת המלווה לפני הלווה, כך שבן המלווה יכול להישבע שבועת היורשים, אלא שאז מת אף הוא. במקרה זה הוא פוסק שאין בנו (נכד המלווה) יכול לגבות את החוב, למרות שהשבועה שהנכד יכול היה להישבע אינה שונה משמעותית מזו של הבן<sup id="ref256"><a href="#fn256">[256]</a></sup>. כלומר, ממון שאדם חייב עליו שבועה כדי לגבותו, אין הוא מוריש לבניו כלל. כדברים אלה נראה שפסק גם הרשב"א.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים רבים (רמב"ן, רא"ש סי' טז) החולקים על פסק זה הבינו שהבעיה קיימת רק ביחס לבני המלווה (במקרה שמת הלווה ואז המלווה), משום שהם אינם יכולים להישבע, כאביהם, שהחוב נפרע. בעל התרומות (שער יד ח"ב ס"ג) מסביר שהבנתם בגמרא היא שלשון "מוריש שבועה לבניו" אמורה באמת ביחס לשבועה עצמה, וכוונתה לומר בסגנון ציורי, שבניגוד לממון שאדם מוריש לבניו, את הוודאות לגבי המציאות, הנדרשת לעניין שבועה, אין אדם יכול להוריש לבניו. לכן, כל עוד היורש יכול להישבע שבועה הדומה לזו שמורישו התחייב בה, יכול להישבע ולגבות אפילו לדברי רב ושמואל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשונים רבים (רמב"ן, רא"ש סי' טז) החולקים על פסק זה הבינו שהבעיה קיימת רק ביחס לבני המלווה (במקרה שמת הלווה ואז המלווה), משום שהם אינם יכולים להישבע, כאביהם, שהחוב נפרע. בעל התרומות (שער יד ח"ב ס"ג) מסביר שהבנתם בגמרא היא שלשון "מוריש שבועה לבניו" אמורה באמת ביחס לשבועה עצמה, וכוונתה לומר בסגנון ציורי, שבניגוד לממון שאדם מוריש לבניו, את הוודאות לגבי המציאות, הנדרשת לעניין שבועה, אין אדם יכול להוריש לבניו. לכן, כל עוד היורש יכול להישבע שבועה הדומה לזו שמורישו התחייב בה, יכול להישבע ולגבות אפילו לדברי רב ושמואל.</p>
                     
                 </div>
                 
@@ -1101,44 +1101,44 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו-ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     יורש שבא לגבות מן היורש ואמרו יורשי לוה אמר לנו אבא לא לויתי חוב זה הרי יורשי המלוה גובין שלא בשבועה שכל האומר לא לויתי כאומר לא פרעתי דמי, וכן מלוה שבא להפרע מיורשי לוה ואמרו אמר לנו אבא לא לויתי חוב זה ה"ז גובהו בלא שבועה אפילו האמינו בשטר כל זמן שאמר פרעתי שכל האומר לא לויתי כאומר לא פרעתי.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     יורש שבא להפרע מן הלוה בשטר שיש בו נאמנות ללוה כל זמן שיאמר פרעתי הרי הלוה נשבע היסת שפרע לשטר זה ונפטר אף על פי שלא כתב לו והרי אתה נאמן על יורשי שעיקר השטר על תנאי זה היה, אם התנה עליו שיהא נאמן בלא שום שבועה אינו נשבע אפילו ליורשי מלוה.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">יורשי הלווה או הלווה עצמו הטוענים שכלל לא לווה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">יורשי הלווה או הלווה עצמו הטוענים שכלל לא לווה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בכתובות (פח.) דנה במשנה האמורה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בכתובות (פח.) דנה במשנה האמורה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנן התם: וכן היתומים לא יפרעו אלא בשבועה...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנן התם: וכן היתומים לא יפרעו אלא בשבועה...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר' זריקא</strong> אמר <strong>רב יהודה</strong>, לא שנו אלא שאמרו יתומים: אמר לנו אבא לויתי ופרעתי, אבל אמרו: אמר לנו אבא לא לויתי - אף בשבועה לא יפרעו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>ר' זריקא</strong> אמר <strong>רב יהודה</strong>, לא שנו אלא שאמרו יתומים: אמר לנו אבא לויתי ופרעתי, אבל אמרו: אמר לנו אבא לא לויתי - אף בשבועה לא יפרעו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מתקיף לה <strong>רבא</strong>: אדרבה, כל האומר לא לויתי כאומר לא פרעתי דמי!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מתקיף לה <strong>רבא</strong>: אדרבה, כל האומר לא לויתי כאומר לא פרעתי דמי!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אי אתמר הכי אתמר:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא אי אתמר הכי אתמר:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר' זריקא</strong> אמר <strong>רב יהודה</strong>, לא שנו אלא שאמרו יתומים: אמר לנו אבא לויתי ופרעתי, אבל אמרו: אמר לנו אבא לא לויתי - נפרעין שלא בשבועה, שכל האומר לא לויתי כאומר לא פרעתי דמי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>ר' זריקא</strong> אמר <strong>רב יהודה</strong>, לא שנו אלא שאמרו יתומים: אמר לנו אבא לויתי ופרעתי, אבל אמרו: אמר לנו אבא לא לויתי - נפרעין שלא בשבועה, שכל האומר לא לויתי כאומר לא פרעתי דמי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה הרגיל שנידון בהלכות הקודמות יורשי הלווה טוענים שהחוב נפרע. הגמרא דנה בשאלה מה קורה אם טוענים יורשי הלווה שמעולם לא לוה אביהם. בתחילה מובא בשם ר' זריקא שבמקרה כזה אין גובים יורשי המלווה, אפילו לא בשבועה<sup id="ref257"><a href="#fn257">[257]</a></sup>. רבא אינו מקבל זאת, משום שאדרבה, רק טענת פרעון יכולה להתמודד מול השטר, אך כנגד טענת אי הלוואה השטר מוכיח, ויותר מכך, מכיוון שטענת אי הלוואה מהווה מיניה וביה הודאה באי פרעון<sup id="ref258"><a href="#fn258">[258]</a></sup>, חייבים יורשי הלווה לשלם. לכן מתקנת הגמרא את דברי ר' זריקא ואומרת שאם יורשי הלווה כפרו בעצם ההלוואה, כיוון שליורשי המלווה יש שטר, הרי הם גובים בו ללא צורך בשבועה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה הרגיל שנידון בהלכות הקודמות יורשי הלווה טוענים שהחוב נפרע. הגמרא דנה בשאלה מה קורה אם טוענים יורשי הלווה שמעולם לא לוה אביהם. בתחילה מובא בשם ר' זריקא שבמקרה כזה אין גובים יורשי המלווה, אפילו לא בשבועה<sup id="ref257"><a href="#fn257">[257]</a></sup>. רבא אינו מקבל זאת, משום שאדרבה, רק טענת פרעון יכולה להתמודד מול השטר, אך כנגד טענת אי הלוואה השטר מוכיח, ויותר מכך, מכיוון שטענת אי הלוואה מהווה מיניה וביה הודאה באי פרעון<sup id="ref258"><a href="#fn258">[258]</a></sup>, חייבים יורשי הלווה לשלם. לכן מתקנת הגמרא את דברי ר' זריקא ואומרת שאם יורשי הלווה כפרו בעצם ההלוואה, כיוון שליורשי המלווה יש שטר, הרי הם גובים בו ללא צורך בשבועה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם כותב כדברים האלה ומרחיב את הדין בטבעיות למקרה בו המלווה תובע את יורשי הלווה עצמם ואפילו אם האמין המלווה את הלווה ויורשיו<sup id="ref259"><a href="#fn259">[259]</a></sup>. השו"ע (חו"מ קח טו) פוסק כרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם כותב כדברים האלה ומרחיב את הדין בטבעיות למקרה בו המלווה תובע את יורשי הלווה עצמם ואפילו אם האמין המלווה את הלווה ויורשיו<sup id="ref259"><a href="#fn259">[259]</a></sup>. השו"ע (חו"מ קח טו) פוסק כרמב"ם.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נאמנות ללווה או למלווה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נאמנות ללווה או למלווה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דברי הרמב"ם מתבארים עפ"י מה שהובא בפרק טו לגבי דין נאמנות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דברי הרמב"ם מתבארים עפ"י מה שהובא בפרק טו לגבי דין נאמנות.</p>
                     
                 </div>
                 
@@ -1146,45 +1146,45 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     יורש קטן שהיה שט"ח לאביו ויצא עליו שובר אחר מיתת אביו אין קורעין את השטר ואין מגבין בו עד שיגדלו היתומים שמא שובר זה מזוייף הוא ולפיכך לא הוציאו הלוה בחיי אביו.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שובר על שטר היתומים שיצא לאחר מיתת האב</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שובר על שטר היתומים שיצא לאחר מיתת האב</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בבבא בתרא (ז:)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא בבבא בתרא (ז:)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא שטרא דיתמי דנפיק עליה תברא,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא שטרא דיתמי דנפיק עליה תברא,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב חמא</strong>: אגבויי לא מגבינן ליה ומיקרע לא קרעינן ליה;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב חמא</strong>: אגבויי לא מגבינן ליה ומיקרע לא קרעינן ליה;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אגבויי לא מגבינן ליה, דנפק תברא עליה;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אגבויי לא מגבינן ליה, דנפק תברא עליה;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מיקרע לא קרעינן ליה, דכי גדלי יתמי דילמא מייתו ראיה ומרעי ליה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מיקרע לא קרעינן ליה, דכי גדלי יתמי דילמא מייתו ראיה ומרעי ליה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב אחא בריה דרבא</strong> ל<strong>רבינא</strong>: הלכתא מאי?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>רב אחא בריה דרבא</strong> ל<strong>רבינא</strong>: הלכתא מאי?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א"ל: בכולהו הלכתא כרב חמא, לבר מתברא, דסהדי בשקרי לא מחזקינן.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>א"ל: בכולהו הלכתא כרב חמא, לבר מתברא, דסהדי בשקרי לא מחזקינן.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>מר זוטרא בריה דרב מרי</strong> אמר: בהא נמי הלכתא כרב חמא, דאם איתא דתברא מעליא הוא - איבעי ליה לאפוקי בחיי אבוהון, ומדלא אפקיה, שמע מינה זיופי זייפיה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>מר זוטרא בריה דרב מרי</strong> אמר: בהא נמי הלכתא כרב חמא, דאם איתא דתברא מעליא הוא - איבעי ליה לאפוקי בחיי אבוהון, ומדלא אפקיה, שמע מינה זיופי זייפיה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר במקרה בו אב נפטר והשאיר לבניו הקטנים שטר חוב. לאחר מיתת האב כאשר באו לפרוע מהלווה, הוציא הלווה שובר חתום על ידי עדים, המעיד על פרעון השטר. רב חמא פסק שאין לגבות בשטר, מחמת השובר, אך מאידך אף אין לקורעו כי אפשר שכאשר יגדלו היתומים ימצאו ראיה לזיוף<sup id="ref260"><a href="#fn260">[260]</a></sup>. רבינא אינו מקבל את דברי רב חמא, כיוון שאם יש חתימת עדים מקויימת הרי זו עדות ויש לסמוך עליה. לעומתו מר זוטרא מצדד בדברי רב חמא ומסביר שאף שבד"כ יש לסמוך על עדות אפילו בשטר, כאן יש נסיבות מחשידות כיוון שהלווה המתין עד מות המלווה כדי להוציא את השובר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדובר במקרה בו אב נפטר והשאיר לבניו הקטנים שטר חוב. לאחר מיתת האב כאשר באו לפרוע מהלווה, הוציא הלווה שובר חתום על ידי עדים, המעיד על פרעון השטר. רב חמא פסק שאין לגבות בשטר, מחמת השובר, אך מאידך אף אין לקורעו כי אפשר שכאשר יגדלו היתומים ימצאו ראיה לזיוף<sup id="ref260"><a href="#fn260">[260]</a></sup>. רבינא אינו מקבל את דברי רב חמא, כיוון שאם יש חתימת עדים מקויימת הרי זו עדות ויש לסמוך עליה. לעומתו מר זוטרא מצדד בדברי רב חמא ומסביר שאף שבד"כ יש לסמוך על עדות אפילו בשטר, כאן יש נסיבות מחשידות כיוון שהלווה המתין עד מות המלווה כדי להוציא את השובר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים פסקו כדברי רב חמא ועל פי הסברו של מר זוטרא, אלא שנחלקו באיזה מובן ועד כמה חוששים לזיוף גם כאשר לפנינו שובר מקויים בחתימת עדים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רוב הראשונים פסקו כדברי רב חמא ועל פי הסברו של מר זוטרא, אלא שנחלקו באיזה מובן ועד כמה חוששים לזיוף גם כאשר לפנינו שובר מקויים בחתימת עדים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ן טוען שמול חתימת עדים מקויימת אין לחשוש לזיוף ורמאות, ולכן הוא מעמיד את המקרה הנדון בשובר שחתימת העדים שעליו עדיין אינה מקויימת. דווקא בזה סובר רב חמא שמחמת הנסיבות מעלות החשד יש לדחות את הקיום עד שיגדלו היתומים. אם השובר כבר מקויים, לדעת הכל יש לקרוע את השטר שביד היתומים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ן טוען שמול חתימת עדים מקויימת אין לחשוש לזיוף ורמאות, ולכן הוא מעמיד את המקרה הנדון בשובר שחתימת העדים שעליו עדיין אינה מקויימת. דווקא בזה סובר רב חמא שמחמת הנסיבות מעלות החשד יש לדחות את הקיום עד שיגדלו היתומים. אם השובר כבר מקויים, לדעת הכל יש לקרוע את השטר שביד היתומים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מולו סובר הרשב"א שאפילו אם השטר מקויים יש מקום לחשוש וזאת אם יש חשד סביר לזיוף. הרשב"א מסביר שחשד כזה הוא דווקא אם תבע האב את הלווה בבי"ד לפני שמת והלווה טען שפרע אך לא הוציא שובר. במקרה כזה התזמון של הוצאת השובר לאחר מות המלווה מחשיד מאד. בנוסף מעיר הרשב"א שמקבלים עדים כשבעל הדין אינו בחיים (ויורשיו קטנים) רק כאשר מדובר על פעולה דחופה לצורך מניעת הפסד, שאינה יכול לחכות עד שיגדלו היתומים, למשל, אם היתומים לקחו בחוזקה שדה ממישהו. לעומת זה, כאן מקפיאים את המצב- אין גובים ואין קורעים את השטר. לכן, אין מקבלים עדים לאימות השובר, כי בינתיים אין הלווה מפסיד כלום מהמצב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מולו סובר הרשב"א שאפילו אם השטר מקויים יש מקום לחשוש וזאת אם יש חשד סביר לזיוף. הרשב"א מסביר שחשד כזה הוא דווקא אם תבע האב את הלווה בבי"ד לפני שמת והלווה טען שפרע אך לא הוציא שובר. במקרה כזה התזמון של הוצאת השובר לאחר מות המלווה מחשיד מאד. בנוסף מעיר הרשב"א שמקבלים עדים כשבעל הדין אינו בחיים (ויורשיו קטנים) רק כאשר מדובר על פעולה דחופה לצורך מניעת הפסד, שאינה יכול לחכות עד שיגדלו היתומים, למשל, אם היתומים לקחו בחוזקה שדה ממישהו. לעומת זה, כאן מקפיאים את המצב- אין גובים ואין קורעים את השטר. לכן, אין מקבלים עדים לאימות השובר, כי בינתיים אין הלווה מפסיד כלום מהמצב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנקודה אחרונה זו נחלקו על הרשב"א הרא"ש (סי' כא) והר"י מיגא"ש. לדעתם אפילו אם לא נתבע הלווה בחיי האב (כגון שזמן הפרעון הגיע רק לאחר מות האב), מצופה שאם פרע הלוה וכתב שובר, יגיע מוקדם ככל האפשר מיוזמתו לבית הדין ויבקש שיכפו על המלווה לקרוע את השטר<sup id="ref261"><a href="#fn261">[261]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנקודה אחרונה זו נחלקו על הרשב"א הרא"ש (סי' כא) והר"י מיגא"ש. לדעתם אפילו אם לא נתבע הלווה בחיי האב (כגון שזמן הפרעון הגיע רק לאחר מות האב), מצופה שאם פרע הלוה וכתב שובר, יגיע מוקדם ככל האפשר מיוזמתו לבית הדין ויבקש שיכפו על המלווה לקרוע את השטר<sup id="ref261"><a href="#fn261">[261]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם פוסק כדברי רב חמא וכהסברו של מר זוטרא, ואינו מתייחס לשאלות הנ"ל. השו"ע (חו"מ קח טז) מעתיק את לשון הרמב"ם ומוסיף את דברי הרשב"א לעניין זה שאין מקבלים עדים לאימות השטר עד שיגדלו היתומים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם פוסק כדברי רב חמא וכהסברו של מר זוטרא, ואינו מתייחס לשאלות הנ"ל. השו"ע (חו"מ קח טז) מעתיק את לשון הרמב"ם ומוסיף את דברי הרשב"א לעניין זה שאין מקבלים עדים לאימות השטר עד שיגדלו היתומים.</p>
                     
                 </div>
                 
@@ -1192,41 +1192,41 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המוציא שטר חוב על חבירו והיה כתוב בבבל מגבהו ממעות בבל, היה כתוב בארץ ישראל מגבהו ממעות ארץ ישראל מה שאין כן בכתובה, לא היה בשטר שם מקום והוציאו בבבל מגבהו ממעות בבל הוציאו בארץ ישראל מגבהו ממעות א"י, בא לגבות ממעות המקום שיצא בו השטר וטען הלוה שהמעות שאני חייב לו מכסף שהוא פחות מזה המטבע ישבע המלוה ויטול, היה בו כסף סתם מה שירצה לוה מגבהו, מכאן אתה למד ששטר שאין בו שם מקום שנכתב בו כשר לכל דבר, והוא הדין לשטר שאין בו זמן כלל שהוא כשר אף על פי שעדות זו אי אתה יכול להזימה שאין מדקדקין בדיני ממונות בדרישה וחקירה כמו שיתבאר כדי שלא תנעול דלת בפני לווין, ולפיכך שטרי חוב המאוחרין כשרין אף על פי שאין אתה יכול להזימן כמו שיתבאר במקומו.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מחלוקת לגבי סוג המטבע של החוב</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מחלוקת לגבי סוג המטבע של החוב</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בכתובות דנה במקרה בו הנישואין והגירושין היו במדינות שונות בהן לאותה מטבע נהג משקל שונה<sup id="ref262"><a href="#fn262">[262]</a></sup>. דעה אחת סוברת שכיוון שכתובה דרבנן ניתן לפרוע את הכתובה בשיעור הנמוך מבין השנים. אך לדעת רשב"ג הכל הולך אחר מקום הנישואין שם נשתעבד הבעל על הסכום. בהקשר זה מובאת ברייתא</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בכתובות דנה במקרה בו הנישואין והגירושין היו במדינות שונות בהן לאותה מטבע נהג משקל שונה<sup id="ref262"><a href="#fn262">[262]</a></sup>. דעה אחת סוברת שכיוון שכתובה דרבנן ניתן לפרוע את הכתובה בשיעור הנמוך מבין השנים. אך לדעת רשב"ג הכל הולך אחר מקום הנישואין שם נשתעבד הבעל על הסכום. בהקשר זה מובאת ברייתא</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: המוציא שטר חוב על חבירו,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנו רבנן: המוציא שטר חוב על חבירו,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כתוב בו בבל - מגבהו ממעות בבל,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כתוב בו בבל - מגבהו ממעות בבל,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כתוב בו ארץ ישראל - מגבהו ממעות ארץ ישראל;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כתוב בו ארץ ישראל - מגבהו ממעות ארץ ישראל;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כתוב בו סתם, הוציאו בבבל - מגבהו ממעות בבל, הוציאו בארץ ישראל - מגבהו ממעות ארץ ישראל...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כתוב בו סתם, הוציאו בבבל - מגבהו ממעות בבל, הוציאו בארץ ישראל - מגבהו ממעות ארץ ישראל...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מה שאין כן בכתובה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מה שאין כן בכתובה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא כותבת שבשטר חוב בו מצויין מקום ההלוואה, ערך המעות יהיה על פי מקום זה. במקרה בו לא מצויין המקום ("כתוב בו סתם"), הולכים על פי מקום הגביה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתא כותבת שבשטר חוב בו מצויין מקום ההלוואה, ערך המעות יהיה על פי מקום זה. במקרה בו לא מצויין המקום ("כתוב בו סתם"), הולכים על פי מקום הגביה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בביאור הסיבה שבהיעדר ידע על מקום ההלוואה הולכים על פי מקום הגביה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בביאור הסיבה שבהיעדר ידע על מקום ההלוואה הולכים על פי מקום הגביה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת הר"ן (סה: מדפי הרי"ף) שמניחים שאם לא נכתב המקום בשטר מקבל הלווה על עצמו לפרוע כפי מקום גבית החוב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת הר"ן (סה: מדפי הרי"ף) שמניחים שאם לא נכתב המקום בשטר מקבל הלווה על עצמו לפרוע כפי מקום גבית החוב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, הרמב"ם דן במקרה בו הלווה טוען שההלוואה היתה במקום בו המעות זולות יותר מאשר במקום הפרעון, ומתוך כך מבין הר"ן שלדעתו של הרמב"ם יש לפרוע לפי השער במקום בו היתה ההלוואה, שכן זהו הערך שהלווה קיבל לידיו בתחילה, והטעם שבשטר שלא כתוב בו מקום הולכים אחר מקום הגביה הוא משום שמסתמא מקום הגביה הוא גם מקום ההלוואה. כך כותב במפורש המאירי<sup id="ref263"><a href="#fn263">[263]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, הרמב"ם דן במקרה בו הלווה טוען שההלוואה היתה במקום בו המעות זולות יותר מאשר במקום הפרעון, ומתוך כך מבין הר"ן שלדעתו של הרמב"ם יש לפרוע לפי השער במקום בו היתה ההלוואה, שכן זהו הערך שהלווה קיבל לידיו בתחילה, והטעם שבשטר שלא כתוב בו מקום הולכים אחר מקום הגביה הוא משום שמסתמא מקום הגביה הוא גם מקום ההלוואה. כך כותב במפורש המאירי<sup id="ref263"><a href="#fn263">[263]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי המקרה שמתאר הרמב"ם, בו הלווה טוען שההלוואה היתה במקום בו המעות זולות יותר מאשר במקום הפרעון, הרמב"ם פוסק שאם לא הביא הלווה הוכחה לדבריו, נשבע המלווה היסת ונוטל. הדבר מעלה תמיהה, שכן המוחזק הוא הלווה, ולכאורה נטל חובת ההוכחה צריך להיות על כתפי המלווה. ה<strong>ב"י</strong> (חו"מ מב ד"ה "ואם אין") כותב שטעם הדבר משום שטענת הלווה היא כטענת האומר פרעתי, שיכול בכך הלווה להשביע את המלווה, אך המוחזק נחשב המלווה, שבידו השטר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי המקרה שמתאר הרמב"ם, בו הלווה טוען שההלוואה היתה במקום בו המעות זולות יותר מאשר במקום הפרעון, הרמב"ם פוסק שאם לא הביא הלווה הוכחה לדבריו, נשבע המלווה היסת ונוטל. הדבר מעלה תמיהה, שכן המוחזק הוא הלווה, ולכאורה נטל חובת ההוכחה צריך להיות על כתפי המלווה. ה<strong>ב"י</strong> (חו"מ מב ד"ה "ואם אין") כותב שטעם הדבר משום שטענת הלווה היא כטענת האומר פרעתי, שיכול בכך הלווה להשביע את המלווה, אך המוחזק נחשב המלווה, שבידו השטר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (מב יד) פוסק כרמב"ם והרמ"א מביא את דברי המאירי לגבי הבאת ראיה חיצונית למקום ההלוואה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (מב יד) פוסק כרמב"ם והרמ"א מביא את דברי המאירי לגבי הבאת ראיה חיצונית למקום ההלוואה.</p>
                     
                 </div>
                 
@@ -1234,7 +1234,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1323,6 +1323,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק א</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק א)</h3>
                 <ul class="space-y-3">
@@ -1032,7 +1032,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1045,45 +1045,45 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כל נפש חיה שהיא ברשותו של אדם שהזיקה הבעלים חייבין לשלם שהרי ממונם הזיק שנאמר +שמות כ"א כ"ה+ כי יגוף שור איש את שור רעהו וכו', אחד השור ואחד שאר בהמה חיה ועוף, לא דיבר הכתוב בשור אלא בהווה. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכמה משלם, אם הזיקה בדברים שדרכה לעשותם תמיד כמנהג ברייתה כגון בהמה שאכלה תבן או עמיר או שהזיקה ברגלה כדרך הילוכה חייב לשלם נזק שלם מן היפה שבנכסיו שנ' +שמות כ"ב ד'+ מיטב שדהו ומיטב כרמו ישלם. ואם שינת ועשת מעשים שאין דרכה לעשותם תמיד והזיקה בהן כגון שור שנגח או נשך חייב לשלם חצי נזק מגוף המזיק עצמו שנ' +שמות כ"א ל"ה+ ומכרו את השור החי וחצו את כספו וגו'. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כיצד שור שוה מנה שנגח לשור שוה עשרים והמיתו והרי הנבלה שוה ארבעה בעל השור חייב לשלם שמונה שהוא חצי הנזק, ואינו חייב לשלם אלא מגוף השור שהזיק שנ' ומכרו את השור </strong><strong>החי, לפיכך אם המית שור שוה עשרים לשור שוה מאתים והנבלה שוה מנה אין בעל הנבלה יכול לומר לבעל החי תן לי חמשים אלא אומר לו הרי שור שהזיק לפניך קחהו ולך אפילו אינו שוה אלא דינר, וכן כל כיוצא בזה. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>העושה מעשה שדרכו לעשותו תמיד כמנהג ברייתו הוא הנקרא מועד, והמשנה ועשה מעשה שאין דרך כל מינו לעשות כן תמיד כגון שור שנגח או נשך הוא הנקרא תם, וזה המשנה אם הורגל בשינויו פעמים רבות נעשה מועד לאותו דבר שהורגל בו שנ' +שמות כ"א ל"ו+ או נודע כי שור נגח הוא. </strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אחריות אדם על נזקי בעל חיים שברשותו, בתם ובמועד</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אחריות אדם על נזקי בעל חיים שברשותו, בתם ובמועד</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (ב.) מונה את השור בין אבות הנזיקין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המשנה</strong> (ב.) מונה את השור בין אבות הנזיקין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ארבעה אבות נזיקין: השור, והבור, והמבעה, וההבער</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ארבעה אבות נזיקין: השור, והבור, והמבעה, וההבער</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> חלקו האמוראים בהבנת המשנה- לדעת <strong>רב</strong> השור הכתוב במשנה כולל את כל הנזקים השייכים לשור, ובכלל זה קרן (מעשה שעשתה הבהמה במטרה להזיק), שן (נזק שנעשה תוך כדי אכילה) ורגל (רמיסה שרמסה אגב הילוכה הרגיל). <strong>שמואל</strong> סובר שהשור הנאמר במשנה מורה רק על הקרן, ואילו השן והרגל נלמדים מאב אחר- "המבעה". כך או כך, המשנה מונה את השור על כל דרכי הזקיו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> חלקו האמוראים בהבנת המשנה- לדעת <strong>רב</strong> השור הכתוב במשנה כולל את כל הנזקים השייכים לשור, ובכלל זה קרן (מעשה שעשתה הבהמה במטרה להזיק), שן (נזק שנעשה תוך כדי אכילה) ורגל (רמיסה שרמסה אגב הילוכה הרגיל). <strong>שמואל</strong> סובר שהשור הנאמר במשנה מורה רק על הקרן, ואילו השן והרגל נלמדים מאב אחר- "המבעה". כך או כך, המשנה מונה את השור על כל דרכי הזקיו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספתא</strong> (בבא קמא פרק ו, הלכה יח) מבהירה שאין מדובר דווקא על שור:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספתא</strong> (בבא קמא פרק ו, הלכה יח) מבהירה שאין מדובר דווקא על שור:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחד שור ואחד שאר בהמה חיה ועוף לנזקין מועד משלם נזק שלם ותם משלם חצי נזק</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחד שור ואחד שאר בהמה חיה ועוף לנזקין מועד משלם נזק שלם ותם משלם חצי נזק</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (טז:) מבארת שהמועד משלם נזק שלם מהעליה (כלומר מהמעולה שבנכסיו) והתם משלם חצי נזק מגופו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (טז:) מבארת שהמועד משלם נזק שלם מהעליה (כלומר מהמעולה שבנכסיו) והתם משלם חצי נזק מגופו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשניות הבאות (יז., יט:) מבארות שנזק מועד הוא נזק בו רגילה הבהמה להזיק, ודנות באילו אופנים שכיח שבהמות מצויות יזיקו כדרכן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשניות הבאות (יז., יט:) מבארות שנזק מועד הוא נזק בו רגילה הבהמה להזיק, ודנות באילו אופנים שכיח שבהמות מצויות יזיקו כדרכן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דרכי התשלום בתם ובמועד יבוארו ביתר הרחבה בהלכות הבאות, ובפרקים שמיני ותשיעי לקמן. פרק ו' עוסק בהרחבה בדרך בה הופך התם למועד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דרכי התשלום בתם ובמועד יבוארו ביתר הרחבה בהלכות הבאות, ובפרקים שמיני ותשיעי לקמן. פרק ו' עוסק בהרחבה בדרך בה הופך התם למועד.</p>
                     
                 </div>
                 
@@ -1091,23 +1091,23 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>חמשה מעשים תמים יש בבהמה ואם הועדה לאחד מהן נעשית מועדת לאותו מעשה, ואלו הן: הבהמה אינה מועדת מתחילתה לא ליגח ולא ליגוף ולא לישוך ולא לרבוץ על כלים גדולים ולא לבעוט, ואם הועדה לאחד מהן הרי זו מועדת לו, אבל השן מועדת מתחילתה לאכול את הראוי לה, והרגל מועדת מתחילתה לשבר כדרך הילוכה, והבהמה מועדת מתחילתה לרבוץ על פכין קטנים וכיוצא בהם ולמעך אותן. </strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הדברים להם אין הבהמה מועדת</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הדברים להם אין הבהמה מועדת</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (טו:) מונה חמש דרכי היזק בהם אין הבהמה מועדת להזיק והם- ליגח, לנשוך, ליגוף, לבעוט ולרבוץ. כלומר, כל נזק שבהמה עושה בדרכים אלה, ושלא הועדה לעשותו בעבר, הרי הנזק נחשב תם, ויש לשלם רק את חציו ומגוף הבהמה המזיקה. <strong>בגמרא</strong> (טז.) הובאה ברייתא לפיה בהמה מועדת למעך אדם בהמה וכלים אגב הילוכה, ולפיכך לכאורה היא כן מועדת לרבוץ. תירוץ אחד שנאמר בגמרא הוא שהבהמה מועדת למעך דברים שבצידה, אך היא אינה מועדת למעוך דברים שתחתיה. תירוץ שני הוא, שדווקא על כלים גדולים אין סתם בהמה מועדת לרבוץ, אך על כלים קטנים היא מועדת להתיישב כדרכה ולשוברם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המשנה</strong> (טו:) מונה חמש דרכי היזק בהם אין הבהמה מועדת להזיק והם- ליגח, לנשוך, ליגוף, לבעוט ולרבוץ. כלומר, כל נזק שבהמה עושה בדרכים אלה, ושלא הועדה לעשותו בעבר, הרי הנזק נחשב תם, ויש לשלם רק את חציו ומגוף הבהמה המזיקה. <strong>בגמרא</strong> (טז.) הובאה ברייתא לפיה בהמה מועדת למעך אדם בהמה וכלים אגב הילוכה, ולפיכך לכאורה היא כן מועדת לרבוץ. תירוץ אחד שנאמר בגמרא הוא שהבהמה מועדת למעך דברים שבצידה, אך היא אינה מועדת למעוך דברים שתחתיה. תירוץ שני הוא, שדווקא על כלים גדולים אין סתם בהמה מועדת לרבוץ, אך על כלים קטנים היא מועדת להתיישב כדרכה ולשוברם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פסק על פי התירוץ השני, אך ה<strong>רא"ש</strong> וה<strong>טור</strong> פסקו על פי פשט המשנה ועל פי התירוץ הראשון, ולפיהם הבהמה אינה מועדת לרבוץ על כלים בין גדולים ובין קטנים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פסק על פי התירוץ השני, אך ה<strong>רא"ש</strong> וה<strong>טור</strong> פסקו על פי פשט המשנה ועל פי התירוץ הראשון, ולפיהם הבהמה אינה מועדת לרבוץ על כלים בין גדולים ובין קטנים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפט ז) מביא את שתי הדעות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפט ז) מביא את שתי הדעות.</p>
                     
                 </div>
                 
@@ -1115,39 +1115,39 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>חמשה מיני בהמה מועדין מתחלת ברייתן להזיק ואפילו הן תרבות, לפיכך אם הזיקו או המיתו בנגיחה או בנשיכה ודריסה וכיוצא בהן חייב נזק שלם, ואלו הן: הזאב והארי והדוב והנמר והברדלס, וכן הנחש שנשך הרי זה מועד ואפילו היה תרבות. </strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המועדין מתחילתם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המועדין מתחילתם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (טו:) מביאה מחלוקת תנאים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (טו:) מביאה מחלוקת תנאים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הזאב, והארי, והדוב, והנמר, והברדלס, והנחש - הרי אלו מועדין;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הזאב, והארי, והדוב, והנמר, והברדלס, והנחש - הרי אלו מועדין;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי אלעזר</strong> אומר: בזמן שהן בני תרבות אינן מועדין, והנחש מועד לעולם".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי אלעזר</strong> אומר: בזמן שהן בני תרבות אינן מועדין, והנחש מועד לעולם".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בעלי חיים אלה, בניגוד לשור, מועדים אף בדרכי היזק שהן תולדת הקרן (כלומר, בנזקים בהם התכוון בעל החיים להזיק). לפי <strong>ר"א</strong>, אין הדבר אמור בטורפים שכאלה כאשר הם מאולפים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, בעלי חיים אלה, בניגוד לשור, מועדים אף בדרכי היזק שהן תולדת הקרן (כלומר, בנזקים בהם התכוון בעל החיים להזיק). לפי <strong>ר"א</strong>, אין הדבר אמור בטורפים שכאלה כאשר הם מאולפים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פסק כחכמים, וכך כל הראשונים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פסק כחכמים, וכך כל הראשונים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> מובאת מימרתו של <strong>שמואל</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> מובאת מימרתו של <strong>שמואל</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ארי ברה"ר, דרס ואכל - פטור, טרף ואכל – חייב"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ארי ברה"ר, דרס ואכל - פטור, טרף ואכל – חייב"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומסבירה <strong>הגמרא</strong>, שדריסה, דהיינו, אכילת הטרף בעודו חי, היא דרכו הרגילה של האריה, לכן נחשבת היא כשן מועדת, ופטורה ברה"ר. אך טריפה, דהיינו הריגה, ואח"כ אכילה, היא שינוי ממנהגי האכילה הרגילים של האריה, דינה כקרן, ולכן חייב עליה רק חצי נזק בין ברה"ר ובין ברשות הניזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומסבירה <strong>הגמרא</strong>, שדריסה, דהיינו, אכילת הטרף בעודו חי, היא דרכו הרגילה של האריה, לכן נחשבת היא כשן מועדת, ופטורה ברה"ר. אך טריפה, דהיינו הריגה, ואח"כ אכילה, היא שינוי ממנהגי האכילה הרגילים של האריה, דינה כקרן, ולכן חייב עליה רק חצי נזק בין ברה"ר ובין ברשות הניזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי שמואל ניתן ללמוד שני דברים- ראשית, לא בכל אופני ההריגה מועדות כל חיות הטרף שבמשנה, אלא רק בדרכים בהן הן רגילות להרוג. שנית, אריה שדרס ואכל כדרכו, שהוא מועד לעשות כך, אין להשוותו לשור שהועד לנגוח שלוש פעמים ונגח ברשות הרבים, אלא לשן ברה"ר (שפטור בה, כמבואר בהלכה ח' לקמן), משום שזו דרך האכילה הרגילה של האריה, כמו של השור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי שמואל ניתן ללמוד שני דברים- ראשית, לא בכל אופני ההריגה מועדות כל חיות הטרף שבמשנה, אלא רק בדרכים בהן הן רגילות להרוג. שנית, אריה שדרס ואכל כדרכו, שהוא מועד לעשות כך, אין להשוותו לשור שהועד לנגוח שלוש פעמים ונגח ברשות הרבים, אלא לשן ברה"ר (שפטור בה, כמבואר בהלכה ח' לקמן), משום שזו דרך האכילה הרגילה של האריה, כמו של השור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות מימרא זו, פסקו ה<strong>רא"ש</strong> (סי' כא) וה<strong>תוס'</strong> (טז. ד"ה "והנחש") שאכן לא על כל הריגה נחשבות חיות הטרף שבמשנה כמועדות, אלא רק על הריגה שהיא כדרכן. ועוד כתבו, שעל הריגה כדרכן ברשות הרבים, פטורים, משום שן<sup id="ref1"><a href="#fn1">[1]</a></sup>, וכדברי שמואל. ה<strong>רמב"ם</strong> אינו מתייחס כלל לדברי שמואל, וכותב רק שחיות אלה מועדות מתחילת ברייתן, ולכן משולם נזק שלם בהזקתן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעקבות מימרא זו, פסקו ה<strong>רא"ש</strong> (סי' כא) וה<strong>תוס'</strong> (טז. ד"ה "והנחש") שאכן לא על כל הריגה נחשבות חיות הטרף שבמשנה כמועדות, אלא רק על הריגה שהיא כדרכן. ועוד כתבו, שעל הריגה כדרכן ברשות הרבים, פטורים, משום שן<sup id="ref1"><a href="#fn1">[1]</a></sup>, וכדברי שמואל. ה<strong>רמב"ם</strong> אינו מתייחס כלל לדברי שמואל, וכותב רק שחיות אלה מועדות מתחילת ברייתן, ולכן משולם נזק שלם בהזקתן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפט ח) כותב את לשון הרמב"ם, אך ה<strong>רמ"א</strong> מביא את שיטת הרא"ש, שבעל חיים טורף מועד לטרוף כדרכו בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפט ח) כותב את לשון הרמב"ם, אך ה<strong>רמ"א</strong> מביא את שיטת הרא"ש, שבעל חיים טורף מועד לטרוף כדרכו בלבד.</p>
                     
                 </div>
                 
@@ -1155,44 +1155,44 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כל מועד משלם נזק שלם מן היפה שבנכסיו וכל תם משלם חצי נזק מגופו, במה דברים אמורים בשנכנסה הבהמה לרשות הניזק והזיקתהו אבל אם נכנס הניזק לרשות המזיק והזיקתהו בהמתו של בעל הבית הרי זה פטור על הכל שהרי הוא אומר לו אילו לא נכנסת </strong><strong>לרשותי לא הגיע לך הזק, והרי מפורש בתורה</strong> <strong>(</strong><strong>שמות כ"ב ד'</strong><strong>)</strong><strong> ושלח את בעירה ובער בשדה אחר. </strong>
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק ברשות הניזק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק ברשות הניזק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>במשנה</strong> (כד:) חלקו התנאים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>במשנה</strong> (כד:) חלקו התנאים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שור המזיק ברשות הניזק כיצד? נגח, נגף, נשך, רבץ, בעט, ברשות הרבים - משלם חצי נזק, ברשות הניזק</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שור המזיק ברשות הניזק כיצד? נגח, נגף, נשך, רבץ, בעט, ברשות הרבים - משלם חצי נזק, ברשות הניזק</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">- <strong>רבי טרפון</strong> אומר: נזק שלם,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">- <strong>רבי טרפון</strong> אומר: נזק שלם,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>וחכמים</strong> אומרים: חצי נזק".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>וחכמים</strong> אומרים: חצי נזק".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, <strong>חכמים</strong> סוברים שלעניין נזקי קרן, דין חצר הניזק כדין רשות הרבים, שבתם משלם חצי נזק ובמועד משלם נזק שלם. אך <strong>ר' טרפון </strong>סובר שבחצר הניזק משלם תמיד נזק שלם ללא קשר לתמות או מועדות. במשנה מוסבר שר' טרפון לומד קל וחומר מרגל, שהרי נזק הרגל פטור ברשות הרבים, ובכל זאת ברשות הניזק חייב נזק שלם, ולכן קרן, שחייב עליה חצי נזק ברשות הרבים כל שכן שיהיה חייב עליה נזק שלם ברשות הניזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, <strong>חכמים</strong> סוברים שלעניין נזקי קרן, דין חצר הניזק כדין רשות הרבים, שבתם משלם חצי נזק ובמועד משלם נזק שלם. אך <strong>ר' טרפון </strong>סובר שבחצר הניזק משלם תמיד נזק שלם ללא קשר לתמות או מועדות. במשנה מוסבר שר' טרפון לומד קל וחומר מרגל, שהרי נזק הרגל פטור ברשות הרבים, ובכל זאת ברשות הניזק חייב נזק שלם, ולכן קרן, שחייב עליה חצי נזק ברשות הרבים כל שכן שיהיה חייב עליה נזק שלם ברשות הניזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הרמב"ם</strong> פוסק כאן כחכמים כנגד ר' טרפון, שאף בחצר הניזק כל מועד משלם נזק שלם, וכל תם חצי נזק. וכן פסקו שאר הראשונים וה<strong>שו"ע</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>הרמב"ם</strong> פוסק כאן כחכמים כנגד ר' טרפון, שאף בחצר הניזק כל מועד משלם נזק שלם, וכל תם חצי נזק. וכן פסקו שאר הראשונים וה<strong>שו"ע</strong>.</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק ברשות המזיק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק ברשות המזיק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ט:) מגבילה את אחריות הנזיקין של המזיק למקומות שאינם רשותו שלו:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (ט:) מגבילה את אחריות הנזיקין של המזיק למקומות שאינם רשותו שלו:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ובכל מקום, חוץ מרשות המיוחדת למזיק..."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ובכל מקום, חוץ מרשות המיוחדת למזיק..."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומסבירה <strong>הגמרא</strong> (יג:):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומסבירה <strong>הגמרא</strong> (יג:):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"דאמר ליה: תורך ברשותי מאי בעי?" (מה עושה שורך ברשותי).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"דאמר ליה: תורך ברשותי מאי בעי?" (מה עושה שורך ברשותי).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כך, ומבאר בדבריו, שיש כאן הטלה של האשמה על הנזק על כתפי הניזק עצמו- "שהרי הוא אומר לו אילו לא נכנסת לרשותי לא הגיע לך הזק". אמנם הרמב"ם מביא טעם נוסף לדברים- "והרי מפורש בתורה ושלח את בעירה ובער בשדה אחר". אמנם בסוגיות הגמרא לא הובא פסוק זה בהקשר של הפטור ברשות המזיק, אלא כסיבה לכך שעל שן ורגל חייבים רק ברשות הניזק. וכך באמת כותב ה<strong>רמ"א</strong> על דברי ה<strong>שו"ע</strong>, המצטט את לשון הרמב"ם בהלכה זו. (שפט י).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כך, ומבאר בדבריו, שיש כאן הטלה של האשמה על הנזק על כתפי הניזק עצמו- "שהרי הוא אומר לו אילו לא נכנסת לרשותי לא הגיע לך הזק". אמנם הרמב"ם מביא טעם נוסף לדברים- "והרי מפורש בתורה ושלח את בעירה ובער בשדה אחר". אמנם בסוגיות הגמרא לא הובא פסוק זה בהקשר של הפטור ברשות המזיק, אלא כסיבה לכך שעל שן ורגל חייבים רק ברשות הניזק. וכך באמת כותב ה<strong>רמ"א</strong> על דברי ה<strong>שו"ע</strong>, המצטט את לשון הרמב"ם בהלכה זו. (שפט י).</p>
                     
                 </div>
                 
@@ -1200,64 +1200,64 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הזיקה ברשות הרבים או בחצר שאינה של שניהן לא למזיק ולא לניזק או בחצר שהיא של שניהן והרי היא מיוחדת להניח בה פירות ולהכניס לה בהמה כגון הבקעה וכיוצא בה, אם בשן ורגל הזיקה כדרכה הרי זה פטור מפני שיש לה רשות להלך בכאן ודרך הבהמה להלך כדרכה ולאכול ולשבר כדרך הילוכה, ואם נגחה או נגפה או רבצה או בעטה או נשכה, אם תמה היא משלם חצי נזק ואם מועדת משלם נזק שלם. </strong>
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חצר השותפים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חצר השותפים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (ט:) מביאה סייגים לחיוב בנזקין:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המשנה</strong> (ט:) מביאה סייגים לחיוב בנזקין:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ובכל מקום, חוץ מרשות המיוחדת למזיק, ורשות הניזק והמזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ובכל מקום, חוץ מרשות המיוחדת למזיק, ורשות הניזק והמזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כשהזיק, חב המזיק לשלם תשלומי נזק במיטב הארץ".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כשהזיק, חב המזיק לשלם תשלומי נזק במיטב הארץ".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וב<strong>גמרא</strong>, מחלוקת אמוראים בהבנת דברי המשנה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וב<strong>גמרא</strong>, מחלוקת אמוראים בהבנת דברי המשנה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' חסדא</strong> מבין ש"רשות הניזק והמזיק" שייך לכלל- "כשהזיק חב המזיק לשלם", או במילים אחרות, בחצר השייכת למזיק ולניזק חייב המזיק על נזקי שן ורגל, ואין דינה כרשות הרבים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' חסדא</strong> מבין ש"רשות הניזק והמזיק" שייך לכלל- "כשהזיק חב המזיק לשלם", או במילים אחרות, בחצר השייכת למזיק ולניזק חייב המזיק על נזקי שן ורגל, ואין דינה כרשות הרבים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו,<strong> ר' אלעזר </strong>מבין ש"רשות הניזק והמזיק" היא עוד דוגמה כמו "רשות המיוחדת למזיק" בה יש פטור על נזקי שן ורגל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו,<strong> ר' אלעזר </strong>מבין ש"רשות הניזק והמזיק" היא עוד דוגמה כמו "רשות המיוחדת למזיק" בה יש פטור על נזקי שן ורגל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מביאה שתי ברייתות הנראות כחולקות במחלוקת זו:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מביאה שתי ברייתות הנראות כחולקות במחלוקת זו:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"תני רב יוסף: חצר השותפים, והפונדק - חייב בהן על השן ועל הרגל"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"תני רב יוסף: חצר השותפים, והפונדק - חייב בהן על השן ועל הרגל"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ולעומת זאת</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ולעומת זאת</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ארבעה כללות היה ר' שמעון בן אלעזר אומר בנזקין:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ארבעה כללות היה ר' שמעון בן אלעזר אומר בנזקין:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כל שהוא רשות לניזק ולא למזיק - חייב בכל;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כל שהוא רשות לניזק ולא למזיק - חייב בכל;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דמזיק ולא לניזק - פטור מכל;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דמזיק ולא לניזק - פטור מכל;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לזה ולזה, כגון חצר השותפים והבקעה - פטור בה על השן ועל הרגל, על הנגיחה ועל הנגיפה ועל הנשיכה ועל הרביצה ועל הבעיטה, תם - משלם חצי נזק, מועד - משלם נזק שלם;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לזה ולזה, כגון חצר השותפים והבקעה - פטור בה על השן ועל הרגל, על הנגיחה ועל הנגיפה ועל הנשיכה ועל הרביצה ועל הבעיטה, תם - משלם חצי נזק, מועד - משלם נזק שלם;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לא לזה ולא לזה, כגון חצר שאינו של שניהם - חייב בו על השן ועל הרגל, על הנגיחה ועל הנשיכה ועל הנגיפה ועל הרביצה ועל הבעיטה, תם - משלם חצי נזק, מועד - משלם נזק שלם"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לא לזה ולא לזה, כגון חצר שאינו של שניהם - חייב בו על השן ועל הרגל, על הנגיחה ועל הנשיכה ועל הנגיפה ועל הרביצה ועל הבעיטה, תם - משלם חצי נזק, מועד - משלם נזק שלם"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ברייתא זו, בניגוד לברייתא שהביא רב יוסף, פוטרת על נזקי שן ורגל בחצר השותפים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ברייתא זו, בניגוד לברייתא שהביא רב יוסף, פוטרת על נזקי שן ורגל בחצר השותפים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> פותרת את מחלוקת הברייתות אליבא דשיטתו של ר' אלעזר, ומבארת שהברייתא המחייבת על נזקי שן ורגל בחצר השותפים, עוסקת בחצר המיוחדת לשניהם לפירות בלבד, ואחד השותפים הכניס לה את בהמתו ללא רשות, שזה נקרא לצורך העניין "ובער בשדה אחר", ואילו הברייתא הפוטרת על נזקים בחצר השותפים מדברת על שדה המיוחדת לשני השותפים לשוורים ולפירות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> פותרת את מחלוקת הברייתות אליבא דשיטתו של ר' אלעזר, ומבארת שהברייתא המחייבת על נזקי שן ורגל בחצר השותפים, עוסקת בחצר המיוחדת לשניהם לפירות בלבד, ואחד השותפים הכניס לה את בהמתו ללא רשות, שזה נקרא לצורך העניין "ובער בשדה אחר", ואילו הברייתא הפוטרת על נזקים בחצר השותפים מדברת על שדה המיוחדת לשני השותפים לשוורים ולפירות.</p>
                     
                 </div>
                 
                 <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חצר שאינה לא למזיק ולא לניזק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חצר שאינה לא למזיק ולא לניזק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בחצר השייכת ל"צד שלישי", אליה נכנסו הניזק והמזיק ללא רשות, מדברת לכאורה ה<strong>ברייתא</strong> ד<strong>ר' שמעון בן אלעזר</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בחצר השייכת ל"צד שלישי", אליה נכנסו הניזק והמזיק ללא רשות, מדברת לכאורה ה<strong>ברייתא</strong> ד<strong>ר' שמעון בן אלעזר</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"... לא לזה ולא לזה, כגון חצר שאינו של שניהם - חייב בו על השן ועל הרגל, על הנגיחה ועל הנשיכה ועל הנגיפה ועל הרביצה ועל הבעיטה, תם - משלם חצי נזק, מועד - משלם נזק שלם".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"... לא לזה ולא לזה, כגון חצר שאינו של שניהם - חייב בו על השן ועל הרגל, על הנגיחה ועל הנשיכה ועל הנגיפה ועל הרביצה ועל הבעיטה, תם - משלם חצי נזק, מועד - משלם נזק שלם".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אך ה<strong>גמרא</strong> (יד.) שוללת הבנה זו, שכן "בעינא ובער בשדה אחר וליכא". כלומר, הביטוי "שדה אחר" נדרש בגמרא לא רק כמתנה חיוב בכניסה שלא ברשות של המזיק, אלא גם בכניסה ברשות של הניזק. ה<strong>גמרא</strong> מפרשת ש"לא לזה ולא לזה" שבברייתא הכוונה לשדה שאיננה שייכת לשניהם גם יחד אלא לניזק בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אך ה<strong>גמרא</strong> (יד.) שוללת הבנה זו, שכן "בעינא ובער בשדה אחר וליכא". כלומר, הביטוי "שדה אחר" נדרש בגמרא לא רק כמתנה חיוב בכניסה שלא ברשות של המזיק, אלא גם בכניסה ברשות של הניזק. ה<strong>גמרא</strong> מפרשת ש"לא לזה ולא לזה" שבברייתא הכוונה לשדה שאיננה שייכת לשניהם גם יחד אלא לניזק בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ירושלמי</strong> נתונה הנחה זו במחלוקת תנאים, בין ברייתא הפוטרת בחצר שאינה של אף אחד מהם לבין ברייתא המחייבת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>ירושלמי</strong> נתונה הנחה זו במחלוקת תנאים, בין ברייתא הפוטרת בחצר שאינה של אף אחד מהם לבין ברייתא המחייבת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> וכל הראשונים פסקו עפ"י הבבלי ועפ"י הברייתא דר' שמעון בן אלעזר המובאת בו, שבחצר של צד שלישי, פטור המזיק על נזקי שן ורגל, למרות שנכנס שלא ברשות בעל החצר, ובכ"ז חייב על קרן ח"נ בתם ונ"ש במועד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> וכל הראשונים פסקו עפ"י הבבלי ועפ"י הברייתא דר' שמעון בן אלעזר המובאת בו, שבחצר של צד שלישי, פטור המזיק על נזקי שן ורגל, למרות שנכנס שלא ברשות בעל החצר, ובכ"ז חייב על קרן ח"נ בתם ונ"ש במועד.</p>
                     
                 </div>
                 
@@ -1265,34 +1265,34 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>היתה החצר של שניהן מיוחדת לפירות ולא להכניס לה בהמה והכניס לה אחד מן השותפין בהמתו והזיקה חייב אפילו על השן ועל הרגל, וכן אם היתה מיוחדת לבהמה לשניהן והיה רשות לאחד מהן בלבד להכניס לה פירות והזיקה פירותיו חייב אף על השן ועל הרגל. </strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חצר המיוחדת למזיק ולניזק לפירות, ולאף אחד מהם לא לשוורים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חצר המיוחדת למזיק ולניזק לפירות, ולאף אחד מהם לא לשוורים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדין חצר השותפין, הציגה ה<strong>גמרא</strong> (יד.), כאמור, ברייתות חלוקות, והסבירה שהברייתא המחייבת בשדה השייכת לשניהם, עוסקת בשדה המיוחדת לשניהם לפירות בלבד, שהכניס בה אחד השותפים את שורו שלא ברשות, ולכן חייב על הנזק ששורו גרם. האמוראים מתלבטים האם למרות שלשניהם יש רשות להכניס פירות עדיין מדובר ב"שדה אחר" שרק בו חייבים על שן ורגל. <strong>ר' זירא</strong> אומר שאם לשניהם יש רשות להכניס פירות, הרי שזו גם חצרו של המזיק, ואינה נחשבת חצר הניזק, וממילא יהיה המזיק פטור בה על שן ורגל. אמנם <strong>אביי</strong> סובר, שכיוון שאינה מיוחדת לשוורים, הרי שלעניין זה, נחשבת כחצר הניזק, וחייב המזיק שהכניס את שורו לחצר והזיק את פירות חברו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בדין חצר השותפין, הציגה ה<strong>גמרא</strong> (יד.), כאמור, ברייתות חלוקות, והסבירה שהברייתא המחייבת בשדה השייכת לשניהם, עוסקת בשדה המיוחדת לשניהם לפירות בלבד, שהכניס בה אחד השותפים את שורו שלא ברשות, ולכן חייב על הנזק ששורו גרם. האמוראים מתלבטים האם למרות שלשניהם יש רשות להכניס פירות עדיין מדובר ב"שדה אחר" שרק בו חייבים על שן ורגל. <strong>ר' זירא</strong> אומר שאם לשניהם יש רשות להכניס פירות, הרי שזו גם חצרו של המזיק, ואינה נחשבת חצר הניזק, וממילא יהיה המזיק פטור בה על שן ורגל. אמנם <strong>אביי</strong> סובר, שכיוון שאינה מיוחדת לשוורים, הרי שלעניין זה, נחשבת כחצר הניזק, וחייב המזיק שהכניס את שורו לחצר והזיק את פירות חברו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כאן שאכן שדה כזו נחשבת כ"שדה אחר". והדבר מוסבר עפ"י הטעם המובא בהלכה הקודמת- פטור שן הוא במקום שיש לבהמה רשות להלך כדרכה, ואילו כאן אין לבהמה רשות כזו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כאן שאכן שדה כזו נחשבת כ"שדה אחר". והדבר מוסבר עפ"י הטעם המובא בהלכה הקודמת- פטור שן הוא במקום שיש לבהמה רשות להלך כדרכה, ואילו כאן אין לבהמה רשות כזו.</p>
                     
                 </div>
                 
                 <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חצר המיוחדת לשניהם לפירות, ולניזק בלבד לשוורים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חצר המיוחדת לשניהם לפירות, ולניזק בלבד לשוורים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, ה<strong>גמרא</strong> אינה מבינה את המקרה של "לא לזה ולא לזה" שבברייתא דרבי שמעון בן אלעזר כפשוטה, כיוון שחצר של "צד שלישי" אינה נחשבת "שדה אחר", ולכן אין חייבים בה על שן ורגל. לכן, הגמרא מסבירה את לשון הברייתא שבשדה שאינה "לא לזה ולא לזה", הכוונה היא ששייכת רק לאחד מהם, דהיינו, לניזק. כמו כן הגמרא מסבירה שמדובר בשדה המיוחדת לשוורים לשניהם ולפירות רק לניזק, ולכן לעניין הפירות היא נחשבת כשדה הניזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאמור, ה<strong>גמרא</strong> אינה מבינה את המקרה של "לא לזה ולא לזה" שבברייתא דרבי שמעון בן אלעזר כפשוטה, כיוון שחצר של "צד שלישי" אינה נחשבת "שדה אחר", ולכן אין חייבים בה על שן ורגל. לכן, הגמרא מסבירה את לשון הברייתא שבשדה שאינה "לא לזה ולא לזה", הכוונה היא ששייכת רק לאחד מהם, דהיינו, לניזק. כמו כן הגמרא מסבירה שמדובר בשדה המיוחדת לשוורים לשניהם ולפירות רק לניזק, ולכן לעניין הפירות היא נחשבת כשדה הניזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק עפ"י זה ששדה המיוחדת לשניהם לשוורים ורק לניזק לפירות, חייב בה על נזקי שן ורגל, וזאת למרות שלשור המזיק ישנה רשות להיכנס, שכן לעניין הפירות, בלעדיותו של הניזק בעל הפירות מגדירה את השדה כ"שדה אחר".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק עפ"י זה ששדה המיוחדת לשניהם לשוורים ורק לניזק לפירות, חייב בה על נזקי שן ורגל, וזאת למרות שלשור המזיק ישנה רשות להיכנס, שכן לעניין הפירות, בלעדיותו של הניזק בעל הפירות מגדירה את השדה כ"שדה אחר".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על בסיס עיקרון זה, פוסק ה<strong>טור</strong> (שפט), שאם ישנה שדה המיוחדת לאחד לשוורים בלבד ולחברו לפירות בלבד, חייב בעל השור על הפירות אם הזיקן בשן, כבחצר הניזק, ופטור אם הזיקן בקרן, כדין חצר המזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על בסיס עיקרון זה, פוסק ה<strong>טור</strong> (שפט), שאם ישנה שדה המיוחדת לאחד לשוורים בלבד ולחברו לפירות בלבד, חייב בעל השור על הפירות אם הזיקן בשן, כבחצר הניזק, ופטור אם הזיקן בקרן, כדין חצר המזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפט יג) פוסק את דברי הרמב"ם, ובהמשך (יד) פוסק את דברי הטור להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפט יג) פוסק את דברי הרמב"ם, ובהמשך (יד) פוסק את דברי הטור להלכה.</p>
                     
                 </div>
                 
@@ -1300,40 +1300,40 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שלשה אבות נזקים בשור, הקרן והשן והרגל, תולדות הקרן נגיפה נשיכה רביצה בעיטה, תולדות השן אם נתחככה בכותל להנייתה והזיקה בחיכוכה וכן אם טנפה פירות להנייתה, תולדות הרגל הזיקה בגופה דרך הילוכה או שהזיקה בשערה דרך הילוכה או שכשכשה בזנבה או באוכף שעליה בפרומביא שבפיה בזוג שבצוארה וכן חמור שהזיק במשאו בשעת הילוכו ועגלה המושכת שהזיקה בשעת משיכתה, כל אלו תולדות הרגל הן וברשות הרבים פטורין וברשות הניזק משלמין נזק שלם. </strong>
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אבות נזיקין בשור ותולדותיהם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אבות נזיקין בשור ותולדותיהם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ב:) מביאה ברייתא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (ב:) מביאה ברייתא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ג' אבות נאמרו בשור: הקרן, והשן, והרגל"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ג' אבות נאמרו בשור: הקרן, והשן, והרגל"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ובהמשך:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ובהמשך:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"תולדה דקרן מאי היא? נגיפה, נשיכה, רביצה, ובעיטה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"תולדה דקרן מאי היא? נגיפה, נשיכה, רביצה, ובעיטה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה מדוע נשיכה אינה תולדה של שן, ומדוע בעיטה אינה תולדת הרגל:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מסבירה מדוע נשיכה אינה תולדה של שן, ומדוע בעיטה אינה תולדת הרגל:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"נשיכה - תולדה דשן היא! לא, שן יש הנאה להזיקה, הא אין הנאה להזיקה. רביצה ובעיטה - תולדה דרגל היא! לא, רגל הזיקה מצוי, הני אין הזיקן מצוי"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"נשיכה - תולדה דשן היא! לא, שן יש הנאה להזיקה, הא אין הנאה להזיקה. רביצה ובעיטה - תולדה דרגל היא! לא, רגל הזיקה מצוי, הני אין הזיקן מצוי"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מאפיין של שן הוא שיש הנאה להיזקה, ואילו מאפיין של רגל הוא שהזקה מצוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מאפיין של שן הוא שיש הנאה להיזקה, ואילו מאפיין של רגל הוא שהזקה מצוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כותב בפירוש שתולדות השן מאופיינות בהנאה לבהמה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> כותב בפירוש שתולדות השן מאופיינות בהנאה לבהמה.</p>
                     
                 </div>
                 
                 <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עגלה המזיקה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עגלה המזיקה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יז:) הדנה בדין צרורות (המורחב בפרק הבא) מביאה את דברי <strong>רבא</strong>, שצרורות מוגדרים ככל מגע שהוא עקיף מספיק כדי שלא תהא טומאה עוברת מזב על ידו. הגמרא מסבירה שלפי זה, כיוון שזב הנוסע בעגלה ודרסה את הכלים, טמאים הכלים מדין מדרס הזב, כך גם בהמה הנושאת עגלה ורמסה העגלה את הכלים, אין הדבר נחשב נזק עקיף של צרורות, אלא נזק ישיר של רגל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (יז:) הדנה בדין צרורות (המורחב בפרק הבא) מביאה את דברי <strong>רבא</strong>, שצרורות מוגדרים ככל מגע שהוא עקיף מספיק כדי שלא תהא טומאה עוברת מזב על ידו. הגמרא מסבירה שלפי זה, כיוון שזב הנוסע בעגלה ודרסה את הכלים, טמאים הכלים מדין מדרס הזב, כך גם בהמה הנושאת עגלה ורמסה העגלה את הכלים, אין הדבר נחשב נזק עקיף של צרורות, אלא נזק ישיר של רגל.</p>
                     
                 </div>
                 
@@ -1341,36 +1341,36 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כשכשה בזנבה כשכוש רב שאין דרכה תמיד והזיקה ברשות הרבים או שכשכשה בגיד שלה ברשות הרבים והזיקה פטור, ואם תפש הניזק גובה חצי נזק ממה שתפש, שזה הדבר ספק הוא אם אלו תולדות הקרן שחייב עליה ברשות הרבים או תולדות הרגל שפטור עליה ברשות הרבים כמו שביארנו.</strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היזק "דרך הילוכה" שאיננו שכיח</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">היזק "דרך הילוכה" שאיננו שכיח</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יט:) מתלבטת בשאלה האם היזק ע"י כשכוש בזנב נחשב כנזק הרגל בכדי לפטור עליו ברה"ר. מצד אחד מובאת סברה שכן- "וכי יאחזנה בזנבה וילך?", כלומר, אדם אינו יכול לשמור על בהמתו מכישכוש בזנבה, כמו שאינו יכול לשומרה מהיזק בהילוכה. אמנם הגמרא אומרת שהגם שאת אותה סברה ניתן לומר אף בקרן, כלומר, שאדם יהיה פטור על נזק קרן של בהמתו ברשות הרבים משום שאינו יכול לשומרה כל הזמן שלא תנגח, עדיין קיים הבדל- נזק בקרן תמה אינו דרכה הרגילה של הבהמה, ואילו נזק בכשכוש הזנב הוא דרכה הרגילה. ולכן מבארת הגמרא, שברור שכשכוש זנב רגיל נחשב כרגל, והשאלה נשאלה מלכתחילה על כשכוש זנב נמרץ מהרגיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (יט:) מתלבטת בשאלה האם היזק ע"י כשכוש בזנב נחשב כנזק הרגל בכדי לפטור עליו ברה"ר. מצד אחד מובאת סברה שכן- "וכי יאחזנה בזנבה וילך?", כלומר, אדם אינו יכול לשמור על בהמתו מכישכוש בזנבה, כמו שאינו יכול לשומרה מהיזק בהילוכה. אמנם הגמרא אומרת שהגם שאת אותה סברה ניתן לומר אף בקרן, כלומר, שאדם יהיה פטור על נזק קרן של בהמתו ברשות הרבים משום שאינו יכול לשומרה כל הזמן שלא תנגח, עדיין קיים הבדל- נזק בקרן תמה אינו דרכה הרגילה של הבהמה, ואילו נזק בכשכוש הזנב הוא דרכה הרגילה. ולכן מבארת הגמרא, שברור שכשכוש זנב רגיל נחשב כרגל, והשאלה נשאלה מלכתחילה על כשכוש זנב נמרץ מהרגיל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכיוון שלא נענית תשובה על שאלה זו, פוסק <strong>הרמב"ם</strong> שזהו ספק רגל ספק קרן, ולכן אם תפס הניזק חצי נזק, אין מוציאים מידו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכיוון שלא נענית תשובה על שאלה זו, פוסק <strong>הרמב"ם</strong> שזהו ספק רגל ספק קרן, ולכן אם תפס הניזק חצי נזק, אין מוציאים מידו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> לעומתו הבין שטענת הגמרא "וכי יאחזנה בזנבה וילך" היא כבר תשובה על השאלה, כלומר, הגמרא בעצם פוסקת שאף כשכוש שאינו שכיח נחשב כרגל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> לעומתו הבין שטענת הגמרא "וכי יאחזנה בזנבה וילך" היא כבר תשובה על השאלה, כלומר, הגמרא בעצם פוסקת שאף כשכוש שאינו שכיח נחשב כרגל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> פסק כרמב"ם, אך ה<strong>רמ"א</strong> הביא את דעת הרא"ש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> פסק כרמב"ם, אך ה<strong>רמ"א</strong> הביא את דעת הרא"ש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (שם) מתלבטת גם אם כשכוש באבר המין של הבהמה נחשב כרגל או כקרן, שכן מצד אחד שלא כקרן אין כוונתה של הבהמה להזיק, אך מצד שני זהו מעשה הנובע מיצר פתאומי כמו נגיחה. הגמרא משאירה את השאלה ללא תשובה, ולכן פוסק ה<strong>רמב"ם</strong> גם כאן, שאם תפס הניזק חצי נזק אין מוציאין מידו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (שם) מתלבטת גם אם כשכוש באבר המין של הבהמה נחשב כרגל או כקרן, שכן מצד אחד שלא כקרן אין כוונתה של הבהמה להזיק, אך מצד שני זהו מעשה הנובע מיצר פתאומי כמו נגיחה. הגמרא משאירה את השאלה ללא תשובה, ולכן פוסק ה<strong>רמב"ם</strong> גם כאן, שאם תפס הניזק חצי נזק אין מוציאין מידו.</p>
                     
                 </div>
                 
                 <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תפיסה בספיקא דדינא</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תפיסה בספיקא דדינא</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כאמור פוסק כאן, ובעוד מקומות, שכיוון שספק הוא אם חייב המזיק לשלם חצי נזק או שמא פטור, לכן אם תפס הניזק חצי נזק אין מוציאין מידו, שכן המוציא מחברו עליו הראיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> כאמור פוסק כאן, ובעוד מקומות, שכיוון שספק הוא אם חייב המזיק לשלם חצי נזק או שמא פטור, לכן אם תפס הניזק חצי נזק אין מוציאין מידו, שכן המוציא מחברו עליו הראיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> (בבא מציעא ו.) חולק על זה וטוען שאין תפיסה מועילה בכגון זה, ולכן אף אם תפס מוציאים מידו<sup id="ref2"><a href="#fn2">[2]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ן</strong> (בבא מציעא ו.) חולק על זה וטוען שאין תפיסה מועילה בכגון זה, ולכן אף אם תפס מוציאים מידו<sup id="ref2"><a href="#fn2">[2]</a></sup>.</p>
                     
                 </div>
                 
@@ -1378,7 +1378,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1412,6 +1412,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

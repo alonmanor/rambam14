@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות שאלה ופיקדון - פרק ד</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ד)</h3>
                 <ul class="space-y-3">
@@ -984,7 +984,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -996,15 +996,15 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">פרק ד עוסק ברובו בדרך השמירה הראויה (דרך השומרים), שחריגה ממנה נידונה כפשיעה ומחייבת אפילו שומר חינם. כמבוא להגדרת פשיעה דנה הלכה א בשבועות השומרים. כל שומר הנפטר ע"י שבועה והפיקדון לא לפנינו (כגון שנגנב או אבד) צריך להישבע שלוש שבועות- ששמר כדרך השומרים ולא פשע, שסיפור המקרה שסיפר נכון כך שהפיקדון אינו ברשותו כרגע) ושלא שלח יד בפיקדון קודם לגניבה (שאם עשה זאת, חייב אף באונסין). בעוד שלרמב"ם רק השבועה האמצעית מחוייבת מהתורה ושתי האחרות מדרבנן, לדעת הרא"ש גם השבועה שלא פשע היא מהתורה. ההבדל בין השיטות הוא במקום בו יש לשומר ראיה שהסיפור שסיפר נכון אך אין לו ראיה שלא פשע בתחילה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">פרק ד עוסק ברובו בדרך השמירה הראויה (דרך השומרים), שחריגה ממנה נידונה כפשיעה ומחייבת אפילו שומר חינם. כמבוא להגדרת פשיעה דנה הלכה א בשבועות השומרים. כל שומר הנפטר ע"י שבועה והפיקדון לא לפנינו (כגון שנגנב או אבד) צריך להישבע שלוש שבועות- ששמר כדרך השומרים ולא פשע, שסיפור המקרה שסיפר נכון כך שהפיקדון אינו ברשותו כרגע) ושלא שלח יד בפיקדון קודם לגניבה (שאם עשה זאת, חייב אף באונסין). בעוד שלרמב"ם רק השבועה האמצעית מחוייבת מהתורה ושתי האחרות מדרבנן, לדעת הרא"ש גם השבועה שלא פשע היא מהתורה. ההבדל בין השיטות הוא במקום בו יש לשומר ראיה שהסיפור שסיפר נכון אך אין לו ראיה שלא פשע בתחילה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">מכאן מתחילות ההלכות לעסוק בהגדרת פשיעה. הלכה ב מלמדת ש"דרך השומרים" משתנה על פי סוג הפיקדון, והלכה ג מלמדת שהחורג מדרך השומרים חייב אף אם הנזק שאירע בסוף לא היה תוצאה ישירה של חריגתו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">מכאן מתחילות ההלכות לעסוק בהגדרת פשיעה. הלכה ב מלמדת ש"דרך השומרים" משתנה על פי סוג הפיקדון, והלכה ג מלמדת שהחורג מדרך השומרים חייב אף אם הנזק שאירע בסוף לא היה תוצאה ישירה של חריגתו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ד-ו מלמדות כמה דינים הקשורים לדרך שמירת כספים. בניגוד מסויים למשתמע במשנה, שהנועל כספים כראוי פטור, בגמרא נאמר שכספים יש לשמור דווקא בקרקע. הראשונים נחלקו, האם קבורת כספים מחוייבת דווקא במקום בו מצב הביטחון רעוע כך שאנשים רבים שומרים אף את כספם שלהם בקרקע (כאשר אינם זקוקים לו בנגישות גבוהה), או שמדובר בדרישה מוחלטת. עוד נאמר בגמרא שאין חובה לקבור את המעות כאשר ברור למפקיד שאין לשומר זמן לעשות זאת (ערב שבת) או כאשר יש מקום להבין שהמפקיד צריך את המעות זמינות (מוצ"ש, לצורך הבדלה).</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ד-ו מלמדות כמה דינים הקשורים לדרך שמירת כספים. בניגוד מסויים למשתמע במשנה, שהנועל כספים כראוי פטור, בגמרא נאמר שכספים יש לשמור דווקא בקרקע. הראשונים נחלקו, האם קבורת כספים מחוייבת דווקא במקום בו מצב הביטחון רעוע כך שאנשים רבים שומרים אף את כספם שלהם בקרקע (כאשר אינם זקוקים לו בנגישות גבוהה), או שמדובר בדרישה מוחלטת. עוד נאמר בגמרא שאין חובה לקבור את המעות כאשר ברור למפקיד שאין לשומר זמן לעשות זאת (ערב שבת) או כאשר יש מקום להבין שהמפקיד צריך את המעות זמינות (מוצ"ש, לצורך הבדלה).</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכה ז מדובר על שומר ששכח היכן הניח את הפיקדון. בעניין זה פוסקת הגמרא שאי ידיעה היכן הפיקדון כמוה כפשיעה ולכן אפילו שומר חינם חייב בכך. רוב המפרשים הבינו שמדובר בשומר שהחביא את הפיקדון כדין, אך אינו זוכר היכן. לדעה אחרת אם החביאם כדין ושכח היכן זוהי אבידה ששומר חינם פטור עליה, ובנידון דנן מדובר בכגון שאף אינו יודע אם הטמין במקום לגיטימי, ומתוך שאינו יכול להישבע שלא פשע, משלם.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בהלכה ז מדובר על שומר ששכח היכן הניח את הפיקדון. בעניין זה פוסקת הגמרא שאי ידיעה היכן הפיקדון כמוה כפשיעה ולכן אפילו שומר חינם חייב בכך. רוב המפרשים הבינו שמדובר בשומר שהחביא את הפיקדון כדין, אך אינו זוכר היכן. לדעה אחרת אם החביאם כדין ושכח היכן זוהי אבידה ששומר חינם פטור עליה, ובנידון דנן מדובר בכגון שאף אינו יודע אם הטמין במקום לגיטימי, ומתוך שאינו יכול להישבע שלא פשע, משלם.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ח-ט נוגעות לעובדה שמצוי ששומרים ייעזרו בבני ביתם כדי לשמור על הפיקדון. כיוון שהדבר מצוי, מניחים שהמפקיד לקח זאת בחשבון ולכן שומר שמסר את הפיקדון לבני ביתו כדי שישמרו עליו לא פשע בכך. מהגמרא משמע שכאשר הדבר לא יביא להקפדה יתרה בשמירה, אף אין השומר חייב לאמר לבן ביתו שמדובר בחפץ מופקד. במקרה בו בן הבית שלו נמסר הפיקדון מודע לכך שמדובר בפיקדון מחדש הרמב"ם שהוא אחראי עליו תחת השומר המקורי.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ח-ט נוגעות לעובדה שמצוי ששומרים ייעזרו בבני ביתם כדי לשמור על הפיקדון. כיוון שהדבר מצוי, מניחים שהמפקיד לקח זאת בחשבון ולכן שומר שמסר את הפיקדון לבני ביתו כדי שישמרו עליו לא פשע בכך. מהגמרא משמע שכאשר הדבר לא יביא להקפדה יתרה בשמירה, אף אין השומר חייב לאמר לבן ביתו שמדובר בחפץ מופקד. במקרה בו בן הבית שלו נמסר הפיקדון מודע לכך שמדובר בפיקדון מחדש הרמב"ם שהוא אחראי עליו תחת השומר המקורי.</p>
                 
             </div>
             
@@ -1012,53 +1012,53 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המפקיד אצל חבירו בחנם ונגנב או אבד הרי זה נשבע ונפטר שנאמר וגונב מבית האיש וגו' ונקרב בעל הבית אל האלהים אם לא שלח ידו במלאכת רעהו, ומגלגלין עליו בתוך השבועה שלא פשע אלא שמר כדרך השומרין ולא שלח בו יד ואחר נגנב, שאם נגנב אחר ששלח יד בפקדון חייב באחריותו.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השבועה שנשבע השומר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">השבועה שנשבע השומר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בפרשת שומר חינם (שמות כב, ו-ז):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר בפרשת שומר חינם (שמות כב, ו-ז):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ כֶּסֶף אוֹ כֵלִים לִשְׁמֹר וְגֻנַּב מִבֵּית הָאִישׁ אִם יִמָּצֵא הַגַּנָּב יְשַׁלֵּם שְׁנָיִם:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ כֶּסֶף אוֹ כֵלִים לִשְׁמֹר וְגֻנַּב מִבֵּית הָאִישׁ אִם יִמָּצֵא הַגַּנָּב יְשַׁלֵּם שְׁנָיִם:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אִם לֹא יִמָּצֵא הַגַּנָּב <strong>וְנִקְרַב בַּעַל הַבַּיִת אֶל הָאֱלֹהִים אִם לֹא שָׁלַח יָדוֹ בִּמְלֶאכֶת רֵעֵהוּ</strong>:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אִם לֹא יִמָּצֵא הַגַּנָּב <strong>וְנִקְרַב בַּעַל הַבַּיִת אֶל הָאֱלֹהִים אִם לֹא שָׁלַח יָדוֹ בִּמְלֶאכֶת רֵעֵהוּ</strong>:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדרשי ההלכה מבארים שקריבה זו האמורה הפסוק משמעותה שבועה. אמנם, נחלקו הפרשנים בפירוש התחבירי של הפסוק וממילא גם בתוכן השבועה האמורה בו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדרשי ההלכה מבארים שקריבה זו האמורה הפסוק משמעותה שבועה. אמנם, נחלקו הפרשנים בפירוש התחבירי של הפסוק וממילא גם בתוכן השבועה האמורה בו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> על הפסוק מפרש "ונקרב - אל הדיינין לדון עם זה ולישבע לו שלא שלח ידו בשלו", כלומר, סוף הפסוק "...אם לא שלח ידו..." הוא תוכן השבועה שנשבע השומר, כך גם עולה מ<strong>תרגום יונתן</strong> "...ויומי (=ונשבע) דלא אושיט ידיה בעיסקא דחבריה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> על הפסוק מפרש "ונקרב - אל הדיינין לדון עם זה ולישבע לו שלא שלח ידו בשלו", כלומר, סוף הפסוק "...אם לא שלח ידו..." הוא תוכן השבועה שנשבע השומר, כך גם עולה מ<strong>תרגום יונתן</strong> "...ויומי (=ונשבע) דלא אושיט ידיה בעיסקא דחבריה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רמב"ן</strong> (שם) כותב "...והנכון שיקרב אל האלהים לישבע שנגנב כמו שהוא טוען, אם לא שלח הוא יד להשתמש לצרכו במלאכת רעהו, כי השולח יד בפקדון נעשה עליו גזלן וחייב באונסין". כלומר, הסיפא של הפסוק אינה מתארת את תוכן השבועה, אלא זהו תנאי לשבועה- השומר נשבע ונפטר רק אם לא שלח ידו בפיקדון (כלומר, השתמש בו לצרכיו שלו) קודם לנזק, שאם שלח ידו, הופך להיות חייב גם באונסים ואינו יכול להישבע ולהיפטר. תוכן השבועה אינו מבואר בפסוק, אך הרמב"ן מניח שהשומר נשבע שאכן אירע מה שהוא טוען שאירע (אונס, גניבה וכדומה).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>רמב"ן</strong> (שם) כותב "...והנכון שיקרב אל האלהים לישבע שנגנב כמו שהוא טוען, אם לא שלח הוא יד להשתמש לצרכו במלאכת רעהו, כי השולח יד בפקדון נעשה עליו גזלן וחייב באונסין". כלומר, הסיפא של הפסוק אינה מתארת את תוכן השבועה, אלא זהו תנאי לשבועה- השומר נשבע ונפטר רק אם לא שלח ידו בפיקדון (כלומר, השתמש בו לצרכיו שלו) קודם לנזק, שאם שלח ידו, הופך להיות חייב גם באונסים ואינו יכול להישבע ולהיפטר. תוכן השבועה אינו מבואר בפסוק, אך הרמב"ן מניח שהשומר נשבע שאכן אירע מה שהוא טוען שאירע (אונס, גניבה וכדומה).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ב"מ ו.) מתבאר שהשבועה שמשביעים את השומר כוללת שלוש שבועות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ב"מ ו.) מתבאר שהשבועה שמשביעים את השומר כוללת שלוש שבועות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב ששת</strong>: שלש שבועות משביעין אותו, שבועה שלא פשעתי בה, שבועה שלא שלחתי בה יד, שבועה שאינה ברשותי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב ששת</strong>: שלש שבועות משביעין אותו, שבועה שלא פשעתי בה, שבועה שלא שלחתי בה יד, שבועה שאינה ברשותי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השומר צריך להישבע שלא פשע בפיקדון, כיוון שאם פשע ולא שמר עליו כראוי, אפילו אם בסוף אירע דבר אונס, חייב השומר (עי' בהמשך, בהלכה ג בדין השומר שפשע ולבסוף נאנס). כמו כן, אם השומר השתמש בפיקדון לצורכו, קרי, "שלח בו יד", הרי הוא שובר בכך את הסכם השמירה ומעתה הפקדון הופך להיות באחריותו לגמרי, והוא חייב עליו אפילו על אונסין. עוד צריך השומר להישבע שטענתו שהפיקדון נגנב וכד' אינה תכסיס איך "לקנות" את הפיקדון לעצמו, ולכן הוא נשבע "שאינה ברשותי".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השומר צריך להישבע שלא פשע בפיקדון, כיוון שאם פשע ולא שמר עליו כראוי, אפילו אם בסוף אירע דבר אונס, חייב השומר (עי' בהמשך, בהלכה ג בדין השומר שפשע ולבסוף נאנס). כמו כן, אם השומר השתמש בפיקדון לצורכו, קרי, "שלח בו יד", הרי הוא שובר בכך את הסכם השמירה ומעתה הפקדון הופך להיות באחריותו לגמרי, והוא חייב עליו אפילו על אונסין. עוד צריך השומר להישבע שטענתו שהפיקדון נגנב וכד' אינה תכסיס איך "לקנות" את הפיקדון לעצמו, ולכן הוא נשבע "שאינה ברשותי".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו ביחס בין שלוש שבועות אלה לבין שבועת השומרים המבוארת בפסוק-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו ביחס בין שלוש שבועות אלה לבין שבועת השומרים המבוארת בפסוק-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי ה<strong>רמב"ם</strong> לפנינו עולה כי שתי השבועות הראשונות ("שלא פשעתי בה" ו"שלא שלחתי בה יד") אינן כלולות בשבועת השומרים הבסיסית, שהיא "שאינה ברשותי". בדבריו בהמשך בתחילת פרק ו, מתבאר עוד-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי ה<strong>רמב"ם</strong> לפנינו עולה כי שתי השבועות הראשונות ("שלא פשעתי בה" ו"שלא שלחתי בה יד") אינן כלולות בשבועת השומרים הבסיסית, שהיא "שאינה ברשותי". בדבריו בהמשך בתחילת פרק ו, מתבאר עוד-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>...כל שומר שנשבע שבועת השומרין כולל בשבועתו שלשה דברים-</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>...כל שומר שנשבע שבועת השומרין כולל בשבועתו שלשה דברים-</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ששמר כדרך השומרין (=שלא פשע),</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ששמר כדרך השומרין (=שלא פשע),</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ושארעו כך וכך ואינו ברשותו,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ושארעו כך וכך ואינו ברשותו,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ושלא שלח בו יד קודם שארעו המאורע הפוטר אותו...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ושלא שלח בו יד קודם שארעו המאורע הפוטר אותו...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, שבועת "שאינה ברשותי" (שהיא, כאמור, שבועת השומרים העיקרית) כוללת בתוכה גם שבועה על כך שדבריו נכונים, כלומר, שהפיקדון נגנב או אבד וכדומה, בהתאם לטענתו. נמצאנו למדים, שאם הביא ראיה לטענתו מעדים, אין הוא צריך עוד להישבע שלא פשע, ואף אין הוא צריך להישבע שלא שלח בפיקדון יד קודם הנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, שבועת "שאינה ברשותי" (שהיא, כאמור, שבועת השומרים העיקרית) כוללת בתוכה גם שבועה על כך שדבריו נכונים, כלומר, שהפיקדון נגנב או אבד וכדומה, בהתאם לטענתו. נמצאנו למדים, שאם הביא ראיה לטענתו מעדים, אין הוא צריך עוד להישבע שלא פשע, ואף אין הוא צריך להישבע שלא שלח בפיקדון יד קודם הנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (ב"מ פרק ג סימן כ) לעומתו כותב, שהשומר נפטר משבועה רק אם יש עדים שנגנבה או שאבדה בלא פשיעתו. במקרה זה אין השומר צריך להישבע שלא שלח בפיקדון יד. אמנם אם העדים מעידים רק שנגנבה או שאבדה, צריך הוא עדיין להישבע שלא פשע, ומגלגלים עליו שישבע גם שלא שלח בפיקדון יד. נמצא שלפי הרא"ש גם השבועה שלא פשע היא שבועת השומרים מהתורה, ולא רק השבועה שאינה ברשותו<sup id="ref54"><a href="#fn54">[54]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (ב"מ פרק ג סימן כ) לעומתו כותב, שהשומר נפטר משבועה רק אם יש עדים שנגנבה או שאבדה בלא פשיעתו. במקרה זה אין השומר צריך להישבע שלא שלח בפיקדון יד. אמנם אם העדים מעידים רק שנגנבה או שאבדה, צריך הוא עדיין להישבע שלא פשע, ומגלגלים עליו שישבע גם שלא שלח בפיקדון יד. נמצא שלפי הרא"ש גם השבועה שלא פשע היא שבועת השומרים מהתורה, ולא רק השבועה שאינה ברשותו<sup id="ref54"><a href="#fn54">[54]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצד ב) פוסק כרמב"ם, וה<strong>רמ"א</strong> (שם) כותב את דברי הרא"ש<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (רצד ב) פוסק כרמב"ם, וה<strong>רמ"א</strong> (שם) כותב את דברי הרא"ש<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
                     
                 </div>
                 
@@ -1066,30 +1066,30 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הואיל ופטר הכתוב את שומר חנם מן הגניבה קל וחומר מן האונסין הגדולים כגון שבורה ושבויה ומתה והוא שלא שלח יד בפקדון אבל שלח יד בפקדון חייב באונסיו, כיצד דרך השומרים הכל לפי הפקדון יש פקדון שדרך שמירתו להניחו בבית שער כגון הקורות והאבנים, ויש פקדון שדרך שמירתו להניחו בחצר כגון חבילות פשתן הגדולות וכיוצא בהן, ויש פקדון שדרך שמירתו להניחו בבית כגון שמלה וטלית, ויש פקדון שדרך שמירתו להניחו בתיבה או במגדל ונועל עליו כגון בגדי משי וכלי כסף וכלי זהב וכיוצא בהן.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שליחות יד בפיקדון</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שליחות יד בפיקדון</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' בפרק ג, הל' יא-יג  מהלכות גזילה ובדברינו שם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' בפרק ג, הל' יא-יג  מהלכות גזילה ובדברינו שם.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דרך השומרים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דרך השומרים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (ב"מ מב.)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (ב"מ מב.)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המפקיד מעות אצל חברו, צררן והפשילן לאחוריו או שמסרם לבנו ולבתו הקטנים ונעל בפניהם שלא כראוי - חייב, שלא שימר כדרך השומרים. ואם שימר כדרך השומרים - פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>המפקיד מעות אצל חברו, צררן והפשילן לאחוריו או שמסרם לבנו ולבתו הקטנים ונעל בפניהם שלא כראוי - חייב, שלא שימר כדרך השומרים. ואם שימר כדרך השומרים - פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה מונה מספר אופנים בהם שומר מעות נחשב כפושע וחייב. המכנה המשותף בכולם- "שלא שימר כדרך השומרים". כיוון שפיקדונות שונים נשמרים באופן שונה, נמצא שדרך השומרים תלויה בסוג הפיקדון ובמנהג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה מונה מספר אופנים בהם שומר מעות נחשב כפושע וחייב. המכנה המשותף בכולם- "שלא שימר כדרך השומרים". כיוון שפיקדונות שונים נשמרים באופן שונה, נמצא שדרך השומרים תלויה בסוג הפיקדון ובמנהג.</p>
                     
                 </div>
                 
@@ -1097,19 +1097,19 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     השומר שהניח הפקדון במקום שאינו ראוי לו ונגנב משם או אבד אפילו נאנס שם כגון שנפלה דליקה ושרף כל הבית הרי זה פושע וחייב לשלם, ואף על פי שהניח הפקדון עם שלו אם ראוי לשמירה פטור ואם אין המקום ראוי לשמירה חייב בשלו הוא רשאי ואינו רשאי בשל אחרים.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תחילתו בפשיעה וסופו באונס בשומר מעות</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תחילתו בפשיעה וסופו באונס בשומר מעות</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' בדברינו בהלכות שכירות פרק ג הלכה ט לגבי תחילתו בפשיעה וסופו באונס.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' בדברינו בהלכות שכירות פרק ג הלכה ט לגבי תחילתו בפשיעה וסופו באונס.</p>
                     
                 </div>
                 
@@ -1117,100 +1117,100 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד-ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הכספים והדינרין אין להם שמירה אלא בקרקע ויתן עליהם טפח עפר או יטמנם בכותל בטפח הסמוך לקורה, אבל לא באמצע הכותל שמא יחפרו הגנבים שם ויגנבו, אפילו נעל עליהם כראוי בתיבה או החביא אותם במקום שאין אדם מכירו ולא מרגיש בו ה"ז פושע וחייב לשלם, הורו מקצת המבינים שהוא הדין לכל דבר שמשאו קל ואין הקרקע מאבדת אותו במהרה כגון לשונות של כסף ואצ"ל לשונות של זהב ואבנים טובות שאין להם שמירה אלא בקרקע ולזה דעתי נוטה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המפקיד אצל חבירו כספים ערב שבת בין השמשות אינו חייב לטרוח ולקבור אותן עד מוצאי שבת, ואם נתאחר למוצאי שבת כדי לקברן ולא קברן ונגנבו או נאנסו חייב, ואם תלמיד חכם הוא אינו חייב עד שישהא אחר שיבדיל כדי לקברן. א"א ואם תלמיד חכם הוא הנפקד.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הפקיד אצל חבירו כספים בדרך להוליכם לביתו או ששלח עמו מעות ממקום למקום צריכין שיהיו צרורים ומונחים בידו או קשורים כראוי על בטנו מכנגד פניו עד שיגיע לביתו ויקברם כראוי ואם לא קשרן בדרך הזאת אפילו נאנסו חייב לשלם שהרי תחלתו בפשיעה, מעשה באחד שהפקיד מעות אצל חבירו והניחם במחיצה של קנים והיו טמונים בעובי המחיצה ונגנבו משם ואמרו חכמים אף על פי שזו שמירה מעולה לענין גניבה אינה שמירה כראוי לענין האש ומאחר שלא טמנו בקרקע או בכותל בניין פושע הוא וכל שתחלתו בפשיעה וסופו באונס חייב וכן כל כיוצא בזה.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שמירת כספים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שמירת כספים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (מב.)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (מב.)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המפקיד מעות אצל חברו,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>המפקיד מעות אצל חברו,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>צררן והפשילן לאחוריו</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>צררן והפשילן לאחוריו</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>או שמסרם לבנו ולבתו הקטנים ונעל בפניהם שלא כראוי - חייב,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>או שמסרם לבנו ולבתו הקטנים ונעל בפניהם שלא כראוי - חייב,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שלא שימר כדרך השומרים.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שלא שימר כדרך השומרים.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואם שימר כדרך השומרים - פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואם שימר כדרך השומרים - פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהמשנה משמע שאם שומר על מעות צוררן ומפשילן לאחוריו נחשב הדבר לשמירה שאינה "כדרך השומרים" ולכן חייב השומר. בהבנת המקרה הנוסף שבמשנה בו, מתחייב השומר נחלקו הראשונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מהמשנה משמע שאם שומר על מעות צוררן ומפשילן לאחוריו נחשב הדבר לשמירה שאינה "כדרך השומרים" ולכן חייב השומר. בהבנת המקרה הנוסף שבמשנה בו, מתחייב השומר נחלקו הראשונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (לו.) מסביר ש"מסרם לבנו ולבתו הקטנים ונעל בפניהם שלא כראוי" הוא תיאור של מקרה אחד, בו השומר נתן את המעות לבנו ובתו הקטנים, ולא דאג לנעול היטב את הדלת כדי לוודא שהקטנים לא יצאו החוצה ויאבדו את המעות. המילה "בפניהם" מתייחסת <strong>לילדיו</strong> של השומר שהוא נועל בפניהם את הדלת שלא יצאו<sup id="ref56"><a href="#fn56">[56]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (לו.) מסביר ש"מסרם לבנו ולבתו הקטנים ונעל בפניהם שלא כראוי" הוא תיאור של מקרה אחד, בו השומר נתן את המעות לבנו ובתו הקטנים, ולא דאג לנעול היטב את הדלת כדי לוודא שהקטנים לא יצאו החוצה ויאבדו את המעות. המילה "בפניהם" מתייחסת <strong>לילדיו</strong> של השומר שהוא נועל בפניהם את הדלת שלא יצאו<sup id="ref56"><a href="#fn56">[56]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף</strong> (כג: מדפיו) גורס במשנה "...לבנו ולבתו הקטנים <strong>או</strong> שנעל בפניהם...". כלומר, המסירה לילדיו והנעילה שלא כראוי הינם שני מקרים שונים. לפי זה, "בפניהם" הכוונה שהשומר נועל <strong>בפני המעות</strong> שלא כראוי ולכן מתחייב<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רי"ף</strong> (כג: מדפיו) גורס במשנה "...לבנו ולבתו הקטנים <strong>או</strong> שנעל בפניהם...". כלומר, המסירה לילדיו והנעילה שלא כראוי הינם שני מקרים שונים. לפי זה, "בפניהם" הכוונה שהשומר נועל <strong>בפני המעות</strong> שלא כראוי ולכן מתחייב<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא עוסקת במקרה הראשון של שמירה שלא כראוי המתואר במשנה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא עוסקת במקרה הראשון של שמירה שלא כראוי המתואר במשנה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בשלמא כולהו - שלא שימר כדרך השומרים, אלא צררן והפשילן לאחוריו, מאי הוה ליה למיעבד? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בשלמא כולהו - שלא שימר כדרך השומרים, אלא צררן והפשילן לאחוריו, מאי הוה ליה למיעבד? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong> אמר <strong>רבי יצחק</strong>: אמר קרא "וצרת הכסף בידך" אף על פי שצרורין - יהיו בידך.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong> אמר <strong>רבי יצחק</strong>: אמר קרא "וצרת הכסף בידך" אף על פי שצרורין - יהיו בידך.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא תמהה- מדוע שצרירת המעות כשלעצמה לא תיחשב שמירה מספקת? <strong>רבא</strong> מוכיח מדברי <strong>רבי יצחק</strong> לגבי מעות מעשר שני. מעות אלה מועלות לירושלים לקנות בהם דברי מאכל לאכול שם, ובהן נאמר "וְנָתַתָּה בַּכָּסֶף <strong>וְצַרְתָּ הַכֶּסֶף בְּיָדְךָ</strong> וְהָלַכְתָּ אֶל הַמָּקוֹם אֲשֶׁר יִבְחַר ד' אֱלֹקֶיךָ בּוֹ". רבי יצחק לומד שאדם צריך לשמור על מעות מעשר שני שבידו שמירה מיוחדת, שיהיו בידו<sup id="ref58"><a href="#fn58">[58]</a></sup>, כך שידע בכל זמן שלא איבדן. רבא מאמץ את אותו הקריטריון לשמירת כספי חולין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא תמהה- מדוע שצרירת המעות כשלעצמה לא תיחשב שמירה מספקת? <strong>רבא</strong> מוכיח מדברי <strong>רבי יצחק</strong> לגבי מעות מעשר שני. מעות אלה מועלות לירושלים לקנות בהם דברי מאכל לאכול שם, ובהן נאמר "וְנָתַתָּה בַּכָּסֶף <strong>וְצַרְתָּ הַכֶּסֶף בְּיָדְךָ</strong> וְהָלַכְתָּ אֶל הַמָּקוֹם אֲשֶׁר יִבְחַר ד' אֱלֹקֶיךָ בּוֹ". רבי יצחק לומד שאדם צריך לשמור על מעות מעשר שני שבידו שמירה מיוחדת, שיהיו בידו<sup id="ref58"><a href="#fn58">[58]</a></sup>, כך שידע בכל זמן שלא איבדן. רבא מאמץ את אותו הקריטריון לשמירת כספי חולין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך הגמרא מועלות דרישות מחמירות בנוגע לשמירת מעות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך הגמרא מועלות דרישות מחמירות בנוגע לשמירת מעות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>שמואל</strong>: כספים אין להם שמירה אלא בקרקע...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>שמואל</strong>: כספים אין להם שמירה אלא בקרקע...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב אחא בריה דרב יוסף</strong> ל<strong>רב אשי</strong>: התם תנן: חמץ שנפלה עליו מפולת הרי הוא כמבוער, רבן שמעון בן גמליאל אומר: כל שאין הכלב יכול לחפש אחריו. ותנא: כמה חפישת הכלב - שלשה טפחים. - הכא מאי? מי בעינן שלשה טפחים, או לא? - אמר ליה: התם משום ריחא - בעינן שלשה טפחים, הכא משום איכסויי מעינא - לא בעינן שלשה טפחים. - וכמה? - אמר <strong>רפרם מסיכרא</strong>: טפח.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>רב אחא בריה דרב יוסף</strong> ל<strong>רב אשי</strong>: התם תנן: חמץ שנפלה עליו מפולת הרי הוא כמבוער, רבן שמעון בן גמליאל אומר: כל שאין הכלב יכול לחפש אחריו. ותנא: כמה חפישת הכלב - שלשה טפחים. - הכא מאי? מי בעינן שלשה טפחים, או לא? - אמר ליה: התם משום ריחא - בעינן שלשה טפחים, הכא משום איכסויי מעינא - לא בעינן שלשה טפחים. - וכמה? - אמר <strong>רפרם מסיכרא</strong>: טפח.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת <strong>שמואל</strong>, בכדי שיפטר השומר, עליו לטמון את המעות בקרקע. <strong>רב אחא</strong> מנסה לברר את עומק ההטמנה הנדרש מדין חמץ שאם קבור שלושה טפחים כך שאין הכלב חופר ומוציאו החוצה, אין צורך לבערו. <strong>רב אשי</strong> עונה, שבשמירת מעות צריך רק שלא יהיה הכסף גלוי כדי שלא יגנב, ולכן די בטפח אחד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת <strong>שמואל</strong>, בכדי שיפטר השומר, עליו לטמון את המעות בקרקע. <strong>רב אחא</strong> מנסה לברר את עומק ההטמנה הנדרש מדין חמץ שאם קבור שלושה טפחים כך שאין הכלב חופר ומוציאו החוצה, אין צורך לבערו. <strong>רב אשי</strong> עונה, שבשמירת מעות צריך רק שלא יהיה הכסף גלוי כדי שלא יגנב, ולכן די בטפח אחד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי הגמרא משמע עוד, שבנסיבות מסויימות תיתכנה דרישות מחמירות אף יותר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי הגמרא משמע עוד, שבנסיבות מסויימות תיתכנה דרישות מחמירות אף יותר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והאידנא דשכיחי גשושאי - אין להן שמירה אלא בשמי קורה... והאידנא דשכיחי פרומאי - אין להם שמירה אלא ביני אורבי. - אמר <strong>רבא</strong>: ומודה שמואל בכותל, (אי נמי בין הקרנות). והאידנא דשכיחי טפוחאי אין להן שמירה אלא בטפח הסמוך לקרקע, או בטפח הסמוך לשמי קורה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והאידנא דשכיחי גשושאי - אין להן שמירה אלא בשמי קורה... והאידנא דשכיחי פרומאי - אין להם שמירה אלא ביני אורבי. - אמר <strong>רבא</strong>: ומודה שמואל בכותל, (אי נמי בין הקרנות). והאידנא דשכיחי טפוחאי אין להן שמירה אלא בטפח הסמוך לקרקע, או בטפח הסמוך לשמי קורה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאשר קיימת סכנה של גנבים המגששים את הקרקע ("גשושאי"), אין הטמנה עוזרת, אלא יש לשמור את המעות על קורת הבית שתחת התקרה. כאשר הגנבים יודעים גם לחדור את התקרה ("פרומאי") יש לשמור את המעות בתוך עובי הכותל, וכאשר הגנבים יודעים גם להקיש על הכותל ולגלות את החללים שבתוכו ("טפוחאי"), יש לשמור את המעות בחללי הכותל שנמצאים קרוב מאד לריצפה או לתקרה<sup id="ref59"><a href="#fn59">[59]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאשר קיימת סכנה של גנבים המגששים את הקרקע ("גשושאי"), אין הטמנה עוזרת, אלא יש לשמור את המעות על קורת הבית שתחת התקרה. כאשר הגנבים יודעים גם לחדור את התקרה ("פרומאי") יש לשמור את המעות בתוך עובי הכותל, וכאשר הגנבים יודעים גם להקיש על הכותל ולגלות את החללים שבתוכו ("טפוחאי"), יש לשמור את המעות בחללי הכותל שנמצאים קרוב מאד לריצפה או לתקרה<sup id="ref59"><a href="#fn59">[59]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך הגמרא מובא מעשה בכספים שנשמרו שלא כראוי, קרי, שלא בקרקע-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך הגמרא מובא מעשה בכספים שנשמרו שלא כראוי, קרי, שלא בקרקע-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דאפקיד זוזי גבי חבריה, אשלמינהו לאימיה, ואותבינהו בקרטליתא, ואיגנוב. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא גברא דאפקיד זוזי גבי חבריה, אשלמינהו לאימיה, ואותבינהו בקרטליתא, ואיגנוב. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: היכי נדיינו דייני להאי דינא? נימא ליה לדידיה: זיל שלים, אמר: כל המפקיד - על דעת אשתו ובניו הוא מפקיד. נימא לה לאימיה: זילי שלימי, אמרה: לא אמר לי דלאו דידיה נינהו, דאקברינהו. נימא ליה: אמאי לא אמרת לה? - אמר: כל שכן, דכי אמינא לה דדידי נינהו, טפי מזדהרא בהו...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: היכי נדיינו דייני להאי דינא? נימא ליה לדידיה: זיל שלים, אמר: כל המפקיד - על דעת אשתו ובניו הוא מפקיד. נימא לה לאימיה: זילי שלימי, אמרה: לא אמר לי דלאו דידיה נינהו, דאקברינהו. נימא ליה: אמאי לא אמרת לה? - אמר: כל שכן, דכי אמינא לה דדידי נינהו, טפי מזדהרא בהו...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אדם קיבל כספים לשמירה ונתנם לאימו, ונתנה היא אותם בארגז ונגנבו. אילו השומר עצמו היה נותן אותם בארגז היה מתחייב, אך כאן אין הדבר פשוט, כיוון שאימו היא שנתנה אותם בארגז, והיא לא ידעה שהם פיקדון. כמו כן לא ניתן להאשים את השומר שלא אמר לאימו שמדובר במעות פיקדון, משום שאדרבא, אם אימו חושבת שהמעות שלו הן, היא תשמור עליהן יותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אדם קיבל כספים לשמירה ונתנם לאימו, ונתנה היא אותם בארגז ונגנבו. אילו השומר עצמו היה נותן אותם בארגז היה מתחייב, אך כאן אין הדבר פשוט, כיוון שאימו היא שנתנה אותם בארגז, והיא לא ידעה שהם פיקדון. כמו כן לא ניתן להאשים את השומר שלא אמר לאימו שמדובר במעות פיקדון, משום שאדרבא, אם אימו חושבת שהמעות שלו הן, היא תשמור עליהן יותר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בנוגע למוחלטות של דברי שמואל, הדורש הטמנת כספים בקרקע-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בנוגע למוחלטות של דברי שמואל, הדורש הטמנת כספים בקרקע-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סי' כא) מביא את דברי <strong>רבי יצחק הברצלוני</strong> הטוען שדברי שמואל נאמרו דווקא במקום שמצויים מאד הגנבים עד שאין לכסף שמירה ראויה אלא בקרקע. במקום כזה, שכיח שאנשים שומרים גם את ממונם שלהם בקרקע, ולכן זו מוגדרת "שמירה כראוי". הדברים מדוייקים מתוך ההחמרות שמוסיפה הגמרא על דברי שמואל ("והאידנא דשכיחי גשושאי... והאידנא דשכיחי פרומאי..."), שהגדרת השמירה הראויה משתנה ומחמירה לפי מצב הביטחון, ולכן שגם לקולא הדבר כך- שאם אין גנבים מצויים, אין צריך להטמין כספים בקרקע. הדברים עולים בקנה אחד עם גירסתו של הרי"ף במשנה, לפיה משמע שאם נעל אדם בפני המעות כראוי, נחשב הדבר לשמירה ראוה ופטור. עוד מוכחים הדברים מהמעשה בשומר שמסר את המעות לאימו. במעשה זה נאמר שהשומר סבר שאימו תשמור עליהן אפילו יותר טוב אם תחשוב שהן שלו, ואם כן נמצא שמדובר דווקא במקום ובזמן כזה שרוב האנשים שומרים את מעותיהם שלהם בקרקע ולכן גם השומר חייב לעשות כך בפיקדון. אך אם מצב הביטחון טוב ואין כמעט אנשים ששומרים על מעותיהן שלהם טמונות בקרקע, אף שמואל יודה שאין צורך לשמור את מעות הפיקדון בקרקע. כדרך זו פוסקים גם ה<strong>טור</strong> (רצא) וה<strong>רמב"ן</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סי' כא) מביא את דברי <strong>רבי יצחק הברצלוני</strong> הטוען שדברי שמואל נאמרו דווקא במקום שמצויים מאד הגנבים עד שאין לכסף שמירה ראויה אלא בקרקע. במקום כזה, שכיח שאנשים שומרים גם את ממונם שלהם בקרקע, ולכן זו מוגדרת "שמירה כראוי". הדברים מדוייקים מתוך ההחמרות שמוסיפה הגמרא על דברי שמואל ("והאידנא דשכיחי גשושאי... והאידנא דשכיחי פרומאי..."), שהגדרת השמירה הראויה משתנה ומחמירה לפי מצב הביטחון, ולכן שגם לקולא הדבר כך- שאם אין גנבים מצויים, אין צריך להטמין כספים בקרקע. הדברים עולים בקנה אחד עם גירסתו של הרי"ף במשנה, לפיה משמע שאם נעל אדם בפני המעות כראוי, נחשב הדבר לשמירה ראוה ופטור. עוד מוכחים הדברים מהמעשה בשומר שמסר את המעות לאימו. במעשה זה נאמר שהשומר סבר שאימו תשמור עליהן אפילו יותר טוב אם תחשוב שהן שלו, ואם כן נמצא שמדובר דווקא במקום ובזמן כזה שרוב האנשים שומרים את מעותיהם שלהם בקרקע ולכן גם השומר חייב לעשות כך בפיקדון. אך אם מצב הביטחון טוב ואין כמעט אנשים ששומרים על מעותיהן שלהם טמונות בקרקע, אף שמואל יודה שאין צורך לשמור את מעות הפיקדון בקרקע. כדרך זו פוסקים גם ה<strong>טור</strong> (רצא) וה<strong>רמב"ן</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, מדברי ה<strong>רמב"ם</strong><sup id="ref60"><a href="#fn60">[60]</a></sup> משמע שחובת ההטמנה בקרקע היא יסודית ואינה משתנה עם הזמן. הרמב"ם (בשו"ת סי' תו) מסביר שדווקא מהמעשה דלעיל (באדם שמסר את המעות לאימו) מוכח שחייב לקוברם, שהרי האם אומרת "לא אמר לי דלאו דידיה הוא <strong>דאקברינהו</strong>" (כלומר, לא אמר לי שאינם שלו כדי שאקבור אותן כראוי לפיקדון).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, מדברי ה<strong>רמב"ם</strong><sup id="ref60"><a href="#fn60">[60]</a></sup> משמע שחובת ההטמנה בקרקע היא יסודית ואינה משתנה עם הזמן. הרמב"ם (בשו"ת סי' תו) מסביר שדווקא מהמעשה דלעיל (באדם שמסר את המעות לאימו) מוכח שחייב לקוברם, שהרי האם אומרת "לא אמר לי דלאו דידיה הוא <strong>דאקברינהו</strong>" (כלומר, לא אמר לי שאינם שלו כדי שאקבור אותן כראוי לפיקדון).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצא טו) כותב את דברי הרמב"ם, שכספים חייבים לשמור טמונים בקרקע (או בכותל בטפח הסמוך לקרקע או לתקרה), אך בהלכה יח הוא מסייג את דבריו, על פי דברי ה<strong>רא"ש</strong>, ומוסיף שבמקום שאין גנבים מצויים כל כך, אין צריך לכסותם בקרקע אלא מניחם במקום שמניח את שלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (רצא טו) כותב את דברי הרמב"ם, שכספים חייבים לשמור טמונים בקרקע (או בכותל בטפח הסמוך לקרקע או לתקרה), אך בהלכה יח הוא מסייג את דבריו, על פי דברי ה<strong>רא"ש</strong>, ומוסיף שבמקום שאין גנבים מצויים כל כך, אין צריך לכסותם בקרקע אלא מניחם במקום שמניח את שלו.</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תלות אופן השמירה בזמן ההפקדה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תלות אופן השמירה בזמן ההפקדה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד שם בגמרא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד שם בגמרא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: ומודי שמואל בערב שבת בין השמשות, דלא אטרחוהו רבנן.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: ומודי שמואל בערב שבת בין השמשות, דלא אטרחוהו רבנן.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואי שהא למוצאי שבת שיעור למקברינהו ולא קברינהו - מחייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואי שהא למוצאי שבת שיעור למקברינהו ולא קברינהו - מחייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואי צורבא מרבנן הוא - סבר: דלמא מיבעי ליה זוזי לאבדלתא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואי צורבא מרבנן הוא - סבר: דלמא מיבעי ליה זוזי לאבדלתא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, גם לדעת שמואל, לפיה יש לטמון את הכספים בקרקע, אם הופקדו המעות בערב שבת בין השמשות, לא הטריחו חכמים את השומר לחפור ויכול להשהות את המעות מבלי לטומנן עד למוצאי שבת, ואף במוצאי שבת אין השומר שלא טמן מתחייב מיד, אלא רק לאחר שיעבור שיעור הזמן הדרוש להטמנה. בנוסף, אם מדובר בתלמיד חכם (צורבא מרבנן), מקלים עוד יותר על השומר, מסיבה הקשורה להבדלה וכמבואר לקמן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, גם לדעת שמואל, לפיה יש לטמון את הכספים בקרקע, אם הופקדו המעות בערב שבת בין השמשות, לא הטריחו חכמים את השומר לחפור ויכול להשהות את המעות מבלי לטומנן עד למוצאי שבת, ואף במוצאי שבת אין השומר שלא טמן מתחייב מיד, אלא רק לאחר שיעבור שיעור הזמן הדרוש להטמנה. בנוסף, אם מדובר בתלמיד חכם (צורבא מרבנן), מקלים עוד יותר על השומר, מסיבה הקשורה להבדלה וכמבואר לקמן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בכוונת הדין לגבי תלמיד חכם נחלקו הראשונים. <strong>רש"י</strong>, ה<strong>רא"ש</strong> (סי' כא) וה<strong>טור</strong> (רצא) מפרש שכוונת רבא היא שאם <strong>המפקיד</strong> הוא תלמיד חכם, המהדר להבדיל על יין יקר ולא מסתפק בשֵכַר וכד', רשאי השומר להתעכב ולא לקבור את המעות<sup id="ref61"><a href="#fn61">[61]</a></sup>, כיוון שייתכן שהמפקיד יזדקק להן לצרכי הבדלה, ולכן יש לשומרן זמינות. לעומתם, ה<strong>ראב"ד</strong><sup id="ref62"><a href="#fn62">[62]</a></sup> מבין שאם <strong>השומר</strong> הוא תלמיד חכם, אינו חייב לקבור את המעות מיד במוצ"ש אלא נותנים לו שיעור זמן הבדלה, כדי שיבדיל תחילה ואח"כ יקברם<sup id="ref63"><a href="#fn63">[63]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בכוונת הדין לגבי תלמיד חכם נחלקו הראשונים. <strong>רש"י</strong>, ה<strong>רא"ש</strong> (סי' כא) וה<strong>טור</strong> (רצא) מפרש שכוונת רבא היא שאם <strong>המפקיד</strong> הוא תלמיד חכם, המהדר להבדיל על יין יקר ולא מסתפק בשֵכַר וכד', רשאי השומר להתעכב ולא לקבור את המעות<sup id="ref61"><a href="#fn61">[61]</a></sup>, כיוון שייתכן שהמפקיד יזדקק להן לצרכי הבדלה, ולכן יש לשומרן זמינות. לעומתם, ה<strong>ראב"ד</strong><sup id="ref62"><a href="#fn62">[62]</a></sup> מבין שאם <strong>השומר</strong> הוא תלמיד חכם, אינו חייב לקבור את המעות מיד במוצ"ש אלא נותנים לו שיעור זמן הבדלה, כדי שיבדיל תחילה ואח"כ יקברם<sup id="ref63"><a href="#fn63">[63]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצא) העתיק את לשון הרמב"ם, אך הוסיף את המילה "ואם תלמיד חכם הוא <strong>המפקיד</strong>", כשיטת רש"י. וה<strong>רמ"א</strong> מביא בשם יש אומרים את שיטת הראב"ד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (רצא) העתיק את לשון הרמב"ם, אך הוסיף את המילה "ואם תלמיד חכם הוא <strong>המפקיד</strong>", כשיטת רש"י. וה<strong>רמ"א</strong> מביא בשם יש אומרים את שיטת הראב"ד.</p>
                     
                 </div>
                 
@@ -1218,33 +1218,33 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המפקיד אצל חבירו בין כלים בין מעות ואמר לו תן לי פקדוני ואמר לו השומר איני יודע אנה הנחתי פקדון זה או באי זה מקום קברתי הכספים המתן לי עד שאבקש ואמצא ואחזיר לך הרי זה פושע וחייב לשלם מיד.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר ששכח היכן הניח את הפיקדון</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שומר ששכח היכן הניח את הפיקדון</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד שם בגמרא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד שם בגמרא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דאפקיד זוזי גבי חבריה, אמר ליה: הב לי זוזאי! - אמר ליה: לא ידענא היכא אותבינהו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא גברא דאפקיד זוזי גבי חבריה, אמר ליה: הב לי זוזאי! - אמר ליה: לא ידענא היכא אותבינהו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אתא לקמיה ד<strong>רבא</strong>, אמר ליה: כל לא ידענא - פשיעותא היא, זיל שלים.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אתא לקמיה ד<strong>רבא</strong>, אמר ליה: כל לא ידענא - פשיעותא היא, זיל שלים.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אדם הפקיד מעות אצל חבירו, וכשבא לתובעם אמר לו חבירו שאינו יודע היכן הניחן. <strong>רבא</strong> פסק ששומר שאינו יודע היכן הפיקדון, (אפילו אם ברור שהפיקדון נמצא בביתו במקום כלשהו!) הרי הוא פושע ולכן על השומר לשלם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אדם הפקיד מעות אצל חבירו, וכשבא לתובעם אמר לו חבירו שאינו יודע היכן הניחן. <strong>רבא</strong> פסק ששומר שאינו יודע היכן הפיקדון, (אפילו אם ברור שהפיקדון נמצא בביתו במקום כלשהו!) הרי הוא פושע ולכן על השומר לשלם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינו יהונתן</strong> (בשטמ"ק) מסביר שעל השומר לשלם מיד ואינו יכול לומר למפקיד שימתין יום או יומיים עד שיחפש או ייזכר, ומסביר שאף שהפיקדון נמצא בוודאי בביתו של השומר, בכל זאת המעות נחשבים כאבודים לגבי המפקיד, שכן "מי יוכל לחפש כל הקרקע של בית או כל טפח הסמוך לקרקע או כל טפח הסמוך לקורה אם לא יפסיד כתליה". מדבריו משמע שבמקרה בו אין ידוע בדיוק היכן הפיקדון נמצא, אך הנגישות אליו אינה בעייתית כל כך (כגון שהשומר יודע שהפיקדון באחת מכספותיו שבכמה בנקים שונים, אך אינו יודע בדיוק היכן), אין השומר נחשב לפושע כי הפיקדון אינו נחשב כאבוד, ועל המתנת הזמן שגרם השומר למפקיד (שעתה צריך להשקיע זמן בכדי למצוא את פיקדונו) אין לחייבו כפושע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבינו יהונתן</strong> (בשטמ"ק) מסביר שעל השומר לשלם מיד ואינו יכול לומר למפקיד שימתין יום או יומיים עד שיחפש או ייזכר, ומסביר שאף שהפיקדון נמצא בוודאי בביתו של השומר, בכל זאת המעות נחשבים כאבודים לגבי המפקיד, שכן "מי יוכל לחפש כל הקרקע של בית או כל טפח הסמוך לקרקע או כל טפח הסמוך לקורה אם לא יפסיד כתליה". מדבריו משמע שבמקרה בו אין ידוע בדיוק היכן הפיקדון נמצא, אך הנגישות אליו אינה בעייתית כל כך (כגון שהשומר יודע שהפיקדון באחת מכספותיו שבכמה בנקים שונים, אך אינו יודע בדיוק היכן), אין השומר נחשב לפושע כי הפיקדון אינו נחשב כאבוד, ועל המתנת הזמן שגרם השומר למפקיד (שעתה צריך להשקיע זמן בכדי למצוא את פיקדונו) אין לחייבו כפושע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מסביר אחרת. לדבריו עצם העובדה שאין השומר יודע היכן הפיקדון, משמעותה היא שהוא פושע בשמירתו, שכן גם המחבוא הטוב ביותר צריך להשגחה תמידית, אם שכח השומר מהו המקום, אינו משגיח בו.  מעתה ואילך נידון השומר כתחילתו בפשיעה וסופו באונס, ולכן הוא מתחייב על אונס. נמצא שלפיו, אין חיוב השומר נובע מכך שהפיקדון "אבוד למפקיד", אלא מעצם דרך השמירה של השומר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> מסביר אחרת. לדבריו עצם העובדה שאין השומר יודע היכן הפיקדון, משמעותה היא שהוא פושע בשמירתו, שכן גם המחבוא הטוב ביותר צריך להשגחה תמידית, אם שכח השומר מהו המקום, אינו משגיח בו.  מעתה ואילך נידון השומר כתחילתו בפשיעה וסופו באונס, ולכן הוא מתחייב על אונס. נמצא שלפיו, אין חיוב השומר נובע מכך שהפיקדון "אבוד למפקיד", אלא מעצם דרך השמירה של השומר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המאירי מביא עוד <strong>שיטה אחרת</strong>, לפיה אם ודאי הניח השומר את הפיקדון במקום משתמר, אף שעתה אינו זוכר היכן הוא, הרי זו אבידה, ולא פשיעה, ולכן אם שומר חינם הוא, פטור. רבא דיבר על מקרה בו השומר אינו בטוח אם הניח את הפיקדון במקום ראוי או לא, ולכן, מתוך שאינו יכול להישבע ששמר כראוי ולא פשע, משלם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המאירי מביא עוד <strong>שיטה אחרת</strong>, לפיה אם ודאי הניח השומר את הפיקדון במקום משתמר, אף שעתה אינו זוכר היכן הוא, הרי זו אבידה, ולא פשיעה, ולכן אם שומר חינם הוא, פטור. רבא דיבר על מקרה בו השומר אינו בטוח אם הניח את הפיקדון במקום ראוי או לא, ולכן, מתוך שאינו יכול להישבע ששמר כראוי ולא פשע, משלם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצא ז) פוסק כדברי רבא, שאם השומר אינו יכול למצוא את הפיקדון מיידית, מתחייב הוא לשלם מיד לבעלים, ואין הבעלים חייב לחכות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (רצא ז) פוסק כדברי רבא, שאם השומר אינו יכול למצוא את הפיקדון מיידית, מתחייב הוא לשלם מיד לבעלים, ואין הבעלים חייב לחכות.</p>
                     
                 </div>
                 
@@ -1252,72 +1252,72 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח-ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח-ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל המפקיד אצל בעל הבית בין כלים בין מעות על דעת אשתו ובניו ובני ביתו הגדולים הוא מפקיד, אבל אם מסרן לבניו ובני ביתו הקטנים או לעבדיו בין גדולים בין קטנים או לאחד מקרוביו שאינן שרויין עמו בבית ואין סומכין על שלחנו ואצ"ל אם מסרן לאחר הרי זה פושע וחייב לשלם אלא א"כ הביא השומר השני ראיה שלא פשע כמו שביארנו, מעשה באחד שהפקיד מעות אצל חבירו ונתנם השומר לאמו והחביאה אותן ולא טמנה אותן ונגנבו ואמרו חכמים אין השומר חייב לשלם מפני שנתנם לאמו שכל המפקיד על דעת בניו ובני ביתו הוא מפקיד ואף על פי שלא אמר לה פקדון הם יש לו לטעון כל שכן שהיא נזהרת בהן אם היתה סבורה שהן שלי, וכן אין אמו חייבת לשלם שהרי לא אמר לה שהן פקדון ואמרו חכמים ישבע השומר שאותן המעות עצמן הן שנתנן לאמו ותשבע האם שהחביאה אותן ונגנבו ויפטרו שניהם וכן כל כיוצא בזה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מכאן אתה למד שהשומר שמסר הפקדון לאשתו ובני ביתו והודיען שהוא פקדון ולא שמרו כדרך השומרין שהן חייבין לשלם לבעל הפקדון ובעל הבית פטור שכל המפקיד על דעת אשתו ובניו הוא מפקיד, מעשה באחד שהפקיד כשות אצל אחד והיה לו לשומר כשות אחרת ואמר לשמשו מזה הכשות תשליך לתוך השכר והלך השמש והשליך מכשות של פקדון אמרו חכמים שהשמש פטור שהרי לא אמר מזה השלך ומזה אל תשלך ודימה שהוא מראה מקום ואינו מקפיד על זה וכן בעה"ב פטור שהרי אמר לו מזה השלך ואינו משלם אלא דמי מה שנהנה בלבד, לפיכך אם נעשה השכר חומץ פטור מלשלם ובין כך ובין כך חייב השומר שבועה שכך אירע וכן כל כיוצא בזה.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר המוסר לבניו ולבני ביתו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שומר המוסר לבניו ולבני ביתו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (ב"מ מב.) מביאה מעשה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (ב"מ מב.) מביאה מעשה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דאפקיד זוזי גבי חבריה, אשלמינהו לאימיה, ואותבינהו בקרטליתא, ואיגנוב. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא גברא דאפקיד זוזי גבי חבריה, אשלמינהו לאימיה, ואותבינהו בקרטליתא, ואיגנוב. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: היכי נדיינו דייני להאי דינא?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: היכי נדיינו דייני להאי דינא?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נימא ליה לדידיה: זיל שלים? אמר: כל המפקיד - על דעת אשתו ובניו הוא מפקיד!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נימא ליה לדידיה: זיל שלים? אמר: כל המפקיד - על דעת אשתו ובניו הוא מפקיד!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נימא לה לאימיה: זילי שלימי? אמרה: לא אמר לי דלאו דידיה נינהו, דאקברינהו!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נימא לה לאימיה: זילי שלימי? אמרה: לא אמר לי דלאו דידיה נינהו, דאקברינהו!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נימא ליה: אמאי לא אמרת לה? - אמר: כל שכן, דכי אמינא לה דדידי נינהו, טפי מזדהרא בהו. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נימא ליה: אמאי לא אמרת לה? - אמר: כל שכן, דכי אמינא לה דדידי נינהו, טפי מזדהרא בהו. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אמר רבא: משתבע איהו דהנהו זוזי אשלמינהו לאימיה, ומשתבעא אימיה דהנהו זוזי אותבינהו בקרטליתא ואיגנוב, ופטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא אמר רבא: משתבע איהו דהנהו זוזי אשלמינהו לאימיה, ומשתבעא אימיה דהנהו זוזי אותבינהו בקרטליתא ואיגנוב, ופטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אדם מסר מעות לחבירו שישמור עליהם. אותו חבר מסרם לאימו מבלי לומר לה שהם פיקדון בידו, והיא הניחה אותם בארגז (במקום לטמון אותם בקרקע) ובעקבות כך נגנבו. <strong>רבא</strong> מסביר שאת האם עצמה לא ניתן לחייב, משום שלא ידעה שהמעות הם מעות פיקדון ומשום כך מעולם לא קיבלה עליהם אחריות שומר. גם את בנה, השומר, לא ניתן לחייב, משום שיש לו רשות למסור לאימו שתשמור, כיוון שהמפקיד מסכים באופן בלתי מפורש, שהשמירה על הפיקדון תיעשה לא רק על ידי השומר, אלא על ידי בני ביתו ברי הדעת. כמו כן, אין להאשים את השומר שפשע בכך שלא אמר לאימו שמדובר במעות פיקדון, כיוון שהוא צפה שאדרבא, על מעות שלו תשמור ביתר קפדנות מאשר על מעות של אדם אחר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אדם מסר מעות לחבירו שישמור עליהם. אותו חבר מסרם לאימו מבלי לומר לה שהם פיקדון בידו, והיא הניחה אותם בארגז (במקום לטמון אותם בקרקע) ובעקבות כך נגנבו. <strong>רבא</strong> מסביר שאת האם עצמה לא ניתן לחייב, משום שלא ידעה שהמעות הם מעות פיקדון ומשום כך מעולם לא קיבלה עליהם אחריות שומר. גם את בנה, השומר, לא ניתן לחייב, משום שיש לו רשות למסור לאימו שתשמור, כיוון שהמפקיד מסכים באופן בלתי מפורש, שהשמירה על הפיקדון תיעשה לא רק על ידי השומר, אלא על ידי בני ביתו ברי הדעת. כמו כן, אין להאשים את השומר שפשע בכך שלא אמר לאימו שמדובר במעות פיקדון, כיוון שהוא צפה שאדרבא, על מעות שלו תשמור ביתר קפדנות מאשר על מעות של אדם אחר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לכן פוסק רבא שעל השומר ואימו להישבע על דבריהם והרי הם נפטרים בכך<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לכן פוסק רבא שעל השומר ואימו להישבע על דבריהם והרי הם נפטרים בכך<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מסיק מדברי רבא, שאם היה השומר אומר לאימו שמדובר בפיקדון, היתה היא חייבת, כיוון שלא קברה אותם בקרקע<sup id="ref65"><a href="#fn65">[65]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מסיק מדברי רבא, שאם היה השומר אומר לאימו שמדובר בפיקדון, היתה היא חייבת, כיוון שלא קברה אותם בקרקע<sup id="ref65"><a href="#fn65">[65]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>נימוקי יוסף</strong> (כד. מדפי הרי"ף) מפרש את המעשה בשומר חינם, ומסביר שאם אותו אדם היה שומר שכר, היה חייב משום שלא אמר לאימו שמדובר בפיקדון<sup id="ref66"><a href="#fn66">[66]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>נימוקי יוסף</strong> (כד. מדפי הרי"ף) מפרש את המעשה בשומר חינם, ומסביר שאם אותו אדם היה שומר שכר, היה חייב משום שלא אמר לאימו שמדובר בפיקדון<sup id="ref66"><a href="#fn66">[66]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצא כג-כד) מעתיק את לשון הרמב"ם. וה<strong>ש"ך</strong> (ס"ק לג) מביא להלכה את דברי הנימוקי יוסף.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (רצא כג-כד) מעתיק את לשון הרמב"ם. וה<strong>ש"ך</strong> (ס"ק לג) מביא להלכה את דברי הנימוקי יוסף.</p>
                     
                 </div>
                 
                 <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פיקדון שניזוק על ידי בן ביתו של השומר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">פיקדון שניזוק על ידי בן ביתו של השומר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ההלכה הקודמת עסקה בבן בית המסייע לשמירה, אם ברמה הטכנית, או שמקבל על עצמו אחריות להיות שומר מִשנה. הלכה זו עוסקת בפיקדון שניזוק, בתום לב, על ידי בן בית. בהקשר זה עולה השאלה האם המפקיד מצפה שהשומר ידאג לשמור את הפיקדון אף מידי טעות בשוגג של בן בית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ההלכה הקודמת עסקה בבן בית המסייע לשמירה, אם ברמה הטכנית, או שמקבל על עצמו אחריות להיות שומר מִשנה. הלכה זו עוסקת בפיקדון שניזוק, בתום לב, על ידי בן בית. בהקשר זה עולה השאלה האם המפקיד מצפה שהשומר ידאג לשמור את הפיקדון אף מידי טעות בשוגג של בן בית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המעשה מובא בהמשך הגמרא הנ"ל-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המעשה מובא בהמשך הגמרא הנ"ל-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דאפקיד כשותא גבי חבריה, הוה ליה לדידיה נמי כריא דכשותא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא גברא דאפקיד כשותא גבי חבריה, הוה ליה לדידיה נמי כריא דכשותא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה לסרסיה: מהאי רמי. אזל רמא מאידך. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה לסרסיה: מהאי רמי. אזל רמא מאידך. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב עמרם</strong>: היכי נדיינו דייני להאי דינא?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב עמרם</strong>: היכי נדיינו דייני להאי דינא?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נימא ליה לדידיה: זיל שלים - אמר: אנא אמרי ליה מהאי רמי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נימא ליה לדידיה: זיל שלים - אמר: אנא אמרי ליה מהאי רמי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נימא ליה לסרסיה: זיל שלים, אמר: לא אמר לי מהאי רמי ומהאי לא תרמי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נימא ליה לסרסיה: זיל שלים, אמר: לא אמר לי מהאי רמי ומהאי לא תרמי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אדם נתן לחבירו לשמור על כשות (חומר המשמש בתעשיית הבירה), ולשומר היתה ערימה נוספת של כשות משלו. השומר ביקש משולייתו להטיל לשיכר מערימת הכשות שלו, והלך השומר והטיל לשיכר כשות מערימת הכשות של המפקיד. <strong>רב עמרם</strong> מסביר שאין לחייב את השומר, כיוון שאמר לשוליה להטיל מהכשות שלו, ואף אין לחייב את השוליה (מדין מזיק) כיוון שחשב ששתי הערימות שייכות לשומר ולא חשב שהוא עושה נזק במעשיו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אדם נתן לחבירו לשמור על כשות (חומר המשמש בתעשיית הבירה), ולשומר היתה ערימה נוספת של כשות משלו. השומר ביקש משולייתו להטיל לשיכר מערימת הכשות שלו, והלך השומר והטיל לשיכר כשות מערימת הכשות של המפקיד. <strong>רב עמרם</strong> מסביר שאין לחייב את השומר, כיוון שאמר לשוליה להטיל מהכשות שלו, ואף אין לחייב את השוליה (מדין מזיק) כיוון שחשב ששתי הערימות שייכות לשומר ולא חשב שהוא עושה נזק במעשיו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מה<strong>רמב"ן</strong> משמע שאף כאן פטור השומר רק משום שמדובר בשומר חינם, אך לו היה מדובר בשומר שכר, היה צריך לפרש לשולייתו- "מכאן תיקח ומשם אל תיקח".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מה<strong>רמב"ן</strong> משמע שאף כאן פטור השומר רק משום שמדובר בשומר חינם, אך לו היה מדובר בשומר שכר, היה צריך לפרש לשולייתו- "מכאן תיקח ומשם אל תיקח".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא ממשיכה ומסבירה שאם השביח השיכר מהכשות המופקדת, צריך השומר לשלם על הכשות, אך לא מדין שומר, אלא מדין הנהנה מחבירו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא ממשיכה ומסבירה שאם השביח השיכר מהכשות המופקדת, צריך השומר לשלם על הכשות, אך לא מדין שומר, אלא מדין הנהנה מחבירו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם פוסק את כל המעשה שבגמרא ואינו מתייחס לסוג השומר המדובר. כלשון הרמב"ם מעתיק ה<strong>שו"ע</strong> (רצא כה) ובסוף דבריו מביא בתור "יש מי שאומר" את דברי הרמב"ן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם פוסק את כל המעשה שבגמרא ואינו מתייחס לסוג השומר המדובר. כלשון הרמב"ם מעתיק ה<strong>שו"ע</strong> (רצא כה) ובסוף דבריו מביא בתור "יש מי שאומר" את דברי הרמב"ן.</p>
                     
                 </div>
                 
@@ -1325,7 +1325,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1414,6 +1414,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

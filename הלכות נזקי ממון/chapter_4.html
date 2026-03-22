@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ד</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ד)</h3>
                 <ul class="space-y-3">
@@ -1110,7 +1110,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1123,45 +1123,45 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הכונס צאן לדיר ונעל בפניהן בדלת שיכולה לעמוד ברוח מצויה ויצאת והזיקה פטור, ואם אין הדלת יכולה לעמוד ברוח מצויה או שהיו כתלי הדיר רעועין הרי לא נעל בפניהן כראוי ואם יצאת והזיקה חייב, ואפילו חתרה ויצאת ואפילו נפרצה מחיצה בלילה או פרצוה ליסטים בעל הצאן חייב. היתה מחיצה בריאה ונפרצה בלילה או שפרצוה ליסטים ויצאת והזיקה פטור, הוציאוה ליסטים והזיקה הליסטים חייבין.</strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רמת הנעילה הנדרשת כדי להיפטר:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">רמת הנעילה הנדרשת כדי להיפטר:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (נה:) מבארת את רמת הנעילה הנדרשת כדי להיפטר מחיוב נזקין:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המשנה</strong> (נה:) מבארת את רמת הנעילה הנדרשת כדי להיפטר מחיוב נזקין:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכונס צאן לדיר ונעל בפניה כראוי, ויצאה והזיקה - פטור;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הכונס צאן לדיר ונעל בפניה כראוי, ויצאה והזיקה - פטור;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לא נעל בפניה כראוי, ויצאה והזיקה - חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לא נעל בפניה כראוי, ויצאה והזיקה - חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נפרצה בלילה או שפרצוה לסטים, ויצאה והזיקה - פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נפרצה בלילה או שפרצוה לסטים, ויצאה והזיקה - פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הוציאוה לסטים - לסטים חייבין".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הוציאוה לסטים - לסטים חייבין".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הגמרא</strong> מבארת ש"כראוי" הכוונה לנעילה שיכולה לעמוד בפני רוח מצויה, ונעילה שאינה כראוי היא נעילה שאינה עומדת אף ברוח מצויה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>הגמרא</strong> מבארת ש"כראוי" הכוונה לנעילה שיכולה לעמוד בפני רוח מצויה, ונעילה שאינה כראוי היא נעילה שאינה עומדת אף ברוח מצויה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (שם ד"ה "נפרצה") מסבירים שהמשנה כותבת שאם נעל בפניה כראוי ונפרצה דווקא בלילה פטור, משום שאם נפרצה ביום, מן הסתם נודע לו הדבר, וחובה עליו לגדור, ואם לא עשה זאת, חייב. אפשרות נוספת היא שבלילה אפילו אם נודע לו, עדיין פטור, כיוון שלא הטלנו עליו ללכת לחפש את בהמתו בחושך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (שם ד"ה "נפרצה") מסבירים שהמשנה כותבת שאם נעל בפניה כראוי ונפרצה דווקא בלילה פטור, משום שאם נפרצה ביום, מן הסתם נודע לו הדבר, וחובה עליו לגדור, ואם לא עשה זאת, חייב. אפשרות נוספת היא שבלילה אפילו אם נודע לו, עדיין פטור, כיוון שלא הטלנו עליו ללכת לחפש את בהמתו בחושך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הטור</strong> כותב כאפשרות הראשונה בתוספות, שהפטור ב"נפרצה בלילה" מלמדנו שאם נפרצה ביום, למרות שנעל כראוי, עדיין חייב שכיוון שידע מהפריצה, היה חייב לתקנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>הטור</strong> כותב כאפשרות הראשונה בתוספות, שהפטור ב"נפרצה בלילה" מלמדנו שאם נפרצה ביום, למרות שנעל כראוי, עדיין חייב שכיוון שידע מהפריצה, היה חייב לתקנה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>ושאר המפרשים פסקו, שבנפרצה בלילה, ובפרצוה ליסטים פטור רק אם נעל כראוי, שהרי אם לא כן מדובר על תחילתו בפשיעה וסופו באונס, בו אנו פוסקים שחייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>ושאר המפרשים פסקו, שבנפרצה בלילה, ובפרצוה ליסטים פטור רק אם נעל כראוי, שהרי אם לא כן מדובר על תחילתו בפשיעה וסופו באונס, בו אנו פוסקים שחייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף, <strong>הגמרא</strong> בהמשך (נו.) מביאה את דברי רבה על המשנה – "והוא שחתרה". כלומר, הבקיעה הבהמה את הפתח באופן בלתי מצוי. הגמרא מבארת שעל פי העיקרון "תחילתו בפשיעה וסופו באונס חייב", חייבים לפרש שמימרא זו אמורה על הסיפא של המשנה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף, <strong>הגמרא</strong> בהמשך (נו.) מביאה את דברי רבה על המשנה – "והוא שחתרה". כלומר, הבקיעה הבהמה את הפתח באופן בלתי מצוי. הגמרא מבארת שעל פי העיקרון "תחילתו בפשיעה וסופו באונס חייב", חייבים לפרש שמימרא זו אמורה על הסיפא של המשנה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הניחה בחמה או שמסרה לחרש שוטה וקטן ויצתה והזיקה – חייב"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הניחה בחמה או שמסרה לחרש שוטה וקטן ויצתה והזיקה – חייב"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דהיינו, גם אם בסופו של דבר הבהמה יצאה עקב חתירה שאינה בגדר הצפוי והרגיל, כיוון שבתחילה פשע בשמירתה (שהניחה במקום שרוצה לברוח ממנו, או שמסר למישהו שאינו בר דעת), עדיין חייב הוא. ואכן, ה<strong>רמב"ם </strong>כולל את המקרה של "חתרה" עם המקרים של האונס, שאם תחילתם היתה בפשיעה (דהיינו, נעילה שאינה כראוי), חייב עליהם גם בסופם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דהיינו, גם אם בסופו של דבר הבהמה יצאה עקב חתירה שאינה בגדר הצפוי והרגיל, כיוון שבתחילה פשע בשמירתה (שהניחה במקום שרוצה לברוח ממנו, או שמסר למישהו שאינו בר דעת), עדיין חייב הוא. ואכן, ה<strong>רמב"ם </strong>כולל את המקרה של "חתרה" עם המקרים של האונס, שאם תחילתם היתה בפשיעה (דהיינו, נעילה שאינה כראוי), חייב עליהם גם בסופם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שצו א) פוסק כרמב"ם לעניין הגדרת נעילה כראוי, ולעניין תחילתו בפשיעה וסופו באונס, ובהמשך (שם ב) מוסיף את הפירוש השני שבתוספות לגבי ההבדל בין נפרצה בלילה לבין נפרצה ביום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שצו א) פוסק כרמב"ם לעניין הגדרת נעילה כראוי, ולעניין תחילתו בפשיעה וסופו באונס, ובהמשך (שם ב) מוסיף את הפירוש השני שבתוספות לגבי ההבדל בין נפרצה בלילה לבין נפרצה ביום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד לגבי רמת השמירה הדרושה לתם ולמועד, בתחילת פרק ז להלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד לגבי רמת השמירה הדרושה לתם ולמועד, בתחילת פרק ז להלן.</p>
                     
                 </div>
                 
@@ -1169,25 +1169,25 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הפורץ גדר לפני בהמת חבירו ויצאת והזיקה, אם היה גדר חזק ובריא חייב, ואם היה כותל רעוע פטור מדיני אדם וחייב בדיני שמים, וכן הנותן סם המות לפני בהמת חבירו פטור מדיני אדם וחייב בדיני שמים. </strong>הפורץ גדר לפני בהמת חברו ויצתה והזיקה אם היה גדר חזק ובריא חייב. א"א זה שאמר חייב לא ידענו מהו אם על הכותל אמר למה ליה למימר ויצתה והזיקה ואם על הנזק אמר אינו כן אלא אם כן הכישוה והדריכוה לנזק.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הפורץ גדר לפני בהמת חברו:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הפורץ גדר לפני בהמת חברו:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> הנ"ל מחייבת את הליסטים בנזקים שעשתה הבהמה אם הוציאו אותה הם מהדיר (הנעול כראוי). <strong>הגמרא</strong> (נה:) מונה כמה דברים שהעושה אותם פטור מדיני אדם אך חייב בדיני שמיים. אחד מהדברים הוא הפורץ גדר בפני בהמת חברו. הגמרא מסבירה שלו היה מדובר בפורץ כותל חזק היה חייב גם בדיני אדם, ולכן מעמידה שמדובר בפורץ כותל רעוע לפני בהמת חברו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> הנ"ל מחייבת את הליסטים בנזקים שעשתה הבהמה אם הוציאו אותה הם מהדיר (הנעול כראוי). <strong>הגמרא</strong> (נה:) מונה כמה דברים שהעושה אותם פטור מדיני אדם אך חייב בדיני שמיים. אחד מהדברים הוא הפורץ גדר בפני בהמת חברו. הגמרא מסבירה שלו היה מדובר בפורץ כותל חזק היה חייב גם בדיני אדם, ולכן מעמידה שמדובר בפורץ כותל רעוע לפני בהמת חברו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שמדובר במקרה שהבהמה ברחה, והפורץ את הגדר פטור מלשלם את דמיה לבעלים משום שהנזק בוצע על ידי גרמא, ולא באופן ישיר. גם אם הכותל היה חזק, עדיין היה הפורץ פטור על אובדן הבהמה, אך על הכותל שהרס היה חייב. רק אם הרס כותל רעוע שהיה הרוס ממילא, פטור מדיני אדם על שניהם. רש"י מסביר שלא ניתן לפרש שהדין אמור בחיוב הפורץ את הכותל בנזק שהזיקה הבהמה שיצאה בעטיו, שכן במשנה חייבים הליסטים בנזקי הבהמה רק אם הוציאו אותה ממש, ומשמע שאם רק פרצו את הכותל בפניה ואפשרו לה לצאת, בוודאי שפטורים על נזקיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שמדובר במקרה שהבהמה ברחה, והפורץ את הגדר פטור מלשלם את דמיה לבעלים משום שהנזק בוצע על ידי גרמא, ולא באופן ישיר. גם אם הכותל היה חזק, עדיין היה הפורץ פטור על אובדן הבהמה, אך על הכותל שהרס היה חייב. רק אם הרס כותל רעוע שהיה הרוס ממילא, פטור מדיני אדם על שניהם. רש"י מסביר שלא ניתן לפרש שהדין אמור בחיוב הפורץ את הכותל בנזק שהזיקה הבהמה שיצאה בעטיו, שכן במשנה חייבים הליסטים בנזקי הבהמה רק אם הוציאו אותה ממש, ומשמע שאם רק פרצו את הכותל בפניה ואפשרו לה לצאת, בוודאי שפטורים על נזקיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, ה<strong>רמב"ם </strong>דווקא מפרש בדרך אותה דוחה רש"י, שהפורץ גדר בפני בהמת חברו והזיקה, חייב <strong>על נזקיה</strong> בדיני שמים, ואם היה הכותל חזק, חייב על מה שהזיקה אף בדיני אדם. ה<strong>ראב"ד </strong>מקשה את קושיית רש"י על דברי הרמב"ם, וה<strong>מגיד משנה </strong>מתרץ שהבדל יש בין הליסטים לבין הפורץ גדר לפני בהמת חברו. הראשונים, כל כוונתם היתה להיכנס לדיר, ובדרך אגב פרצו את הכותל לפני הבהמה, ולכן הם פטורים מלשלם על נזקיה אלא אם כן עשו בה מעשה מיוחד (וראה בהלכה הבאה). במקרה השני לעומת זאת, נתכוון הפורץ לשחרר את הבהמה, ולכן לעניין חיוב נזקיה יש לראות אותו כבעלים ולחייבו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, ה<strong>רמב"ם </strong>דווקא מפרש בדרך אותה דוחה רש"י, שהפורץ גדר בפני בהמת חברו והזיקה, חייב <strong>על נזקיה</strong> בדיני שמים, ואם היה הכותל חזק, חייב על מה שהזיקה אף בדיני אדם. ה<strong>ראב"ד </strong>מקשה את קושיית רש"י על דברי הרמב"ם, וה<strong>מגיד משנה </strong>מתרץ שהבדל יש בין הליסטים לבין הפורץ גדר לפני בהמת חברו. הראשונים, כל כוונתם היתה להיכנס לדיר, ובדרך אגב פרצו את הכותל לפני הבהמה, ולכן הם פטורים מלשלם על נזקיה אלא אם כן עשו בה מעשה מיוחד (וראה בהלכה הבאה). במקרה השני לעומת זאת, נתכוון הפורץ לשחרר את הבהמה, ולכן לעניין חיוב נזקיה יש לראות אותו כבעלים ולחייבו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">להלכה מביא ה<strong>שו"ע </strong>(שצו ד) את דברי הרמב"ם, וה<strong>רמ"א </strong>מביא את דברי הראב"ד החולק עליו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">להלכה מביא ה<strong>שו"ע </strong>(שצו ד) את דברי הרמב"ם, וה<strong>רמ"א </strong>מביא את דברי הראב"ד החולק עליו.</p>
                     
                 </div>
                 
@@ -1195,25 +1195,25 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המעמיד בהמת חבירו על גבי קמתו של חבירו המעמיד חייב לשלם מה שהזיק, וכן אם הכישה עד שהלכה לקמת חבירו והזיקה זה שהכישה חייב.</strong> המעמיד בהמת חבירו וכו' זה שהכישה חייב. א"א וכ"ש קם לה באפה.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המזיק בעזרת בהמת חברו:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המזיק בעזרת בהמת חברו:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> כאמור, חייבה בנזקי הבהמה את הליסטים שהוציאוה. ה<strong>גמרא</strong> (נו:) תמהה מה באה הלכה זו ללמדנו, והלא אם משכו הליסטים את הבהמה קנו אותה, והרי הם בעליה עם כל המשתמע מכך! תמיהה דומה עולה מהלכה המובאת בשם רב- "המעמיד בהמת חברו על קמת חבירו – חייב", שהרי על ידי הולכת הבהמה, קנה אותה, וחייב כבעליה!</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> כאמור, חייבה בנזקי הבהמה את הליסטים שהוציאוה. ה<strong>גמרא</strong> (נו:) תמהה מה באה הלכה זו ללמדנו, והלא אם משכו הליסטים את הבהמה קנו אותה, והרי הם בעליה עם כל המשתמע מכך! תמיהה דומה עולה מהלכה המובאת בשם רב- "המעמיד בהמת חברו על קמת חבירו – חייב", שהרי על ידי הולכת הבהמה, קנה אותה, וחייב כבעליה!</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שתי הצעות לפתרון מועלות בגמרא- לפי הראשונה, לא קנו הליסטים את הבהמה, אלא גרמו לה שתלך למקום בו הזיקה ע"י חסימת דרכים אחרות בפניה (בלשון הגמרא "קמו לה באפה"). דרך שניה להבין היא שגם במשנה וגם בהלכה של רב, מדובר במקרה ש"הכישה", דהיינו, הליסטים או המזיק היכה את הבהמה במקל וכיוונה לעבר המקום בו הזיקה, והחידוש שבדבר הוא שהכאה במקל חשובה היא לעניין קניין הבהמה על ידי המכה, וחיובו בנזקיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שתי הצעות לפתרון מועלות בגמרא- לפי הראשונה, לא קנו הליסטים את הבהמה, אלא גרמו לה שתלך למקום בו הזיקה ע"י חסימת דרכים אחרות בפניה (בלשון הגמרא "קמו לה באפה"). דרך שניה להבין היא שגם במשנה וגם בהלכה של רב, מדובר במקרה ש"הכישה", דהיינו, הליסטים או המזיק היכה את הבהמה במקל וכיוונה לעבר המקום בו הזיקה, והחידוש שבדבר הוא שהכאה במקל חשובה היא לעניין קניין הבהמה על ידי המכה, וחיובו בנזקיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כדרך השניה שבגמרא, שאם העמיד את הבהמה בידיים או הכישה במקל וכיוונה למקום הנזק, רק אז חייב המעמיד, ומשמע מדבריו, שאם רק כיוונה באופן פסיבי ("קם לה באפה") פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק כדרך השניה שבגמרא, שאם העמיד את הבהמה בידיים או הכישה במקל וכיוונה למקום הנזק, רק אז חייב המעמיד, ומשמע מדבריו, שאם רק כיוונה באופן פסיבי ("קם לה באפה") פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד </strong>מעיר, שלדעתו אם המכיש חייב, כל שכן שיהיה חייב המכוון את הבהמה ב"קם לה באפה". הסבר זה אינו עולה בקנה אחד עם הסברו של רש"י, שכן לפי רש"י "קם לה באפה" קל יותר מ"הכישה". יתכן שהראב"ד הבין ש"קם לה באפה" הכוונה שהפורץ את הגדר הציב את האוכל מול הבהמה ממש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד </strong>מעיר, שלדעתו אם המכיש חייב, כל שכן שיהיה חייב המכוון את הבהמה ב"קם לה באפה". הסבר זה אינו עולה בקנה אחד עם הסברו של רש"י, שכן לפי רש"י "קם לה באפה" קל יותר מ"הכישה". יתכן שהראב"ד הבין ש"קם לה באפה" הכוונה שהפורץ את הגדר הציב את האוכל מול הבהמה ממש.</p>
                     
                 </div>
                 
@@ -1221,36 +1221,36 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המוסר בהמתו לשומר חנם או לנושא שכר או לשוכר או לשואל נכנסו תחת הבעלים ואם הזיקה השומר חייב, במה דברים אמורים בזמן שלא שמרוה כלל אבל אם שמרוה שמירה מעולה כראוי ויצאת והזיקה השומרין פטורין והבעלים חייבין אפילו המיתה את האדם, שמרוה שמירה פחותה אם שומר חנם הוא פטור ואם שומר שכר או שוכר או שואל הוא חייבין.</strong> המוסר בהמתו לשומר חנם וכו' השומרים פטורין והבעלים חייבין. א"א לא מתוקמא הא אלא בכדי שידע כענין שאמרו בבור של שני שותפין ואפ"ה לא מיחוור דלא דמיא שמירת שומר דאית ליה זמן קצוב עד כמה הוא חייב לשמרו לשותפין דכל חד וחד מיחייב בשמירתו לעולם הילכך שומר לעולם חייב אם לא שמרו כראוי ואם שמרו כראוי ויצא והזיק חזר השומר לחיובו בכדי שידע ובעלים פטורין אלא שי"ל לעולם אין הבעלים ניצלין מיד הניזק והם ידונו עם השומר ואם יש זמן לשמירתו יחזרו הבעלים על השומר ואם כלתה שמירתו פטור והבעלים חייבים.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוסר בהמתו לשומר והזיקה:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המוסר בהמתו לשומר והזיקה:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הדברים מבוססים על ה<strong>ברייתא</strong> (מה.):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הדברים מבוססים על ה<strong>ברייתא</strong> (מה.):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"תנו רבנן: ארבעה נכנסו תחת הבעלים, ואלו הן: שומר חנם והשואל, נושא שכר והשוכר; הרגו, תמין - נהרגין ופטורין מן הכופר, מועדין - נהרגין ומשלמין את הכופר, וחייבין להחזיר דמי שור לבעליו, חוץ משומר חנם".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"תנו רבנן: ארבעה נכנסו תחת הבעלים, ואלו הן: שומר חנם והשואל, נושא שכר והשוכר; הרגו, תמין - נהרגין ופטורין מן הכופר, מועדין - נהרגין ומשלמין את הכופר, וחייבין להחזיר דמי שור לבעליו, חוץ משומר חנם".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מבארת שהברייתא מדברת ששומר החנם פטור משום שמדובר במקרה ששמרו שמירה פחותה (דהיינו דלת שעומדת ברוח מצויה), ולא שמירה מעולה. לגבי שומר חינם זו שמירה מספיקה כדי לפוטרו, ולגבי שאר השומרים לא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מבארת שהברייתא מדברת ששומר החנם פטור משום שמדובר במקרה ששמרו שמירה פחותה (דהיינו דלת שעומדת ברוח מצויה), ולא שמירה מעולה. לגבי שומר חינם זו שמירה מספיקה כדי לפוטרו, ולגבי שאר השומרים לא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שהחילוק "חוץ משומר חינם" אמור כלפי החובה של השומר לפצות את הבעלים על דמי השור הסקול. מחובה זו פטור שומר חינם אם שמר כראוי, כשם שהוא פטור על כל דבר שאירע לשור אם לא פשע. אמנם, לעניין האחריות לנזק ותשלום הכופר, אין הבדל בין שומר חינם לבין שאר השומרים, וכל השומרים נכנסו תחת הבעלים לעניין האחריות לנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש שהחילוק "חוץ משומר חינם" אמור כלפי החובה של השומר לפצות את הבעלים על דמי השור הסקול. מחובה זו פטור שומר חינם אם שמר כראוי, כשם שהוא פטור על כל דבר שאירע לשור אם לא פשע. אמנם, לעניין האחריות לנזק ותשלום הכופר, אין הבדל בין שומר חינם לבין שאר השומרים, וכל השומרים נכנסו תחת הבעלים לעניין האחריות לנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong>, לעומת זאת, הבין שההסתייגות "חוץ משומר חינם" באה להוציא את שומר החינם מכלל האחריות לנזק. דהיינו, כל השומרים צריכים לשמור שמירה מעולה בכדי להיות פטורים מהאחריות לנזק, ולעומתם שומר חינם די לו בשמירה פחותה בלבד בכדי להיות פטור<sup id="ref12"><a href="#fn12">[12]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong>, לעומת זאת, הבין שההסתייגות "חוץ משומר חינם" באה להוציא את שומר החינם מכלל האחריות לנזק. דהיינו, כל השומרים צריכים לשמור שמירה מעולה בכדי להיות פטורים מהאחריות לנזק, ולעומתם שומר חינם די לו בשמירה פחותה בלבד בכדי להיות פטור<sup id="ref12"><a href="#fn12">[12]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצו ח) כתב כרמב"ם, ששומר חינם ששמר שמירה פחותה, פטור בין מהאחריות לנזק ובין מפיצוי הבעלים על שורם שנסקל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>(שצו ח) כתב כרמב"ם, ששומר חינם ששמר שמירה פחותה, פטור בין מהאחריות לנזק ובין מפיצוי הבעלים על שורם שנסקל.</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חיוב הבעלים במקרה שהשומרים פטורים:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חיוב הבעלים במקרה שהשומרים פטורים:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>כותב שאם השומר שמר שמירה מעולה, פטור השומר, והבעלים חייבים. ה<strong>ראב"ד </strong>וה<strong>טור</strong> (שצו) הקשו על הרמב"ם, שמדוע יהיו הבעלים חייבים כאשר השומר, בא כוחם, שמר כראוי? ה<strong>מגיד משנה </strong>מסביר, שדברי הרמב"ם אמורים דווקא בקרן, ובמקרה שהיא נזק תם. שהרי אנו פוסקים כר' יהודה (ראה פרק ז בהמשך), שעל נזק של שור תם חייב אפילו בשמירה כראוי. וכך פוסק ב<strong>שו"ע </strong>(שם).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>כותב שאם השומר שמר שמירה מעולה, פטור השומר, והבעלים חייבים. ה<strong>ראב"ד </strong>וה<strong>טור</strong> (שצו) הקשו על הרמב"ם, שמדוע יהיו הבעלים חייבים כאשר השומר, בא כוחם, שמר כראוי? ה<strong>מגיד משנה </strong>מסביר, שדברי הרמב"ם אמורים דווקא בקרן, ובמקרה שהיא נזק תם. שהרי אנו פוסקים כר' יהודה (ראה פרק ז בהמשך), שעל נזק של שור תם חייב אפילו בשמירה כראוי. וכך פוסק ב<strong>שו"ע </strong>(שם).</p>
                     
                 </div>
                 
@@ -1258,19 +1258,19 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הניחה בחמה אפילו חתרה ויצאת והזיקה חייב זה שהניחה שם שכיון שהניחה בחמה הרי היא מצטערת ובורחת ועושה כל שאפשר לה לעשות. </strong>
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הניחה בחמה:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הניחה בחמה:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור לעיל (הלכה א'), לפי מסקנת הגמרא (נו.), <strong>רבה</strong> מעיר שדברי המשנה (נה:) "הניחה בחמה...ויצתה והזיקה -חייב" מדברים אף על מקרה בו יצאה ע"י חתירה, דבר שאינו במורגל, ונחשב בדרך כלל לאונס. ובא רבה להשמיענו, שאם הניחה בחמה, הופכת החתירה מאונס, לדבר שניתן לצפותו, ולכן אין כאן אונס כלל, אלא תחילתו וסופו בפשיעה וחייב. וכך פוסק ה<strong>רמב"ם</strong> כאן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאמור לעיל (הלכה א'), לפי מסקנת הגמרא (נו.), <strong>רבה</strong> מעיר שדברי המשנה (נה:) "הניחה בחמה...ויצתה והזיקה -חייב" מדברים אף על מקרה בו יצאה ע"י חתירה, דבר שאינו במורגל, ונחשב בדרך כלל לאונס. ובא רבה להשמיענו, שאם הניחה בחמה, הופכת החתירה מאונס, לדבר שניתן לצפותו, ולכן אין כאן אונס כלל, אלא תחילתו וסופו בפשיעה וחייב. וכך פוסק ה<strong>רמב"ם</strong> כאן.</p>
                     
                 </div>
                 
@@ -1278,33 +1278,33 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מסר בהמתו לחרש שוטה וקטן אע"פ שהיה השור קשור הבעלים חייבין שדרכו של שור וכיוצא בו להתיר הקשר ולצאת ולהזיק, אפילו שמרוה שמירה מעולה וחתרה ויצאת והזיקה הבעלים חייבים</strong> מסר בהמתו לחרש שוטה וקטן וכו' אפילו שמרוה שמירה מעולה וחתרה ויצתה והזיקה הבעלים חייבים. א"א חיי ראשי דבר זה לא מצאתי לו שורש כי מה שאמרו בור מכוסה ושור קשור שמסר לחש"ו שהוא חייב באינו קשור ואינו מכוסה כראוי עסקינן וסומך על שמירת החרש.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוסר בהמתו לחרש שוטה וקטן:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המוסר בהמתו לחרש שוטה וקטן:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ט:) כותבת</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (ט:) כותבת</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כל שחבתי בשמירתו, הכשרתי את נזקו".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כל שחבתי בשמירתו, הכשרתי את נזקו".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, החיוב לשמור על הממון שלא יזיק, הוא ההופך את הבעלים לאחראי לנזק. ה<strong>גמרא</strong> (שם) מביאה דוגמה- מי שמוסר שורו או בורו לחרש שוטה או קטן והזיקו, כיוון שהוא חייב בשמירתם, חייב למרות שלא היו תחת ידו בשעת הנזק. מסירת אש לחרש שוטה או קטן היא מקרה יוצא דופן בו פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, החיוב לשמור על הממון שלא יזיק, הוא ההופך את הבעלים לאחראי לנזק. ה<strong>גמרא</strong> (שם) מביאה דוגמה- מי שמוסר שורו או בורו לחרש שוטה או קטן והזיקו, כיוון שהוא חייב בשמירתם, חייב למרות שלא היו תחת ידו בשעת הנזק. מסירת אש לחרש שוטה או קטן היא מקרה יוצא דופן בו פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבארת עוד, שהבדל זה בין שור ובור לבין אש הוא דווקא במקרה שהשור היה קשור, הבור היה מכוסה, והאש היתה במצב של גחלת, הדורשת ליבוי לפני שתצית, אך לא שלהבת, שכן על פי שיטת <strong>ריש לקיש</strong>, המוסר שלהבת לחרש שוטה או קטן חייב. הגמרא מוסיפה שההבדל בין שור קשור ובור מכוסה לבין גחלת הוא שבעוד ש"שור דרכיה לנתוקי, בור דרכיה לנתורי" (השור דרכו להתנתק ממוסרותיו, והבור דרכו להתגלות), ולכן המוסרם חייב, ולעומתם הגחלת הולכת וכבה, ולכן המוסרה פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מבארת עוד, שהבדל זה בין שור ובור לבין אש הוא דווקא במקרה שהשור היה קשור, הבור היה מכוסה, והאש היתה במצב של גחלת, הדורשת ליבוי לפני שתצית, אך לא שלהבת, שכן על פי שיטת <strong>ריש לקיש</strong>, המוסר שלהבת לחרש שוטה או קטן חייב. הגמרא מוסיפה שההבדל בין שור קשור ובור מכוסה לבין גחלת הוא שבעוד ש"שור דרכיה לנתוקי, בור דרכיה לנתורי" (השור דרכו להתנתק ממוסרותיו, והבור דרכו להתגלות), ולכן המוסרם חייב, ולעומתם הגחלת הולכת וכבה, ולכן המוסרה פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> פירש ש"שור דרכיה לנתוקי" וכו', הכוונה שהשור דרכו לנתק את עצמו, וכנ"ל הבור, שמעצמו הוא מתגלה לבסוף, ולכן אין זה נחשב כשמירה, ואף אם ניתק/גילה לבסוף החש"ו, חייב הבעלים. ומשמע שאם קשר היטב כך שהשור לא ינתק עצמו, פטור אף אם מסרו לחש"ו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> פירש ש"שור דרכיה לנתוקי" וכו', הכוונה שהשור דרכו לנתק את עצמו, וכנ"ל הבור, שמעצמו הוא מתגלה לבסוף, ולכן אין זה נחשב כשמירה, ואף אם ניתק/גילה לבסוף החש"ו, חייב הבעלים. ומשמע שאם קשר היטב כך שהשור לא ינתק עצמו, פטור אף אם מסרו לחש"ו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוס'</strong> חולק על רש"י ואומר שמדובר אפילו על בור המכוסה היטב ועל שור הקשור היטב, וכוונת הגמרא היא שדרכו של החש"ו לשחרר את השור ולגלות את הבור. ולכן חייב המוסרו לחש"ו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוס'</strong> חולק על רש"י ואומר שמדובר אפילו על בור המכוסה היטב ועל שור הקשור היטב, וכוונת הגמרא היא שדרכו של החש"ו לשחרר את השור ולגלות את הבור. ולכן חייב המוסרו לחש"ו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מוסיף שאפילו אם החש"ו שמרם שמירה מעולה, ובכ"ז חתרה ויצאה והזיקה, עדיין חייבים הבעלים משום שעצם המסירה ביד חש"ו פשיעה היא, ותחילתו בפשיעה וסופו באונס – חייב. בכך חלק עליו ה<strong>ראב"ד</strong>, שהבין שמדובר בשור שאינו קשור היטב, וסומך בעליו על החש"ו שישמרו, וקמ"ל שהאחריות אינה נופלת על החש"ו אלא על הבעלים. אך אם החש"ו שמר היטב, הרי שיצא הבעלים ידי חובתו ופטור, דהיינו, ההשארה בידי החש"ו כשלעצמה אינה נחשבת פשיעה, ואדרבא, אם החש"ו שמר טוב, נחשב הדבר כאילו הבעלים שמרו כראוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מוסיף שאפילו אם החש"ו שמרם שמירה מעולה, ובכ"ז חתרה ויצאה והזיקה, עדיין חייבים הבעלים משום שעצם המסירה ביד חש"ו פשיעה היא, ותחילתו בפשיעה וסופו באונס – חייב. בכך חלק עליו ה<strong>ראב"ד</strong>, שהבין שמדובר בשור שאינו קשור היטב, וסומך בעליו על החש"ו שישמרו, וקמ"ל שהאחריות אינה נופלת על החש"ו אלא על הבעלים. אך אם החש"ו שמר היטב, הרי שיצא הבעלים ידי חובתו ופטור, דהיינו, ההשארה בידי החש"ו כשלעצמה אינה נחשבת פשיעה, ואדרבא, אם החש"ו שמר טוב, נחשב הדבר כאילו הבעלים שמרו כראוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצו ו) פסק כלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>(שצו ו) פסק כלשון הרמב"ם.</p>
                     
                 </div>
                 
@@ -1312,33 +1312,33 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מסר שורו לחמשה ופשע בו אחד מהן ויצא והזיק, אם אינו משתמר אלא בחמשתן זה שפשע בשמירתו חייב, ואם משתמר בשארן אף אלו הנשארין חייבין. </strong>
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוסר שורו לכמה שומרים:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המוסר שורו לכמה שומרים:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ט:) כותבת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (ט:) כותבת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכשרתי במקצת נזקו, חבתי בתשלומי נזקו כהכשר כל נזקו".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הכשרתי במקצת נזקו, חבתי בתשלומי נזקו כהכשר כל נזקו".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (י.) מחפשת דוגמאות למקרה של חיוב בעקבות יצירת חלק מהנזק. אחת הדוגמאות היא במסירת בהמה לחמישה שומרים, ואחד מהם פשע ולא שמר. הגמרא דוחה מקרה זה כדוגמה להכשר מקצת הנזק, שכן אם יש צורך בכל החמשה כדי לשמור, הרי שהשומר שפשע הוא בוודאי האחראי הבלעדי לכל הנזק, שכן אין עוד אחד איתו שאחראי לנזק. לחילופין, אם הבהמה יכולה להישמר על ידי השומרים ששמרו כראוי, הרי שאותו אחד שחדל לשמור "מאי קא עביד".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (י.) מחפשת דוגמאות למקרה של חיוב בעקבות יצירת חלק מהנזק. אחת הדוגמאות היא במסירת בהמה לחמישה שומרים, ואחד מהם פשע ולא שמר. הגמרא דוחה מקרה זה כדוגמה להכשר מקצת הנזק, שכן אם יש צורך בכל החמשה כדי לשמור, הרי שהשומר שפשע הוא בוודאי האחראי הבלעדי לכל הנזק, שכן אין עוד אחד איתו שאחראי לנזק. לחילופין, אם הבהמה יכולה להישמר על ידי השומרים ששמרו כראוי, הרי שאותו אחד שחדל לשמור "מאי קא עביד".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שהכוונה היא שאם הבהמה יכולה להישמר על ידי כל אחד מהם בנפרד, הרי שזה שחדל לשמור פטור לגמרי. והכוונה ב"מאי קא עביד" היא שהוא לא עולל כלום, כיוון שלא הרע את מצב שמירת הבהמה ולכן אין לחייבו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש שהכוונה היא שאם הבהמה יכולה להישמר על ידי כל אחד מהם בנפרד, הרי שזה שחדל לשמור פטור לגמרי. והכוונה ב"מאי קא עביד" היא שהוא לא עולל כלום, כיוון שלא הרע את מצב שמירת הבהמה ולכן אין לחייבו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוס'</strong> חולקים ואומרים שגם אם הבהמה נשמרת בשומרים הנותרים, בכא"פ חייבים כולם, גם הוא וגם הם, משום שגם אם מי שמעורב בנזק אינו סיבת הנזק הבלעדית, עדיין הוא חייב, ולכן אין לחלק בין פשיעתו לבין פשיעתם, למרות שהוא היה הראשון. לפי הבנה זו, הכוונה ב"מאי קא עביד" היא- מאי קא עביד יותר מהאחרים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוס'</strong> חולקים ואומרים שגם אם הבהמה נשמרת בשומרים הנותרים, בכא"פ חייבים כולם, גם הוא וגם הם, משום שגם אם מי שמעורב בנזק אינו סיבת הנזק הבלעדית, עדיין הוא חייב, ולכן אין לחלק בין פשיעתו לבין פשיעתם, למרות שהוא היה הראשון. לפי הבנה זו, הכוונה ב"מאי קא עביד" היא- מאי קא עביד יותר מהאחרים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>רמב"ם </strong>משמע שפסק כתוס', שהרי כתב שאף האחרים חייבים, כלומר, שגם הראשון שפשע חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>רמב"ם </strong>משמע שפסק כתוס', שהרי כתב שאף האחרים חייבים, כלומר, שגם הראשון שפשע חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סימן ט) כתב עקרונית כרש"י, אך במקרה בו פרישת השומר האחד, כרוכה בפרישת האחרים משמירתם, כגון שאמרו "כיוון שאינך רוצה לשומרו, אף אנו מסתלקים משמירתו", או אז אין לחלק בין הראשון לאחרים, וכולם חייבים (כתוספות)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סימן ט) כתב עקרונית כרש"י, אך במקרה בו פרישת השומר האחד, כרוכה בפרישת האחרים משמירתם, כגון שאמרו "כיוון שאינך רוצה לשומרו, אף אנו מסתלקים משמירתו", או אז אין לחלק בין הראשון לאחרים, וכולם חייבים (כתוספות)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שצו ז) כתב כלשון הרמב"ם, והביא בי"א את שיטת הרא"ש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שצו ז) כתב כלשון הרמב"ם, והביא בי"א את שיטת הרא"ש.</p>
                     
                 </div>
                 
@@ -1346,29 +1346,29 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שאלו בחזקת תם ונמצא מועד, אם ידע השואל שהוא נגחן הבעלים משלמים חצי נזק שכל מקום שהוא הולך הרי שם בעליו עליו והשואל משלם חצי נזק, שאפילו היה תם כשעלה בדעתו חצי נזק היה משלם שהרי ידע שהוא נגחן, ואם לא ידע השואל שהוא נגחן אין השואל חייב כלום והבעלים משלמין נזק שלם</strong><strong>.</strong> שאלו בחזקת תם וכו' והשואל משלם חצי נזק. אמר אברהם הא דלאו כהלכתא שאין זה הדין אלא בשתפסוהו ב"ד
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שאלו בחזקת תם, ונמצא מועד:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שאלו בחזקת תם, ונמצא מועד:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (מ.) מובאת ברייתא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (מ.) מובאת ברייתא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שאלו בחזקת תם ונמצא מועד - בעלים משלמין חצי נזק, ושואל משלם חצי נזק".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שאלו בחזקת תם ונמצא מועד - בעלים משלמין חצי נזק, ושואל משלם חצי נזק".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שמדובר בשואל ששם לב שהשור נגחן, ולכן קיבל על עצמו לשומרו שמירה הדוקה. אמנם, השואל לא ידע שהשור כבר הועד, ולכן אינו חייב נזק שלם בפני עצמו. כמו כן הגמרא מסבירה שהשואל חייב לשלם חצי נזק משום שסוף סוף גם לו היה השור תם (כמו שחשב השואל בתחילה) היה צריך השואל לשלם חצי נזק, ולכן עתה הוא משלם חצי מהנזק. אמנם, שואלת הגמרא, יכול היה השואל לטעון, שהוא קיבל על עצמו חצי נזק של תם, שמשתלם מגוף השור, ובמקרה זה ניתן למכור את השור או להסתירו ואז אין דרך לשומו בבית דין, ואילו חצי של נזק שלם המשתלם מהעליה, זאת לא קיבל על עצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שמדובר בשואל ששם לב שהשור נגחן, ולכן קיבל על עצמו לשומרו שמירה הדוקה. אמנם, השואל לא ידע שהשור כבר הועד, ולכן אינו חייב נזק שלם בפני עצמו. כמו כן הגמרא מסבירה שהשואל חייב לשלם חצי נזק משום שסוף סוף גם לו היה השור תם (כמו שחשב השואל בתחילה) היה צריך השואל לשלם חצי נזק, ולכן עתה הוא משלם חצי מהנזק. אמנם, שואלת הגמרא, יכול היה השואל לטעון, שהוא קיבל על עצמו חצי נזק של תם, שמשתלם מגוף השור, ובמקרה זה ניתן למכור את השור או להסתירו ואז אין דרך לשומו בבית דין, ואילו חצי של נזק שלם המשתלם מהעליה, זאת לא קיבל על עצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מתרצת שיש לומר שמדובר במקרה שבית הדין תפסו את השור כחלק מתשלום הנזק, ולכן האפשרות של מכירת השור או "העלמתו" לו היה שור תם המשתלם מגופו, בכל אופן לא היתה עומדת כאן על הפרק, ולכן אין יכול השואל לטעון שחיובו הוא מעבר למה שקיבל על עצמו בתחילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מתרצת שיש לומר שמדובר במקרה שבית הדין תפסו את השור כחלק מתשלום הנזק, ולכן האפשרות של מכירת השור או "העלמתו" לו היה שור תם המשתלם מגופו, בכל אופן לא היתה עומדת כאן על הפרק, ולכן אין יכול השואל לטעון שחיובו הוא מעבר למה שקיבל על עצמו בתחילה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כאן פוסק שאכן אם שאל אדם שור מועד, וידע השואל שהשור נגחן, אך חשב שהוא תם, משלם חצי נזק, ואם לא ידע שהוא נגחן, אינו משלם כלום, כי לא קיבל על עצמו שמירה של שור בעייתי כזה. אולם, התנאי שתפסו בי"ד את השור חסר מדברי הרמב"ם, וכך מקשה עליו ה<strong>ראב"ד</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> כאן פוסק שאכן אם שאל אדם שור מועד, וידע השואל שהשור נגחן, אך חשב שהוא תם, משלם חצי נזק, ואם לא ידע שהוא נגחן, אינו משלם כלום, כי לא קיבל על עצמו שמירה של שור בעייתי כזה. אולם, התנאי שתפסו בי"ד את השור חסר מדברי הרמב"ם, וכך מקשה עליו ה<strong>ראב"ד</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה </strong>מתרץ שהאפשרות של העלמת או מכירת השור, שהיתה באפשרותו של השואל אילו היה השור באמת תם (כפי שנאמר לו בשעת השאלה) קיימת רק לפי דעת <strong>ר' ישמעאל</strong>, הסובר שאף שתם משלם מגופו, אין הבעלים אלא כבעלי חוב, והתשלום מגוף השור הכוונה ששמין את השור בבית דין לדעת כמה הוא חצי שוויו. אך לפי <strong>ר' עקיבא</strong>, שהלכה כמותו, יש לניזק בעלות של ממש בחצי השור המזיק. לכן בכל אופן לא עומדת לרשות השואל האפשרות של מכירת השור אפילו היה שור תם, כיוון שחציו של השור אינו של הבעלים ולא של השואל, אלא של הניזק, ויש במכירתו ללא הסכמת הניזק עבירה של גזל. לכן לא יכול השואל לפטור את עצמו ולומר שהוא קיבל על עצמו רק חצי נזק במקרה בו ניתן להימנע מתשלום על ידי העלמת השור ומניעת שומתו בבית דין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה </strong>מתרץ שהאפשרות של העלמת או מכירת השור, שהיתה באפשרותו של השואל אילו היה השור באמת תם (כפי שנאמר לו בשעת השאלה) קיימת רק לפי דעת <strong>ר' ישמעאל</strong>, הסובר שאף שתם משלם מגופו, אין הבעלים אלא כבעלי חוב, והתשלום מגוף השור הכוונה ששמין את השור בבית דין לדעת כמה הוא חצי שוויו. אך לפי <strong>ר' עקיבא</strong>, שהלכה כמותו, יש לניזק בעלות של ממש בחצי השור המזיק. לכן בכל אופן לא עומדת לרשות השואל האפשרות של מכירת השור אפילו היה שור תם, כיוון שחציו של השור אינו של הבעלים ולא של השואל, אלא של הניזק, ויש במכירתו ללא הסכמת הניזק עבירה של גזל. לכן לא יכול השואל לפטור את עצמו ולומר שהוא קיבל על עצמו רק חצי נזק במקרה בו ניתן להימנע מתשלום על ידי העלמת השור ומניעת שומתו בבית דין.</p>
                     
                 </div>
                 
@@ -1376,31 +1376,31 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שאלו כשהוא תם והועד בבית השואל והחזירו לבעליו חזר לתמותו, הואיל ונשתנית רשותו בטלה ההעדה, והבעלים משלמין חצי נזק והשואל פטור שהרי החזירו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">"רשות מְשנה" – דין העדאה בבית השומר לאחר החזרה לבעלים, או הפוך:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">"רשות מְשנה" – דין העדאה בבית השומר לאחר החזרה לבעלים, או הפוך:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בחלקה השני של <strong>הברייתא</strong> הנ"ל (מ. - ראה בהלכה הקודמת), נאמר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בחלקה השני של <strong>הברייתא</strong> הנ"ל (מ. - ראה בהלכה הקודמת), נאמר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הועד בבית שואל והחזירו לבעלים - בעלים משלמין חצי נזק, ושואל פטור מכלום".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הועד בבית שואל והחזירו לבעלים - בעלים משלמין חצי נזק, ושואל פטור מכלום".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מ:) מקשה מהרישא לסיפא – הרי ברישא מדובר על שור מועד, שעבר לרשות השואל, ועדיין נשאר מועד למרות שינוי הרשות, ואילו בסיפא הנ"ל גם אם הועד השור תחת רשות השואל, בטלה ההעדאה כאשר השור חוזר לבעלים ונשתנתה רשותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (מ:) מקשה מהרישא לסיפא – הרי ברישא מדובר על שור מועד, שעבר לרשות השואל, ועדיין נשאר מועד למרות שינוי הרשות, ואילו בסיפא הנ"ל גם אם הועד השור תחת רשות השואל, בטלה ההעדאה כאשר השור חוזר לבעלים ונשתנתה רשותו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבה</strong> מתרץ שבאופן עקרוני שינוי הרשות אינו משנה את העדאתו של השור, כמו שמשתמע מהרישא, אך במקרה של הסיפא, בו השור הופך למועד תחת יד השואל, ואז מוחזר לבעלים, טוען בעל השור שאין ביכולתו של השואל לגרום לשינוי קבוע במעמדו של השור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבה</strong> מתרץ שבאופן עקרוני שינוי הרשות אינו משנה את העדאתו של השור, כמו שמשתמע מהרישא, אך במקרה של הסיפא, בו השור הופך למועד תחת יד השואל, ואז מוחזר לבעלים, טוען בעל השור שאין ביכולתו של השואל לגרום לשינוי קבוע במעמדו של השור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב פפא </strong>מסביר הפוך - באופן עקרוני שינוי הרשות מבטל את ההעדאה כמו שמשתמע מהסיפא, וברישא הסיבה שהשור נשאר מועד גם לאחר שהוא עובר לרשות השואל היא משום שאין כאן שינוי רשות של ממש, כיוון שבכל מקום שהשור נמצא בו שֵם בעליו עליו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב פפא </strong>מסביר הפוך - באופן עקרוני שינוי הרשות מבטל את ההעדאה כמו שמשתמע מהסיפא, וברישא הסיבה שהשור נשאר מועד גם לאחר שהוא עובר לרשות השואל היא משום שאין כאן שינוי רשות של ממש, כיוון שבכל מקום שהשור נמצא בו שֵם בעליו עליו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כפשט הברייתא, שעם ההחזרה מהשואל לבעלים בטלה ההעדאה, והשור חוזר להיות תם. הרמב"ם מסביר שכיוון שנשתנתה הרשות בטלה ההעדאה. מכך שהרמב"ם נותן הסבר זה ולא אומר שאין בסמכותו של השואל להפוך את השור למועד, מסיק ה<strong>מגיד משנה</strong> שהרמב"ם פוסק כר' פפא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק כפשט הברייתא, שעם ההחזרה מהשואל לבעלים בטלה ההעדאה, והשור חוזר להיות תם. הרמב"ם מסביר שכיוון שנשתנתה הרשות בטלה ההעדאה. מכך שהרמב"ם נותן הסבר זה ולא אומר שאין בסמכותו של השואל להפוך את השור למועד, מסיק ה<strong>מגיד משנה</strong> שהרמב"ם פוסק כר' פפא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">[את הפסיקה בעניין "רשות משנה" מעבר ליחסי שומר-בעלים, דוחה הרמב"ם לפרק ו (הלכה ו), במסגרת הלכות העדאה.]</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">[את הפסיקה בעניין "רשות משנה" מעבר ליחסי שומר-בעלים, דוחה הרמב"ם לפרק ו (הלכה ו), במסגרת הלכות העדאה.]</p>
                     
                 </div>
                 
@@ -1408,38 +1408,38 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שומר שקבל עליו שמירת גוף הבהמה בלבד אבל לא שמירת נזקיה והזיקה פטור מלשלם והבעלים חייבין לשלם, קבל שמירת נזקיה והזיקה חייב השומר, ואם הוזקה פטור והבעלים עושין דין עם המזיק. </strong> שומר שקבל עליו שמירת גוף הבהמה בלבד אבל לא שמירת נזקיה והזיקה פטור מלשלם. א"א אף זה אינו מחוור דמתחזי מגמ' דמסתמא לא מקבל עליה שמירת נזקיה שהיא מזקת דאמרינן בפרקא קמא /בבא קמא/ (יד) ואם קבל עליו שמירת נזקיו ביום חייב ואפשר דאיהו נמי הכי קאמר שלא פירש שמירת נזקיה.
                 </div>
                 
 
                 
                 <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קבלת שמירה שלא תזיק ושמירה שלא תוזק:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">קבלת שמירה שלא תזיק ושמירה שלא תוזק:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מה:) מביאה את דברי <strong>ר' אלעזר</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (מה:) מביאה את דברי <strong>ר' אלעזר</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"מסר שורו לשומר חנם, הזיק - חייב, הוזק - פטור".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"מסר שורו לשומר חנם, הזיק - חייב, הוזק - פטור".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, השומר חייב לפצות ניזק על נזק שהשור גורם, אך אינו חייב לפצות את בעליו של השור אם השור ניזק מאחר. הגמרא מסבירה שמדובר במקרה בו השומר קיבל על עצמו לשמור על השור שלא יזיק. הגמרא מניחה שבאופן כללי, שומר שמקבל על עצמו לשמור שהשור לא יזיק, מקבל על עצמו בכלל זה לשמור גם כן שהשור לא יוזק. ובכל זאת ר' אלעזר פוטר את השומר אם השור הוזק כיוון שהוא מדבר על מקרה פרטי בו היה ניכר שהשור נגחן, ולכן השומר לא העלה על דעתו ששור אחר יגח את השור שהוא לוקח לרשותו. לכן קיבל השומר על עצמו לשמור רק שלא יזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, השומר חייב לפצות ניזק על נזק שהשור גורם, אך אינו חייב לפצות את בעליו של השור אם השור ניזק מאחר. הגמרא מסבירה שמדובר במקרה בו השומר קיבל על עצמו לשמור על השור שלא יזיק. הגמרא מניחה שבאופן כללי, שומר שמקבל על עצמו לשמור שהשור לא יזיק, מקבל על עצמו בכלל זה לשמור גם כן שהשור לא יוזק. ובכל זאת ר' אלעזר פוטר את השומר אם השור הוזק כיוון שהוא מדבר על מקרה פרטי בו היה ניכר שהשור נגחן, ולכן השומר לא העלה על דעתו ששור אחר יגח את השור שהוא לוקח לרשותו. לכן קיבל השומר על עצמו לשמור רק שלא יזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף, משמע מהגמרא שאם השומר לא קיבל על עצמו את שמירת נזקיה של הבהמה, הוא באמת לא יהיה אחראי לנזקים שהיא גורמת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף, משמע מהגמרא שאם השומר לא קיבל על עצמו את שמירת נזקיה של הבהמה, הוא באמת לא יהיה אחראי לנזקים שהיא גורמת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק ששומר יכול שלא לקבל על עצמו אחריות לנזקים שהבהמה תזיק, ולהיפטר מנזקים כגון אלו. כמו כן, כותב הרמב"ם שאם השומר קיבל על עצמו אחריות לנזקים שהבהמה מזיקה, ולא לנזקים שתוזק בהן, הוא אכן פטור אם הוזקה, וחייב באחריות לנזק אם הזיקה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק ששומר יכול שלא לקבל על עצמו אחריות לנזקים שהבהמה תזיק, ולהיפטר מנזקים כגון אלו. כמו כן, כותב הרמב"ם שאם השומר קיבל על עצמו אחריות לנזקים שהבהמה מזיקה, ולא לנזקים שתוזק בהן, הוא אכן פטור אם הוזקה, וחייב באחריות לנזק אם הזיקה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>לחם משנה </strong>מקשה על דברי הרמב"ם, שהרי מהגמרא משמע שרק אם מדובר בשור נגחן יכול להיווצר מצב שהשומר מקבל על עצמו אחריות לנזקים שהבהמה מזיקה ולא לנזקים שהבהמה ניזוקית בהם, ומשמע שבמצב הרגיל קבלת האחריות על נזקים שהיא מזיקה כוללת בתוכה גם קבלת אחריות לנזקים שהיא ניזוקית בהם! הלחם משנה מתרץ שהאמור בגמרא הוא לגבי קבלת שמירה בסתם, ללא התניה מיוחדת. במקרה זה אם לא מדובר בשור נגחן, הרי שקבלת השמירה היא על נזקים שהיא מזיקה ומוזקת בהם כאחד. אמנם הרמב"ם מסיק מכאן ששני סוגי האחריות הנ"ל אינם תלויים זה בזה ולכן אם השומר מפרש ומתנה שהוא אחראי דווקא על שמירה שלא תזיק ולא על שמירה שלא תוזק, דבריו קיימים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>לחם משנה </strong>מקשה על דברי הרמב"ם, שהרי מהגמרא משמע שרק אם מדובר בשור נגחן יכול להיווצר מצב שהשומר מקבל על עצמו אחריות לנזקים שהבהמה מזיקה ולא לנזקים שהבהמה ניזוקית בהם, ומשמע שבמצב הרגיל קבלת האחריות על נזקים שהיא מזיקה כוללת בתוכה גם קבלת אחריות לנזקים שהיא ניזוקית בהם! הלחם משנה מתרץ שהאמור בגמרא הוא לגבי קבלת שמירה בסתם, ללא התניה מיוחדת. במקרה זה אם לא מדובר בשור נגחן, הרי שקבלת השמירה היא על נזקים שהיא מזיקה ומוזקת בהם כאחד. אמנם הרמב"ם מסיק מכאן ששני סוגי האחריות הנ"ל אינם תלויים זה בזה ולכן אם השומר מפרש ומתנה שהוא אחראי דווקא על שמירה שלא תזיק ולא על שמירה שלא תוזק, דבריו קיימים.</p>
                     
                 </div>
                 
                 <div id="topic-10-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קבלת שמירה בסתמא:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">קבלת שמירה בסתמא:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מפירוש הלחם משנה הנ"ל, מהגמרא, ומפשט לשון הרמב"ם, משמע שאם לא התנה השומר במפורש, חייב בין על נזק שמזיקה ובין על נזק שמזיקים אותה. אמנם ה<strong>ראב"ד </strong>חולק וסובר שקבלת שמירה בסתם, אינה אלא על הבהמה עצמה, ולא על נזקים שהיא מזיקה אחרים. הראב"ד מסיק זאת מהגמרא (יג:) המציירת מקרה בו שור המשאיל נגח את שור השואל, והמשאיל חייב משום שהשואל קיבל על עצמו שמירה על השור של המשאיל מנזקים, ולא אחריות לנזקים הנגרמים על ידי שור המשאיל (כי אחרת, בכלל אחריות זו שהיה מקבל, היה גם סופג את הנזק שנגרם לו משור המשאיל). הראב"ד לומד מכאן שסתם שמירה אינה אלא על גוף הבהמה ולא על הנזקים הנגרמים בעטיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מפירוש הלחם משנה הנ"ל, מהגמרא, ומפשט לשון הרמב"ם, משמע שאם לא התנה השומר במפורש, חייב בין על נזק שמזיקה ובין על נזק שמזיקים אותה. אמנם ה<strong>ראב"ד </strong>חולק וסובר שקבלת שמירה בסתם, אינה אלא על הבהמה עצמה, ולא על נזקים שהיא מזיקה אחרים. הראב"ד מסיק זאת מהגמרא (יג:) המציירת מקרה בו שור המשאיל נגח את שור השואל, והמשאיל חייב משום שהשואל קיבל על עצמו שמירה על השור של המשאיל מנזקים, ולא אחריות לנזקים הנגרמים על ידי שור המשאיל (כי אחרת, בכלל אחריות זו שהיה מקבל, היה גם סופג את הנזק שנגרם לו משור המשאיל). הראב"ד לומד מכאן שסתם שמירה אינה אלא על גוף הבהמה ולא על הנזקים הנגרמים בעטיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצו ח) פוסק כרמב"ם, שקבלת שמירה בסתמא, היא בין שלא יזיק ובין שלא יוזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>(שצו ח) פוסק כרמב"ם, שקבלת שמירה בסתמא, היא בין שלא יזיק ובין שלא יוזק.</p>
                     
                 </div>
                 
@@ -1447,35 +1447,35 @@
             
             
             <div id="halacha-11" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מסר השומר לשומר אחר השומר הראשון חייב לשלם לניזק, שהשומר שמסר לשומר חייב, והרי הניזק אומר לו למה לא שמרת אתה בעצמך ומסרת לאחר שלם לי אתה ולך עשה דין עם השומר שמסרת לו אתה, מסרה השומר לבנו או לבן ביתו או למסעדו נכנסו תחת השומר וחייבין. </strong> מסר השומר לשומר אחר וכו' שלם לי אתה ולך עשה דין עם השומר שמסרת לו אתה. א"א כל זה אינו מחוור אלא הניזק גובה מן השני או מאיזה שירצה ועד שאומר לשומר יאמר לבעלים למה לא שמרת אתה את שורך וחיי ראשי כל מה שכתב בזה שלא לצורך הוא דליכא למימר הכא אין רצוני שיהא פקדוני ביד אחר שהרי הבעלים אינם מפסידים כלום.
                 </div>
                 
 
                 
                 <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר שמסר לשומר:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שומר שמסר לשומר:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (נה:) כותבת</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (נה:) כותבת</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"מסרה לרועה- נכנס הרועה תחתיו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"מסרה לרועה- נכנס הרועה תחתיו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, הרועה שהבהמה תחת ידיו, הוא האחראי על הנזקים שהיא גורמת. ה<strong>גמרא</strong> (נו:) מבארת שאין הכוונה לבעלים שמסר לרועה, שכן דין זה כבר נידון בפרק שעבר. הגמרא מעמידה במקרה בו שומר ראשון, מסר לשומר שני (הרועה). ובמקרה זה לפי המשנה, השני מתחייב בנזקיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, הרועה שהבהמה תחת ידיו, הוא האחראי על הנזקים שהיא גורמת. ה<strong>גמרא</strong> (נו:) מבארת שאין הכוונה לבעלים שמסר לרועה, שכן דין זה כבר נידון בפרק שעבר. הגמרא מעמידה במקרה בו שומר ראשון, מסר לשומר שני (הרועה). ובמקרה זה לפי המשנה, השני מתחייב בנזקיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הגמרא בבבא מציעא</strong> (לו.) דנה בשאלה האם שומר שמסר לשומר חייב (בנזק שקרה לפיקדון), ומעלה למסקנה שם:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>הגמרא בבבא מציעא</strong> (לו.) דנה בשאלה האם שומר שמסר לשומר חייב (בנזק שקרה לפיקדון), ומעלה למסקנה שם:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>רבא</strong>: הלכתא, שומר שמסר לשומר – חייב".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אמר <strong>רבא</strong>: הלכתא, שומר שמסר לשומר – חייב".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, חייב השומר הראשון. שתי סברות מובאות לדין זה בגמרא שם- האחת, שאין רצון הבעלים שיהיה פקדונו ביד אחר, והשניה, שהשומר הראשון נאמן בשבועה על הבעלים, והשני לא. הגמרא אצלינו קובעת שדברי רבא עומדים בסתירה לדברי המשנה לפיהם אחריות הנזקים עוברת לשומר השני. לכן, הגמרא מפרשת שהמשנה מדברת על שומר שמסר לשולייתו, ואז כל האחריות עוברת לשוליה, כיוון שדרכו של השומר למסור לשולייה, ולכן המסירה היתה מתוך הסכמה כללית של הבעלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, חייב השומר הראשון. שתי סברות מובאות לדין זה בגמרא שם- האחת, שאין רצון הבעלים שיהיה פקדונו ביד אחר, והשניה, שהשומר הראשון נאמן בשבועה על הבעלים, והשני לא. הגמרא אצלינו קובעת שדברי רבא עומדים בסתירה לדברי המשנה לפיהם אחריות הנזקים עוברת לשומר השני. לכן, הגמרא מפרשת שהמשנה מדברת על שומר שמסר לשולייתו, ואז כל האחריות עוברת לשוליה, כיוון שדרכו של השומר למסור לשולייה, ולכן המסירה היתה מתוך הסכמה כללית של הבעלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק על פי זה, שאכן, בסתם מקרה של שומר שמסר לשומר, חייב הראשון ואינו מסיר מעצמו את אחריות הנזקים, וזאת על פי העיקרון של רבא. אמנם, במקרה שבו השומר מסר לבנו או לשולייתו, פטור השומר, והאחריות עוברת לשני כדברי המשנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק על פי זה, שאכן, בסתם מקרה של שומר שמסר לשומר, חייב הראשון ואינו מסיר מעצמו את אחריות הנזקים, וזאת על פי העיקרון של רבא. אמנם, במקרה שבו השומר מסר לבנו או לשולייתו, פטור השומר, והאחריות עוברת לשני כדברי המשנה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד </strong>חולק על הרמב"ם וסובר שגם אם מסר השומר הראשון לשומר שני שאינו שולייתו או כיוצא בו, יכול הניזק לגבות מאיזה שירצה משניהם ולאו דווקא מהראשון. הראב"ד מגביל את דין "שומר שמסר לשומר" בדיני שומרים, למקום בו יכול הבעלים לומר שאין רצונו שיהיה פקדונו ביד אחר, אך כאן כאשר מדובר על אחריות לנזק שהשור הזיק, כיוון שבכל אופן אף אחד לא בא בתביעת תשלומי נזקין לבעלים, לא אמור להיות אכפת לו אצל מי נמצא השור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד </strong>חולק על הרמב"ם וסובר שגם אם מסר השומר הראשון לשומר שני שאינו שולייתו או כיוצא בו, יכול הניזק לגבות מאיזה שירצה משניהם ולאו דווקא מהראשון. הראב"ד מגביל את דין "שומר שמסר לשומר" בדיני שומרים, למקום בו יכול הבעלים לומר שאין רצונו שיהיה פקדונו ביד אחר, אך כאן כאשר מדובר על אחריות לנזק שהשור הזיק, כיוון שבכל אופן אף אחד לא בא בתביעת תשלומי נזקין לבעלים, לא אמור להיות אכפת לו אצל מי נמצא השור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצו ט) פוסק כרמב"ם, ומוסיף, עפ"י דין שומר שמסר לשומר בדיני שומרים, שאפילו השומר השני טוב יותר מהראשון (כמו משומר חנם לשומר שכר), עדיין חייב הראשון באחריות לנזק, אא"כ השני הוא שולייה וכד'.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>(שצו ט) פוסק כרמב"ם, ומוסיף, עפ"י דין שומר שמסר לשומר בדיני שומרים, שאפילו השומר השני טוב יותר מהראשון (כמו משומר חנם לשומר שכר), עדיין חייב הראשון באחריות לנזק, אא"כ השני הוא שולייה וכד'.</p>
                     
                 </div>
                 
@@ -1483,23 +1483,23 @@
             
             
             <div id="halacha-12" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כל שומר שנתחייב לשלם ואין לו והיה המזיק תם שהוא משלם חצי נזק מגופו הרי הניזק משתלם מן הבהמה שהזיקה וישאר דמי מה שגבה הניזק חוב על השומר לבעל הבהמה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור מופקד שהזיק, מי מקבלו:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שור מופקד שהזיק, מי מקבלו:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאשר שור מופקד תם הזיק, הנזק משולם מגוף השור. מצד שני השואל צריך להחזיר את השור לבעלים. נמצא שהניזק מצד אחד, והמשאיל מצד שני טוענים לזכאות על השור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאשר שור מופקד תם הזיק, הנזק משולם מגוף השור. מצד שני השואל צריך להחזיר את השור לבעלים. נמצא שהניזק מצד אחד, והמשאיל מצד שני טוענים לזכאות על השור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בה דנו לעיל (הלכה ח) דנה במקרה בו שור הושאל בחזקת תם ונמצא מועד. ה<strong>ברייתא</strong> מחייבת במקרה זה את השואל בחצי נזק, כפי שהיה משלם לו היה השור תם. אמנם, אומרת הגמרא, לכאורה יכול היה השואל לטעון שתשלומי תם, אותם קיבל על עצמו, משלמים מגוף השור ולא מכיסו שלו, אך למסקנה, טענה זו אינה קבילה מכיוון שגם לו היה משלם את הנזק מגוף השור, היה צריך לשלם מכיסו כדי לפצות את המשאיל על שורו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בה דנו לעיל (הלכה ח) דנה במקרה בו שור הושאל בחזקת תם ונמצא מועד. ה<strong>ברייתא</strong> מחייבת במקרה זה את השואל בחצי נזק, כפי שהיה משלם לו היה השור תם. אמנם, אומרת הגמרא, לכאורה יכול היה השואל לטעון שתשלומי תם, אותם קיבל על עצמו, משלמים מגוף השור ולא מכיסו שלו, אך למסקנה, טענה זו אינה קבילה מכיוון שגם לו היה משלם את הנזק מגוף השור, היה צריך לשלם מכיסו כדי לפצות את המשאיל על שורו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>לומד מכאן, שכשאין לשומר ממה לשלם חוץ מהשור, הראשון שגובה מהשור הוא הניזק. לאחר שהניזק קיבל את התשלום מגוף השור, נשאר השומר חייב לבעלים את דמי השור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>לומד מכאן, שכשאין לשומר ממה לשלם חוץ מהשור, הראשון שגובה מהשור הוא הניזק. לאחר שהניזק קיבל את התשלום מגוף השור, נשאר השומר חייב לבעלים את דמי השור.</p>
                     
                 </div>
                 
@@ -1507,66 +1507,66 @@
             
             
             <div id="halacha-13" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג-יד:</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג-יד:</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כל בהמה שהזיקה פירות מחוברין משערין מה שהזיקה בששים ומשלם זה שנתחייב לשלם בין הבעלים בין השומרים. כיצד, הרי שאכלה בית סאה שמין ששים בית סאה באותה השדה כמה היה שוה וכמה הוא שוה עתה אחר שנפסדה בו הבית סאה ומשלם השאר, וכן אם אכלה קב או רובע אפילו קלח אחד שמין אותו בששים. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אכלה פירות גמורין שאין צריכים לקרקע משלם דמי פירות גמורין בשוויהן אם סאה דמי סאה ואם סאתים דמי סאתים, הרי שאכלה פירות דקל אחד וכן הלוקט פירות דקל חבירו ואכלן, אם היה דקל רומי וכיוצא בו שאין התמרים שלו יפות משערין אותו בששים על גב הקרקע, ואם דקל פרסי הוא וכיוצא בו שהתמרים שלו יפות ביותר משערין הדקל בפני עצמו כמה היה שוה וכמה הוא שוה עתה.</strong>
                 </div>
                 
 
                 
                 <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שמאות של נזק אכילת פירות מחוברים הצריכים לקרקע:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שמאות של נזק אכילת פירות מחוברים הצריכים לקרקע:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (נה:) מדברת על בהמה שאכלה מגינתו של המזיק, שמשלמת מה שהזיקה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (נה:) מדברת על בהמה שאכלה מגינתו של המזיק, שמשלמת מה שהזיקה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כיצד משלמת מה שהזיקה? שמין בית סאה באותה שדה כמה היתה יפה וכמה היא יפה;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כיצד משלמת מה שהזיקה? שמין בית סאה באותה שדה כמה היתה יפה וכמה היא יפה;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' שמעון</strong> אומר: אכלה פירות גמורים משלמת פירות גמורים, אם סאה - סאה, אם סאתים - סאתים"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' שמעון</strong> אומר: אכלה פירות גמורים משלמת פירות גמורים, אם סאה - סאה, אם סאתים - סאתים"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כבר מהמשנה ברור, שלעיתים המזיק משלם את השווי הישיר של הפירות שנאכלו (בפירות גמורים), ואילו לפעמים הוא משלם את ירידת שווי הנכס בכללו לאור אכילת הפירות, תשלום שהוא באופן כללי נמוך יותר מתשלום שווי הפירות עצמם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כבר מהמשנה ברור, שלעיתים המזיק משלם את השווי הישיר של הפירות שנאכלו (בפירות גמורים), ואילו לפעמים הוא משלם את ירידת שווי הנכס בכללו לאור אכילת הפירות, תשלום שהוא באופן כללי נמוך יותר מתשלום שווי הפירות עצמם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נח:) דנה בדין זה ומעלה, שכוונת המשנה "שמין בית סאה..." היא ששמין "סאה בשישים סאין".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נח:) דנה בדין זה ומעלה, שכוונת המשנה "שמין בית סאה..." היא ששמין "סאה בשישים סאין".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מבין שכוונת המשנה "שמין בית סאה באותה שדה כמה היתה יפה וכמה היא יפה", היא שמסתכלים על כברת הארץ בה הזיקה הבהמה, ואומדים מה הפרש השווי שנוצר בינה לבין בית סאה אחרת באותה שדה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מבין שכוונת המשנה "שמין בית סאה באותה שדה כמה היתה יפה וכמה היא יפה", היא שמסתכלים על כברת הארץ בה הזיקה הבהמה, ואומדים מה הפרש השווי שנוצר בינה לבין בית סאה אחרת באותה שדה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות הבנה זו, מסביר רש"י שדברי הגמרא אמורים בדרך לאמוד שוויה של סאה אחת- כאשר בית סאה קרקע נמכר לבדו, שוויו גדול באופן מלאכותי, כיוון שאין מצוי לקנותו, ולכן חשבון הנזק שעשתה הבהמה ביחס לשווי של בית סאה הנמכר לבדו, הוא לרעת המזיק. הדרך הראויה לאמוד כמה סאה אחת שווה, היא לאמוד כמה שוות שישים סאים הנמכרות יחד, ולחלק בשישים. עבור סכום זה יש לחשב כמה ירד ערכה של הסאה בעקבות הנזק, ובהפרש זה לחייב את המזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעקבות הבנה זו, מסביר רש"י שדברי הגמרא אמורים בדרך לאמוד שוויה של סאה אחת- כאשר בית סאה קרקע נמכר לבדו, שוויו גדול באופן מלאכותי, כיוון שאין מצוי לקנותו, ולכן חשבון הנזק שעשתה הבהמה ביחס לשווי של בית סאה הנמכר לבדו, הוא לרעת המזיק. הדרך הראויה לאמוד כמה סאה אחת שווה, היא לאמוד כמה שוות שישים סאים הנמכרות יחד, ולחלק בשישים. עבור סכום זה יש לחשב כמה ירד ערכה של הסאה בעקבות הנזק, ובהפרש זה לחייב את המזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוס' </strong>(שם ד"ה שמין) חולקים על רש"י, ומבינים אחרת את דברי המשנה. המשנה מדברת במקרה שהבהמה אכלה סאה שלמה, והנזק המשתלם הוא ההפרש בין שווי השדה לפני אכילת הסאה לבין שוויה לאחר אכילת הסאה. על זה באה הגמרא ומסבירה, ש"שדה" כאן הכוונה לשישים סאים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוס' </strong>(שם ד"ה שמין) חולקים על רש"י, ומבינים אחרת את דברי המשנה. המשנה מדברת במקרה שהבהמה אכלה סאה שלמה, והנזק המשתלם הוא ההפרש בין שווי השדה לפני אכילת הסאה לבין שוויה לאחר אכילת הסאה. על זה באה הגמרא ומסבירה, ש"שדה" כאן הכוונה לשישים סאים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נמצא, שההבדל בין רש"י לתוס' למעשה, הוא שלרש"י יש לאמוד את ההבדל בין שישים סאה פגומות לשישים סאה טובות, לחלק בשישים, וזהו הנזק המשתלם, ואילו לפי התוס', יש לאמוד את שווי השדה (או בכא"פ שישים סאים שבשדה) לפני הנזק ולאחריו, והפרש זה הוא הנזק המשתלם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נמצא, שההבדל בין רש"י לתוס' למעשה, הוא שלרש"י יש לאמוד את ההבדל בין שישים סאה פגומות לשישים סאה טובות, לחלק בשישים, וזהו הנזק המשתלם, ואילו לפי התוס', יש לאמוד את שווי השדה (או בכא"פ שישים סאים שבשדה) לפני הנזק ולאחריו, והפרש זה הוא הנזק המשתלם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כתוספות, ומחיל דין זה לגבי כל דבר שהבהמה אכלה, דהיינו, כל דבר שאכלה הבהמה, רואים בכמה פחות נמכרת כמות של שישים כמותו כאשר אחד מהם (ורק אחד מהם!) אכול, וכאשר הוא תקין, וההפרש הוא הנזק המשתלם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק כתוספות, ומחיל דין זה לגבי כל דבר שהבהמה אכלה, דהיינו, כל דבר שאכלה הבהמה, רואים בכמה פחות נמכרת כמות של שישים כמותו כאשר אחד מהם (ורק אחד מהם!) אכול, וכאשר הוא תקין, וההפרש הוא הנזק המשתלם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצ"ד ד) מעתיק את דברי הרמב"ם להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>(שצ"ד ד) מעתיק את דברי הרמב"ם להלכה.</p>
                     
                 </div>
                 
                 <div id="topic-13-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מתי נזק לפירות מחוברים נאמד כנזק לפירות תלושים:</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מתי נזק לפירות מחוברים נאמד כנזק לפירות תלושים:</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראינו במשנה לעיל, שכאשר אכלה הבהמה פירות גמורים, משלמת את שוויים כשלעצמו. ובכך שונה דינם מפירות הצריכים לקרקע. וכך פוסק הרמב"ם לפנינו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראינו במשנה לעיל, שכאשר אכלה הבהמה פירות גמורים, משלמת את שוויים כשלעצמו. ובכך שונה דינם מפירות הצריכים לקרקע. וכך פוסק הרמב"ם לפנינו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נח:) מספרת על מקרה של אדם שקצץ אחד משלושה גזעים של דקל חבירו. באותו מקרה חייב <strong>ריש גלותא </strong>את הקוצץ לשלם שליש משווי הדקל המלא. <strong>ר' נחמן</strong> לעומת זאת סובר שבמקרה זה יש לאמוד את שווי הדקל בשישים, (כלומר, עפ"י פירוש התוס' והרמב"ם, לראות בכמה נמכרים שישים דקלים שלמים, ובכמה נמכרים שישים דקלים ששליש שלש אחד מהם קצוץ, ויש לשלם את ההפרש, כדלעיל).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נח:) מספרת על מקרה של אדם שקצץ אחד משלושה גזעים של דקל חבירו. באותו מקרה חייב <strong>ריש גלותא </strong>את הקוצץ לשלם שליש משווי הדקל המלא. <strong>ר' נחמן</strong> לעומת זאת סובר שבמקרה זה יש לאמוד את שווי הדקל בשישים, (כלומר, עפ"י פירוש התוס' והרמב"ם, לראות בכמה נמכרים שישים דקלים שלמים, ובכמה נמכרים שישים דקלים ששליש שלש אחד מהם קצוץ, ויש לשלם את ההפרש, כדלעיל).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> כותבת למסקנה (נט.), שבדקל פרסי הלכה כריש גלותא, ואילו בדקל ארמי (או רומאי), הלכה כר' נחמן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> כותבת למסקנה (נט.), שבדקל פרסי הלכה כריש גלותא, ואילו בדקל ארמי (או רומאי), הלכה כר' נחמן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שדקל פרסי הוא חשוב מאד, ולכן יש לשומו כפירות הנישומים כשלעצמם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שדקל פרסי הוא חשוב מאד, ולכן יש לשומו כפירות הנישומים כשלעצמם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>כותב שהמאפיין של דקל פרסי הוא שפירותיו יפים מאד, לכן יש לדון את הנזק כנזק לפירות ולא לעץ עליו הם גדלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>כותב שהמאפיין של דקל פרסי הוא שפירותיו יפים מאד, לכן יש לדון את הנזק כנזק לפירות ולא לעץ עליו הם גדלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ההבדל בין שיטותיהם של רש"י והתוס' בא לידי ביטוי כמובן בנכסים שמצד אחד הם חשוב ומיוחדים, ולכן יש סברה שלא לראותם כחלק מהקרקע, ולשומם בפני עצמם, ולא רק בכלל פחת הנדל"ן, אך מצד שני אין הם נותנים פירות מיוחדים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ההבדל בין שיטותיהם של רש"י והתוס' בא לידי ביטוי כמובן בנכסים שמצד אחד הם חשוב ומיוחדים, ולכן יש סברה שלא לראותם כחלק מהקרקע, ולשומם בפני עצמם, ולא רק בכלל פחת הנדל"ן, אך מצד שני אין הם נותנים פירות מיוחדים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> מפרש אחרת לגמרי- דקל פרסי הכוונה לדקל שנגמר גידולו, והגיע הזמן לעוקרו ולשותלו במקום אחר. דקל כזה נחשב כפירות כיוון שהוא כבר אינו חלק מהקרקע בכח אם לא בפועל. דקל ארמי הוא דקל רגיל, שהוא חלק מחלקת הקרקע, ומשמש לגידול פירות. אותו שמים כחלק מפחת הנדל"ן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> מפרש אחרת לגמרי- דקל פרסי הכוונה לדקל שנגמר גידולו, והגיע הזמן לעוקרו ולשותלו במקום אחר. דקל כזה נחשב כפירות כיוון שהוא כבר אינו חלק מהקרקע בכח אם לא בפועל. דקל ארמי הוא דקל רגיל, שהוא חלק מחלקת הקרקע, ומשמש לגידול פירות. אותו שמים כחלק מפחת הנדל"ן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>(שצד ה,ו) פסק כרמב"ם, וה<strong>רמ"א </strong>הביא את דעת הטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>(שצד ה,ו) פסק כרמב"ם, וה<strong>רמ"א </strong>הביא את דעת הטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד בנושא אומדן הנזק יבואר בהמשך (פרק ט הלכה ד)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד בנושא אומדן הנזק יבואר בהמשך (פרק ט הלכה ד)</p>
                     
                 </div>
                 
@@ -1574,7 +1574,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1608,6 +1608,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

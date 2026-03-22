@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות רוצח ושמירת הנפש - פרק י</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק י)</h3>
                 <ul class="space-y-3">
@@ -1008,7 +1008,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1020,19 +1020,19 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בפרק זה, החותם את דיני עגלה ערופה, עוסק הרמב"ם בעיקר בהלכות הנוגעות לעגלה עצמה ולמשותף והשונה בינה לבין פרה אדומה ובהמות קדשים.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בפרק זה, החותם את דיני עגלה ערופה, עוסק הרמב"ם בעיקר בהלכות הנוגעות לעגלה עצמה ולמשותף והשונה בינה לבין פרה אדומה ובהמות קדשים.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה א מגבילה את דין פרה אדומה ל"אדמה אשר ד' אלקיך נתן לך לרשתה" דהיינו ארץ ישראל ועבר הירדן. בהלכה ב נידון גילה של העגלה, ואף נפסק כי בניגוד לקדשים, אין מומים פוסלים בה. עם זאת, כיוון שנאמרה בה לשון "כפרה" כבקדשים, טריפה או חוסר איבר פוסלים בה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה א מגבילה את דין פרה אדומה ל"אדמה אשר ד' אלקיך נתן לך לרשתה" דהיינו ארץ ישראל ועבר הירדן. בהלכה ב נידון גילה של העגלה, ואף נפסק כי בניגוד לקדשים, אין מומים פוסלים בה. עם זאת, כיוון שנאמרה בה לשון "כפרה" כבקדשים, טריפה או חוסר איבר פוסלים בה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בדומה לפרה אדומה, ובניגוד למצוי בבהמות קדשים, נפסלת העגלה כאשר עושים בה מלאכה. דין זה נידון בהלכות ג-ד. מכיוון שהפסוק מדגיש בייחוד פסול מחמת משיכה בעול, נפסלת העגלה אם משכה בעול (או נשאה משאוי) אף שלא ביצעה בכך מלאכה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בדומה לפרה אדומה, ובניגוד למצוי בבהמות קדשים, נפסלת העגלה כאשר עושים בה מלאכה. דין זה נידון בהלכות ג-ד. מכיוון שהפסוק מדגיש בייחוד פסול מחמת משיכה בעול, נפסלת העגלה אם משכה בעול (או נשאה משאוי) אף שלא ביצעה בכך מלאכה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ה דנה בעוד נקודת השקה בין עגלה ערופה לבין קדשים- כשם ששוחטים קדשים ביום בלבד, כך עורפים עגלה ערופה ביום בלבד. עוד נידון בהלכה זו הכלל "אין עושין מצוות חבילות חבילות" לפיו אין עורפים של עגלות כאחת.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ה דנה בעוד נקודת השקה בין עגלה ערופה לבין קדשים- כשם ששוחטים קדשים ביום בלבד, כך עורפים עגלה ערופה ביום בלבד. עוד נידון בהלכה זו הכלל "אין עושין מצוות חבילות חבילות" לפיו אין עורפים של עגלות כאחת.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">עגלה ערופה אסורה בהנאה יתר על שאר איסורי הנאה, שרוב חפצי המצווה אסורים בהנאה רק עד שנעשית מצוותם, ואילו העגלה אסורה בהנאה לאחר עריפתה. הלכות ו-ח עוסקות בשאלה מאימתי נאסרת העגלה בהנאה, וכיצד יכולה היא לחזור להיתרה. הרמב"ם פוסק שאם נמצא הרוצח לפני עריפת העגלה, חוזרת העגלה להיות כחולין גמורים, וכמו כן, שהעגלה נאסרת משעת ירידתה לנחל.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">עגלה ערופה אסורה בהנאה יתר על שאר איסורי הנאה, שרוב חפצי המצווה אסורים בהנאה רק עד שנעשית מצוותם, ואילו העגלה אסורה בהנאה לאחר עריפתה. הלכות ו-ח עוסקות בשאלה מאימתי נאסרת העגלה בהנאה, וכיצד יכולה היא לחזור להיתרה. הרמב"ם פוסק שאם נמצא הרוצח לפני עריפת העגלה, חוזרת העגלה להיות כחולין גמורים, וכמו כן, שהעגלה נאסרת משעת ירידתה לנחל.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ט עוסקת בדין המקום בו נערפה העגלה. חכמים למדו מהפסוקים שלאחר עריפתה אסור לעשות במקום בו נערפה מלאכות הנעשות בגופה של קרקע. לדעת הרמב"ם איסור זה הוא איסור תורה הנמנה בין שס"ה הלאוין שבתורה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ט עוסקת בדין המקום בו נערפה העגלה. חכמים למדו מהפסוקים שלאחר עריפתה אסור לעשות במקום בו נערפה מלאכות הנעשות בגופה של קרקע. לדעת הרמב"ם איסור זה הוא איסור תורה הנמנה בין שס"ה הלאוין שבתורה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">נקודה נוספת להקבלה בין עגלה ערופה לבין קרבנות נוגע לדין עיר שנתחייבה בעגלה ועבר עליה יום הכיפורים. בעוד שבקרבן אשם תלוי הבא על הספק, יום הכיפורים מכפר ופוטר מקרבן, עגלה, למרות שבאה על ספק, אין פוקעת חובת הבאתה כעבור יוהכ"פ.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">נקודה נוספת להקבלה בין עגלה ערופה לבין קרבנות נוגע לדין עיר שנתחייבה בעגלה ועבר עליה יום הכיפורים. בעוד שבקרבן אשם תלוי הבא על הספק, יום הכיפורים מכפר ופוטר מקרבן, עגלה, למרות שבאה על ספק, אין פוקעת חובת הבאתה כעבור יוהכ"פ.</p>
                 
             </div>
             
@@ -1040,23 +1040,23 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אין דין עגלה ערופה נוהג אלא בארץ ישראל וכן בעבר הירדן.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגדרת ארץ ישראל לעניין עגלה ערופה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הגדרת ארץ ישראל לעניין עגלה ערופה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בתחילת הפרשה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר בתחילת הפרשה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כִּי יִמָּצֵא חָלָל בָּאֲדָמָה אֲשֶׁר ה' אֱלֹהֶיךָ נֹתֵן לְךָ לְרִשְׁתָּהּ</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כִּי יִמָּצֵא חָלָל בָּאֲדָמָה אֲשֶׁר ה' אֱלֹהֶיךָ נֹתֵן לְךָ לְרִשְׁתָּהּ</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ספרי</strong> (פרשת שופטים פיסקא רה) נלמד מכאן שדין עגלה ערופה נוהג בארץ ישראל וכן בעבר הירדן, הנכלל בחבלי הארץ שנחלו ישראל עם כניסתם לארץ.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>ספרי</strong> (פרשת שופטים פיסקא רה) נלמד מכאן שדין עגלה ערופה נוהג בארץ ישראל וכן בעבר הירדן, הנכלל בחבלי הארץ שנחלו ישראל עם כניסתם לארץ.</p>
                     
                 </div>
                 
@@ -1064,38 +1064,38 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     עגלה ערופה בת שתי שנים או פחות אבל אם היתה בת שתי שנים ויום אחד פסולה, ואין המומין פוסלין בה, ואעפ"כ אם היתה טריפה פסולה, כפרה נאמר בה כקדשים.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מניין שנות העגלה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מניין שנות העגלה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פרה פרק א משנה א) עוסקת בהגבלת הגיל של פרה אדומה ושל עגלה ערופה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (פרה פרק א משנה א) עוסקת בהגבלת הגיל של פרה אדומה ושל עגלה ערופה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי אליעזר</strong> אומר עגלה בת שנתה ופרה בת שתים</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי אליעזר</strong> אומר עגלה בת שנתה ופרה בת שתים</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ו<strong>חכ</strong><strong>מים</strong> אומרים עגלה בת שתים ופרה בת שלש או בת ארבע</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ו<strong>חכ</strong><strong>מים</strong> אומרים עגלה בת שתים ופרה בת שלש או בת ארבע</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ר"ש</strong> וה<strong>רמב"ם</strong> בפירושם על המשנה, מסבירים, שהנחת היסוד המשותפת לכל הדעות היא שפרה מבוגרת מעגלה. בדרך כלל בכל מקום שנאמר עגל הכוונה לבן שנה, ולכן פוסק <strong>רבי</strong> <strong>אליעזר</strong> שעגלה היא דווקא בת שנתה. לעומתו <strong>חכמים</strong> חולקים וסוברים שכיוון שנאמר בעגלה ערופה "עגלת <strong>בקר</strong>" התכוון הכתוב לכלול אף עגלה בת שנתיים<sup id="ref166"><a href="#fn166">[166]</a></sup>. בנוסף, ברור שעגלה צעירה מבת שנתיים נכללת אף היא בהגדרת עגלה וכשרה לעגלה ערופה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ר"ש</strong> וה<strong>רמב"ם</strong> בפירושם על המשנה, מסבירים, שהנחת היסוד המשותפת לכל הדעות היא שפרה מבוגרת מעגלה. בדרך כלל בכל מקום שנאמר עגל הכוונה לבן שנה, ולכן פוסק <strong>רבי</strong> <strong>אליעזר</strong> שעגלה היא דווקא בת שנתה. לעומתו <strong>חכמים</strong> חולקים וסוברים שכיוון שנאמר בעגלה ערופה "עגלת <strong>בקר</strong>" התכוון הכתוב לכלול אף עגלה בת שנתיים<sup id="ref166"><a href="#fn166">[166]</a></sup>. בנוסף, ברור שעגלה צעירה מבת שנתיים נכללת אף היא בהגדרת עגלה וכשרה לעגלה ערופה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (מו. ד"ה "עגלה") מסביר את מהלך הגמרא כרבי אליעזר ונראה שהוא מצדד כשיטתו. לעומתו, ה<strong>רמב"ם </strong>פוסק להלכה כחכמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (מו. ד"ה "עגלה") מסביר את מהלך הגמרא כרבי אליעזר ונראה שהוא מצדד כשיטתו. לעומתו, ה<strong>רמב"ם </strong>פוסק להלכה כחכמים.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מום בעגלה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מום בעגלה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">להבדיל מפרה אדומה בה נאמר "אֲשֶׁר אֵין בָּהּ מוּם", בעגלה ערופה לא הגבילה התורה את העגלה לעגלה שאין בה מום. הגמרא (מו.) מוסיפה, שלא לומדים דין זה מפרה אדומה לעגלה ערופה, משום שנאמר בפרה אדומה ש"אין <strong>בה</strong> מום", כלומר, שיכול להיות מום ברעותה- העגלה הערופה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">להבדיל מפרה אדומה בה נאמר "אֲשֶׁר אֵין בָּהּ מוּם", בעגלה ערופה לא הגבילה התורה את העגלה לעגלה שאין בה מום. הגמרא (מו.) מוסיפה, שלא לומדים דין זה מפרה אדומה לעגלה ערופה, משום שנאמר בפרה אדומה ש"אין <strong>בה</strong> מום", כלומר, שיכול להיות מום ברעותה- העגלה הערופה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ירושלמי</strong> פוסק שאמנם מום אינו פוסל בעגלה ערופה, אך חסרון איבר דווקא כן פוסל בה. הסיבה היא משום שנאמר בה כפרה, ולכן צריך שיהיה כעין אותה עגלה גם ב"עולם" הקרבנות, וקרבן של בן נח כשר אף במום כל עוד אינו מחוסר איבר, אך בהמה מחוסרת איבר אינה נקראת קרבן כלל ולכן אינה כשרה לעגלה ערופה. הירושלמי ממשיך ואומר את אותו הדין של מחוסרת איבר גם על טריפה, ומאותו הטעם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ירושלמי</strong> פוסק שאמנם מום אינו פוסל בעגלה ערופה, אך חסרון איבר דווקא כן פוסל בה. הסיבה היא משום שנאמר בה כפרה, ולכן צריך שיהיה כעין אותה עגלה גם ב"עולם" הקרבנות, וקרבן של בן נח כשר אף במום כל עוד אינו מחוסר איבר, אך בהמה מחוסרת איבר אינה נקראת קרבן כלל ולכן אינה כשרה לעגלה ערופה. הירושלמי ממשיך ואומר את אותו הדין של מחוסרת איבר גם על טריפה, ומאותו הטעם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק שעגלה בעלת מום כשרה ופוסק כירושלמי, שמחוסרת איבר פסולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק שעגלה בעלת מום כשרה ופוסק כירושלמי, שמחוסרת איבר פסולה.</p>
                     
                 </div>
                 
@@ -1103,55 +1103,55 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג-ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל העבודות פוסלות את העגלה כמו שפוסלין בפרה אדומה, שנאמר "אשר לא עובד בה אשר לא משכה בעול", ולמה נאמר עול מאחר שנאמר אשר לא עובד בה שהוא כולל העול עם שאר עבודות? שהעול פוסל בין בשעת מלאכה בין שלא בשעת מלאכה- כיון שמשכה בעול טפח נפסלה אף על פי שלא חרש בה ולא עשה בה מלאכה, ושאר עבודות אינן פוסלין אלא עד שעת מלאכה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל מלאכה שהיא לצרכה כגון שפרש טליתו עליה מפני הזבובים אינו פוסלה וכל שהיא שלא לצרכה כגון שפרש טליתו עליה לנושאה פסולה, וכן כל כיוצא בזה, כמו שביארנו בהלכות פרה אדומה.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עשיית מלאכה בעגלה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עשיית מלאכה בעגלה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בפרשת העגלה הערופה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר בפרשת העגלה הערופה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְלָקְחוּ זִקְנֵי הָעִיר הַהִוא עֶגְלַת בָּקָר אֲשֶׁר לֹא עֻבַּד בָּהּ אֲשֶׁר לֹא מָשְׁכָה בְּעֹל</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְלָקְחוּ זִקְנֵי הָעִיר הַהִוא עֶגְלַת בָּקָר אֲשֶׁר לֹא עֻבַּד בָּהּ אֲשֶׁר לֹא מָשְׁכָה בְּעֹל</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וב<strong>משנה</strong> (סוטה מה:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וב<strong>משנה</strong> (סוטה מה:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">...מביאין עגלת בקר אשר לא משכה בעול...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">...מביאין עגלת בקר אשר לא משכה בעול...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (מו.) מובאת <strong>ברייתא</strong></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (מו.) מובאת <strong>ברייתא</strong></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"עול"- אין לי אלא עול, שאר עבודות מנין? תלמוד לומר "אשר לא עובד בה"- מכל מקום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"עול"- אין לי אלא עול, שאר עבודות מנין? תלמוד לומר "אשר לא עובד בה"- מכל מקום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם כן מה תלמוד לומר עול?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם כן מה תלמוד לומר עול?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עול פוסל בין בשעת עבודה בין שלא בשעת עבודה, שאר עבודות אין פוסלות אלא בשעת עבודה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עול פוסל בין בשעת עבודה בין שלא בשעת עבודה, שאר עבודות אין פוסלות אלא בשעת עבודה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו מהי "שעת עבודה" ששאר עבודות פוסלות רק בה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו מהי "שעת עבודה" ששאר עבודות פוסלות רק בה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (מו.) מפרש ש"שעת עבודה" הכוונה למקרה בו הניח משא על גבי העגלה בכדי שתסחב אותו, או עול בכדי שתמשוך בו (כפי הדרך בה רגילים לעבוד בבהמות). אך אם הניח דבר מה על גבי הבהמה רק כדי להניח את הדבר מידו, ולא בכדי שהיא תעבוד עבורו, נחשב הדבר "שלא בשעת עבודה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (מו.) מפרש ש"שעת עבודה" הכוונה למקרה בו הניח משא על גבי העגלה בכדי שתסחב אותו, או עול בכדי שתמשוך בו (כפי הדרך בה רגילים לעבוד בבהמות). אך אם הניח דבר מה על גבי הבהמה רק כדי להניח את הדבר מידו, ולא בכדי שהיא תעבוד עבורו, נחשב הדבר "שלא בשעת עבודה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (בתוספותיו, כאן), נראה שמפרש מעט אחרת. לדבריו שעת עבודה היא כל מקרה בו נוח לו לאדם המניח את המשא, בכך שהחפץ מונח דווקא על הבהמה. "שלא בשעת עבודה" הכוונה למקרה בו אין לאדם העדפה מיוחדת שיהיה החפץ או העול דווקא על גבי הבהמה, והניח את החפץ עליה באותו אופן בו היה מניח במקום אחר ולא בכוונה תחילה אליה<sup id="ref167"><a href="#fn167">[167]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (בתוספותיו, כאן), נראה שמפרש מעט אחרת. לדבריו שעת עבודה היא כל מקרה בו נוח לו לאדם המניח את המשא, בכך שהחפץ מונח דווקא על הבהמה. "שלא בשעת עבודה" הכוונה למקרה בו אין לאדם העדפה מיוחדת שיהיה החפץ או העול דווקא על גבי הבהמה, והניח את החפץ עליה באותו אופן בו היה מניח במקום אחר ולא בכוונה תחילה אליה<sup id="ref167"><a href="#fn167">[167]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שני הפירושים הנ"ל, מפרשים ש"שעת עבודה" מתייחסת לכוונת העובד או למוטיבציה שלו. לעומתם, מה<strong>רמב"ם</strong> אצלינו ובהלכות פרה אדומה, משמע ש"שעת עבודה" מתייחסת לעבודה שבוצעה בפועל. כלומר, העול פוסל משעת משיכה בו "אף על פי שלא חרש בה ולא עשה בה מלאכה". לעומת זאת "הכניסה לדוש אינה נפסלת עד שידוש בה" (רמב"ם הלכות פרה אדומה פרק א הלכה ז)<sup id="ref168"><a href="#fn168">[168]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שני הפירושים הנ"ל, מפרשים ש"שעת עבודה" מתייחסת לכוונת העובד או למוטיבציה שלו. לעומתם, מה<strong>רמב"ם</strong> אצלינו ובהלכות פרה אדומה, משמע ש"שעת עבודה" מתייחסת לעבודה שבוצעה בפועל. כלומר, העול פוסל משעת משיכה בו "אף על פי שלא חרש בה ולא עשה בה מלאכה". לעומת זאת "הכניסה לדוש אינה נפסלת עד שידוש בה" (רמב"ם הלכות פרה אדומה פרק א הלכה ז)<sup id="ref168"><a href="#fn168">[168]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף להבדל בין עבודת העול לבין שאר עבודות, קיים הבדל יסודי בין פסול מלאכה בפרה אדומה לבין פסול מלאכה בעגלה ערופה. הבדל זה נלמד מהנאמר בעגלה ערופה "אֲשֶׁר לֹא <strong>מָשְׁכָה</strong> בְּעֹל" הנבדל מהנאמר בפרה אדומה "אֲשֶׁר לֹא <strong>עָלָה עָלֶיהָ</strong> עֹל" (במדבר יט ב). בעניין זה מובאים בסוגייתנו דברי רב-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף להבדל בין עבודת העול לבין שאר עבודות, קיים הבדל יסודי בין פסול מלאכה בפרה אדומה לבין פסול מלאכה בעגלה ערופה. הבדל זה נלמד מהנאמר בעגלה ערופה "אֲשֶׁר לֹא <strong>מָשְׁכָה</strong> בְּעֹל" הנבדל מהנאמר בפרה אדומה "אֲשֶׁר לֹא <strong>עָלָה עָלֶיהָ</strong> עֹל" (במדבר יט ב). בעניין זה מובאים בסוגייתנו דברי רב-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>רב יהודה</strong> אמר <strong>רב</strong><strong>:</strong> הניח עליה [על פרה אדומה] עודה של שקין פסולה, ובעגלה [ערופה] עד שתמשוך</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמר <strong>רב יהודה</strong> אמר <strong>רב</strong><strong>:</strong> הניח עליה [על פרה אדומה] עודה של שקין פסולה, ובעגלה [ערופה] עד שתמשוך</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, חמוּר דינה של פרה אדומה מדין העגלה הערופה בכך שהעגלה צריכה למשוך בעול או ללכת עם המשאוי על גבה בכדי שתיפסל, בעוד שהפרה פסולה כבר משעת ההנחה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, חמוּר דינה של פרה אדומה מדין העגלה הערופה בכך שהעגלה צריכה למשוך בעול או ללכת עם המשאוי על גבה בכדי שתיפסל, בעוד שהפרה פסולה כבר משעת ההנחה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מוסיפה ששיעור המשיכה הנדרש בכדי לפסול את העגלה הוא כשיעור רוחבו של עול<sup id="ref169"><a href="#fn169">[169]</a></sup>, שהוא טפח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מוסיפה ששיעור המשיכה הנדרש בכדי לפסול את העגלה הוא כשיעור רוחבו של עול<sup id="ref169"><a href="#fn169">[169]</a></sup>, שהוא טפח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לפנינו פוסק שעגלה שהונח עליה עול נפסלת משתמשוך בו טפח ואילו בהלכות פרה אדומה הוא פוסק שמשקשרו עליה עול נפסלת, אף מבלי שתמשוך<sup id="ref170"><a href="#fn170">[170]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לפנינו פוסק שעגלה שהונח עליה עול נפסלת משתמשוך בו טפח ואילו בהלכות פרה אדומה הוא פוסק שמשקשרו עליה עול נפסלת, אף מבלי שתמשוך<sup id="ref170"><a href="#fn170">[170]</a></sup>.</p>
                     
                 </div>
                 
@@ -1159,38 +1159,38 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אין עורפין את העגלה אלא ביום לפי שנאמר בה כפרה כקדשים, וכל היום כשר לעריפת העגלה, ואין עורפין שתי עגלות כאחת שאין עושין מצות חבילות חבילות.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עריפת עגלה ביום</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עריפת עגלה ביום</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> במגילה (כ:) מונה את הדברים שמצוותם ביום וכשרים כל היום, וביניהם שחיטת קרבנות ועריפת עגלה. בגמרא מוסבר שטעם ההגבלה של שחיטת קרבנות דווקא ליום נלמד מהאמור בדין נותר- "בְּיוֹם זִבְחֲכֶם יֵאָכֵל" (ויקרא יט ו), ועגלה ערופה נלמדת מדין זבחים רגילים כיוון שגם לה יש תפקיד של כפרה כמו לקרבנות "רגילים".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> במגילה (כ:) מונה את הדברים שמצוותם ביום וכשרים כל היום, וביניהם שחיטת קרבנות ועריפת עגלה. בגמרא מוסבר שטעם ההגבלה של שחיטת קרבנות דווקא ליום נלמד מהאמור בדין נותר- "בְּיוֹם זִבְחֲכֶם יֵאָכֵל" (ויקרא יט ו), ועגלה ערופה נלמדת מדין זבחים רגילים כיוון שגם לה יש תפקיד של כפרה כמו לקרבנות "רגילים".</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עריפת שתי עגלות יחד- אין עושין מצוות חבילות חבילות</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עריפת שתי עגלות יחד- אין עושין מצוות חבילות חבילות</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (סוטה ח.) דנה בשאלה האם ניתן להשקות שתי סוטות במקביל, ומעלה שאין לעשות זאת שמא אחת מהן תתעקש שלא להודות, ותשפיע על חברתה לעשות כמוה למרות שהיא אשמה. הגמרא מעלה סיבה נוספת שלא להשקות שתי סוטות במקביל וזאת מתוך ה<strong>ברייתא</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (סוטה ח.) דנה בשאלה האם ניתן להשקות שתי סוטות במקביל, ומעלה שאין לעשות זאת שמא אחת מהן תתעקש שלא להודות, ותשפיע על חברתה לעשות כמוה למרות שהיא אשמה. הגמרא מעלה סיבה נוספת שלא להשקות שתי סוטות במקביל וזאת מתוך ה<strong>ברייתא</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אין משקין שתי סוטות כאחת, ואין מטהרין שני מצורעין כאחת, ואין רוצעין שני עבדים כאחת, ואין עורפין שתי עגלות כאחת, לפי שאין עושין מצות חבילות חבילות</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אין משקין שתי סוטות כאחת, ואין מטהרין שני מצורעין כאחת, ואין רוצעין שני עבדים כאחת, ואין עורפין שתי עגלות כאחת, לפי שאין עושין מצות חבילות חבילות</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם הגמרא מסבירה, שכאשר שני כהנים שונים משקים שתי סוטות שונות, אין חוששים לעניין זה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם הגמרא מסבירה, שכאשר שני כהנים שונים משקים שתי סוטות שונות, אין חוששים לעניין זה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהסבר הדין ש"אין עושין מצוות חבילות חבילות" מסביר <strong>רש"י</strong> שהעושה כמה מצוות בבת אחת כאילו מראה שהמצוות עליו כמשא והוא ממהר לפורקו מעליו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהסבר הדין ש"אין עושין מצוות חבילות חבילות" מסביר <strong>רש"י</strong> שהעושה כמה מצוות בבת אחת כאילו מראה שהמצוות עליו כמשא והוא ממהר לפורקו מעליו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (מו"ק ח: ד"ה "לפי") מסבירים אחרת, שצריך שיהיה לב האדם פנוי למצווה אחת, ולכן אין לערבה במצווה אחרת, בדומה לכך שאין מערבים שמחה בשמחה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (מו"ק ח: ד"ה "לפי") מסבירים אחרת, שצריך שיהיה לב האדם פנוי למצווה אחת, ולכן אין לערבה במצווה אחרת, בדומה לכך שאין מערבים שמחה בשמחה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מ<strong>רש"י </strong>(שם) משמע שחילוק הגמרא בין כהן אחד לבין שני כהנים אמור בכל הדוגמאות שהובאו בברייתא ל"אין עושין מצוות חבילות חבילות". לפיכך, מותר לכאורה לערוף שתי עגלות במקביל כאשר עוסקים בדבר קבוצות שונות של אנשים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מ<strong>רש"י </strong>(שם) משמע שחילוק הגמרא בין כהן אחד לבין שני כהנים אמור בכל הדוגמאות שהובאו בברייתא ל"אין עושין מצוות חבילות חבילות". לפיכך, מותר לכאורה לערוף שתי עגלות במקביל כאשר עוסקים בדבר קבוצות שונות של אנשים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לא הזכיר בשום מקום את חילוק הגמרא בין כהן אחד לשנים. ונראה שאינו סובר חילוק זה להלכה<sup id="ref171"><a href="#fn171">[171]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לא הזכיר בשום מקום את חילוק הגמרא בין כהן אחד לשנים. ונראה שאינו סובר חילוק זה להלכה<sup id="ref171"><a href="#fn171">[171]</a></sup>.</p>
                     
                 </div>
                 
@@ -1198,65 +1198,65 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו-ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     עגלה ערופה אסורה בהנייה ונקברת במקום עריפתה, ומשתרד לנחל תיאסר בהנייה אף על פי שעדיין לא נערפה, ואם מתה או נשחטה אחר ירידתה הרי זו אסורה בהנייה ותקבר.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     נמצאו עדיה זוממין הרי זו מותרת בהנייה, כיצד, כגון שאמר עד אחד אני ראיתי את ההורג ובאו שנים והכחישוהו ואמרו לו לא ראית והפרישו את העגלה והורידוה לנחל לערפה על פיהם ואחר כך הוזמו השנים הרי זו מותרת בהנייה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     נמצא ההורג עד שלא תערף העגלה תצא ותרעה בעדר, נמצא אחר שנערפה תקבר במקומה, שעל הספק באה מתחילתה, כפרה ספיקה והלכה לה, ואף על פי שנמצא הרוצח אחר עריפתה הרי זה יהרג שנאמר  "ואתה תבער הדם הנקי מקרבך" (דברים כ"א ט').
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור ההנאה מעגלה ערופה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איסור ההנאה מעגלה ערופה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בעבודה זרה (עד.) מונה את העגלה הערופה בין הדברים ש"אסורין ואוסרין בכל שהו". כלומר, שאסורים, ומשנתערבו באחרים, אוסרים את כל התערובת כולה. ה<strong>גמרא</strong> שם מבררת מה הכוונה "אוסרין", ומגיעה למסקנה שמדובר בדברים שהם איסורי הנאה (ולכן לא נמנתה הנבילה במשנה זו, שאיסורה איסור אכילה בלבד).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> בעבודה זרה (עד.) מונה את העגלה הערופה בין הדברים ש"אסורין ואוסרין בכל שהו". כלומר, שאסורים, ומשנתערבו באחרים, אוסרים את כל התערובת כולה. ה<strong>גמרא</strong> שם מבררת מה הכוונה "אוסרין", ומגיעה למסקנה שמדובר בדברים שהם איסורי הנאה (ולכן לא נמנתה הנבילה במשנה זו, שאיסורה איסור אכילה בלבד).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית הגמרא במסכת זבחים (מו.) מעלה ה<strong>גמרא</strong> (אגב דיון בדיני נותר, אכילה בטומאה ומעילה בדם קרבן), שקיים כלל בקודשים, שכל דבר שנעשתה בו כבר מצוותו, שוב אין מועלים בו. יוצאי דופן של כל זה הם תרומת הדשן, והעגלה הערופה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגיית הגמרא במסכת זבחים (מו.) מעלה ה<strong>גמרא</strong> (אגב דיון בדיני נותר, אכילה בטומאה ומעילה בדם קרבן), שקיים כלל בקודשים, שכל דבר שנעשתה בו כבר מצוותו, שוב אין מועלים בו. יוצאי דופן של כל זה הם תרומת הדשן, והעגלה הערופה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תרומת הדשן היא הרמת הדשן, הוא אפר האיברים שנאכלו על המזבח כל הלילה, מעל המזבח ופינויו על ידי הכהן. בדין תרומת הדשן נאמר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תרומת הדשן היא הרמת הדשן, הוא אפר האיברים שנאכלו על המזבח כל הלילה, מעל המזבח ופינויו על ידי הכהן. בדין תרומת הדשן נאמר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְלָבַשׁ הַכֹּהֵן מִדּוֹ בַד וּמִכְנְסֵי בַד יִלְבַּשׁ עַל בְּשָׂרוֹ וְהֵרִים אֶת הַדֶּשֶׁן אֲשֶׁר תֹּאכַל הָאֵשׁ אֶת הָעֹלָה עַל הַמִּזְבֵּחַ וְשָׂמוֹ אֵצֶל הַמִּזְבֵּחַ: וּפָשַׁט אֶת בְּגָדָיו וְלָבַשׁ בְּגָדִים אֲחֵרִים וְהוֹצִיא אֶת הַדֶּשֶׁן אֶל מִחוּץ לַמַּחֲנֶה אֶל מָקוֹם טָהוֹר: (ויקרא ו ג-ד)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְלָבַשׁ הַכֹּהֵן מִדּוֹ בַד וּמִכְנְסֵי בַד יִלְבַּשׁ עַל בְּשָׂרוֹ וְהֵרִים אֶת הַדֶּשֶׁן אֲשֶׁר תֹּאכַל הָאֵשׁ אֶת הָעֹלָה עַל הַמִּזְבֵּחַ וְשָׂמוֹ אֵצֶל הַמִּזְבֵּחַ: וּפָשַׁט אֶת בְּגָדָיו וְלָבַשׁ בְּגָדִים אֲחֵרִים וְהוֹצִיא אֶת הַדֶּשֶׁן אֶל מִחוּץ לַמַּחֲנֶה אֶל מָקוֹם טָהוֹר: (ויקרא ו ג-ד)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, יש לגנוז את אותו אפר, והוא אסור בשימוש אחר, למרות שהוא תוצר של מצווה שכבר נעשתה בו- מצוות הקטרת אברי הקרבנות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, יש לגנוז את אותו אפר, והוא אסור בשימוש אחר, למרות שהוא תוצר של מצווה שכבר נעשתה בו- מצוות הקטרת אברי הקרבנות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, על פי דברי הגמרא, גם הנאה מעגלה ערופה אסורה אפילו לאחר עריפתה. <strong>רש"י</strong> מסביר שהדבר נלמד מהנאמר בעגלה ערופה וְעָרְפוּ <strong>שָׁם</strong> אֶת הָעֶגְלָה בַּנָּחַל, כלומר, שם תהא קבורתה, ואין להשתמש בה אף לאחר מצוותה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאמור, על פי דברי הגמרא, גם הנאה מעגלה ערופה אסורה אפילו לאחר עריפתה. <strong>רש"י</strong> מסביר שהדבר נלמד מהנאמר בעגלה ערופה וְעָרְפוּ <strong>שָׁם</strong> אֶת הָעֶגְלָה בַּנָּחַל, כלומר, שם תהא קבורתה, ואין להשתמש בה אף לאחר מצוותה.</p>
                     
                 </div>
                 
                 <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חזרת עגלה להיתרה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חזרת עגלה להיתרה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בסוטה (מז.) עוסקת במקרה בו בשלב כלשהו נמצא ההורג-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> בסוטה (מז.) עוסקת במקרה בו בשלב כלשהו נמצא ההורג-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נמצא ההורג עד שלא נערפה העגלה תצא ותרעה בעדר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נמצא ההורג עד שלא נערפה העגלה תצא ותרעה בעדר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">משנערפה העגלה תקבר במקומה שעל ספק באתה מתחילתה כיפרה ספיקה והלכה לה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">משנערפה העגלה תקבר במקומה שעל ספק באתה מתחילתה כיפרה ספיקה והלכה לה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נערפה העגלה ואחר כך נמצא ההורג הרי זה יהרג</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נערפה העגלה ואחר כך נמצא ההורג הרי זה יהרג</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם התגלה הרוצח לפני שנערפה העגלה, והתברר שבטעות הופרשה, חוזרת להיתרה הראשון. לעומת זאת, אם כבר הספיקו לעורפה, ורק אז התבררה זהות הרוצח, חייבת קבורה ואסורה בהנאה. הטעם שנותנת המשנה הוא שאם נתגלה הרוצח לאחר שנערפה העגלה אין זה אומר שהיתה הפרשתה בטעות, כיוון שכל מעשה העגלה נעשה תמיד מלכתחילה בידיעה שקיים אי שם רוצח, ושיש סיכוי שאי פעם תתגלה זהותו<sup id="ref172"><a href="#fn172">[172]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם התגלה הרוצח לפני שנערפה העגלה, והתברר שבטעות הופרשה, חוזרת להיתרה הראשון. לעומת זאת, אם כבר הספיקו לעורפה, ורק אז התבררה זהות הרוצח, חייבת קבורה ואסורה בהנאה. הטעם שנותנת המשנה הוא שאם נתגלה הרוצח לאחר שנערפה העגלה אין זה אומר שהיתה הפרשתה בטעות, כיוון שכל מעשה העגלה נעשה תמיד מלכתחילה בידיעה שקיים אי שם רוצח, ושיש סיכוי שאי פעם תתגלה זהותו<sup id="ref172"><a href="#fn172">[172]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כפשט דברי המשנה, שאם נתגלתה זהות הרוצח (או שנתברר שהיה מי שראה את הרצח) לפני שנערפה העגלה, חוזרת העגלה להיתרה, ויוצאת ורועה בעדר. לעומת זאת, אם כבר נערפה, אסורה בהנאה ונקברת במקומה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כפשט דברי המשנה, שאם נתגלתה זהות הרוצח (או שנתברר שהיה מי שראה את הרצח) לפני שנערפה העגלה, חוזרת העגלה להיתרה, ויוצאת ורועה בעדר. לעומת זאת, אם כבר נערפה, אסורה בהנאה ונקברת במקומה.</p>
                     
                 </div>
                 
                 <div id="topic-5-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מאימתי נאסרת העגלה בהנאה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מאימתי נאסרת העגלה בהנאה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בכריתות (כד:-כה.) נחלקו האמוראים בשאלה ממתי נאסרת העגלה הערופה בהנאה. <strong>רבא</strong> אומר שמרגע שתיערף נאסרת בהנאה, ואילו <strong>רב המנונא</strong> סובר שנאסרת כבר מחיים, מהרגע שמורידים אותה לנחל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא בכריתות (כד:-כה.) נחלקו האמוראים בשאלה ממתי נאסרת העגלה הערופה בהנאה. <strong>רבא</strong> אומר שמרגע שתיערף נאסרת בהנאה, ואילו <strong>רב המנונא</strong> סובר שנאסרת כבר מחיים, מהרגע שמורידים אותה לנחל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבא מסיק את דבריו מתוך דברי המשנה לפיהם אם נתגלה הרוצח לפני עריפה תצא העגלה ותרעה בעדר, ומכאן, שלא נאסרה העגלה עדיין עד עריפתה. מהגמרא עולה שאכן, דברי המשנה אינם עולים בקנה אחד עם דברי רב המנונא, אך  מכיוון שרב המנונא גייס משנה אחרת לטובתו<sup id="ref173"><a href="#fn173">[173]</a></sup>, חייבים לומר שכבר התנאים חלקו במחלוקתם של רבא ורב המנונא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רבא מסיק את דבריו מתוך דברי המשנה לפיהם אם נתגלה הרוצח לפני עריפה תצא העגלה ותרעה בעדר, ומכאן, שלא נאסרה העגלה עדיין עד עריפתה. מהגמרא עולה שאכן, דברי המשנה אינם עולים בקנה אחד עם דברי רב המנונא, אך  מכיוון שרב המנונא גייס משנה אחרת לטובתו<sup id="ref173"><a href="#fn173">[173]</a></sup>, חייבים לומר שכבר התנאים חלקו במחלוקתם של רבא ורב המנונא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כרב המנונא, שהעגלה נאסרת עוד מחיים, מרגע ירידתה לנחל<sup id="ref174"><a href="#fn174">[174]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כרב המנונא, שהעגלה נאסרת עוד מחיים, מרגע ירידתה לנחל<sup id="ref174"><a href="#fn174">[174]</a></sup>.</p>
                     
                 </div>
                 
@@ -1264,37 +1264,37 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הנחל שנערפה בו העגלה אסור בזריעה ועבודה לעולם שנאמר אשר לא יעבד בו ולא יזרע, וכל העובד שם עבודה בגופה של קרקע כגון שחרש או חפר או זרע או נטע וכיוצא באלו לוקה. ומותר לסרוק שם פשתן ולנקר שם אבנים, שזה כמי שארג שם בגד או תפרו שאינה מלאכה בגוף הקרקע, לכך נאמר לא יעבד ולא יזרע, מה זריעה בגופה של קרקע אף כל עבודה שנאסרה שם אינה אלא בגופה של קרקע.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור עבודה במקום עריפת העגלה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איסור עבודה במקום עריפת העגלה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בפרשת עגלה ערופה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר בפרשת עגלה ערופה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְהוֹרִדוּ זִקְנֵי הָעִיר הַהִוא אֶת הָעֶגְלָה אֶל נַחַל אֵיתָן אֲשֶׁר לֹא יֵעָבֵד בּוֹ וְלֹא יִזָּרֵעַ (דברים כא ד)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְהוֹרִדוּ זִקְנֵי הָעִיר הַהִוא אֶת הָעֶגְלָה אֶל נַחַל אֵיתָן אֲשֶׁר לֹא יֵעָבֵד בּוֹ וְלֹא יִזָּרֵעַ (דברים כא ד)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדין זה אומרת ה<strong>משנה</strong> (סוטה מה:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בדין זה אומרת ה<strong>משנה</strong> (סוטה מה:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקומה אסור מלזרוע ומלעבוד ומותר לסרוק שם פשתן ולנקר שם אבנים</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקומה אסור מלזרוע ומלעבוד ומותר לסרוק שם פשתן ולנקר שם אבנים</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (מו:) מובאת <strong>ברייתא</strong> הדנה במשמעות הפסוק הנ"ל-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (מו:) מובאת <strong>ברייתא</strong> הדנה במשמעות הפסוק הנ"ל-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אשר לא יעבד בו ולא יזרע- לשעבר, דברי <strong>רבי יאשיה</strong>,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אשר לא יעבד בו ולא יזרע- לשעבר, דברי <strong>רבי יאשיה</strong>,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יונתן</strong> אומר- להבא</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי יונתן</strong> אומר- להבא</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לדעת <strong>רבי יונתן</strong> הפסוק מדבר על האיסור לעבוד ולזרוע במקום עריפת העגלה לאחר עריפתה. לעומת זאת, לדעת <strong>רבי יאשיה</strong>, הפסוק עוסק באופן בחירת המקום הראוי לעריפת העגלה, שאמור להיות מקום שלא עובדים שם את האדמה ולא זורעים שם. <strong>רבא</strong> מסביר שתנאים אלה לא נחלקו על עצם הדין, המבואר במשנה, שמקום עריפת העגלה אסור בעבודה מכאן ולהבא, ושדין זה נלמד לפי כולם מהמילים "ולא יזרע". כל מחלוקתם היא כיצד להבין את המילים "לא יעבד בו", האם הן מדברות על העתיד או על העבר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, לדעת <strong>רבי יונתן</strong> הפסוק מדבר על האיסור לעבוד ולזרוע במקום עריפת העגלה לאחר עריפתה. לעומת זאת, לדעת <strong>רבי יאשיה</strong>, הפסוק עוסק באופן בחירת המקום הראוי לעריפת העגלה, שאמור להיות מקום שלא עובדים שם את האדמה ולא זורעים שם. <strong>רבא</strong> מסביר שתנאים אלה לא נחלקו על עצם הדין, המבואר במשנה, שמקום עריפת העגלה אסור בעבודה מכאן ולהבא, ושדין זה נלמד לפי כולם מהמילים "ולא יזרע". כל מחלוקתם היא כיצד להבין את המילים "לא יעבד בו", האם הן מדברות על העתיד או על העבר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מוסיפה ומביאה ברייתא הלומדת מייתור מלאכת הזריעה שבפסוק, שדווקא מלאכות בגוף הקרקע אסורות, ולכן סריקת פשתן או ניקור אבנים מותרות שם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מוסיפה ומביאה ברייתא הלומדת מייתור מלאכת הזריעה שבפסוק, שדווקא מלאכות בגוף הקרקע אסורות, ולכן סריקת פשתן או ניקור אבנים מותרות שם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> בספר המצוות (לא תעשה שט) מונה את האיסור לעבוד בקרקע מקום עריפת העגלה כאיסור תורה, ואף מביא מהגמרא במכות (כב.) שלוקים על לאו זה. עם זאת, <strong>רס"ג</strong> אינו מונה מצווה זו במניין המצוות שלו<sup id="ref175"><a href="#fn175">[175]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> בספר המצוות (לא תעשה שט) מונה את האיסור לעבוד בקרקע מקום עריפת העגלה כאיסור תורה, ואף מביא מהגמרא במכות (כב.) שלוקים על לאו זה. עם זאת, <strong>רס"ג</strong> אינו מונה מצווה זו במניין המצוות שלו<sup id="ref175"><a href="#fn175">[175]</a></sup>.</p>
                     
                 </div>
                 
@@ -1302,35 +1302,35 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אנשי עיר קרובה שנתאחרו ולא הביאו עגלה ערופה כופין אותן ומביאין ואפילו לאחר כמה שנים, שחייבי עגלה ערופה שעבר עליהן יום הכפורים חייבים להביא אחר יום הכפורים.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חייבי עגלה ערופה שעבר עליהם יום הכפורים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חייבי עגלה ערופה שעבר עליהם יום הכפורים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסוגיה בכריתות (כו.) עוסקת בחייבי קרבנות ועונשים שונים שעבר עליהם יום הכיפורים. הכלל הבסיסי הוא שמתוך שנאמר "מִכֹּל חַטֹּאתֵיכֶם לִפְנֵי ד' תִּטְהָרוּ" (ויקרא טז ל) נלמד שעוונות שרק ה' יודע מהם כגון ספקות שונים החייבים עליהם אשם תלוי, יום הכיפורים עצמו מכפר עליהם. לעומת זאת, חייבי קרבן או עונשים שחטאם ודאי וידוע, אין יום הכיפורים פוטרם מקרבנם או מעונשם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הסוגיה בכריתות (כו.) עוסקת בחייבי קרבנות ועונשים שונים שעבר עליהם יום הכיפורים. הכלל הבסיסי הוא שמתוך שנאמר "מִכֹּל חַטֹּאתֵיכֶם לִפְנֵי ד' תִּטְהָרוּ" (ויקרא טז ל) נלמד שעוונות שרק ה' יודע מהם כגון ספקות שונים החייבים עליהם אשם תלוי, יום הכיפורים עצמו מכפר עליהם. לעומת זאת, חייבי קרבן או עונשים שחטאם ודאי וידוע, אין יום הכיפורים פוטרם מקרבנם או מעונשם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לאור כלל זה שואלת הגמרא מה הדין בעיר החייבת עגלה ערופה שעבר עליה יום הכיפורים, שהרי עגלה ערופה באה על הספק, כיוון שאין ידוע שאנשי עיר זו חטאו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לאור כלל זה שואלת הגמרא מה הדין בעיר החייבת עגלה ערופה שעבר עליה יום הכיפורים, שהרי עגלה ערופה באה על הספק, כיוון שאין ידוע שאנשי עיר זו חטאו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> משיבה שחיוב הבאת העגלה אינו פוקע עם יום הכיפורים, וזאת משלוש סיבות אפשריות:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> משיבה שחיוב הבאת העגלה אינו פוקע עם יום הכיפורים, וזאת משלוש סיבות אפשריות:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>אביי</strong> הורג מכיר,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמר <strong>אביי</strong> הורג מכיר,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> אמר אמר קרא "ולארץ לא יכופר לדם אשר שפך בה [כי אם בדם שופכו]"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> אמר אמר קרא "ולארץ לא יכופר לדם אשר שפך בה [כי אם בדם שופכו]"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב פפא</strong> אמר אמר קרא "כפר לעמך ישראל אשר פדית"- ראויה כפרה זו שתכפר על יוצאי מצרים</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב פפא</strong> אמר אמר קרא "כפר לעמך ישראל אשר פדית"- ראויה כפרה זו שתכפר על יוצאי מצרים</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, <strong>אביי</strong> סובר שכיוון שקיים לפחות אדם אחד שיודע מהרצח, הלוא הוא הרוצח, הרי שמדובר בחטא שלא רק ה' יודע ממנו, וממילא אין בכוחו של יום הכיפורים בלבד לכפר עליו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, <strong>אביי</strong> סובר שכיוון שקיים לפחות אדם אחד שיודע מהרצח, הלוא הוא הרוצח, הרי שמדובר בחטא שלא רק ה' יודע ממנו, וממילא אין בכוחו של יום הכיפורים בלבד לכפר עליו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> סובר שמעשה רצח הוא שונה כיוון שהתורה מציעה לו שני "מסלולי" כפרה בלבד- או הענשת הרוצח על ידי הריגתו, או, כאשר זהות הרוצח אינה ידועה, הבאת עגלה ערופה כתחליף להריגת הרוצח עצמו<sup id="ref176"><a href="#fn176">[176]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> סובר שמעשה רצח הוא שונה כיוון שהתורה מציעה לו שני "מסלולי" כפרה בלבד- או הענשת הרוצח על ידי הריגתו, או, כאשר זהות הרוצח אינה ידועה, הבאת עגלה ערופה כתחליף להריגת הרוצח עצמו<sup id="ref176"><a href="#fn176">[176]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב פפא</strong> לומד מהנאמר ע"י הכהנים בטקס הבאת העגלה, שיש כח במעשה העגלה לכפר אפילו על יוצאי מצרים, ואם כן משמע שגם כאשר עברו כמה ימי כיפורים עדיין יש מקום לכפרה המיוחדת לעגלה ערופה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב פפא</strong> לומד מהנאמר ע"י הכהנים בטקס הבאת העגלה, שיש כח במעשה העגלה לכפר אפילו על יוצאי מצרים, ואם כן משמע שגם כאשר עברו כמה ימי כיפורים עדיין יש מקום לכפרה המיוחדת לעגלה ערופה.</p>
                     
                 </div>
                 
@@ -1338,7 +1338,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1417,6 +1417,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

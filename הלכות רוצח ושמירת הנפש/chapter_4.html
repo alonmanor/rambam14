@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות רוצח ושמירת הנפש - פרק ד'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ד')</h3>
                 <ul class="space-y-3">
@@ -1008,7 +1008,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1021,77 +1021,77 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המתכוין להרוג את זה והרג את זה פטור ממיתת בית דין ומן התשלומין ומן הגלות, לפי שאין ערי מקלט קולטות אותו כמו שיתבאר, לפיכך הזורק אבן לתוך עדה מישראל והרג אחד מהן פטור ממיתת בית דין. המתכוון להרוג את זה והרג את זה פטור ממיתת ב"ד. א"א כר"ש הוא זה ואין הלכה כרבי שמעון.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המתכוון להרוג את זה והרג את זה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המתכוון להרוג את זה והרג את זה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>במשנה</strong> בסנהדרין (עח:-עט.)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>במשנה</strong> בסנהדרין (עח:-עט.)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוין להרוג את הבהמה והרג את האדם לנכרי והרג את ישראל לנפלים והרג את בן קיימא פטור...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוין להרוג את הבהמה והרג את האדם לנכרי והרג את ישראל לנפלים והרג את בן קיימא פטור...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי שמעון </strong>אומר אפילו נתכוון להרוג את זה והרג את זה פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי שמעון </strong>אומר אפילו נתכוון להרוג את זה והרג את זה פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מודים <strong>חכמים</strong> ו<strong>רבי שמעון</strong> זה לזה במקרה בו נתכוון ההורג להרוג מישהו (או משהו) שאין חייבים עליו מיתת בי"ד, ואיתרע בידו והרג יהודי, שפטור ממיתה. אמנם חלקו במקרה בו נתכוון להרוג יהודי אחד, והרג יהודי אחר. לדעת <strong>חכמים</strong> כיוון שסוף סוף נתכוון לעשות מעשה המחייב מיתה, ועלה בידו מעשה המחייב מיתה, חייב. לעומתם סובר <strong>רבי שמעון</strong>, שכיוון שלא הרג את אותו אדם שנתכוון להרוג, פטור ממיתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מודים <strong>חכמים</strong> ו<strong>רבי שמעון</strong> זה לזה במקרה בו נתכוון ההורג להרוג מישהו (או משהו) שאין חייבים עליו מיתת בי"ד, ואיתרע בידו והרג יהודי, שפטור ממיתה. אמנם חלקו במקרה בו נתכוון להרוג יהודי אחד, והרג יהודי אחר. לדעת <strong>חכמים</strong> כיוון שסוף סוף נתכוון לעשות מעשה המחייב מיתה, ועלה בידו מעשה המחייב מיתה, חייב. לעומתם סובר <strong>רבי שמעון</strong>, שכיוון שלא הרג את אותו אדם שנתכוון להרוג, פטור ממיתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מובאת <strong>ברייתא</strong>, ובה מובאת שיטת ר' שמעון ביתר בהירות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מובאת <strong>ברייתא</strong>, ובה מובאת שיטת ר' שמעון ביתר בהירות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי שמעון</strong> אומר עד שיאמר לפלוני אני מתכוון</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי שמעון</strong> אומר עד שיאמר לפלוני אני מתכוון</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מוכיחה מברייתא זו, שני דברים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מוכיחה מברייתא זו, שני דברים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בכדי שיתחייב הרוצח מיתה, לשיטת ר' שמעון, צריך שיתכוון להרוג אדם ספיציפי (ולא סתם כל אחד ולא אכפת לו מי).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בכדי שיתחייב הרוצח מיתה, לשיטת ר' שמעון, צריך שיתכוון להרוג אדם ספיציפי (ולא סתם כל אחד ולא אכפת לו מי).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אפילו אם טעה בזיהוי בלבד, ויצא שהרג אדם אחר ממי שחשב שהוא הורג, פטור לר' שמעון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אפילו אם טעה בזיהוי בלבד, ויצא שהרג אדם אחר ממי שחשב שהוא הורג, פטור לר' שמעון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה שרבי שמעון לומד את שיטתו מהנאמר ברוצח במזיד-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מסבירה שרבי שמעון לומד את שיטתו מהנאמר ברוצח במזיד-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְכִי יִהְיֶה אִישׁ שֹׂנֵא לְרֵעֵהוּ <strong>וְאָרַב לוֹ וְקָם עָלָיו</strong> וְהִכָּהוּ נֶפֶשׁ וָמֵת וְנָס אֶל אַחַת הֶעָרִים הָאֵל (דברים יט יא)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְכִי יִהְיֶה אִישׁ שֹׂנֵא לְרֵעֵהוּ <strong>וְאָרַב לוֹ וְקָם עָלָיו</strong> וְהִכָּהוּ נֶפֶשׁ וָמֵת וְנָס אֶל אַחַת הֶעָרִים הָאֵל (דברים יט יא)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">(<strong>רש"י</strong> מסביר שהלימוד הוא מהייתור "וארב לו"<sup id="ref52"><a href="#fn52">[52]</a></sup>). חכמים, לעומת זאת, לומדים מפסוק זה דבר אחר שידון במסגרת הנושא הבא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">(<strong>רש"י</strong> מסביר שהלימוד הוא מהייתור "וארב לו"<sup id="ref52"><a href="#fn52">[52]</a></sup>). חכמים, לעומת זאת, לומדים מפסוק זה דבר אחר שידון במסגרת הנושא הבא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מביא <strong>רבא</strong> את שיטת <strong>תנא דבי חזקיה</strong>. לשיטתו, כפי שבנזקי ממון <strong>חייב</strong> אדם המזיק גם כאשר הוא שוגג או אינו מתכוון, כך, ולהיפך- כאשר אדם הרג, <strong>פטור</strong> הוא לעולם על ממון, גם כאשר היה הדבר בשוגג או בלא מתכוון (הכוונה שהתכוון להרוג את זה והרג את זה<sup id="ref53"><a href="#fn53">[53]</a></sup>). מדבריו של תנא דבי חזקיה משמע, שאם נתכוון לאחד והרג את השני, פטור ממיתה, שהרי לו היה חייב מיתה לא היה מקום לחדש שפטור מתשלומים. ובכן, נמצאנו למדים, שתנא דבי חזקיה סובר כר' שמעון במחלוקת שבמשנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מביא <strong>רבא</strong> את שיטת <strong>תנא דבי חזקיה</strong>. לשיטתו, כפי שבנזקי ממון <strong>חייב</strong> אדם המזיק גם כאשר הוא שוגג או אינו מתכוון, כך, ולהיפך- כאשר אדם הרג, <strong>פטור</strong> הוא לעולם על ממון, גם כאשר היה הדבר בשוגג או בלא מתכוון (הכוונה שהתכוון להרוג את זה והרג את זה<sup id="ref53"><a href="#fn53">[53]</a></sup>). מדבריו של תנא דבי חזקיה משמע, שאם נתכוון לאחד והרג את השני, פטור ממיתה, שהרי לו היה חייב מיתה לא היה מקום לחדש שפטור מתשלומים. ובכן, נמצאנו למדים, שתנא דבי חזקיה סובר כר' שמעון במחלוקת שבמשנה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו כמי לפסוק, אם כר' שמעון או כחכמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו כמי לפסוק, אם כר' שמעון או כחכמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמה ראשונים, ובתוכם ה<strong>ראב"ד</strong>, פסקו כחכמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כמה ראשונים, ובתוכם ה<strong>ראב"ד</strong>, פסקו כחכמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זה, ה<strong>רמב"ם</strong> וה<strong>מאירי</strong> (בפירושם למשנה), מתוך שהם מבינים שהלכה כרבא, שאינו פוסק כחכמים, כותבים במפורש שהלכה כרבי שמעון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זה, ה<strong>רמב"ם</strong> וה<strong>מאירי</strong> (בפירושם למשנה), מתוך שהם מבינים שהלכה כרבא, שאינו פוסק כחכמים, כותבים במפורש שהלכה כרבי שמעון.</p>
                     
                 </div>
                 
                 <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המתכוון להרוג בהמה והרג את האדם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המתכוון להרוג בהמה והרג את האדם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הבאנו לעיל מדברי המשנה את שיטת <strong>חכמים</strong>, ש"נתכוון להרוג בהמה והרג אדם-פטור". נחלקו הראשונים בטעם הפטור-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הבאנו לעיל מדברי המשנה את שיטת <strong>חכמים</strong>, ש"נתכוון להרוג בהמה והרג אדם-פטור". נחלקו הראשונים בטעם הפטור-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (ד"ה "נתכוין") מפרש שפטור משום שיש פגם בהתראה, שהרי היא התראת ספק. כלומר, כיוון שההתראה היא רק למקרה בו ההורג "יפספס" את הבהמה ויפגע באדם, אין היא נחשבת התראה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (ד"ה "נתכוין") מפרש שפטור משום שיש פגם בהתראה, שהרי היא התראת ספק. כלומר, כיוון שההתראה היא רק למקרה בו ההורג "יפספס" את הבהמה ויפגע באדם, אין היא נחשבת התראה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו מסביר ה<strong>רמ"ה</strong> שההרוג אינו נידון כהורג במזיד משום שחשב שלא יפספס ושיפגע בבהמה כפי שהתכוון, ולא ניתן לראות חוסר זהירות, אפילו פושעת, כרצח במזיד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו מסביר ה<strong>רמ"ה</strong> שההרוג אינו נידון כהורג במזיד משום שחשב שלא יפספס ושיפגע בבהמה כפי שהתכוון, ולא ניתן לראות חוסר זהירות, אפילו פושעת, כרצח במזיד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי דין גלות במתכוון להרוג בהמה והרג אדם ובמתכוון להרוג את זה והרג את זה, עי' בהמשך ().</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי דין גלות במתכוון להרוג בהמה והרג אדם ובמתכוון להרוג את זה והרג את זה, עי' בהמשך ().</p>
                     
                 </div>
                 
                 <div id="topic-1-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הזורק אבן לתוך חבורת בני אדם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הזורק אבן לתוך חבורת בני אדם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדיונה של הגמרא על המקור לדברי <strong>ר"ש</strong>, מגיעה, כאמור, הגמרא למסקנה שהוא לומד את דבריו מהפסוק "וארב לו וקם עליו".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בדיונה של הגמרא על המקור לדברי <strong>ר"ש</strong>, מגיעה, כאמור, הגמרא למסקנה שהוא לומד את דבריו מהפסוק "וארב לו וקם עליו".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי <strong>חכמים</strong>, לעומת זאת, מסבירה הגמרא שפסוק זה מלמדנו שדווקא המתכוון להרוג את האחד והרג את השני חייב מיתה, אך "הזורק אבן לגו", כלומר, לתוך חבורת בני אדם שחלקם גויים וחלקם ישראל, ונהרג מהם יהודי, פטור ממיתה<sup id="ref54"><a href="#fn54">[54]</a></sup>. הגמרא מסבירה שהחידוש שבפסוק, הוא שפטור הזורק אפילו אם מדובר בתשעה יהודים וגוי אחד. כאן מתחדש המושג ההלכתי החשוב "כל קבוע כמחצה על מחצה דמי", כלומר, למרות שרוב האנשים בקבוצה היו יהודים, בכל זאת אין הולכים לפי הרוב אלא אומרים שהדבר שקול לקבוצה שחציה ישראל וחציה גויים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי <strong>חכמים</strong>, לעומת זאת, מסבירה הגמרא שפסוק זה מלמדנו שדווקא המתכוון להרוג את האחד והרג את השני חייב מיתה, אך "הזורק אבן לגו", כלומר, לתוך חבורת בני אדם שחלקם גויים וחלקם ישראל, ונהרג מהם יהודי, פטור ממיתה<sup id="ref54"><a href="#fn54">[54]</a></sup>. הגמרא מסבירה שהחידוש שבפסוק, הוא שפטור הזורק אפילו אם מדובר בתשעה יהודים וגוי אחד. כאן מתחדש המושג ההלכתי החשוב "כל קבוע כמחצה על מחצה דמי", כלומר, למרות שרוב האנשים בקבוצה היו יהודים, בכל זאת אין הולכים לפי הרוב אלא אומרים שהדבר שקול לקבוצה שחציה ישראל וחציה גויים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים כיצד הנחה זו, שרואים את קבוצת האנשים כחציה ישראל וחציה גוים אפילו אם רק אחד מהם גוי, מסבירה מדוע פטור הזורק אבן לתוך קבוצה זו והרג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נחלקו הראשונים כיצד הנחה זו, שרואים את קבוצת האנשים כחציה ישראל וחציה גוים אפילו אם רק אחד מהם גוי, מסבירה מדוע פטור הזורק אבן לתוך קבוצה זו והרג.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר, שיכול הרוצח להצטדק ולומר שהתכוון להרוג את הגוי, וכיוון שספק נפשות להקל, עלינו לקחת בחשבון את דבריו ולפוטרו. החידוש שבפסוק הוא שהרוצח יכול לומר זאת אפילו אם קיים רק גוי אחד בכל הקבוצה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר, שיכול הרוצח להצטדק ולומר שהתכוון להרוג את הגוי, וכיוון שספק נפשות להקל, עלינו לקחת בחשבון את דבריו ולפוטרו. החידוש שבפסוק הוא שהרוצח יכול לומר זאת אפילו אם קיים רק גוי אחד בכל הקבוצה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> חולק ומסביר שמדובר כגון שלא ידועה זהותו של ההרוג, אם גוי הוא או ישראל, והחידוש הוא שאפילו אם רוב רובה של הקבוצה הם יהודים, עדיין אין לומר שבוודאי היה ההרוג ישראל, אלא הדבר נידון כספק, ומפני הספק נפטר זורק האבן ממיתה<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"ה</strong> חולק ומסביר שמדובר כגון שלא ידועה זהותו של ההרוג, אם גוי הוא או ישראל, והחידוש הוא שאפילו אם רוב רובה של הקבוצה הם יהודים, עדיין אין לומר שבוודאי היה ההרוג ישראל, אלא הדבר נידון כספק, ומפני הספק נפטר זורק האבן ממיתה<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
                     
                 </div>
                 
@@ -1099,43 +1099,43 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     נתכוון להכות חבירו על מתניו ולא היה בכלי כדי להמית על מתניו והלכה לה האבן על לבו והיה בה כדי להמית על לבו ומת, או שנתכוון להכותו על לבו והיה בה כדי להמית על לבו והלכה לה על מתניו ולא היה בה כדי להמית על מתניו ומת, פטור ממיתת בית דין ואינו גולה שאין ההורג בכוונה גולה. אבל אם נתכוון להכותו על מתניו והיה בה כדי להמית על מתניו והלכה לה על לבו ומת הרי זה נהרג, וכן כל כיוצא בזה.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">צירוף הכוונה והמעשה בחיוב מיתה על רצח</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">צירוף הכוונה והמעשה בחיוב מיתה על רצח</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כותבת ה<strong>משנה</strong> (עח:-עט.)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כותבת ה<strong>משנה</strong> (עח:-עט.)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוין להכותו על מתניו, ולא היה בה כדי להמיתו על מתניו. והלכה לה על לבו והיה בה כדי להמיתו על לבו ומת- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוין להכותו על מתניו, ולא היה בה כדי להמיתו על מתניו. והלכה לה על לבו והיה בה כדי להמיתו על לבו ומת- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוין להכותו על לבו, והיה בה כדי להמית על לבו. והלכה לה על מתניו ולא היה בה כדי להמית על מתניו ומת- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוין להכותו על לבו, והיה בה כדי להמית על לבו. והלכה לה על מתניו ולא היה בה כדי להמית על מתניו ומת- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוון להכות את הגדול, ולא היה בה כדי להמית הגדול. והלכה לה על הקטן, והיה בה כדי להמית את הקטן ומת- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוון להכות את הגדול, ולא היה בה כדי להמית הגדול. והלכה לה על הקטן, והיה בה כדי להמית את הקטן ומת- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכון להכות את הקטן, והיה בה כדי להמית את הקטן. והלכה לה על הגדול ולא היה בה כדי להמית את הגדול ומת- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכון להכות את הקטן, והיה בה כדי להמית את הקטן. והלכה לה על הגדול ולא היה בה כדי להמית את הגדול ומת- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אבל,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אבל,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוון להכות על מתניו והיה בה כדי להמית על מתניו. והלכה לה על לבו ומת- חייב,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוון להכות על מתניו והיה בה כדי להמית על מתניו. והלכה לה על לבו ומת- חייב,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוון להכות את הגדול והיה בה כדי להמית את הגדול והלכה לה על הקטן ומת- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוון להכות את הגדול והיה בה כדי להמית את הגדול והלכה לה על הקטן ומת- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">העולה מדברי המשנה הוא שקיימות שתי דרישות בכדי לחייב את הרוצח מיתת בי"ד. הראשונה היא שהתכוון הרוצח למעשה שיש בו בכדי להמית. השניה היא שגם יעשה בפועל מעשה שיש בו בכדי להמית. אם שני התנאים מתקיימים, אפילו אם לא נעשה בפועל מה שחשב לעשות בתחילה, הרי הוא חייב מיתה. כך למשל, אם חשב להכותו על מתניו מכה שיש בה בכדי להרוג, ופיספס והכהו על ליבו (ובוודאי יש בה בכדי להרוג על ליבו), חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">העולה מדברי המשנה הוא שקיימות שתי דרישות בכדי לחייב את הרוצח מיתת בי"ד. הראשונה היא שהתכוון הרוצח למעשה שיש בו בכדי להמית. השניה היא שגם יעשה בפועל מעשה שיש בו בכדי להמית. אם שני התנאים מתקיימים, אפילו אם לא נעשה בפועל מה שחשב לעשות בתחילה, הרי הוא חייב מיתה. כך למשל, אם חשב להכותו על מתניו מכה שיש בה בכדי להרוג, ופיספס והכהו על ליבו (ובוודאי יש בה בכדי להרוג על ליבו), חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כאמור כר' שמעון, ולכן הוא משמיט את דיני נתכוון לקטן והלכה לגדול וכו', שכן באלה פטור בכל אופן מתוך דינו של ר' שמעון, שחייב להתכוון ולהרוג אדם ספיציפי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כאמור כר' שמעון, ולכן הוא משמיט את דיני נתכוון לקטן והלכה לגדול וכו', שכן באלה פטור בכל אופן מתוך דינו של ר' שמעון, שחייב להתכוון ולהרוג אדם ספיציפי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק, שבמקרים הנ"ל, כאשר פטור ההורג ממיתת בית דין, הוא אף לא גולה, מכיוון ש"אין ההורג בכוונה גולה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק, שבמקרים הנ"ל, כאשר פטור ההורג ממיתת בית דין, הוא אף לא גולה, מכיוון ש"אין ההורג בכוונה גולה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>כסף משנה </strong>מסביר שדבריו של הרמב"ם לקוחים מהגמרא במסכת מכות (ז:), הלומדת מהנאמר ברוצח במזיד "בבלי דעת", שהמתכוון להרוג בהמה או גוי, והרג ישראל, אינו גולה. ואם נפרש שאינו גולה משום שקרוב הוא להיות מזיד, הרי שאם המתכוון לדבר אחר והרג אדם קרוב למזיד הוא, כל שכן שהמתכוון להכות אדם בדרך שאינה ממיתה והכהו בדרך הממיתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>כסף משנה </strong>מסביר שדבריו של הרמב"ם לקוחים מהגמרא במסכת מכות (ז:), הלומדת מהנאמר ברוצח במזיד "בבלי דעת", שהמתכוון להרוג בהמה או גוי, והרג ישראל, אינו גולה. ואם נפרש שאינו גולה משום שקרוב הוא להיות מזיד, הרי שאם המתכוון לדבר אחר והרג אדם קרוב למזיד הוא, כל שכן שהמתכוון להכות אדם בדרך שאינה ממיתה והכהו בדרך הממיתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד בעניין גדרו של השוגג הקרוב למזיד שאינו גולה, יבואר בעזהי"ת בהמשך בפרק ו הלכה י.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד בעניין גדרו של השוגג הקרוב למזיד שאינו גולה, יבואר בעזהי"ת בהמשך בפרק ו הלכה י.</p>
                     
                 </div>
                 
@@ -1143,49 +1143,49 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המכה את חבירו באבן או באגרוף וכיוצא בהן אומדין אותו, אם אמדוהו לחיים נותן חמשה דברים ונפטר, ואפילו חלה המוכה והכביד ומת מחמת המכה הרי זה פטור. ואם אמדוהו למיתה אוסרין את המכה בבית הסוהר מיד וממתינים לזה, אם מת יהרג המכה ואם הקל ונתרפא רפואה שלימה והלך בשוק על רגליו כשאר הבריאים משלם המכה חמשה דברים ונפטר.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     זה שנאמר בתורה על משענתו אינו שיהלך והוא נשען על המטה או על אחר שאפילו הנוטה למות יכול להלך על המשענת לא נאמר משענתו אלא שיהיה מהלך על משענת כוחו ולא יהיה צריך כח אחר להשען עליו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אמדוהו למיתה והקל ממה שהיה ולאחר מכאן הכביד ומת הרי זה נהרג, ואין אומדין אותו אומד שני כשהקל שרגלים לדבר.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אומד למיתה ואומד לחיים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אומד למיתה ואומד לחיים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> בסנהדרין (עח.):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> בסנהדרין (עח.):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המכה את חבירו בין באבן בין באגרוף ואמדוהו למיתה והיקל ממה שהיה ולאחר מכאן הכביד ומת חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המכה את חבירו בין באבן בין באגרוף ואמדוהו למיתה והיקל ממה שהיה ולאחר מכאן הכביד ומת חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי נחמיה</strong> אומר פטור שרגלים לדבר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי נחמיה</strong> אומר פטור שרגלים לדבר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאשר אומדים את המוכה שימות כתוצאה מההכאה, ואז מצבו משתפר ושוב מידרדר והוא מת, <strong>חכמים</strong> אומרים שכיוון שסוף סוף מת מתוך חוליו, חייב המכה מיתה, ואילו <strong>רבי</strong><strong> נחמיה</strong> אומר שהעובדה שהשתפר מצבו של המוכה ואז שוב הידרדר מרמזת על כך שנפטר מסיבה נוספת ולא רק מהמכה, ולכן המכה פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כאשר אומדים את המוכה שימות כתוצאה מההכאה, ואז מצבו משתפר ושוב מידרדר והוא מת, <strong>חכמים</strong> אומרים שכיוון שסוף סוף מת מתוך חוליו, חייב המכה מיתה, ואילו <strong>רבי</strong><strong> נחמיה</strong> אומר שהעובדה שהשתפר מצבו של המוכה ואז שוב הידרדר מרמזת על כך שנפטר מסיבה נוספת ולא רק מהמכה, ולכן המכה פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מובאת <strong>ברייתא</strong> המסבירה שחכמים ורבי נחמיה חלוקים בהסבר הפסוק-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מובאת <strong>ברייתא</strong> המסבירה שחכמים ורבי נחמיה חלוקים בהסבר הפסוק-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אִם יָקוּם וְהִתְהַלֵּךְ בַּחוּץ עַל מִשְׁעַנְתּוֹ וְנִקָּה הַמַּכֶּה רַק שִׁבְתּוֹ יִתֵּן וְרַפֹּא יְרַפֵּא" (שמות כא יט)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אִם יָקוּם וְהִתְהַלֵּךְ בַּחוּץ עַל מִשְׁעַנְתּוֹ וְנִקָּה הַמַּכֶּה רַק שִׁבְתּוֹ יִתֵּן וְרַפֹּא יְרַפֵּא" (שמות כא יט)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבי נחמיה אומר שלא סביר שהפסוק ילמדנו שאם לא מת המוכה בסופו של דבר אין למכה משפט מוות, שהרי דבר זה פשוט הוא. לכן, מפרש רבי נחמיה שהפסוק מדבר על מקרה בו אמדו את המוכה למיתה, אך אחר כך מצבו השתפר עד כדי שהתהלך בחוץ. לאחר מכן מצבו הידרדר שוב והוא מת. הפסוק מלמד אותנו שבמקרה כזה אין למכה משפט מוות, וחייב הוא רק בחמשת תשלומי החובל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רבי נחמיה אומר שלא סביר שהפסוק ילמדנו שאם לא מת המוכה בסופו של דבר אין למכה משפט מוות, שהרי דבר זה פשוט הוא. לכן, מפרש רבי נחמיה שהפסוק מדבר על מקרה בו אמדו את המוכה למיתה, אך אחר כך מצבו השתפר עד כדי שהתהלך בחוץ. לאחר מכן מצבו הידרדר שוב והוא מת. הפסוק מלמד אותנו שבמקרה כזה אין למכה משפט מוות, וחייב הוא רק בחמשת תשלומי החובל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, חכמים בכל זאת מבינים שהפסוק עוסק בכגון שלא מת המוכה בסופו של דבר, ובא הפסוק ללמדנו שחובשים את המכה עד שיתברר מצבו של המוכה. רק אם המוכה מתאושש, משחררים את המכה, וזו כוונת הפסוק "ונקה המכה"<sup id="ref56"><a href="#fn56">[56]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, חכמים בכל זאת מבינים שהפסוק עוסק בכגון שלא מת המוכה בסופו של דבר, ובא הפסוק ללמדנו שחובשים את המכה עד שיתברר מצבו של המוכה. רק אם המוכה מתאושש, משחררים את המכה, וזו כוונת הפסוק "ונקה המכה"<sup id="ref56"><a href="#fn56">[56]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מכילתא</strong> (כא יט) מפרשת שכוונת הפסוק "על משענתו" אינה שיתהלך המוכה על קביים וכדומה, אלא הפוך, שיתהלך ללא עזרה ויסמך על כוחו שלו (כלומר "משענתו", הכוונה לכוחו העצמי). מתוך כך כוונת הפסוק היא שאם הבריא המוכה <strong>לחלוטין</strong>, אפילו אם מת אח"כ, בידוע שלא מת מהמכה, ואין למכה דין מוות. אף מתרגום <strong>אונקלוס</strong> משמע כך שמתרגם "על משענתו"- "על ברייה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מכילתא</strong> (כא יט) מפרשת שכוונת הפסוק "על משענתו" אינה שיתהלך המוכה על קביים וכדומה, אלא הפוך, שיתהלך ללא עזרה ויסמך על כוחו שלו (כלומר "משענתו", הכוונה לכוחו העצמי). מתוך כך כוונת הפסוק היא שאם הבריא המוכה <strong>לחלוטין</strong>, אפילו אם מת אח"כ, בידוע שלא מת מהמכה, ואין למכה דין מוות. אף מתרגום <strong>אונקלוס</strong> משמע כך שמתרגם "על משענתו"- "על ברייה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> מציין שפירוש זה נכון רק לשיטת חכמים, אך לשיטת רבי נחמיה יש לפרש שהכוונה להליכה על קביים, כלומר, להקלת מצב מסויימת, שכן רבי נחמיה סובר ש"נקה המכה" ופטור ממיתה אפילו אם חל שיפור זמני וקטן במצבו של המוכה. גם מתוך <strong>תרגום יונתן</strong> שתרגם "וּמְהֲלֵךְ בְּשׁוּקָא עַל מוֹרְנִיתֵיהּ" יש להבין שהפסוק מדבר על שיפור מסויים במצבו של המוכה, המתבטא בכך שהוא הולך מעט על קביים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"ה</strong> מציין שפירוש זה נכון רק לשיטת חכמים, אך לשיטת רבי נחמיה יש לפרש שהכוונה להליכה על קביים, כלומר, להקלת מצב מסויימת, שכן רבי נחמיה סובר ש"נקה המכה" ופטור ממיתה אפילו אם חל שיפור זמני וקטן במצבו של המוכה. גם מתוך <strong>תרגום יונתן</strong> שתרגם "וּמְהֲלֵךְ בְּשׁוּקָא עַל מוֹרְנִיתֵיהּ" יש להבין שהפסוק מדבר על שיפור מסויים במצבו של המוכה, המתבטא בכך שהוא הולך מעט על קביים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ברייתא</strong> המובאת בגמרא דנה גם במקרה בו מיד לאחר ההכאה אמדו את המוכה לחיים, ולאחר מכן מת. במקרה זה לכולי עלמא פטור המכה ממיתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ברייתא</strong> המובאת בגמרא דנה גם במקרה בו מיד לאחר ההכאה אמדו את המוכה לחיים, ולאחר מכן מת. במקרה זה לכולי עלמא פטור המכה ממיתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כברייתא זו לעניין זה שאמדוהו לחיים ובסוף מת, ובמחלוקת הוא פוסק כשיטת חכמים<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק כברייתא זו לעניין זה שאמדוהו לחיים ובסוף מת, ובמחלוקת הוא פוסק כשיטת חכמים<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
                     
                 </div>
                 
@@ -1193,40 +1193,40 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הכוהו עשרה בני אדם בעשר מקלות ומת בין שהכוהו בזה אחר זה בין שהכוהו כאחת כולן פטורין ממיתת בית דין, שנאמר "כל נפש אדם", עד שיהיה אחד שהרג כל הנפש, והוא הדין לדחפוהו שנים או שכבשוהו שנים לתוך המים, או שהיו רבים יושבים ויצא חץ מביניהן והרג, כולן פטורין.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כמה שרצחו את האחד</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">כמה שרצחו את האחד</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בבבא קמא (נג:) דנה בשור ואדם שדחפו אדם אחר לבור. במקרה זה משלם בעל השור כופר, אך האדם פטור מתשלומים (כיוון שעשה עוון מיתה). ה<strong>תוספות</strong> וה<strong>רשב"א </strong>מקשים על דין זה מהאמור בסוגייתנו- לדעתם, בעליו של שור משלמים כופר רק במקרה בו עשה השור דבר שלוּ היה אדם עושה במקומו, היה חייב מיתה. ומכאן קשה- כיצד זה משלם בעל השור כופר, כשהשור הרג בשיתוף עם גורם אחר, והרי אדם שהרג בשיתוף עם אחרים, פטור ממיתה, על פי הנאמר בסוגייה בסנהדרין!</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בבבא קמא (נג:) דנה בשור ואדם שדחפו אדם אחר לבור. במקרה זה משלם בעל השור כופר, אך האדם פטור מתשלומים (כיוון שעשה עוון מיתה). ה<strong>תוספות</strong> וה<strong>רשב"א </strong>מקשים על דין זה מהאמור בסוגייתנו- לדעתם, בעליו של שור משלמים כופר רק במקרה בו עשה השור דבר שלוּ היה אדם עושה במקומו, היה חייב מיתה. ומכאן קשה- כיצד זה משלם בעל השור כופר, כשהשור הרג בשיתוף עם גורם אחר, והרי אדם שהרג בשיתוף עם אחרים, פטור ממיתה, על פי הנאמר בסוגייה בסנהדרין!</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong> מתרץ שפטורם של העשרה שהרגו אמור רק כאשר כל אחד מהם הכה בעזרת מקל אחר, אך אם אחזו עשרה מקל אחד, והרגו בו<sup id="ref59"><a href="#fn59">[59]</a></sup>, חייבים כולם מיתה, שכן עשו כולם מעשה אחד של הריגה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"א</strong> מתרץ שפטורם של העשרה שהרגו אמור רק כאשר כל אחד מהם הכה בעזרת מקל אחר, אך אם אחזו עשרה מקל אחד, והרגו בו<sup id="ref59"><a href="#fn59">[59]</a></sup>, חייבים כולם מיתה, שכן עשו כולם מעשה אחד של הריגה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי ה<strong>רמב"ם </strong>לפנינו, "עד שיהיה אחד שהרג כל הנפש", משמע שאין דעתו כך, אלא בכל מקום בו הרגו כמה בשותפות, פטורים ההורגים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי ה<strong>רמב"ם </strong>לפנינו, "עד שיהיה אחד שהרג כל הנפש", משמע שאין דעתו כך, אלא בכל מקום בו הרגו כמה בשותפות, פטורים ההורגים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> נידון גם כן המקרה של "המכה את חבירו ואין בו כדי להמית, ובא אחר והמיתו". הגמרא אומרת שפשוט שבמקרה זה האחרון חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> נידון גם כן המקרה של "המכה את חבירו ואין בו כדי להמית, ובא אחר והמיתו". הגמרא אומרת שפשוט שבמקרה זה האחרון חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי דברים אלה, פוסק ה<strong>רמב"ם</strong> (בתחילת ההלכה הבאה), שאם כמה אנשים זרקו אבנים על הקרבן, כך שבכל אחת מהאבנים אין בכדי להמית, ובא אדם נוסף וזרק עליו אבן שיש בה בכדי להמית ומת, חייב זה האחרון מיתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי דברים אלה, פוסק ה<strong>רמב"ם</strong> (בתחילת ההלכה הבאה), שאם כמה אנשים זרקו אבנים על הקרבן, כך שבכל אחת מהאבנים אין בכדי להמית, ובא אדם נוסף וזרק עליו אבן שיש בה בכדי להמית ומת, חייב זה האחרון מיתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כעין זה פוסק אף ה<strong>מאירי</strong>, והוא מוסיף ואומר שאפילו אין באבן שזרק האחרון כשלעצמה בכדי להמית, ורק משום שהנרצח כבר היה מוכה היה בה בכדי להמית, בכל זאת חייב הזורקה מיתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כעין זה פוסק אף ה<strong>מאירי</strong>, והוא מוסיף ואומר שאפילו אין באבן שזרק האחרון כשלעצמה בכדי להמית, ורק משום שהנרצח כבר היה מוכה היה בה בכדי להמית, בכל זאת חייב הזורקה מיתה.</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כמה שיצא חץ מביניהם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">כמה שיצא חץ מביניהם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקרה זה, של כמה אנשים שיצא חץ מביניהם והרג, מובא <strong>בגמרא</strong> (סנהדרין פ.), בהקשר של המקרה של רוצח שנתערב באחרים (הנידון בהלכה הבאה). בעניין זה פוסקת <strong>הברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקרה זה, של כמה אנשים שיצא חץ מביניהם והרג, מובא <strong>בגמרא</strong> (סנהדרין פ.), בהקשר של המקרה של רוצח שנתערב באחרים (הנידון בהלכה הבאה). בעניין זה פוסקת <strong>הברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שנים שהיו עומדין ויצא חץ מביניהם והרג שניהם פטורין ואמר <strong>רבי יוסי</strong> אפילו אבא חלפתא ביניהן</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שנים שהיו עומדין ויצא חץ מביניהם והרג שניהם פטורין ואמר <strong>רבי יוסי</strong> אפילו אבא חלפתא ביניהן</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בניגוד למקרים האחרים שמביא הרמב"ם בצד מקרה זה, כאן ברור שרק אחד ירה את החץ, ואנו מסופקים מי הוא, ומכיוון שכך, אנו פוטרים את כולם<sup id="ref60"><a href="#fn60">[60]</a></sup>. ומחדש <strong>ר' יוסי</strong>, שאפילו אחד משני החשודים האפשריים ידוע כאדם צדיק, עדיין אין מחזיקים את חבירו להיות זה שירה את החץ.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, בניגוד למקרים האחרים שמביא הרמב"ם בצד מקרה זה, כאן ברור שרק אחד ירה את החץ, ואנו מסופקים מי הוא, ומכיוון שכך, אנו פוטרים את כולם<sup id="ref60"><a href="#fn60">[60]</a></sup>. ומחדש <strong>ר' יוסי</strong>, שאפילו אחד משני החשודים האפשריים ידוע כאדם צדיק, עדיין אין מחזיקים את חבירו להיות זה שירה את החץ.</p>
                     
                 </div>
                 
@@ -1234,35 +1234,35 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     זרקו בו עשרה אבן זה אחר זה וכל אחת מהן אין בה כדי להמית וזרק אחד אבן באחרונה ויש בה כדי להמית ומת הרי זה האחרון נהרג עליו. רוצח שנגמר דינו ונתערב באחרים ולא נודע מי הוא מהן כולן פטורין, ורוצח שלא נגמר דינו שנתערב ברוצחים אחרים שנגמר דינן כולן פטורין מן המיתה שאין גומרין דינו של אדם אלא בפניו, ואוסרין את כולן.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רוצח שנתערב באחרים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">רוצח שנתערב באחרים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (סנהדרין עט:):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (סנהדרין עט:):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוצח שנתערב באחרים כולן פטורין</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רוצח שנתערב באחרים כולן פטורין</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יהודה</strong> אומר כונסין אותן לכיפה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי יהודה</strong> אומר כונסין אותן לכיפה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא הועלו כמה אפשרויות להבנת המחלוקת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא הועלו כמה אפשרויות להבנת המחלוקת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>שמואל</strong> מפרש, שהמדובר ברוצח שנגמר דינו למיתה, שנתערב ברוצחים אחרים שטרם נגמר דינם (אך סיימו כבר לשאת ולתת בעניינם והגיעו למסקנה שהם רצחו- רש"י), ומכיוון שלא ניתן עתה לגמור את דינם, כי אין גומרים דינו של אדם אלא בפניו, כאשר ידוע מי הוא, <strong>חכמים</strong> פוסקים שכולם פטורים. לעומתו, פוסק <strong>ר' יהודה</strong> שלא ניתן לפוטרם בלא כלום, ולכן יש לאסור את כולם בכיפה (בדרך המתוארת בהלכה הבאה).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>שמואל</strong> מפרש, שהמדובר ברוצח שנגמר דינו למיתה, שנתערב ברוצחים אחרים שטרם נגמר דינם (אך סיימו כבר לשאת ולתת בעניינם והגיעו למסקנה שהם רצחו- רש"י), ומכיוון שלא ניתן עתה לגמור את דינם, כי אין גומרים דינו של אדם אלא בפניו, כאשר ידוע מי הוא, <strong>חכמים</strong> פוסקים שכולם פטורים. לעומתו, פוסק <strong>ר' יהודה</strong> שלא ניתן לפוטרם בלא כלום, ולכן יש לאסור את כולם בכיפה (בדרך המתוארת בהלכה הבאה).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ריש לקיש</strong> מפרש שבמקרה של שמואל לית מאן דפליג שכולם פטורים. לדעתו התנאים במשנה נחלקו במקרה של שור שהרג ונגמר דינו, שנתערב בין שוורים אחרים שנגחו והרגו ולא נגמר דינם. <strong>חכמים</strong> פוטרים את כולם כי גם את דינו של השור יש לגמור בפניו, ואילו <strong>ר' יהודה</strong> סובר שיש להכניס את כולם לכיפה שימותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ריש לקיש</strong> מפרש שבמקרה של שמואל לית מאן דפליג שכולם פטורים. לדעתו התנאים במשנה נחלקו במקרה של שור שהרג ונגמר דינו, שנתערב בין שוורים אחרים שנגחו והרגו ולא נגמר דינם. <strong>חכמים</strong> פוטרים את כולם כי גם את דינו של השור יש לגמור בפניו, ואילו <strong>ר' יהודה</strong> סובר שיש להכניס את כולם לכיפה שימותו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מפרש, שחכמים ור' יהודה כלל לא דיברו על אותו דבר. <strong>חכמים</strong> פטרו את כולם במקרה של רוצח שנתערב באחרים, ולא ניתן לזהותו. לעומת זאת <strong>ר' יהודה</strong> דיבר על שור שהרג ונגמר דינו, שנתערב בשוורים אחרים שלא הרגו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> מפרש, שחכמים ור' יהודה כלל לא דיברו על אותו דבר. <strong>חכמים</strong> פטרו את כולם במקרה של רוצח שנתערב באחרים, ולא ניתן לזהותו. לעומת זאת <strong>ר' יהודה</strong> דיבר על שור שהרג ונגמר דינו, שנתערב בשוורים אחרים שלא הרגו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק בפשטות, שאם הרוצח נתערב בחפים מפשע, כולם פטורים. בנוסף כותב הרמב"ם שרוצח שנגמר דינו שהתערב בכאלה שעוד לא נגמר דינם, אוסרים את כולם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק בפשטות, שאם הרוצח נתערב בחפים מפשע, כולם פטורים. בנוסף כותב הרמב"ם שרוצח שנגמר דינו שהתערב בכאלה שעוד לא נגמר דינם, אוסרים את כולם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>כסף משנה</strong> סובר שהרמב"ם פסק כחכמים לפי הבנת המשנה כשמואל (או ככולי עלמא לפי הבנת ריש לקיש או רבא). כנראה שהכסף משנה מבין, שמה שפוסק הרמב"ם שאוסרים את כולם, אין הכוונה לדינו של ר' יהודה שכונסים אותם לכיפה, אלא מדובר כנראה במאסר שנועד לכך שאם יבוא מישהו שמכיר את הרוצח ניתן יהיה לבצע בו את גזר הדין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>כסף משנה</strong> סובר שהרמב"ם פסק כחכמים לפי הבנת המשנה כשמואל (או ככולי עלמא לפי הבנת ריש לקיש או רבא). כנראה שהכסף משנה מבין, שמה שפוסק הרמב"ם שאוסרים את כולם, אין הכוונה לדינו של ר' יהודה שכונסים אותם לכיפה, אלא מדובר כנראה במאסר שנועד לכך שאם יבוא מישהו שמכיר את הרוצח ניתן יהיה לבצע בו את גזר הדין.</p>
                     
                 </div>
                 
@@ -1270,51 +1270,51 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח-ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח-ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ההורג נפשות ולא היו שני העדים רואין אותו כאחת אלא ראהו האחד אחר האחד, או שהרג בפני שני עדים בלא התראה, או שהוכחשו העדים בבדיקות ולא הוכחשו בחקירות, כל אלו הרצחנין כונסין אותן לכיפה ומאכילין אותן לחם צר ומים לחץ עד שיצרו מיעיהן ואחר כך מאכילים אותן שעורים עד שכריסם נבקעת מכובד החולי.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ואין עושין דבר זה לשאר מחוייבי מיתת בית דין אלא אם נתחייב מיתה ממיתין אותו ואם אינו חייב מיתה פוטרין אותו, שאע"פ שיש עונות חמורין משפיכות דמים אין בהן השחתת ישובו של עולם כשפיכות דמים, אפילו ע"ז ואין צריך לומר עריות או חילול שבת אינן כשפיכות דמים, שאלו העונות הן מעבירות שבין אדם להקב"ה אבל שפיכות דמים מעבירות שבינו לבין חבירו, וכל מי שיש בידו עון זה הרי הוא רשע גמור ואין כל המצות שעשה כל ימיו שקולין כנגד עון זה ולא יצילו אותו מן הדין שנאמר "אדם עשוק בדם נפש" וגו'. צא ולמד מאחאב עובד ע"ז שהרי נאמר בו רק לא היה כאחאב וכשנסדרו עונותיו וזכיותיו לפני אלהי הרוחות לא נמצא עון שחייבו כלייה ולא היה שם דבר אחר ששקול כנגדו אלא דמי נבות שנ' ותצא הרוח ותעמוד לפני ה' זו רוח נבות ונאמר לה תפתה וגם תוכל והרי הוא הרשע לא הרג בידו אלא סיבב קל וחומר להורג בידו.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוכנסים לכיפה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המוכנסים לכיפה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (סנהדרין פא:) דנה במי ש"לקה ושנה":</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (סנהדרין פא:) דנה במי ש"לקה ושנה":</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מי שלקה ושנה בית דין מכניסין אותו לכיפה ומאכילין אותו שעורין עד שכריסו מתבקעת</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מי שלקה ושנה בית דין מכניסין אותו לכיפה ומאכילין אותו שעורין עד שכריסו מתבקעת</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מבארת, שהכוונה למי שעשה עבירה שיש בה כרת, ושנה באותה עבירה ממש שלוש פעמים (בדין זה יורחב בעזה"י בהלכות סנהדרין פרק יח הלכה ד).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מבארת, שהכוונה למי שעשה עבירה שיש בה כרת, ושנה באותה עבירה ממש שלוש פעמים (בדין זה יורחב בעזה"י בהלכות סנהדרין פרק יח הלכה ד).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> הבאה מבואר מקרה נוסף בו נוהג אותו הדין:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> הבאה מבואר מקרה נוסף בו נוהג אותו הדין:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ההורג נפש שלא בעדים מכניסין אותו לכיפה ומאכילין אותו לחם צר ומים לחץ</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ההורג נפש שלא בעדים מכניסין אותו לכיפה ומאכילין אותו לחם צר ומים לחץ</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> מבואר ששתי המשניות מתארות את אותו גזר הדין, כלומר, מאכילים אותו לחם צר ומים לחץ, ואז מאכילים אותו שעורים עד שכריסו מתבקעת. במילים אחרות, העונש המתואר הוא סוג של עונש מוות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> מבואר ששתי המשניות מתארות את אותו גזר הדין, כלומר, מאכילים אותו לחם צר ומים לחץ, ואז מאכילים אותו שעורים עד שכריסו מתבקעת. במילים אחרות, העונש המתואר הוא סוג של עונש מוות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלקו האמוראים בגדר ה"הורג שלא בעדים", כלומר, מדוע מצד אחד אין ודאות מספיקה בכדי להורגו במיתת בית דין, אך מצד שני יש ודאות מספקת בכדי להמיתו ב"כיפה"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חלקו האמוראים בגדר ה"הורג שלא בעדים", כלומר, מדוע מצד אחד אין ודאות מספיקה בכדי להורגו במיתת בית דין, אך מצד שני יש ודאות מספקת בכדי להמיתו ב"כיפה"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב</strong> מסביר שמדובר במקרה בו היתה "עדות מיוחדת" (מיוחדת מלשון יחידי, כלומר, לא עדות רגילה בשני עדים). המושג "עדות מיוחדת" מועלה ב<strong>גמרא</strong> במסכת מכות (ו:). הגמרא שם לומדת מהפסוק "לא יומת על פי עד אחד", שאין הורגים על פי "עדות מיוחדת". ה<strong>גמרא</strong> מסבירה ש"עדות מיוחדת" הכוונה לשני עדים הרואים את המעשה אך "אחד אחד" ולא שניהם כאחד. בהמשך מובאת ברייתא המביאה שתי דוגמאות לכך-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב</strong> מסביר שמדובר במקרה בו היתה "עדות מיוחדת" (מיוחדת מלשון יחידי, כלומר, לא עדות רגילה בשני עדים). המושג "עדות מיוחדת" מועלה ב<strong>גמרא</strong> במסכת מכות (ו:). הגמרא שם לומדת מהפסוק "לא יומת על פי עד אחד", שאין הורגים על פי "עדות מיוחדת". ה<strong>גמרא</strong> מסבירה ש"עדות מיוחדת" הכוונה לשני עדים הרואים את המעשה אך "אחד אחד" ולא שניהם כאחד. בהמשך מובאת ברייתא המביאה שתי דוגמאות לכך-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שני עדים אשר אינם רואים את המעשה מאותו מקום אלא זה מחלון אחד וזה מחלון שני.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שני עדים אשר אינם רואים את המעשה מאותו מקום אלא זה מחלון אחד וזה מחלון שני.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שני עדים שראו את המעשה מאותו מקום אך בזמנים שונים<sup id="ref61"><a href="#fn61">[61]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שני עדים שראו את המעשה מאותו מקום אך בזמנים שונים<sup id="ref61"><a href="#fn61">[61]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגייתנו מפרש <strong>רש"י</strong>, שמדובר בעדים שראו את המעשה זה מחלון אחד וזה מחלון שני, כדוגמה הראשונה שבברייתא במכות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגייתנו מפרש <strong>רש"י</strong>, שמדובר בעדים שראו את המעשה זה מחלון אחד וזה מחלון שני, כדוגמה הראשונה שבברייתא במכות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו ה<strong>רמב"ם</strong> מפרש שהעדות המיוחדת על פיה מכניסים לכיפה, היא כגון שראו את המעשה אחד אחר האחד, כדוגמה השניה שבברייתא במכות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו ה<strong>רמב"ם</strong> מפרש שהעדות המיוחדת על פיה מכניסים לכיפה, היא כגון שראו את המעשה אחד אחר האחד, כדוגמה השניה שבברייתא במכות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>שמואל</strong> סובר שדברי המשנה אמורים במקרה בו חסרה התראה, ולכן לא ניתן להרוג במיתת בית דין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>שמואל</strong> סובר שדברי המשנה אמורים במקרה בו חסרה התראה, ולכן לא ניתן להרוג במיתת בית דין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב חסדא</strong> מבאר שמדובר במקרה בו שני העדים עמדו בחקירות, אך גרסתם לא היתה זהה בבדיקות. ה<strong>משנה</strong> בסנהדרין (מ.) מסבירה את ההבדל בין בדיקות לבין חקירות. "בדיקות" הן שאלות שלגיטימי מצד העדים לענות עליהן "איני יודע", כיוון שהן אינן קשורות לגוף המעשה. לעומת זה, "חקירות" הן שאלות שאם אין העדים יודעים לענות עליהן, בטלה עדותם. גם בבדיקות וגם בחקירות, אם העדים סותרים זה את זה, בטלה עדותם. רב חסדא מלמדנו, שאם בחקירות, שהן השאלות העיקריות, תשובות העדים עלו בקנה אחד זו עם זו, יש מספיק וודאות באשמת הרוצח בכדי להענישו בכיפה<sup id="ref62"><a href="#fn62">[62]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב חסדא</strong> מבאר שמדובר במקרה בו שני העדים עמדו בחקירות, אך גרסתם לא היתה זהה בבדיקות. ה<strong>משנה</strong> בסנהדרין (מ.) מסבירה את ההבדל בין בדיקות לבין חקירות. "בדיקות" הן שאלות שלגיטימי מצד העדים לענות עליהן "איני יודע", כיוון שהן אינן קשורות לגוף המעשה. לעומת זה, "חקירות" הן שאלות שאם אין העדים יודעים לענות עליהן, בטלה עדותם. גם בבדיקות וגם בחקירות, אם העדים סותרים זה את זה, בטלה עדותם. רב חסדא מלמדנו, שאם בחקירות, שהן השאלות העיקריות, תשובות העדים עלו בקנה אחד זו עם זו, יש מספיק וודאות באשמת הרוצח בכדי להענישו בכיפה<sup id="ref62"><a href="#fn62">[62]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כשלוש דעות האמוראים גם יחד, כך שבכל אחד ממקרים אלו מוכנס הרוצח לכיפה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק כשלוש דעות האמוראים גם יחד, כך שבכל אחד ממקרים אלו מוכנס הרוצח לכיפה.</p>
                     
                 </div>
                 
@@ -1322,80 +1322,80 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י-יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י-יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המינים, והם עובדי עבודה זרה מישראל, או העושה עבירות להכעיס אפילו אכל נבילה או לבש שעטנז להכעיס הרי זה מין, והאפיקורוסין, והן שכופרין בתורה ובנבואה, מישראל, מצוה להרגן, אם יש בידו כח להרגן בסייף בפרהסיא הורג, ואם לאו יבוא עליהן בעלילות עד שיסבב הריגתן. כיצד, ראה אחד מהן שנפל לבאר, והסולם בבאר, קודם ומסלק הסולם ואומר לו הריני טרוד להוריד בני מן הגג ואחזירנו לך, וכיוצא בדברים אלו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אבל הגוים שאין בינינו ובינם מלחמה ורועי בהמה דקה מישראל וכיוצא בהן אין מסבבים להן המיתה ואסור להצילן אם נטו למות, כגון שראה אחד מהן שנפל לים אינו מעלהו, שנאמר "לא תעמוד על דם רעך" (ויקרא י"ט ט"ז), ואין זה רעך.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     במה דברים אמורים בישראל בעל עבירות העומד ברשעו ושונה בו תמיד כגון הרועים בהמה דקה שפקרו בגזל והם הולכים באולתן, אבל ישראל בעל עבירות שאינו עומד ברשעו תמיד אלא עושה עבירות להניית עצמו כגון אוכל נבילות לתיאבון מצוה להצילו ואסור לעמוד על דמו.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היתר הריגה וחיוב הצלה ברשעים שונים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">היתר הריגה וחיוב הצלה ברשעים שונים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בעבודה זרה (כו:) נשנית <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא בעבודה זרה (כו:) נשנית <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">העובדי כוכבים ורועי בהמה דקה לא מעלין ולא מורידין</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">העובדי כוכבים ורועי בהמה דקה לא מעלין ולא מורידין</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אבל המינין והמסורות והמומרים (והאפיקורסין) היו מורידין ולא מעלין</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אבל המינין והמסורות והמומרים (והאפיקורסין) היו מורידין ולא מעלין</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, עובדי כוכבים ורועי בהמה דקה (שרועים בשדות אחרים) אין הורגים אותם, אך גם אין להצילם. לעומתם מינים, מוסרים ומומרים לא רק שאין מצילים אלא אף יש לגרום מיתתם. יש לציין שה<strong>רי"ף</strong> גרס בברייתא "המינין והמסורות והמומרים <strong>והאפיקורסין</strong>", וכמותו גרס ה<strong>רמב"ם</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, עובדי כוכבים ורועי בהמה דקה (שרועים בשדות אחרים) אין הורגים אותם, אך גם אין להצילם. לעומתם מינים, מוסרים ומומרים לא רק שאין מצילים אלא אף יש לגרום מיתתם. יש לציין שה<strong>רי"ף</strong> גרס בברייתא "המינין והמסורות והמומרים <strong>והאפיקורסין</strong>", וכמותו גרס ה<strong>רמב"ם</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> (הלכות עבודה זרה פרק י הלכה א) מסביר שחכמים הורו לנסות לסבב את הריגתם של אותם רשעים "מפני שהיו מצירים לישראל ומסירין את העם מאחרי ה'". כלומר, בדומה להריגת מוסר (עי' רמב"ם חובל ומזיק ח י), בו יש להורגו בכדי להגן על הציבור מפני הנזק החומרי שהוא עלול לבצע, הריגת מינים ואפיקורסים מטרתה להגן על הציבור מפני הנזקים הרוחניים שהם עלולים לגרום להם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> (הלכות עבודה זרה פרק י הלכה א) מסביר שחכמים הורו לנסות לסבב את הריגתם של אותם רשעים "מפני שהיו מצירים לישראל ומסירין את העם מאחרי ה'". כלומר, בדומה להריגת מוסר (עי' רמב"ם חובל ומזיק ח י), בו יש להורגו בכדי להגן על הציבור מפני הנזק החומרי שהוא עלול לבצע, הריגת מינים ואפיקורסים מטרתה להגן על הציבור מפני הנזקים הרוחניים שהם עלולים לגרום להם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה את כוונת דברי הברייתא "מורידין ולא מעלין", האמורים במינים ובמוסרים- הכוונה "לא מעלין" היא, שאין נותנים לו לעלות. למשל, אם נפל לבור, לוקחים את הסולם באמתלא שהוא צריך אותו בדחיפות ומיד ישיבו וכיוצא בזה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה את כוונת דברי הברייתא "מורידין ולא מעלין", האמורים במינים ובמוסרים- הכוונה "לא מעלין" היא, שאין נותנים לו לעלות. למשל, אם נפל לבור, לוקחים את הסולם באמתלא שהוא צריך אותו בדחיפות ומיד ישיבו וכיוצא בזה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בהבנת דברי הברייתא ש"מורידים"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בהבנת דברי הברייתא ש"מורידים"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "תיחות") מבינים שהסיבה שמסובבים מיתה למין או לאפיקורוס באמתלות ולא באופן ישיר היא כדי למנוע איבה מצד הגויים כלפינו. בעקבות כך מסבירים התוספות, שהורגים על ידי אמתלות דווקא בזמן שאין ידינו תקיפה על העכו"ם, אך בזמן שידינו תקיפה על העכו"ם, יש להורגם ללא אמתלות ובאופן ישיר כי אין חוששים לאיבה. כעין זה כותב גם ה<strong>רמב"ם</strong> בהלכות עבודה זרה (י א).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ד"ה "תיחות") מבינים שהסיבה שמסובבים מיתה למין או לאפיקורוס באמתלות ולא באופן ישיר היא כדי למנוע איבה מצד הגויים כלפינו. בעקבות כך מסבירים התוספות, שהורגים על ידי אמתלות דווקא בזמן שאין ידינו תקיפה על העכו"ם, אך בזמן שידינו תקיפה על העכו"ם, יש להורגם ללא אמתלות ובאופן ישיר כי אין חוששים לאיבה. כעין זה כותב גם ה<strong>רמב"ם</strong> בהלכות עבודה זרה (י א).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם כותב <strong>רבינו חננאל</strong> (שם ד"ה "אמר מר"), ש"היו באים עליהם בעלילות, אבל אין הורגים אותם בידיים". מדבריו משמע שבכל אופן אין להרוג את אותם רשעים באופן ישיר, ולא רק משום איבה, כך גם מסביר המאירי (ד"ה "הורדה") ומבאר שלפי שיטה זו יש להבין את דברי הגמרא כך- כיצד "מורידים"? ע"י כך ש"אין מעלים", כלומר, על ידי כך שבאים בעלילות ואמתלות שונות לנצל את מצבו המסוכן של הרשע בכדי שימות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם כותב <strong>רבינו חננאל</strong> (שם ד"ה "אמר מר"), ש"היו באים עליהם בעלילות, אבל אין הורגים אותם בידיים". מדבריו משמע שבכל אופן אין להרוג את אותם רשעים באופן ישיר, ולא רק משום איבה, כך גם מסביר המאירי (ד"ה "הורדה") ומבאר שלפי שיטה זו יש להבין את דברי הגמרא כך- כיצד "מורידים"? ע"י כך ש"אין מעלים", כלומר, על ידי כך שבאים בעלילות ואמתלות שונות לנצל את מצבו המסוכן של הרשע בכדי שימות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שולחן ערוך</strong> (חו"מ תכה ה) פסק כדעת התוספות, ולעומתו מדברי ה<strong>רמ"א</strong> (חו"מ שפח טו בדין המוסר) משמע שפסק כדברי רבינו חננאל, שאין להרוג בידיים אלא בעקיפין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שולחן ערוך</strong> (חו"מ תכה ה) פסק כדעת התוספות, ולעומתו מדברי ה<strong>רמ"א</strong> (חו"מ שפח טו בדין המוסר) משמע שפסק כדברי רבינו חננאל, שאין להרוג בידיים אלא בעקיפין.</p>
                     
                 </div>
                 
                 <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגדרת המין והמומר, וההבדל ביניהם לעניין הריגתם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הגדרת המין והמומר, וההבדל ביניהם לעניין הריגתם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוחנן</strong> מעמת את הברייתא שהובאה לעיל (כו:), לפיה המומרים הם מאלה ש"מורידים ולא מעלים" אותם, עם ברייתא אחרת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יוחנן</strong> מעמת את הברייתא שהובאה לעיל (כו:), לפיה המומרים הם מאלה ש"מורידים ולא מעלים" אותם, עם ברייתא אחרת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"לכל אבידת אחיך"- לרבות את המומר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"לכל אבידת אחיך"- לרבות את המומר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מברייתא זו משמע שישראל המומר לעבור עבירה דין ישראל לו, ויש להשיב לו אבידתו, ובוודאי שאין לסבב לו מיתה! מתוך קושיה זו בוחר ר' יוחנן למחוק את המלה "מומר" מהברייתא המונה את אלה שמורידים ולא מעלים אותם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מברייתא זו משמע שישראל המומר לעבור עבירה דין ישראל לו, ויש להשיב לו אבידתו, ובוודאי שאין לסבב לו מיתה! מתוך קושיה זו בוחר ר' יוחנן למחוק את המלה "מומר" מהברייתא המונה את אלה שמורידים ולא מעלים אותם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מציעה עוד אפשרות לפתרון: המומר שיש להשיב לו את אבידתו הוא "אוכל נבילות לתיאבון" (כלומר, שחוטא בגלל תאוותו). ואילו המומר שיש בו דין "מורידין ואין מעלין" הוא מומר "אוכל נבילות להכעיס"<sup id="ref63"><a href="#fn63">[63]</a></sup>. הגמרא מסבירה שר' יוחנן לא הלך בדרך זו משום שלדעתו אוכל נבילות להכעיס נקרא "מין" ולא "מומר".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מציעה עוד אפשרות לפתרון: המומר שיש להשיב לו את אבידתו הוא "אוכל נבילות לתיאבון" (כלומר, שחוטא בגלל תאוותו). ואילו המומר שיש בו דין "מורידין ואין מעלין" הוא מומר "אוכל נבילות להכעיס"<sup id="ref63"><a href="#fn63">[63]</a></sup>. הגמרא מסבירה שר' יוחנן לא הלך בדרך זו משום שלדעתו אוכל נבילות להכעיס נקרא "מין" ולא "מומר".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה את מחלוקתם של <strong>רבינא</strong> ו<strong>ר</strong><strong>ב</strong><strong> אחא</strong>, בנוגע להגדרתו של המומר ולהבדל בינו לבין מין. לפי דעה אחת מומר הוא אוכל נבילות לתיאבון, אך אוכל נבילות להכעיס נחשב מין. לפי הדעה החולקת מין הוא דווקא עובד ע"ז, אך אוכל נבילות, בין לתיאבון, בין להכעיס, נקרא מומר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה את מחלוקתם של <strong>רבינא</strong> ו<strong>ר</strong><strong>ב</strong><strong> אחא</strong>, בנוגע להגדרתו של המומר ולהבדל בינו לבין מין. לפי דעה אחת מומר הוא אוכל נבילות לתיאבון, אך אוכל נבילות להכעיס נחשב מין. לפי הדעה החולקת מין הוא דווקא עובד ע"ז, אך אוכל נבילות, בין לתיאבון, בין להכעיס, נקרא מומר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בשאלה האם חלקו רב אחא ורבינא גם לגבי דינו של המומר החוטא להכעיס לעניין דין "מורידין ואין מעלין"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בשאלה האם חלקו רב אחא ורבינא גם לגבי דינו של המומר החוטא להכעיס לעניין דין "מורידין ואין מעלין"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המאירי</strong> כותב, שלכולי עלמא העובר עבירה להכעיס מורידין ואין מעלין אותו, ואין הדבר תלוי במחלוקת הנ"ל. שהרי אם העובר להכעיס מין הוא, כך דינו שיהרגוהו, ואם אין הוא מין, הרי שנינו שגם המומרים מורידים ואין מעלים אותם (ולפי פירוש הגמרא הכוונה למומרים החוטאים להכעיס)<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המאירי</strong> כותב, שלכולי עלמא העובר עבירה להכעיס מורידין ואין מעלין אותו, ואין הדבר תלוי במחלוקת הנ"ל. שהרי אם העובר להכעיס מין הוא, כך דינו שיהרגוהו, ואם אין הוא מין, הרי שנינו שגם המומרים מורידים ואין מעלים אותם (ולפי פירוש הגמרא הכוונה למומרים החוטאים להכעיס)<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ד </strong>(בתוספותיו) חולק. לדבריו, מחלוקת רב אחא ורבינא אינה מתייחסת לסתירה בין הברייתות<sup id="ref65"><a href="#fn65">[65]</a></sup>, אלא היא עוסקת בשאלה מי הוא אותו מומר עליו נאמר שמשיבים לו אבידתו (ובוודאי יש להצילו ממוות), האם זהו רק מומר החוטא לתאוותו, או שמא אף מומר החוטא להכעיס. נמצא, שלדעה ששם "מומר" כולל גם את החוטא להכעיס, דין מורידין ואין מעלין כלל אינו אמור באדם שמומר לעבור עבירה, אפילו עושה זאת להכעיס, שהרי יש להשיב לו את אבידתו. הרי"ד מסביר שהסברה לכך שיהיה אסור להרוג מומר אפילו עובר להכעיס היא משום שעדיין מקיים הוא מצוות אחרות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רי"ד </strong>(בתוספותיו) חולק. לדבריו, מחלוקת רב אחא ורבינא אינה מתייחסת לסתירה בין הברייתות<sup id="ref65"><a href="#fn65">[65]</a></sup>, אלא היא עוסקת בשאלה מי הוא אותו מומר עליו נאמר שמשיבים לו אבידתו (ובוודאי יש להצילו ממוות), האם זהו רק מומר החוטא לתאוותו, או שמא אף מומר החוטא להכעיס. נמצא, שלדעה ששם "מומר" כולל גם את החוטא להכעיס, דין מורידין ואין מעלין כלל אינו אמור באדם שמומר לעבור עבירה, אפילו עושה זאת להכעיס, שהרי יש להשיב לו את אבידתו. הרי"ד מסביר שהסברה לכך שיהיה אסור להרוג מומר אפילו עובר להכעיס היא משום שעדיין מקיים הוא מצוות אחרות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי ה<strong>רמב"ם</strong> לפנינו, משמע שהוא סובר לפי הדעה בגמרא שמומר הוא דווקא החוטא לתאוותו, והחוטא להכעיס נכלל בשם "מין" יחד עם העובד עבודה זרה. לעומת זה, בהלכות תשובה כותב הרמב"ם שמין הוא המכחיש את מציאות ה', את אחדותו, את ראשוניותו, המגשימו, או העובד לישות מתווכת. הרושם המתקבל הוא שלפי דעת הרמב"ם, מין הוא כינוי לכופר במציאות ה' ואף העושה עבירות להכעיס מבטא בכך כפירה במציאות ה', ולכן שייך לקרותו מין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי ה<strong>רמב"ם</strong> לפנינו, משמע שהוא סובר לפי הדעה בגמרא שמומר הוא דווקא החוטא לתאוותו, והחוטא להכעיס נכלל בשם "מין" יחד עם העובד עבודה זרה. לעומת זה, בהלכות תשובה כותב הרמב"ם שמין הוא המכחיש את מציאות ה', את אחדותו, את ראשוניותו, המגשימו, או העובד לישות מתווכת. הרושם המתקבל הוא שלפי דעת הרמב"ם, מין הוא כינוי לכופר במציאות ה' ואף העושה עבירות להכעיס מבטא בכך כפירה במציאות ה', ולכן שייך לקרותו מין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו מפרש <strong>רש"י</strong> (שם) שמין הוא דווקא כומר לעבודה זרה, בין גוי ובין ישראל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו מפרש <strong>רש"י</strong> (שם) שמין הוא דווקא כומר לעבודה זרה, בין גוי ובין ישראל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (קנח ב) כתב כדברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (קנח ב) כתב כדברי הרמב"ם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> כותב שמומר החוטא רק במטרה להכעיס הוא בוודאי מין לכל דבר ועניין. לדבריו, המומר לחטוא להכעיס בו חלקו בגמרא אם מומר הוא או מין, הוא מומר האדיש לעבור איזו עבירה, כך שאם יש לפניו חתיכת היתר וחתיכת איסור, יעדיף לקחת את האיסור, אמנם לא מתוך תאווה (שהרי יש לפניו חתיכת היתר) אך גם לא מתוך רצון להכעיס בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ריטב"א</strong> כותב שמומר החוטא רק במטרה להכעיס הוא בוודאי מין לכל דבר ועניין. לדבריו, המומר לחטוא להכעיס בו חלקו בגמרא אם מומר הוא או מין, הוא מומר האדיש לעבור איזו עבירה, כך שאם יש לפניו חתיכת היתר וחתיכת איסור, יעדיף לקחת את האיסור, אמנם לא מתוך תאווה (שהרי יש לפניו חתיכת היתר) אך גם לא מתוך רצון להכעיס בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי מומר החוטא לתאוותו חלקו הראשונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי מומר החוטא לתאוותו חלקו הראשונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת רוב הראשונים ובכללם ה<strong>רמב"ם</strong>, ה<strong>תוספות</strong> (שם ד"ה "אני") וה<strong>מאירי</strong>, מהעובדה שיש להשיב למומר שכזה את אבידתו, יש ללמוד שאף חובה להצילו. הרמב"ם מסביר שההבדל בין מומר העובר לתיאבון לבין רועי בהמה דקה (אף שגם הם עוסקים בגזל מתוך תאוות ממון) הוא שהאחרונים עוסקים בגזל באופן תדיר ועומדים ברשעם ולכן אין חובה להצילם, כדברי הברייתא ש"אין מורידין ואין מעלין".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת רוב הראשונים ובכללם ה<strong>רמב"ם</strong>, ה<strong>תוספות</strong> (שם ד"ה "אני") וה<strong>מאירי</strong>, מהעובדה שיש להשיב למומר שכזה את אבידתו, יש ללמוד שאף חובה להצילו. הרמב"ם מסביר שההבדל בין מומר העובר לתיאבון לבין רועי בהמה דקה (אף שגם הם עוסקים בגזל מתוך תאוות ממון) הוא שהאחרונים עוסקים בגזל באופן תדיר ועומדים ברשעם ולכן אין חובה להצילם, כדברי הברייתא ש"אין מורידין ואין מעלין".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת ראשונים אלו, כותב בעל ה<strong>יראים</strong> (קנו) שדין מומר העושה עבירות לתיאבון ורועי בהמה דקה שווה. בשניהם אין חובה להצילם ואין מצווה להלוות להם ולא איסור להלוותם בריבית. אמנם גילתה תורה באופן יוצא מן הכלל, שיש חובה להשיב להם את אבידתם, אך זהו היוצא מן הכלל שאינו מעיד על הכלל<sup id="ref66"><a href="#fn66">[66]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת ראשונים אלו, כותב בעל ה<strong>יראים</strong> (קנו) שדין מומר העושה עבירות לתיאבון ורועי בהמה דקה שווה. בשניהם אין חובה להצילם ואין מצווה להלוות להם ולא איסור להלוותם בריבית. אמנם גילתה תורה באופן יוצא מן הכלל, שיש חובה להשיב להם את אבידתם, אך זהו היוצא מן הכלל שאינו מעיד על הכלל<sup id="ref66"><a href="#fn66">[66]</a></sup>.</p>
                     
                 </div>
                 
@@ -1403,7 +1403,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1502,6 +1502,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

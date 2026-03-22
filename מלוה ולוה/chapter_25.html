@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">מלוה ולוה - פרק כה</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק כה)</h3>
                 <ul class="space-y-3">
@@ -1032,7 +1032,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1045,111 +1045,111 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המלוה את חבירו ואחר שהלוהו אמר לו אחד אני ערב, או שתבע את הלוה בדין ואמר לו אחר הנח ואני ערב, או שהיה חונק את חבירו בשוק ליתן לו ואמר לו הנח ואני ערב אין הערב חייב כלום, ואפילו אמר אני ערב בפני ב"ד, אבל אם קנו מידו שהוא ערב ממון זה כל אלו הפנים בין בפני ב"ד בין בינו לבין המלוה נשתעבד.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אמר לו בשעת מתן מעות הלוהו ואני ערב נשתעבד הערב ואינו צריך קנין, וכן אם ב"ד עשו אותו ערב נשתעבד אף על פי שלא קנו מידו, כגון שהיו ב"ד רוצין לגבות מן הלוה ואמר להם הניחוהו ואני ערב לכם הואיל ויש לו הנאה שהאמינוהו ב"ד באותה הנייה שעבד עצמו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מנגנון ההתחייבות של ערב</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מנגנון ההתחייבות של ערב</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ב"ב קעג:) דנים האמוראים בשאלה מדוע ערב משתעבד לפרוע את החוב, שהרי לא קיבל דבר בעצמו אלא הלווה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ב"ב קעג:) דנים האמוראים בשאלה מדוע ערב משתעבד לפרוע את החוב, שהרי לא קיבל דבר בעצמו אלא הלווה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר</strong><strong>ב</strong><strong> הונא</strong>: מנין לערב דמשתעבד? דכתיב: אנכי אערבנו מידי תבקשנו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>ר</strong><strong>ב</strong><strong> הונא</strong>: מנין לערב דמשתעבד? דכתיב: אנכי אערבנו מידי תבקשנו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מתקיף לה <strong>רב חסדא</strong>: הא קבלנות היא, דכתיב: תנה אותו על ידי ואני אשיבנו!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מתקיף לה <strong>רב חסדא</strong>: הא קבלנות היא, דכתיב: תנה אותו על ידי ואני אשיבנו!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אמר <strong>רבי יצחק</strong>, מהכא: לקח בגדו כי ערב זר ובעד נכריה חבלהו; ואומר: בני אם ערבת לרעך תקעת לזר כפיך, נוקשת באמרי פיך נלכדת באמרי פיך, עשה זאת אפוא בני והנצל כי באת בכף רעך לך התרפס ורהב רעיך, אם ממון יש לו בידך - התר לו פיסת יד, ואם לאו - הרבה עליו ריעים.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא אמר <strong>רבי יצחק</strong>, מהכא: לקח בגדו כי ערב זר ובעד נכריה חבלהו; ואומר: בני אם ערבת לרעך תקעת לזר כפיך, נוקשת באמרי פיך נלכדת באמרי פיך, עשה זאת אפוא בני והנצל כי באת בכף רעך לך התרפס ורהב רעיך, אם ממון יש לו בידך - התר לו פיסת יד, ואם לאו - הרבה עליו ריעים.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב הונא</strong> מציע שהמקור לערבות נמצא בדבריו של ראובן ליעקב, שהוא ערב לשלומו של בנימין. <strong>רב חסדא</strong> שולל זאת ואומר שהמעשה בראובן ויעקב דומה יותר לקבלן, המתחייב ישירות מול המלווה, ואילו אנו מנסים למצוא מקור לכך שהערב משתעבד למרות שקיים גם לווה המתחייב ישירות מול המלווה. לכן מסביר <strong>רבי יצחק</strong> שהמקור הוא בפסוקים במשלי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב הונא</strong> מציע שהמקור לערבות נמצא בדבריו של ראובן ליעקב, שהוא ערב לשלומו של בנימין. <strong>רב חסדא</strong> שולל זאת ואומר שהמעשה בראובן ויעקב דומה יותר לקבלן, המתחייב ישירות מול המלווה, ואילו אנו מנסים למצוא מקור לכך שהערב משתעבד למרות שקיים גם לווה המתחייב ישירות מול המלווה. לכן מסביר <strong>רבי יצחק</strong> שהמקור הוא בפסוקים במשלי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא ממשיכה באותו עניין-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא ממשיכה באותו עניין-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אמימר</strong>: ערב דמשתעבד - מחלוקת ר' יהודה ור' יוסי, לרבי יוסי דאמר: אסמכתא קניא - ערב משתעבד, לר' יהודה דאמר: אסמכתא לא קניא - ערב לא משתעבד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>אמימר</strong>: ערב דמשתעבד - מחלוקת ר' יהודה ור' יוסי, לרבי יוסי דאמר: אסמכתא קניא - ערב משתעבד, לר' יהודה דאמר: אסמכתא לא קניא - ערב לא משתעבד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב אשי</strong> לאמימר: הא מעשים בכל יום, דאסמכתא לא קניא וערב משתעבד!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>רב אשי</strong> לאמימר: הא מעשים בכל יום, דאסמכתא לא קניא וערב משתעבד!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אמר רב אשי: בההוא הנאה דקא מהימן ליה - גמר ומשתעבד נפשיה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא אמר רב אשי: בההוא הנאה דקא מהימן ליה - גמר ומשתעבד נפשיה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שיתבאר בע"ה בפרק יא מהלכות מכירה, אסמכתא היא התחייבות בה המתחייב מתנה את דבריו בכך שאירוע מסויים יקרה או לא יקרה. התניה כזו יוצרת בעיה בגמירות הדעת, כיוון שאפשר שהמתחייב הניח שיקרה כך או אחרת, ולכן ר' יהודה אומר ש"אסמכתא לא קניא", כלומר, ההתחייבות לא חלה. גם ערבות היא מצב שכזה. הערב מתחייב לשלם אם הלווה לא ישלם, וסביר שהוא סומך שזה לא יקרה ולכן אינו מתחייב בגמירות הדעת הראויה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שיתבאר בע"ה בפרק יא מהלכות מכירה, אסמכתא היא התחייבות בה המתחייב מתנה את דבריו בכך שאירוע מסויים יקרה או לא יקרה. התניה כזו יוצרת בעיה בגמירות הדעת, כיוון שאפשר שהמתחייב הניח שיקרה כך או אחרת, ולכן ר' יהודה אומר ש"אסמכתא לא קניא", כלומר, ההתחייבות לא חלה. גם ערבות היא מצב שכזה. הערב מתחייב לשלם אם הלווה לא ישלם, וסביר שהוא סומך שזה לא יקרה ולכן אינו מתחייב בגמירות הדעת הראויה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אמימר</strong> מציע שהיכולת של ערב להשתעבד תלויה בשאלה האם "אסמכתא קניא". רק מי שאומר שהמתחייב באסמכתא משתעבד יכול לומר שערב משתעבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אמימר</strong> מציע שהיכולת של ערב להשתעבד תלויה בשאלה האם "אסמכתא קניא". רק מי שאומר שהמתחייב באסמכתא משתעבד יכול לומר שערב משתעבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב אשי</strong> חולק ואומר שערבות קיימת אפילו לדעת מי שאומר שאסמכתא אינה קונה. וזאת משום שבאותה הנאה שמקבל הערב מכך שהמלווה מאמין לו, הוא גומר את דעתו להשתעבד לדבריו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב אשי</strong> חולק ואומר שערבות קיימת אפילו לדעת מי שאומר שאסמכתא אינה קונה. וזאת משום שבאותה הנאה שמקבל הערב מכך שהמלווה מאמין לו, הוא גומר את דעתו להשתעבד לדבריו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המפרשים נחלקו כיצד יש להבין את דברי רב אשי. בפרק הראשון בקידושין נפסק שאשה שאומרת "הלווה מנה לפלוני ואקדש אני לך" מקודשת מדין ערב. כלומר, כמו שערב מתחייב למרות שלא קיבל דבר לעצמו, כך האשה מחייבת את עצמה (=מקודשת) אף בלי שקיבלה בעצמה את מעות הקידושין. הראשונים (עי' בר"ן קידושין ד: מדפי הרי"ף) נחלקו במקרה דומה- אדם אומר לחברו "זרוק ממונך לים ואשלם לך עליו". גם כאן המנגנון הוא כמו בערב שכן התחייבותו של האחד גרמה להוצאת ממון של השני-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המפרשים נחלקו כיצד יש להבין את דברי רב אשי. בפרק הראשון בקידושין נפסק שאשה שאומרת "הלווה מנה לפלוני ואקדש אני לך" מקודשת מדין ערב. כלומר, כמו שערב מתחייב למרות שלא קיבל דבר לעצמו, כך האשה מחייבת את עצמה (=מקודשת) אף בלי שקיבלה בעצמה את מעות הקידושין. הראשונים (עי' בר"ן קידושין ד: מדפי הרי"ף) נחלקו במקרה דומה- אדם אומר לחברו "זרוק ממונך לים ואשלם לך עליו". גם כאן המנגנון הוא כמו בערב שכן התחייבותו של האחד גרמה להוצאת ממון של השני-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> סובר שכיוון שהשליך ממונו לים על פי התחייבותו של חברו, נשתעבד לו חברו וחייב לעמוד בהתחייבותו. המנגנון הבסיסי של ערבות לפי זה הוא שאם המלווה סומך על התחייבותו של הערב עד כדי כך שמוציא ממון על פיו, הרי שהערב יודע שלוקחים את התחייבותו ברצינות וגומר דעתו לעמוד בדיבורו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ן</strong> סובר שכיוון שהשליך ממונו לים על פי התחייבותו של חברו, נשתעבד לו חברו וחייב לעמוד בהתחייבותו. המנגנון הבסיסי של ערבות לפי זה הוא שאם המלווה סומך על התחייבותו של הערב עד כדי כך שמוציא ממון על פיו, הרי שהערב יודע שלוקחים את התחייבותו ברצינות וגומר דעתו לעמוד בדיבורו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זה, ה<strong>רשב"א</strong> כותב שרק אם מוציא הממון זיכה בו בן דעת אחר (למשל כבאישה האומרת הלווה מנה לפלוני), מחוייב זה שהבטיח לפצותו לעמוד בדיבורו, ולא אם הוציאו לאיבוד. על פי זה, לדעת הרשב"א המנגנון בערב הוא שהזכות שקיבל מישהו אחר (הלווה, במקרה הקלאסי של ערב) נחשבת כאילו הערב קיבל אותה ולכן הערב מתחייב. ה"הנאה" שלדברי רב אשי מביאה לכך שהערב יתחייב היא הנאתו של הערב בכך שמוטבו קיבל את הכסף.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זה, ה<strong>רשב"א</strong> כותב שרק אם מוציא הממון זיכה בו בן דעת אחר (למשל כבאישה האומרת הלווה מנה לפלוני), מחוייב זה שהבטיח לפצותו לעמוד בדיבורו, ולא אם הוציאו לאיבוד. על פי זה, לדעת הרשב"א המנגנון בערב הוא שהזכות שקיבל מישהו אחר (הלווה, במקרה הקלאסי של ערב) נחשבת כאילו הערב קיבל אותה ולכן הערב מתחייב. ה"הנאה" שלדברי רב אשי מביאה לכך שהערב יתחייב היא הנאתו של הערב בכך שמוטבו קיבל את הכסף.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד במשנה (בבא בתרא קעה:)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד במשנה (בבא בתרא קעה:)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ערב היוצא לאחר חיתום שטרות - גובה מנכסים בני חורין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ערב היוצא לאחר חיתום שטרות - גובה מנכסים בני חורין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מעשה ובא לפני <strong>ר</strong><strong>בי</strong><strong> ישמעאל</strong>, ואמר: גובה מנכסים בני חורין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מעשה ובא לפני <strong>ר</strong><strong>בי</strong><strong> ישמעאל</strong>, ואמר: גובה מנכסים בני חורין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו <strong>בן ננס</strong>: אינו גובה לא מנכסים משועבדים ולא מנכסים בני חורין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר לו <strong>בן ננס</strong>: אינו גובה לא מנכסים משועבדים ולא מנכסים בני חורין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו: למה?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר לו: למה?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו: הרי החונק את אחד בשוק, ומצאו חבירו ואמר לו הנח לו ואני אתן לך - פטור, שלא על אמונתו הלוהו; אלא איזה הוא ערב שהוא חייב? הלוהו ואני נותן לך - חייב, שכן על אמונתו הלוהו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר לו: הרי החונק את אחד בשוק, ומצאו חבירו ואמר לו הנח לו ואני אתן לך - פטור, שלא על אמונתו הלוהו; אלא איזה הוא ערב שהוא חייב? הלוהו ואני נותן לך - חייב, שכן על אמונתו הלוהו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואמר רבי ישמעאל: הרוצה שיחכים - יעסוק בדיני ממונות, שאין לך מקצוע בתורה יותר מהן, והן כמעיין הנובע, והרוצה שיעסוק בדיני ממונות - ישמש את שמעון בן ננס.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואמר רבי ישמעאל: הרוצה שיחכים - יעסוק בדיני ממונות, שאין לך מקצוע בתורה יותר מהן, והן כמעיין הנובע, והרוצה שיעסוק בדיני ממונות - ישמש את שמעון בן ננס.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"ם</strong> מסביר ש"ערב היוצא לאחר חיתום שטרות" הכוונה לערב שלאחר שחתמו העדים בשטר<sup id="ref392"><a href="#fn392">[392]</a></sup>, הוסיף הוא וחתם שהוא ערב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"ם</strong> מסביר ש"ערב היוצא לאחר חיתום שטרות" הכוונה לערב שלאחר שחתמו העדים בשטר<sup id="ref392"><a href="#fn392">[392]</a></sup>, הוסיף הוא וחתם שהוא ערב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי ישמעאל</strong> אומר שמערב שכזה אין המלווה גובה מנכסים משועבדים, כיוון שאין הערבות חלק מגופו של השטר (עי' להלן בתחילת הפרק הבא).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי ישמעאל</strong> אומר שמערב שכזה אין המלווה גובה מנכסים משועבדים, כיוון שאין הערבות חלק מגופו של השטר (עי' להלן בתחילת הפרק הבא).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>שמעון בן ננס</strong> חולק מכל וכל ואומר שהערב אינו מחוייב ואין לגבות ממנו כלל, כיוון ש"לא על אמונתו הלווהו", כלומר, ערבותו לא היתה תנאי להלוואה מצד המלווה, והראיה על כך היא שחתמו העדים על השטר עוד לפני כן. כראיה לדבריו מביא בן ננס מקרה היפותטי, בו המלווה תובע באגרסיביות את הלווה והערב מתערב כדי שירפה ממנו, ומתנדב לשלם במקומו. במקרה זה פשוט לבן ננס שהערב לא התכוון באמת לשלם, אלא רק רצה שהמלווה יניח ללווה. ממקרה זה לומד בן ננס, שבכל מקום בו הערב מוסיף את התחייבותו, בכתב או בעל פה, לאחר שההלוואה כבר ניתנה, אין זה אלא להפיס את דעת המלווה ולא שעבד עצמו הערב ברצינות הראויה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>שמעון בן ננס</strong> חולק מכל וכל ואומר שהערב אינו מחוייב ואין לגבות ממנו כלל, כיוון ש"לא על אמונתו הלווהו", כלומר, ערבותו לא היתה תנאי להלוואה מצד המלווה, והראיה על כך היא שחתמו העדים על השטר עוד לפני כן. כראיה לדבריו מביא בן ננס מקרה היפותטי, בו המלווה תובע באגרסיביות את הלווה והערב מתערב כדי שירפה ממנו, ומתנדב לשלם במקומו. במקרה זה פשוט לבן ננס שהערב לא התכוון באמת לשלם, אלא רק רצה שהמלווה יניח ללווה. ממקרה זה לומד בן ננס, שבכל מקום בו הערב מוסיף את התחייבותו, בכתב או בעל פה, לאחר שההלוואה כבר ניתנה, אין זה אלא להפיס את דעת המלווה ולא שעבד עצמו הערב ברצינות הראויה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (קעו.) דנה במחלוקת שבמשנה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (קעו.) דנה במחלוקת שבמשנה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבה בר בר חנה</strong> אמר <strong>רבי יוחנן</strong>: אף על פי שקילס רבי ישמעאל את בן ננס, הלכה כמותו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבה בר בר חנה</strong> אמר <strong>רבי יוחנן</strong>: אף על פי שקילס רבי ישמעאל את בן ננס, הלכה כמותו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>...כי אתא <strong>רבין</strong> אמר <strong>רבי יוחנן</strong>: חלוק היה רבי ישמעאל אף בחנוק, והלכה כמותו אף בחנוק.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>...כי אתא <strong>רבין</strong> אמר <strong>רבי יוחנן</strong>: חלוק היה רבי ישמעאל אף בחנוק, והלכה כמותו אף בחנוק.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שתי שמועות בשם <strong>ר' יוחנן</strong> מתייחסות לפסק ההלכה בדין זה. ראשית, אעפ"י שרבי ישמעאל שיבח את בן ננס, הלכה כר' ישמעאל. יותר מכך, אפילו בדוגמה שהביא בן ננס כראיה לדבריו, קרי, ערב שהתחייב כדי להציל את הלווה מנחת זרועו של המלווה, חולק ר' ישמעאל ומחייב את הערב, והלכה כמותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שתי שמועות בשם <strong>ר' יוחנן</strong> מתייחסות לפסק ההלכה בדין זה. ראשית, אעפ"י שרבי ישמעאל שיבח את בן ננס, הלכה כר' ישמעאל. יותר מכך, אפילו בדוגמה שהביא בן ננס כראיה לדבריו, קרי, ערב שהתחייב כדי להציל את הלווה מנחת זרועו של המלווה, חולק ר' ישמעאל ומחייב את הערב, והלכה כמותו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מובאת מחלוקת אמוראים דומה בנושא האם ערב צריך קניין-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מובאת מחלוקת אמוראים דומה בנושא האם ערב צריך קניין-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יהודה</strong> אמר <strong>שמואל</strong>: חנוק וקנו מידו - משתעבד. מכלל, דערב בעלמא לא בעי קנין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב יהודה</strong> אמר <strong>שמואל</strong>: חנוק וקנו מידו - משתעבד. מכלל, דערב בעלמא לא בעי קנין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ופליגא ד<strong>רב נחמן</strong>, דאמר רב נחמן: ערב דבית דין הוא דלא בעי קנין, הא בעלמא בעי קנין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ופליגא ד<strong>רב נחמן</strong>, דאמר רב נחמן: ערב דבית דין הוא דלא בעי קנין, הא בעלמא בעי קנין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מציינת שני מקרי קיצון. מהצד האחד "חנוק", כלומר, מקרה בו הערב התערב רק כדי להציל את הלווה, ולכן יש פחות מקום לומר שהוא שעבד את עצמו. מהעבר השני "ערב דבית דין", בו על רקע המעמד הפורמלי בו מתחייב הערב יש סברה טובה יותר שהוא משתעבד בכך. בתווך נמצא סתם ערב ("ערב דעלמא").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מציינת שני מקרי קיצון. מהצד האחד "חנוק", כלומר, מקרה בו הערב התערב רק כדי להציל את הלווה, ולכן יש פחות מקום לומר שהוא שעבד את עצמו. מהעבר השני "ערב דבית דין", בו על רקע המעמד הפורמלי בו מתחייב הערב יש סברה טובה יותר שהוא משתעבד בכך. בתווך נמצא סתם ערב ("ערב דעלמא").</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שיטת <strong>שמואל</strong> היא שבמקרה של ערב שמתערב כדי להציל את המלווה, צריך קניין כדי לחייבו. בתוך כך מובן שסתם ערב אינו צריך קניין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שיטת <strong>שמואל</strong> היא שבמקרה של ערב שמתערב כדי להציל את המלווה, צריך קניין כדי לחייבו. בתוך כך מובן שסתם ערב אינו צריך קניין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב נחמן</strong> חולק ואומר שרק "ערב דבית דין" אינו צריך קניין, ומדבריו נשמע שסתם ערב צריך קניין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב נחמן</strong> חולק ואומר שרק "ערב דבית דין" אינו צריך קניין, ומדבריו נשמע שסתם ערב צריך קניין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסכמת בשורה של פסקי הלכה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מסכמת בשורה של פסקי הלכה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והלכתא: ערב בשעת מתן מעות לא בעי קנין,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והלכתא: ערב בשעת מתן מעות לא בעי קנין,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אחר מתן מעות - בעי קנין;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אחר מתן מעות - בעי קנין;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ערב דבית דין לא בעי קנין, דבההיא הנאה דמהימן ליה - גמר ומשעבד ליה</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ערב דבית דין לא בעי קנין, דבההיא הנאה דמהימן ליה - גמר ומשעבד ליה</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>[והנך כולהו בעו קניין].</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>[והנך כולהו בעו קניין].</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בשעת מתן מעות ובבית דין אין צורך בקניין בכדי שישתעבד הערב. המקרה הראשון מוסבר על פי העיקרון שנאמר במשנה "על פי אמונתו הלווהו". כאשר המלווה נותן מעות על סמך התחייבותו של הערב, הערב יודע שמתייחסים ברצינות לדבריו ובהתאם אף הוא אומרם בגמירות הדעת הראויה. כך גם כאשר בית הדין רוצים לגבות מהלווה ובא הערב ואומר להם שלא יגבו מהלווה ושהוא יתן במקומו, מתוך קורת הרוח שיש לערב מכך שבית הדין סומכים עליו, נובע שדבריו רציניים והוא משועבד לפרוע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בשעת מתן מעות ובבית דין אין צורך בקניין בכדי שישתעבד הערב. המקרה הראשון מוסבר על פי העיקרון שנאמר במשנה "על פי אמונתו הלווהו". כאשר המלווה נותן מעות על סמך התחייבותו של הערב, הערב יודע שמתייחסים ברצינות לדבריו ובהתאם אף הוא אומרם בגמירות הדעת הראויה. כך גם כאשר בית הדין רוצים לגבות מהלווה ובא הערב ואומר להם שלא יגבו מהלווה ושהוא יתן במקומו, מתוך קורת הרוח שיש לערב מכך שבית הדין סומכים עליו, נובע שדבריו רציניים והוא משועבד לפרוע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השורה האחרונה בגמרא "והנך כולהו בעו קניין" מופיעה בנוסח שהיה לפני הרי"ף והרמב"ם אך לא בנוסח שלפנינו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השורה האחרונה בגמרא "והנך כולהו בעו קניין" מופיעה בנוסח שהיה לפני הרי"ף והרמב"ם אך לא בנוסח שלפנינו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> (פירוש המשניות, לפנינו ובתחילת הפרק הבא) שגרס שורה זו מסביר שכל דברי המשנה אמורים דווקא במקרה בו הערב התחייב בקניין. כלומר, גם רבי ישמעאל האומר שערב הכתוב בשטר לאחר חתימת העדים משתעבד, מדבר דווקא בכגון שהתחייב בקניין. שני המקרים היחידים בהם מתחייב הערב ללא קניין הם רק ערב שהתחייב במעמד מתן המעות, וערב דבית דין. כך כותב גם ה<strong>טור</strong> בשם ה<strong>רמ"ה</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> (פירוש המשניות, לפנינו ובתחילת הפרק הבא) שגרס שורה זו מסביר שכל דברי המשנה אמורים דווקא במקרה בו הערב התחייב בקניין. כלומר, גם רבי ישמעאל האומר שערב הכתוב בשטר לאחר חתימת העדים משתעבד, מדבר דווקא בכגון שהתחייב בקניין. שני המקרים היחידים בהם מתחייב הערב ללא קניין הם רק ערב שהתחייב במעמד מתן המעות, וערב דבית דין. כך כותב גם ה<strong>טור</strong> בשם ה<strong>רמ"ה</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> וה<strong>ראב"ד</strong> (הביאם הטור) חולקים על כך, ומבינים שגם במקרה שבמשנה, בו הערבות כתובה בשטר, אין צריך קניין (אפילו בערב היוצא לאחר חיתום שטרות)<sup id="ref393"><a href="#fn393">[393]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ן</strong> וה<strong>ראב"ד</strong> (הביאם הטור) חולקים על כך, ומבינים שגם במקרה שבמשנה, בו הערבות כתובה בשטר, אין צריך קניין (אפילו בערב היוצא לאחר חיתום שטרות)<sup id="ref393"><a href="#fn393">[393]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (חו"מ קכט א-ב) פוסק על פי הגמרא שבמקרה של ערב דבית דין ושנעשה ערב בשעת מתן מעות, משתעבד הערב אף ללא קניין. ובכל מקרה אחר של התחייבות בעל פה, יש צורך בקניין. בהמשך (ד) מביא השו"ע את שיטות הרמב"ן והרמב"ם לגבי ערב היוצא לאחר חיתום שטרות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (חו"מ קכט א-ב) פוסק על פי הגמרא שבמקרה של ערב דבית דין ושנעשה ערב בשעת מתן מעות, משתעבד הערב אף ללא קניין. ובכל מקרה אחר של התחייבות בעל פה, יש צורך בקניין. בהמשך (ד) מביא השו"ע את שיטות הרמב"ן והרמב"ם לגבי ערב היוצא לאחר חיתום שטרות.</p>
                     
                 </div>
                 
@@ -1157,69 +1157,69 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג-ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המלוה את חבירו ע"י ערב אף על פי שהערב משתעבד למלוה לא יתבע את הערב תחלה אלא תובע את הלוה תחלה אם לא נתן לו חוזר אצל הערב ונפרע ממנו, בד"א בשאין נכסים ללוה, אבל אם יש נכסים ללוה לא יפרע מן הערב כלל אלא מן הלוה, היה הלוה אלם ואין ב"ד יכולין להוציא מידו או שלא בא לדין ה"ז נפרע מן הערב תחלה ואח"כ יעשה הערב דין עם הלוה אם יכול להוציאו מידו יוציא או ישמתוהו ב"ד עד שיתן לו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     התנה המלוה על הערב ואמר לו על מנת שאפרע ממי שארצה אם יש נכסים ללוה לא יפרע מן הערב, אמר על מנת שאפרע ממי שארצה תחלה או שהיה קבלן הרי זה יתבע את הערב הזה או את הקבלן תחלה ויפרע מהן אף על פי שיש נכסים ללוה. התנה המלוה עם הערב וכו' עד שיש נכסים ללוה. א"א שבוש הוא שאע"פ שאמר על מנת שאפרע ממי שארצה תחלה אם יש נכסים ללוה לא יפרע מן הערב עכ"ל.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קדימות בפריעה מהלווה ומהערב</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">קדימות בפריעה מהלווה ומהערב</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה (ב"ב קעג.)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במשנה (ב"ב קעג.)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המלוה את חבירו על ידי ערב - לא יפרע מן הערב,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>המלוה את חבירו על ידי ערב - לא יפרע מן הערב,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואם אמר לו על מנת שאפרע ממי שארצה - יפרע מן הערב;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואם אמר לו על מנת שאפרע ממי שארצה - יפרע מן הערב;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רשב"ג</strong> אומר: אם יש נכסים ללוה - בין כך ובין כך לא יפרע מן הערב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רשב"ג</strong> אומר: אם יש נכסים ללוה - בין כך ובין כך לא יפרע מן הערב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האמוראים נחלקו בהבנת דברי תנא קמא  "לא יפרע מן הערב"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">האמוראים נחלקו בהבנת דברי תנא קמא  "לא יפרע מן הערב"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מאי טעמא?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מאי טעמא?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבה</strong> ו<strong>רב יוסף</strong> דאמרי תרוייהו: גברא אשלימת לי, גברא אשלימי לך...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבה</strong> ו<strong>רב יוסף</strong> דאמרי תרוייהו: גברא אשלימת לי, גברא אשלימי לך...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אמר <strong>רב נחמן</strong>: מאי לא יפרע מן הערב? לא יתבע ערב תחלה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא אמר <strong>רב נחמן</strong>: מאי לא יפרע מן הערב? לא יתבע ערב תחלה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תניא נמי הכי: המלוה את חבירו על ידי ערב - לא יתבע ערב תחלה, ואם אמר על מנת שאפרע ממי שארצה - יתבע ערב תחלה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תניא נמי הכי: המלוה את חבירו על ידי ערב - לא יתבע ערב תחלה, ואם אמר על מנת שאפרע ממי שארצה - יתבע ערב תחלה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבה</strong> ו<strong>רב יוסף</strong> הבינו את דברי תנא קמא כפשוטם, שאין להיפרע מהערב כלל, כל עוד הלווה נמצא לפנינו. כלומר, כל שהערב התחייב הוא לכך שאם הלווה יברח, יהיה הוא במקומו, או בלשונם "אדם הפקדת בידי, אדם אני מחזיר לך".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבה</strong> ו<strong>רב יוסף</strong> הבינו את דברי תנא קמא כפשוטם, שאין להיפרע מהערב כלל, כל עוד הלווה נמצא לפנינו. כלומר, כל שהערב התחייב הוא לכך שאם הלווה יברח, יהיה הוא במקומו, או בלשונם "אדם הפקדת בידי, אדם אני מחזיר לך".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב נחמן</strong> חולק ומסביר ש"לא יפרע מן הערב" הכוונה שלא יפרע מן הערב תחילה, אלא יתבע את הלווה קודם. ואם התנה המלווה שיוכל לפרוע תחילה מהערב, יכול לעשות כתנאו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב נחמן</strong> חולק ומסביר ש"לא יפרע מן הערב" הכוונה שלא יפרע מן הערב תחילה, אלא יתבע את הלווה קודם. ואם התנה המלווה שיוכל לפרוע תחילה מהערב, יכול לעשות כתנאו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ממשיכה הגמרא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ממשיכה הגמרא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבה בר בר חנה</strong> אמר <strong>רבי יוחנן</strong>: לא שנו אלא שאין נכסים ללוה, אבל יש נכסים ללוה - לא יפרע מן הערב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבה בר בר חנה</strong> אמר <strong>רבי יוחנן</strong>: לא שנו אלא שאין נכסים ללוה, אבל יש נכסים ללוה - לא יפרע מן הערב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוחנן</strong> קובע שכל עוד יש נכסים ידועים<sup id="ref394"><a href="#fn394">[394]</a></sup> ללווה, כדוגמת נדל"ן, אין לגבות מהערב. ונחלקו הראשונים בהבנת הדברים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יוחנן</strong> קובע שכל עוד יש נכסים ידועים<sup id="ref394"><a href="#fn394">[394]</a></sup> ללווה, כדוגמת נדל"ן, אין לגבות מהערב. ונחלקו הראשונים בהבנת הדברים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רוב הראשונים</strong> מפרשים שר' יוחנן מתייחס לשורה השניה במשנה. כלומר, אף על פי שהתנה המלווה שיגבה ממי שירצה, אם יש נכסים ידועים ללווה, גובה מהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רוב הראשונים</strong> מפרשים שר' יוחנן מתייחס לשורה השניה במשנה. כלומר, אף על פי שהתנה המלווה שיגבה ממי שירצה, אם יש נכסים ידועים ללווה, גובה מהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>ר"י מיגאש</strong> מבין שדברי ר' יוחנן אמורים כלפי המשפט הראשון במשנה. כלומר, "לא יתבע (המלווה) את הערב תחילה", אלא תובע את הלווה, ואפילו אם הלווה מסרב לתת לו, לא יפנה לגבות מהערב כל עוד יש ללווה נכסים ידועים שניתן לגבות מהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם, ה<strong>ר"י מיגאש</strong> מבין שדברי ר' יוחנן אמורים כלפי המשפט הראשון במשנה. כלומר, "לא יתבע (המלווה) את הערב תחילה", אלא תובע את הלווה, ואפילו אם הלווה מסרב לתת לו, לא יפנה לגבות מהערב כל עוד יש ללווה נכסים ידועים שניתן לגבות מהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ההבדל בין השיטות הוא שלדעה הראשונה בכל מקרה בו יש נכסים ללווה יש לגבות מהם, אפילו אם התנה המלווה שיגבה ממי שירצה וכש"כ אם לא התנה. לעומת זה, לדעה השניה, אם המלווה התנה במפורש שיגבה מהערב, וניסה לגבות מהלווה ונתקל בסירוב, גובה מהערב אפילו אם יש נכסים ללווה, וזאת משום שכל תנאי שבממון קיים, והערב השתעבד אפילו למצב שכזה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ההבדל בין השיטות הוא שלדעה הראשונה בכל מקרה בו יש נכסים ללווה יש לגבות מהם, אפילו אם התנה המלווה שיגבה ממי שירצה וכש"כ אם לא התנה. לעומת זה, לדעה השניה, אם המלווה התנה במפורש שיגבה מהערב, וניסה לגבות מהלווה ונתקל בסירוב, גובה מהערב אפילו אם יש נכסים ללווה, וזאת משום שכל תנאי שבממון קיים, והערב השתעבד אפילו למצב שכזה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא ממשיכה ומסבירה מחדש את המשנה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא ממשיכה ומסבירה מחדש את המשנה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והא מדקתני סיפא "רבן שמעון בן גמליאל אומר: אם יש נכסים ללוה - לא יפרע מן הערב" מכלל דתנא קמא סבר: לא שנא הכי ולא שנא הכי!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והא מדקתני סיפא "רבן שמעון בן גמליאל אומר: אם יש נכסים ללוה - לא יפרע מן הערב" מכלל דתנא קמא סבר: לא שנא הכי ולא שנא הכי!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חסורי מחסרא והכי קתני: המלוה את חבירו על ידי ערב - לא יפרע מן הערב, ואם אמר על מנת שאפרע ממי שארצה - יפרע מן הערב; במה דברים אמורים - בשאין נכסים ללוה, אבל יש נכסים ללוה - לא יפרע מן הערב; וקבלן, אף על פי שיש נכסים ללוה - יפרע מן הקבלן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>חסורי מחסרא והכי קתני: המלוה את חבירו על ידי ערב - לא יפרע מן הערב, ואם אמר על מנת שאפרע ממי שארצה - יפרע מן הערב; במה דברים אמורים - בשאין נכסים ללוה, אבל יש נכסים ללוה - לא יפרע מן הערב; וקבלן, אף על פי שיש נכסים ללוה - יפרע מן הקבלן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לגבי ערב רגיל לא נחלקו תנא קמא ורשב"ג כלל. כל מה שנחלקו הוא לגבי ערב קבלן<sup id="ref395"><a href="#fn395">[395]</a></sup>. לדעת תנא קמא, אעפ"י שיש נכסים ללווה, יכול המלווה לגבות מהקבלן, ואילו לדעת רשב"ג דין קבלן כדין ערב רגיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, לגבי ערב רגיל לא נחלקו תנא קמא ורשב"ג כלל. כל מה שנחלקו הוא לגבי ערב קבלן<sup id="ref395"><a href="#fn395">[395]</a></sup>. לדעת תנא קמא, אעפ"י שיש נכסים ללווה, יכול המלווה לגבות מהקבלן, ואילו לדעת רשב"ג דין קבלן כדין ערב רגיל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך קובעת הגמרא הלכה כתנא קמא<sup id="ref396"><a href="#fn396">[396]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך קובעת הגמרא הלכה כתנא קמא<sup id="ref396"><a href="#fn396">[396]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ל<strong>רמב"ם</strong> שיטה יחודית שניתן לראותה כוריאציה של שיטת הר"י מיגאש. לדבריו אם אמר המלווה "על מנת שאפרע ממי שארצה" הדין כדברי תנא קמא, אם יש נכסים ללווה אין לגבות מהערב. ברם, אם התנה המלווה "על מנת שאפרע ממי שארצה <strong>תחילה</strong>", דינו כערב קבלן שלדעת תנא קמא גובים ממנו אפילו אם יש נכסים ללווה<sup id="ref397"><a href="#fn397">[397]</a></sup>. כלומר, מה שאומר הר"י מיגאש, שאם התנה המלווה עושים לפי תנאו אפילו אם יש נכסים ידועים ללווה בא לידי ביטוי רק אם הדגיש המלווה בתנאו "ממי שארצה <strong>תחילה</strong>".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ל<strong>רמב"ם</strong> שיטה יחודית שניתן לראותה כוריאציה של שיטת הר"י מיגאש. לדבריו אם אמר המלווה "על מנת שאפרע ממי שארצה" הדין כדברי תנא קמא, אם יש נכסים ללווה אין לגבות מהערב. ברם, אם התנה המלווה "על מנת שאפרע ממי שארצה <strong>תחילה</strong>", דינו כערב קבלן שלדעת תנא קמא גובים ממנו אפילו אם יש נכסים ללווה<sup id="ref397"><a href="#fn397">[397]</a></sup>. כלומר, מה שאומר הר"י מיגאש, שאם התנה המלווה עושים לפי תנאו אפילו אם יש נכסים ידועים ללווה בא לידי ביטוי רק אם הדגיש המלווה בתנאו "ממי שארצה <strong>תחילה</strong>".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (חו"מ קכט יד) פוסק כדברי הר"י מיגאש, ומביא לאחר מכן את דעת הרמב"ם. מדבריו עולה שהכל מסכימים עם דברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (חו"מ קכט יד) פוסק כדברי הר"י מיגאש, ומביא לאחר מכן את דעת הרמב"ם. מדבריו עולה שהכל מסכימים עם דברי הרמב"ם.</p>
                     
                 </div>
                 
@@ -1227,86 +1227,86 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     איזהו ערב ואיזהו קבלן אמר לו תן לו ואני נותן לך זהו קבלן שיש למלוה להפרע ממנו תחלה אף על פי שלא פירש ולא אמר על מנת שאפרע ממי שארצה, אבל אם אמר לו הלוהו ואני ערב הלוהו ואני פורע הלוהו ואני חייב הלוהו ואני נותן הלוהו ואני קבלן, תן לו ואני קבלן תן לו ואני פורע תן לו ואני חייב תן לו ואני ערב, כולן לשון ערבנות הן ואינו תובעו תחלה ולא נפרע ממנו במקום שיש נכסים ללוה עד שיפרש ויאמר ממי שארצה אפרע. אבל אם אמר לו הלוהו ואני וכו' עד ממי שארצה אפרע. א"א אף זה שבוש עכ"ל.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ערב וקבלן</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ערב וקבלן</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ב"ב קעד:)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ב"ב קעד:)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב הונא</strong>: הלוהו ואני ערב, הלוהו ואני פורע, הלוהו ואני חייב, הלוהו ואני נותן - כולן לשון ערבות הן;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב הונא</strong>: הלוהו ואני ערב, הלוהו ואני פורע, הלוהו ואני חייב, הלוהו ואני נותן - כולן לשון ערבות הן;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תן לו ואני קבלן, תן לו ואני פורע, תן לו ואני חייב, תן לו ואני נותן - כולן לשון קבלנות הן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תן לו ואני קבלן, תן לו ואני פורע, תן לו ואני חייב, תן לו ואני נותן - כולן לשון קבלנות הן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בלשונות הראשונים מבקש הערב מהמלווה שילווה ללווה. לעומת זה, ברשימת הלשונות השניים הוא מבקש שהמלווה <strong>יתן</strong> ללווה ואינו מזכיר לשון הלוואה. לכן אומר רב הונא שבמקרים אלה נחשב הדבר כאילו המלווה העביר כסף בשליחותו של הערב (=הקבלן) תמורת כך שהערב יחזיר לו, באופן דומה לאדם המבקש מחברו לבצע עבודה או שירות ומקבל על עצמו לשלם לו על כך. לכן, במקרים אלה נחשב הערב לקבלן שקיבל על עצמו לשלם עבור השירות ומחוייב ישירות למלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בלשונות הראשונים מבקש הערב מהמלווה שילווה ללווה. לעומת זה, ברשימת הלשונות השניים הוא מבקש שהמלווה <strong>יתן</strong> ללווה ואינו מזכיר לשון הלוואה. לכן אומר רב הונא שבמקרים אלה נחשב הדבר כאילו המלווה העביר כסף בשליחותו של הערב (=הקבלן) תמורת כך שהערב יחזיר לו, באופן דומה לאדם המבקש מחברו לבצע עבודה או שירות ומקבל על עצמו לשלם לו על כך. לכן, במקרים אלה נחשב הערב לקבלן שקיבל על עצמו לשלם עבור השירות ומחוייב ישירות למלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מובאות כמה דעות באמוראים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מובאות כמה דעות באמוראים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איבעיא להו: הלוהו ואני קבלן, תן לו ואני ערב, מאי?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איבעיא להו: הלוהו ואני קבלן, תן לו ואני ערב, מאי?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר' יצחק</strong>: לשון ערבות - ערבות, לשון קבלנות - קבלנות.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>ר' יצחק</strong>: לשון ערבות - ערבות, לשון קבלנות - קבלנות.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב חסדא</strong> אמר: כולן לשון קבלנות הן, בר מהלוהו ואני ערב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רב חסדא</strong> אמר: כולן לשון קבלנות הן, בר מהלוהו ואני ערב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> אמר: כולן לשון ערבות הן, בר מתן לו ואני נותן.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> אמר: כולן לשון ערבות הן, בר מתן לו ואני נותן.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>מר בר אמימר</strong> ל<strong>רב אשי</strong>, הכי אמר <strong>אבא</strong>: תן לו ואני נותן - אין למלוה על הלוה כלום. ולא היא, לא מיפטר לוה מיניה דמלוה עד שישא ויתן ביד</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>מר בר אמימר</strong> ל<strong>רב אשי</strong>, הכי אמר <strong>אבא</strong>: תן לו ואני נותן - אין למלוה על הלוה כלום. ולא היא, לא מיפטר לוה מיניה דמלוה עד שישא ויתן ביד</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא פותחת בשאלה- מה הדין כאשר התחייבות הערב נאמרת בלשון הלוואה, אך מצד שני הוא מגדיר את עצמו כקבלן, או הפוך, המעשה מוצג כמתנה אך הערב מכנה את עצמו ערב ולא קבלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא פותחת בשאלה- מה הדין כאשר התחייבות הערב נאמרת בלשון הלוואה, אך מצד שני הוא מגדיר את עצמו כקבלן, או הפוך, המעשה מוצג כמתנה אך הערב מכנה את עצמו ערב ולא קבלן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לאחר מכן מובאות שלוש דעות אמוראים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לאחר מכן מובאות שלוש דעות אמוראים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת <strong>ר' יצחק</strong> העיקר הוא ההגדרה שמגדיר הערב את עצמו, אם ערב ערב ואם קבלן קבלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת <strong>ר' יצחק</strong> העיקר הוא ההגדרה שמגדיר הערב את עצמו, אם ערב ערב ואם קבלן קבלן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב חסדא </strong>סובר שרק "הלווהו ואני ערב" הוא ערב, כי הגדיר עצמו ערב ואת מתן הכסף כהלוואה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב חסדא </strong>סובר שרק "הלווהו ואני ערב" הוא ערב, כי הגדיר עצמו ערב ואת מתן הכסף כהלוואה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> אומר הפוך. שרק "תן לו ואני נותן" הוא לשון קבלנות, כי אין כאן זכר להלוואה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> אומר הפוך. שרק "תן לו ואני נותן" הוא לשון קבלנות, כי אין כאן זכר להלוואה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו המפרשים האם האמוראים מתייחסים לשני ההיגדים שבשאלה ("הלווהו ואני קבלן, תן לו ואני ערב מהו") או לכלל דברי ר' הונא שלעיל, כלומר, מה כוללת לשון "כולן" שבדברי רב חסדא ורבא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נחלקו המפרשים האם האמוראים מתייחסים לשני ההיגדים שבשאלה ("הלווהו ואני קבלן, תן לו ואני ערב מהו") או לכלל דברי ר' הונא שלעיל, כלומר, מה כוללת לשון "כולן" שבדברי רב חסדא ורבא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף</strong> הבין שהביטוי "כולן" חוזר על דברי רב הונא. כלומר, רבא, ר' חסדא ואפשר שגם ר' יצחק, אינם מסכימים לחילוק שבין לשון הלוואה ללשון נתינה העומד בבסיס דברי ר' הונא. לכן פוסק הרי"ף כרבא וכותב שרק לשון "תן לו ואני נותן" היא לשון קבלנות, אך כל לשון אחרת היא לשון ערבות. כך הבינו רוב הראשונים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רי"ף</strong> הבין שהביטוי "כולן" חוזר על דברי רב הונא. כלומר, רבא, ר' חסדא ואפשר שגם ר' יצחק, אינם מסכימים לחילוק שבין לשון הלוואה ללשון נתינה העומד בבסיס דברי ר' הונא. לכן פוסק הרי"ף כרבא וכותב שרק לשון "תן לו ואני נותן" היא לשון קבלנות, אך כל לשון אחרת היא לשון ערבות. כך הבינו רוב הראשונים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרי"ף עצמו מביא את דעת "<strong>רבוואתא </strong><strong>קמאי</strong>" שהלכה כרב הונא, ונראה שלדעתם לא חלק רבא על רב הונא והתייחס רק לשני המקרים שבשאלה- "הלווהו ואני קבלן, תן לו ואני ערב". וכוונתו לומר שבשני המקרים שבשאלה הרי הוא ערב, והוא קבלן רק במקרה של "תן לו ואני נותן" ודומיו, כפי שמוזכר בדבריו של ר' הונא<sup id="ref398"><a href="#fn398">[398]</a></sup>. כדעה זו כותב גם ה<strong>מאירי</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרי"ף עצמו מביא את דעת "<strong>רבוואתא </strong><strong>קמאי</strong>" שהלכה כרב הונא, ונראה שלדעתם לא חלק רבא על רב הונא והתייחס רק לשני המקרים שבשאלה- "הלווהו ואני קבלן, תן לו ואני ערב". וכוונתו לומר שבשני המקרים שבשאלה הרי הוא ערב, והוא קבלן רק במקרה של "תן לו ואני נותן" ודומיו, כפי שמוזכר בדבריו של ר' הונא<sup id="ref398"><a href="#fn398">[398]</a></sup>. כדעה זו כותב גם ה<strong>מאירי</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם בין הראשונים שהבינו כרי"ף נחלקו עד כמה יש להגביל את הגדרת רבא לקבלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם בין הראשונים שהבינו כרי"ף נחלקו עד כמה יש להגביל את הגדרת רבא לקבלן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סי' מא) כותב שבין "תן לו ואני נותן" ובין "תן לו ואני קבלן" נחשב קבלן ולא ערב. שכן אם לשון "ואני נותן" היא קבלן, כל שכן שאמר במפורש "ואני קבלן".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סי' מא) כותב שבין "תן לו ואני נותן" ובין "תן לו ואני קבלן" נחשב קבלן ולא ערב. שכן אם לשון "ואני נותן" היא קבלן, כל שכן שאמר במפורש "ואני קבלן".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו ה<strong>רמב"ם</strong> מבין את דברי רבא במובן מצומצם וכותב שדווקא "תן לו ואני נותן" הוא קבלן, אך "תן לו ואני קבלן" אינו קבלן אלא ערב<sup id="ref399"><a href="#fn399">[399]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו ה<strong>רמב"ם</strong> מבין את דברי רבא במובן מצומצם וכותב שדווקא "תן לו ואני נותן" הוא קבלן, אך "תן לו ואני קבלן" אינו קבלן אלא ערב<sup id="ref399"><a href="#fn399">[399]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (חו"מ קכט יח) פוסק כרמב"ם, וה<strong>רמ"א</strong> פוסק כרא"ש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (חו"מ קכט יח) פוסק כרמב"ם, וה<strong>רמ"א</strong> פוסק כרא"ש.</p>
                     
                 </div>
                 
                 <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קבלן ו"נושא ונותן ביד"</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">קבלן ו"נושא ונותן ביד"</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראינו שקבלן מתחייב ישירות מול המלווה בכל שאומר "אני נותן" ואינו מזכיר לשון הלוואה. הגמרא (שם) דנה בשאלה האם הדבר פוטר את הלווה מאחריות ישירה למלווה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראינו שקבלן מתחייב ישירות מול המלווה בכל שאומר "אני נותן" ואינו מזכיר לשון הלוואה. הגמרא (שם) דנה בשאלה האם הדבר פוטר את הלווה מאחריות ישירה למלווה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>מר בר אמימר</strong> ל<strong>רב אשי</strong>, הכי אמר אבא: תן לו ואני נותן - אין למלוה על הלוה כלום.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>מר בר אמימר</strong> ל<strong>רב אשי</strong>, הכי אמר אבא: תן לו ואני נותן - אין למלוה על הלוה כלום.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ולא היא, לא מיפטר לוה מיניה דמלוה עד שישא ויתן ביד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ולא היא, לא מיפטר לוה מיניה דמלוה עד שישא ויתן ביד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שתי דעות בגמרא. הראשונה היא דעת <strong>אמימר</strong> שמביא בנו <strong>מר</strong>. לדבריו אכן אין למלווה שום תביעה ישירה על הלווה אלא רק על הקבלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שתי דעות בגמרא. הראשונה היא דעת <strong>אמימר</strong> שמביא בנו <strong>מר</strong>. לדבריו אכן אין למלווה שום תביעה ישירה על הלווה אלא רק על הקבלן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי הדעה השניה שמביאה הגמרא הלווה הוא בר תביעה של המלווה כיוון שסוף סוף לו נתן את הכסף. רק במקרה בו הקבלן נוטל את הכסף מהמלווה והולך ומוסרו ללווה, אין למלווה דבר מול הלווה אלא רק מול הקבלן, שהרי הקבלן הוא שבפועל לווה את הכסף והלווהו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי הדעה השניה שמביאה הגמרא הלווה הוא בר תביעה של המלווה כיוון שסוף סוף לו נתן את הכסף. רק במקרה בו הקבלן נוטל את הכסף מהמלווה והולך ומוסרו ללווה, אין למלווה דבר מול הלווה אלא רק מול הקבלן, שהרי הקבלן הוא שבפועל לווה את הכסף והלווהו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עם זאת מעירים הפוסקים שבמקרה בו אין לקבלן זה ממה לפרוע, לא גרע מדינו של ר' נתן בראובן שהיה חייב לשמעון שחייב ללוי, שהולך לוי ופורע מראובן (עי' לעיל פרק ב הל' ה-ו), ואף כאן ילך המלווה ויפרע מהלווה. אמנם, כיוון שהלווה מחוייב רק לקבלן והקבלן מחוייב רק למלווה, אם מחל הקבלן ללווה, אין המלווה יכול לגבות מהלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עם זאת מעירים הפוסקים שבמקרה בו אין לקבלן זה ממה לפרוע, לא גרע מדינו של ר' נתן בראובן שהיה חייב לשמעון שחייב ללוי, שהולך לוי ופורע מראובן (עי' לעיל פרק ב הל' ה-ו), ואף כאן ילך המלווה ויפרע מהלווה. אמנם, כיוון שהלווה מחוייב רק לקבלן והקבלן מחוייב רק למלווה, אם מחל הקבלן ללווה, אין המלווה יכול לגבות מהלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הטור (חו"מ קכט) מביא מחלוקת ראשונים בשאלה האם יכול להיות ערב, שיתחייב בלשון ערבות, ובכל זאת כיוון שנשא ונתן ביד מהמלווה ללווה, דינו כנושא ונותן ביד שאין למלווה דבר עם הלווה אלא עם הערב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הטור (חו"מ קכט) מביא מחלוקת ראשונים בשאלה האם יכול להיות ערב, שיתחייב בלשון ערבות, ובכל זאת כיוון שנשא ונתן ביד מהמלווה ללווה, דינו כנושא ונותן ביד שאין למלווה דבר עם הלווה אלא עם הערב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דעת ה<strong>רמ"ה</strong> היא שדין נושא ונותן ביד אמור דווקא בקבלן, קרי במי שהתחייב בלשון קבלנות, אך אם התחייב בלשון ערבות, אין משמעות לעובדה שלקח בידו ממלווה ללווה<sup id="ref400"><a href="#fn400">[400]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דעת ה<strong>רמ"ה</strong> היא שדין נושא ונותן ביד אמור דווקא בקבלן, קרי במי שהתחייב בלשון קבלנות, אך אם התחייב בלשון ערבות, אין משמעות לעובדה שלקח בידו ממלווה ללווה<sup id="ref400"><a href="#fn400">[400]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> חולק ואומר שברגע שנשא ונתן ביד הוא מופקע לחלוטין מדין ערבות וקבלנות והופך ומחוייב כלווה יחיד מול המלווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> חולק ואומר שברגע שנשא ונתן ביד הוא מופקע לחלוטין מדין ערבות וקבלנות והופך ומחוייב כלווה יחיד מול המלווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (קכט יט) פוסק את דין "נושא ונותן ביד" בקבלן, ומביא את דעת הרא"ש כ"יש מי שאומר".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (קכט יט) פוסק את דין "נושא ונותן ביד" בקבלן, ומביא את דעת הרא"ש כ"יש מי שאומר".</p>
                     
                 </div>
                 
@@ -1314,63 +1314,63 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ערב של כתובה אף על פי שקנו מידו פטור מלשלם שהרי מצוה עשה ולא חסר ממון, ואם היה האב ערב לכתובת בנו וקנו מידו חייב, וקבלן של כתובה חייב. ערב של כתובה אף על פי שקנו מידו פטור מלשלם שהרי מצוה עשה ולא חסר ממון. א"א זה שבוש. ואם היה האב ערב לכתובת בנו וקנו מידו חייב. א"א אף על פי שלא קנו מידו.+
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ערב של כתובה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ערב של כתובה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ב"ב קעד:) מובא מעשה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ב"ב קעד:) מובא מעשה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>משה בר עצרי ערבא דכתובתה דכלתיה הוה, <strong>רב הונא</strong> בריה צורבא מדרבנן הוה ודחיקא ליה מילתא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>משה בר עצרי ערבא דכתובתה דכלתיה הוה, <strong>רב הונא</strong> בריה צורבא מדרבנן הוה ודחיקא ליה מילתא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אביי</strong>: ליכא דניזיל דנסביה עצה לרב הונא, דנגרשה לדביתהו ותיזיל ותגבי כתובה מאבוה, והדר נהדרה...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>אביי</strong>: ליכא דניזיל דנסביה עצה לרב הונא, דנגרשה לדביתהו ותיזיל ותגבי כתובה מאבוה, והדר נהדרה...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והא ערב הוא, וקיימא לן: ערב דכתובה לא משתעבד!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והא ערב הוא, וקיימא לן: ערב דכתובה לא משתעבד!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על כתובתו של <strong>רב הונא</strong> היה אביו, משה, חתום כערב. רב הונא היה בקשיים כלכליים עקב מסירותו המוחלטת ללימוד התורה ו<strong>אביי</strong> העלה את האפשרות להמליץ לו שיגרש את אשתו כדי שתתבע את הערב, חמיה, ואז תקבל כסף ויחזור רב הונא ויקחה לאשה. בין שאר הקשיים מעלה הגמרא בעיה באפשרות זו הנובעת מכך שערב של כתובה אינו משתעבד. בהמשך הסוגיה מתבאר שיש סברה טובה מדוע ערב לבעל בכתובתו לא באמת משעבד עצמו. ראשית, אפשר שמה שהתחייב הערב היה רק כדי שתסכים האשה להתחתן בלב שקט יותר. שנית, בניגוד למלווה המוציא כסף על סמך התחייבותו של הערב, האשה לא הוציאה כסף על סמך התחייבות הערב אלא רק הסכימה להינשא. לאלה ניתן להוסיף גם את העובדה הפשוטה שבניגוד להלוואה שסופה להיפרע, הכתובה יכול להיות שתיפרע ויכול להיות שלא (תלוי אם האשה תתגרש/תתאלמן או לא), ולכן הערב סמך על האפשרות שהכתובה לא תיפרע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על כתובתו של <strong>רב הונא</strong> היה אביו, משה, חתום כערב. רב הונא היה בקשיים כלכליים עקב מסירותו המוחלטת ללימוד התורה ו<strong>אביי</strong> העלה את האפשרות להמליץ לו שיגרש את אשתו כדי שתתבע את הערב, חמיה, ואז תקבל כסף ויחזור רב הונא ויקחה לאשה. בין שאר הקשיים מעלה הגמרא בעיה באפשרות זו הנובעת מכך שערב של כתובה אינו משתעבד. בהמשך הסוגיה מתבאר שיש סברה טובה מדוע ערב לבעל בכתובתו לא באמת משעבד עצמו. ראשית, אפשר שמה שהתחייב הערב היה רק כדי שתסכים האשה להתחתן בלב שקט יותר. שנית, בניגוד למלווה המוציא כסף על סמך התחייבותו של הערב, האשה לא הוציאה כסף על סמך התחייבות הערב אלא רק הסכימה להינשא. לאלה ניתן להוסיף גם את העובדה הפשוטה שבניגוד להלוואה שסופה להיפרע, הכתובה יכול להיות שתיפרע ויכול להיות שלא (תלוי אם האשה תתגרש/תתאלמן או לא), ולכן הערב סמך על האפשרות שהכתובה לא תיפרע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מנסה לתרץ את השאלה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מנסה לתרץ את השאלה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>קבלן הוה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>קבלן הוה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הניחא למאן דאמר: קבלן דכתובה אף על גב דלית ליה נכסי לבעל משתעבד - שפיר, אלא למאן דאמר: אי אית ליה משתעבד, אי לית ליה לא משתעבד - מאי איכא למימר?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הניחא למאן דאמר: קבלן דכתובה אף על גב דלית ליה נכסי לבעל משתעבד - שפיר, אלא למאן דאמר: אי אית ליה משתעבד, אי לית ליה לא משתעבד - מאי איכא למימר?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איבעית אימא: מיהוי הוה ליה ואישתדוף. ואיבעית אימא: אבא לגבי בריה שעבודי משעבד נפשיה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איבעית אימא: מיהוי הוה ליה ואישתדוף. ואיבעית אימא: אבא לגבי בריה שעבודי משעבד נפשיה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אפשרות אחת היא להבין לפי דעה האומרת שמי שמתחייב בלשון קבלנות, אפילו בכתובה משתעבד. אפשרות נוספת היא שאף שקבלן סתם אינו משתעבד בכתובה, אם יש נכסים לבעל מסכים קבלן להשתעבד אפילו בכתובה, כי הוא סומך על כך שיהיה לו מהיכן לפרוע, ולרב הונא היו נכסים כשנישא. אפשרות שלישית היא שכאשר אב חתום כערב על כתובת בנו, הרי הוא מסכים להשתעבד כי אב עושה למען בנו גם דבריו היוצאים מגדר הרגיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אפשרות אחת היא להבין לפי דעה האומרת שמי שמתחייב בלשון קבלנות, אפילו בכתובה משתעבד. אפשרות נוספת היא שאף שקבלן סתם אינו משתעבד בכתובה, אם יש נכסים לבעל מסכים קבלן להשתעבד אפילו בכתובה, כי הוא סומך על כך שיהיה לו מהיכן לפרוע, ולרב הונא היו נכסים כשנישא. אפשרות שלישית היא שכאשר אב חתום כערב על כתובת בנו, הרי הוא מסכים להשתעבד כי אב עושה למען בנו גם דבריו היוצאים מגדר הרגיל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מפרשת את מחלוקת האמוראים בערב ובקבלן, במילווה ובכתובה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מפרשת את מחלוקת האמוראים בערב ובקבלן, במילווה ובכתובה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דאיתמר: ערב דכתובה - דברי הכל לא משתעבד, קבלן דבעל חוב - דברי הכל משתעבד,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>דאיתמר: ערב דכתובה - דברי הכל לא משתעבד, קבלן דבעל חוב - דברי הכל משתעבד,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>קבלן דכתובה וערב דבעל חוב - פליגי,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>קבלן דכתובה וערב דבעל חוב - פליגי,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מר סבר: אי אית ליה נכסי ללוה - משתעבד, אי לית ליה - לא משתעבד;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מר סבר: אי אית ליה נכסי ללוה - משתעבד, אי לית ליה - לא משתעבד;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומר סבר: בין אית ליה ובין לית ליה - משתעבד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ומר סבר: בין אית ליה ובין לית ליה - משתעבד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת הכל ערב בכתובה אינו משתעבד וקבלן במילווה משתעבד. נחלקו במקרי הביניים, קבלן בכתובה וערב במילווה, האם משתעבד רק אם יש נכסים ללווה (או לבעל), או שבין כך ובין כך משתעבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת הכל ערב בכתובה אינו משתעבד וקבלן במילווה משתעבד. נחלקו במקרי הביניים, קבלן בכתובה וערב במילווה, האם משתעבד רק אם יש נכסים ללווה (או לבעל), או שבין כך ובין כך משתעבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא פוסקת הלכה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא פוסקת הלכה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והלכתא: ערב, בין אית ליה ובין לית ליה - משתעבד, בר מערב דכתובה, דאע"ג דאית ליה לבעל - לא משתעבד, מאי טעמא? מצוה הוא דעבד ולאו מידי חסרה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והלכתא: ערב, בין אית ליה ובין לית ליה - משתעבד, בר מערב דכתובה, דאע"ג דאית ליה לבעל - לא משתעבד, מאי טעמא? מצוה הוא דעבד ולאו מידי חסרה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ערב על מילווה משתעבד ללא קשר לנכסי הלווה, וערב על כתובה אינו משתעבד לעולם, מהטעמים שהבאנו לעיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ערב על מילווה משתעבד ללא קשר לנכסי הלווה, וערב על כתובה אינו משתעבד לעולם, מהטעמים שהבאנו לעיל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו לגבי המצב המדוייק אליו מתייחסת פסיקת הגמרא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו לגבי המצב המדוייק אליו מתייחסת פסיקת הגמרא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מבין שמדובר בכגון שהתחייב הערב על הכתובה בקניין. לכן הוא פוסק להלכה שערב על כתובה אינו חייב אפילו אם התחייב בקניין, אלא אם כן היה אבי החתן או שהתחייב בלשון קבלנות<sup id="ref401"><a href="#fn401">[401]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מבין שמדובר בכגון שהתחייב הערב על הכתובה בקניין. לכן הוא פוסק להלכה שערב על כתובה אינו חייב אפילו אם התחייב בקניין, אלא אם כן היה אבי החתן או שהתחייב בלשון קבלנות<sup id="ref401"><a href="#fn401">[401]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת ה<strong>ראב"ד</strong> מדובר בכגון שלא התחייב הערב על ידי קניין, ולכן הוא חולק על הרמב"ם וכותב שאם התחייב בקניין אפילו ערב בכתובה חייב<sup id="ref402"><a href="#fn402">[402]</a></sup>, וכמו כן אב על כתובת בנו מתחייב אפילו ללא קניין כלל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת ה<strong>ראב"ד</strong> מדובר בכגון שלא התחייב הערב על ידי קניין, ולכן הוא חולק על הרמב"ם וכותב שאם התחייב בקניין אפילו ערב בכתובה חייב<sup id="ref402"><a href="#fn402">[402]</a></sup>, וכמו כן אב על כתובת בנו מתחייב אפילו ללא קניין כלל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (אה"ע קב ו) פוסק כרמב"ם וה<strong>רמ"א</strong> (שם) פוסק כראב"ד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (אה"ע קב ו) פוסק כרמב"ם וה<strong>רמ"א</strong> (שם) פוסק כראב"ד.</p>
                     
                 </div>
                 
@@ -1378,34 +1378,34 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז-ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ראובן שמכר לשמעון שדה ובא לוי וקיבל אחריות עליו לא נשתעבד לוי שזו אסמכתא היא, ואם קנו מידו שהוא ערב לשלם דמי מכר זה כל עת שירצה שיתבענו לשמעון הרי זה חייב וכזה הורו רבותי. ראובן שמכר לשמעון וכו' עד וכזה הורו רבותי. א"א שבוש הוא זה שאם אמר בשעת מתן מעות משתעבד ואין בערבות משום אסמכתא עכ"ל.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     וכן הערב או הקבלן שחייבו עצמן על תנאי אף על פי שקנו מידו לא נשתעבד מפני שהוא אסמכתא, כיצד כגון שאמר לו תן לו ואני אתן לך אם יהיה כך וכך או אם לא יהיה, שכל התולה שיעבוד שאינו חייב בו באם יהיה ואם לא יהיה לא גמר והקנה קנין שלם ולפיכך לא נשתעבד.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ערבות באחריות מכר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ערבות באחריות מכר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המקרה בו עוסק הרמב"ם בהלכה זו אינו בגמרא. מדובר במוכר שדהו וחברו של המוכר ערב לכך שאם השדה נטרפת, יפצה החבר את הקונה במקום המוכר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המקרה בו עוסק הרמב"ם בהלכה זו אינו בגמרא. מדובר במוכר שדהו וחברו של המוכר ערב לכך שאם השדה נטרפת, יפצה החבר את הקונה במקום המוכר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק שבניגוד לערבות על מילווה, כאן אפילו אם התחייב בשעת מתן מעות, לא השתעבד הערב אלא אם כן קנו מידו. הרמב"ם מסביר שבעצם כל ערב הוא אסמכתא, קרי, התחייבות המושתתת על הנחה של מה שעשוי לקרות. הערב מניח שהלווה יפרע את חובו ולכן יש מקום לומר שהוא אינו משעבד עצמו בלב שלם. מה שבכל זאת מאפשר לערב להשתעבד הוא, כפי שהתבאר, העובדה שהוציאו ממון על פיו או קניין מפורש. לעומת זאת, כאן הקונה לא הוציא את מעותיו רק על סמך התחייבותו של הערב אלא גם (ובעיקר) כי רצה לקנות את השדה, ולכן חוזר הדין לדין האסמכתא (<strong>מגיד משנה</strong>).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק שבניגוד לערבות על מילווה, כאן אפילו אם התחייב בשעת מתן מעות, לא השתעבד הערב אלא אם כן קנו מידו. הרמב"ם מסביר שבעצם כל ערב הוא אסמכתא, קרי, התחייבות המושתתת על הנחה של מה שעשוי לקרות. הערב מניח שהלווה יפרע את חובו ולכן יש מקום לומר שהוא אינו משעבד עצמו בלב שלם. מה שבכל זאת מאפשר לערב להשתעבד הוא, כפי שהתבאר, העובדה שהוציאו ממון על פיו או קניין מפורש. לעומת זאת, כאן הקונה לא הוציא את מעותיו רק על סמך התחייבותו של הערב אלא גם (ובעיקר) כי רצה לקנות את השדה, ולכן חוזר הדין לדין האסמכתא (<strong>מגיד משנה</strong>).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד</strong> חולק וכותב שאין הבדל מהותי בין ערב על אחריות מכר לערב על פרעון מילווה ובשניהם משתעבד הערב אם התחייב בשעת מתן מעות<sup id="ref403"><a href="#fn403">[403]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד</strong> חולק וכותב שאין הבדל מהותי בין ערב על אחריות מכר לערב על פרעון מילווה ובשניהם משתעבד הערב אם התחייב בשעת מתן מעות<sup id="ref403"><a href="#fn403">[403]</a></sup>.</p>
                     
                 </div>
                 
                 <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ערב בתנאי</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ערב בתנאי</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שהתבאר לעיל, בערבות ככלל יש מאפיינים של אסמכתא, כיוון שהערב לוקח על עצמו אחריות שלאו דווקא תתממש. עם זאת, כאשר הערב התחייב בלשון תנאי מפורש, שישלם רק אם לא ישלם הלווה, נחשב הדבר כאסמכתא בוודאי ואין הוא משתעבד. עניין זה יבואר בעז"ה בפרק יא מהלכות מכירה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שהתבאר לעיל, בערבות ככלל יש מאפיינים של אסמכתא, כיוון שהערב לוקח על עצמו אחריות שלאו דווקא תתממש. עם זאת, כאשר הערב התחייב בלשון תנאי מפורש, שישלם רק אם לא ישלם הלווה, נחשב הדבר כאסמכתא בוודאי ואין הוא משתעבד. עניין זה יבואר בעז"ה בפרק יא מהלכות מכירה.</p>
                     
                 </div>
                 
@@ -1413,51 +1413,51 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט-יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     שנים שלוו בשטר אחד או שלקחו מקח אחד, וכן השותפין שלוה אחד מהן או לקח בשותפות הרי הן ערבאין זה לזה אף על פי שלא פירש.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     שנים שערבו לאחד כשיבוא המלוה ליפרע מן הערב יפרע מאי זה מהן שירצה, ואם לא היה לאחד כדי החוב חוזר ותובע השני בשאר החוב. שנים שערבו לאחד עד בשאר החוב. א"א אינו מחוור אלא לפי המנהג ולמדין מן העכו"ם לישראל עכ"ל.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ואחד שערב לשנים כשיפרע למלוה יודיעו על חוב איזה משניהם פורע כדי שיחזור עליו.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ערבות הדדית של שותפים וכמה ערבים שערבו לאחד</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ערבות הדדית של שותפים וכמה ערבים שערבו לאחד</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי דין שבועת שקר נאמר בתורה (ויקרא ה כא)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי דין שבועת שקר נאמר בתורה (ויקרא ה כא)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נֶ֚פֶשׁ כִּ֣י תֶחֱטָ֔א וּמָעֲלָ֥ה מַ֖עַל בה' וְכִחֵ֨שׁ בַּעֲמִית֜וֹ בְּפִקָּד֗וֹן אֽוֹ־בִתְשׂ֤וּמֶת יָד֙ א֣וֹ בְגָזֵ֔ל א֖וֹ עָשַׁ֥ק אֶת־עֲמִיתֽוֹ</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נֶ֚פֶשׁ כִּ֣י תֶחֱטָ֔א וּמָעֲלָ֥ה מַ֖עַל בה' וְכִחֵ֨שׁ בַּעֲמִית֜וֹ בְּפִקָּד֗וֹן אֽוֹ־בִתְשׂ֤וּמֶת יָד֙ א֣וֹ בְגָזֵ֔ל א֖וֹ עָשַׁ֥ק אֶת־עֲמִיתֽוֹ</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">זהו דין נשבע לשקר בבית דין הנתבע לתת ממון חברו או פיקדון שיש בידו ונשבע שאין בידו או שאינו חייב. דינו, הכולל הבאת אשם ותשלום חומש, מפורש בהמשך הכתוב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">זהו דין נשבע לשקר בבית דין הנתבע לתת ממון חברו או פיקדון שיש בידו ונשבע שאין בידו או שאינו חייב. דינו, הכולל הבאת אשם ותשלום חומש, מפורש בהמשך הכתוב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בירושלמי (שבועות פרק ה הלכה א)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בירושלמי (שבועות פרק ה הלכה א)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>"וכחש בעמיתו"- לכשיצא בדין בשבועה. פרט למכחש באחד השותפין פרט למכחש בעדים ובשטר.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>"וכחש בעמיתו"- לכשיצא בדין בשבועה. פרט למכחש באחד השותפין פרט למכחש בעדים ובשטר.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבי יוסי</strong> הדא אמרה שנים שלוו מאחד אף על גב דלא כתבין אחראין וערבאין זה לזה אחראין וערבאין זה לזה...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבי יוסי</strong> הדא אמרה שנים שלוו מאחד אף על גב דלא כתבין אחראין וערבאין זה לזה אחראין וערבאין זה לזה...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> בשבועות (פרק ב סימן ה) מביא את הירושלמי ומפרשו. הירושלמי מסביר שדין שבועת שקר בפיקדון הוא רק אם שבועת השקר שנשבע הנתבע היתה פוטרת אותו מחיוב באופן סופי. לכן, אם יש כנגדו ראיה המביאה לכך שאין השבועה פוטרת אותו, או שיש בידו נכס של שותפים, ונתבע על ידי אחד מהם, וכיחש ונשבע לשקר, והשותף השני עדיין יכול לתובעו, בכל אלה אין שבועת השקר שלו מחייבת אותו קרבן וחומש. כלומר, אין רואים זאת כאילו הוא חייב חצי לאחד וחצי לשני, שאם כך היה היתה שבועתו לאחד פוטרתו מחצי והיה מתחייב חומש וקרבן. <strong>רבי יוסי</strong> לומד מכך, שלא רק כאשר שנים הלווה מאחד אלא גם הפוך, כאשר שנים לוו מאחד, אין אומרים שכל אחד מהם חייב חצי, אלא שניהם נחשבים כישות אחת ולכן אם תובעים את האחד ואין לו, ניתן לתבוע גם את חברו על כל הסכום ולא רק על חציו, ובמילים אחרות, הלווים ערבים זה לזה<sup id="ref404"><a href="#fn404">[404]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> בשבועות (פרק ב סימן ה) מביא את הירושלמי ומפרשו. הירושלמי מסביר שדין שבועת שקר בפיקדון הוא רק אם שבועת השקר שנשבע הנתבע היתה פוטרת אותו מחיוב באופן סופי. לכן, אם יש כנגדו ראיה המביאה לכך שאין השבועה פוטרת אותו, או שיש בידו נכס של שותפים, ונתבע על ידי אחד מהם, וכיחש ונשבע לשקר, והשותף השני עדיין יכול לתובעו, בכל אלה אין שבועת השקר שלו מחייבת אותו קרבן וחומש. כלומר, אין רואים זאת כאילו הוא חייב חצי לאחד וחצי לשני, שאם כך היה היתה שבועתו לאחד פוטרתו מחצי והיה מתחייב חומש וקרבן. <strong>רבי יוסי</strong> לומד מכך, שלא רק כאשר שנים הלווה מאחד אלא גם הפוך, כאשר שנים לוו מאחד, אין אומרים שכל אחד מהם חייב חצי, אלא שניהם נחשבים כישות אחת ולכן אם תובעים את האחד ואין לו, ניתן לתבוע גם את חברו על כל הסכום ולא רק על חציו, ובמילים אחרות, הלווים ערבים זה לזה<sup id="ref404"><a href="#fn404">[404]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקרה נוסף בו כמה יש כמה ערבים על חוב אחד מובא בתוספתא (בבא בתרא פרק יא)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקרה נוסף בו כמה יש כמה ערבים על חוב אחד מובא בתוספתא (בבא בתרא פרק יא)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מלוה את חבירו על ידי שני ערבין לא יפרע מאחד מהן ואם אמר על מנת שאפרע מאחד מהן יפרע מאחד מהן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מלוה את חבירו על ידי שני ערבין לא יפרע מאחד מהן ואם אמר על מנת שאפרע מאחד מהן יפרע מאחד מהן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם יש שני ערבים על חוב אחד, אין לפרוע (לפחות לכתחילה) יותר מחצי החוב מכל אחד מהם, אא"כ הוגדר שכל אחד מהם ערב לכל החוב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם יש שני ערבים על חוב אחד, אין לפרוע (לפחות לכתחילה) יותר מחצי החוב מכל אחד מהם, אא"כ הוגדר שכל אחד מהם ערב לכל החוב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> (בבא מציעא לד:) פוסק כדברי התוספתא ומשליך מכך גם על המקרה של שניים שלוו שהם ערבים זה על זה, אך האחד משלם גם עבור חברו רק אם חברו אינו יכול לפרוע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ן</strong> (בבא מציעא לד:) פוסק כדברי התוספתא ומשליך מכך גם על המקרה של שניים שלוו שהם ערבים זה על זה, אך האחד משלם גם עבור חברו רק אם חברו אינו יכול לפרוע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו ה<strong>רמב"ם</strong> פוסק, בניגוד לדברי התוספתא, ששני ערבים שערבו לחוב אחד, יכול המלווה לכתחילה לפרוע מאיזה ערב שירצה את כל החוב. ה<strong>רשב"א</strong> (ב"מ לד:) מביא לכך ראיה מהגמרא בבבא בתרא (קז.) שם מתואר מקרה בו אחים חילקו את רכוש אביהם המנוח ביניהם ואח"כ בא בעל חוב של האב וגבה את כל החוב מהחלק של אחד מהם. מתוך כך שנכסיו של אדם ערבים לו ניתן לראות שגם אם יש שני ערבים יכול בעל החוב לגבות ממי מהם שירצה ואפילו אם גובה הכל מאחד מהם. עוד מסביר הרשב"א שלגבי שותפים שלוו, אפשר שיש לגבות מכל אחד מהם רק מחצית, ורק אם אין לאחד ניתן לגבות את השאר מחברו, שכן בניגוד לשני ערבים על חוב, שני שותפים לוו כדי להנות בכסף וכל אחד מהם נהנה בחציו, ולכן על כל אחד מהם להחזיר רק חצי, מה שאין כן בשני ערבים שכלל לא לוו, ולכן כל אחד מהם ערב על כל החוב ויכול המלווה לתבוע מי מהם שירצה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו ה<strong>רמב"ם</strong> פוסק, בניגוד לדברי התוספתא, ששני ערבים שערבו לחוב אחד, יכול המלווה לכתחילה לפרוע מאיזה ערב שירצה את כל החוב. ה<strong>רשב"א</strong> (ב"מ לד:) מביא לכך ראיה מהגמרא בבבא בתרא (קז.) שם מתואר מקרה בו אחים חילקו את רכוש אביהם המנוח ביניהם ואח"כ בא בעל חוב של האב וגבה את כל החוב מהחלק של אחד מהם. מתוך כך שנכסיו של אדם ערבים לו ניתן לראות שגם אם יש שני ערבים יכול בעל החוב לגבות ממי מהם שירצה ואפילו אם גובה הכל מאחד מהם. עוד מסביר הרשב"א שלגבי שותפים שלוו, אפשר שיש לגבות מכל אחד מהם רק מחצית, ורק אם אין לאחד ניתן לגבות את השאר מחברו, שכן בניגוד לשני ערבים על חוב, שני שותפים לוו כדי להנות בכסף וכל אחד מהם נהנה בחציו, ולכן על כל אחד מהם להחזיר רק חצי, מה שאין כן בשני ערבים שכלל לא לוו, ולכן כל אחד מהם ערב על כל החוב ויכול המלווה לתבוע מי מהם שירצה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (חו"מ קלב ג) פוסק כרמב"ם לגבי שנים שערבו, שיכול המלווה לגבות ממי שירצה תחילה ומביא את שיטת הרמב"ן והתוספתא כ"יש אומרים". לגבי שותפים שלוו פוסק השו"ע (חו"מ עז א) שאין לגבות מהאחד את כל החוב, אלא רק את חציו, אלא אם כן אין לחברו ממה לשלם, שאז השותף השני ערב לו לפרוע את הכל<sup id="ref405"><a href="#fn405">[405]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (חו"מ קלב ג) פוסק כרמב"ם לגבי שנים שערבו, שיכול המלווה לגבות ממי שירצה תחילה ומביא את שיטת הרמב"ן והתוספתא כ"יש אומרים". לגבי שותפים שלוו פוסק השו"ע (חו"מ עז א) שאין לגבות מהאחד את כל החוב, אלא רק את חציו, אלא אם כן אין לחברו ממה לשלם, שאז השותף השני ערב לו לפרוע את הכל<sup id="ref405"><a href="#fn405">[405]</a></sup>.</p>
                     
                 </div>
                 
@@ -1465,23 +1465,23 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     האומר לחבירו ערוב לפלוני כך וכך ואני ערב לך הרי זה כמי שאמר לו הלוהו ואני ערב, וכשם שנשתעבד הערב למלוה כך נשתעבד ערב לערב ראשון, ודין הערב עם המלוה ודין ערב ראשון עם השני דין אחד הוא.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ערב של ערב</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ערב של ערב</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל התבאר שהשתעבדותו של הערב במצב שיכול להיחשב היה להיחשב כאסמכתא נובעת מכך שברור לו שדבריו נלקחו ברצינות והמלווה הוציא כסף על פי התחייבותו ולכן הוא עצמו גם כן מתייחס ברצינות להתחייבותו וגמר בליבו לעמוד בה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעיל התבאר שהשתעבדותו של הערב במצב שיכול להיחשב היה להיחשב כאסמכתא נובעת מכך שברור לו שדבריו נלקחו ברצינות והמלווה הוציא כסף על פי התחייבותו ולכן הוא עצמו גם כן מתייחס ברצינות להתחייבותו וגמר בליבו לעמוד בה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאן מחדש ה<strong>רמב"ם</strong> שהשתעבדותו של הערב אינה מוגבלת למקרה בו מישהו הוציא ממון על פיו, אלא קיימת גם אם מישהו התחייב התחייבות ממונית אחרת על פיו, שיכולה להביא להוצאת ממון. לכן, אם אדם התחייב להיות ערב מתוך כך שאדם אחר התחייב להיות לו ערב אם לא יוכל לפרוע, השתעבד הערב השני לראשון, ואם הלווה לא יוכל לפרוע ואף הערב הראשון לא יוכל לפרוע, יגבה המלווה מהערב השני<sup id="ref406"><a href="#fn406">[406]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאן מחדש ה<strong>רמב"ם</strong> שהשתעבדותו של הערב אינה מוגבלת למקרה בו מישהו הוציא ממון על פיו, אלא קיימת גם אם מישהו התחייב התחייבות ממונית אחרת על פיו, שיכולה להביא להוצאת ממון. לכן, אם אדם התחייב להיות ערב מתוך כך שאדם אחר התחייב להיות לו ערב אם לא יוכל לפרוע, השתעבד הערב השני לראשון, ואם הלווה לא יוכל לפרוע ואף הערב הראשון לא יוכל לפרוע, יגבה המלווה מהערב השני<sup id="ref406"><a href="#fn406">[406]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (חו"מ קלא יד) כותב את דברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (חו"מ קלא יד) כותב את דברי הרמב"ם.</p>
                     
                 </div>
                 
@@ -1489,43 +1489,43 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מי שלא פירש קצב הדבר שערב כגון שאמר לו כל מה שתתן תן לו ואני ערב או מכור לו ואני ערב או הלוהו ואני ערב יש מן הגאונים שהורה אפילו מכר לו בעשרת אלפים או הלוה מאה אלף נשתעבד הערב בכל, ויראה לי שאין זה הערב חייב כלום שכיון שאינו יודע הדבר ששיעבד עצמו בו לא סמכה דעתו ולא שיעבד עצמו ודברים של טעם הם למבין. +/השגת הראב"ד/ מי שלא פירש וכו' עד ודברים של טעם וכו'. א"א וא"כ לא ברב ולא במעט אלא כדי שהדעת מגעת לשם שהוא רגיל ואמיד נשתעבד עכ"ל.+
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ערבות על דבר שאינו קצוב</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ערבות על דבר שאינו קצוב</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בכתובות (קא:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא בכתובות (קא:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>האומר לחבירו... חייב אני לך מנה בשטר,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>האומר לחבירו... חייב אני לך מנה בשטר,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יוחנן</strong> אמר: חייב, אלימא מילתא דשטרא כמאן דאמר להו אתם עדים דמי;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי יוחנן</strong> אמר: חייב, אלימא מילתא דשטרא כמאן דאמר להו אתם עדים דמי;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ר</strong><strong>יש </strong><strong>ל</strong><strong>קיש</strong> אמר: פטור, לא אלימא מילתא דשטרא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>ר</strong><strong>יש </strong><strong>ל</strong><strong>קיש</strong> אמר: פטור, לא אלימא מילתא דשטרא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנן: הנושא את האשה, ופסקה עמו לזון את בתה חמש שנים - חייב לזונה חמש שנים; מאי לאו כי האי גוונא!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנן: הנושא את האשה, ופסקה עמו לזון את בתה חמש שנים - חייב לזונה חמש שנים; מאי לאו כי האי גוונא!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא, בשטרי פסיקתא...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא, בשטרי פסיקתא...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על רקע הגמרא הזו נחלקו הרמב"ם והראב"ד (הלכות מכירה יא טז) בדין האומר לאשה, בעל פה, "הריני חייב לזון אותך חמש שנים". ה<strong>רמב"ם</strong> כותב-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על רקע הגמרא הזו נחלקו הרמב"ם והראב"ד (הלכות מכירה יא טז) בדין האומר לאשה, בעל פה, "הריני חייב לזון אותך חמש שנים". ה<strong>רמב"ם</strong> כותב-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חייב עצמו בדבר שאינו קצוב, כגון שאמר הריני חייב לזון אותך או לכסות חמש שנים, אף על פי שקנו מידו לא נשתעבד, שזו כמו מתנה היא ואין כאן דבר ידוע ומצוי שנתנו במתנה, וכן הורו רבותי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>חייב עצמו בדבר שאינו קצוב, כגון שאמר הריני חייב לזון אותך או לכסות חמש שנים, אף על פי שקנו מידו לא נשתעבד, שזו כמו מתנה היא ואין כאן דבר ידוע ומצוי שנתנו במתנה, וכן הורו רבותי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וה<strong>ראב"ד</strong> משיג עליו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וה<strong>ראב"ד</strong> משיג עליו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רבותיו הורו ולא ידעתי מאין הורו שהרי בגמ' הקשו מאותה משנה לריש לקיש וסייעו לרבי יוחנן והיו סבורין שאינם כשטרי פסיקאתא ור"ל הוא שמעמיד אותה בכך וכשתעיין יפה הכל דרך אחד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רבותיו הורו ולא ידעתי מאין הורו שהרי בגמ' הקשו מאותה משנה לריש לקיש וסייעו לרבי יוחנן והיו סבורין שאינם כשטרי פסיקאתא ור"ל הוא שמעמיד אותה בכך וכשתעיין יפה הכל דרך אחד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת ה<strong>רמב"ם</strong> המתחייב על דבר שאינו קצוב אינו משתעבד לכך. לעומתו, ה<strong>ראב"ד</strong> אומר שכיוון ששיטת ר' יוחנן (שהלכה לפיו) היא שהמתחייב צריך לעמוד בהתחייבותו, וההעמדה ב"שטרי פסיקתא" היא רק כדי לתרץ את ריש לקיש, הרי שהמתחייב כן צריך לעמוד בהתחייבותו למרות שהתחייב על דבר שאינו קצוב. כפי שיתבאר בע"ה בדברינו על הלכות מכירה, ראשונים רבים חלוקים על הרמב"ם ובכללם ה<strong>רשב"א</strong> (שו"ת ח"ו ס' קעח).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת ה<strong>רמב"ם</strong> המתחייב על דבר שאינו קצוב אינו משתעבד לכך. לעומתו, ה<strong>ראב"ד</strong> אומר שכיוון ששיטת ר' יוחנן (שהלכה לפיו) היא שהמתחייב צריך לעמוד בהתחייבותו, וההעמדה ב"שטרי פסיקתא" היא רק כדי לתרץ את ריש לקיש, הרי שהמתחייב כן צריך לעמוד בהתחייבותו למרות שהתחייב על דבר שאינו קצוב. כפי שיתבאר בע"ה בדברינו על הלכות מכירה, ראשונים רבים חלוקים על הרמב"ם ובכללם ה<strong>רשב"א</strong> (שו"ת ח"ו ס' קעח).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם כאן בדין ערב נחלקו במחלוקת דומה, שהרמב"ם אומר שערב שלא יודע מה סכום החוב שהוא ערב לו לא גמר בדעתו להשתעבד לכך, והראב"ד אומר שאם מדובר בסכום שהגיוני שיעלה בדעתו של הערב, כן משתעבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם כאן בדין ערב נחלקו במחלוקת דומה, שהרמב"ם אומר שערב שלא יודע מה סכום החוב שהוא ערב לו לא גמר בדעתו להשתעבד לכך, והראב"ד אומר שאם מדובר בסכום שהגיוני שיעלה בדעתו של הערב, כן משתעבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (חו"מ קלא יג) מניח שהמחלוקת בערב היא אותה מחלוקת הראשונים במתחייב דבר ללא קצבה, ולכן מביא את דברי הרמב"ם, ומיד אחרי כותב ש"כל הבאים אחריו חלקו עליו", ופוסק כמותם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (חו"מ קלא יג) מניח שהמחלוקת בערב היא אותה מחלוקת הראשונים במתחייב דבר ללא קצבה, ולכן מביא את דברי הרמב"ם, ומיד אחרי כותב ש"כל הבאים אחריו חלקו עליו", ופוסק כמותם.</p>
                     
                 </div>
                 
@@ -1533,27 +1533,27 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מי שאמר לחבירו הלוהו ואני ערב לגופו של לוה זה לא ערב לעצמו של ממון אלא כל זמן שתרצה אביאנו לך, וכן אם אמר לו אחר שהלוהו ותבעו הניחהו כל זמן שתתבענו אביאנו לך וקנו מידו על זה אם לא יביא זה הלוה יש מן הגאונים שהורה שהוא חייב לשלם, ויש מי שהורה שאפילו התנה ואמר אם לא אביאנו או שמת או שברח אהיה חייב לשלם הרי זו אסמכתא ולא נשתעבד ולזה דעתי נוטה.  מי שאמר לחבירו הלוהו ואני ערב לגופו של וכו' עד ולזה דעתי נוטה. א"א דל אסמכתא מהכא שהרי סלקו אותה בגמרא אלא אם אמר בשעת מתן מעות הלוהו ואני ערב לך להביא בידך את גופו ואם לא אוכל להשיבו אשלם לית דין ולית דיין שהוא חייב לשלם ואם לא אמר לו כך למה יתחייב ממון אלא י"ל שיבא גוף תחת גוף עד שיתפשר עמו עכ"ל.
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ערב לגופו של לווה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ערב לגופו של לווה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המקרה בו אדם ערב לכך שהלווה יופיע לבית הדין ואינו ערב לכך שישלם מופיע כבר בגמרא (עי' לעיל הל' ג-ד שהובאו דברי רבה ור' יוסף). לכאורה אין הבדל בין ערב שכזה לבין ערב רגיל המתחייב לשלם את החוב אם לא ישלמו הלווה. כשם שערב רגיל מתחייב בשעת מתן מעות כיוון שהמלווה הוציא ממון על פיו, כך גם ערב לגופו של הלווה, אם התחייב בשעת מתן מעות אמור להיות מחוייב לדבריו. כך היא דעת ה<strong>ראב"ד</strong> כאן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המקרה בו אדם ערב לכך שהלווה יופיע לבית הדין ואינו ערב לכך שישלם מופיע כבר בגמרא (עי' לעיל הל' ג-ד שהובאו דברי רבה ור' יוסף). לכאורה אין הבדל בין ערב שכזה לבין ערב רגיל המתחייב לשלם את החוב אם לא ישלמו הלווה. כשם שערב רגיל מתחייב בשעת מתן מעות כיוון שהמלווה הוציא ממון על פיו, כך גם ערב לגופו של הלווה, אם התחייב בשעת מתן מעות אמור להיות מחוייב לדבריו. כך היא דעת ה<strong>ראב"ד</strong> כאן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עם זאת, ה<strong>רמב"ם</strong> סובר שלהלכה מקרה זה נחשב כאסמכתא ואין ערב שכזה משתעבד. יש שני טעמים לומר כרמב"ם, שערב לגופו של לווה דינו שונה מערב רגיל-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עם זאת, ה<strong>רמב"ם</strong> סובר שלהלכה מקרה זה נחשב כאסמכתא ואין ערב שכזה משתעבד. יש שני טעמים לומר כרמב"ם, שערב לגופו של לווה דינו שונה מערב רגיל-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שמתבאר בר"ן קידושין (ד: מדפי הרי"ף), ומוסבר לעיל בדברינו על הלכה א, יש שתי דרכים להבין את חיובו של הערב. הראשונה היא דרכו של הרמב"ן. לדעת הרמב"ן הערב חייב כיוון שהמלווה הוציא ממון על פיו, ולכן הערב מתייחס לדבריו שלו ברצינות. <strong>כל</strong> התחייבות של הערב הזוכה מצד המלווה לאמון כה מוחלט היא התחייבות שנעשתה בלב שם ולכן הערב משתעבד. השניה היא דרכו של הרשב"א האומר שכיוון שהמלווה הוציא את כספו לצורך הנאה של בר דעת, קרי, הלווה, הערב שם את עצמו במקומו של הלווה והנאתו של הלווה היא זכות לערב ולכן המנגנון המחייב לווה להשיב הלוואה (עצם זה שקיבל את הכסף) הוא הוא המנגנון שמחייב ערב לשלם. לפי זה, לא כל התחייבות של הערב בשעת מתן מעות משעבדת אותו, אלא רק במידה שהיא שמה אותו במקום הלווה. הבאה של גופו של הלווה לבית הדין היא התחייבות שונה באופיה מזו של הלווה עצמו, ולכן היא דורשת קניין מיוחד. ואפשר שזהו טעמו של הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שמתבאר בר"ן קידושין (ד: מדפי הרי"ף), ומוסבר לעיל בדברינו על הלכה א, יש שתי דרכים להבין את חיובו של הערב. הראשונה היא דרכו של הרמב"ן. לדעת הרמב"ן הערב חייב כיוון שהמלווה הוציא ממון על פיו, ולכן הערב מתייחס לדבריו שלו ברצינות. <strong>כל</strong> התחייבות של הערב הזוכה מצד המלווה לאמון כה מוחלט היא התחייבות שנעשתה בלב שם ולכן הערב משתעבד. השניה היא דרכו של הרשב"א האומר שכיוון שהמלווה הוציא את כספו לצורך הנאה של בר דעת, קרי, הלווה, הערב שם את עצמו במקומו של הלווה והנאתו של הלווה היא זכות לערב ולכן המנגנון המחייב לווה להשיב הלוואה (עצם זה שקיבל את הכסף) הוא הוא המנגנון שמחייב ערב לשלם. לפי זה, לא כל התחייבות של הערב בשעת מתן מעות משעבדת אותו, אלא רק במידה שהיא שמה אותו במקום הלווה. הבאה של גופו של הלווה לבית הדין היא התחייבות שונה באופיה מזו של הלווה עצמו, ולכן היא דורשת קניין מיוחד. ואפשר שזהו טעמו של הרמב"ם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאשר המלווה אינו סומך על הערב לעצם תשלום החוב אלא רק לעניין זה שידאג שהלווה לא יברח, הדעת נותנת שלא הוציא את הכסף רק בגלל התחייבותו של הערב. מתוך כך גם הערב עצמו אינו לוקח את דבריו שלו עצמו ברצינות המתאימה. לכן, במקרה זה יהיה צורך בקניין כדי להתחייב, ואין די שיהיה הדבר בשעת מתן מעות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאשר המלווה אינו סומך על הערב לעצם תשלום החוב אלא רק לעניין זה שידאג שהלווה לא יברח, הדעת נותנת שלא הוציא את הכסף רק בגלל התחייבותו של הערב. מתוך כך גם הערב עצמו אינו לוקח את דבריו שלו עצמו ברצינות המתאימה. לכן, במקרה זה יהיה צורך בקניין כדי להתחייב, ואין די שיהיה הדבר בשעת מתן מעות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (חו"מ קלא יב) פוסק כדברי הרמב"ם, וה<strong>רמ"א</strong> מביא את דברי הראב"ד</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (חו"מ קלא יב) פוסק כדברי הרמב"ם, וה<strong>רמ"א</strong> מביא את דברי הראב"ד</p>
                     
                 </div>
                 
@@ -1561,7 +1561,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1660,6 +1660,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

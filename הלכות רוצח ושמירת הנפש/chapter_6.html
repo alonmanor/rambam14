@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות רוצח ושמירת הנפש - פרק ו'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ו')</h3>
                 <ul class="space-y-3">
@@ -1026,7 +1026,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1038,17 +1038,17 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">פרק זה מוקדש רובו ככולו לחלוקה בין סוגים שונים של הריגה בשוגג. חיוב גלות אינו חל בכל הורג בשוגג. ישנם מקרים בהם הורג בשוגג יהיה פטור מגלות, וזאת משתי סיבות שונות ומנוגדות- האחת, אם מעשהו מוגדר כ"קרוב לאונס", ולכן אין הוא אשם במידה המצדיקה עונש גלות. והשניה, אם מעשהו מוגדר כשוגג "הקרוב למזיד", שאז מעשיו חמורים מכדי שגלות תכפר עליהם. בתחילת הפרק (הלכות א-ה) מפרט הרמב"ם את שתי הקבוצות הנ"ל, ואת קבוצת הביניים, של הרוצחים בשוגג החייבים גלות.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">פרק זה מוקדש רובו ככולו לחלוקה בין סוגים שונים של הריגה בשוגג. חיוב גלות אינו חל בכל הורג בשוגג. ישנם מקרים בהם הורג בשוגג יהיה פטור מגלות, וזאת משתי סיבות שונות ומנוגדות- האחת, אם מעשהו מוגדר כ"קרוב לאונס", ולכן אין הוא אשם במידה המצדיקה עונש גלות. והשניה, אם מעשהו מוגדר כשוגג "הקרוב למזיד", שאז מעשיו חמורים מכדי שגלות תכפר עליהם. בתחילת הפרק (הלכות א-ה) מפרט הרמב"ם את שתי הקבוצות הנ"ל, ואת קבוצת הביניים, של הרוצחים בשוגג החייבים גלות.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכות ו-ט מובאות דוגמאות לשלושת המקרים של הורג בשוגג, דרך וריאציות שונות של מקרה של אדם שזרק אבן ברשות הרבים והרג. כאשר מדובר במקום בו אנשים מצויים, פטור הזורק מגלות משום שקרוב הוא למזיד, שהיה לו לעיין לפני שזרק. מאידך, אם מדובר במקום שאין אנשים מצויים שם כלל, הרי הוא פטור מגלות משום שקרוב הדבר לאונס, שלא היה עליו לעיין. מקרה הביניים (המצומצם יחסית) בו חייב גלות, הוא כזה בו מדובר במקום שמצויים בו אנשים בזמן מסויים דווקא, וההריגה התרחשה בזמן אחר, במקרה כזה אין הדבר מוגדר כאונס, כיוון שהמקום אינו נטוש, אך מצד שני העובדה שההורג לא נזהר דיו אינה מוגדרת פשיעה. כאשר עיון לפני זריקת האבן לא היה מועיל, בכגון שהופיע הנהרג לאחר שהאבן יצאה מידו של הזורק, פטור הזורק מגלות, כיוון שקרוב הוא להיות אנוס.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בהלכות ו-ט מובאות דוגמאות לשלושת המקרים של הורג בשוגג, דרך וריאציות שונות של מקרה של אדם שזרק אבן ברשות הרבים והרג. כאשר מדובר במקום בו אנשים מצויים, פטור הזורק מגלות משום שקרוב הוא למזיד, שהיה לו לעיין לפני שזרק. מאידך, אם מדובר במקום שאין אנשים מצויים שם כלל, הרי הוא פטור מגלות משום שקרוב הדבר לאונס, שלא היה עליו לעיין. מקרה הביניים (המצומצם יחסית) בו חייב גלות, הוא כזה בו מדובר במקום שמצויים בו אנשים בזמן מסויים דווקא, וההריגה התרחשה בזמן אחר, במקרה כזה אין הדבר מוגדר כאונס, כיוון שהמקום אינו נטוש, אך מצד שני העובדה שההורג לא נזהר דיו אינה מוגדרת פשיעה. כאשר עיון לפני זריקת האבן לא היה מועיל, בכגון שהופיע הנהרג לאחר שהאבן יצאה מידו של הזורק, פטור הזורק מגלות, כיוון שקרוב הוא להיות אנוס.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכה י מופיעה רשימה של הורגים ללא כוונה, המוגדרים קרובים למזיד ופטורים מגלות. הראשון הוא השונא, בו חוששים שלא נזהר דיו מלפגוע בחברו שהוא שונאו, או אף שמעשהו היה רצח מתוכנן מראש במסווה של הריגה בלתי מכוונת. עוד מקרה הוא של אדם שהילך עם סכין שלופה וכיוצא בה במקום שאינו יכול להיזהר בה, כמו בקרן זווית, מקרה המוגדר קרוב למזיד לפי הרמב"ם. עוד מובאים כמה מקרים המוגדרים "קרוב למזיד" מצד זה שההורג התכוון למעשיו, אף שלא נתכוון לתוצאותיהם. בין אלה נמנים הדוחף את חבירו בכוונה, המתכוון לזרוק קרוב וזרק רחוק, המתכוון להרוג בהמה והרג אדם, ולדעת הרמב"ם (הפוסק כר' שמעון) אף המתכוון להרוג אדם והרג אדם אחר. במקרה האחרון יש אף ראשונים הפוסקים (כחכמים) שזהו רוצח במזיד ממש.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בהלכה י מופיעה רשימה של הורגים ללא כוונה, המוגדרים קרובים למזיד ופטורים מגלות. הראשון הוא השונא, בו חוששים שלא נזהר דיו מלפגוע בחברו שהוא שונאו, או אף שמעשהו היה רצח מתוכנן מראש במסווה של הריגה בלתי מכוונת. עוד מקרה הוא של אדם שהילך עם סכין שלופה וכיוצא בה במקום שאינו יכול להיזהר בה, כמו בקרן זווית, מקרה המוגדר קרוב למזיד לפי הרמב"ם. עוד מובאים כמה מקרים המוגדרים "קרוב למזיד" מצד זה שההורג התכוון למעשיו, אף שלא נתכוון לתוצאותיהם. בין אלה נמנים הדוחף את חבירו בכוונה, המתכוון לזרוק קרוב וזרק רחוק, המתכוון להרוג בהמה והרג אדם, ולדעת הרמב"ם (הפוסק כר' שמעון) אף המתכוון להרוג אדם והרג אדם אחר. במקרה האחרון יש אף ראשונים הפוסקים (כחכמים) שזהו רוצח במזיד ממש.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה יא עוסקת בהורג בשוגג ברשותו שלו. המקרה המתואר בתורה, בו הרג האחד את השני ביער, הוא מקרה בו יש רשות לשניהם להיכנס, ולכן צריך כל אחד מהם לשמור שלא להזיק לאדם אחר שיכול להיות שם. לעומת זה, כאשר ההורג פועל ברשותו שלו, והנהרג נכנס שלא ברשות (כך שההורג לא אמור לדעת על נוכחותו של הנהרג שם), פטור הוא מלהיזהר ומוגדר כאנוס. אם נכנס הנהרג ברשות, חלקו הראשונים האם תמיד חייב בעל הבית גלות, או שישנם גם מצבים בהם פטור מגלות כי קרוב למזיד.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה יא עוסקת בהורג בשוגג ברשותו שלו. המקרה המתואר בתורה, בו הרג האחד את השני ביער, הוא מקרה בו יש רשות לשניהם להיכנס, ולכן צריך כל אחד מהם לשמור שלא להזיק לאדם אחר שיכול להיות שם. לעומת זה, כאשר ההורג פועל ברשותו שלו, והנהרג נכנס שלא ברשות (כך שההורג לא אמור לדעת על נוכחותו של הנהרג שם), פטור הוא מלהיזהר ומוגדר כאנוס. אם נכנס הנהרג ברשות, חלקו הראשונים האם תמיד חייב בעל הבית גלות, או שישנם גם מצבים בהם פטור מגלות כי קרוב למזיד.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות יב-יד מגדירות מהי הריגה ב"דרך ירידה" ומהי הריגה שהיא ב"דרך עליה". מן הפסוקים נלמד שחיוב גלות קיים רק בהריגה שהיא ב"דרך ירידה", למשל, כאשר ההורג הפיל חפץ כלשהו או הוריד קורנס על הנהרג. לעומת זאת, את החפץ ההורג היה בדרך עליה, פטור מגלות. הרמב"ם מסביר ש"דרך עליה" מאפיינת מקרים בהם לא היה צריך הנהרג להיזהר כל כך, ולכן הם מוגדרים "קרוב לאונס". לפי ראשונים אחרים משמע שמדובר בגזירת הכתוב. בהלכה יד מובאים עוד מקרים של "קרוב לאונס" המאופיינים בכך שההורג לא ידע כלל על הסכנה שהוא יכול לגרום, ולכן לא היה יכול להיזהר.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות יב-יד מגדירות מהי הריגה ב"דרך ירידה" ומהי הריגה שהיא ב"דרך עליה". מן הפסוקים נלמד שחיוב גלות קיים רק בהריגה שהיא ב"דרך ירידה", למשל, כאשר ההורג הפיל חפץ כלשהו או הוריד קורנס על הנהרג. לעומת זאת, את החפץ ההורג היה בדרך עליה, פטור מגלות. הרמב"ם מסביר ש"דרך עליה" מאפיינת מקרים בהם לא היה צריך הנהרג להיזהר כל כך, ולכן הם מוגדרים "קרוב לאונס". לפי ראשונים אחרים משמע שמדובר בגזירת הכתוב. בהלכה יד מובאים עוד מקרים של "קרוב לאונס" המאופיינים בכך שההורג לא ידע כלל על הסכנה שהוא יכול לגרום, ולכן לא היה יכול להיזהר.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכה טו נידונים מקרים נוספים של "קרוב לאונס", בהם החפץ ההורג לא הופל/נזרק מכוחו הישיר את ההורג, אלא מכח כוחו בלבד, כמו למשל, אם נשמט הגרזן מתוך העץ שביקע או שזרק אבן להשיר תמרים והתמרים נפלו והרגו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בהלכה טו נידונים מקרים נוספים של "קרוב לאונס", בהם החפץ ההורג לא הופל/נזרק מכוחו הישיר את ההורג, אלא מכח כוחו בלבד, כמו למשל, אם נשמט הגרזן מתוך העץ שביקע או שזרק אבן להשיר תמרים והתמרים נפלו והרגו.</p>
                 
             </div>
             
@@ -1056,51 +1056,51 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     שלשה הם ההורגים בלא כוונה, יש הורג בשגגה והעלמה גמורה וזהו שנאמר בו "ואשר לא צדה" (שמות כ"א י"ג) ודינו שיגלה לערי מקלט וינצל כמו שביארנו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ויש הורג בשגגה ותהיה השגגה קרובה לאונס והוא שיארע במיתת זה מאורע פלא שאינו מצוי ברוב מאורעות בני אדם ודינו שהוא פטור מן הגלות ואם הרגו גואל הדם נהרג עליו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ויש הורג בשגגה ותהיה השגגה קרובה לזדון והוא שיהיה בדבר כמו פשיעה או שהיה לו להזהר ולא נזהר, ודינו שאינו גולה, מפני שעונו חמור אין גלות מכפרת לו ואין ערי מקלט קולטות אותו שאינן קולטות אלא המחוייב גלות בלבד. לפיכך אם מצאו גואל הדם בכל מקום והרגו פטור.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ומה יעשה זה ישב וישמור עצמו מגואל הדם, וכן כל הרצחנים שהרגו בעד אחד או בלא התראה וכיוצא בהן אם הרגן גואל הדם אין להם דמים, לא יהיו אלו חמורים מההורג בלא כוונה. וכן כל הרצחנים שהרגו בעד אחד או בלא התראה וכו'. א"א תימה הוא ואיך נאמין בעד אחד להתיר דמו של זה לגואל הדם.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המקור לדין שוגג הקרוב למזיד</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המקור לדין שוגג הקרוב למזיד</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בב"ק (לב:) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא בב"ק (לב:) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הנכנס לחנותו של נגר שלא ברשות ונתזה בקעת וטפחה על פניו ומת פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הנכנס לחנותו של נגר שלא ברשות ונתזה בקעת וטפחה על פניו ומת פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם נכנס ברשות חייב</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם נכנס ברשות חייב</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדובר על אדם שנכנס לחנותו של נגר, ומתוך עבודתו של הנגר ניתזה, שלא בכוונה, חתיכת עץ והרגתו<sup id="ref75"><a href="#fn75">[75]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר על אדם שנכנס לחנותו של נגר, ומתוך עבודתו של הנגר ניתזה, שלא בכוונה, חתיכת עץ והרגתו<sup id="ref75"><a href="#fn75">[75]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוסי בר חנינא</strong> מפרש שבסיפא, כשנכנס ברשות, אין חייב גלות, אלא "חייב" הכוונה היא שכאשר לא מת הנכנס, חייב הנגר בארבעת תשלומי החובל- נזק, צער, ריפוי ושבת, ואם מת הנכנס, פטור הנגר מגלות אפילו אם נכנס ברשות. טעמו של ר' יוסי הוא</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יוסי בר חנינא</strong> מפרש שבסיפא, כשנכנס ברשות, אין חייב גלות, אלא "חייב" הכוונה היא שכאשר לא מת הנכנס, חייב הנגר בארבעת תשלומי החובל- נזק, צער, ריפוי ושבת, ואם מת הנכנס, פטור הנגר מגלות אפילו אם נכנס ברשות. טעמו של ר' יוסי הוא</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי שאין דומה ליער, יער זה לרשותו נכנס וזה לרשותו נכנס זה לרשות חבירו נכנס</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי שאין דומה ליער, יער זה לרשותו נכנס וזה לרשותו נכנס זה לרשות חבירו נכנס</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כיוון שההורג פעל ברשותו שלו, והנכנס נפגע במקום שאינו רשותו, אין הדבר דומה למקרה שבתורה, ואין ההורג גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כיוון שההורג פעל ברשותו שלו, והנכנס נפגע במקום שאינו רשותו, אין הדבר דומה למקרה שבתורה, ואין ההורג גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> אינו מסכים לפירוש זה לדברי ר' יוסי. לדבריו אדרבה, בברייתא אשמת ההורג גדולה יותר מאשר במקרה המתואר בתורה, כיוון שידע הנגר שהנהרג נכנס, שהרי נכנס ברשות. לכן מסביר רבא שר' יוסי בר חנינא התכוון שפטור מגלות לא משום שאינו אשם, אלא משום שמעשהו הוא <strong>שוגג הקרוב למזיד</strong>, שאין גלות מכפרת עליו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> אינו מסכים לפירוש זה לדברי ר' יוסי. לדבריו אדרבה, בברייתא אשמת ההורג גדולה יותר מאשר במקרה המתואר בתורה, כיוון שידע הנגר שהנהרג נכנס, שהרי נכנס ברשות. לכן מסביר רבא שר' יוסי בר חנינא התכוון שפטור מגלות לא משום שאינו אשם, אלא משום שמעשהו הוא <strong>שוגג הקרוב למזיד</strong>, שאין גלות מכפרת עליו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נמצאנו למדים מדברי רבא, שחוץ מהאנוס, ומהשוגג הגולה, ישנו גדר נוסף של רוצח שמצד אחד אינו נהרג, כיוון שלא הרג בכוונה, אך מצד שני אינו גולה כיוון שמעשיו חמורים מדי ואין בגלות בכדי לכפר עליהם. וכך כותב ה<strong>רמב"ם</strong> בהלכות אלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נמצאנו למדים מדברי רבא, שחוץ מהאנוס, ומהשוגג הגולה, ישנו גדר נוסף של רוצח שמצד אחד אינו נהרג, כיוון שלא הרג בכוונה, אך מצד שני אינו גולה כיוון שמעשיו חמורים מדי ואין בגלות בכדי לכפר עליהם. וכך כותב ה<strong>רמב"ם</strong> בהלכות אלה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק עוד מסברה, שאף כל אותם רוצחים שלא ניתן להורגם בגלל בעיות טכניות בהתראה וכדומה, אם הרגם גואל הדם פטור. הסברה לכך היא מקל וחומר מהורג שלא בכוונה, שכן הורג בשוגג הקרוב למזיד אינו מוכנס לכיפה, ואילו אותם רצחנים דינם חמור יותר (עי' לעיל פרק ד הלכה ח). ולכן אם גואל הדם שהרג את ההורג בשגגה הקרובה למזיד אינו חייב עליו, כל שכן שאינו חייב על הריגת הרוצחים שדינם הכנסה לכיפה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק עוד מסברה, שאף כל אותם רוצחים שלא ניתן להורגם בגלל בעיות טכניות בהתראה וכדומה, אם הרגם גואל הדם פטור. הסברה לכך היא מקל וחומר מהורג שלא בכוונה, שכן הורג בשוגג הקרוב למזיד אינו מוכנס לכיפה, ואילו אותם רצחנים דינם חמור יותר (עי' לעיל פרק ד הלכה ח). ולכן אם גואל הדם שהרג את ההורג בשגגה הקרובה למזיד אינו חייב עליו, כל שכן שאינו חייב על הריגת הרוצחים שדינם הכנסה לכיפה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק כאן עוסק שהרוצח בעד אחד שהרגו גואל הדם, אינו נהרג עליו. ה<strong>ראב"ד </strong>מקשה עליו, שהרי אם רק עד אחד העיד עליו שרצח, אין לנו כלל וודאות שהדבר נכון, ומאין הרשות לגואל הדם להורגו? על רקע קושיה זו, מפרש ה<strong>כסף משנה </strong>שאין הכוונה שעד אחד מעיד עליו, אלא מדובר ב"עדות מיוחדת", כלומר, של שני עדים שלא ראו את המעשה כאחד, מקרה בו ישנה ודאות מספיקה בכדי לאסור את הרוצח (ראה לעיל פרק ד הלכה ח-ט).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק כאן עוסק שהרוצח בעד אחד שהרגו גואל הדם, אינו נהרג עליו. ה<strong>ראב"ד </strong>מקשה עליו, שהרי אם רק עד אחד העיד עליו שרצח, אין לנו כלל וודאות שהדבר נכון, ומאין הרשות לגואל הדם להורגו? על רקע קושיה זו, מפרש ה<strong>כסף משנה </strong>שאין הכוונה שעד אחד מעיד עליו, אלא מדובר ב"עדות מיוחדת", כלומר, של שני עדים שלא ראו את המעשה כאחד, מקרה בו ישנה ודאות מספיקה בכדי לאסור את הרוצח (ראה לעיל פרק ד הלכה ח-ט).</p>
                     
                 </div>
                 
@@ -1108,45 +1108,45 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו-ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כיצד, הזורק אבן לרשות הרבים והרג, או הסותר כתלו לרשות הרבים ונפלה אבן והמיתה, בין שסתרו ביום בין שסתרו בלילה, הרי זה קרוב למזיד ואינו נקלט מפני שזו פשיעות היא שהרי היה לו לעיין ואחר כך יזרוק או יסתור.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     סתרו לאשפה בלילה אם הרבים מצויין בה הרי זה קרוב למזיד ואינו נקלט ואם אין הרבים מצויין בה כלל הרי זה קרוב לאונס ופטור מן הגלות.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     היתה האשפה עשויה להפנות בה בלילה ואינה עשויה להפנות בה ביום ונקרה אדם וישב שם ונפלה עליו אבן בשעת סתירה ומת הרי זה גולה. ואם אחר שנפלה האבן בא זה וישב ונפלה עליו ומת הרי זה פטור מן הגלות.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הזורק אבן והסותר את כותלו והמית</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הזורק אבן והסותר את כותלו והמית</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (ב"ק לב:) מביאה את ה<strong>משנה</strong> (מכות ח.) בכדי להקשות על דברי רבא, שחידש ששוגג הקרוב למזיד מעשיו כה חמורים עד שאינו גולה כלל:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (ב"ק לב:) מביאה את ה<strong>משנה</strong> (מכות ח.) בכדי להקשות על דברי רבא, שחידש ששוגג הקרוב למזיד מעשיו כה חמורים עד שאינו גולה כלל:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הזורק את האבן לרשות הרבים והרג הרי זה גולה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הזורק את האבן לרשות הרבים והרג הרי זה גולה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מניחה שזריקת אבן לרה"ר היא שוגג הקרוב למזיד, כיוון שסביר שברשות הרבים מצויים אנשים ומישהו יכול להיפגע, ובכל זאת המשנה במכות אומרת שגולה. <strong>רב שמואל בר יצחק</strong> מנסה להסביר שאין הדבר קרוב למזיד כיוון שזריקת האבן היתה תוך כדי סתירת כותלו, או בלילה, או באשפה (שמצויים בה אנשים אך לא רבים כמו ברה"ר), אך הגמרא דוחה ואומרת שבכל המקרים הנ"ל היה עליו להתבונן ולהיזהר, ומשלא עשה כך הרי הוא קרוב למזיד, ובכל זאת גולה, בניגוד לדברי רבא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מניחה שזריקת אבן לרה"ר היא שוגג הקרוב למזיד, כיוון שסביר שברשות הרבים מצויים אנשים ומישהו יכול להיפגע, ובכל זאת המשנה במכות אומרת שגולה. <strong>רב שמואל בר יצחק</strong> מנסה להסביר שאין הדבר קרוב למזיד כיוון שזריקת האבן היתה תוך כדי סתירת כותלו, או בלילה, או באשפה (שמצויים בה אנשים אך לא רבים כמו ברה"ר), אך הגמרא דוחה ואומרת שבכל המקרים הנ"ל היה עליו להתבונן ולהיזהר, ומשלא עשה כך הרי הוא קרוב למזיד, ובכל זאת גולה, בניגוד לדברי רבא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לבסוף מעמיד <strong>ר' פפא</strong>, שהמשנה במכות מדברת במקרה מאד מסויים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לבסוף מעמיד <strong>ר' פפא</strong>, שהמשנה במכות מדברת במקרה מאד מסויים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באשפה העשויה להפנות בלילה ואינה עשויה להפנות ביום ואיכא דמיקרי ויתיב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">באשפה העשויה להפנות בלילה ואינה עשויה להפנות ביום ואיכא דמיקרי ויתיב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מזיד לא הוי דהא אינה עשויה להפנות ביום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מזיד לא הוי דהא אינה עשויה להפנות ביום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אנוס נמי לא הוי דהא איכא דמיקרי ויתיב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אנוס נמי לא הוי דהא איכא דמיקרי ויתיב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדובר בו אדם סתר כותלו לאשפה<sup id="ref76"><a href="#fn76">[76]</a></sup>. ומדובר בסותר כותלו ביום, ובאשפה שדרך אנשים להיות שם בלילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר בו אדם סתר כותלו לאשפה<sup id="ref76"><a href="#fn76">[76]</a></sup>. ומדובר בסותר כותלו ביום, ובאשפה שדרך אנשים להיות שם בלילה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מסביר, שמדובר במקרה בו גם ביום אפשר וימצאו באותה אשפה אנשים. לכן מצד אחד אין מדובר בשוגג הקרוב למזיד, משום שאין דרך אנשים להימצא שם ביום, אך גם אין זה קרוב לאונס, כי לעיתים יכולים להימצא שם אנשים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> מסביר, שמדובר במקרה בו גם ביום אפשר וימצאו באותה אשפה אנשים. לכן מצד אחד אין מדובר בשוגג הקרוב למזיד, משום שאין דרך אנשים להימצא שם ביום, אך גם אין זה קרוב לאונס, כי לעיתים יכולים להימצא שם אנשים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם ב<strong>רמב"ם</strong> ניתן להבין באופן דומה, כלומר- אם "אין הרבים מצויים" בשעת המעשה, אזי נחשב הוא כאנוס, אך אם רק "אין דרכה להפנות", הרי שאפשר שמישהו בכל זאת יהיה שם, ולכן הוא שוגג וגולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם ב<strong>רמב"ם</strong> ניתן להבין באופן דומה, כלומר- אם "אין הרבים מצויים" בשעת המעשה, אזי נחשב הוא כאנוס, אך אם רק "אין דרכה להפנות", הרי שאפשר שמישהו בכל זאת יהיה שם, ולכן הוא שוגג וגולה.</p>
                     
                 </div>
                 
@@ -1154,27 +1154,27 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     וכן הזורק את האבן ואחר שיצאת מידו הוציא הלה את ראשו וקבלה פטור מן הגלות, שנאמר "ומצא את רעהו" (דברים יט ה)- פרט לממציא עצמו.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הממציא את עצמו ונהרג</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הממציא את עצמו ונהרג</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדין הרוצח בשוגג נאמר בתורה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בדין הרוצח בשוגג נאמר בתורה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"וְנִדְּחָה יָדוֹ בַגַּרְזֶן לִכְרֹת הָעֵץ וְנָשַׁל הַבַּרְזֶל מִן הָעֵץ <strong>וּמָצָא</strong> אֶת רֵעֵהוּ וָמֵת" (דברים יט ה)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"וְנִדְּחָה יָדוֹ בַגַּרְזֶן לִכְרֹת הָעֵץ וְנָשַׁל הַבַּרְזֶל מִן הָעֵץ <strong>וּמָצָא</strong> אֶת רֵעֵהוּ וָמֵת" (דברים יט ה)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ב"ק לג.) מובאת ברייתא הלומדת מפסוק זה דין פטור מגלות:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ב"ק לג.) מובאת ברייתא הלומדת מפסוק זה דין פטור מגלות:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">'ומצא' פרט לממציא את עצמו מכאן אמר <strong>ר</strong><strong>בי</strong><strong> אליעזר בן יעקב</strong> מי שיצתה אבן מתחת ידו והוציא הלה את ראשו וקיבלה פטור<sup id="ref77"><a href="#fn77">[77]</a></sup></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">'ומצא' פרט לממציא את עצמו מכאן אמר <strong>ר</strong><strong>בי</strong><strong> אליעזר בן יעקב</strong> מי שיצתה אבן מתחת ידו והוציא הלה את ראשו וקיבלה פטור<sup id="ref77"><a href="#fn77">[77]</a></sup></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המילה "ומצא" שבפסוק אמורה כלפי הברזל הנושל מן הקת ונע לכיוון הנפגע. הפסוק מייחס לברזל הדומם את "מציאת" הנפגע, כיוון שלא ההורג כיוון אותו במזיד. אמנם, אם היה מעורב גם הנפגע בכך שנכנס למסלול התנועה של הברזל לאחר שזה יצא מידי ההורג, הרי ההורג פטור מגלות<sup id="ref78"><a href="#fn78">[78]</a></sup>. מלשון ה<strong>רמב"ם </strong>בהלכה ו'- "שהרי היה לו לעיין ואחר כך יזרוק" משמע שדעתו שטעם הדין הוא שאם הופיע הנהרג לאחר זריקת האבן, לא יכול היה הזורק להיזהר<sup id="ref79"><a href="#fn79">[79]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, המילה "ומצא" שבפסוק אמורה כלפי הברזל הנושל מן הקת ונע לכיוון הנפגע. הפסוק מייחס לברזל הדומם את "מציאת" הנפגע, כיוון שלא ההורג כיוון אותו במזיד. אמנם, אם היה מעורב גם הנפגע בכך שנכנס למסלול התנועה של הברזל לאחר שזה יצא מידי ההורג, הרי ההורג פטור מגלות<sup id="ref78"><a href="#fn78">[78]</a></sup>. מלשון ה<strong>רמב"ם </strong>בהלכה ו'- "שהרי היה לו לעיין ואחר כך יזרוק" משמע שדעתו שטעם הדין הוא שאם הופיע הנהרג לאחר זריקת האבן, לא יכול היה הזורק להיזהר<sup id="ref79"><a href="#fn79">[79]</a></sup>.</p>
                     
                 </div>
                 
@@ -1182,132 +1182,132 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     השונא שהרג בשגגה אינו נקלט שנאמר והוא לא אויב לו (במדבר ל"ה כ"ג), חזקתו שהוא קרוב למזיד, ואי זהו שונא זה שלא דבר עמו שלשה ימים מפני האיבה, וכן אם נכנס לקרן זוית והמיתו שם בשגגה, או שדחפו בגופו, או שנתכוון לזרוק שתים וזרק ארבע, או שעלה על דעתו שמותר להרוג, או שנתכוון להרוג את זה והרג את זה, אפילו נתכוון להרוג גוי או בהמה ונמצא ישראל, הרי כל אלו קרובין למזיד ואינן נקלטין.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שונא שהרג</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שונא שהרג</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (מכות ז:) מובאת ברייתא הדורשת את הפסוק העוסק ברוצח בשוגג-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (מכות ז:) מובאת ברייתא הדורשת את הפסוק העוסק ברוצח בשוגג-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְאִם בְּפֶתַע <strong>בְּלֹא אֵיבָה</strong> הֲדָפוֹ אוֹ הִשְׁלִיךְ עָלָיו כָּל כְּלִי בְּלֹא צְדִיָּה (במדבר לה כב)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְאִם בְּפֶתַע <strong>בְּלֹא אֵיבָה</strong> הֲדָפוֹ אוֹ הִשְׁלִיךְ עָלָיו כָּל כְּלִי בְּלֹא צְדִיָּה (במדבר לה כב)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהמילים "בלא איבה" לומדת ה<strong>ברייתא</strong> שאם ישנה איבה בין ההורג לנהרג, אין להורג דין רוצח בשוגג והוא אינו גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מהמילים "בלא איבה" לומדת ה<strong>ברייתא</strong> שאם ישנה איבה בין ההורג לנהרג, אין להורג דין רוצח בשוגג והוא אינו גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקביל, נאמר ב<strong>משנה</strong> (מכות ט:)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקביל, נאמר ב<strong>משנה</strong> (מכות ט:)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השונא אינו גולה,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השונא אינו גולה,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יוסי</strong> אומר השונא נהרג מפני שהוא כמועד,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי יוסי</strong> אומר השונא נהרג מפני שהוא כמועד,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי שמעון</strong> אומר יש שונא גולה ויש שונא שאינו גולה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי שמעון</strong> אומר יש שונא גולה ויש שונא שאינו גולה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">זה הכלל כל שהוא יכול לומר לדעת הרג אינו גולה ושלא לדעת הרג הרי זה גולה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">זה הכלל כל שהוא יכול לומר לדעת הרג אינו גולה ושלא לדעת הרג הרי זה גולה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מובאת <strong>ברייתא</strong> המבהירה את דברי <strong>רבי שמעון</strong></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מובאת <strong>ברייתא</strong> המבהירה את דברי <strong>רבי שמעון</strong></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תניא כיצד אמר <strong>רבי שמעון</strong> יש שונא גולה ויש שונא שאינו גולה?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תניא כיצד אמר <strong>רבי שמעון</strong> יש שונא גולה ויש שונא שאינו גולה?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נפסק- גולה, נשמט- אינו גולה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נפסק- גולה, נשמט- אינו גולה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לדעת ר' שמעון לא בכל מצב אנו מניחים שהשונא הרג תוך רשלנות פושעת ממש. כדוגמה, מדובר על שונא שהפיל דבר מה על הנהרג. אם קרה הדבר מתוך שנשמט דבר מה מידו, אנו חוששים ששמטו בכוונה ולכן דינו חמור והוא אינו גולה. אמנם, אם החבל או החפץ נקרע, כך שחלק נשאר ביד ההורג וחלק נפל על הנהרג, במצב זה אין חוששים שעשה את מעשהו מדעת, ודין השונא כדין כל אדם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, לדעת ר' שמעון לא בכל מצב אנו מניחים שהשונא הרג תוך רשלנות פושעת ממש. כדוגמה, מדובר על שונא שהפיל דבר מה על הנהרג. אם קרה הדבר מתוך שנשמט דבר מה מידו, אנו חוששים ששמטו בכוונה ולכן דינו חמור והוא אינו גולה. אמנם, אם החבל או החפץ נקרע, כך שחלק נשאר ביד ההורג וחלק נפל על הנהרג, במצב זה אין חוששים שעשה את מעשהו מדעת, ודין השונא כדין כל אדם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על חילוק זה בין "נשמט", החמור, ל"נפסק" הקל, מקשה הגמרא מדברי ר' שמעון במקום אחר</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על חילוק זה בין "נשמט", החמור, ל"נפסק" הקל, מקשה הגמרא מדברי ר' שמעון במקום אחר</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' שמעון</strong> אומר לעולם אינו גולה עד <strong>שישמט</strong> מחצלו מידו</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' שמעון</strong> אומר לעולם אינו גולה עד <strong>שישמט</strong> מחצלו מידו</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לפי דברי ר' שמעון האלה, רק על <strong>שמיטת</strong> חפץ על חבירו גולים, ומשמע שבמקרה של "נפסק", אנו אומרים שמדובר באונס, ופוטרים מגלות את ההורג בין אם הוא אוהבו של הנהרג ובין אם הוא שונאו<sup id="ref80"><a href="#fn80">[80]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, לפי דברי ר' שמעון האלה, רק על <strong>שמיטת</strong> חפץ על חבירו גולים, ומשמע שבמקרה של "נפסק", אנו אומרים שמדובר באונס, ופוטרים מגלות את ההורג בין אם הוא אוהבו של הנהרג ובין אם הוא שונאו<sup id="ref80"><a href="#fn80">[80]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בתשובת הגמרא קיימות בין הראשונים שתי גרסאות- גרסת <strong>רש"י</strong> וסיעתו מחד גיסא, וגרסת <strong>ר' חננאל</strong> וסיעתו מאידך גיסא<sup id="ref81"><a href="#fn81">[81]</a></sup>. ההבדל המרכזי ביניהם הוא, שלפי <strong>רש"י</strong>, במקרה שנפסק החבל אין חוששים שהשונא עשה את מעשהו בכוונה, ולכן אין הבדל בין שונא לאוהב. זאת להבדיל מבמקרה בו שמט ההורג את החבל מידו, בו אין השונא גולה כי חוששים שעשה את מעשהו בכוונה. לעומת זאת, לפי <strong>ר' חננאל</strong>, ההבדל בין שונא לאוהב קיים בין בנפסק ובין בנשמט. במקרה שנפסק החבל, אם מדובר באוהב אנו רואים זאת כאונס גמור, ופטור מגלות, ואם מדובר בשונא אנו חוששים שהחבל לא נבדק היטב ומחייבים גלות<sup id="ref82"><a href="#fn82">[82]</a></sup>. ב"נשמט", אם מדובר בשונא, אינו גולה כי קרוב הוא למזיד, ובאוהב גולה, כי אין חוששים שעשה זאת בכוונה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בתשובת הגמרא קיימות בין הראשונים שתי גרסאות- גרסת <strong>רש"י</strong> וסיעתו מחד גיסא, וגרסת <strong>ר' חננאל</strong> וסיעתו מאידך גיסא<sup id="ref81"><a href="#fn81">[81]</a></sup>. ההבדל המרכזי ביניהם הוא, שלפי <strong>רש"י</strong>, במקרה שנפסק החבל אין חוששים שהשונא עשה את מעשהו בכוונה, ולכן אין הבדל בין שונא לאוהב. זאת להבדיל מבמקרה בו שמט ההורג את החבל מידו, בו אין השונא גולה כי חוששים שעשה את מעשהו בכוונה. לעומת זאת, לפי <strong>ר' חננאל</strong>, ההבדל בין שונא לאוהב קיים בין בנפסק ובין בנשמט. במקרה שנפסק החבל, אם מדובר באוהב אנו רואים זאת כאונס גמור, ופטור מגלות, ואם מדובר בשונא אנו חוששים שהחבל לא נבדק היטב ומחייבים גלות<sup id="ref82"><a href="#fn82">[82]</a></sup>. ב"נשמט", אם מדובר בשונא, אינו גולה כי קרוב הוא למזיד, ובאוהב גולה, כי אין חוששים שעשה זאת בכוונה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כחכמים כנגד ר' שמעון, שהשונא אינו גולה בין ב"נפסק" בין ב"נשמט". אמנם, מלשון הרמב"ם "חזקתו שהוא קרוב למזיד" יש לדייק שבמקום בו ברור שלא ידע השונא את זהות האדם אותו הוא הורג או שברור שלא היתה לו שליטה על מי יפול וכדומה, אף לפי הרמב"ם יגלה השונא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כחכמים כנגד ר' שמעון, שהשונא אינו גולה בין ב"נפסק" בין ב"נשמט". אמנם, מלשון הרמב"ם "חזקתו שהוא קרוב למזיד" יש לדייק שבמקום בו ברור שלא ידע השונא את זהות האדם אותו הוא הורג או שברור שלא היתה לו שליטה על מי יפול וכדומה, אף לפי הרמב"ם יגלה השונא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> במסכת מכות אינה מגדירה מיהו השונא. לעומתה, ה<strong>משנה</strong> במסכת סנהדרין פוסלת שונא לעדות על חבירו (לפי דעת ר' יהודה) ומגדירה ששונא לעניין זה הוא כל שלא דיבר עם רעהו שלושה ימים. רוב הראשונים ובכללם ה<strong>רמב"ם</strong>, למדו ממשנה זו את הגדרת השונא גם לענייננו<sup id="ref83"><a href="#fn83">[83]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> במסכת מכות אינה מגדירה מיהו השונא. לעומתה, ה<strong>משנה</strong> במסכת סנהדרין פוסלת שונא לעדות על חבירו (לפי דעת ר' יהודה) ומגדירה ששונא לעניין זה הוא כל שלא דיבר עם רעהו שלושה ימים. רוב הראשונים ובכללם ה<strong>רמב"ם</strong>, למדו ממשנה זו את הגדרת השונא גם לענייננו<sup id="ref83"><a href="#fn83">[83]</a></sup>.</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ההורג בקרן זווית</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ההורג בקרן זווית</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בפסוק</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר בפסוק</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְ<strong>אִם בְּפֶתַע</strong> בְּלֹא אֵיבָה הֲדָפוֹ אוֹ הִשְׁלִיךְ עָלָיו כָּל כְּלִי בְּלֹא צְדִיָּה (במדבר לה כב)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְ<strong>אִם בְּפֶתַע</strong> בְּלֹא אֵיבָה הֲדָפוֹ אוֹ הִשְׁלִיךְ עָלָיו כָּל כְּלִי בְּלֹא צְדִיָּה (במדבר לה כב)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לומדת ה<strong>ברייתא</strong> (מכות ז:) "ואם בפתע- פרט לקרן זווית".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לומדת ה<strong>ברייתא</strong> (מכות ז:) "ואם בפתע- פרט לקרן זווית".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בפירוש הדבר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בפירוש הדבר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מ<strong>רש"י</strong> משמע שבכדי להתחייב בגלות צריכים ההורג והנהרג להיות סמוכים זה לזה מבעוד מועד, כך שידע ההורג להיזהר ("בפתע- בסמוך"). לכן, בקרן זווית, כיוון שלא ראה ההורג את הנהרג מבעוד מועד, לא יכול היה להיזהר והרי הוא <strong>קרוב לאונס</strong> ופטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מ<strong>רש"י</strong> משמע שבכדי להתחייב בגלות צריכים ההורג והנהרג להיות סמוכים זה לזה מבעוד מועד, כך שידע ההורג להיזהר ("בפתע- בסמוך"). לכן, בקרן זווית, כיוון שלא ראה ההורג את הנהרג מבעוד מועד, לא יכול היה להיזהר והרי הוא <strong>קרוב לאונס</strong> ופטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, ה<strong>ר</strong><strong>מב"ם</strong> כותב שבקרן זווית פטור הרוצח כיוון שהוא <strong>קרוב למזיד</strong>. ופירוש הדברים לשיטתו, שהפסוק מחייב גלות דווקא כאשר בא המעשה לידי הרוצח "בפתע", כלומר ללא אפשרות להתכונן. לכן, אם היה הרוצח הולך בסכין שלופה בידו ופנה בקרן זווית במקום שאינו יכול לראות את הבא מולו, הרי זו רשלנות פושעת שיכולה היתה להימנע בקלות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת, ה<strong>ר</strong><strong>מב"ם</strong> כותב שבקרן זווית פטור הרוצח כיוון שהוא <strong>קרוב למזיד</strong>. ופירוש הדברים לשיטתו, שהפסוק מחייב גלות דווקא כאשר בא המעשה לידי הרוצח "בפתע", כלומר ללא אפשרות להתכונן. לכן, אם היה הרוצח הולך בסכין שלופה בידו ופנה בקרן זווית במקום שאינו יכול לראות את הבא מולו, הרי זו רשלנות פושעת שיכולה היתה להימנע בקלות.</p>
                     
                 </div>
                 
                 <div id="topic-4-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דחפו בגופו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דחפו בגופו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ברייתא</strong> הנ"ל (ראה בנושא הקודם) לומדת מהפסוק בבמדבר- "הדפו- שדחפו בגופו".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ברייתא</strong> הנ"ל (ראה בנושא הקודם) לומדת מהפסוק בבמדבר- "הדפו- שדחפו בגופו".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong>, ה<strong>מאירי</strong> וה<strong>ריטב"א</strong> מפרשים שהכוונה שלמרות שדחפו בגופו עדיין נחשב הדבר שוגג וגולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong>, ה<strong>מאירי</strong> וה<strong>ריטב"א</strong> מפרשים שהכוונה שלמרות שדחפו בגופו עדיין נחשב הדבר שוגג וגולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחרת מבין ה<strong>רמב"ם</strong>. לדעתו כוונת הלימוד שבברייתא הוא "<strong>פרט</strong> לדחפו בגופו". כלומר, כוונת הפסוק לומר שרק אם הדפו חייב גלות, אך אם דחפו בגופו אין זו הדיפה וקרוב הדבר למזיד. ההבדל בין הדיפה לבין דחיפה היא, כנראה, שדחיפה היא מעשה אקטיבי הנעשה מתוך דעת יותר מאשר הדיפה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחרת מבין ה<strong>רמב"ם</strong>. לדעתו כוונת הלימוד שבברייתא הוא "<strong>פרט</strong> לדחפו בגופו". כלומר, כוונת הפסוק לומר שרק אם הדפו חייב גלות, אך אם דחפו בגופו אין זו הדיפה וקרוב הדבר למזיד. ההבדל בין הדיפה לבין דחיפה היא, כנראה, שדחיפה היא מעשה אקטיבי הנעשה מתוך דעת יותר מאשר הדיפה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נתכוון לזרוק שתים וזרק ארבע</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נתכוון לזרוק שתים וזרק ארבע</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אותה הברייתא מפנה גם לפסוק שבשמות:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אותה הברייתא מפנה גם לפסוק שבשמות:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וַ<strong>אֲשֶׁר לֹא צָדָה </strong>וְהָאֱלֹהִים אִנָּה לְיָדוֹ וְשַׂמְתִּי לְךָ מָקוֹם אֲשֶׁר יָנוּס שָׁמָּה (שמות כא יג)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וַ<strong>אֲשֶׁר לֹא צָדָה </strong>וְהָאֱלֹהִים אִנָּה לְיָדוֹ וְשַׂמְתִּי לְךָ מָקוֹם אֲשֶׁר יָנוּס שָׁמָּה (שמות כא יג)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכאן לומדת ה<strong>ברייתא</strong> "פרט לנתכוון לזרוק שתים וזרק ארבע".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכאן לומדת ה<strong>ברייתא</strong> "פרט לנתכוון לזרוק שתים וזרק ארבע".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> במסכת מכות מסביר שמשמעות הכתוב שחייב בגלות רק מי שזרק בלי להיות מודע לכך שהנפגע נמצא באזור, אך מי שזרק ביודעין לעברו של הנפגע או בקרבתו, פטור מגלות כיוון שקרוב הוא למזיד<sup id="ref84"><a href="#fn84">[84]</a></sup>. בדרך זו הלכו רוב הראשונים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> במסכת מכות מסביר שמשמעות הכתוב שחייב בגלות רק מי שזרק בלי להיות מודע לכך שהנפגע נמצא באזור, אך מי שזרק ביודעין לעברו של הנפגע או בקרבתו, פטור מגלות כיוון שקרוב הוא למזיד<sup id="ref84"><a href="#fn84">[84]</a></sup>. בדרך זו הלכו רוב הראשונים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>נימוק</strong><strong>י יוסף</strong> (בבא קמא יא: מדפי הרי"ף) מסכים עם פירוש זה ומבאר שפטור מגלות מדין קרוב למזיד אך ורק כאשר הזורק ידע שמצויים אנשים במקום אליו התכוון לזרוק, אך אם לא ראה אף אדם או שלא ידע שמצויים שם אנשים, גולה אפילו נתכוון לזרוק ארבע ובאמת זרק ארבע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>נימוק</strong><strong>י יוסף</strong> (בבא קמא יא: מדפי הרי"ף) מסכים עם פירוש זה ומבאר שפטור מגלות מדין קרוב למזיד אך ורק כאשר הזורק ידע שמצויים אנשים במקום אליו התכוון לזרוק, אך אם לא ראה אף אדם או שלא ידע שמצויים שם אנשים, גולה אפילו נתכוון לזרוק ארבע ובאמת זרק ארבע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> במסכת בבא קמא (כו:) מביא פירוש נוסף, הפוך מפירושו שלעיל. לפי פירוש זה כוונת הברייתא שאותו שנתכוון לזרוק שתים וזרק ארבע <strong>חייב</strong> גלות, ובאה הברייתא ללמדנו שהוא <strong>אינו</strong> קרוב למזיד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> במסכת בבא קמא (כו:) מביא פירוש נוסף, הפוך מפירושו שלעיל. לפי פירוש זה כוונת הברייתא שאותו שנתכוון לזרוק שתים וזרק ארבע <strong>חייב</strong> גלות, ובאה הברייתא ללמדנו שהוא <strong>אינו</strong> קרוב למזיד.</p>
                     
                 </div>
                 
                 <div id="topic-4-4" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המתכוין להרוג בהמה והרג אדם והאומר מותר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המתכוין להרוג בהמה והרג אדם והאומר מותר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית הגמרא במכות (ז:) מובאת <strong>ברייתא</strong> העוסקת בפירוש הביטויים המתארים את מצב גמירות דעתו הנדרש של המחוייב גלות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגיית הגמרא במכות (ז:) מובאת <strong>ברייתא</strong> העוסקת בפירוש הביטויים המתארים את מצב גמירות דעתו הנדרש של המחוייב גלות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תנו רבנן- "[וְנָס שָׁמָּה רֹצֵחַ מַכֵּה נֶפֶשׁ] <strong>בִּשְׁגָגָה</strong>" (במדבר לה יא) -  פרט למזיד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תנו רבנן- "[וְנָס שָׁמָּה רֹצֵחַ מַכֵּה נֶפֶשׁ] <strong>בִּשְׁגָגָה</strong>" (במדבר לה יא) -  פרט למזיד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"[וְזֶה דְּבַר הָרֹצֵחַ אֲשֶׁר יָנוּס שָׁמָּה וָחָי אֲשֶׁר יַכֶּה אֶת רֵעֵהוּ] <strong>בִּבְלִי דַעַת</strong>" (דברים יט ד)-  פרט למתכוין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"[וְזֶה דְּבַר הָרֹצֵחַ אֲשֶׁר יָנוּס שָׁמָּה וָחָי אֲשֶׁר יַכֶּה אֶת רֵעֵהוּ] <strong>בִּבְלִי דַעַת</strong>" (דברים יט ד)-  פרט למתכוין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מפרשת את הלימוד של "פרט למתכוון"- "פרט למתכוין להרוג את הבהמה והרג את האדם לכותי והרג את ישראל לנפל והרג בן קיימא"<sup id="ref85"><a href="#fn85">[85]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מפרשת את הלימוד של "פרט למתכוון"- "פרט למתכוין להרוג את הבהמה והרג את האדם לכותי והרג את ישראל לנפל והרג בן קיימא"<sup id="ref85"><a href="#fn85">[85]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף מפרשת הגמרא את הלימוד "פרט למזיד", שהכוונה היא פרט לאומר מותר, כלומר לאדם שהרג מתוך מחשבה שאין איסור בדבר<sup id="ref86"><a href="#fn86">[86]</a></sup>. הגמרא מסבירה שביאור זה תלוי במחלוקת האמוראים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף מפרשת הגמרא את הלימוד "פרט למזיד", שהכוונה היא פרט לאומר מותר, כלומר לאדם שהרג מתוך מחשבה שאין איסור בדבר<sup id="ref86"><a href="#fn86">[86]</a></sup>. הגמרא מסבירה שביאור זה תלוי במחלוקת האמוראים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אביי</strong> סובר שהאומר מותר נחשב אנוס. לעומתו <strong>רבא</strong> סובר שהאומר מותר נחשב קרוב למזיד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אביי</strong> סובר שהאומר מותר נחשב אנוס. לעומתו <strong>רבא</strong> סובר שהאומר מותר נחשב קרוב למזיד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ברור שלדעת <strong>אביי</strong> לא ניתן לומר שהברייתא התכוונה לאומר מותר בדברה על "מזיד"<sup id="ref87"><a href="#fn87">[87]</a></sup>. רק לשיטתו של <strong>רבא</strong> יש מקום להבין שה"מזיד" שבברייתא הוא האומר מותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ברור שלדעת <strong>אביי</strong> לא ניתן לומר שהברייתא התכוונה לאומר מותר בדברה על "מזיד"<sup id="ref87"><a href="#fn87">[87]</a></sup>. רק לשיטתו של <strong>רבא</strong> יש מקום להבין שה"מזיד" שבברייתא הוא האומר מותר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם ט.) מסבירה שחילוקי הדעות בענין האומר מותר משליכים לעניין ההורג אדם מתוך מחשבה מוטעית-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (שם ט.) מסבירה שחילוקי הדעות בענין האומר מותר משליכים לעניין ההורג אדם מתוך מחשבה מוטעית-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כסבור בהמה ונמצא אדם, כנעני ונמצא גר תושב,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כסבור בהמה ונמצא אדם, כנעני ונמצא גר תושב,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> אומר- חייב. אומר מותר קרוב למזיד הוא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> אומר- חייב. אומר מותר קרוב למזיד הוא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב חסדא</strong> אומר- פטור. אומר מותר אנוס הוא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב חסדא</strong> אומר- פטור. אומר מותר אנוס הוא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, הגמרא מקשרת בין המחלוקת באומר מותר, לבין דין ההורג במחשבה שלפניו אדם או חיה שאין חייבים על הריגתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, הגמרא מקשרת בין המחלוקת באומר מותר, לבין דין ההורג במחשבה שלפניו אדם או חיה שאין חייבים על הריגתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר את הקשר- מי שסובר שאומר מותר קרוב לאונס, כיוון שבשעת מעשה לא ידע שאסור, יפטור גם את הסבור שבהמה לפניו ונמצאת אדם כיוון שאף הוא לא ידע את משמעות מעשיו בזמן עשייתם. אמנם, מי שפוסק שאומר מותר חייב, הרי זה משום שהוא מצפה שלפני עשיית המעשה יברר האם מותר או אסור לעשותו. לפי דעה זו יתחייב אף ההורג אדם וסבור שבהמה לפניו, כיוון שהיה עליו לברר היטב לפני מעשה מי הוא זה העומד לפניו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר את הקשר- מי שסובר שאומר מותר קרוב לאונס, כיוון שבשעת מעשה לא ידע שאסור, יפטור גם את הסבור שבהמה לפניו ונמצאת אדם כיוון שאף הוא לא ידע את משמעות מעשיו בזמן עשייתם. אמנם, מי שפוסק שאומר מותר חייב, הרי זה משום שהוא מצפה שלפני עשיית המעשה יברר האם מותר או אסור לעשותו. לפי דעה זו יתחייב אף ההורג אדם וסבור שבהמה לפניו, כיוון שהיה עליו לברר היטב לפני מעשה מי הוא זה העומד לפניו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong> מעלה אפשרות נוספת- ה"אומר מותר" שבסוגייתנו אינו כל אדם שסבור שמעשיו אינם אסורים, אלא דווקא כגון דא, שסבור שבהמה הוא ונמצא אדם. במקרה זה, ורק במקרה זה, סובר רבא שחייב, שכן היה יכול לברר בנקל מי הוא זה העומד לפניו<sup id="ref88"><a href="#fn88">[88]</a></sup>. אמנם, אם סבר שמותר לו להרוג משום שטעה בהלכה וכדומה, בזה לא סבר רבא שחייב<sup id="ref89"><a href="#fn89">[89]</a></sup>. כן מובא גם ב<strong>ריטב"א </strong>(ז:).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ן</strong> מעלה אפשרות נוספת- ה"אומר מותר" שבסוגייתנו אינו כל אדם שסבור שמעשיו אינם אסורים, אלא דווקא כגון דא, שסבור שבהמה הוא ונמצא אדם. במקרה זה, ורק במקרה זה, סובר רבא שחייב, שכן היה יכול לברר בנקל מי הוא זה העומד לפניו<sup id="ref88"><a href="#fn88">[88]</a></sup>. אמנם, אם סבר שמותר לו להרוג משום שטעה בהלכה וכדומה, בזה לא סבר רבא שחייב<sup id="ref89"><a href="#fn89">[89]</a></sup>. כן מובא גם ב<strong>ריטב"א </strong>(ז:).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המקרה של "כסבור בהמה ונמצא אדם" הוא מקרה בו היה יצור אחד מול ההורג, הוא חשב שמדובר בבהמה ובסוף הסתבר שמדובר באדם. במילים אחרות, המעשה של ההורג היה לפי התכנון, אלא שלא היה מודע לתוצאה. הראשונים דנים גם במקרה מקביל בו היו אדם ובהמה לפניו ונתכוון להרוג את הבהמה ומעשיו <strong>לא</strong> עלו לפי התכנון והרג את האדם. ה<strong>תוספות</strong> (ט. ד"ה "ורב חסדא") פוסקים שלמקרה כזה התכוונה הגמרא בדף ז: הלומדת "בבלי דעת- פרט למתכוין"<sup id="ref90"><a href="#fn90">[90]</a></sup> ומסבירה שמדובר ב"נתכוון להרוג בהמה והרג אדם" (עיין לעיל). מהתוספות משמע שלהבדיל מהמקרה בו סבור שלפניו בהמה והסתבר שמדובר באדם, בו רבא סובר שהדבר קרוב למזיד, במקרה בו לפניו שני גופים- אדם ובהמה, ונתכוון להכות בבהמה והלכה מכתו על האדם, מדובר בשוגג הקרוב לאונס.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המקרה של "כסבור בהמה ונמצא אדם" הוא מקרה בו היה יצור אחד מול ההורג, הוא חשב שמדובר בבהמה ובסוף הסתבר שמדובר באדם. במילים אחרות, המעשה של ההורג היה לפי התכנון, אלא שלא היה מודע לתוצאה. הראשונים דנים גם במקרה מקביל בו היו אדם ובהמה לפניו ונתכוון להרוג את הבהמה ומעשיו <strong>לא</strong> עלו לפי התכנון והרג את האדם. ה<strong>תוספות</strong> (ט. ד"ה "ורב חסדא") פוסקים שלמקרה כזה התכוונה הגמרא בדף ז: הלומדת "בבלי דעת- פרט למתכוין"<sup id="ref90"><a href="#fn90">[90]</a></sup> ומסבירה שמדובר ב"נתכוון להרוג בהמה והרג אדם" (עיין לעיל). מהתוספות משמע שלהבדיל מהמקרה בו סבור שלפניו בהמה והסתבר שמדובר באדם, בו רבא סובר שהדבר קרוב למזיד, במקרה בו לפניו שני גופים- אדם ובהמה, ונתכוון להכות בבהמה והלכה מכתו על האדם, מדובר בשוגג הקרוב לאונס.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כותב את דין "נתכוון להרוג גוי או בהמה ונמצא ישראל" כסעיף של דין "נתכוון להרוג את זה והרג את זה". לעיל () עסקנו בדין זה בו פוסק הרמב"ם כר' שמעון שפטור ממיתה. עוד כתבנו את דברי הגמרא שלדעת רבי שמעון פטור ממיתה בין בגוף אחד (שטעה בזיהוי של מי שעומד לפניו) ובין בשני גופים (שעמדו לפניו שנים ונתכוון להרוג את האחד והרג את חבירו). לפי זה, נראה שמה שפוטר הרמב"ם כאן בגלות בנתכוון להרוג בהמה ונמצא אדם מתוך שקרוב למזיד, אף בזה מדובר בין בגוף אחד ובין בשני גופים. לפי זה חלוק הרמב"ם על דברי התוספות הנ"ל שהסביר שבשני גופים מדובר בקרוב לאונס.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> כותב את דין "נתכוון להרוג גוי או בהמה ונמצא ישראל" כסעיף של דין "נתכוון להרוג את זה והרג את זה". לעיל () עסקנו בדין זה בו פוסק הרמב"ם כר' שמעון שפטור ממיתה. עוד כתבנו את דברי הגמרא שלדעת רבי שמעון פטור ממיתה בין בגוף אחד (שטעה בזיהוי של מי שעומד לפניו) ובין בשני גופים (שעמדו לפניו שנים ונתכוון להרוג את האחד והרג את חבירו). לפי זה, נראה שמה שפוטר הרמב"ם כאן בגלות בנתכוון להרוג בהמה ונמצא אדם מתוך שקרוב למזיד, אף בזה מדובר בין בגוף אחד ובין בשני גופים. לפי זה חלוק הרמב"ם על דברי התוספות הנ"ל שהסביר שבשני גופים מדובר בקרוב לאונס.</p>
                     
                 </div>
                 
@@ -1315,63 +1315,63 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הנכנס לחצר בעל הבית שלא ברשות והרגו בעל הבית בשגגה פטור מן הגלות, שנאמר "ואשר יבא את רעהו ביער" (דברים יט ה), מה יער שיש רשות לנהרג להכנס לשם אף כל כיוצא בו, לפיכך הנכנס לחנות הנגר שלא ברשות ונתזה בקעת וטפחה לו על פניו ומת פטור מגלות, ואם נכנס ברשות הרי זה גולה.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הריגה בשוגג ברשותו של ההורג</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הריגה בשוגג ברשותו של ההורג</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> במכות (ח.) עוסקת בהורג בשוגג שזרק אבן בחצרו שלו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> במכות (ח.) עוסקת בהורג בשוגג שזרק אבן בחצרו שלו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">זרק את האבן לחצרו והרג</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">זרק את האבן לחצרו והרג</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם יש רשות לניזק ליכנס לשם- גולה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם יש רשות לניזק ליכנס לשם- גולה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם לאו- אינו גולה,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם לאו- אינו גולה,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שנאמר "ואשר יבא את רעהו ביער" (דברים יט ה)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שנאמר "ואשר יבא את רעהו ביער" (דברים יט ה)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מה היער רשות לניזק ולמזיק ליכנס לשם אף כל רשות לניזק ולמזיק להכנס לשם,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מה היער רשות לניזק ולמזיק ליכנס לשם אף כל רשות לניזק ולמזיק להכנס לשם,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">יצא חצר בעל הבית שאין רשות לניזק (ולמזיק) <sup id="ref91"><a href="#fn91">[91]</a></sup> ליכנס לשם</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">יצא חצר בעל הבית שאין רשות לניזק (ולמזיק) <sup id="ref91"><a href="#fn91">[91]</a></sup> ליכנס לשם</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית הגמרא בבבא קמא (לב:) מובאת <strong>ברייתא</strong> המדברת באותו עניין-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגיית הגמרא בבבא קמא (לב:) מובאת <strong>ברייתא</strong> המדברת באותו עניין-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הנכנס לחנותו של נגר שלא ברשות ונתזה בקעת וטפחה על פניו ומת פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הנכנס לחנותו של נגר שלא ברשות ונתזה בקעת וטפחה על פניו ומת פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם נכנס ברשות חייב</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם נכנס ברשות חייב</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על הברייתא מובאים דברי <strong>ר</strong><strong>בי</strong><strong> יוסי בר חנינא</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על הברייתא מובאים דברי <strong>ר</strong><strong>בי</strong><strong> יוסי בר חנינא</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>ר</strong><strong>בי</strong><strong> יוסי בר ח</strong><strong>נינא</strong> חייב בד' דברים<sup id="ref92"><a href="#fn92">[92]</a></sup> ופטור מגלות</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמר <strong>ר</strong><strong>בי</strong><strong> יוסי בר ח</strong><strong>נינא</strong> חייב בד' דברים<sup id="ref92"><a href="#fn92">[92]</a></sup> ופטור מגלות</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שתי דרכים מועלות בגמרא להבין את היחס בין דברי רבי יוסי בר חנינא לבין הברייתא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שתי דרכים מועלות בגמרא להבין את היחס בין דברי רבי יוסי בר חנינא לבין הברייתא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דברי ר' יוסי בר חנינא נאמרים על הסיפא. כלומר, אפילו אם נכנס הנפגע <strong>ברשות</strong>, חייב הנגר רק ד' דברים אם נפצע הנפגע ולא מת, ואם מת פטור מגלות<sup id="ref93"><a href="#fn93">[93]</a></sup>. לפי הבנה זו, חלוקה הברייתא על המשנה שבמסכת מכות. בעוד שהמשנה במכות מחייבת גלות את ההורג ברשותו שלו אדם שנכנס אליו ברשות, הברייתא פוטרת את ההורג מגלות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דברי ר' יוסי בר חנינא נאמרים על הסיפא. כלומר, אפילו אם נכנס הנפגע <strong>ברשות</strong>, חייב הנגר רק ד' דברים אם נפצע הנפגע ולא מת, ואם מת פטור מגלות<sup id="ref93"><a href="#fn93">[93]</a></sup>. לפי הבנה זו, חלוקה הברייתא על המשנה שבמסכת מכות. בעוד שהמשנה במכות מחייבת גלות את ההורג ברשותו שלו אדם שנכנס אליו ברשות, הברייתא פוטרת את ההורג מגלות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמה הסברים נאמרו בראשונים בכדי לתרץ כיצד מעמיד ר' יוסי את הברייתא בדרך הסותרת לכאורה משנה מפורשת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כמה הסברים נאמרו בראשונים בכדי לתרץ כיצד מעמיד ר' יוסי את הברייתא בדרך הסותרת לכאורה משנה מפורשת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ב"ק לב: ד"ה "דלא") מסבירים שהמשנה במכות עוסקת במקרה בו יש רשות כללית לנהרג להיכנס למקומו של ההורג, ולכן שם גולה ההורג. אמנם בברייתא שבבבא קמא מדובר במקרה חמור יותר, בו הנכנס ביקש וקיבל, לפני זמן לא רב, רשות כניסה מהנגר, והרי הוא צפוי להיכנס בכל רגע. במקרה כזה הנגר קרוב למזיד ולכן אינו גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ב"ק לב: ד"ה "דלא") מסבירים שהמשנה במכות עוסקת במקרה בו יש רשות כללית לנהרג להיכנס למקומו של ההורג, ולכן שם גולה ההורג. אמנם בברייתא שבבבא קמא מדובר במקרה חמור יותר, בו הנכנס ביקש וקיבל, לפני זמן לא רב, רשות כניסה מהנגר, והרי הוא צפוי להיכנס בכל רגע. במקרה כזה הנגר קרוב למזיד ולכן אינו גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד </strong>(מובא בשטמ"ק שם) מחלק אחרת אך באופן דומה. לדבריו במשנה במכות מדובר בכגון שיש רשות עקרונית לנהרג להיכנס לרשותו של ההורג אך ההורג לא ידע בבירור שהוא שם בשעת המעשה. לעומת זאת, בברייתא שכאן מדובר בכגון שהרגיש הנגר בכניסתו של הנהרג, ולכן עליו להיזהר יותר, ואם לא עשה כך הרי הוא קרוב למזיד ואינו גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד </strong>(מובא בשטמ"ק שם) מחלק אחרת אך באופן דומה. לדבריו במשנה במכות מדובר בכגון שיש רשות עקרונית לנהרג להיכנס לרשותו של ההורג אך ההורג לא ידע בבירור שהוא שם בשעת המעשה. לעומת זאת, בברייתא שכאן מדובר בכגון שהרגיש הנגר בכניסתו של הנהרג, ולכן עליו להיזהר יותר, ואם לא עשה כך הרי הוא קרוב למזיד ואינו גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דברי ר' יוסי בר חנינא נאמרים על הרישא. כלומר, אם נכנס הנפגע <strong>שלא ברשות</strong> ומת, פטור הנגר מגלות, אך אם נפצע ולא מת, חייב עדיין ד' דברים. לעומת זאת, אם נכנס ברשות ומת, חייב הנגר גלות. הבנה זו עולה בקנה אחד עם המשנה במכות שאף בה נאמר שחייבים גלות על הנכנס ברשות ופטורים מגלות על הנכנס שלא ברשות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דברי ר' יוסי בר חנינא נאמרים על הרישא. כלומר, אם נכנס הנפגע <strong>שלא ברשות</strong> ומת, פטור הנגר מגלות, אך אם נפצע ולא מת, חייב עדיין ד' דברים. לעומת זאת, אם נכנס ברשות ומת, חייב הנגר גלות. הבנה זו עולה בקנה אחד עם המשנה במכות שאף בה נאמר שחייבים גלות על הנכנס ברשות ופטורים מגלות על הנכנס שלא ברשות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בבבא קמא (שם) ממשיכה ומביאה <strong>ברייתא</strong>, הנראית כחולקת על פשט המשנה במכות ועל ההסבר השני בדין הנכנס לחנותו של נגר (לפיהם חייבים גלות על הנכנס ברשות)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בבבא קמא (שם) ממשיכה ומביאה <strong>ברייתא</strong>, הנראית כחולקת על פשט המשנה במכות ועל ההסבר השני בדין הנכנס לחנותו של נגר (לפיהם חייבים גלות על הנכנס ברשות)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הנכנס לחנותו של נפח ונתזה ניצוצות וטפחה לו על פניו ומת <strong>פטור</strong> ואפילו נכנס<strong> ברשות</strong></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הנכנס לחנותו של נפח ונתזה ניצוצות וטפחה לו על פניו ומת <strong>פטור</strong> ואפילו נכנס<strong> ברשות</strong></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה שמדובר במקרה בו הנהרג הוא שוליית הנפח וזאת לאחר שהנפח ביקש ממנו לצאת והוא נמנע מלצאת. הנפח פטור משום שסביר להניח שלאחר שהרב מבקש מהשוליה לצאת, הוא אכן עושה זאת. אמנם, אם הנהרג היה בן אדם אחר, שאינו שוליה, היה הנפח חייב גלות, כיוון שלא ניתן לסמוך על זה שסתם אדם ישמע לבקשת הנפח ויצא<sup id="ref94"><a href="#fn94">[94]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מסבירה שמדובר במקרה בו הנהרג הוא שוליית הנפח וזאת לאחר שהנפח ביקש ממנו לצאת והוא נמנע מלצאת. הנפח פטור משום שסביר להניח שלאחר שהרב מבקש מהשוליה לצאת, הוא אכן עושה זאת. אמנם, אם הנהרג היה בן אדם אחר, שאינו שוליה, היה הנפח חייב גלות, כיוון שלא ניתן לסמוך על זה שסתם אדם ישמע לבקשת הנפח ויצא<sup id="ref94"><a href="#fn94">[94]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סימן יא) פוסק כדרך הראשונה בסוגיה בבבא קמא (שר' יוסי בר חנינא אמר על הנכנס ברשות שחייב בד' דברים ופטור מגלות). לפי זה יש לחלק לפי אחד החילוקים (של התוספות או של הראב"ד) שהובאו לעיל, כך שעל הנכנס ברשות לעיתים חייבים גלות, ולעיתים פטורים מגלות (מדין קרוב למזיד).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סימן יא) פוסק כדרך הראשונה בסוגיה בבבא קמא (שר' יוסי בר חנינא אמר על הנכנס ברשות שחייב בד' דברים ופטור מגלות). לפי זה יש לחלק לפי אחד החילוקים (של התוספות או של הראב"ד) שהובאו לעיל, כך שעל הנכנס ברשות לעיתים חייבים גלות, ולעיתים פטורים מגלות (מדין קרוב למזיד).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כדרך השניה (שר' יוסי בר חנינא מחייב ד' דברים במקרה שנכנס הנפגע ללא רשות), ולכן לפיו לעולם חייבים גלות על הנכנס ברשות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כדרך השניה (שר' יוסי בר חנינא מחייב ד' דברים במקרה שנכנס הנפגע ללא רשות), ולכן לפיו לעולם חייבים גלות על הנכנס ברשות.</p>
                     
                 </div>
                 
@@ -1379,124 +1379,124 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב-יד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב-יד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מי שהיה דולה את החבית להעלותה לגג ונפסק החבל ונפלה על חבירו והרגתהו או שהיה עולה בסולם ונפל על חבירו והרגו פטור מן הגלות, שזה כמו אנוס הוא שאין זה דבר הקרוב להיות ברוב העתים אלא כמו פלא הוא. אבל אם היה משלשל את החבית ונפלה על חבירו והרגתהו, היה יורד בסולם ונפל על חבירו והרגו, היה מעגל במעגלה ונפלה על חבירו והרגתהו, גולה, שנאמר "ויפל עליו וימת" (במדבר ל"ה כ"ג), עד שיפול דרך נפילה, שהרי דרך נפילה מצוי ברוב העתים להזיק ודבר קרוב הוא להיות שהרי טבע הכבד לירד למטה במהרה והואיל ולא זירז עצמו ותיקן מעשיו יפה בשעת ירידה יגלה, וכן כל כיוצא בזה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     קצב שהיה מקצב והגביה ידו בקופיץ לאחוריו והחזירו לשבר העצם כדרך שהקצבים עושין, כל שימות בהולכה שהיא הגבהה מלפניו וירידה מאחוריו אינו גולה עליו וכל שימות בהחזרה שהיא עלייה מאחוריו וירידה מלפניו גולה, זה הכלל כל שבדרך ירידתו גולה שלא בדרך ירידתו אינו גולה, ואילו בירידה שהיא צורך עלייה אינו גולה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כיצד, היה עולה בסולם ונשמטה שליבה מתחת רגלו ונפלה והמיתה פטור מן הגלות, וכן המתכוין לזרוק בצד זה והלכה לה בצד אחר או שהיתה אבן מונחת לו בחיקו ולא הכיר בה מעולם ועמד ונפלה והמיתה וכן הסומא שהרג בשגגה כל אלו פטורין מן הגלות מפני שהן קרובין לאונס.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דרך עליה ודרך ירידה - מבוא</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דרך עליה ודרך ירידה - מבוא</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> במכות (ז.):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אומרת ה<strong>משנה</strong> במכות (ז.):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היה מעגל במעגילה ונפלה עליו והרגתו, היה משלשל בחבית ונפלה עליו והרגתו, היה יורד בסולם ונפל עליו והרגתו- הרי זה גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">היה מעגל במעגילה ונפלה עליו והרגתו, היה משלשל בחבית ונפלה עליו והרגתו, היה יורד בסולם ונפל עליו והרגתו- הרי זה גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אבל אם היה מושך במעגילה ונפלה עליו והרגתו, היה דולה בחבית ונפסק החבל ונפלה עליו והרגתו, היה עולה בסולם ונפל עליו והרגו- הרי זה אינו גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אבל אם היה מושך במעגילה ונפלה עליו והרגתו, היה דולה בחבית ונפסק החבל ונפלה עליו והרגתו, היה עולה בסולם ונפל עליו והרגו- הרי זה אינו גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">זה הכלל- כל שבדרך ירידתו גולה, ושלא בדרך ירידתו  אינו גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">זה הכלל- כל שבדרך ירידתו גולה, ושלא בדרך ירידתו  אינו גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, חיוב גלות הוא דווקא כאשר ההורג גרם למוות תוך כדי הורדת חפץ או ירידתו שלו עצמו כלפי מטה, אך אם קרה הדבר תוך כדי תנועה כלפי מעלה, פטור מגלות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, חיוב גלות הוא דווקא כאשר ההורג גרם למוות תוך כדי הורדת חפץ או ירידתו שלו עצמו כלפי מטה, אך אם קרה הדבר תוך כדי תנועה כלפי מעלה, פטור מגלות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ז:) מסביר <strong>שמואל</strong> שדין זה נלמד מהנאמר בתורה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ז:) מסביר <strong>שמואל</strong> שדין זה נלמד מהנאמר בתורה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אוֹ בְכָל אֶבֶן אֲשֶׁר יָמוּת בָּהּ בְּלֹא רְאוֹת <strong>וַיַּפֵּל עָלָיו</strong> וַיָּמֹת וְהוּא לֹא אוֹיֵב לוֹ וְלֹא מְבַקֵּשׁ רָעָתוֹ (במדבר לה כג)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אוֹ בְכָל אֶבֶן אֲשֶׁר יָמוּת בָּהּ בְּלֹא רְאוֹת <strong>וַיַּפֵּל עָלָיו</strong> וַיָּמֹת וְהוּא לֹא אוֹיֵב לוֹ וְלֹא מְבַקֵּשׁ רָעָתוֹ (במדבר לה כג)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ממנו למדים שצריך שיפיל ההורג דבר מה על הנהרג בכדי שיתחייב גלות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ממנו למדים שצריך שיפיל ההורג דבר מה על הנהרג בכדי שיתחייב גלות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיה בדף ט:, מציע <strong>רב</strong> <strong>חסדא</strong> שגר תושב שהרג בדרך ירידה יגלה ושגר תושב שהרג בדרך עליה יהרג. <strong>רבא</strong> חולק וטוען שלא יכול להיות שהדין בדרך עליה יהיה חמור יותר מאשר בדרך ירידה. ומשמע שחלוקים האמוראים האם הפטור מגלות בדרך עליה נובע מכך שמדובר בשוגג הקרוב לאונס, כרבא, או שמדובר בשוגג הקרוב למזיד, כרב חסדא<sup id="ref95"><a href="#fn95">[95]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגיה בדף ט:, מציע <strong>רב</strong> <strong>חסדא</strong> שגר תושב שהרג בדרך ירידה יגלה ושגר תושב שהרג בדרך עליה יהרג. <strong>רבא</strong> חולק וטוען שלא יכול להיות שהדין בדרך עליה יהיה חמור יותר מאשר בדרך ירידה. ומשמע שחלוקים האמוראים האם הפטור מגלות בדרך עליה נובע מכך שמדובר בשוגג הקרוב לאונס, כרבא, או שמדובר בשוגג הקרוב למזיד, כרב חסדא<sup id="ref95"><a href="#fn95">[95]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> הולך בדרכו של רבא, ומסביר שבדרך ירידה החפץ יורד מהר יותר בטבעו וזהו מצב מועד לסכנה אשר בו צריך היה ההורג להקפיד יותר. לעומת זה, בדרך עליה פטור מגלות מכיוון "שזה כמו אנוס הוא שאין זה דבר הקרוב להיות ברוב העתים".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> הולך בדרכו של רבא, ומסביר שבדרך ירידה החפץ יורד מהר יותר בטבעו וזהו מצב מועד לסכנה אשר בו צריך היה ההורג להקפיד יותר. לעומת זה, בדרך עליה פטור מגלות מכיוון "שזה כמו אנוס הוא שאין זה דבר הקרוב להיות ברוב העתים".</p>
                     
                 </div>
                 
                 <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עליה שהיא צורך ירידה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עליה שהיא צורך ירידה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר בפסוק, לגבי רוצח בשוגג</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר בפסוק, לגבי רוצח בשוגג</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְאִם בְּפֶתַע בְּלֹא אֵיבָה הֲדָפוֹ <strong>אוֹ הִשְׁלִיךְ עָלָיו</strong> כָּל כְּלִי בְּלֹא צְדִיָּה (במדבר לה כב)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְאִם בְּפֶתַע בְּלֹא אֵיבָה הֲדָפוֹ <strong>אוֹ הִשְׁלִיךְ עָלָיו</strong> כָּל כְּלִי בְּלֹא צְדִיָּה (במדבר לה כב)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהמילים "או השליך עליו", לומדת <strong>הברייתא</strong> (מכות ז:)- להביא ירידה שהיא צורך עליה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מהמילים "או השליך עליו", לומדת <strong>הברייתא</strong> (מכות ז:)- להביא ירידה שהיא צורך עליה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אפילו אם ההריגה היתה בדרך ירידה שנעשתה לצורך עליה, גם כן גולה. <strong>רש"י</strong> מסביר שהכוונה לתנועת ירידה של המניף קרדום שאין מטרתה לחבוט לאדמה אלא לקחת תנופה בכדי לשוב ולהרימו כלפי מעלה<sup id="ref96"><a href="#fn96">[96]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אפילו אם ההריגה היתה בדרך ירידה שנעשתה לצורך עליה, גם כן גולה. <strong>רש"י</strong> מסביר שהכוונה לתנועת ירידה של המניף קרדום שאין מטרתה לחבוט לאדמה אלא לקחת תנופה בכדי לשוב ולהרימו כלפי מעלה<sup id="ref96"><a href="#fn96">[96]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך, פותר <strong>ר' יוחנן</strong> בעזרת לימוד זה שאלה ספיציפית, לגבי אדם שהיה עולה בסולם ותוך כדי כך ניתָק אחד משלבי הסולם, נפל על אדם אחר והרגו, שמקרה זה נחשב כירידה לצורך עליה ודין ירידה לו וחייב גלות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך, פותר <strong>ר' יוחנן</strong> בעזרת לימוד זה שאלה ספיציפית, לגבי אדם שהיה עולה בסולם ותוך כדי כך ניתָק אחד משלבי הסולם, נפל על אדם אחר והרגו, שמקרה זה נחשב כירידה לצורך עליה ודין ירידה לו וחייב גלות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שבדוגמה זו מדובר ב"דרך ירידה" כיוון שהעולה דוחק את השליבה כלפי מטה, אך היא "לצורך עליה", כיוון שמטרתו של ההורג היא לעלות בסולם<sup id="ref97"><a href="#fn97">[97]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שבדוגמה זו מדובר ב"דרך ירידה" כיוון שהעולה דוחק את השליבה כלפי מטה, אך היא "לצורך עליה", כיוון שמטרתו של ההורג היא לעלות בסולם<sup id="ref97"><a href="#fn97">[97]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מובאות שתי ברייתות חלוקות המתייחסות למקרה זה (של העולה בסולם וניתק אחד השלבים ונפל למטה והרג), האחת פוטרת והשניה מחייבת. בתחילה הגמרא מנסה ליישב, שמדובר בדיוק במחלוקת הנ"ל, האם מקרה זה (דהיינו ירידה לצורך עליה) נחשב כדרך עליה או דרך ירידה. אמנם הגמרא חוזרת בה ומעלה כמה אפשרויות אחרות לתרץ-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מובאות שתי ברייתות חלוקות המתייחסות למקרה זה (של העולה בסולם וניתק אחד השלבים ונפל למטה והרג), האחת פוטרת והשניה מחייבת. בתחילה הגמרא מנסה ליישב, שמדובר בדיוק במחלוקת הנ"ל, האם מקרה זה (דהיינו ירידה לצורך עליה) נחשב כדרך עליה או דרך ירידה. אמנם הגמרא חוזרת בה ומעלה כמה אפשרויות אחרות לתרץ-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>(א) </strong>כ"ע עליה היא ולא קשיא- כאן לניזקין כאן לגלות,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>(א) </strong>כ"ע עליה היא ולא קשיא- כאן לניזקין כאן לגלות,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>(ב)</strong> איבעית אימא (אם תרצה אמור) הא והא לגלות (שתי הברייתות מדברות על גלות) ולא קשיא, הא דאתליע (היה מותלע) הא דלא אתליע,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>(ב)</strong> איבעית אימא (אם תרצה אמור) הא והא לגלות (שתי הברייתות מדברות על גלות) ולא קשיא, הא דאתליע (היה מותלע) הא דלא אתליע,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>(ג)</strong> ואיבעית אימא הא והא דלא אתליע ולא קשיא הא דמיהדק (שהיה שלב הסולם מהודק) והא דלא מיהדק</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>(ג)</strong> ואיבעית אימא הא והא דלא אתליע ולא קשיא הא דמיהדק (שהיה שלב הסולם מהודק) והא דלא מיהדק</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מאפשרות א' משמע, ששתי הברייתות מסכימות שהמקרה המתואר נחשב "דרך עליה", זאת בניגוד לדברי ר' יוחנן שהובאו לעיל, שהגדיר את המקרה של העולה בסולם ונפלה שליבה כירידה לצורך עליה אשר דין ירידה לה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מאפשרות א' משמע, ששתי הברייתות מסכימות שהמקרה המתואר נחשב "דרך עליה", זאת בניגוד לדברי ר' יוחנן שהובאו לעיל, שהגדיר את המקרה של העולה בסולם ונפלה שליבה כירידה לצורך עליה אשר דין ירידה לה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> גרס באפשרות ב' "הא והא לגלות" (כפי שמופיע לפנינו), והסביר, שכאשר שלב הסולם מותלע (אפשרות ב') או שאינו מהודק (אפשרות ג'), הרי הוא נכפף כלפי מטה כאשר דורכים עליו, ואז מדובר בדרך ירידה, כיוון שהאדם הדורך מניע את החפץ המזיק כלפי מטה בדורכו עליו. נמצא, שלפי אפשרויות ב' וג', אכן גולים על ירידה לצורך עליה (בהתאמה לדברי הברייתא שלעיל), אלא שאם שלב הסולם מהודק ולא מותלע, אין כאן דרך ירידה כלל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> גרס באפשרות ב' "הא והא לגלות" (כפי שמופיע לפנינו), והסביר, שכאשר שלב הסולם מותלע (אפשרות ב') או שאינו מהודק (אפשרות ג'), הרי הוא נכפף כלפי מטה כאשר דורכים עליו, ואז מדובר בדרך ירידה, כיוון שהאדם הדורך מניע את החפץ המזיק כלפי מטה בדורכו עליו. נמצא, שלפי אפשרויות ב' וג', אכן גולים על ירידה לצורך עליה (בהתאמה לדברי הברייתא שלעיל), אלא שאם שלב הסולם מהודק ולא מותלע, אין כאן דרך ירידה כלל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מסביר באופן שונה. ראשית, הרמב"ם כנראה גורס באפשרות ב' "הא והא לנזקין" ולכן החילוק בין שלב תקין לשלב שאינו מותלע או מהודק, אינו רלוונטי לדיני גלות אלא רק לחיובי נזיקין<sup id="ref98"><a href="#fn98">[98]</a></sup>. כמו כן, מגרסה זו נובע שלעניין גלות, האפשרות הרלוונטית היא א', הקובעת שדין העולה בסולם ונפלה שליבה והמיתה נחשב כדרך עליה, ופטור בו מגלות, <strong>בניגוד</strong> לדברי <strong>ר' יוחנן</strong> שלעיל. ואכן, כך פוסק הרמב"ם להלכה, שהעולה בסולם ונפלה שליבה והמיתה, פטור מגלות. בנוסף פוסק הרמב"ם באופן כללי, שירידה לצורך עליה דין עליה לה ולא דין ירידה<sup id="ref99"><a href="#fn99">[99]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מסביר באופן שונה. ראשית, הרמב"ם כנראה גורס באפשרות ב' "הא והא לנזקין" ולכן החילוק בין שלב תקין לשלב שאינו מותלע או מהודק, אינו רלוונטי לדיני גלות אלא רק לחיובי נזיקין<sup id="ref98"><a href="#fn98">[98]</a></sup>. כמו כן, מגרסה זו נובע שלעניין גלות, האפשרות הרלוונטית היא א', הקובעת שדין העולה בסולם ונפלה שליבה והמיתה נחשב כדרך עליה, ופטור בו מגלות, <strong>בניגוד</strong> לדברי <strong>ר' יוחנן</strong> שלעיל. ואכן, כך פוסק הרמב"ם להלכה, שהעולה בסולם ונפלה שליבה והמיתה, פטור מגלות. בנוסף פוסק הרמב"ם באופן כללי, שירידה לצורך עליה דין עליה לה ולא דין ירידה<sup id="ref99"><a href="#fn99">[99]</a></sup>.</p>
                     
                 </div>
                 
                 <div id="topic-6-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דרך עליה וירידה מלפניו ומאחריו- "קצב שהיה מקצב"</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דרך עליה וירידה מלפניו ומאחריו- "קצב שהיה מקצב"</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם) מביאה <strong>ברייתא</strong> עם ארבע גרסאות, העוסקת בקצב שהניף קופיץ, פגע בשגגה באדם אחר והרגו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (שם) מביאה <strong>ברייתא</strong> עם ארבע גרסאות, העוסקת בקצב שהניף קופיץ, פגע בשגגה באדם אחר והרגו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">קצב שהיה מקצב...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">קצב שהיה מקצב...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפניו- חייב, לאחריו- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפניו- חייב, לאחריו- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לאחריו- חייב, לפניו- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לאחריו- חייב, לפניו- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בין לאחריו בין לפניו- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בין לאחריו בין לפניו- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בין לאחריו בין לפניו- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בין לאחריו בין לפניו- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מתרצת שאין מחלוקת בין הגרסאות, ולדעת הכל בדרך ירידה חייב גלות, ובדרך עליה פטור, אלא מדובר בארבעה מקרים שונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מתרצת שאין מחלוקת בין הגרסאות, ולדעת הכל בדרך ירידה חייב גלות, ובדרך עליה פטור, אלא מדובר בארבעה מקרים שונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה א' מדובר בירידה לפניו ועליה מאחוריו, במקרה ב' מדובר הפוך- בעליה לפניו ובירידה מאחוריו, במקרה ג' מדובר בירידה מלפניו ומאחוריו, ובמקרה ד' בעליה מלפניו ומאחוריו (ולקמן נבאר).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה א' מדובר בירידה לפניו ועליה מאחוריו, במקרה ב' מדובר הפוך- בעליה לפניו ובירידה מאחוריו, במקרה ג' מדובר בירידה מלפניו ומאחוריו, ובמקרה ד' בעליה מלפניו ומאחוריו (ולקמן נבאר).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בהבנת תשובת הגמרא, ונסביר את דבריהם על ידי חלוקת פעולת הקצב לארבעה חלקים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בהבנת תשובת הגמרא, ונסביר את דבריהם על ידי חלוקת פעולת הקצב לארבעה חלקים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הנפת הקופיץ אחורה עד לשיא הגובה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הנפת הקופיץ אחורה עד לשיא הגובה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשך הנפת הקופיץ אחורה תוך הורדתו אל מאחורי גבו של הקצב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשך הנפת הקופיץ אחורה תוך הורדתו אל מאחורי גבו של הקצב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תחילת פעולת החבטה- הנעת הקופיץ בעוצמה מאחורי גבו של הקצב ועד לשיא הגובה מעל ראשו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תחילת פעולת החבטה- הנעת הקופיץ בעוצמה מאחורי גבו של הקצב ועד לשיא הגובה מעל ראשו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סיום פעולת החבטה, הורדת הקופיץ בעוצמה מלפניו של הקצב והנחתתו על הבשר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">סיום פעולת החבטה, הורדת הקופיץ בעוצמה מלפניו של הקצב והנחתתו על הבשר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שדרך ירידה היא כאשר הקופיץ יורד (שלבים 2 ו4), ודרך עליה היא כאשר הוא עולה (שלבים 1 ו3).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש שדרך ירידה היא כאשר הקופיץ יורד (שלבים 2 ו4), ודרך עליה היא כאשר הוא עולה (שלבים 1 ו3).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> חולק ומסביר ששלבים 1 ו2 נקראים דרך עליה למרות שהקופיץ עצמו נע בהם מעלה ומטה. לעומתם שלבים 3 ו4 נקראים דרך ירידה, למרות ששוב, הקופיץ עצמו נע בהם מעלה ושוב מטה<sup id="ref100"><a href="#fn100">[100]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> חולק ומסביר ששלבים 1 ו2 נקראים דרך עליה למרות שהקופיץ עצמו נע בהם מעלה ומטה. לעומתם שלבים 3 ו4 נקראים דרך ירידה, למרות ששוב, הקופיץ עצמו נע בהם מעלה ושוב מטה<sup id="ref100"><a href="#fn100">[100]</a></sup>.</p>
                     
                 </div>
                 
                 <div id="topic-6-4" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">סומא שהרג</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">סומא שהרג</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (מכות ט:)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (מכות ט:)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסומא אינו גולה דברי <strong>רבי יהודה</strong>, <strong>ר' מאיר</strong> אומר גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הסומא אינו גולה דברי <strong>רבי יהודה</strong>, <strong>ר' מאיר</strong> אומר גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מוסבר שגם <strong>ר</strong><strong>בי</strong><strong> יהודה</strong> וגם <strong>ר</strong><strong>בי</strong><strong> מאיר</strong> לומדים מהפסוק "בְכָל אֶבֶן אֲשֶׁר יָמוּת בָּהּ <strong>בְּלֹא רְאוֹת</strong>" (במדבר לה כג), אלא שרבי יהודה מוציא מפסוק זה את הסומא, כלומר לומד שהכוונה לאדם שמסוגל לראות שגרם לנזק מבלי שראה שהוא מזיק, ולעומתו רבי מאיר מרבה מפסוק זה את הסומא, כלומר לומד שמדובר אפילו במי שאינו רואה<sup id="ref101"><a href="#fn101">[101]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מוסבר שגם <strong>ר</strong><strong>בי</strong><strong> יהודה</strong> וגם <strong>ר</strong><strong>בי</strong><strong> מאיר</strong> לומדים מהפסוק "בְכָל אֶבֶן אֲשֶׁר יָמוּת בָּהּ <strong>בְּלֹא רְאוֹת</strong>" (במדבר לה כג), אלא שרבי יהודה מוציא מפסוק זה את הסומא, כלומר לומד שהכוונה לאדם שמסוגל לראות שגרם לנזק מבלי שראה שהוא מזיק, ולעומתו רבי מאיר מרבה מפסוק זה את הסומא, כלומר לומד שמדובר אפילו במי שאינו רואה<sup id="ref101"><a href="#fn101">[101]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כרבי יהודה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כרבי יהודה.</p>
                     
                 </div>
                 
@@ -1504,62 +1504,62 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     היתה אבן בחיקו והכיר בה ושכחה ועמד ונפלה והמיתה גולה, שנאמר "בשגגה", מכלל שהיתה לו ידיעה. נשמט הברזל מקתו והרג הרי זה גולה, נשמט הברזל מן העץ המתבקע אינו גולה, מפני שאין זה מכחו אלא מכח כחו ונמצא כמו אונס, וכן הזורק אבן לתמר להפיל תמרים ונפלו מן התמרים על תינוק והרגוהו פטור מפני שהן באין מכח כחו, וכן כל כיוצא בזה משאר הסיבות.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היתה אבן מונחת בחיקו ועמד ונפלה והמיתה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">היתה אבן מונחת בחיקו ועמד ונפלה והמיתה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (בבא קמא כו:) מובאים דברי <strong>רבה</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (בבא קמא כו:) מובאים דברי <strong>רבה</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היתה אבן מונחת לו בחיקו ולא הכיר בה ועמד ונפלה...לענין גלות פטור...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">היתה אבן מונחת לו בחיקו ולא הכיר בה ועמד ונפלה...לענין גלות פטור...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכיר בה ושכחה ועמד ונפלה...לענין גלות חייב,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הכיר בה ושכחה ועמד ונפלה...לענין גלות חייב,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דאמר קרא "בשגגה" מכלל דהוה ליה ידיעה והא הויא ליה ידיעה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דאמר קרא "בשגגה" מכלל דהוה ליה ידיעה והא הויא ליה ידיעה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מהנאמר "וְנָס שָׁמָּה רֹצֵחַ מַכֵּה נֶפֶשׁ <strong>בִּשְׁגָגָה</strong>" (במדבר לה יא) משמע שהרוצח הגולה הוא כזה שהיתה לו המודעות לאפשרות של גרימת הנזק, ולכן אם היתה אבן מונחת בחיקו <strong>ולא ידע ממנה בכלל</strong>, ועמד ונפלה והמיתה, פטור מגלות. ה<strong>רמב"ם</strong> פוסק כדברי רבה אלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מהנאמר "וְנָס שָׁמָּה רֹצֵחַ מַכֵּה נֶפֶשׁ <strong>בִּשְׁגָגָה</strong>" (במדבר לה יא) משמע שהרוצח הגולה הוא כזה שהיתה לו המודעות לאפשרות של גרימת הנזק, ולכן אם היתה אבן מונחת בחיקו <strong>ולא ידע ממנה בכלל</strong>, ועמד ונפלה והמיתה, פטור מגלות. ה<strong>רמב"ם</strong> פוסק כדברי רבה אלה.</p>
                     
                 </div>
                 
                 <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">"ונשל הברזל"</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">"ונשל הברזל"</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכתוב בפרשת שופטים מתאר סיטואציה של רצח בשוגג שגולים עליו:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הכתוב בפרשת שופטים מתאר סיטואציה של רצח בשוגג שגולים עליו:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"וַאֲשֶׁר יָבֹא אֶת רֵעֵהוּ בַיַּעַר לַחְטֹב עֵצִים וְנִדְּחָה יָדוֹ בַגַּרְזֶן לִכְרֹת הָעֵץ וְנָשַׁל הַבַּרְזֶל מִן הָעֵץ וּמָצָא אֶת רֵעֵהוּ וָמֵת הוּא יָנוּס אֶל אַחַת הֶעָרִים הָאֵלֶּה וָחָי" (דברים יט ה)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"וַאֲשֶׁר יָבֹא אֶת רֵעֵהוּ בַיַּעַר לַחְטֹב עֵצִים וְנִדְּחָה יָדוֹ בַגַּרְזֶן לִכְרֹת הָעֵץ וְנָשַׁל הַבַּרְזֶל מִן הָעֵץ וּמָצָא אֶת רֵעֵהוּ וָמֵת הוּא יָנוּס אֶל אַחַת הֶעָרִים הָאֵלֶּה וָחָי" (דברים יט ה)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (מכות ז:) חולקים <strong>רבי</strong> ו<strong>חכמים</strong> בפירוש הסיטואציה המתוארת בפסוק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (מכות ז:) חולקים <strong>רבי</strong> ו<strong>חכמים</strong> בפירוש הסיטואציה המתוארת בפסוק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נשמט הברזל מקתו והרג,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נשמט הברזל מקתו והרג,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי</strong> אומר אינו גולה ו<strong>חכמים</strong> אומרים גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי</strong> אומר אינו גולה ו<strong>חכמים</strong> אומרים גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מן העץ המתבקע,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מן העץ המתבקע,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי</strong> אומר גולה ו<strong>חכמים</strong> אומרים אינו גולה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי</strong> אומר גולה ו<strong>חכמים</strong> אומרים אינו גולה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם נפל הברזל מקת הגרזן והמית, לדעת <strong>חכמים</strong> זוהי הסיטואציה עליה מדברים הכתובים ולכן גולה, ולדעת <strong>רבי</strong> אינו גולה. רבי סובר שהכתובים מתכוונים למקרה אחר- "מן העץ המתבקע" (להלן יבואר המקרה), אשר בו גולה ההורג. לעומתו, סוברים חכמים שדווקא במקרה זה אינו גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם נפל הברזל מקת הגרזן והמית, לדעת <strong>חכמים</strong> זוהי הסיטואציה עליה מדברים הכתובים ולכן גולה, ולדעת <strong>רבי</strong> אינו גולה. רבי סובר שהכתובים מתכוונים למקרה אחר- "מן העץ המתבקע" (להלן יבואר המקרה), אשר בו גולה ההורג. לעומתו, סוברים חכמים שדווקא במקרה זה אינו גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מוסבר שרבי לומד ש"העץ" שבפסוק איננו הקת, גם מכך שלא נאמר "ונשל הברזל מעצו" וגם משום שהוא מניח שמדובר באותו העץ שבתחילת הפסוק- "...לחטוב עצים..."<sup id="ref102"><a href="#fn102">[102]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מוסבר שרבי לומד ש"העץ" שבפסוק איננו הקת, גם מכך שלא נאמר "ונשל הברזל מעצו" וגם משום שהוא מניח שמדובר באותו העץ שבתחילת הפסוק- "...לחטוב עצים..."<sup id="ref102"><a href="#fn102">[102]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפירוש המקרה של "מן העץ המתבקע", בו רבי מחייב גלות וחכמים פוטרים, נחלקו הראשונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפירוש המקרה של "מן העץ המתבקע", בו רבי מחייב גלות וחכמים פוטרים, נחלקו הראשונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> ועמו ראשונים רבים כותבים שהכוונה למקרה בו הגרזן התיז חתיכת עץ והיא הלכה והמיתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> ועמו ראשונים רבים כותבים שהכוונה למקרה בו הגרזן התיז חתיכת עץ והיא הלכה והמיתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת מה<strong>רמב"ם</strong> משמע שהכוונה למקרה בו הגרזן עצמו (כולו או רק הברזל) נהדף מהעץ עליו הכה והלך והרג<sup id="ref103"><a href="#fn103">[103]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת מה<strong>רמב"ם</strong> משמע שהכוונה למקרה בו הגרזן עצמו (כולו או רק הברזל) נהדף מהעץ עליו הכה והלך והרג<sup id="ref103"><a href="#fn103">[103]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מסביר שבכל מקרה מחמיר רבי יותר מאשר חכמים. כלומר, כאשר נשמט הברזל מקתו, לדעת רבי קרוב למזיד ופטור מגלות (כיוון שנשילתו היא סימן לכך שלא היה מהודק דיו) ולדעת חכמים חייב גלות כיוון שאין אשמתו גדולה כל כך. כמו כן, במקרה בו נשל מהעץ המתבקע, בו נשל הברזל תוך כדי הכאה, סובר רבי שאין הוא קרוב למזיד משום שיכול להיות שהברזל היה צמוד בחוזקה ונשמט רק מעצמת המכה, וחכמים אף מקילים ואומרים שקרוב הוא לאונס.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> מסביר שבכל מקרה מחמיר רבי יותר מאשר חכמים. כלומר, כאשר נשמט הברזל מקתו, לדעת רבי קרוב למזיד ופטור מגלות (כיוון שנשילתו היא סימן לכך שלא היה מהודק דיו) ולדעת חכמים חייב גלות כיוון שאין אשמתו גדולה כל כך. כמו כן, במקרה בו נשל מהעץ המתבקע, בו נשל הברזל תוך כדי הכאה, סובר רבי שאין הוא קרוב למזיד משום שיכול להיות שהברזל היה צמוד בחוזקה ונשמט רק מעצמת המכה, וחכמים אף מקילים ואומרים שקרוב הוא לאונס.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא ממשיכה ומביאה את דברי <strong>רב פפא</strong>, שמחלוקת רבי וחכמים תהיה גם במקרה בו זרק אדם רגב לדקל, להשיר בו תמרים, ותמרים נשרו והרגו. חכמים יסברו שפטור כיוון שלא הרגב עצמו הוא שהרג, ואילו רבי יסבור שחייב, שהרי בדומה לתמרים שבדוגמה זו, גם הברזל (או פיסת העץ המתבקע) שהרג, לא הותז מכוחו הישיר של הכורת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא ממשיכה ומביאה את דברי <strong>רב פפא</strong>, שמחלוקת רבי וחכמים תהיה גם במקרה בו זרק אדם רגב לדקל, להשיר בו תמרים, ותמרים נשרו והרגו. חכמים יסברו שפטור כיוון שלא הרגב עצמו הוא שהרג, ואילו רבי יסבור שחייב, שהרי בדומה לתמרים שבדוגמה זו, גם הברזל (או פיסת העץ המתבקע) שהרג, לא הותז מכוחו הישיר של הכורת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כחכמים, ולכן אם נשמט הגרזן מקתו גולה, ומן העץ המתבקע אינו גולה. כמו כן במקרה של נשירת התמרים, כיוון שלא הרגב שנזרק הוא שהרג, הזורקו אינו גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כחכמים, ולכן אם נשמט הגרזן מקתו גולה, ומן העץ המתבקע אינו גולה. כמו כן במקרה של נשירת התמרים, כיוון שלא הרגב שנזרק הוא שהרג, הזורקו אינו גולה.</p>
                     
                 </div>
                 
@@ -1567,7 +1567,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1736,6 +1736,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

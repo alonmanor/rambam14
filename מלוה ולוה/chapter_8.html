@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">מלוה ולוה - פרק ח</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ח)</h3>
                 <ul class="space-y-3">
@@ -1062,7 +1062,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1074,19 +1074,19 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק ממשיך ועוסק בענייני "מרבין על המכר". הדיון מורחב למקרים בהם עצם קיומה של ההלוואה אינו ברור והעיסקה דומה לשכירות.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הפרק ממשיך ועוסק בענייני "מרבין על המכר". הדיון מורחב למקרים בהם עצם קיומה של ההלוואה אינו ברור והעיסקה דומה לשכירות.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">ההלכות הראשונות משלימות את האמור בפרק הקודם ומציגות את האיסור לתוספת על תשלום מאוחר במקרה של מכר עם אספקה במקום. כאשר לא התבצע בפועל מכר, אלא המוצר רק עבר מיד ליד והותנה שרק אם הקונה מצליח למכור הלאה יהיה המוצר ברשותו, מלמדת הלכה ג שכיוון שאין כאן מכר, אין בעיה עם תשלום מאוחר ומוגדל. הלכה ד מוסיפה שאם שולם מחיר יקר, עבור תשלום מושהה, אך מחיר זה אינו יקר יותר מהמצוי לעיתים בתשלום מיידי, הדבר מותר. זאת משום שאין תוספת התשלום מורה באופן מובהק על שכר המתנת המעות.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">ההלכות הראשונות משלימות את האמור בפרק הקודם ומציגות את האיסור לתוספת על תשלום מאוחר במקרה של מכר עם אספקה במקום. כאשר לא התבצע בפועל מכר, אלא המוצר רק עבר מיד ליד והותנה שרק אם הקונה מצליח למכור הלאה יהיה המוצר ברשותו, מלמדת הלכה ג שכיוון שאין כאן מכר, אין בעיה עם תשלום מאוחר ומוגדל. הלכה ד מוסיפה שאם שולם מחיר יקר, עבור תשלום מושהה, אך מחיר זה אינו יקר יותר מהמצוי לעיתים בתשלום מיידי, הדבר מותר. זאת משום שאין תוספת התשלום מורה באופן מובהק על שכר המתנת המעות.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ה-ו נוגעות בנושא שיידון בהרחבה בפרק הבא, והוא, תשלום מוקדם ומוזל כאשר המכר אינו מתבצע במלואו בשעת התשלום. הלכה ז נוגעת לבעיה דומה להוזלה תמורת אספקה מאוחרת, אך בשכירות אדם, כאשר השכיר מקבל את שכרו זמן מה לאחר תום עבודתו, ובעבור זה הוא מקבל תוספת מסויימת. במקרה זה כדי להתיר די שימשיך השכיר את עבודתו, ולו באופן סמלי, עד שעת התשלום.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ה-ו נוגעות בנושא שיידון בהרחבה בפרק הבא, והוא, תשלום מוקדם ומוזל כאשר המכר אינו מתבצע במלואו בשעת התשלום. הלכה ז נוגעת לבעיה דומה להוזלה תמורת אספקה מאוחרת, אך בשכירות אדם, כאשר השכיר מקבל את שכרו זמן מה לאחר תום עבודתו, ובעבור זה הוא מקבל תוספת מסויימת. במקרה זה כדי להתיר די שימשיך השכיר את עבודתו, ולו באופן סמלי, עד שעת התשלום.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ח עוסקת בבעל שדה המלווה לאריסו זרעים לזריעה ותמורת הארכת תקופת האריסות לוקח יותר מהתבואה. הדבר מותר מכיוון שהארכת התקופה מביאה ליבול גדול יותר, ולכן ללא קשר להמתנת הזמן, ראוי לגבות יותר על עסקה כזו. אגב הלכה זו מדברת הלכה ט על מוכר שקיבל כסף מראש וכשבא לספק הוסיף מרצונו מעט. לעיל נידונה השאלה באילו מקרים הדבר נחשב כריבת מאוחרת.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ח עוסקת בבעל שדה המלווה לאריסו זרעים לזריעה ותמורת הארכת תקופת האריסות לוקח יותר מהתבואה. הדבר מותר מכיוון שהארכת התקופה מביאה ליבול גדול יותר, ולכן ללא קשר להמתנת הזמן, ראוי לגבות יותר על עסקה כזו. אגב הלכה זו מדברת הלכה ט על מוכר שקיבל כסף מראש וכשבא לספק הוסיף מרצונו מעט. לעיל נידונה השאלה באילו מקרים הדבר נחשב כריבת מאוחרת.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה י עוסקת בעסקה הנראית כהוזלה תמורת אספקה מאוחרת, אך למעשה הסחורה קנויה כבר משעת התשלום, והסיבה שאם הסחורה התקלקלה צריך המוכר לספק אחרת נובעת רק מקבלת אחריות שלו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה י עוסקת בעסקה הנראית כהוזלה תמורת אספקה מאוחרת, אך למעשה הסחורה קנויה כבר משעת התשלום, והסיבה שאם הסחורה התקלקלה צריך המוכר לספק אחרת נובעת רק מקבלת אחריות שלו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות יא-יד, עוסקות במקרים של שכירות שיכולים להיות דומים להלוואה ולכן להיאסר משום ריבית. מקרה אחד כזה הוא "צאן ברזל" בו בעל ממון נותן נכס מניב לשוכר, תמורת אחוזים ברווח, כאשר לשוכר יש אחריות מלאה על הנכס, כך שאפילו אם ינזק באונס או יוזל יהיה חייב להשיב את ערכו הראשון למשכיר מלבד דמי השכירות. האחריות הגורפת מצביעה על כך שבעצם מדובר על הלוואה, שאין לקחת עליה דמי שכירות. רק אם המשכיר לוקח על עצמו אחריות מסויימת, כגון פחת ירידת ערך, הדבר מותר. גם במקרה של השכרת נכס וחיוב השוכר בפחת השימוש בנוסף לדמי השכירות, מתעוררת שאלה דומה. במקרה זה נחלקו הפוסקים האם בכדי להתיר די שיקח המשכיר על עצמו פחת ירידת ערך או שצריך שישא גם בחלק מפחת השימוש.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות יא-יד, עוסקות במקרים של שכירות שיכולים להיות דומים להלוואה ולכן להיאסר משום ריבית. מקרה אחד כזה הוא "צאן ברזל" בו בעל ממון נותן נכס מניב לשוכר, תמורת אחוזים ברווח, כאשר לשוכר יש אחריות מלאה על הנכס, כך שאפילו אם ינזק באונס או יוזל יהיה חייב להשיב את ערכו הראשון למשכיר מלבד דמי השכירות. האחריות הגורפת מצביעה על כך שבעצם מדובר על הלוואה, שאין לקחת עליה דמי שכירות. רק אם המשכיר לוקח על עצמו אחריות מסויימת, כגון פחת ירידת ערך, הדבר מותר. גם במקרה של השכרת נכס וחיוב השוכר בפחת השימוש בנוסף לדמי השכירות, מתעוררת שאלה דומה. במקרה זה נחלקו הפוסקים האם בכדי להתיר די שיקח המשכיר על עצמו פחת ירידת ערך או שצריך שישא גם בחלק מפחת השימוש.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק נחתם בשאלה הקשורה להוצאת ריבית קצוצה מהמלווה לאחר שנגבתה. אם הלווה נתן למלווה בתור ריבית שווה כסף (פירות למשל) השווה פחות מדמי הריבית, נחלקו האמוראים האם צריך המלווה להחזיר את דמי הפירות שקיבל או את דמי הריבית תמורתה ניתנו פירות אלה. במקרה בו פריעת הריבית היתה דרך מתן חפץ מסויים (בגד למשל) נחלקו גם כן האם ניתן להוציא את הבגד עצמו מהמלווה, או רק את דמי הריבית תמורתם ניתן. עוד נידון מקרה בו תמורת הריבית ניתן שווה כסף שאינו חפץ ממשי (שכירות למשל), השווה פחות. בנידון זה נפסק שיש להחזיר את דמי הריבית ולא את השווי האובייקטיבי, מכיוון שבכך שהמלווה קיבל מה שקיבל תמורת דמי הריבית, החשיב הוא את מה שקיבל כשווה לערך הריבית.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הפרק נחתם בשאלה הקשורה להוצאת ריבית קצוצה מהמלווה לאחר שנגבתה. אם הלווה נתן למלווה בתור ריבית שווה כסף (פירות למשל) השווה פחות מדמי הריבית, נחלקו האמוראים האם צריך המלווה להחזיר את דמי הפירות שקיבל או את דמי הריבית תמורתה ניתנו פירות אלה. במקרה בו פריעת הריבית היתה דרך מתן חפץ מסויים (בגד למשל) נחלקו גם כן האם ניתן להוציא את הבגד עצמו מהמלווה, או רק את דמי הריבית תמורתם ניתן. עוד נידון מקרה בו תמורת הריבית ניתן שווה כסף שאינו חפץ ממשי (שכירות למשל), השווה פחות. בנידון זה נפסק שיש להחזיר את דמי הריבית ולא את השווי האובייקטיבי, מכיוון שבכך שהמלווה קיבל מה שקיבל תמורת דמי הריבית, החשיב הוא את מה שקיבל כשווה לערך הריבית.</p>
                 
             </div>
             
@@ -1094,23 +1094,23 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסור להרבות על המכר, כיצד המוכר לחבירו קרקע או מטלטלין ואמר לו אם מעכשיו תתן לי הדמים הרי הן שלך במאה ואם עד זמן פלוני הרי הם שלך בעשרים ומאה, הרי זה אבק רבית שזה דומה כמי שנוטל עשרים בשביל שנתן לו מאה להשתמש בה עד זמן פלוני וכשיתבענו בדין אינו חייב ליתן אלא מה שהיה שוה בשעת המכר או יחזיר ממכרו מידו אם היה קיים, וכן אם מכר לו מטלטלין עד זמן פלוני במאה והיו שוין בשוק למי שקונה במעותיו מיד תשעים ה"ז אסור, ואינו נותן לו אלא תשעים או מחזיר מידו סחורתו אם היתה קיימת.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הלוקח מחבירו חפץ בשוהו על מנת שיתן לו מכאן ועד י"ב חדש, ה"ז רשאי לומר לו תן [לי] מיד בפחות ואינו חושש משום רבית.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אסור להרבות על המכר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אסור להרבות על המכר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' במה שכתבנו בפרק ז הלכה ח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' במה שכתבנו בפרק ז הלכה ח.</p>
                     
                 </div>
                 
@@ -1118,25 +1118,25 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     חבית של יין שהיא שוה עתה דינר ומכרה לו בשנים עד הקיץ על מנת שאם תארע בה תקלה הרי היא ברשות המוכר עד שימכרנה הלוקח ה"ז מותר, שאם אבדה או נשברה אינו משלם כלום, ואם לא מצא למכרה ולהרויח בה היה לו להחזירה לבעלים, וכן אם מכרה לו בשנים ואמר לו היתר על שנים יהיה שכרך בשביל שאתה מטפל למכרה ואם לא תמצא למכרה כמו שתרצה החזירה לי ה"ז מותר, אף על פי שאם אבדה או נגנבה או החמיצה תהיה ברשות הלוקח.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המרבה על המכר כשאין מדובר במכר אמיתי</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המרבה על המכר כשאין מדובר במכר אמיתי</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הנאמר לעיל באיסור להרבות על המכר מתייחס למכר שחל משעת המשיכה. אמנם, כאשר לא התבצע בפועל מכר, כך שגם לאחר המשיכה הסחורה ממשיכה להיות שייכת למוכר, נמצא שאין הקונה חייב עדיין דבר ומתוך שאין כאן הלוואה, אין כאן ריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הנאמר לעיל באיסור להרבות על המכר מתייחס למכר שחל משעת המשיכה. אמנם, כאשר לא התבצע בפועל מכר, כך שגם לאחר המשיכה הסחורה ממשיכה להיות שייכת למוכר, נמצא שאין הקונה חייב עדיין דבר ומתוך שאין כאן הלוואה, אין כאן ריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המקרה הראשון שמתאר הרמב"ם הוא בדיוק כזה. הסחורה (חבית היין) שקנה הלוקח נחשבת עדיין של המוכר עד שימכרנה הלוקח, ולכן המוכר הוא שחייב באחריותה (ועי' לעיל בעמוד 88 בנושא "מרבין על השכר ואין מרבין על המכר").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המקרה הראשון שמתאר הרמב"ם הוא בדיוק כזה. הסחורה (חבית היין) שקנה הלוקח נחשבת עדיין של המוכר עד שימכרנה הלוקח, ולכן המוכר הוא שחייב באחריותה (ועי' לעיל בעמוד 88 בנושא "מרבין על השכר ואין מרבין על המכר").</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה השני סוכם שהאחריות מוטלת על כתפי הקונה, ובכל זאת החבית נחשבת של המוכר, משום שהלוקח רשאי להחזיר את החבית למוכר בעת הצורך. טעם הדבר שחייב הלוקח בכ"ז באחריותה למרות שהיא אינה שלו הוא משום שתמורת הזכות של הלוקח להחזיר את החבית בכל מקרה בו לא ימצא להרוויח בה, מוכן הלוקח לקחת סיכון ולהתחייב שאחריות של קילקול אפשרי תהיה עליו (ט"ז).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה השני סוכם שהאחריות מוטלת על כתפי הקונה, ובכל זאת החבית נחשבת של המוכר, משום שהלוקח רשאי להחזיר את החבית למוכר בעת הצורך. טעם הדבר שחייב הלוקח בכ"ז באחריותה למרות שהיא אינה שלו הוא משום שתמורת הזכות של הלוקח להחזיר את החבית בכל מקרה בו לא ימצא להרוויח בה, מוכן הלוקח לקחת סיכון ולהתחייב שאחריות של קילקול אפשרי תהיה עליו (ט"ז).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הטור (קעג) העתיק את פסק הרמב"ם וכן כתב בשו"ע (קעג יד)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הטור (קעג) העתיק את פסק הרמב"ם וכן כתב בשו"ע (קעג יד)</p>
                     
                 </div>
                 
@@ -1144,21 +1144,21 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     היו לו פירות שאם ירצה למכרן בשוק וליקח דמיהן מיד מוכרן בעשרה, ואם תבע אותן הלוקח לקנותן ויתן המעות מיד יקנה אותן בי"ב, ה"ז מותר למכרן בי"ב עד י"ב חדש, שאפי' הביא זה מעותיו עתה בי"ב היה קונה אותן וכן כל כיוצא בזה.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המרבה על המכר כשיש שני שערים לפירות</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המרבה על המכר כשיש שני שערים לפירות</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקורותיו של הרמב"ם בהלכה זו אינם ברורים, אך טעמו ברור. כאשר הפירות מוצעים למכירה בשוק מחירם זול יותר מאשר כאשר הם נמכרים ביוזמת הקונה, וזאת משום שבשוק הרוכלים מנסים לשכנע את הקונים לקנות ולא הפוך. לכן, אם נמכרו הפירות בהקפה, אף שנמכרו במחיר יקר יותר מאשר בשוק, אם מחירם היה זהה למה שהיה המוכר מבקש עבורם (במכירה באספקה מיידית), אין זה נחשב כמכירה ביוקר תמורת המתנת מעות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקורותיו של הרמב"ם בהלכה זו אינם ברורים, אך טעמו ברור. כאשר הפירות מוצעים למכירה בשוק מחירם זול יותר מאשר כאשר הם נמכרים ביוזמת הקונה, וזאת משום שבשוק הרוכלים מנסים לשכנע את הקונים לקנות ולא הפוך. לכן, אם נמכרו הפירות בהקפה, אף שנמכרו במחיר יקר יותר מאשר בשוק, אם מחירם היה זהה למה שהיה המוכר מבקש עבורם (במכירה באספקה מיידית), אין זה נחשב כמכירה ביוקר תמורת המתנת מעות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קעג ב) מעתיק את דברי הרמב"ם להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קעג ב) מעתיק את דברי הרמב"ם להלכה.</p>
                     
                 </div>
                 
@@ -1166,23 +1166,23 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה-ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה-ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסור לקנות פרי הפרדס קודם שיגמר ויתבשל, מפני שזה שמוכר בזול עתה בעשר הוא פרי ששוה עשרים כשיגמר נמצאת התוספת בשביל ההקפה, אבל אם קנה עגל בזול והיה אצל הבעלים עד שיגדיל ה"ז מותר שהרי אם מת או כחש ברשות הלוקח הוא והכחש והמיתה דבר מצוי תמיד.  אסור לקנות פרי הפרדס כו' אבל אם קנה עגל עד דבר מצוי. א"א זה פירוש בתורי דנפיש פסידייהו ואיננו נכון.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הנותן מעות לבעל הכרם על השריגים ועל הזמורות לכשיכרתו שהם ביוקר והוא קונה אותן בזול עד שיבשו ויכרתו ה"ז צריך להפך בהן כשהם מחוברים שנמצא כקונה אילן לזמורותיו, ואם לא הפך נמצאו המעות הלואה והן לוקחין בזול מפני ההקפה ואסור.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלום מוקדם בהנחה על פירות של בעל הבית שעדיין אינם קיימים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלום מוקדם בהנחה על פירות של בעל הבית שעדיין אינם קיימים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' בפרק הבא, הלכה ג</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' בפרק הבא, הלכה ג</p>
                     
                 </div>
                 
@@ -1190,25 +1190,25 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     שומרי השדות שנותנין להם חטים בשכרן בזול מן הגורן, כשיבאו לגורן צריכין להתעסק עמהן במלאכה בגורן כדי שיהיו החטים האלו שנטלו בסוף זמן השכירות, ואם לא עשו כך נמצאת השכירות אצל הבעלים כמלוה וזה שלקחן בזול מפני שאחרו שכרן עד הגורן.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלום מוקדם מוזל ע"י הארכת שכירות</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלום מוקדם מוזל ע"י הארכת שכירות</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפרק הבא (הלכה ג) יתבאר שתשלום מוקדם מוזל על דבר שעדיין אינו בנמצא אסור בדרך כלל, אא"כ הוא גלובלי, יש אלמט סיכוני ניכר ועוד. בסוגיה בדף עג. מציע רבא דרך נוספת לאפשר תשלום כזה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפרק הבא (הלכה ג) יתבאר שתשלום מוקדם מוזל על דבר שעדיין אינו בנמצא אסור בדרך כלל, אא"כ הוא גלובלי, יש אלמט סיכוני ניכר ועוד. בסוגיה בדף עג. מציע רבא דרך נוספת לאפשר תשלום כזה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר להו <strong>רבא</strong> להנהו דמנטרי באגי: פוקו הפוכו בבי דרי, כי היכי דלא תשתלם שכירות דידכו עד ההיא שעתא, דשכירות אינה משתלמת אלא בסוף, וההיא שעתא אוזולי דקא מוזלי גבייכו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר להו <strong>רבא</strong> להנהו דמנטרי באגי: פוקו הפוכו בבי דרי, כי היכי דלא תשתלם שכירות דידכו עד ההיא שעתא, דשכירות אינה משתלמת אלא בסוף, וההיא שעתא אוזולי דקא מוזלי גבייכו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקומו של רבא היה המנהג ששומרי השדות היו מקבלים את שכרם מגרעיני התבואה לאחר הדישה, למרות שמלאכתם היתה נגמרת עם הקציר. על ההמתנה שהם ממתינים לשכרם היו מקבלים תוספת של גרעינים. כמובן שיש כאן בעיה של ריבית, משום שלאחר תום עבודתם החקלאי חייב להם כסף ובשעת הפירעון מוסיף להם על המתנתם. רבא הורה להם לעזור באופן סמלי בדישה כדי ששכירותם תימשך עד לשעת הדישה ואז זמן התשלום הפורמלי הוא זמן הפירעון ואין המתנה כלל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקומו של רבא היה המנהג ששומרי השדות היו מקבלים את שכרם מגרעיני התבואה לאחר הדישה, למרות שמלאכתם היתה נגמרת עם הקציר. על ההמתנה שהם ממתינים לשכרם היו מקבלים תוספת של גרעינים. כמובן שיש כאן בעיה של ריבית, משום שלאחר תום עבודתם החקלאי חייב להם כסף ובשעת הפירעון מוסיף להם על המתנתם. רבא הורה להם לעזור באופן סמלי בדישה כדי ששכירותם תימשך עד לשעת הדישה ואז זמן התשלום הפורמלי הוא זמן הפירעון ואין המתנה כלל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם והשו"ע (קעג יב) כותבים כן להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם והשו"ע (קעג יב) כותבים כן להלכה.</p>
                     
                 </div>
                 
@@ -1216,27 +1216,27 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אריסין שהיו בעלי השדות מסלקין אותן מן השדה בניסן ונותנין להם האריסין בכל זרע חומר ארבע סאין והניח זה אריסין בתוך שדהו עד אייר ונטל מהן שש סאין הרי זה מותר ואין שם רבית.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הארכת שהיה והגדלת תשלום באריסים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הארכת שהיה והגדלת תשלום באריסים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (עג.)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (עג.)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמרו ליה רבנן ל<strong>רבא</strong>: קא אכיל מר רבית; דכולי עלמא שקלי ארבעה ומסלקי לאריסא בניסן, מר נטר להו עד אייר, ושקיל שיתא! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמרו ליה רבנן ל<strong>רבא</strong>: קא אכיל מר רבית; דכולי עלמא שקלי ארבעה ומסלקי לאריסא בניסן, מר נטר להו עד אייר, ושקיל שיתא! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר להו: אתון קא עבדיתון שלא כדין; ארעא לאריס משתעבד, אי אתון מסלקיתו להו בניסן - מפסידתו להו בכמה, אנא נטרנא להו עד אייר ומרווחנא להו בכמה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר להו: אתון קא עבדיתון שלא כדין; ארעא לאריס משתעבד, אי אתון מסלקיתו להו בניסן - מפסידתו להו בכמה, אנא נטרנא להו עד אייר ומרווחנא להו בכמה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רש"י מפרש שמדובר באריסים החוכרים את השדה בדמים ידועים, כאשר המנהג המקובל הוא שבניסן הם מחוייבים לקצור את התבואה<sup id="ref98"><a href="#fn98">[98]</a></sup>, ולשלם את דמי החכירות, 4 כורים, לבעל השדה. רבא נהג אחרת והתיר לאריסין להישאר עד אייר, אך דרש מהם דמי חכירות של 6 כורים. חכמים טענו לפניו שהדבר כרוך באיסור ריבית, שהרי בתמורה לדחיית זמן התשלום הוא מעלה את גובהו. מולם טען רבא שהדרישה מהאריס שיעזוב את השדה כבר בניסן, לפני שהתבואה הגיעה לשיא גודלה, היא דבר שאינו ראוי, ואדרבה, האריס מרוויח מהארכת השהייה, ולכן ראוי גם לגבות ממנו יותר כסף.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רש"י מפרש שמדובר באריסים החוכרים את השדה בדמים ידועים, כאשר המנהג המקובל הוא שבניסן הם מחוייבים לקצור את התבואה<sup id="ref98"><a href="#fn98">[98]</a></sup>, ולשלם את דמי החכירות, 4 כורים, לבעל השדה. רבא נהג אחרת והתיר לאריסין להישאר עד אייר, אך דרש מהם דמי חכירות של 6 כורים. חכמים טענו לפניו שהדבר כרוך באיסור ריבית, שהרי בתמורה לדחיית זמן התשלום הוא מעלה את גובהו. מולם טען רבא שהדרישה מהאריס שיעזוב את השדה כבר בניסן, לפני שהתבואה הגיעה לשיא גודלה, היא דבר שאינו ראוי, ואדרבה, האריס מרוויח מהארכת השהייה, ולכן ראוי גם לגבות ממנו יותר כסף.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם מסביר באופן דומה, אלא שמדבריו משתמע עוד, שחששם של החכמים נבע מכך שהאריס קיבל זרעים לזריעת השדה, שתמורתם הוא משלם תבואה, והזרעים יכולים להיחשב כהלוואה<sup id="ref99"><a href="#fn99">[99]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם מסביר באופן דומה, אלא שמדבריו משתמע עוד, שחששם של החכמים נבע מכך שהאריס קיבל זרעים לזריעת השדה, שתמורתם הוא משלם תבואה, והזרעים יכולים להיחשב כהלוואה<sup id="ref99"><a href="#fn99">[99]</a></sup>.</p>
                     
                 </div>
                 
@@ -1244,19 +1244,19 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הלוקח חטים ארבע סאין בסלע וכן השער ונתן לו את המעות וכשבא לגבות את החטים לאחר זמן הוסיף לו במדה ונתן לו יתר, ה"ז מותר שהרי ברצונו הוסיף לו ואילו רצה לא הוסיף שהרי לא היה שם תנאי.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">היתר קבלת תוספת לא פורמלית מהלווה למלווה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">היתר קבלת תוספת לא פורמלית מהלווה למלווה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' לעיל פרק ה' הל' יא-יג, בדין ריבית מוקדמת ומאוחרת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' לעיל פרק ה' הל' יא-יג, בדין ריבית מוקדמת ומאוחרת.</p>
                     
                 </div>
                 
@@ -1264,19 +1264,19 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מותר לאדם ליתן דמי חבית של יין לחבירו ולומר לו אם החמיצה מכאן עד יום פלוני ברשותך אבל אם הוזילה או הוקירה הרי היא שלי, שכיון שקיבל עליו הזול הרי זה קרוב לשכר ולהפסד וכן כל כיוצא בזה, וכן מותר לאדם לקנות מחבירו בתשרי מאה כדין של יין בדינר ואינו נוטלן עד טבת, וכשנוטלן בודק ומחזיר החומץ ולוקח היין הטוב שלא קנה ממנו אלא יין טוב ואלו שהחמיצו מתחלה היו ראויין להחמיץ אבל לא נודע הדבר עד אחר הזמן.
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלום מוקדם ומוזל על יין באספקה מאוחרת</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלום מוקדם ומוזל על יין באספקה מאוחרת</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הלכה זו תתבאר בע"ה ביתר פירוט בפרק הבא העוסק בפסיקה על פירות (מתן דמים מוקדם על סחורה שתסופק לאחר זמן).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הלכה זו תתבאר בע"ה ביתר פירוט בפרק הבא העוסק בפסיקה על פירות (מתן דמים מוקדם על סחורה שתסופק לאחר זמן).</p>
                     
                 </div>
                 
@@ -1284,122 +1284,122 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא-יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מקום שנהגו לשכור הספינה וליטול שכרה ואם נשברה שמין לו מה שפחתה ומשלם יתר על שכרה הרי זה מותר, וכן מותר להשכיר סיר של נחשת וכיוצא בו ונוטל השכר ודמי מה שפחת ממשקלו וכן כל כיוצא בזה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אין מקבלין צאן ברזל מישראל מפני שהוא אבק רבית, וכיצד הן צאן ברזל הרי שהיה לו מאה צאן וקבלם ממנו להטפל בהן ויהיו הגזות והולדות והחלב לאמצע לשליש או לרביע עד שנה או עד שנתים כמו שהתנו ביניהם ואם מתו הצאן הרי המקבל משלם דמיהם ה"ז אסור שהרי בעל הצאן קרוב לשכר ורחוק להפסד, לפיכך אם קיבל עליו בעל הצאן שאם הוקרו או הוזלו או אם נטרפו הרי הן ברשותו ה"ז מותר וכן כל כיוצא בזה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     השם פרה מחבירו ואמר לו אם מתה הרי היא עתה עלי בשלשים דינרים ואני אעלה לך סלע בכל חדש מותר לפי שלא עשאה מחיים דמים אלא לאחר מיתה.
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">צאן ברזל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">צאן ברזל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במשנה (ע:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במשנה (ע:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אין מקבלין צאן ברזל מישראל מפני שהוא רבית, אבל מקבלין צאן ברזל מן הנכרים</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אין מקבלין צאן ברזל מישראל מפני שהוא רבית, אבל מקבלין צאן ברזל מן הנכרים</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"צאן ברזל" הם נכסים שאדם נותן לחבירו, כדי שיתחלקו ברווחים, והמקבל מתחייב להחזיר לנותן את שווי הנכסים, אפילו אם ימותו, יוזלו או לא יהיה מהם רווח, כך שההסכם אינו משאיר מקום להפסד לנותן, והיחיד שיכול להפסיד הוא המקבל<sup id="ref100"><a href="#fn100">[100]</a></sup>. דבר זה דומה להלוואה, בה הלווה חייב תמיד להחזיר את סכום הכסף שלווה, לכן אם הנותן צאן ברזל מרוויח (למשל, אחוזים מהתוצרת), נחשב הדבר לריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"צאן ברזל" הם נכסים שאדם נותן לחבירו, כדי שיתחלקו ברווחים, והמקבל מתחייב להחזיר לנותן את שווי הנכסים, אפילו אם ימותו, יוזלו או לא יהיה מהם רווח, כך שההסכם אינו משאיר מקום להפסד לנותן, והיחיד שיכול להפסיד הוא המקבל<sup id="ref100"><a href="#fn100">[100]</a></sup>. דבר זה דומה להלוואה, בה הלווה חייב תמיד להחזיר את סכום הכסף שלווה, לכן אם הנותן צאן ברזל מרוויח (למשל, אחוזים מהתוצרת), נחשב הדבר לריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבינה שהנכסים נחשבים לחלוטין ברשותו של המקבל (כאילו קיבל סכום כסף). לכן היא מקשה מדין ממנו משמע שיש שייכות לנותן בנכסי צאן ברזל-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מבינה שהנכסים נחשבים לחלוטין ברשותו של המקבל (כאילו קיבל סכום כסף). לכן היא מקשה מדין ממנו משמע שיש שייכות לנותן בנכסי צאן ברזל-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>למימרא דברשותא דמקבל קיימא? ורמינהו: המקבל צאן ברזל מן הנכרים - ולדות פטורין מן הבכורה!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>למימרא דברשותא דמקבל קיימא? ורמינהו: המקבל צאן ברזל מן הנכרים - ולדות פטורין מן הבכורה!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המקבל צאן ברזל מגוי, פטורים ולדותיהם מבכורה, כדין בהמות של גוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, המקבל צאן ברזל מגוי, פטורים ולדותיהם מבכורה, כדין בהמות של גוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האמוראים מתרצים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">האמוראים מתרצים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אביי</strong>: לא קשיא; הא - דמקבל עליה אונסא וזולא, הא - דלא קביל עליה אונסא וזולא...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>אביי</strong>: לא קשיא; הא - דמקבל עליה אונסא וזולא, הא - דלא קביל עליה אונסא וזולא...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: אידי ואידי דלא קביל עליה מרה אונסא וזולא, וגבי בכורות היינו טעם דולדות פטורין מן הבכורה - כיון דאי לא יהיב זוזי אתי נכרי תפיס לה לבהמה, ואי לא משכח לה לבהמה תפיס להו לולדות, והוי ליה יד נכרי באמצע. וכל יד נכרי באמצע - פטור מן הבכורה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: אידי ואידי דלא קביל עליה מרה אונסא וזולא, וגבי בכורות היינו טעם דולדות פטורין מן הבכורה - כיון דאי לא יהיב זוזי אתי נכרי תפיס לה לבהמה, ואי לא משכח לה לבהמה תפיס להו לולדות, והוי ליה יד נכרי באמצע. וכל יד נכרי באמצע - פטור מן הבכורה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אביי מתרץ שבמקרה שבמשנה הבעלים אינו מקבל על עצמו את ההפסד אם יוזל הצאן או יאנס, ולכן הדבר נידון כמילווה. לעומת זאת, בדין הבכור לוקח הבעלים על עצמו לספוג את ההוזלה והאונס ולכן הוא עדיין נחשב הבעלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אביי מתרץ שבמקרה שבמשנה הבעלים אינו מקבל על עצמו את ההפסד אם יוזל הצאן או יאנס, ולכן הדבר נידון כמילווה. לעומת זאת, בדין הבכור לוקח הבעלים על עצמו לספוג את ההוזלה והאונס ולכן הוא עדיין נחשב הבעלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבא מסכים עם אביי בכך שמשנתנו עוסקת במקרה בו הבעלים לא לוקח על עצמו את הפסד ההוזלה והאונס, אך לדעתו גם בבכורות מדובר במקרה כזה, ובכ"ז המקבל היהודי פטור מבכורות משום ש"יד נכרי באמצע".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רבא מסכים עם אביי בכך שמשנתנו עוסקת במקרה בו הבעלים לא לוקח על עצמו את הפסד ההוזלה והאונס, אך לדעתו גם בבכורות מדובר במקרה כזה, ובכ"ז המקבל היהודי פטור מבכורות משום ש"יד נכרי באמצע".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם כותב שמדובר באבק ריבית, והסברא לכך היא שבמקרה המתואר ברמב"ם, הרווח העתיד לבעל הצאן אינו וודאי (עי' לעיל פרק ו הלכה ז בדין המשכנתא).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם כותב שמדובר באבק ריבית, והסברא לכך היא שבמקרה המתואר ברמב"ם, הרווח העתיד לבעל הצאן אינו וודאי (עי' לעיל פרק ו הלכה ז בדין המשכנתא).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי היקף האחריות שצריך הבעלים לקחת על עצמו בכדי שהדבר יהיה מותר, נחלקו הראשונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי היקף האחריות שצריך הבעלים לקחת על עצמו בכדי שהדבר יהיה מותר, נחלקו הראשונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם פוסק בעקבות דברי אביי ורבא שאם קיבל הבעלים עליו אונס והוזלה מותר, ואין זה צאן ברזל המתואר במשנה. עוד מוסיף הרמב"ם שבכדי שיהיה מותר צריך הבעלים לקחת על עצמו גם אם יופסדו וגם אם יוזלו. לעומת זה בספר התרומות (שער מו, ח"ד, אות נב) נפסק, שדי בכך שהנותן יקח על עצמו הפסד של הוזלה בכדי שיהיה מותר, אפילו אם המקבל חייב באונס.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם פוסק בעקבות דברי אביי ורבא שאם קיבל הבעלים עליו אונס והוזלה מותר, ואין זה צאן ברזל המתואר במשנה. עוד מוסיף הרמב"ם שבכדי שיהיה מותר צריך הבעלים לקחת על עצמו גם אם יופסדו וגם אם יוזלו. לעומת זה בספר התרומות (שער מו, ח"ד, אות נב) נפסק, שדי בכך שהנותן יקח על עצמו הפסד של הוזלה בכדי שיהיה מותר, אפילו אם המקבל חייב באונס.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קעז א) כתב על בסיס לשון הרמב"ם להלכה, ובמקום "אבק ריבית" סתם וכתב שהדבר אסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קעז א) כתב על בסיס לשון הרמב"ם להלכה, ובמקום "אבק ריבית" סתם וכתב שהדבר אסור.</p>
                     
                 </div>
                 
                 <div id="topic-9-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שכירות הדומה להלוואה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שכירות הדומה להלוואה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (סט:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (סט:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ספינתא,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ספינתא,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב</strong>: אגרא ופגרא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב</strong>: אגרא ופגרא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמרו ליה <strong>רב כהנא</strong> ו<strong>רב אסי</strong> לרב: אי אגרא - לא פגרא, אי פגרא - לא אגרא!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמרו ליה <strong>רב כהנא</strong> ו<strong>רב אסי</strong> לרב: אי אגרא - לא פגרא, אי פגרא - לא אגרא!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שתיק רב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שתיק רב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב פוסק שניתן להשכיר ספינה ולהתנות שמלבד דמי השכירות הקצובים ("אגרא"), אם תישבר הספינה באונס, ישלם השוכר את דמיה ("פגרא"). רב כהנא ורב אסי מערערים על דבריו של רב, וטוענים שאם מתחייב השוכר לשלם את דמיה הספינה אם נשברה נחשב הדבר כהלוואה שהרי רכושו של המשכיר אינו יכול לפחות, ולפיכך לקיחת "שכירות" עליה היא ריבית ("אי פגרא, לא אגרא"). רק אם לא יגבה המשכיר דמי פחת, יהיה מותר לו לגבות דמי שכירות ("אי אגרא, לא פגרא").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב פוסק שניתן להשכיר ספינה ולהתנות שמלבד דמי השכירות הקצובים ("אגרא"), אם תישבר הספינה באונס, ישלם השוכר את דמיה ("פגרא"). רב כהנא ורב אסי מערערים על דבריו של רב, וטוענים שאם מתחייב השוכר לשלם את דמיה הספינה אם נשברה נחשב הדבר כהלוואה שהרי רכושו של המשכיר אינו יכול לפחות, ולפיכך לקיחת "שכירות" עליה היא ריבית ("אי פגרא, לא אגרא"). רק אם לא יגבה המשכיר דמי פחת, יהיה מותר לו לגבות דמי שכירות ("אי אגרא, לא פגרא").</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב ששת עצמו שתק ולא הסביר את דבריו, אך רב ששת מביא להם סימוכין-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב ששת עצמו שתק ולא הסביר את דבריו, אך רב ששת מביא להם סימוכין-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב ששת</strong>: מאי טעמא שתיק רב?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב ששת</strong>: מאי טעמא שתיק רב?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא שמיעא ליה הא דתניא:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא שמיעא ליה הא דתניא:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אף על פי שאמרו אין מקבלין צאן ברזל מישראל, אבל מקבלין צאן ברזל מן הנכרים. אבל אמרו: השם פרה לחבירו ואמר לו: הרי פרתך עשויה עלי בשלשים דינר, ואני אעלה לך סלע בחדש - מותר, לפי שלא עשאה דמים. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אף על פי שאמרו אין מקבלין צאן ברזל מישראל, אבל מקבלין צאן ברזל מן הנכרים. אבל אמרו: השם פרה לחבירו ואמר לו: הרי פרתך עשויה עלי בשלשים דינר, ואני אעלה לך סלע בחדש - מותר, לפי שלא עשאה דמים. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ולא עשאה? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ולא עשאה? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב ששת</strong>: לא עשאה דמים מחיים, אלא לאחר מיתה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב ששת</strong>: לא עשאה דמים מחיים, אלא לאחר מיתה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא שמביא רב ששת עוסקת באיסור קבלת "צאן ברזל" (ר' לעיל בנושא הקודם). הברייתא מציינת שיש מקרה בו המתעסק לוקח על עצמו אחריות מלאה ובכל זאת הדבר מותר, למשל, אם השכיר פרה לחבירו וסיכמו שאם הפרה תמות, ישלם עליה השוכר. במקרה זה "לא עשאה דמים מחיים", כלומר, אם הפרה נשארה בחיים, הרי השוכר מחזירה בעינה, אפילו אם הוזלה. רק אם מתה מתחייב השוכר לשלם תמורתה למשכיר, וממילא נמצא שאין השוכר נחשב כלווה (החייב להחזיר סכום כסף נקוב, יהא אשר יהא), ואין דמי השכירות נחשבים כריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתא שמביא רב ששת עוסקת באיסור קבלת "צאן ברזל" (ר' לעיל בנושא הקודם). הברייתא מציינת שיש מקרה בו המתעסק לוקח על עצמו אחריות מלאה ובכל זאת הדבר מותר, למשל, אם השכיר פרה לחבירו וסיכמו שאם הפרה תמות, ישלם עליה השוכר. במקרה זה "לא עשאה דמים מחיים", כלומר, אם הפרה נשארה בחיים, הרי השוכר מחזירה בעינה, אפילו אם הוזלה. רק אם מתה מתחייב השוכר לשלם תמורתה למשכיר, וממילא נמצא שאין השוכר נחשב כלווה (החייב להחזיר סכום כסף נקוב, יהא אשר יהא), ואין דמי השכירות נחשבים כריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם דין הספינה בו עסק רב דומה לדין הפרה. ולכן, כיוון ששוכר הספינה מתחייב לשלם את דמיה רק במקרה של שבר ואובדן ולא במקרה של ירידת ערכה מסיבות אחרות, אין קבלת הספינה נחשבת כמילווה אלא כשכירות והדמים שמשלם השוכר אינם נחשבים כריבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם דין הספינה בו עסק רב דומה לדין הפרה. ולכן, כיוון ששוכר הספינה מתחייב לשלם את דמיה רק במקרה של שבר ואובדן ולא במקרה של ירידת ערכה מסיבות אחרות, אין קבלת הספינה נחשבת כמילווה אלא כשכירות והדמים שמשלם השוכר אינם נחשבים כריבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהתאמה פוסק רב פפא להלכה כרב-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהתאמה פוסק רב פפא להלכה כרב-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב פפא</strong>, הלכתא: ספינה אגרא ופגרא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב פפא</strong>, הלכתא: ספינה אגרא ופגרא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ונהגו בני כופרא: אגרא - בשעת משיכה, פגרא - בשעת שבירה. אטו במנהגא תליא מילתא? - משום דמתניתא תניא מנהגא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ונהגו בני כופרא: אגרא - בשעת משיכה, פגרא - בשעת שבירה. אטו במנהגא תליא מילתא? - משום דמתניתא תניא מנהגא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (ע.) מובא מעשה דומה, שגם בו השוכר משלם, מלבד את השכירות, גם את פחת הנכס-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך (ע.) מובא מעשה דומה, שגם בו השוכר משלם, מלבד את השכירות, גם את פחת הנכס-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב ענן</strong> אמר <strong>שמואל</strong>: מעות של יתומים מותר להלוותן ברבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב ענן</strong> אמר <strong>שמואל</strong>: מעות של יתומים מותר להלוותן ברבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב נחמן</strong>: משום דיתמי נינהו ספינא להו איסורא?! יתמי דאכלי דלאו דידהו ליזלו בתר שבקייהו!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>רב נחמן</strong>: משום דיתמי נינהו ספינא להו איסורא?! יתמי דאכלי דלאו דידהו ליזלו בתר שבקייהו!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: אימא לי איזו, גופא דעובדא היכי הוה? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: אימא לי איזו, גופא דעובדא היכי הוה? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: ההוא דודא דבני מר עוקבא דהוה בי מר שמואל תקיל ויהיב ליה, תקיל ושקיל ליה. שקיל אגרא ושקיל פחתא, אי אגרא - לא פחתא, ואי פחתא - לא אגרא! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: ההוא דודא דבני מר עוקבא דהוה בי מר שמואל תקיל ויהיב ליה, תקיל ושקיל ליה. שקיל אגרא ושקיל פחתא, אי אגרא - לא פחתא, ואי פחתא - לא אגרא! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: כי הא - אפילו בדקנני נמי שרי למיעבד, דהא מקבלי עלייהו חוסכא דנחשא, דכמה דמקלי נחשא בציר דמיה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: כי הא - אפילו בדקנני נמי שרי למיעבד, דהא מקבלי עלייהו חוסכא דנחשא, דכמה דמקלי נחשא בציר דמיה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב ענן מספר לרב נחמן על דרך שהיה נוהג בה שמואל- בחזקתו של שמואל היתה קדירת נחושת של בניו היתומים של מר עוקבא המנוח. בכדי להרוויח לטובת היתומים היה שמואל נוהג להשכיר את הקדירה תמורת דמי שכירות קצובים. בנוסף, היה שמואל שוקל את הקדירה כאשר מסר אותה וחוזר ושוקלה כאשר קיבל אותה, והיה מחייב את השוכרים בהפרש. רב ענן סבר שדמי השכירות נחשבים כריבית וזאת משום שנזק הנגרם באופן בלתי נמנע ותוכ"ד שימוש הולם ובכל זאת מושת על השוכר מורה על כך שאין זו שכירות אלא מילווה<sup id="ref101"><a href="#fn101">[101]</a></sup>. מתוך כך הבין רב ענן, שבנסיבות רגילות, הדבר אסור, ושמואל הקל הדבר לטובת המצווה של דאגה ליתומים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב ענן מספר לרב נחמן על דרך שהיה נוהג בה שמואל- בחזקתו של שמואל היתה קדירת נחושת של בניו היתומים של מר עוקבא המנוח. בכדי להרוויח לטובת היתומים היה שמואל נוהג להשכיר את הקדירה תמורת דמי שכירות קצובים. בנוסף, היה שמואל שוקל את הקדירה כאשר מסר אותה וחוזר ושוקלה כאשר קיבל אותה, והיה מחייב את השוכרים בהפרש. רב ענן סבר שדמי השכירות נחשבים כריבית וזאת משום שנזק הנגרם באופן בלתי נמנע ותוכ"ד שימוש הולם ובכל זאת מושת על השוכר מורה על כך שאין זו שכירות אלא מילווה<sup id="ref101"><a href="#fn101">[101]</a></sup>. מתוך כך הבין רב ענן, שבנסיבות רגילות, הדבר אסור, ושמואל הקל הדבר לטובת המצווה של דאגה ליתומים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב נחמן עונה שגם בגדולים ("דקנני") מעשיו של שמואל מותרים וזאת משום שקיים גם פחת שאותו סופג המשכיר, קרי, שריפת והתפחמות הנחושת<sup id="ref102"><a href="#fn102">[102]</a></sup>. מכיוון שכך עדיין נחשב הדבר כשכירות ולא כמילווה, ודמי השכירות אינם נחשבים ריבית ומותרים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב נחמן עונה שגם בגדולים ("דקנני") מעשיו של שמואל מותרים וזאת משום שקיים גם פחת שאותו סופג המשכיר, קרי, שריפת והתפחמות הנחושת<sup id="ref102"><a href="#fn102">[102]</a></sup>. מכיוון שכך עדיין נחשב הדבר כשכירות ולא כמילווה, ודמי השכירות אינם נחשבים ריבית ומותרים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בפירוש המקרה של "הרי פרתך עשויה עלי בשלושים דינר...", וממילא גם בהבנת המקרה בו ניתן להשכיר חפץ וגם לחייב את השוכר על הפסד בגוף החפץ-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בפירוש המקרה של "הרי פרתך עשויה עלי בשלושים דינר...", וממילא גם בהבנת המקרה בו ניתן להשכיר חפץ וגם לחייב את השוכר על הפסד בגוף החפץ-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרשב"א והריטב"א פוסקים, על פי פשט דברי הברייתא, שהתשלום שמשלם השוכר לבעל הפרה הוא על ערכה כפי שהיה בשעת המסירה. הרשב"א מסביר שמשום שכל זמן שהפרה בחיים מחזיר אותה השוכר כפי שהיא, בין נפחתו דמיה ובין לא, אין זה נחשב כמילווה (שהחזרו קצוב וידוע), אלא שכירות, ולכן מותר אפילו אם הוסכם שאם תמות הפרה ישלם השוכר את שוויה כפי שהיה בשעת המסירה. כדברים אלה משמע מלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרשב"א והריטב"א פוסקים, על פי פשט דברי הברייתא, שהתשלום שמשלם השוכר לבעל הפרה הוא על ערכה כפי שהיה בשעת המסירה. הרשב"א מסביר שמשום שכל זמן שהפרה בחיים מחזיר אותה השוכר כפי שהיא, בין נפחתו דמיה ובין לא, אין זה נחשב כמילווה (שהחזרו קצוב וידוע), אלא שכירות, ולכן מותר אפילו אם הוסכם שאם תמות הפרה ישלם השוכר את שוויה כפי שהיה בשעת המסירה. כדברים אלה משמע מלשון הרמב"ם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם כותב הטור (קעו) שהסכום שמשלם השוכר למשכיר על הפרה אם מתה הוא שוויה בשעת מיתה ולא בשעת מסירה. כך מתפרשים דברי רב ששת "לא עשאה דמים מחיים, אלא לאחר מיתה", כלומר, לא רק שהשוכר חייב את דמיה של הפרה לאחר מיתתה בלבד, אלא שגם שווי הדמים שנקצצו מלכתחילה כוונו לערך הפרה בשעת מיתה<sup id="ref103"><a href="#fn103">[103]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם כותב הטור (קעו) שהסכום שמשלם השוכר למשכיר על הפרה אם מתה הוא שוויה בשעת מיתה ולא בשעת מסירה. כך מתפרשים דברי רב ששת "לא עשאה דמים מחיים, אלא לאחר מיתה", כלומר, לא רק שהשוכר חייב את דמיה של הפרה לאחר מיתתה בלבד, אלא שגם שווי הדמים שנקצצו מלכתחילה כוונו לערך הפרה בשעת מיתה<sup id="ref103"><a href="#fn103">[103]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נקודה נוספת בה נחלקו הראשונים היא היחס בין דין הפרה (והספינה) לבין המעשה בקדירת הנחושת. לכאורה יש מקום להבין ממעשה זה, שבכדי להתיר אין די בכך שהבעלים יקבל עליו ירידת ערך של החפץ בגלל שינוי מחיר, אלא צריך שיקבל עליו גם את הפחת שנפחת החפץ מרוב שימוש. אכן, כך מבינים התוספות (ע. ד"ה "דקא"), ומפרשים עקב כך, שגם בספינה, מותר לשוכר לסכם מראש שיקבל את מלוא ערכה אם תיפסד רק אם משום שאם תחזור בעינה מקבל המשכיר עצמו את הפחת שהספינה נפחתת בגלל שריית עציה במים וכיוצא בזו. לפיכך, במקרה של חפץ שאינו נפחת באופן תדיר ומתמשך, יהיה אסור להשכירו אם השוכר מתחייב לשלם את דמיו את יאבד באונס.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נקודה נוספת בה נחלקו הראשונים היא היחס בין דין הפרה (והספינה) לבין המעשה בקדירת הנחושת. לכאורה יש מקום להבין ממעשה זה, שבכדי להתיר אין די בכך שהבעלים יקבל עליו ירידת ערך של החפץ בגלל שינוי מחיר, אלא צריך שיקבל עליו גם את הפחת שנפחת החפץ מרוב שימוש. אכן, כך מבינים התוספות (ע. ד"ה "דקא"), ומפרשים עקב כך, שגם בספינה, מותר לשוכר לסכם מראש שיקבל את מלוא ערכה אם תיפסד רק אם משום שאם תחזור בעינה מקבל המשכיר עצמו את הפחת שהספינה נפחתת בגלל שריית עציה במים וכיוצא בזו. לפיכך, במקרה של חפץ שאינו נפחת באופן תדיר ומתמשך, יהיה אסור להשכירו אם השוכר מתחייב לשלם את דמיו את יאבד באונס.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחרת משתמע מדברי רש"י (סט: ד"ה "מותר") הכותב שכל עוד אם הוזל החפץ סופג זאת המשכיר, אין זה נחשב מילווה ולכן מותר. כך גם משמע מלשון הרמב"ם הכותב שמותר לתת צאן למתעסק, כך שאם ימותו ישלם המתעסק ובתנאי ש"קיבל עליו בעל הצאן שאם הוקרו או הוזלו... הרי הן ברשותו"<sup id="ref104"><a href="#fn104">[104]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחרת משתמע מדברי רש"י (סט: ד"ה "מותר") הכותב שכל עוד אם הוזל החפץ סופג זאת המשכיר, אין זה נחשב מילווה ולכן מותר. כך גם משמע מלשון הרמב"ם הכותב שמותר לתת צאן למתעסק, כך שאם ימותו ישלם המתעסק ובתנאי ש"קיבל עליו בעל הצאן שאם הוקרו או הוזלו... הרי הן ברשותו"<sup id="ref104"><a href="#fn104">[104]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (יו"ד קעו ג-ד) כתב כלשון הרמב"ם, כפי השיטה שהמקבל משלם כשעת המסירה, והרמ"א כותב כשיטת הטור, שדווקא כשעת מיתה. עוד כתב הרמ"א כדברי התוספות, שההיתר הוא דווקא בדברים הפוחתים מתוך שימוש, והבעלים סופג פחת זה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (יו"ד קעו ג-ד) כתב כלשון הרמב"ם, כפי השיטה שהמקבל משלם כשעת המסירה, והרמ"א כותב כשיטת הטור, שדווקא כשעת מיתה. עוד כתב הרמ"א כדברי התוספות, שההיתר הוא דווקא בדברים הפוחתים מתוך שימוש, והבעלים סופג פחת זה.</p>
                     
                 </div>
                 
@@ -1407,23 +1407,23 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     משכרת אשה לחברתה תרנגולת לישב על הביצים בשני אפרוחים ואין חוששין משום רבית.
                 </div>
                 
 
                 
                 <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">"צאן ברזל" בתרנגולות וביצים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">"צאן ברזל" בתרנגולות וביצים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (סח:) מובאת ברייתא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (סח:) מובאת ברייתא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>משכרת אשה לחברתה תרנגולת בשני אפרוחים</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>משכרת אשה לחברתה תרנגולת בשני אפרוחים</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר באשה בעלת ביצים, שהציעה לאשה בעלת תרנגולת, שתדגור התרנגולת על הביצים, ובשכר זה תקבל שנים מהאפרוחים שיבקעו. לו היתה אחריות התרנגולת על בעלת הביצים אפילו באונסין<sup id="ref105"><a href="#fn105">[105]</a></sup>, היה הדבר אסור, שכן הביצים נחשבות הלוואה, ועילוי השווי באפרוחים שמקבלת בעלת הביצים נחשב ריבית, בדומה לצאן ברזל, שהמקבל אחראי להן. ברם, רש"י מסביר שבברייתא מדובר בשכירות ממש, כך שבעלת התרנגולת אינה מקבלת על עצמה כל אונס שיארע לביצים. לכן, אין בדבר חשש ריבית והוא מותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדובר באשה בעלת ביצים, שהציעה לאשה בעלת תרנגולת, שתדגור התרנגולת על הביצים, ובשכר זה תקבל שנים מהאפרוחים שיבקעו. לו היתה אחריות התרנגולת על בעלת הביצים אפילו באונסין<sup id="ref105"><a href="#fn105">[105]</a></sup>, היה הדבר אסור, שכן הביצים נחשבות הלוואה, ועילוי השווי באפרוחים שמקבלת בעלת הביצים נחשב ריבית, בדומה לצאן ברזל, שהמקבל אחראי להן. ברם, רש"י מסביר שבברייתא מדובר בשכירות ממש, כך שבעלת התרנגולת אינה מקבלת על עצמה כל אונס שיארע לביצים. לכן, אין בדבר חשש ריבית והוא מותר.</p>
                     
                 </div>
                 
@@ -1431,43 +1431,43 @@
             
             
             <div id="halacha-11" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מי שהיה נושה בחבירו ד' דינרים של רבית ונתן לו בהן חפץ ששוה חמשה כשמוציאין ממנו מוציאין ממנו חמשה הואיל ובתורת רבית בא לידו, וכן אם נתן לו בהן כסות או כלי מוציאין ממנו את הכלי עצמו ואותו הכסות עצמו, השכיר לו בהן מקום ששוה שכרו ג' דינרין כשמוציאין ממנו מוציאין ממנו ארבעה שהרי בארבעה שכר ממנו מקום זה שקיבל עליו.
                 </div>
                 
 
                 
                 <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דרך שומת ריבית קצוצה לצורך הוצאתה בדיינים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דרך שומת ריבית קצוצה לצורך הוצאתה בדיינים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (סה.) דנה בשלושה מקרים. בשנים הראשונים נחלקו אביי ורבא, ואילו בשלישי מובאת דעתו של רבא בלבד-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (סה.) דנה בשלושה מקרים. בשנים הראשונים נחלקו אביי ורבא, ואילו בשלישי מובאת דעתו של רבא בלבד-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אביי</strong>: האי מאן דמסיק זוזי דריביתא בחבריה, וקא אזלי חטי ארבעה גריוי בזוזא בשוקא, ויהיב ליה איהו חמשה, כי מפקינן מיניה - ארבעה מפקינן מיניה, אידך אוזולי הוא דקא מוזיל גביה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>אביי</strong>: האי מאן דמסיק זוזי דריביתא בחבריה, וקא אזלי חטי ארבעה גריוי בזוזא בשוקא, ויהיב ליה איהו חמשה, כי מפקינן מיניה - ארבעה מפקינן מיניה, אידך אוזולי הוא דקא מוזיל גביה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> אמר: חמשה מפקינן מיניה. דמעיקרא בתורת ריביתא אתאי לידיה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> אמר: חמשה מפקינן מיניה. דמעיקרא בתורת ריביתא אתאי לידיה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואמר <strong>אביי</strong>: האי מאן דמסיק ארבעה זוזי דריביתא בחבריה, ויהיב ליה גלימא בגוייהו, כי מפקינן מיניה - ארבעה מפקינן מיניה, גלימא לא מפקינן מיניה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואמר <strong>אביי</strong>: האי מאן דמסיק ארבעה זוזי דריביתא בחבריה, ויהיב ליה גלימא בגוייהו, כי מפקינן מיניה - ארבעה מפקינן מיניה, גלימא לא מפקינן מיניה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> אמר: גלימא מפקינן מיניה. מאי טעמא - כי היכי דלא לימרו גלימא דמכסי וקאי גלימא דריביתא הוא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> אמר: גלימא מפקינן מיניה. מאי טעמא - כי היכי דלא לימרו גלימא דמכסי וקאי גלימא דריביתא הוא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: האי מאן דמסיק תריסר זוזי דריביתא בחבריה, ואגר ליה חצר דמתגרא בעשרה ואוגריה נהליה בתריסר. כי מפקינן מיניה - תריסר מפקינן מיניה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: האי מאן דמסיק תריסר זוזי דריביתא בחבריה, ואגר ליה חצר דמתגרא בעשרה ואוגריה נהליה בתריסר. כי מפקינן מיניה - תריסר מפקינן מיניה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב אחא מדפתי</strong> ל<strong>רבינא</strong>: ולימא ליה: כי אגרא הכי - דהוה קא משתרשי לי, השתא דלא משתרשי לי - כדאגרי כולי עלמא הוא דאגרנא! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>רב אחא מדפתי</strong> ל<strong>רבינא</strong>: ולימא ליה: כי אגרא הכי - דהוה קא משתרשי לי, השתא דלא משתרשי לי - כדאגרי כולי עלמא הוא דאגרנא! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>משום דאמר ליה: סברת וקבלת.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>משום דאמר ליה: סברת וקבלת.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה הראשון הלווה התחייב לתת למלווה זוז של ריבית, אך נתן לו סחורה בשווי גדול יותר (של זוז ורבע בדוגמה שבגמרא). לדעת אביי מוציאים ממנו רק את שווי הריבית שהתחייב לה, כלומר, זוז, שכן רואים את אותו רבע הזוז שהוסיף לו הלווה כמתנה. אך לדעת רבא מוציאים ממנו את שוי הסחורה שנתן, כיוון שנתן אותה בתורת רבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה הראשון הלווה התחייב לתת למלווה זוז של ריבית, אך נתן לו סחורה בשווי גדול יותר (של זוז ורבע בדוגמה שבגמרא). לדעת אביי מוציאים ממנו רק את שווי הריבית שהתחייב לה, כלומר, זוז, שכן רואים את אותו רבע הזוז שהוסיף לו הלווה כמתנה. אך לדעת רבא מוציאים ממנו את שוי הסחורה שנתן, כיוון שנתן אותה בתורת רבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו איך להבין את המשפטים "ארבעה מפקינן מיניה" או "חמשה מפקינן מיניה". לדעת הרמב"ן (מובא בריטב"א) והטור (קסא), הכוונה שמחזיר מעות (זוז או זוז ורבע בהתאמה), כיוון שהקניין קיים, ויש למלווה רק חובה להשיב את הריבית. לעומת זה, מדברי הריא"ז בפסקיו (ב"מ ה, ב), משמע שבעוד שאביי סובר שהמקח קיים ומשלם ההמלווה את שווי הריבית, לדעת רבא הקניין כלל לא קיים ועל המלווה להחזיר את הסחורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו איך להבין את המשפטים "ארבעה מפקינן מיניה" או "חמשה מפקינן מיניה". לדעת הרמב"ן (מובא בריטב"א) והטור (קסא), הכוונה שמחזיר מעות (זוז או זוז ורבע בהתאמה), כיוון שהקניין קיים, ויש למלווה רק חובה להשיב את הריבית. לעומת זה, מדברי הריא"ז בפסקיו (ב"מ ה, ב), משמע שבעוד שאביי סובר שהמקח קיים ומשלם ההמלווה את שווי הריבית, לדעת רבא הקניין כלל לא קיים ועל המלווה להחזיר את הסחורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה השני שבגמרא הלווה שילם למלווה בחפץ מסויים, כמו למשל, בגד. והאמוראים חולקים בשאלה מה מוציאים מהמלווה. לדעת אביי מוציאים כסף בשיעור הריבית שהתחייב הלווה לשלם, כיוון שאת הבגד קנה כבר המלווה. לעומת זה, לדעת רבא, מוציאים את הבגד עצמו, כדי שלא יגידו הבריות שבגד זה שעל המלווה הוא של ריבית. מדברי רבא יכול להשתמע שדווקא אם מדובר בכלי תשמיש מסויים או בגד מיוחד יש חשש שכזה, אך אם מדובר בחפץ שאינו מסויים ומזוהה (אלומת חיטים וכד') יכול להחזיר דמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה השני שבגמרא הלווה שילם למלווה בחפץ מסויים, כמו למשל, בגד. והאמוראים חולקים בשאלה מה מוציאים מהמלווה. לדעת אביי מוציאים כסף בשיעור הריבית שהתחייב הלווה לשלם, כיוון שאת הבגד קנה כבר המלווה. לעומת זה, לדעת רבא, מוציאים את הבגד עצמו, כדי שלא יגידו הבריות שבגד זה שעל המלווה הוא של ריבית. מדברי רבא יכול להשתמע שדווקא אם מדובר בכלי תשמיש מסויים או בגד מיוחד יש חשש שכזה, אך אם מדובר בחפץ שאינו מסויים ומזוהה (אלומת חיטים וכד') יכול להחזיר דמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה השלישי הלווה שילם את הריבית ע"י השכרה של חצר שדמי השכירות שלה נמוכים מסכום הריבית לו התחייב. כלומר, למעשה הלווה השכיר למלווה חצר ביותר מכדי דמיה, והמלווה לא שילם, כיוון שדמי הריבית מתקזזים עם דמי השכירות. רבא פוסק שעל המלווה לשלם ללווה את מלוא מחיר השכירות שהוסכם ביניהם, שגובהו כגובה דמי הריבית. רב אחא שואל- מדוע לא יכול המלווה לטעון שכל הסיבה שהסכים לשכור חצר במחיר גבוה כל כך היא משום שזו היתה דרכו לגבות את דמי הריבית, ובכן מדוע שלא ישלם עתה את דמי השכירות האמיתיים (והפחותים) של השדה? רבינא מסביר שכיוון שקיבל על עצמו לשכור במחיר הגבוה, עדיין הוא מחוייב למחיר זה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה השלישי הלווה שילם את הריבית ע"י השכרה של חצר שדמי השכירות שלה נמוכים מסכום הריבית לו התחייב. כלומר, למעשה הלווה השכיר למלווה חצר ביותר מכדי דמיה, והמלווה לא שילם, כיוון שדמי הריבית מתקזזים עם דמי השכירות. רבא פוסק שעל המלווה לשלם ללווה את מלוא מחיר השכירות שהוסכם ביניהם, שגובהו כגובה דמי הריבית. רב אחא שואל- מדוע לא יכול המלווה לטעון שכל הסיבה שהסכים לשכור חצר במחיר גבוה כל כך היא משום שזו היתה דרכו לגבות את דמי הריבית, ובכן מדוע שלא ישלם עתה את דמי השכירות האמיתיים (והפחותים) של השדה? רבינא מסביר שכיוון שקיבל על עצמו לשכור במחיר הגבוה, עדיין הוא מחוייב למחיר זה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השו"ע (קסא ח) פוסק כרבא במקרה הראשון וכפירוש הטור, שהמיקח קיים. בהמשך (שם, ט) פוסק השו"ע כרבא במקרה השני, והרמ"א מסביר שבמקרה זה צריך להחזיר דווקא את החפץ ואין המיקח קיים כיוון שמדובר בדבר מסויים. בהלכה י פוסק השו"ע כדברי רבא במקרה השלישי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השו"ע (קסא ח) פוסק כרבא במקרה הראשון וכפירוש הטור, שהמיקח קיים. בהמשך (שם, ט) פוסק השו"ע כרבא במקרה השני, והרמ"א מסביר שבמקרה זה צריך להחזיר דווקא את החפץ ואין המיקח קיים כיוון שמדובר בדבר מסויים. בהלכה י פוסק השו"ע כדברי רבא במקרה השלישי.</p>
                     
                 </div>
                 
@@ -1475,7 +1475,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1539,6 +1539,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

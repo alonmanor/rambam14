@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות חובל ומזיק - פרק ו'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ו')</h3>
                 <ul class="space-y-3">
@@ -1086,7 +1086,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1098,33 +1098,33 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">לאחר שנחתמו הלכות החובל בחבירו, פותח פרק ו את סדרת הפרקים ו-ח העוסקים בדיני המזיק את רכוש חבירו. להבדיל מדיני נזקי ממון, בהלכות שלפנינו מדובר באדם שהזיק את רכוש חבירו ולא ברכושו שהזיק. העובדה שהאדם עצמו הזיק את חבירו תובעת ממנו משנה אחריות למעשיו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">לאחר שנחתמו הלכות החובל בחבירו, פותח פרק ו את סדרת הפרקים ו-ח העוסקים בדיני המזיק את רכוש חבירו. להבדיל מדיני נזקי ממון, בהלכות שלפנינו מדובר באדם שהזיק את רכוש חבירו ולא ברכושו שהזיק. העובדה שהאדם עצמו הזיק את חבירו תובעת ממנו משנה אחריות למעשיו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הנושא העיקרי של פרק זה הינו גדר אחריות האדם על נזקים שגרם לממון חבירו. תחת כותרת זה מתבררים בהלכות שלפנינו שלושה נושאים עיקריים.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הנושא העיקרי של פרק זה הינו גדר אחריות האדם על נזקים שגרם לממון חבירו. תחת כותרת זה מתבררים בהלכות שלפנינו שלושה נושאים עיקריים.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">האחד נוגע לאיפיון הנזק שמזיק האדם בגופו, והוא כולל את רמת הכוונה בגרימת הנזק (אונס, שוגג או מזיד) ואת הגדרת מעשה הנזק הישיר.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">האחד נוגע לאיפיון הנזק שמזיק האדם בגופו, והוא כולל את רמת הכוונה בגרימת הנזק (אונס, שוגג או מזיד) ואת הגדרת מעשה הנזק הישיר.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הנושא השני נוגע להבדלים בין מקומות שונים בהם מתרחש הנזק (כגון רשות הניזק, רשות המזיק או רשות של שניהם).</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הנושא השני נוגע להבדלים בין מקומות שונים בהם מתרחש הנזק (כגון רשות הניזק, רשות המזיק או רשות של שניהם).</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הנושא האחרון בפרק קשור לאחריות המזיק כאשר ישנם כמה מזיקים.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הנושא האחרון בפרק קשור לאחריות המזיק כאשר ישנם כמה מזיקים.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות א-ב והלכה ד עוסקות ברמת הכוונה הנדרשת על מנת לחייב את האדם המזיק.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות א-ב והלכה ד עוסקות ברמת הכוונה הנדרשת על מנת לחייב את האדם המזיק.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק נפתח בהצגת הכלל ש"אדם מועד לעולם". כלומר, אדם אחראי למעשיו וחייב לשלם על נזקים שעולל, אפילו אם הוא אנוס וכש"כ אם הוא שוגג. אמנם, כפי שיתבאר, חלקו הפוסקים האם קיים גדר של אונס שבו אדם פטור לגמרי. עוד בעניין גדר דין "אדם מועד לעולם" מתבאר בהלכה ד בהקשר לדין אדם שעלה בסולם, וניתק אחד משלבי הסולם ונפל והזיק.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הפרק נפתח בהצגת הכלל ש"אדם מועד לעולם". כלומר, אדם אחראי למעשיו וחייב לשלם על נזקים שעולל, אפילו אם הוא אנוס וכש"כ אם הוא שוגג. אמנם, כפי שיתבאר, חלקו הפוסקים האם קיים גדר של אונס שבו אדם פטור לגמרי. עוד בעניין גדר דין "אדם מועד לעולם" מתבאר בהלכה ד בהקשר לדין אדם שעלה בסולם, וניתק אחד משלבי הסולם ונפל והזיק.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ג, והלכות ה-ט עוסקות בנושא חילוקי הרשויות בדין אדם המזיק.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ג, והלכות ה-ט עוסקות בנושא חילוקי הרשויות בדין אדם המזיק.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכה ג חוזר ומבאר הרמב"ם דברים שהתבררו כבר בפרק א הנוגעים למקום בו ארע הנזק, אם זה רשות הניזק, רשות המזיק, רשות של שניהם, או של אף אחד מהם. שיטת הרמב"ם העקרונית היא שהמזיק ברשותו פטור כל עוד הזיק ללא כוונה. ראשונים אחרים חלקו על הרמב"ם ופסקו שאדם יכול להתחייב על נזקים בשוגג אפילו ברשותו שלו.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בהלכה ג חוזר ומבאר הרמב"ם דברים שהתבררו כבר בפרק א הנוגעים למקום בו ארע הנזק, אם זה רשות הניזק, רשות המזיק, רשות של שניהם, או של אף אחד מהם. שיטת הרמב"ם העקרונית היא שהמזיק ברשותו פטור כל עוד הזיק ללא כוונה. ראשונים אחרים חלקו על הרמב"ם ופסקו שאדם יכול להתחייב על נזקים בשוגג אפילו ברשותו שלו.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ה מבארת עוד בעניין זה, ועוסקת בנזק בחצר המזיק, כאשר הניזק מילאה בחביות, והמזיק שיברן ללא כוונה בניסיון לפלס לו דרך.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ה מבארת עוד בעניין זה, ועוסקת בנזק בחצר המזיק, כאשר הניזק מילאה בחביות, והמזיק שיברן ללא כוונה בניסיון לפלס לו דרך.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">אגב הדיון ברשויות השונות, מביא הרמב"ם בהלכות ו-ז את הדין לפיו מותר לאדם להציל את שורו המותקף משור חברו התוקפו אפילו ששור חברו ינזק, וזאת בתנאי שאם אפשר הדבר, ישמוט את שורו שלו ולא ידחוף את של חברו. כפועל יוצא של שיטתו בדין הרשויות, מעמיד הרמב"ם דין זה ברשות הניזק.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">אגב הדיון ברשויות השונות, מביא הרמב"ם בהלכות ו-ז את הדין לפיו מותר לאדם להציל את שורו המותקף משור חברו התוקפו אפילו ששור חברו ינזק, וזאת בתנאי שאם אפשר הדבר, ישמוט את שורו שלו ולא ידחוף את של חברו. כפועל יוצא של שיטתו בדין הרשויות, מעמיד הרמב"ם דין זה ברשות הניזק.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ח ו-ט מתמקדות בנזק ברשות המיוחדת לניזק ולמזיק כאחד- רשות הרבים. בהלכה ח מבואר בין בעל חבית שנשברה בשוגג בקורתו של חברו. כאשר אחד מהם עמד בדרך שאינה ראויה, שגרמה לשני להתנגש בו, האחריות נופלת על העומד. לעומת זאת, כאשר שניהם הלכו זה לקראת זה, אין להאשים את בעל הקורה בנזק. בהלכה ט מבואר, שכאשר היה אחד רץ וחברו מהלך ברשות הרבים והתנגשו זה בזה, האחריות נופלת על הרץ, כיוון שהוא משנה מדרך השימוש הראויה ברשות הרבים. לכן, אם היה רץ לצורכי שבת בערב שבת בין השמשות, והזיק- פטור.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ח ו-ט מתמקדות בנזק ברשות המיוחדת לניזק ולמזיק כאחד- רשות הרבים. בהלכה ח מבואר בין בעל חבית שנשברה בשוגג בקורתו של חברו. כאשר אחד מהם עמד בדרך שאינה ראויה, שגרמה לשני להתנגש בו, האחריות נופלת על העומד. לעומת זאת, כאשר שניהם הלכו זה לקראת זה, אין להאשים את בעל הקורה בנזק. בהלכה ט מבואר, שכאשר היה אחד רץ וחברו מהלך ברשות הרבים והתנגשו זה בזה, האחריות נופלת על הרץ, כיוון שהוא משנה מדרך השימוש הראויה ברשות הרבים. לכן, אם היה רץ לצורכי שבת בערב שבת בין השמשות, והזיק- פטור.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות י-יב עוסקות בהגדרת מעשה הנזק. בהלכה י מתבאר שחפץ שהזיק תוך שהוא נע מכולו של האדם, נחשב הדבר כנזק ישיר שהזיק בידיו, ולא כנזק שהזיק ממונו. אמנם, אם הוזק דבר בריחוק מקום כתוצאה ממעשי האדם אך לא כביטוי לכוחו הישיר, אין הדבר נופל בהגדרת אדם המזיק בידיים. הלכה יא מוסיפה ומבארת שאם כתוצאה ישירה של כח מכתו של האדם הוזק דבר בריחוק מקום, נחשב אף זה ככוחו. הלכה יב עוסקת בנזק עקיף- מניעה מבהמה לצאת ממקום המסוכן לה, ובכל זאת, כיוון שעושה האדם את הנזק בכוחו, חייב.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות י-יב עוסקות בהגדרת מעשה הנזק. בהלכה י מתבאר שחפץ שהזיק תוך שהוא נע מכולו של האדם, נחשב הדבר כנזק ישיר שהזיק בידיו, ולא כנזק שהזיק ממונו. אמנם, אם הוזק דבר בריחוק מקום כתוצאה ממעשי האדם אך לא כביטוי לכוחו הישיר, אין הדבר נופל בהגדרת אדם המזיק בידיים. הלכה יא מוסיפה ומבארת שאם כתוצאה ישירה של כח מכתו של האדם הוזק דבר בריחוק מקום, נחשב אף זה ככוחו. הלכה יב עוסקת בנזק עקיף- מניעה מבהמה לצאת ממקום המסוכן לה, ובכל זאת, כיוון שעושה האדם את הנזק בכוחו, חייב.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות יג-טז עוסקות בנזק שגרמו לו כמה מזיקים. עד הלכה טו נידונים מקרים בהם המזיקים הוסיפו נזק בזה אחר זה עד לגרימת הנזק בפועל. למשל, כאשר כמה אנשים העמיסו בזה אחר זה כל אחד את חבילתו על בהמה, עד שזו קרסה ומתה. דוגמה נוספת שנידונה היא של אנשים שישבו על ספסל בזה אחר זה, עד שהצטבר משקל כזה ששבר את הספסל. כאשר כל השותפים עשו את מעשיהם ביחד, ברור שכולם חייבים בשווה. לעומת זאת, כאשר עשו מעשיהם בזה אחר זה, אם ברור שרק האחרון\אחרונים חוללו את הנזק, חייבים רק הם. לעומת זאת, אם גם לראשונים היה חלק בגרימת הנזק או שיכלו למונעו ולא מנעוהו יש מקום לחייב גם אותם. הלכה טז מסיימת את הפרק בדיון במקרים בהם כמה מזיק הזיקו בעת ובעונה אחת, אך מדובר במזיקים בעלי חיובים שונים כגון שור אדם ובור.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות יג-טז עוסקות בנזק שגרמו לו כמה מזיקים. עד הלכה טו נידונים מקרים בהם המזיקים הוסיפו נזק בזה אחר זה עד לגרימת הנזק בפועל. למשל, כאשר כמה אנשים העמיסו בזה אחר זה כל אחד את חבילתו על בהמה, עד שזו קרסה ומתה. דוגמה נוספת שנידונה היא של אנשים שישבו על ספסל בזה אחר זה, עד שהצטבר משקל כזה ששבר את הספסל. כאשר כל השותפים עשו את מעשיהם ביחד, ברור שכולם חייבים בשווה. לעומת זאת, כאשר עשו מעשיהם בזה אחר זה, אם ברור שרק האחרון\אחרונים חוללו את הנזק, חייבים רק הם. לעומת זאת, אם גם לראשונים היה חלק בגרימת הנזק או שיכלו למונעו ולא מנעוהו יש מקום לחייב גם אותם. הלכה טז מסיימת את הפרק בדיון במקרים בהם כמה מזיק הזיקו בעת ובעונה אחת, אך מדובר במזיקים בעלי חיובים שונים כגון שור אדם ובור.</p>
                 
             </div>
             
@@ -1132,35 +1132,35 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המזיק ממון חבירו חייב לשלם נזק שלם, בין שהיה שוגג בין שהיה אנוס הרי הוא כמזיד, כיצד, נפל מן הגג ושבר את הכלים או שנתקל כשהוא מהלך ונפל על הכלי ושברו חייב נזק שלם, שנ' ומכה בהמה ישלמנה ולא חלק הכתוב בין שוגג למזיד. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ואחד ההורג בהמתו של חבירו או השובר כליו או קורע בגדיו או קוצץ נטיעותיו הכל דין אחד הוא. </strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אדם מועד לעולם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אדם מועד לעולם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא בסנהדרין (עט:), מובאים דברי <strong>תנא דבי חזקיה</strong>, הלומד מהפסוק "וּמַכֵּה בְהֵמָה יְשַׁלְּמֶנָּה וּמַכֵּה אָדָם יוּמָת", שכפי שהמכה בהמה חייב נזק שלם תמיד, אפילו אם היה שוגג, כך  ההורג אדם יהיה פטור מממון תמיד אפילו היה שוגג (ופטור ממיתה בגלל שגגתו). מכלל הדברים נמצאנו למדים שההורג בהמת חברו חייב אפילו אם היה שוגג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא בסנהדרין (עט:), מובאים דברי <strong>תנא דבי חזקיה</strong>, הלומד מהפסוק "וּמַכֵּה בְהֵמָה יְשַׁלְּמֶנָּה וּמַכֵּה אָדָם יוּמָת", שכפי שהמכה בהמה חייב נזק שלם תמיד, אפילו אם היה שוגג, כך  ההורג אדם יהיה פטור מממון תמיד אפילו היה שוגג (ופטור ממיתה בגלל שגגתו). מכלל הדברים נמצאנו למדים שההורג בהמת חברו חייב אפילו אם היה שוגג.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (בבא קמא, כו.) מרחיבה עוד בדין זה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (בבא קמא, כו.) מרחיבה עוד בדין זה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אדם מועד לעולם בין שוגג בין מזיד בין ער בין ישן</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אדם מועד לעולם בין שוגג בין מזיד בין ער בין ישן</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סימא את עין חבירו ושיבר את הכלים משלם נזק שלם"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">סימא את עין חבירו ושיבר את הכלים משלם נזק שלם"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כו:) מובא <strong>תנא דבי חזקיה</strong> המביא מקור שונה מזה שהביא בסנהדרין- מהפסוק "פצע תחת פצע", ממנו למדים שמטרת תשלומי הנזק היא פיצוי הניזק, ולכן כיוון שסוף סוף הוזק הניזק, יש לשלם אפילו אם נעשה הנזק בשגגה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (כו:) מובא <strong>תנא דבי חזקיה</strong> המביא מקור שונה מזה שהביא בסנהדרין- מהפסוק "פצע תחת פצע", ממנו למדים שמטרת תשלומי הנזק היא פיצוי הניזק, ולכן כיוון שסוף סוף הוזק הניזק, יש לשלם אפילו אם נעשה הנזק בשגגה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> בוחר להביא את הלימוד מסנהדרין כיוון שהוא מדבר כאן על נזקים לממון הדומים ל"מכה בהמה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> בוחר להביא את הלימוד מסנהדרין כיוון שהוא מדבר כאן על נזקים לממון הדומים ל"מכה בהמה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ועיין עוד לעיל פרק א' הלכה יא, לעניין הגדרת אונס ומחלוקת הראשונים בדבר. ובהלכה יב שם, לעניין הנופל מן הגג והזיק<sup id="ref56"><a href="#fn56">[56]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ועיין עוד לעיל פרק א' הלכה יא, לעניין הגדרת אונס ומחלוקת הראשונים בדבר. ובהלכה יב שם, לעניין הנופל מן הגג והזיק<sup id="ref56"><a href="#fn56">[56]</a></sup>.</p>
                     
                 </div>
                 
@@ -1168,19 +1168,19 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>במה דברים אמורים ברשות הניזק אבל ברשות המזיק אינו חייב לשלם אלא אם הזיק בזדון אבל בשגגה או באונס פטור, וכן אם היו שניהן ברשות או שניהן שלא ברשות והזיק אחד מהן ממון חבירו שלא בכוונה פטור. </strong> וכן אם היו שניהן ברשות או שניהם שלא ברשות והזיק אחד מהן ממון חברו שלא בכוונה פטור. א"א דין זה אינו מחוור דאפילו שניהם ברשות או שלא ברשות ולא הוה ידע ביה אם הזיקו חייבין אבל הוזקו זה בזה פטורין.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק לרכוש ברשות המזיק, ברשות של שניהם וברשות שאינה של אף אחד מהם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק לרכוש ברשות המזיק, ברשות של שניהם וברשות שאינה של אף אחד מהם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' לעיל פרק א' הלכה טז' וצרף לכאן. נוסיף כאן רק בביאור דברי ה<strong>ראב"ד</strong>, שפוסק הוא כ<strong>רש"י</strong> (מגיד משנה, כאן).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' לעיל פרק א' הלכה טז' וצרף לכאן. נוסיף כאן רק בביאור דברי ה<strong>ראב"ד</strong>, שפוסק הוא כ<strong>רש"י</strong> (מגיד משנה, כאן).</p>
                     
                 </div>
                 
@@ -1188,51 +1188,51 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>היה עולה בסולם ונשמטה שליבה מתחתיו ונפלה והזיקה, אם לא היתה מהודקת וחזקה חייב ואם היתה חזקה ומהודקת ונשמטה או שהתליעה הרי זה פטור שזו מכה בידי שמים היא, וכן כל כיוצא בזה, וכל אלו הדברים ברשות הניזק אבל ברשות המזיק פטור עד שיתכוין להזיק כמו שביארנו. </strong>ואם היתה חזקה ומהודקת ונשמטה או שהתליעה ה"ז פטור שזו מכה בידי שמים היא. א"א תמה אני מאי שנא אונס זה מרוח שאינה מצויה ומן הישן ובגמרא משמע דלא איתלע אונס דאי איתלע לאו אונס.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עוד בעניין אונס בנזיקין- היה עולה בסולם ונפלה שליבה והזיקה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עוד בעניין אונס בנזיקין- היה עולה בסולם ונפלה שליבה והזיקה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> במסכת מכות (ז.:) מחלקת בין מקרים בהם הרג אדם את חברו בשוגג, וחייב הוא גלות, לבין מקרים בו הרגו באונס, ופטור הוא מגלות:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> במסכת מכות (ז.:) מחלקת בין מקרים בהם הרג אדם את חברו בשוגג, וחייב הוא גלות, לבין מקרים בו הרגו באונס, ופטור הוא מגלות:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"...היה יורד בסולם ונפל עליו והרגתו הרי זה גולה...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"...היה יורד בסולם ונפל עליו והרגתו הרי זה גולה...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אבל...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אבל...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היה עולה בסולם ונפל עליו והרגו הרי זה אינו גולה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">היה עולה בסולם ונפל עליו והרגו הרי זה אינו גולה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>זה הכלל</strong> כל שבדרך ירידתו- גולה, ושלא בדרך ירידתו- אינו גולה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>זה הכלל</strong> כל שבדרך ירידתו- גולה, ושלא בדרך ירידתו- אינו גולה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מי שירד בסולם ונפל על חברו והרגו, מוגדר הדבר כ"דרך ירידה" ולכן חייב, מה שאין כן אם נפל תוך כדי טיפוס במעלה הסולם, שאז מוגדר הדבר כ"דרך עליה" ופטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מי שירד בסולם ונפל על חברו והרגו, מוגדר הדבר כ"דרך ירידה" ולכן חייב, מה שאין כן אם נפל תוך כדי טיפוס במעלה הסולם, שאז מוגדר הדבר כ"דרך עליה" ופטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מבארת שהצורך ב"דרך ירידה" כדי להתחייב גלות נלמד מהכתוב ברוצח בשוגג:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מבארת שהצורך ב"דרך ירידה" כדי להתחייב גלות נלמד מהכתוב ברוצח בשוגג:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אוֹ בְכָל אֶבֶן אֲשֶׁר יָמוּת בָּהּ בְּלֹא רְאוֹת <strong>וַיַּפֵּל עָלָיו</strong> וַיָּמֹת וְהוּא לֹא אוֹיֵב לוֹ וְלֹא מְבַקֵּשׁ רָעָתוֹ" (במדבר לה כג)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אוֹ בְכָל אֶבֶן אֲשֶׁר יָמוּת בָּהּ בְּלֹא רְאוֹת <strong>וַיַּפֵּל עָלָיו</strong> וַיָּמֹת וְהוּא לֹא אוֹיֵב לוֹ וְלֹא מְבַקֵּשׁ רָעָתוֹ" (במדבר לה כג)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, דווקא אם החפץ ההורג פגע בנהרג באופן של נפילה כלפי מטה כאבן המתוארת בפסוק, חייב ההורג גלות<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, דווקא אם החפץ ההורג פגע בנהרג באופן של נפילה כלפי מטה כאבן המתוארת בפסוק, חייב ההורג גלות<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מעלה את השאלה מה הדין אם היה אדם עולה בסולם, ונשמטה השליבה עלֵיה דרך, ונפלה והרגה. האם מכיוון שהיה עולה, דרך עליה היא ופטור מגלות, או שמא כיוון שלגבי השליבה דרך ירידה היא, חייב גלות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מעלה את השאלה מה הדין אם היה אדם עולה בסולם, ונשמטה השליבה עלֵיה דרך, ונפלה והרגה. האם מכיוון שהיה עולה, דרך עליה היא ופטור מגלות, או שמא כיוון שלגבי השליבה דרך ירידה היא, חייב גלות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה שתי ברייתות העוסקות במקרה זה, האחת מחייבת והשניה פוטרת. אמנם, הגמרא מעירה שאין מדובר דווקא במחלוקת האם זו 'דרך עליה' או 'דרך ירידה', אלא יכול להיות שלכולי עלמא מדובר ב'דרך עליה' ולהסביר את המחלוקת בין הברייתות ניתן בשלוש דרכים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה שתי ברייתות העוסקות במקרה זה, האחת מחייבת והשניה פוטרת. אמנם, הגמרא מעירה שאין מדובר דווקא במחלוקת האם זו 'דרך עליה' או 'דרך ירידה', אלא יכול להיות שלכולי עלמא מדובר ב'דרך עליה' ולהסביר את המחלוקת בין הברייתות ניתן בשלוש דרכים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"<strong>(א) </strong>כ"ע עליה היא ולא קשיא- כאן לניזקין כאן לגלות,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"<strong>(א) </strong>כ"ע עליה היא ולא קשיא- כאן לניזקין כאן לגלות,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>(ב)</strong> איבעית אימא (אם תרצה אמור) הא והא לגלות (שתי הברייתות מדברות על גלות) ולא קשיא, הא דאתליע (היה מותלע) הא דלא אתליע,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>(ב)</strong> איבעית אימא (אם תרצה אמור) הא והא לגלות (שתי הברייתות מדברות על גלות) ולא קשיא, הא דאתליע (היה מותלע) הא דלא אתליע,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>(ג)</strong> ואיבעית אימא הא והא דלא אתליע ולא קשיא הא דמיהדק (שהיה מהודק) והא דלא מיהדק"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>(ג)</strong> ואיבעית אימא הא והא דלא אתליע ולא קשיא הא דמיהדק (שהיה מהודק) והא דלא מיהדק"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר, שלפי האפשרות הראשונה נפילת שליבה תוך כדי עליה היא 'דרך עליה', ולכן לעניין גלות פטור, אמנם לעניין נזיקין חייב, משום ש"אדם מועד לעולם". לפי האפשרות השניה והשלישית, גם לעניין גלות לא תמיד תחשב נפילת שליבה תוך כדי עליה כ'דרך עליה', שכן לעיתים השליבה אכולת תולעים או שאינה מהודקת היטב, ולכן היא נעה כלפי מטה כאשר דורכים עליה, ונחשב הדבר כאילו האדם המטפס השליך אותה למטה ב'דרך ירידה' עליה חייבים גלות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר, שלפי האפשרות הראשונה נפילת שליבה תוך כדי עליה היא 'דרך עליה', ולכן לעניין גלות פטור, אמנם לעניין נזיקין חייב, משום ש"אדם מועד לעולם". לפי האפשרות השניה והשלישית, גם לעניין גלות לא תמיד תחשב נפילת שליבה תוך כדי עליה כ'דרך עליה', שכן לעיתים השליבה אכולת תולעים או שאינה מהודקת היטב, ולכן היא נעה כלפי מטה כאשר דורכים עליה, ונחשב הדבר כאילו האדם המטפס השליך אותה למטה ב'דרך ירידה' עליה חייבים גלות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מפרש אחרת. לדעתו, אם הסולם התליע, מקטין הדבר את אחריותו של העולה בו, שכן לא היה יכול להיות מודע לכך שהסולם רקוב מבפנים, ושיכולה ליפול שליבה אגב הטיפוס עליו<sup id="ref58"><a href="#fn58">[58]</a></sup>. כמו כן, אם השליבות מהודקות, משמעות הדבר שהסולם היה תקין, ולכן נפילת השליבה נחשבת כאונס. כלומר, הברייתא <strong>הפוטרת</strong> מדברת ב"התליע" או ב"מיהדק". כנראה הרמב"ם גורס (באפשרות ב') "הא והא לנזיקין". מכאן לומד הרמב"ם שאם הסולם היה מותלע באופן שלא ניתן לראות מבחוץ, ונפלה שליבה והזיקה, נחשב הדבר כאונס גמור הפוטר לא רק לעניין גלות, אלא גם לעניין נזיקין. וכך הוא פוסק לפנינו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מפרש אחרת. לדעתו, אם הסולם התליע, מקטין הדבר את אחריותו של העולה בו, שכן לא היה יכול להיות מודע לכך שהסולם רקוב מבפנים, ושיכולה ליפול שליבה אגב הטיפוס עליו<sup id="ref58"><a href="#fn58">[58]</a></sup>. כמו כן, אם השליבות מהודקות, משמעות הדבר שהסולם היה תקין, ולכן נפילת השליבה נחשבת כאונס. כלומר, הברייתא <strong>הפוטרת</strong> מדברת ב"התליע" או ב"מיהדק". כנראה הרמב"ם גורס (באפשרות ב') "הא והא לנזיקין". מכאן לומד הרמב"ם שאם הסולם היה מותלע באופן שלא ניתן לראות מבחוץ, ונפלה שליבה והזיקה, נחשב הדבר כאונס גמור הפוטר לא רק לעניין גלות, אלא גם לעניין נזיקין. וכך הוא פוסק לפנינו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שעח ג) כותב כלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שעח ג) כותב כלשון הרמב"ם.</p>
                     
                 </div>
                 
@@ -1240,37 +1240,37 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הרי שמילא חצר חבירו כדי יין ושמן אפילו הכניסם ברשות הואיל ולא קיבל עליו בעל החצר לשמור הרי זה נכנס ויוצא כדרכו וכל שישתבר מן הכדים בכניסתו וביציאתו הרי הוא פטור עליהן, ואם שברן בכוונה אפילו הכניסם בעל הכדים שלא ברשות הרי זה חייב לשלם, וכן כל כיוצא בזה. </strong>וכל שישתבר מן הכדים בכניסתו וביציאתו הרי הוא פטור עליהן. א"א אפשר לדין זה כשלא נתן לו רשות למלאות אבל נתן לו רשות למלאות חייב.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הממלא חצר חבירו כדים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הממלא חצר חבירו כדים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בתחילת פרק המניח (כז:) דנה בשאלה האם 'עביד איניש דינא לנפשיה', כלומר, האם בדיני ממונות יכול אדם לעשות דין לעצמו, וכיוון שברור לו שהוא צודק, לקחת לעצמו בכח מבלי להזדקק לבית דין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בתחילת פרק המניח (כז:) דנה בשאלה האם 'עביד איניש דינא לנפשיה', כלומר, האם בדיני ממונות יכול אדם לעשות דין לעצמו, וכיוון שברור לו שהוא צודק, לקחת לעצמו בכח מבלי להזדקק לבית דין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על כל האמוראים מוסכם שבדבר שיש בו הפסד אם ישתהה ויפנה לבית הדין, יכול אדם לעשות דין לעצמו. המחלוקת נסובה סביב מקרים בהם לא יגרם הפסד בגלל ההשתהות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על כל האמוראים מוסכם שבדבר שיש בו הפסד אם ישתהה ויפנה לבית הדין, יכול אדם לעשות דין לעצמו. המחלוקת נסובה סביב מקרים בהם לא יגרם הפסד בגלל ההשתהות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מנסה להוכיח שאדם יכול לעשות דין לעצמו מ<strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מנסה להוכיח שאדם יכול לעשות דין לעצמו מ<strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הממלא חצר חבירו כדי יין וכדי שמן בעל החצר משבר ויוצא משבר ונכנס"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הממלא חצר חבירו כדי יין וכדי שמן בעל החצר משבר ויוצא משבר ונכנס"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אדם ההולך ברשותו שלו, פטור על שבירת כדים שהניח חברו שם אם מטרתו להיכנס או לצאת, והכדים מפריעים לו ללכת כדרכו. ומשמע, שכיוון שהוא יודע שהדין עימו, ואין לשני רשות להניח שם את כדיו, יכול הוא לעשות דין לעצמו ולהשיג יכולת מעבר גם במחיר הפסד שנגרם לבעל הכדים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אדם ההולך ברשותו שלו, פטור על שבירת כדים שהניח חברו שם אם מטרתו להיכנס או לצאת, והכדים מפריעים לו ללכת כדרכו. ומשמע, שכיוון שהוא יודע שהדין עימו, ואין לשני רשות להניח שם את כדיו, יכול הוא לעשות דין לעצמו ולהשיג יכולת מעבר גם במחיר הפסד שנגרם לבעל הכדים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, <strong>ר"נ בר נתן</strong> מעיר שניתן לפרש שמותר לשבור רק במקום פסידא, כגון שנכנס להביא שטר ראיה, או יוצא לבית הדין, ואז אין הברייתא מוכיחה לעניין ההיתר לאדם לעשות דין לעצמו גם במקום שאינו מקום פסידא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, <strong>ר"נ בר נתן</strong> מעיר שניתן לפרש שמותר לשבור רק במקום פסידא, כגון שנכנס להביא שטר ראיה, או יוצא לבית הדין, ואז אין הברייתא מוכיחה לעניין ההיתר לאדם לעשות דין לעצמו גם במקום שאינו מקום פסידא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק שאדם עושה דין לעצמו אפילו שלא במקום הפסד, וממילא ניתן להבין את הברייתא על פי פשטה. לכן מתיר הרמב"ם לאדם לצאת ולהיכנס כדרכו ואם נשברו כדים עקב מעשיו פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק שאדם עושה דין לעצמו אפילו שלא במקום הפסד, וממילא ניתן להבין את הברייתא על פי פשטה. לכן מתיר הרמב"ם לאדם לצאת ולהיכנס כדרכו ואם נשברו כדים עקב מעשיו פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הרמב"ם מוסיף שהשובר את הכדים תוך כדי שהוא עובר בתוך חצרו פטור אפילו במקרה שבעל החצר נתן לבעל הכדים רשות להניח את כדיו בחצרו. ה<strong>מגיד משנה </strong>מעיר שבזה הולך הרמב"ם לפי דרכו, שהמזיק את חברו בשוגג, אפילו במקום שלשניהם יש רשות, פטור (עי' לעיל פרק א הלכה טז').</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הרמב"ם מוסיף שהשובר את הכדים תוך כדי שהוא עובר בתוך חצרו פטור אפילו במקרה שבעל החצר נתן לבעל הכדים רשות להניח את כדיו בחצרו. ה<strong>מגיד משנה </strong>מעיר שבזה הולך הרמב"ם לפי דרכו, שהמזיק את חברו בשוגג, אפילו במקום שלשניהם יש רשות, פטור (עי' לעיל פרק א הלכה טז').</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> מקשה כיצד יתכן שיתחייב בעל החצר כאשר בעל הכדים הכניסם ברשות? לכן מפרשים הוא וה<strong>ראב"ד</strong>, שאכן נתן בעל החצר לבעל הכדים רשות להכניס כדים לחצר, אך לא נתן לו רשות למלא את כל החצר, ונמצא שמילא בעל הכדים את החצר כולה שלא ברשות, ולכן פטור בעל הבית ששבר את הכדים<sup id="ref59"><a href="#fn59">[59]</a></sup>. אמנם אם נתן לו רשות למלא את כל החצר, יהיה חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> מקשה כיצד יתכן שיתחייב בעל החצר כאשר בעל הכדים הכניסם ברשות? לכן מפרשים הוא וה<strong>ראב"ד</strong>, שאכן נתן בעל החצר לבעל הכדים רשות להכניס כדים לחצר, אך לא נתן לו רשות למלא את כל החצר, ונמצא שמילא בעל הכדים את החצר כולה שלא ברשות, ולכן פטור בעל הבית ששבר את הכדים<sup id="ref59"><a href="#fn59">[59]</a></sup>. אמנם אם נתן לו רשות למלא את כל החצר, יהיה חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שעט ד) פסק כלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שעט ד) פסק כלשון הרמב"ם.</p>
                     
                 </div>
                 
@@ -1278,41 +1278,41 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו-ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור שעלה על גבי חבירו להרגו ברשות המזיק שהוא בעל התחתון בין שהיה תם בין שהיה מועד ובא בעל התחתון ושמט את שורו להצילו ונפל עליון ומת הרי זה פטור. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>דחפו לעליון ומת, אם היה לו לשומטו ולא שמטו הרי זה חייב ואם לא היה יכול לשומטו הרי זה פטור. </strong>
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המציל את ממונו בממון חברו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המציל את ממונו בממון חברו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיה הנזכרת לעיל (כז:) העוסקת בדין "עושה אדם דין לעצמו" (עיין בהלכה הקודמת), מובאת <strong>ברייתא</strong> המציגה מקרה בו אדם רשאי לעשות דין לעצמו, ומקרה בו אין הוא רשאי לעשות זאת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגיה הנזכרת לעיל (כז:) העוסקת בדין "עושה אדם דין לעצמו" (עיין בהלכה הקודמת), מובאת <strong>ברייתא</strong> המציגה מקרה בו אדם רשאי לעשות דין לעצמו, ומקרה בו אין הוא רשאי לעשות זאת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שור שעלה על גבי חבירו להורגו ובא בעל התחתון ושמט את שלו ונפל עליון ומת- פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שור שעלה על גבי חבירו להורגו ובא בעל התחתון ושמט את שלו ונפל עליון ומת- פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דחפו לעליון ומת- חייב"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דחפו לעליון ומת- חייב"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מתואר מקרה בו שור עלה על חבירו להורגו. ברישא בעל השור התחתון שמט את שורו ובכך גרם לכך שהעליון נפל ומת. ובסיפא הציל בעל השור התחתון את שורו על ידי כך שדחף את השור התוקף ועל ידי כך מת השור. זוהי דוגמה לאדם העושה דין לעצמו, שכן מציל הוא את שורו, תוך גרימת נזק לאחר, ולא מחכה שיהרג שורו ויתבע את בעל השור ההורג בבית הדין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מתואר מקרה בו שור עלה על חבירו להורגו. ברישא בעל השור התחתון שמט את שורו ובכך גרם לכך שהעליון נפל ומת. ובסיפא הציל בעל השור התחתון את שורו על ידי כך שדחף את השור התוקף ועל ידי כך מת השור. זוהי דוגמה לאדם העושה דין לעצמו, שכן מציל הוא את שורו, תוך גרימת נזק לאחר, ולא מחכה שיהרג שורו ויתבע את בעל השור ההורג בבית הדין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה, שבסיפא חייב המזיק אף על פי שניסה להציל את שורו, משום שיכול היה לשמוט את שורו מתחת השור התוקף (פעולה שיש בה פחות פוטנציאל נזק), ולא היה חייב לדחוף את השור התוקף<sup id="ref60"><a href="#fn60">[60]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה, שבסיפא חייב המזיק אף על פי שניסה להציל את שורו, משום שיכול היה לשמוט את שורו מתחת השור התוקף (פעולה שיש בה פחות פוטנציאל נזק), ולא היה חייב לדחוף את השור התוקף<sup id="ref60"><a href="#fn60">[60]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כברייתא, אך מוסיף, שפטור בעל התחתון כאשר שמט את שורו מתחת לשור התוקף רק אם המקרה התרחש בחצרו של בעל השור התחתון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כברייתא, אך מוסיף, שפטור בעל התחתון כאשר שמט את שורו מתחת לשור התוקף רק אם המקרה התרחש בחצרו של בעל השור התחתון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong> (וביתר פירוט ה<strong>סמ"ע</strong> שפג ס"ק ג) מסביר שכוונת הרמב"ם בתוספת זו לומר שלו היה המקרה בחצרו של בעל השור התוקף, היה בעל השור המותקף חייב אפילו אם שמט את שורו ולא דחף את העליון. דין זה תואם את שיטת הרמב"ם, שכן על פי דרכו של הרמב"ם המזיק בחצרו שלו (את הניזק שנכנס לשם שלא ברשות) פטור אם הזיק שלא בכוונה תחילה (עי' הלכות נזקי ממון פרק ז הלכה ד, ולעיל פרק א הלכה טז), ולכן לו היה השור התוקף הורג את המותקף בחצר בעליו של התוקף היה הבעלים פטור. מכאן נובע שהריגת השור התוקף של בעל החצר על ידי בעליו של השור המותקף שנכנס לחצר שלא ברשות אינה על פי הדין (אפילו היא נעשית ע"י שמיטת התחתון ולא ע"י דחיפת העליון!), ולכן חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong> (וביתר פירוט ה<strong>סמ"ע</strong> שפג ס"ק ג) מסביר שכוונת הרמב"ם בתוספת זו לומר שלו היה המקרה בחצרו של בעל השור התוקף, היה בעל השור המותקף חייב אפילו אם שמט את שורו ולא דחף את העליון. דין זה תואם את שיטת הרמב"ם, שכן על פי דרכו של הרמב"ם המזיק בחצרו שלו (את הניזק שנכנס לשם שלא ברשות) פטור אם הזיק שלא בכוונה תחילה (עי' הלכות נזקי ממון פרק ז הלכה ד, ולעיל פרק א הלכה טז), ולכן לו היה השור התוקף הורג את המותקף בחצר בעליו של התוקף היה הבעלים פטור. מכאן נובע שהריגת השור התוקף של בעל החצר על ידי בעליו של השור המותקף שנכנס לחצר שלא ברשות אינה על פי הדין (אפילו היא נעשית ע"י שמיטת התחתון ולא ע"י דחיפת העליון!), ולכן חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> פוסק כדברי הברייתא, אך אינו מחלק בין חצר המזיק לבין חצר הניזק. ה<strong>סמ"ע</strong> מסביר שזה על פי דרכו (בסוף סימן שעט), שהמזיק בחצרו את ממון חבירו שהוכנס לשם ברשות, חייב<sup id="ref61"><a href="#fn61">[61]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> פוסק כדברי הברייתא, אך אינו מחלק בין חצר המזיק לבין חצר הניזק. ה<strong>סמ"ע</strong> מסביר שזה על פי דרכו (בסוף סימן שעט), שהמזיק בחצרו את ממון חבירו שהוכנס לשם ברשות, חייב<sup id="ref61"><a href="#fn61">[61]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (בתשובותיו כלל קא, ג) מסיק מדברי הברייתא, שבכל מקרה בו עושה אדם דין לעצמו ומציל את שלו, חייב הוא לעשות זאת בדרך בה יגרם כמה שפחות נזק לחברו, ורק אם אין אפשרות אחרת. לכן, הוא פוסק שאדם שלקח חפץ שלו, שחברו סמך בו חבית, ונשברה החבית, חייב לוקח החפץ למרות שלקח את שלו, אם יכול היה להניח שם חפץ אחר במקומו, וכך לדאוג שלא יהיה נזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (בתשובותיו כלל קא, ג) מסיק מדברי הברייתא, שבכל מקרה בו עושה אדם דין לעצמו ומציל את שלו, חייב הוא לעשות זאת בדרך בה יגרם כמה שפחות נזק לחברו, ורק אם אין אפשרות אחרת. לכן, הוא פוסק שאדם שלקח חפץ שלו, שחברו סמך בו חבית, ונשברה החבית, חייב לוקח החפץ למרות שלקח את שלו, אם יכול היה להניח שם חפץ אחר במקומו, וכך לדאוג שלא יהיה נזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפג ב) פוסק כדברי הרמב"ם, שפטורו של השומט את שורו מתחת לשור התוקף, פטור דווקא אם הדבר קורה ברשותו, וה<strong>רמ"א</strong> מביא את דברי הרא"ש בתשובתו<sup id="ref62"><a href="#fn62">[62]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפג ב) פוסק כדברי הרמב"ם, שפטורו של השומט את שורו מתחת לשור התוקף, פטור דווקא אם הדבר קורה ברשותו, וה<strong>רמ"א</strong> מביא את דברי הרא"ש בתשובתו<sup id="ref62"><a href="#fn62">[62]</a></sup>.</p>
                     
                 </div>
                 
@@ -1320,104 +1320,104 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שנים שהיו מהלכין ברשות הרבים זה בא בחביתו וזה בא בקורתו ונשברה כדו של זה בקורתו של זה פטור, שלזה רשות להלך ולזה רשות להלך. היה בעל הקורה ראשון ובעל החבית אחרון ונשברה חבית בקורה פטור, ואם עמד בעל הקורה לנוח מכובד משאו חייב, ואם הזהיר לבעל החבית ואמר לו עמוד פטור, עמד לתקן משאו עליו הרי זה כמהלך ופטור ואף על פי שלא הזהיר לבעל החבית שהרי הוא טרוד בדרכו. היה בעל החבית ראשון ובעל הקורה אחרון ונשברה חבית בקורה חייב, שזה כמי ששברה בידו בכוונה, ואם עמד בעל החבית לנוח פטור, ואם הזהיר לבעל הקורה ואמר לו עמוד הרי זה חייב, ואם עמד לתקן משאו אף על פי שלא הזהיר לבעל הקורה הרי הוא חייב, וכן זה בא בנרו וזה בא בפשתנו וכן כל כיוצא בזה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בעל חבית ובעל קורה ברשות הרבים, ונשברה חבית בקורה- מתי מותר לעצור ברשות הרבים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">בעל חבית ובעל קורה ברשות הרבים, ונשברה חבית בקורה- מתי מותר לעצור ברשות הרבים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (לא: לב.) דנה בשני סבלים ברשות הרבים, אחד נושא חבית, והשני נושא קורה, ונשברה החבית ממכה שקיבלה מהקורה. המשנה מחלקת בין <strong>שלושה</strong> מקרים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (לא: לב.) דנה בשני סבלים ברשות הרבים, אחד נושא חבית, והשני נושא קורה, ונשברה החבית ממכה שקיבלה מהקורה. המשנה מחלקת בין <strong>שלושה</strong> מקרים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"<strong>זה בא בחביתו וזה בא בקורתו</strong>. נשברה כדו של זה בקורתו של זה- פטור,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"<strong>זה בא בחביתו וזה בא בקורתו</strong>. נשברה כדו של זה בקורתו של זה- פטור,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שלזה רשות להלך ולזה רשות להלך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שלזה רשות להלך ולזה רשות להלך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>היה בעל הקורה ראשון ובעל חבית אחרון</strong>. נשברה חבית בקורה- פטור בעל הקורה,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>היה בעל הקורה ראשון ובעל חבית אחרון</strong>. נשברה חבית בקורה- פטור בעל הקורה,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם עמד בעל קורה- חייב,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם עמד בעל קורה- חייב,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם אמר לבעל חבית 'עמוד!'- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם אמר לבעל חבית 'עמוד!'- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>היה בעל חבית ראשון ובעל קורה אחרון</strong>. נשברה חבית בקורה- חייב,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>היה בעל חבית ראשון ובעל קורה אחרון</strong>. נשברה חבית בקורה- חייב,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם עמד בעל חבית- פטור,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם עמד בעל חבית- פטור,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם אמר לבעל קורה 'עמוד!'- חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם אמר לבעל קורה 'עמוד!'- חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וכן זה בא בנרו וזה בפשתנו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וכן זה בא בנרו וזה בפשתנו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה הראשון, באו המזיק והניזק זה לעומת זה. בשני היה המזיק ראשון, והניזק אחרון, כך שהמזיק לא יכול היה לראות את הניזק, ובמקרה האחרון המצב הפוך- הניזק ראשון והמזיק הולך אחריו, כך שהניזק לא יכול היה לראות את המזיק, אך המזיק היה יכול לראותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה הראשון, באו המזיק והניזק זה לעומת זה. בשני היה המזיק ראשון, והניזק אחרון, כך שהמזיק לא יכול היה לראות את הניזק, ובמקרה האחרון המצב הפוך- הניזק ראשון והמזיק הולך אחריו, כך שהניזק לא יכול היה לראות את המזיק, אך המזיק היה יכול לראותו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בחלקה הראשון של המשנה נעסוק במסגרת הנושא הבא. כאן נתבונן בשני החלקים האחרים המכילים מקרים של חיוב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בחלקה הראשון של המשנה נעסוק במסגרת הנושא הבא. כאן נתבונן בשני החלקים האחרים המכילים מקרים של חיוב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הטעם לחיוב הנזקין במשנה מוסבר בשתי דרכים שונות בשתי סוגיות שונות:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הטעם לחיוב הנזקין במשנה מוסבר בשתי דרכים שונות בשתי סוגיות שונות:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (לב.) מובאים דברי <strong>ריש לקיש</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (לב.) מובאים דברי <strong>ריש לקיש</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>ריש לקיש</strong>: שתי פרות ברה"ר אחת רבוצה ואחת מהלכת,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אמר <strong>ריש לקיש</strong>: שתי פרות ברה"ר אחת רבוצה ואחת מהלכת,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעטה מהלכת ברבוצה- פטורה, רבוצה במהלכת- חייבת"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעטה מהלכת ברבוצה- פטורה, רבוצה במהלכת- חייבת"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שדברי <strong>ריש לקיש</strong> קשים לאור המשנה, כיוון שמהמשנה משמע שמי שעצר ברשות הרבים שלא בדרך המקובלת, אחראי לנזקים שנגרמים על ידו, ומאידך, פטורים המזיקים על נזקים הנגרמים לו. לעומת זאת, מדברי ריש לקיש משמע שדווקא אם בעטה הרבוצה במהלכת- חייבת, אך אם נכשלה המהלכת ברבוצה, נפלה וניזוקה- פטורה הרבוצה, למרות שעמדה (או יותר נכון, רבצה) ברשות הרבים באופן שאינו ראוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שדברי <strong>ריש לקיש</strong> קשים לאור המשנה, כיוון שמהמשנה משמע שמי שעצר ברשות הרבים שלא בדרך המקובלת, אחראי לנזקים שנגרמים על ידו, ומאידך, פטורים המזיקים על נזקים הנגרמים לו. לעומת זאת, מדברי ריש לקיש משמע שדווקא אם בעטה הרבוצה במהלכת- חייבת, אך אם נכשלה המהלכת ברבוצה, נפלה וניזוקה- פטורה הרבוצה, למרות שעמדה (או יותר נכון, רבצה) ברשות הרבים באופן שאינו ראוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מתרצת, שאין המשנה דומה לדברי ריש לקיש, שכן במקרה עליו דיבר ריש לקיש הפרה הרבוצה אינה חוסמת את כל המעבר, ולכן מוטל על הפרה המהלכת לעקוף אותה, ואין לה לדרוך עליה, ואילו במשנה, בעל הקורה עצר כך שקורתו היתה ניצבת לכיוון ההתקדמות באופן שאינו מאפשר לעקוף את המכשול (בלשון הגמרא "דפסקא לאורחא כשלדא").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מתרצת, שאין המשנה דומה לדברי ריש לקיש, שכן במקרה עליו דיבר ריש לקיש הפרה הרבוצה אינה חוסמת את כל המעבר, ולכן מוטל על הפרה המהלכת לעקוף אותה, ואין לה לדרוך עליה, ואילו במשנה, בעל הקורה עצר כך שקורתו היתה ניצבת לכיוון ההתקדמות באופן שאינו מאפשר לעקוף את המכשול (בלשון הגמרא "דפסקא לאורחא כשלדא").</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"י</strong> (בתוספות ד"ה "ואם עמד") מבאר שהתיאור של "פסקא לאורחיה כשלדא" נכון בין במקרה בו עצר בעל החבית ובעל הקורה שמאחוריו התנגש בו, ובין במקרה בו בעל הקורה הראשון עצר ובעל החבית שאחריו התנגש בו, כלומר התנוחה בה הקורה נישאת לרוחב המיצר אינה דווקא כאשר הנושאה עומד, אלא גם בהליכתו. לפי זה מסביר ר"י, שאלמלא היתה הקורה נישאת "כשלדא", לרוחב המיצר, לא היינו מאשימים רק את העומד, הראשון, אלא היינו דורשים מהאחרון ללכת בקו אחר מהראשון, כך שכשיעצור הראשון עצירת פתע לא יתנגש בו, אך כיוון שהקורה נישאת ממילא לרוחב כל המיצר, אין לדרוש דרישה כזו, והעומד אחראי בלעדית לנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר"י</strong> (בתוספות ד"ה "ואם עמד") מבאר שהתיאור של "פסקא לאורחיה כשלדא" נכון בין במקרה בו עצר בעל החבית ובעל הקורה שמאחוריו התנגש בו, ובין במקרה בו בעל הקורה הראשון עצר ובעל החבית שאחריו התנגש בו, כלומר התנוחה בה הקורה נישאת לרוחב המיצר אינה דווקא כאשר הנושאה עומד, אלא גם בהליכתו. לפי זה מסביר ר"י, שאלמלא היתה הקורה נישאת "כשלדא", לרוחב המיצר, לא היינו מאשימים רק את העומד, הראשון, אלא היינו דורשים מהאחרון ללכת בקו אחר מהראשון, כך שכשיעצור הראשון עצירת פתע לא יתנגש בו, אך כיוון שהקורה נישאת ממילא לרוחב כל המיצר, אין לדרוש דרישה כזו, והעומד אחראי בלעדית לנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכל מקום, מסוגיה זו משמע, שטעם החיוב של העומד בקורתו הוא משום שחסם את כל הדרך בקורתו, ולא היה בעל החבית שמאחוריו יכול להיזהר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכל מקום, מסוגיה זו משמע, שטעם החיוב של העומד בקורתו הוא משום שחסם את כל הדרך בקורתו, ולא היה בעל החבית שמאחוריו יכול להיזהר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (לא.) חלוקים האמוראים בשאלה האם אדם שנפל ברשות הרבים, מוטל עליו להזהיר בקול את הבא אחריו לבל יכשל בו ויפול עליו (עי' הלכות נזקי ממון פרק יג הלכות ח-ט). הגמרא מנסה להכריע ומעלה את האפשרות שבמקרה האמצעי במשנתנו, חייב בעל הקורה אם עמד, משום שלא הזהיר. אמנם הגמרא דוחה אפשרות זו, ומסבירה שבמשנתנו חייב בעל הקורה אם עמד דווקא משום שעמד לפוש, אך אם עמד לכתף פטור אף אם לא הזהיר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (לא.) חלוקים האמוראים בשאלה האם אדם שנפל ברשות הרבים, מוטל עליו להזהיר בקול את הבא אחריו לבל יכשל בו ויפול עליו (עי' הלכות נזקי ממון פרק יג הלכות ח-ט). הגמרא מנסה להכריע ומעלה את האפשרות שבמקרה האמצעי במשנתנו, חייב בעל הקורה אם עמד, משום שלא הזהיר. אמנם הגמרא דוחה אפשרות זו, ומסבירה שבמשנתנו חייב בעל הקורה אם עמד דווקא משום שעמד לפוש, אך אם עמד לכתף פטור אף אם לא הזהיר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שההבדל בין עמידה לפוש לבין עמידה לכתף, היא שעמידה לפוש הינה שינוי, ו"אין רשות הרבים עשויה לכך". במילים אחרות, בניגוד לרישא של המשנה, שם פטור המזיק כי "לזה רשות להלך ולזה רשות להלך", כאשר אחד עצר שלא כמוסכם ברשות הרבים, נחשב הוא כעושה ללא רשות, וידו על התחתונה- אם הוא המזיק חייב הוא, ואם הוא הניזק, פטור המזיק<sup id="ref63"><a href="#fn63">[63]</a></sup>. כמוהו מסביר גם ה<strong>רא"ש</strong> (סימן י).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שההבדל בין עמידה לפוש לבין עמידה לכתף, היא שעמידה לפוש הינה שינוי, ו"אין רשות הרבים עשויה לכך". במילים אחרות, בניגוד לרישא של המשנה, שם פטור המזיק כי "לזה רשות להלך ולזה רשות להלך", כאשר אחד עצר שלא כמוסכם ברשות הרבים, נחשב הוא כעושה ללא רשות, וידו על התחתונה- אם הוא המזיק חייב הוא, ואם הוא הניזק, פטור המזיק<sup id="ref63"><a href="#fn63">[63]</a></sup>. כמוהו מסביר גם ה<strong>רא"ש</strong> (סימן י).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>תוספות</strong> (לא. ד"ה "וקתני", בתחילת דבריו) מובא הסבר אחר- העומד לכתף טרוד במשאו, ולכן אין מוטל עליו להזהיר, מה שאין כן העומד לפוש, שאינו טרוד במשאו, ומוטל עליו להזהיר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>תוספות</strong> (לא. ד"ה "וקתני", בתחילת דבריו) מובא הסבר אחר- העומד לכתף טרוד במשאו, ולכן אין מוטל עליו להזהיר, מה שאין כן העומד לפוש, שאינו טרוד במשאו, ומוטל עליו להזהיר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, העולה משתי הסוגיות הנ"ל הוא שבמשנה, העומד בלי להזהיר ידו על התחתונה גם משום שעצר לפוש (ולא לכתף) וגם משום שבעצירתו הניח את הקורה באופן שחסם את המעבר לרוחבו, ובהיעדר אחד מתנאים אלה יהיה פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, העולה משתי הסוגיות הנ"ל הוא שבמשנה, העומד בלי להזהיר ידו על התחתונה גם משום שעצר לפוש (ולא לכתף) וגם משום שבעצירתו הניח את הקורה באופן שחסם את המעבר לרוחבו, ובהיעדר אחד מתנאים אלה יהיה פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (לא. ד"ה "וקתני" למסקנתו) טוענים ששני הטעמים לחיוב טעם אחד הוא. לדבריהם, דרכם של העומדים לכתף להניח את הקורה "כשלדא", ואילו דרכם של העומדים לפוש אינה "כשלדא", כמו כן, ניכר כלפי חוץ באם האדם הראשון עומד לפוש או לכתף. לכן, כאשר עצר הראשון לכתף, היה צריך הבא אחריו להיזהר מהנחת הקורה "כשלדא", ולכן פטור העומד, אך כאשר עמד לפוש, לא היה צפוי שיניח את קורתו לרוחב המיצר, ולכן היה לו להזהיר, ואם לא עשה זאת, חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (לא. ד"ה "וקתני" למסקנתו) טוענים ששני הטעמים לחיוב טעם אחד הוא. לדבריהם, דרכם של העומדים לכתף להניח את הקורה "כשלדא", ואילו דרכם של העומדים לפוש אינה "כשלדא", כמו כן, ניכר כלפי חוץ באם האדם הראשון עומד לפוש או לכתף. לכן, כאשר עצר הראשון לכתף, היה צריך הבא אחריו להיזהר מהנחת הקורה "כשלדא", ולכן פטור העומד, אך כאשר עמד לפוש, לא היה צפוי שיניח את קורתו לרוחב המיצר, ולכן היה לו להזהיר, ואם לא עשה זאת, חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> (נזקי ממון פרק ב הלכה כ, עיין בדברינו שם) אינו פוסק כריש לקיש, ואומר שהפרה הבועטת ברבוצה חייבת. בהתאמה, הרמב"ם אינו מעמיד להלכה את דברי המשנה בקורה המונחת "כשלדא".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> (נזקי ממון פרק ב הלכה כ, עיין בדברינו שם) אינו פוסק כריש לקיש, ואומר שהפרה הבועטת ברבוצה חייבת. בהתאמה, הרמב"ם אינו מעמיד להלכה את דברי המשנה בקורה המונחת "כשלדא".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רא"ש </strong>(סימן י) אומר שיש לפסוק להלכה את דברי ריש לקיש, שדווקא אם בעטה הרבוצה במהלכה חייבת, ולא אם סתם נכשלה המהלכת על הרבוצה. לכן, פוסק הרא"ש שגם במשנתנו, חייב בעל הקורה הראשון אם עמד, דווקא כשהציב את קורתו לרוחב המיצר, כ"שלדא".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>רא"ש </strong>(סימן י) אומר שיש לפסוק להלכה את דברי ריש לקיש, שדווקא אם בעטה הרבוצה במהלכה חייבת, ולא אם סתם נכשלה המהלכת על הרבוצה. לכן, פוסק הרא"ש שגם במשנתנו, חייב בעל הקורה הראשון אם עמד, דווקא כשהציב את קורתו לרוחב המיצר, כ"שלדא".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם הרמב"ם וגם הרא"ש פוסקים להלכה שדווקא עמידה לפוש היא עמידה המחייבת את העומד להזהיר, ואילו העומד לכתף אינו חייב להזהיר, ולכן אם הזיק פטור, ואם ניזק חייבים עליו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם הרמב"ם וגם הרא"ש פוסקים להלכה שדווקא עמידה לפוש היא עמידה המחייבת את העומד להזהיר, ואילו העומד לכתף אינו חייב להזהיר, ולכן אם הזיק פטור, ואם ניזק חייבים עליו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שעט ב-ג) פסק כרמב"ם, שבכדי שיתחייב בעל הקורה, אין צורך שתהא קורתו מונחת לרוחב הדרך. בתור הטעם שעמידה לכתף אינה מחייבת אזהרה (ושדווקא העומד לפוש חייב להזהיר), כתב השו"ע את טעמם של התוספות- שהעומד לכתף טרוד במשאו ואין לצפות ממנו שיזהיר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שעט ב-ג) פסק כרמב"ם, שבכדי שיתחייב בעל הקורה, אין צורך שתהא קורתו מונחת לרוחב הדרך. בתור הטעם שעמידה לכתף אינה מחייבת אזהרה (ושדווקא העומד לפוש חייב להזהיר), כתב השו"ע את טעמם של התוספות- שהעומד לכתף טרוד במשאו ואין לצפות ממנו שיזהיר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו הביא ה<strong>גר"א</strong> (שם ס"ק ג) את טעמם של הרא"ש ורש"י כהסבר להבדל בין עמידה לכתף לבין עמידה לפוש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו הביא ה<strong>גר"א</strong> (שם ס"ק ג) את טעמם של הרא"ש ורש"י כהסבר להבדל בין עמידה לכתף לבין עמידה לפוש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"א</strong> לא הביא כאן את דעת הרא"ש, שבכדי להתחייב צריכה הקורה להיות "כשלדא", אך מדבריו בסימן תיג (סעיף ג), משמע שהוא סובר (לפחות חלקית) כרא"ש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"א</strong> לא הביא כאן את דעת הרא"ש, שבכדי להתחייב צריכה הקורה להיות "כשלדא", אך מדבריו בסימן תיג (סעיף ג), משמע שהוא סובר (לפחות חלקית) כרא"ש.</p>
                     
                 </div>
                 
                 <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בעל חבית ובעל קורה ברשות הרבים, ונשברה חבית בקורה- נזק שלקח בו הניזק חלק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">בעל חבית ובעל קורה ברשות הרבים, ונשברה חבית בקורה- נזק שלקח בו הניזק חלק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בחלקה הראשון של ה<strong>משנה</strong> הנ"ל פטור בעל הקורה כיון ש"לזה רשות להלך ולזה רשות להלך".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בחלקה הראשון של ה<strong>משנה</strong> הנ"ל פטור בעל הקורה כיון ש"לזה רשות להלך ולזה רשות להלך".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (לב.) מנסה ללמוד מכאן לגבי דין המזיק את אשתו בתשמיש המטה, שיהיה פטור, שהרי גם במקרה זה מדובר על שנים העושים את מעשיהם ברשות. אמנם, הגמרא דוחה ומסבירה, שבעוד שהמזיק את אשתו בתשמיש המיטה עושה את המעשה באופן בלעדי, כשהצד הניזק נשאר פאסיבי, במשנה בעל הכד ובעל הקורה "שניהם כאחד הם" (בלשון הגמרא "תרוייהו כהדדי נינהו").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (לב.) מנסה ללמוד מכאן לגבי דין המזיק את אשתו בתשמיש המטה, שיהיה פטור, שהרי גם במקרה זה מדובר על שנים העושים את מעשיהם ברשות. אמנם, הגמרא דוחה ומסבירה, שבעוד שהמזיק את אשתו בתשמיש המיטה עושה את המעשה באופן בלעדי, כשהצד הניזק נשאר פאסיבי, במשנה בעל הכד ובעל הקורה "שניהם כאחד הם" (בלשון הגמרא "תרוייהו כהדדי נינהו").</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים בהבנת הטיעון לפטור "תרוייהו כהדדי נינהו"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נחלקו הראשונים בהבנת הטיעון לפטור "תרוייהו כהדדי נינהו"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong>, ה<strong>רשב"א</strong> וה<strong>טור</strong> (שעט) מסבירים ששבירת החבית היא אשמת שניהם, שאף בעל החבית <strong>סייע </strong><strong>פיזית</strong> בהטחת חביתו בקורה. שהרי באותה מידה שבעל הקורה הלך עם קורתו לכיוון החבית, כך הלך בעל החבית היישר אל הקורה ששברתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong>, ה<strong>רשב"א</strong> וה<strong>טור</strong> (שעט) מסבירים ששבירת החבית היא אשמת שניהם, שאף בעל החבית <strong>סייע </strong><strong>פיזית</strong> בהטחת חביתו בקורה. שהרי באותה מידה שבעל הקורה הלך עם קורתו לכיוון החבית, כך הלך בעל החבית היישר אל הקורה ששברתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>נימוקי יוסף</strong> (טו: מדפי הרי"ף) וב<strong>רא"ש</strong> (סימן י) מופיע הסבר דומה אך לא זהה. הנ"י והרא"ש מסבירים שהמזיק את אשתו בתשמיש המיטה, כיוון שהוא עושה את המעשה לבדו, עליו לבדו מוטל להיזהר. משמע, שכאשר הלכו בעל קורה ובעל חבית זה לקראת זה, ונשברה החבית בקורה, פטור בעל הקורה לא מפני שבעל החבית סייע פיזית לשבירה, אלא משום <strong>שהעושה</strong><strong> מעשה, אף </strong><strong>שעושהו</strong><strong> ברשות, </strong><strong>מוטל עליו לעשותו</strong><strong> בזהירות</strong>, שלא להזיק ושלא להיות ניזק. לכן במקרה שבמשנה, כיוון ששניהם עושים מעשה (דהיינו, הולכים ברשות הרבים), על שניהם כאחד מוטלת חובת זהירות יתרה זו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>נימוקי יוסף</strong> (טו: מדפי הרי"ף) וב<strong>רא"ש</strong> (סימן י) מופיע הסבר דומה אך לא זהה. הנ"י והרא"ש מסבירים שהמזיק את אשתו בתשמיש המיטה, כיוון שהוא עושה את המעשה לבדו, עליו לבדו מוטל להיזהר. משמע, שכאשר הלכו בעל קורה ובעל חבית זה לקראת זה, ונשברה החבית בקורה, פטור בעל הקורה לא מפני שבעל החבית סייע פיזית לשבירה, אלא משום <strong>שהעושה</strong><strong> מעשה, אף </strong><strong>שעושהו</strong><strong> ברשות, </strong><strong>מוטל עליו לעשותו</strong><strong> בזהירות</strong>, שלא להזיק ושלא להיות ניזק. לכן במקרה שבמשנה, כיוון ששניהם עושים מעשה (דהיינו, הולכים ברשות הרבים), על שניהם כאחד מוטלת חובת זהירות יתרה זו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נמצאנו למדים שקיימים שני גורמים לפטור במקרה של "זה בא בחביתו וזה בא בקורתו":</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נמצאנו למדים שקיימים שני גורמים לפטור במקרה של "זה בא בחביתו וזה בא בקורתו":</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הטעם המובא במשנה – שניהם ברשות עושים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הטעם המובא במשנה – שניהם ברשות עושים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"תרוייהו כהדדי נינהו"<sup id="ref64"><a href="#fn64">[64]</a></sup></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"תרוייהו כהדדי נינהו"<sup id="ref64"><a href="#fn64">[64]</a></sup></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים מסבירים ששני הטעמים נצרכים, כיוון שלעיתים גם כאשר בעל החבית מהלך (ולכן מתקיים הגורם השני), בכל זאת בעל הקורה חייב משום שרק בעל החבית עושה ברשות, ובעל הקורה עושה שלא ברשות. למשל, כאשר בעל הקורה רץ ובעל החבית מהלך (<strong>רשב"א</strong>, ועיין בהלכה הבאה), או כאשר מדובר על רשותו של בעל החבית (<strong>נימוקי יוסף</strong>), שם לא אמור בעל החבית להיזהר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים מסבירים ששני הטעמים נצרכים, כיוון שלעיתים גם כאשר בעל החבית מהלך (ולכן מתקיים הגורם השני), בכל זאת בעל הקורה חייב משום שרק בעל החבית עושה ברשות, ובעל הקורה עושה שלא ברשות. למשל, כאשר בעל הקורה רץ ובעל החבית מהלך (<strong>רשב"א</strong>, ועיין בהלכה הבאה), או כאשר מדובר על רשותו של בעל החבית (<strong>נימוקי יוסף</strong>), שם לא אמור בעל החבית להיזהר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong>, ובעקבותיו ה<strong>שו"ע</strong> (שעט) כתבו את לשון המשנה. ה<strong>סמ"ע </strong>פוסק כשיטת הטור, רש"י, והרשב"א, שתנאי לפטור את בעל הקורה הוא שבעל החבית סייע אקטיבית בהטחת חביתו בקורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong>, ובעקבותיו ה<strong>שו"ע</strong> (שעט) כתבו את לשון המשנה. ה<strong>סמ"ע </strong>פוסק כשיטת הטור, רש"י, והרשב"א, שתנאי לפטור את בעל הקורה הוא שבעל החבית סייע אקטיבית בהטחת חביתו בקורה.</p>
                     
                 </div>
                 
@@ -1425,55 +1425,55 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שנים שהיו מהלכין ברשות הרבים אחד רץ ואחד מהלך והוזק אחד מהן בחבירו שלא בכוונה, זה הרץ חייב מפני שהוא משנה, ואם היה ערב שבת בין השמשות פטור מפני שהוא רץ ברשות כדי שלא תכנס השבת והוא אינו פנוי, היו שניהם רצים והוזקו זה בזה שניהם פטורין ואפילו בשאר הימים. </strong>
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ריצה והליכה ברשות הרבים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ריצה והליכה ברשות הרבים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (לב.):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (לב.):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שנים שהיו מהלכין ברה"ר, אחד רץ ואחד מהלך, או שהיו שניהם רצין והזיקו זה את זה- שניהם פטורין"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שנים שהיו מהלכין ברה"ר, אחד רץ ואחד מהלך, או שהיו שניהם רצין והזיקו זה את זה- שניהם פטורין"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה ברייתא החולקת לכאורה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה ברייתא החולקת לכאורה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"<strong>איסי בן יהודה</strong> אומר: רץ חייב מפני שהוא משונה,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"<strong>איסי בן יהודה</strong> אומר: רץ חייב מפני שהוא משונה,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומודה איסי בע"ש בין השמשות שהוא פטור מפני שרץ ברשות"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומודה איסי בע"ש בין השמשות שהוא פטור מפני שרץ ברשות"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המשנה פוטרת בין את הרץ ברשות הרבים ובין את המהלך שהזיקו, שכן לשניהם רשות להיות שם. לעומתה, <strong>איסי בן יהודה</strong> פוסק שרץ ברה"ר שנתקל במהלך והזיקו, חייב, משום שהוא משונה, אלא אם כן מדובר בערב שבת, שאז ישנה רשות לרוץ ברשות הרבים בכדי להספיק להכין צרכי שבת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, המשנה פוטרת בין את הרץ ברשות הרבים ובין את המהלך שהזיקו, שכן לשניהם רשות להיות שם. לעומתה, <strong>איסי בן יהודה</strong> פוסק שרץ ברה"ר שנתקל במהלך והזיקו, חייב, משום שהוא משונה, אלא אם כן מדובר בערב שבת, שאז ישנה רשות לרוץ ברשות הרבים בכדי להספיק להכין צרכי שבת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מביאה את דברי <strong>ר' יוחנן</strong> הפוסק כאיסי בן יהודה, ואף מעמידה את המשנה בערב שבת כך שהמשנה יכולה להיות גם כשיטתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מביאה את דברי <strong>ר' יוחנן</strong> הפוסק כאיסי בן יהודה, ואף מעמידה את המשנה בערב שבת כך שהמשנה יכולה להיות גם כשיטתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> (הובא בנימוקי יוסף טו: מדפי הרי"ף) מעיר שאף בערב שבת, אם ברור לנו שסיבת הריצה של המזיק לא היתה לשם צרכי שבת או כבוד שבת, אלא לשם סיבה אחרת שאינה שייכת בשבת יותר מאשר בחול, נחשב הוא בכל זאת למשנה מהדרך הראויה ברשות הרבים וחייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"ה</strong> (הובא בנימוקי יוסף טו: מדפי הרי"ף) מעיר שאף בערב שבת, אם ברור לנו שסיבת הריצה של המזיק לא היתה לשם צרכי שבת או כבוד שבת, אלא לשם סיבה אחרת שאינה שייכת בשבת יותר מאשר בחול, נחשב הוא בכל זאת למשנה מהדרך הראויה ברשות הרבים וחייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלק גדול מהעיסוק במשנתנו (ובזו הקודמת לה) בראשונים, מתרכזים סביב היחס בינה לבין דברי <strong>רבא</strong> המובאים בהמשך (מח.) לכן נביאם כאן בקצרה (עיין לעיל בדברינו, פרק א' הלכה טז, שהארכנו שם)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חלק גדול מהעיסוק במשנתנו (ובזו הקודמת לה) בראשונים, מתרכזים סביב היחס בינה לבין דברי <strong>רבא</strong> המובאים בהמשך (מח.) לכן נביאם כאן בקצרה (עיין לעיל בדברינו, פרק א' הלכה טז, שהארכנו שם)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> קובע שאם המזיק והניזק שניהם נמצאים ברשות במקום הנזק, אזי</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> קובע שאם המזיק והניזק שניהם נמצאים ברשות במקום הנזק, אזי</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שניהם ברשות או שניהם שלא ברשות- <strong>הזיקו</strong> זה את זה חייבין, <strong>הוזקו</strong> זה בזה פטורין"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שניהם ברשות או שניהם שלא ברשות- <strong>הזיקו</strong> זה את זה חייבין, <strong>הוזקו</strong> זה בזה פטורין"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בהבנת דבריו של רבא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בהבנת דבריו של רבא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי <strong>רש"י</strong> כוונת רבא היא שאם הזיק האחד את השני באופן אקטיבי, אפילו אם עשה זאת בשוגג, חייב, משום שהיה לו להיזהר אפילו ששניהם שם ברשות. את הפטור במקרה בו "הוזקו זה בזה" מסביר רש"י שהמזיק הזיק באופן פאסיבי, כגון שנתקל בו הניזק, נפל ונחבל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי <strong>רש"י</strong> כוונת רבא היא שאם הזיק האחד את השני באופן אקטיבי, אפילו אם עשה זאת בשוגג, חייב, משום שהיה לו להיזהר אפילו ששניהם שם ברשות. את הפטור במקרה בו "הוזקו זה בזה" מסביר רש"י שהמזיק הזיק באופן פאסיבי, כגון שנתקל בו הניזק, נפל ונחבל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לעומתו, מסביר ש"הזיקו זה את זה" הכוונה שהזיק האחד את חברו במזיד, ואילו "הוזקו זה בזה" הכוונה לנזק בשוגג. כלומר, לפי פירוש זה כל עוד הנזק הוא בשוגג, אם לשניהם יש רשות להיות שם, פטור המזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לעומתו, מסביר ש"הזיקו זה את זה" הכוונה שהזיק האחד את חברו במזיד, ואילו "הוזקו זה בזה" הכוונה לנזק בשוגג. כלומר, לפי פירוש זה כל עוד הנזק הוא בשוגג, אם לשניהם יש רשות להיות שם, פטור המזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי הבנתו של רש"י בדברי רבא, שאפילו אם המזיק והניזק שניהם נמצאים במקום הנזק ברשות, עדיין חייב המזיק כל עוד ידע שהניזק שם, צריך להבין מדוע בכל זאת המשנה פוטרת כאשר שנים הילכו ברשות הרבים ונתקל האחד בשני.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי הבנתו של רש"י בדברי רבא, שאפילו אם המזיק והניזק שניהם נמצאים במקום הנזק ברשות, עדיין חייב המזיק כל עוד ידע שהניזק שם, צריך להבין מדוע בכל זאת המשנה פוטרת כאשר שנים הילכו ברשות הרבים ונתקל האחד בשני.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> עצמו מסביר, שמה שפוטרת המשנה בשנים מהלכים והזיק האחד את חברו, הכוונה דווקא שהמזיק הזיק באופן פאסיבי, כלומר, שהמזיק עמד והניזק נתקל בו. אמנם אם הלך המזיק ובלי משים התנגש בניזק ברשות הרבים, הדין לפי רש"י הוא שחייב. כעין זה כותבים גם ה<strong>טור</strong> (שעח) וה<strong>רשב"א</strong> (לב. ד"ה "הא").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> עצמו מסביר, שמה שפוטרת המשנה בשנים מהלכים והזיק האחד את חברו, הכוונה דווקא שהמזיק הזיק באופן פאסיבי, כלומר, שהמזיק עמד והניזק נתקל בו. אמנם אם הלך המזיק ובלי משים התנגש בניזק ברשות הרבים, הדין לפי רש"י הוא שחייב. כעין זה כותבים גם ה<strong>טור</strong> (שעח) וה<strong>רשב"א</strong> (לב. ד"ה "הא").</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> (מובא בטור שם) מוסיף, שכאשר המזיק והניזק שניהם היו אקטיבים והלכו שניהם זה לקראת זה, הרי שהמזיק פטור למרות שעשה מעשה אקטיבי (כלומר, למרות דברי רש"י הנ"ל), וזאת משום שאף לניזק היה חלק בגרימת הנזק<sup id="ref65"><a href="#fn65">[65]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"ה</strong> (מובא בטור שם) מוסיף, שכאשר המזיק והניזק שניהם היו אקטיבים והלכו שניהם זה לקראת זה, הרי שהמזיק פטור למרות שעשה מעשה אקטיבי (כלומר, למרות דברי רש"י הנ"ל), וזאת משום שאף לניזק היה חלק בגרימת הנזק<sup id="ref65"><a href="#fn65">[65]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>שו"ע</strong> (שעח ז) נפסק על פי דרכם של רש"י, הטור והרשב"א, ששנים ברה"ר, ונתקל מהלך בעומד, והזיק את העומד, חייב המזיק, (על פי דברי רבא "הזיקו...חייבים"). לעומת זאת, אם הנתקל הוזק בעומד, פטור העומד, שכן יש לו רשות להיות שם (על פי דברי רבא "הוזקו...פטורים"). כמו כן פוסק השו"ע כדברי הרמ"ה, שאם שניהם היו מהלכים, ולא ידעו זה בזה, פטורים שניהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>שו"ע</strong> (שעח ז) נפסק על פי דרכם של רש"י, הטור והרשב"א, ששנים ברה"ר, ונתקל מהלך בעומד, והזיק את העומד, חייב המזיק, (על פי דברי רבא "הזיקו...חייבים"). לעומת זאת, אם הנתקל הוזק בעומד, פטור העומד, שכן יש לו רשות להיות שם (על פי דברי רבא "הוזקו...פטורים"). כמו כן פוסק השו"ע כדברי הרמ"ה, שאם שניהם היו מהלכים, ולא ידעו זה בזה, פטורים שניהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (סעיף ח) פוסק ה<strong>שו"ע</strong> כדברי ר' יוחנן, שכאשר האחד רץ והאחד מהלך, אפילו אם הוזק המהלך ברץ שונה הדבר מדין שניהם מהלכים והוזקו זה בזה (בו שניהם פטורים), וחייב הרץ, שכן רץ שלא ברשות, אלא אם כן היה זה בערב שבת. ה<strong>רמ"א</strong> מוסיף את דברי הרמ"ה, שאם ידוע לנו שלדברי חול היה רץ, אפילו בער"ש חייב הרץ.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך (סעיף ח) פוסק ה<strong>שו"ע</strong> כדברי ר' יוחנן, שכאשר האחד רץ והאחד מהלך, אפילו אם הוזק המהלך ברץ שונה הדבר מדין שניהם מהלכים והוזקו זה בזה (בו שניהם פטורים), וחייב הרץ, שכן רץ שלא ברשות, אלא אם כן היה זה בערב שבת. ה<strong>רמ"א</strong> מוסיף את דברי הרמ"ה, שאם ידוע לנו שלדברי חול היה רץ, אפילו בער"ש חייב הרץ.</p>
                     
                 </div>
                 
@@ -1481,23 +1481,23 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אחד המזיק בידו, או שזרק אבן או ירה חץ והזיק בו, או שפטר מים על חבירו או על הכלים והזיק, או שרק או נע והזיק בכיחו וניעו בעת שהלכו מכחו, הרי זה כמזיק בידו והם תולדות של אדם, אבל אם נח הרוק והכיח על הארץ ואחר כך נתקל בהן אדם הרי זה חייב משום בורו, שכל תקלה תולדת בור היא כמו שביארנו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק בעזרת מגע בלתי ישיר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק בעזרת מגע בלתי ישיר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ג:) דנה מה יכול להיות החילוק בין תולדה לאב כאשר מדובר על אדם המזיק. אחת ההצעות היא, שרוקו של האדם נחשב לתולדה. הגמרא דוחה זאת באומרה שאם הרוק הזיק תוך כדי תעופתו מהאדם שירק אותו, הרי שנחשב הוא ככח האדם וכמעשה האדם ממש. לחילופין אומרת הגמרא, שאם כבר נח הרוק על הקרקע, הרי הוא נחשב כבור ולא כאדם המזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (ג:) דנה מה יכול להיות החילוק בין תולדה לאב כאשר מדובר על אדם המזיק. אחת ההצעות היא, שרוקו של האדם נחשב לתולדה. הגמרא דוחה זאת באומרה שאם הרוק הזיק תוך כדי תעופתו מהאדם שירק אותו, הרי שנחשב הוא ככח האדם וכמעשה האדם ממש. לחילופין אומרת הגמרא, שאם כבר נח הרוק על הקרקע, הרי הוא נחשב כבור ולא כאדם המזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסנהדרין (עז:) מובאים דברי <strong>ר' פפא</strong>, הפוסק שהכופת את חברו, ואז משחרר לכיוונו זרם מים עז ומטביעו, חייב כאילו רצחו בידיו ממש, שכן המים נחשבים כחיציו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסנהדרין (עז:) מובאים דברי <strong>ר' פפא</strong>, הפוסק שהכופת את חברו, ואז משחרר לכיוונו זרם מים עז ומטביעו, חייב כאילו רצחו בידיו ממש, שכן המים נחשבים כחיציו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק מכל הסוגיות הנ"ל שיריקה במעופה, שחרור זרם מים עז, וכמובן ירי חיצים, נחשבים ככוחו של המזיק וכמעשה ידיו הישיר לכל דבר. וכן פסק ב<strong>שו"ע</strong> (שפד א).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק מכל הסוגיות הנ"ל שיריקה במעופה, שחרור זרם מים עז, וכמובן ירי חיצים, נחשבים ככוחו של המזיק וכמעשה ידיו הישיר לכל דבר. וכן פסק ב<strong>שו"ע</strong> (שפד א).</p>
                     
                 </div>
                 
@@ -1505,21 +1505,21 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>לוטש שהיה מכה בפטיש ויצא גץ מתחת הפטיש והזיק הרי זה חייב כמי שזרק חץ או זרק אבן, וכן הבנאי שקבל עליו את הכותל לסתרו ושבר את האבנים או הזיק חייב, היה סותר מצד זה ונפל מצד אחר פטור, ואם מחמת המכה חייב, שזה כזורק חץ והזיק בו הוא. </strong>
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מכה שהזיקה במקום אחר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מכה שהזיקה במקום אחר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בפרק 'הכונס' (סב:) מחייבת את המכה בפטיש על גץ שיצא מתחת הפטיש בעקבות מכה, והצית והזיק. <strong>משנה</strong> נוספת (צח:) עוסקת באחריותו של בנאי, שקיבל עליו לפרק כותל, שלא להזיק או לשבור את האבנים. במסגרת זה אומרת המשנה, שאם הנזק לאבני הכותל קרה שלא באותו המקום בו עסק הבנאי בפירוק הכותל, פטור הבנאי. יוצא מכלל זה הוא המקרה בו מחמת כח המכה שהכה הבנאי בכותל, נפלה אבן במקום אחר והוזקה, שאז נחשב הדבר ככוחו של הבנאי, וחייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> בפרק 'הכונס' (סב:) מחייבת את המכה בפטיש על גץ שיצא מתחת הפטיש בעקבות מכה, והצית והזיק. <strong>משנה</strong> נוספת (צח:) עוסקת באחריותו של בנאי, שקיבל עליו לפרק כותל, שלא להזיק או לשבור את האבנים. במסגרת זה אומרת המשנה, שאם הנזק לאבני הכותל קרה שלא באותו המקום בו עסק הבנאי בפירוק הכותל, פטור הבנאי. יוצא מכלל זה הוא המקרה בו מחמת כח המכה שהכה הבנאי בכותל, נפלה אבן במקום אחר והוזקה, שאז נחשב הדבר ככוחו של הבנאי, וחייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כשתי משניות אלה. וכך ב<strong>שו"ע</strong> (שפד ב-ג)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כשתי משניות אלה. וכך ב<strong>שו"ע</strong> (שפד ב-ג)</p>
                     
                 </div>
                 
@@ -1527,37 +1527,37 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הכובש בהמת חבירו במים, או שנפלה ומנעה מלעלות עד שמתה במים, או שהניחה בחמה וצמצם עליה המקום כדי שלא תמצא צל עד שהרגתה החמה, חייב לשלם, וכן כל כיוצא בזה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המונע מבהמה לצאת ממקום המסוכן לה, ומתה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המונע מבהמה לצאת ממקום המסוכן לה, ומתה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בסנהדרין (עו:) דנה בחיובו של רוצח וקובעת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> בסנהדרין (עו:) דנה בחיובו של רוצח וקובעת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כבש עליו לתוך המים או לתוך האור ואינו יכול לעלות משם ומת חייב"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כבש עליו לתוך המים או לתוך האור ואינו יכול לעלות משם ומת חייב"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אף על פי שהרוצח לא זרק את קרבנו למים, אלא רק מנע ממנו מלצאת, בכל זאת נחשב הדבר כמעשה רצח ישיר. בגמרא מסביר <strong>שמואל</strong> שהדברים נלמדים מהנאמר ברוצח במזיד "אוֹ בְאֵיבָה הִכָּהוּ בְיָדוֹ וַיָּמֹת מוֹת יוּמַת הַמַּכֶּה רֹצֵחַ הוּא" (במדבר לה כא), שמהמילים "או באיבה" יש ללמוד שחייבים לאו דווקא על הכאה ישירה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אף על פי שהרוצח לא זרק את קרבנו למים, אלא רק מנע ממנו מלצאת, בכל זאת נחשב הדבר כמעשה רצח ישיר. בגמרא מסביר <strong>שמואל</strong> שהדברים נלמדים מהנאמר ברוצח במזיד "אוֹ בְאֵיבָה הִכָּהוּ בְיָדוֹ וַיָּמֹת מוֹת יוּמַת הַמַּכֶּה רֹצֵחַ הוּא" (במדבר לה כא), שמהמילים "או באיבה" יש ללמוד שחייבים לאו דווקא על הכאה ישירה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> חלקו האמוראים מה הדין במקרה מקביל בו אדם לא נותן לבהמת חברו לצאת ממקום המסוכן לה, למשל מקום שיש בו שמש, ומתה הבהמה. האם חייב בנזק?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> חלקו האמוראים מה הדין במקרה מקביל בו אדם לא נותן לבהמת חברו לצאת ממקום המסוכן לה, למשל מקום שיש בו שמש, ומתה הבהמה. האם חייב בנזק?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינא</strong> פסק שחייב, שכן בניזקין יש כלל "אדם מועד לעולם", שאין ברוצח, ולכן בדבר שנחשב מעשה להתחייב עליו משום רוצח, כל שכן שיחשב מעשה להתחייב עליו משום נזקין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבינא</strong> פסק שחייב, שכן בניזקין יש כלל "אדם מועד לעולם", שאין ברוצח, ולכן בדבר שנחשב מעשה להתחייב עליו משום רוצח, כל שכן שיחשב מעשה להתחייב עליו משום נזקין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו פסק <strong>רב אחא בר רב</strong>, שפטור, כיוון שברוצח ישנו לימוד מיוחד מהפסוק, שאיננו אמור באדם המזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו פסק <strong>רב אחא בר רב</strong>, שפטור, כיוון שברוצח ישנו לימוד מיוחד מהפסוק, שאיננו אמור באדם המזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים פסקו כרבינא, שחייב המזיק. אמנם נחלקו בגדר המדויק של מעשהו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים פסקו כרבינא, שחייב המזיק. אמנם נחלקו בגדר המדויק של מעשהו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כותב בפשטות שהמונע מהבהמה לעלות או מצמצם את המקום כך שלא תוכל הבהמה לנוס מהחמה עד שמתה, חייב. ה<strong>מגיד משנה</strong> מסביר שלרמב"ם הטעם שחייב אף שלא הרג את הבהמה בפועל הוא מדין גרמי (עי' בפרק הבא בהרחבה בדין זה).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> כותב בפשטות שהמונע מהבהמה לעלות או מצמצם את המקום כך שלא תוכל הבהמה לנוס מהחמה עד שמתה, חייב. ה<strong>מגיד משנה</strong> מסביר שלרמב"ם הטעם שחייב אף שלא הרג את הבהמה בפועל הוא מדין גרמי (עי' בפרק הבא בהרחבה בדין זה).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> (שפג) כותב שחייב דווקא אם אחז את הבהמה בידו ומנעה מלצאת ממקום הסכנה, אך אם סגר בעדה את הדלת וכדומה- נחשב הדבר גרמא<sup id="ref66"><a href="#fn66">[66]</a></sup> ופטור<sup id="ref67"><a href="#fn67">[67]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> (שפג) כותב שחייב דווקא אם אחז את הבהמה בידו ומנעה מלצאת ממקום הסכנה, אך אם סגר בעדה את הדלת וכדומה- נחשב הדבר גרמא<sup id="ref66"><a href="#fn66">[66]</a></sup> ופטור<sup id="ref67"><a href="#fn67">[67]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>שו"ע</strong> (שפג ה) כתב כדברי הרמב"ם, וה<strong>רמ"א</strong> הוסיף את דברי הטור, שמדובר דווקא שאחזה בידו, אך אם רק סגר בעדה- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>שו"ע</strong> (שפג ה) כתב כדברי הרמב"ם, וה<strong>רמ"א</strong> הוסיף את דברי הטור, שמדובר דווקא שאחזה בידו, אך אם רק סגר בעדה- פטור.</p>
                     
                 </div>
                 
@@ -1565,108 +1565,108 @@
             
             
             <div id="halacha-11" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג-טו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג-טו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שנים שהמיתו את הבהמה כאחת או שברו את הכלי כאחת משלשין ביניהן. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>חמשה שהניחו חמשה חבילות על הבהמה ולא מתה ובא זה האחרון והניח חבילתו עליה ומתה, אם היתה מהלכת באותן החבילות ומשהוסיף זה חבילתו עמדה ולא הלכה האחרון חייב, ואם מתחלה לא היתה מהלכת האחרון פטור, ואם אין ידוע כולן משלמין בשוה. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן חמשה שישבו על הכסא ולא נשבר ובא האחרון וישב עליו ונשבר אף על פי שהיה ראוי להשבר בהן קודם שישב הואיל וקירב את שבירתו האחרון חייב, שהרי אומרים לו אילו לא נסמכת עלינו היינו עומדים קודם שישבר, ואם ישבו כאחת ונשבר כולן חייבין, וכן כל כיוצא בזה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק שהזיקו כמה אנשים בזה אחר זה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק שהזיקו כמה אנשים בזה אחר זה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (י.) דנה במקרים בהם אדם עשה רק חלק מהנזק, ובכל זאת הוא אחראי לכולו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (י.) דנה במקרים בהם אדם עשה רק חלק מהנזק, ובכל זאת הוא אחראי לכולו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המקרה הראשון עליו מדברת הגמרא הוא של "מרבה בחבילות". בדין זה חלקו הראשונים בהבנת המקרה, ובהבנת דברי הגמרא עליו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המקרה הראשון עליו מדברת הגמרא הוא של "מרבה בחבילות". בדין זה חלקו הראשונים בהבנת המקרה, ובהבנת דברי הגמרא עליו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש, שמדובר באדם המוסיף חבילות קש על גבי חבילות קש שהבעיר חברו ברשותו, ויצאה האש והזיקה בשדה אחר. על מקרה זה מעירה הגמרא, שאם האש לא היתה עוברת לולא החבילות הנוספות שניתנו עליה, ודאי שנותן החבילות הנוספות הוא האשם הבלעדי. לחילופין, במקרה שהאש היתה עוברת גם בלעדי תוספת החבילות אומרת הגמרא על מוסיף החבילות- "מאי קא עביד?" (כלומר, 'מה עשה זה?'- לא עשה אותו האחרון דבר! בכוונת הביטוי נעסוק בהמשך).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש, שמדובר באדם המוסיף חבילות קש על גבי חבילות קש שהבעיר חברו ברשותו, ויצאה האש והזיקה בשדה אחר. על מקרה זה מעירה הגמרא, שאם האש לא היתה עוברת לולא החבילות הנוספות שניתנו עליה, ודאי שנותן החבילות הנוספות הוא האשם הבלעדי. לחילופין, במקרה שהאש היתה עוברת גם בלעדי תוספת החבילות אומרת הגמרא על מוסיף החבילות- "מאי קא עביד?" (כלומר, 'מה עשה זה?'- לא עשה אותו האחרון דבר! בכוונת הביטוי נעסוק בהמשך).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מפרש אחרת לגמרי, אך לפי עיקרון משפטי דומה. לפירושו, מדובר על בהמה, שהניחו עליה כמה בני אדם את חבילותיהם, והוסיף האחרון את חבילתו שלו, ונפלה הבהמה מכובד המשא ומתה. על מקרה זה מעירה הגמרא, שאם היתה הבהמה מהלכת לפי מתן החבילה האחרונה, הרי ברור שזו החבילה שגרמה לה לקרוס, ולכן רק האחרון חייב. לעומת זאת, אם קרסה הבהמה עוד לפני מתן החבילה האחרונה על גבה אומרת הגמרא על נותן אותה חבילה שבעצם לא עשה דבר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מפרש אחרת לגמרי, אך לפי עיקרון משפטי דומה. לפירושו, מדובר על בהמה, שהניחו עליה כמה בני אדם את חבילותיהם, והוסיף האחרון את חבילתו שלו, ונפלה הבהמה מכובד המשא ומתה. על מקרה זה מעירה הגמרא, שאם היתה הבהמה מהלכת לפי מתן החבילה האחרונה, הרי ברור שזו החבילה שגרמה לה לקרוס, ולכן רק האחרון חייב. לעומת זאת, אם קרסה הבהמה עוד לפני מתן החבילה האחרונה על גבה אומרת הגמרא על נותן אותה חבילה שבעצם לא עשה דבר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי שני הפירושים העיקרון זהה- כאשר הנזק התרחש רק בגלל המעשה של המזיק האחרון, הרי שכל האשמה מוטלת עליו והוא חייב בכל. לעומת זאת, כאשר הנזק היה מתרחש גם לולא התערבותו של האחרון, חייבים המזיקים האחרים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי שני הפירושים העיקרון זהה- כאשר הנזק התרחש רק בגלל המעשה של המזיק האחרון, הרי שכל האשמה מוטלת עליו והוא חייב בכל. לעומת זאת, כאשר הנזק היה מתרחש גם לולא התערבותו של האחרון, חייבים המזיקים האחרים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלקו הראשונים מה דין המזיק האחרון אם הנזק היה קורה גם לולא מעשיו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חלקו הראשונים מה דין המזיק האחרון אם הנזק היה קורה גם לולא מעשיו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (י: ד"ה "מאי") פוסקים שאף האחרון חייב ככל אלה שלפניו. כלומר, למרות שגם ללא מעשיו היה הנזק נגרם, כיוון שסוף סוף לקח האחרון חלק בנזק, חייב. פסיקת התוספות מצריכה לבאר שכוונת הגמרא בדבריו שהאחרון לא עשה דבר, היא שלא עשה דבר יותר מהקודמים ולכן חייבים כולם בשווה<sup id="ref68"><a href="#fn68">[68]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (י: ד"ה "מאי") פוסקים שאף האחרון חייב ככל אלה שלפניו. כלומר, למרות שגם ללא מעשיו היה הנזק נגרם, כיוון שסוף סוף לקח האחרון חלק בנזק, חייב. פסיקת התוספות מצריכה לבאר שכוונת הגמרא בדבריו שהאחרון לא עשה דבר, היא שלא עשה דבר יותר מהקודמים ולכן חייבים כולם בשווה<sup id="ref68"><a href="#fn68">[68]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> וה<strong>נימוקי יוסף</strong> (ד: מדפי הרי"ף, ד"ה "איהו") חולקים ופוסקים שאם ידוע שהיה קורה הנזק גם ללא מעשיו של האחרון, פטור האחרון לגמרי וחייבים רק המזיקים שלפניו. כלומר, לשיטתם בכדי להתחייב <strong>לא די לקחת חלק</strong> בנזק אלא צריך שמעשי המזיק יהיו <strong>סיבת</strong> הנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> וה<strong>נימוקי יוסף</strong> (ד: מדפי הרי"ף, ד"ה "איהו") חולקים ופוסקים שאם ידוע שהיה קורה הנזק גם ללא מעשיו של האחרון, פטור האחרון לגמרי וחייבים רק המזיקים שלפניו. כלומר, לשיטתם בכדי להתחייב <strong>לא די לקחת חלק</strong> בנזק אלא צריך שמעשי המזיק יהיו <strong>סיבת</strong> הנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמו כן מוסיף הרמב"ם, שאם אין ידוע אם הנזק היה מתרחש גם לולא המזיק האחרון או לא, משלמים כל מניחי החבילות בשווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כמו כן מוסיף הרמב"ם, שאם אין ידוע אם הנזק היה מתרחש גם לולא המזיק האחרון או לא, משלמים כל מניחי החבילות בשווה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפג ד) פוסק כדברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפג ד) פוסק כדברי הרמב"ם.</p>
                     
                 </div>
                 
                 <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כמה אנשים שישבו על ספסל אחד ושברוהו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">כמה אנשים שישבו על ספסל אחד ושברוהו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהקשר לדיון הנ"ל (י.) מביא ר' פפא <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהקשר לדיון הנ"ל (י.) מביא ר' פפא <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"חמישה שישבו על ספסל אחד ולא שברוהו ובא אחד וישב עליו ושברו האחרון חייב"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"חמישה שישבו על ספסל אחד ולא שברוהו ובא אחד וישב עליו ושברו האחרון חייב"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לברייתא זו מקבילה ב<strong>תוספתא</strong> (ב, ט), שם נאמר:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לברייתא זו מקבילה ב<strong>תוספתא</strong> (ב, ט), שם נאמר:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"חמש שישבו על גבי ספסל ונשבר כולן חייבין לשלם</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"חמש שישבו על גבי ספסל ונשבר כולן חייבין לשלם</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם מחמת האחרון נשבר האחרון משלם על ידי כולן"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם מחמת האחרון נשבר האחרון משלם על ידי כולן"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בתוספתא הובא גם המקרה בו לא עוסקת הברייתא, ואף לא הגמרא, בו כולם התיישבו ביחד ולכן כולם חייבים. הברייתא והגמרא מתמקדות במקרה השני בו הצטרף האחרון מאוחר יותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בתוספתא הובא גם המקרה בו לא עוסקת הברייתא, ואף לא הגמרא, בו כולם התיישבו ביחד ולכן כולם חייבים. הברייתא והגמרא מתמקדות במקרה השני בו הצטרף האחרון מאוחר יותר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בהבנת מסקנת הסוגיה והעולה ממנה, ולכן נרחיב בביאור מהלך הגמרא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בהבנת מסקנת הסוגיה והעולה ממנה, ולכן נרחיב בביאור מהלך הגמרא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מתלבטת כיצד להעמיד את הברייתא. מצד אחד, אם נאמר שאלמלא ישב האחרון לא היה נשבר הספסל כלל, פשוט שהאחרון חייב, ומה באה הברייתא לחדש? מצד שני, אם נפרש שהיה הספסל נשבר בסופו של דבר אף ללא ישיבתו של האחרון, מדוע מחייבת הברייתא את אותו האחרון<sup id="ref69"><a href="#fn69">[69]</a></sup>?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מתלבטת כיצד להעמיד את הברייתא. מצד אחד, אם נאמר שאלמלא ישב האחרון לא היה נשבר הספסל כלל, פשוט שהאחרון חייב, ומה באה הברייתא לחדש? מצד שני, אם נפרש שהיה הספסל נשבר בסופו של דבר אף ללא ישיבתו של האחרון, מדוע מחייבת הברייתא את אותו האחרון<sup id="ref69"><a href="#fn69">[69]</a></sup>?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תחילה מבקשת הגמרא להעמיד את הברייתא במקרה בו הספסל היה נשבר גם אלמלא היה האחרון מתיישב עליו, אך היה נשבר תוך זמן ארוך יותר, ובתוספת ישיבתו של האחרון הזמן עד השבירה התקצר יותר, והחידוש בברייתא הוא שיכולים היושבים הראשונים לומר, שאלמלא היה האחרון בא לשבת, היו הם קמים לפני שהיה הספסל נשבר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תחילה מבקשת הגמרא להעמיד את הברייתא במקרה בו הספסל היה נשבר גם אלמלא היה האחרון מתיישב עליו, אך היה נשבר תוך זמן ארוך יותר, ובתוספת ישיבתו של האחרון הזמן עד השבירה התקצר יותר, והחידוש בברייתא הוא שיכולים היושבים הראשונים לומר, שאלמלא היה האחרון בא לשבת, היו הם קמים לפני שהיה הספסל נשבר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, הגמרא דוחה העמדה זו, שכן כיוון שיכולים היושבים הראשונים לקום משישב הראשון, לפני שנשבר הספסל, ולא עשו זאת, צריכים אף הם להיות חייבים ולא רק הוא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, הגמרא דוחה העמדה זו, שכן כיוון שיכולים היושבים הראשונים לקום משישב הראשון, לפני שנשבר הספסל, ולא עשו זאת, צריכים אף הם להיות חייבים ולא רק הוא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לכן מתרצת הגמרא למסקנה שמדובר במקרה בו "בהדי דסמך בהו, תבר" (כלומר, ביחד עם סמיכתו של האחרון, נשבר הספסל), וחידושה של הברייתא הוא ש"כוחו כגופו דמי" – שכל מקום שכוחו שבר גופו גם כן שבר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לכן מתרצת הגמרא למסקנה שמדובר במקרה בו "בהדי דסמך בהו, תבר" (כלומר, ביחד עם סמיכתו של האחרון, נשבר הספסל), וחידושה של הברייתא הוא ש"כוחו כגופו דמי" – שכל מקום שכוחו שבר גופו גם כן שבר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפשר מסקנת הגמרא חלקו הראשונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפשר מסקנת הגמרא חלקו הראשונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מסביר שהגמרא נשארת עדיין בהעמדה לפיה מדובר במקרה בו הראשונים היו שוברים את הספסל מעצמם, אך תוך זמן ארוך. ומיד כשהתיישב האחרון, נשבר הספסל, כך שלא יכלו הראשונים להספיק לקום לפני שנשבר. והברייתא מחדשת שלמרות שנשבר הספסל מכח כובדם של כל היושבים עליו גם יחד, וממשקלו של האחרון לבדו לא היה נשבר, בכל זאת, כיוון ש"כוחו שבר" דהיינו, שמעשהו הוא שגרם מיידית לשבירה, "גופו גם כן שבר", כלומר, נחשב הדבר כאילו רק הוא ביצע בפועל את השבירה, וחייב רק הוא לבדו<sup id="ref70"><a href="#fn70">[70]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מסביר שהגמרא נשארת עדיין בהעמדה לפיה מדובר במקרה בו הראשונים היו שוברים את הספסל מעצמם, אך תוך זמן ארוך. ומיד כשהתיישב האחרון, נשבר הספסל, כך שלא יכלו הראשונים להספיק לקום לפני שנשבר. והברייתא מחדשת שלמרות שנשבר הספסל מכח כובדם של כל היושבים עליו גם יחד, וממשקלו של האחרון לבדו לא היה נשבר, בכל זאת, כיוון ש"כוחו שבר" דהיינו, שמעשהו הוא שגרם מיידית לשבירה, "גופו גם כן שבר", כלומר, נחשב הדבר כאילו רק הוא ביצע בפועל את השבירה, וחייב רק הוא לבדו<sup id="ref70"><a href="#fn70">[70]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> ו<strong>בעלי התוספות</strong> מפרשים את מסקנת הגמרא באופן שונה לחלוטין. לדבריהם, חייב רק האחרון משום שנסמך הוא על היושבים הראשונים ולא הניחם לקום<sup id="ref71"><a href="#fn71">[71]</a></sup>. כמו כן, החידוש של הברייתא הוא בכך ש"כוחו כגופו" כלומר, למרות שהאחרון כלל לא נגע בספסל עצמו, אלא רק שכב על הראשונים, בכל זאת הוא האחראי לשבירה כיוון שכוח משקלו נחשב כמגע גופו הישיר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> ו<strong>בעלי התוספות</strong> מפרשים את מסקנת הגמרא באופן שונה לחלוטין. לדבריהם, חייב רק האחרון משום שנסמך הוא על היושבים הראשונים ולא הניחם לקום<sup id="ref71"><a href="#fn71">[71]</a></sup>. כמו כן, החידוש של הברייתא הוא בכך ש"כוחו כגופו" כלומר, למרות שהאחרון כלל לא נגע בספסל עצמו, אלא רק שכב על הראשונים, בכל זאת הוא האחראי לשבירה כיוון שכוח משקלו נחשב כמגע גופו הישיר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף למחלוקת בהבנת מסקנת הגמרא, חלקו ראשונים גם בדינם של היושבים הראשונים במקום בו היו יכולים למנוע את הנזק- כפי שראינו, הגמרא מפרשת, שאם היושבים הראשונים היו שוברים את הספסל בזמן ארוך, ובגלל האחרון נשבר הספסל בזמן קצר יותר, חייבים כולם משום שהאחרון טוען כלפי הראשונים שאף הם אשמים, כיוון שהיה להם לקום מאחר שישב הוא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף למחלוקת בהבנת מסקנת הגמרא, חלקו ראשונים גם בדינם של היושבים הראשונים במקום בו היו יכולים למנוע את הנזק- כפי שראינו, הגמרא מפרשת, שאם היושבים הראשונים היו שוברים את הספסל בזמן ארוך, ובגלל האחרון נשבר הספסל בזמן קצר יותר, חייבים כולם משום שהאחרון טוען כלפי הראשונים שאף הם אשמים, כיוון שהיה להם לקום מאחר שישב הוא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מ<strong>רש"י</strong> משמע שאפילו אם הספסל לא היה נשבר כלל ביושבים הראשונים לבדם, ואף לא מכובד היושב האחרון לבדו (אלא רק מכובדם של כולם ביחד), אם היתה לראשונים שהות, משישב האחרון, לקום ולהציל את הספסל, חייבים כולם<sup id="ref72"><a href="#fn72">[72]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מ<strong>רש"י</strong> משמע שאפילו אם הספסל לא היה נשבר כלל ביושבים הראשונים לבדם, ואף לא מכובד היושב האחרון לבדו (אלא רק מכובדם של כולם ביחד), אם היתה לראשונים שהות, משישב האחרון, לקום ולהציל את הספסל, חייבים כולם<sup id="ref72"><a href="#fn72">[72]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זה, ה<strong>נימוקי יוסף</strong> פסק, שרק אם הראשונים היו שוברים גם לבדם את הספסל (רק בזמן יותר ארוך), חייבים הם לעמוד משישב האחרון עליו, אם יש להם שהות לעשות זאת. אך אם הם לבדם לא היו שוברים את הספסל כלל, אינם חייבים לעמוד אפילו אם הם יכולים, ותמיד האחרון הוא שיתחייב, כי בלעדיו לא היה הספסל נשבר כלל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זה, ה<strong>נימוקי יוסף</strong> פסק, שרק אם הראשונים היו שוברים גם לבדם את הספסל (רק בזמן יותר ארוך), חייבים הם לעמוד משישב האחרון עליו, אם יש להם שהות לעשות זאת. אך אם הם לבדם לא היו שוברים את הספסל כלל, אינם חייבים לעמוד אפילו אם הם יכולים, ותמיד האחרון הוא שיתחייב, כי בלעדיו לא היה הספסל נשבר כלל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על הברייתא של "חמישה שישבו" מוסיף <strong>ר' פפא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על הברייתא של "חמישה שישבו" מוסיף <strong>ר' פפא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כגון פפא בר אבא"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כגון פפא בר אבא"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מבאר, שפפא בר אבא היה אדם הידוע בכובדו הרב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מבאר, שפפא בר אבא היה אדם הידוע בכובדו הרב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בכוונת דברי ר' פפא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בכוונת דברי ר' פפא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מפרש שהדברים נאמרו בצחוק ובצחות לשון, כלומר, שאדם השובר ספסל הוא כנראה בעל מידות. מכך שה<strong>רמב"ם</strong> אינו מתייחס להערה זו במפורש, נראה שאף הוא סובר כמאירי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> מפרש שהדברים נאמרו בצחוק ובצחות לשון, כלומר, שאדם השובר ספסל הוא כנראה בעל מידות. מכך שה<strong>רמב"ם</strong> אינו מתייחס להערה זו במפורש, נראה שאף הוא סובר כמאירי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"ם</strong> (בתוספות ד"ה "כגון") מפרש שלגבי ספסל, אדם רגיל שהתיישב עליו ושברו פטור, כיוון שהוא שאול לכל אדם לשבת עליו<sup id="ref73"><a href="#fn73">[73]</a></sup>, ולכן כל הדיון בגמרא אמור לגבי אנשים כבדים במיוחד, שהספסל אינו מיועד להם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"ם</strong> (בתוספות ד"ה "כגון") מפרש שלגבי ספסל, אדם רגיל שהתיישב עליו ושברו פטור, כיוון שהוא שאול לכל אדם לשבת עליו<sup id="ref73"><a href="#fn73">[73]</a></sup>, ולכן כל הדיון בגמרא אמור לגבי אנשים כבדים במיוחד, שהספסל אינו מיועד להם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"ת</strong> מפרש (על פי הבנתו במסקנת הגמרא), שהיושב אחרונה שנסמך על כולם ומנעם מלקום צריך להיות אדם כבד במיוחד כדי שאכן לא יוכלו הראשונים לקום ויפטרו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר"ת</strong> מפרש (על פי הבנתו במסקנת הגמרא), שהיושב אחרונה שנסמך על כולם ומנעם מלקום צריך להיות אדם כבד במיוחד כדי שאכן לא יוכלו הראשונים לקום ויפטרו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לסיכום:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לסיכום:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה שהנזק היה נגרם גם על ידי המזיקים הראשונים באותו הזמן בו נגרם בתוספת האחרון (דין המרבה בחבילות)- ה<strong>נימוק"י </strong>מחייב רק את הראשונים, ואילו ה<strong>תוספות</strong> מחייבים את כולם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה שהנזק היה נגרם גם על ידי המזיקים הראשונים באותו הזמן בו נגרם בתוספת האחרון (דין המרבה בחבילות)- ה<strong>נימוק"י </strong>מחייב רק את הראשונים, ואילו ה<strong>תוספות</strong> מחייבים את כולם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה בו היה הנזק קורה גם בראשונים, אך האחרון מיהר את הנזק לבוא- אם יכלו הראשונים למנוע את הנזק קודם שיבוא, חייבים אף הם, ואם לא יכלו, חייב רק האחרון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה בו היה הנזק קורה גם בראשונים, אך האחרון מיהר את הנזק לבוא- אם יכלו הראשונים למנוע את הנזק קודם שיבוא, חייבים אף הם, ואם לא יכלו, חייב רק האחרון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה שהנזק לא היה קורה על ידי הראשונים כלל, אך יכלו להסתלק מבעוד מועד ולמנוע את הנזק- ה<strong>נימוקי יוסף </strong>מחייב רק את האחרון, ואילו <strong>רש"י</strong> וה<strong>תוספות</strong> מחייבים את כולם כל עוד יכלו להסתלק ולמנוע את הנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה שהנזק לא היה קורה על ידי הראשונים כלל, אך יכלו להסתלק מבעוד מועד ולמנוע את הנזק- ה<strong>נימוקי יוסף </strong>מחייב רק את האחרון, ואילו <strong>רש"י</strong> וה<strong>תוספות</strong> מחייבים את כולם כל עוד יכלו להסתלק ולמנוע את הנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שפא א) פוסק כדברי התוספות, שאם האחרון לא הניח לראשונים לעמוד, חייב רק הוא. כלומר, אם יכלו הראשונים לעמוד מבעוד מועד, חייבים אף הם<sup id="ref74"><a href="#fn74">[74]</a></sup>. ה<strong>רמ"א </strong>מוסיף את שיטת הרשב"ם, שכל הדיון בספסל אמור באנשים שמנים במיוחד, אך לגבי אנשים רגילים, סתם ספסל שאול להם לישיבה, ופטורים אם נשבר תוך כדי ישיבה. כמו כן הוא פוסק, שאם היה הספסל נשבר גם ללא האחרון, הוא פטור, אלא אם כן היה סיפק בידי הראשונים לקום לפני שנשבר, שאז חייבים כולם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שפא א) פוסק כדברי התוספות, שאם האחרון לא הניח לראשונים לעמוד, חייב רק הוא. כלומר, אם יכלו הראשונים לעמוד מבעוד מועד, חייבים אף הם<sup id="ref74"><a href="#fn74">[74]</a></sup>. ה<strong>רמ"א </strong>מוסיף את שיטת הרשב"ם, שכל הדיון בספסל אמור באנשים שמנים במיוחד, אך לגבי אנשים רגילים, סתם ספסל שאול להם לישיבה, ופטורים אם נשבר תוך כדי ישיבה. כמו כן הוא פוסק, שאם היה הספסל נשבר גם ללא האחרון, הוא פטור, אלא אם כן היה סיפק בידי הראשונים לקום לפני שנשבר, שאז חייבים כולם.</p>
                     
                 </div>
                 
@@ -1674,51 +1674,51 @@
             
             
             <div id="halacha-12" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אדם ושור שדחפו בהמה או כלים או אדם או בהמת פסולי המוקדשין לבור והוזק הנדחף בבור או מת או נשתברו הכלים, לענין נזקי אדם או היזק בהמה שלשתן חייבין, האדם הדוחף ובעל השור ובעל הבור, ומשלשין ביניהן, לענין דמי ולדות וארבעה דברים אדם חייב ובעל השור ובעל הבור פטורין, לענין כופר ושלשים של עבד בעל השור חייב ואדם ובעל הבור פטורין, לענין כלים ופסולי המוקדשין אדם ובעל השור חייבין ובעל הבור פטור.</strong>
                 </div>
                 
 
                 
                 <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אדם ושור שדחפו לבור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אדם ושור שדחפו לבור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (נג:) מובאים דברי <strong>רבא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (נג:) מובאים דברי <strong>רבא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>רבא</strong>: שור ואדם שדחפו לבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אמר <strong>רבא</strong>: שור ואדם שדחפו לבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לענין נזקין- כולן חייבין,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לענין נזקין- כולן חייבין,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לענין ארבעה דברים ודמי ולדות- אדם חייב ושור ובור פטור,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לענין ארבעה דברים ודמי ולדות- אדם חייב ושור ובור פטור,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לענין כופר ושלשים של עבד- שור חייב, אדם ובור פטורים,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לענין כופר ושלשים של עבד- שור חייב, אדם ובור פטורים,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לענין כלים ושור פסולי המוקדשין- אדם ושור חייבין ובור פטור,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לענין כלים ושור פסולי המוקדשין- אדם ושור חייבין ובור פטור,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מאי טעמא אמר קרא 'והמת יהיה לו' במי שהמת שלו יצא זה שאין המת שלו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מאי טעמא אמר קרא 'והמת יהיה לו' במי שהמת שלו יצא זה שאין המת שלו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדובר בנזק בו היו שותפים שלושה מזיקים- האדם והשור הדוחפים, ובעל הבור לתוכו נפל החפץ או בעל החיים הניזוק. מכיוון שישנם סוגי תשלומים שכמה ממזיקים אלו פטורים מהם, נוצרים מצבים בהם חלק מהמזיקים ישלמו, והאחרים יפטרו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר בנזק בו היו שותפים שלושה מזיקים- האדם והשור הדוחפים, ובעל הבור לתוכו נפל החפץ או בעל החיים הניזוק. מכיוון שישנם סוגי תשלומים שכמה ממזיקים אלו פטורים מהם, נוצרים מצבים בהם חלק מהמזיקים ישלמו, והאחרים יפטרו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תשלומי דמי ולדות, וארבעה דברים (צער, בושת, ריפוי ושבת) שייכים רק באדם המזיק, ולכן אם נדחף אדם לבור ונגרמו לו נזקים כאלה, חייב רק האדם הדוחף.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תשלומי דמי ולדות, וארבעה דברים (צער, בושת, ריפוי ושבת) שייכים רק באדם המזיק, ולכן אם נדחף אדם לבור ונגרמו לו נזקים כאלה, חייב רק האדם הדוחף.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תשלומי כופר ושלושים של עבד שייכים רק בשור שנגח והמית, ולכן רק בעל השור יהיה חייב אם קרה מקרה כזה (שכן אדם שהמית חייב מיתה, וגם אם המית בשגגה פטור מתשלומים).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תשלומי כופר ושלושים של עבד שייכים רק בשור שנגח והמית, ולכן רק בעל השור יהיה חייב אם קרה מקרה כזה (שכן אדם שהמית חייב מיתה, וגם אם המית בשגגה פטור מתשלומים).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה שנדחפו לבור כלים פטור בעל הבור, כיוון שלא מצינו בור שחייבים בו על כלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה שנדחפו לבור כלים פטור בעל הבור, כיוון שלא מצינו בור שחייבים בו על כלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמו כן, במקרה שנדחף שור פסולי המוקדשים לבור אין בעל הבור משלם (עי' הלכות נזקי ממון, יב יז).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כמו כן, במקרה שנדחף שור פסולי המוקדשים לבור אין בעל הבור משלם (עי' הלכות נזקי ממון, יב יז).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "שור ואדם") מחייבים לפרש שהאדם שדחף לבור עשה זאת בלא כוונה, שהרי אם נפרש שעשה זאת בכוונה, צריך בעל הבור להיות פטור, שאין הדעת נותנת שידחוף אדם שורו של חברו לבור בכוונה, ויתחייב בעל הבור, כמו שאין זה הגיוני שיזרוק אדם טליתו של חברו לאש ויתחייב מדליק האש. כדבריו כתב גם ה<strong>טור</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ד"ה "שור ואדם") מחייבים לפרש שהאדם שדחף לבור עשה זאת בלא כוונה, שהרי אם נפרש שעשה זאת בכוונה, צריך בעל הבור להיות פטור, שאין הדעת נותנת שידחוף אדם שורו של חברו לבור בכוונה, ויתחייב בעל הבור, כמו שאין זה הגיוני שיזרוק אדם טליתו של חברו לאש ויתחייב מדליק האש. כדבריו כתב גם ה<strong>טור</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מהרי"ט</strong> (הובא בשטמ"ק) אף מוסיף שגם השור שדחף יחד עם האדם אמור להיות פטור אם עשה האדם את המעשה בכוונה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מהרי"ט</strong> (הובא בשטמ"ק) אף מוסיף שגם השור שדחף יחד עם האדם אמור להיות פטור אם עשה האדם את המעשה בכוונה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">למרות זאת, ה<strong>רמב"ם</strong> לא חילק בדבריו בין מקרה בו האדם הזיק בכוונה לבין מקרה בו הזיק שלא בכוונה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">למרות זאת, ה<strong>רמב"ם</strong> לא חילק בדבריו בין מקרה בו האדם הזיק בכוונה לבין מקרה בו הזיק שלא בכוונה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי לד) פסק כדברי התוספות, שאם האדם דחף בכוונה, פטור בעל הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי לד) פסק כדברי התוספות, שאם האדם דחף בכוונה, פטור בעל הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ערוה"ש</strong> (תי מג) הבין שהשו"ע פסק אף כמהרי"ט, ואם האדם דחף בכוונה, פטור אף השור הדוחף עימו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ערוה"ש</strong> (תי מג) הבין שהשו"ע פסק אף כמהרי"ט, ואם האדם דחף בכוונה, פטור אף השור הדוחף עימו.</p>
                     
                 </div>
                 
@@ -1726,7 +1726,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1845,6 +1845,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

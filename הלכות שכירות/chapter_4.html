@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות שכירות - פרק ד</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ד)</h3>
                 <ul class="space-y-3">
@@ -954,7 +954,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -966,9 +966,9 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הפרק הרביעי עוסק בשוכר בהמת למשא או לעבודה. חלקו הראשון של הפרק עוסק במקרים בהם שינה השוכר ולא הקפיד על התנאים שהתנה המשכיר, ובסופו של דבר נגרם נזק. לדעת ר' מאיר, כל שינוי ששינה השומר שקול לשליחות יד בפיקדון וגורר חיוב, אך הלכה נפסקה כשיטת חכמים, שהדבר תלוי בקשר בין השינוי לבין התוצאה. כאשר ברור שהשינוי לא גרם לתוצאה (למשל, כאשר השינוי ששינה השוכר דווקא הקטין את הסיכוי לפגיעה ממין זה) הלכה היא שהשוכר פטור. לעומת זה, בכדי לחייב את השוכר, יש להצביע על קשר בין השינוי לבין תוצאתו. עוצמתו של קשר זה תלויה במחלוקת ראשונים, האם המְשנה מדברי המשכיר נחשב כפושע, ולכן אפילו אם אירע בסוף אונס, די בקשר כלשהו בכדי שהשוכר יתחייב, או שמא אין מדובר בפשיעה, ולכן רק אם התוצאה התרחשה באופן ישיר מהשינוי ששינה השוכר הוא חייב.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הפרק הרביעי עוסק בשוכר בהמת למשא או לעבודה. חלקו הראשון של הפרק עוסק במקרים בהם שינה השוכר ולא הקפיד על התנאים שהתנה המשכיר, ובסופו של דבר נגרם נזק. לדעת ר' מאיר, כל שינוי ששינה השומר שקול לשליחות יד בפיקדון וגורר חיוב, אך הלכה נפסקה כשיטת חכמים, שהדבר תלוי בקשר בין השינוי לבין התוצאה. כאשר ברור שהשינוי לא גרם לתוצאה (למשל, כאשר השינוי ששינה השוכר דווקא הקטין את הסיכוי לפגיעה ממין זה) הלכה היא שהשוכר פטור. לעומת זה, בכדי לחייב את השוכר, יש להצביע על קשר בין השינוי לבין תוצאתו. עוצמתו של קשר זה תלויה במחלוקת ראשונים, האם המְשנה מדברי המשכיר נחשב כפושע, ולכן אפילו אם אירע בסוף אונס, די בקשר כלשהו בכדי שהשוכר יתחייב, או שמא אין מדובר בפשיעה, ולכן רק אם התוצאה התרחשה באופן ישיר מהשינוי ששינה השוכר הוא חייב.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ד-ו עוסקות בשינוי ששינה השוכר במשא הבהמה, שגרם בסופו של דבר לנזק לבהמה. בעניין זה נקבע שהשוכר חייב רק על הכבדה בשיעור של 1/30 מהמשא המתוכנן. הראשונים נחלקו האם כל חריגה מהמשקל שסוכם נחשבת כפשיעה, או שרק אם מדובר בחריגה גם ביחס למקובל בבהמות ומשאות מסוג זה. הלכה ז ממשיכה ועוסקת בסבל שניזוק בעקבות מטען חורג שלא היה מודע לו. לסיכום דנה הלכה ח בדברים שמקובל שבהמת לרכיבה תישא עליה (מלבד את הרוכב כמובן).</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ד-ו עוסקות בשינוי ששינה השוכר במשא הבהמה, שגרם בסופו של דבר לנזק לבהמה. בעניין זה נקבע שהשוכר חייב רק על הכבדה בשיעור של 1/30 מהמשא המתוכנן. הראשונים נחלקו האם כל חריגה מהמשקל שסוכם נחשבת כפשיעה, או שרק אם מדובר בחריגה גם ביחס למקובל בבהמות ומשאות מסוג זה. הלכה ז ממשיכה ועוסקת בסבל שניזוק בעקבות מטען חורג שלא היה מודע לו. לסיכום דנה הלכה ח בדברים שמקובל שבהמת לרכיבה תישא עליה (מלבד את הרוכב כמובן).</p>
                 
             </div>
             
@@ -976,141 +976,141 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     השוכר את החמור להוליכה בהר והוליכה בבקעה אם הוחלקה פטור אף על פי שעבר על דעת הבעלים ואם הוחמה חייב, שכרה להוליכה בבקעה והוליכה בהר אם הוחלקה חייב שהחלקות יתר בהר מן הבקעה ואם הוחמה פטור שחמימות בבקעה יתר מן ההר מפני הרוח שמנשבת בראש ההרים, ואם הוחמה מחמת המעלה חייב וכן כל כיוצא בזה, וכן השוכר את הפרה לחרוש בהר וחרש בבקעה ונשבר הקנקן והוא הכלי שחורש בו הרי השוכר פטור ודין בעל הפרה עם האומנין שחרשו, וכן אם לא שינה על דעת הבעלים ונשבר הקנקן דין בעל הפרה עם האומנין, שכרה לחרוש בבקעה וחרש בהר ונשבר הקנקן השוכר חייב ודינו של שוכר עם האומנים.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ומהו דין האומנין ששברו בעת חרישה שמשלמין, מי משלם זה האוחז את הכלי בעת החרישה, ואם היתה השדה מעלות מעלות שניהם חייבים בדמי הקנקן המנהיג אותה במלמד והאוחז את הכלי.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     שכרה לדוש בקטנית ודש בתבואה והוחלקה פטור בתבואה ודש בקטנית חייב שהקטנית מחלקת, מעשה באחד שהשכיר חמור לחבירו ואמר לו לא תלך בו בדרך נהר פקוד שהמים מצויין שם אלא בדרך גרש שאין בה מים הלך בדרך נהר פקוד ומת החמור ולא היו שם עדים שמעידים באי זה דרך הלך אלא הוא מעצמו אמר בנהר פקוד הלכתי ולא היו שם מים ומחמת עצמו מת ואמרו חכמים הואיל ויש עדים שהמים בנהר פקוד מצויין חייב לשלם שהרי שינה על דעת הבעלים ואין אומרים מה לי לשקר במקום עדים.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שכר בהמה ושינה מהמקום עליו הוסכם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שכר בהמה ושינה מהמקום עליו הוסכם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (בבא מציעא עח.)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (בבא מציעא עח.)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>השוכר את החמור להוליכו בהר והוליכו בבקעה, בבקעה והוליכו בהר,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>השוכר את החמור להוליכו בהר והוליכו בבקעה, בבקעה והוליכו בהר,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אפילו זו עשר מילין וזו עשר מילין, ומתה - חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אפילו זו עשר מילין וזו עשר מילין, ומתה - חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>השוכר את החמור להוליכה בהר והוליכה בבקעה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>השוכר את החמור להוליכה בהר והוליכה בבקעה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם החליקה - פטור, ואם הוחמה - חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אם החליקה - פטור, ואם הוחמה - חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>להוליכה בבקעה והוליכה בהר, אם החליקה - חייב, ואם הוחמה - פטור,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>להוליכה בבקעה והוליכה בהר, אם החליקה - חייב, ואם הוחמה - פטור,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם מחמת המעלה - חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אם מחמת המעלה - חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה עוסקת באדם שהשכיר חמור לחבירו על דעת שהלה יוליכו בהר, וזה שינה והוליכו בבקעה, או הפוך. הנקודה הבולטת במשנה היא שלכאורה מקרה זה נידון פעמיים, ובכל פעם הדין שונה!</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה עוסקת באדם שהשכיר חמור לחבירו על דעת שהלה יוליכו בהר, וזה שינה והוליכו בבקעה, או הפוך. הנקודה הבולטת במשנה היא שלכאורה מקרה זה נידון פעמיים, ובכל פעם הדין שונה!</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ברישא נאמר "להוליכו בהר והוליכו בבקעה, בבקעה והוליכו בהר... ומתה- חייב". כלומר, כל שינוי (מהר לבקעה ומבקעה להר), גורר חיוב של השוכר. לעומת זאת, בסיפא, החיוב תלוי בשאלה מה בדיוק קרה לבהמה. סכנת החלקה מאפיינת את ההר יותר מאשר את הבקעה, וסכנת התחממות מאפיינת יותר את הבקעה מאשר את ההר. לכן, אם שינה השוכר מבקעה להר והחליקה הבהמה ומתה- חייב. לחילופין, אם שינה מהר לבקעה והתחממה הבהמה- פטור. כלומר, בניגוד לרישא, ממנה משמע ששוכר ששינה חייב תמיד, הסיפא מלמדת שאם שינה מבקעה להר והתחממה הבהמה ומתה, פטור, וכן אם שינה מהר לבקעה והחליקה הבהמה ומתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ברישא נאמר "להוליכו בהר והוליכו בבקעה, בבקעה והוליכו בהר... ומתה- חייב". כלומר, כל שינוי (מהר לבקעה ומבקעה להר), גורר חיוב של השוכר. לעומת זאת, בסיפא, החיוב תלוי בשאלה מה בדיוק קרה לבהמה. סכנת החלקה מאפיינת את ההר יותר מאשר את הבקעה, וסכנת התחממות מאפיינת יותר את הבקעה מאשר את ההר. לכן, אם שינה השוכר מבקעה להר והחליקה הבהמה ומתה- חייב. לחילופין, אם שינה מהר לבקעה והתחממה הבהמה- פטור. כלומר, בניגוד לרישא, ממנה משמע ששוכר ששינה חייב תמיד, הסיפא מלמדת שאם שינה מבקעה להר והתחממה הבהמה ומתה, פטור, וכן אם שינה מהר לבקעה והחליקה הבהמה ומתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מציעה שתי דרכים עקרוניות לתשובה על שאלה זו. הדרך האחת היא, שהרישא עוסקת דווקא במקרים מסויימים, השונים ממקרי הפטור שבסיפא (שינה מהר לבקעה והחליטה או שינה מבקעה להר והתחממה). בגישה זו הולכים מספר אמוראים המציעים אפשרויות שונות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מציעה שתי דרכים עקרוניות לתשובה על שאלה זו. הדרך האחת היא, שהרישא עוסקת דווקא במקרים מסויימים, השונים ממקרי הפטור שבסיפא (שינה מהר לבקעה והחליטה או שינה מבקעה להר והתחממה). בגישה זו הולכים מספר אמוראים המציעים אפשרויות שונות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמרי <strong>דבי</strong> <strong>רבי ינאי</strong>: רישא - שמתה מחמת אויר, דאמרינן אוירא דהר קטלה ואמרינן אוירא דבקעה קטלה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמרי <strong>דבי</strong> <strong>רבי ינאי</strong>: רישא - שמתה מחמת אויר, דאמרינן אוירא דהר קטלה ואמרינן אוירא דבקעה קטלה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יוסי בר חנינא</strong> אמר: כגון שמתה מחמת אובצנא (=עייפות).</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי יוסי בר חנינא</strong> אמר: כגון שמתה מחמת אובצנא (=עייפות).</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבה</strong> אמר: כגון שהכישה נחש</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבה</strong> אמר: כגון שהכישה נחש</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בכל האפשרויות הללו יתכן שהשינוי ששינה השוכר תרם, לפחות באופן עקיף, למות הבהמה. לכן חייב השוכר בין אם שינה מהר לבקעה ובין אם שינה מבקעה להר. זאת להבדיל ממקרה בו שינה מהר לבקעה והחליקה ומתה, או שינה מבקעה להר והתחממה ומתה, בו מעשיו של השוכר לא תרמו לתוצאה אלא אדרבה, היה בהם בכדי למונעה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בכל האפשרויות הללו יתכן שהשינוי ששינה השוכר תרם, לפחות באופן עקיף, למות הבהמה. לכן חייב השוכר בין אם שינה מהר לבקעה ובין אם שינה מבקעה להר. זאת להבדיל ממקרה בו שינה מהר לבקעה והחליקה ומתה, או שינה מבקעה להר והתחממה ומתה, בו מעשיו של השוכר לא תרמו לתוצאה אלא אדרבה, היה בהם בכדי למונעה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי חייא</strong> מציע דרך נוספת -</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי חייא</strong> מציע דרך נוספת -</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי חייא בר אבא</strong> אמר<strong> רבי יוחנן</strong>: הא מני - <strong>רבי מאיר</strong> היא, דאמר: כל המעביר על דעת של בעל הבית נקרא גזלן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי חייא בר אבא</strong> אמר<strong> רבי יוחנן</strong>: הא מני - <strong>רבי מאיר</strong> היא, דאמר: כל המעביר על דעת של בעל הבית נקרא גזלן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המשנה מכילה סתירה כיוון שמופיעות בה דעותיהם של <strong>שני תנאים שונים</strong>. הרישא שנויה על פי שיטת <strong>רבי מאיר</strong>, הסובר שמי שקיבל מחברו דבר מה ומשנה במשהו ממה שהוסכם עליו, נחשב גזלן וממילא מתחייב באחריות הפיקדון באופן מלא. לעומת זה, הסיפא אינה הולכת על פי דרך זו, ולכן דווקא אם השינוי הוביל למיתת הבהמה חייב השוכר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, המשנה מכילה סתירה כיוון שמופיעות בה דעותיהם של <strong>שני תנאים שונים</strong>. הרישא שנויה על פי שיטת <strong>רבי מאיר</strong>, הסובר שמי שקיבל מחברו דבר מה ומשנה במשהו ממה שהוסכם עליו, נחשב גזלן וממילא מתחייב באחריות הפיקדון באופן מלא. לעומת זה, הסיפא אינה הולכת על פי דרך זו, ולכן דווקא אם השינוי הוביל למיתת הבהמה חייב השוכר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בשאלת היחס בין המקרה הנידון במשנה לבין דין תחילתו בפשיעה וסופו באונס (לפני המשך הקריאה, כדאי לעיין לעיל בפרק ג', בנושא "תחילתו בפשיעה וסופו באונס ביחס לשומר")-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בשאלת היחס בין המקרה הנידון במשנה לבין דין תחילתו בפשיעה וסופו באונס (לפני המשך הקריאה, כדאי לעיין לעיל בפרק ג', בנושא "תחילתו בפשיעה וסופו באונס ביחס לשומר")-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"י</strong> (בתוספות עח. ד"ה "ר' יוסי" בתחילתו) מבין שהשוכר שלקח את הבהמה למקום בו ישנה סכנה שאיננה קיימת במקום עליו סוכם מלכתחילה, הרי הוא פושע. כפי שיבואר מיד, מבאר ר"י על פי הבנה זו את שיטות האמוראים (<strong>דבי ר' ינאי</strong>,<strong> ר' יוסי </strong>ו<strong>ר' חנינא</strong>) המסבירים באיזה מקרה מדברת הרישא של המשנה, המחייבת את השוכר על השינוי  ששינה. ר"י מצביע על קושי- על פי האוקימתות שהציעו האמוראים, חייב השוכר ששינה מהר לבקעה או הפוך אפילו אם התוצאה נבעה רק בעקיפין מהשינוי שעשה. כך למשל, אף על פי שאין ביטחון מוחלט<sup id="ref65"><a href="#fn65">[65]</a></sup> בכך שהבהמה מתה כתוצאה מהאוויר השונה, או שהתעייפה כתוצאה מכך שהיתה עליה בהר או חום בבקעה, בכל זאת, השומר ששינה חייב. גם אם נפרש שמדובר בכגון שברור לנו שמשינוי האוויר מתה או ששינוי המקום גרם לעייפות קיצונית, אנו נתקלים בהצעתו של רבה בחידוש מפליג שכן נחש יכול היה להכיש את הבהמה בהר בדיוק כשם שיכול היה להכישה בבקעה ומדוע אם כן חייב השוכר ששינה אם נחש הכיש את הבהמה? <strong>ר"י</strong> מסביר לשיטתו, שכיוון שתחילת המעשה היתה בפשיעה, חייב השוכר אף אם הקשר בין פשיעתו הראשונה לבין מות הבהמה עקיף ביותר. גם מדברי ה<strong>רא"ש</strong> בתשובה (כלל צב, סי' ב)<sup id="ref66"><a href="#fn66">[66]</a></sup> ומדברי ה<strong>טור</strong> (שט) עולה עיקרון זהה, לפיו <strong>המ</strong><strong>ְ</strong><strong>שנה ממה שהתנה עימו המשכיר, אף שלא נהג בבהמה בדרך החורגת מהמקובל עם בהמות מסוגה, נחשב פושע לכל דבריו</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר"י</strong> (בתוספות עח. ד"ה "ר' יוסי" בתחילתו) מבין שהשוכר שלקח את הבהמה למקום בו ישנה סכנה שאיננה קיימת במקום עליו סוכם מלכתחילה, הרי הוא פושע. כפי שיבואר מיד, מבאר ר"י על פי הבנה זו את שיטות האמוראים (<strong>דבי ר' ינאי</strong>,<strong> ר' יוסי </strong>ו<strong>ר' חנינא</strong>) המסבירים באיזה מקרה מדברת הרישא של המשנה, המחייבת את השוכר על השינוי  ששינה. ר"י מצביע על קושי- על פי האוקימתות שהציעו האמוראים, חייב השוכר ששינה מהר לבקעה או הפוך אפילו אם התוצאה נבעה רק בעקיפין מהשינוי שעשה. כך למשל, אף על פי שאין ביטחון מוחלט<sup id="ref65"><a href="#fn65">[65]</a></sup> בכך שהבהמה מתה כתוצאה מהאוויר השונה, או שהתעייפה כתוצאה מכך שהיתה עליה בהר או חום בבקעה, בכל זאת, השומר ששינה חייב. גם אם נפרש שמדובר בכגון שברור לנו שמשינוי האוויר מתה או ששינוי המקום גרם לעייפות קיצונית, אנו נתקלים בהצעתו של רבה בחידוש מפליג שכן נחש יכול היה להכיש את הבהמה בהר בדיוק כשם שיכול היה להכישה בבקעה ומדוע אם כן חייב השוכר ששינה אם נחש הכיש את הבהמה? <strong>ר"י</strong> מסביר לשיטתו, שכיוון שתחילת המעשה היתה בפשיעה, חייב השוכר אף אם הקשר בין פשיעתו הראשונה לבין מות הבהמה עקיף ביותר. גם מדברי ה<strong>רא"ש</strong> בתשובה (כלל צב, סי' ב)<sup id="ref66"><a href="#fn66">[66]</a></sup> ומדברי ה<strong>טור</strong> (שט) עולה עיקרון זהה, לפיו <strong>המ</strong><strong>ְ</strong><strong>שנה ממה שהתנה עימו המשכיר, אף שלא נהג בבהמה בדרך החורגת מהמקובל עם בהמות מסוגה, נחשב פושע לכל דבריו</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ראשונים רבים אחרים (ה<strong>רמב"ן</strong><sup id="ref67"><a href="#fn67">[67]</a></sup>, ה<strong>תוספות</strong> הנ"ל בסוף דבריהם, ה<strong>ריטב"א</strong> ועוד) הסבירו שכלל אין מדובר כאן בפשיעה, שהרי קיימות סכנות ייחודיות בין בבקעה (חום) ובין בהר (סכנת החלקה), ולא ניתן לטעון שאחד מהם מסוכן באופן מובהק יותר מחברו. מה גם, שדרך בני אדם לשכור בהמות ולהוליכן בין בהר ובין בבקעה. על פי פירוש זה, יש צורך לקשר ישיר יותר בין השינוי ששינה השוכר ממה שסוכם תחילה לבין התוצאה העגומה, שכן יש לתפוס את כל המעשה כרשלנות אחת. כך טוען הריטב"א, המפרש שבאוקימתות שהציעו האמוראים מדובר בכגון <strong>שידוע לנו בבירור</strong> שמתה הבהמה כתוצאה מאוויר המקום השונה או שהתעייפה ומתה בגלל המקום השונה. כך גם במקרה שהכישה נחש, חייב השוכר על ששינה רק אם שינה למקום הידוע כשורץ נחשים יותר מאשר זה שעליו סוכם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם, ראשונים רבים אחרים (ה<strong>רמב"ן</strong><sup id="ref67"><a href="#fn67">[67]</a></sup>, ה<strong>תוספות</strong> הנ"ל בסוף דבריהם, ה<strong>ריטב"א</strong> ועוד) הסבירו שכלל אין מדובר כאן בפשיעה, שהרי קיימות סכנות ייחודיות בין בבקעה (חום) ובין בהר (סכנת החלקה), ולא ניתן לטעון שאחד מהם מסוכן באופן מובהק יותר מחברו. מה גם, שדרך בני אדם לשכור בהמות ולהוליכן בין בהר ובין בבקעה. על פי פירוש זה, יש צורך לקשר ישיר יותר בין השינוי ששינה השוכר ממה שסוכם תחילה לבין התוצאה העגומה, שכן יש לתפוס את כל המעשה כרשלנות אחת. כך טוען הריטב"א, המפרש שבאוקימתות שהציעו האמוראים מדובר בכגון <strong>שידוע לנו בבירור</strong> שמתה הבהמה כתוצאה מאוויר המקום השונה או שהתעייפה ומתה בגלל המקום השונה. כך גם במקרה שהכישה נחש, חייב השוכר על ששינה רק אם שינה למקום הידוע כשורץ נחשים יותר מאשר זה שעליו סוכם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקביל חלקו הראשונים בשאלה האם הצעותיהם של האמוראים הנ"ל (<strong>דבי ר' ינאי</strong>,<strong> ר' יוסי </strong>ו<strong>ר' חנינא</strong>) תקפות להלכה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקביל חלקו הראשונים בשאלה האם הצעותיהם של האמוראים הנ"ל (<strong>דבי ר' ינאי</strong>,<strong> ר' יוסי </strong>ו<strong>ר' חנינא</strong>) תקפות להלכה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף</strong> וה<strong>רמב"ם</strong> סוברים שלמסקנת הגמרא יש להסביר את המשנה כדברי <strong>ר' חייא</strong>, שהרישא היא כרבי מאיר, ואין הלכה כמותה (כי אין הלכה כר' מאיר במה שאמר שכל המעביר על דעת בעל הבית נחשב לגזלן). לכן, להלכה נפסק רק האמור בחלק השני במִשנה, לפיו המְשנה ומוליך את הבהמה בהר, אם החליקה, נזקף הדבר לזכותו וחייב, וכמו כן המוליך את הבהמה ששכר בבקעה והתחממה ומתה, חייב. אמנם, אם אירע לבהמה דבר שאינו קשור ישירות לשינוי שעשה השוכר- פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רי"ף</strong> וה<strong>רמב"ם</strong> סוברים שלמסקנת הגמרא יש להסביר את המשנה כדברי <strong>ר' חייא</strong>, שהרישא היא כרבי מאיר, ואין הלכה כמותה (כי אין הלכה כר' מאיר במה שאמר שכל המעביר על דעת בעל הבית נחשב לגזלן). לכן, להלכה נפסק רק האמור בחלק השני במִשנה, לפיו המְשנה ומוליך את הבהמה בהר, אם החליקה, נזקף הדבר לזכותו וחייב, וכמו כן המוליך את הבהמה ששכר בבקעה והתחממה ומתה, חייב. אמנם, אם אירע לבהמה דבר שאינו קשור ישירות לשינוי שעשה השוכר- פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>טור</strong> (שט) כולל בפסק ההלכה את דעות האמוראים הנ"ל, וכותב שהשוכר המוליך את החמור למקום שונה מאשר זה שסוכם, שהאוויר שם שונה, או שיש שם ריבוי נחשים יחסי, ומתה, חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם, ה<strong>טור</strong> (שט) כולל בפסק ההלכה את דעות האמוראים הנ"ל, וכותב שהשוכר המוליך את החמור למקום שונה מאשר זה שסוכם, שהאוויר שם שונה, או שיש שם ריבוי נחשים יחסי, ומתה, חייב.</p>
                     
                 </div>
                 
                 <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שכר בהמה ושינה מדרך השימוש עליה הוסכם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שכר בהמה ושינה מדרך השימוש עליה הוסכם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (פ.)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (פ.)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>השוכר את הפרה לחרוש בהר וחרש בבקעה, אם נשבר הקנקן - פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>השוכר את הפרה לחרוש בהר וחרש בבקעה, אם נשבר הקנקן - פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בבקעה וחרש בהר, אם נשבר הקנקן - חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בבקעה וחרש בהר, אם נשבר הקנקן - חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לדוש בקטנית ודש בתבואה - פטור, לדוש בתבואה ודש בקטנית - חייב, מפני שהקטנית מחלקת.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לדוש בקטנית ודש בתבואה - פטור, לדוש בתבואה ודש בקטנית - חייב, מפני שהקטנית מחלקת.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה הראשון מדובר באדם ששכר בהמה ומחרשה (וכפי שיתבאר בהמשך, גם פועלים המבצעים את החרישה בפועל), ונשברה המחרשה. אם סוכם שיחרוש באדמת בקעה, וחרש באדמה הררית וקשה, חייב, ואם חרש באדמה פחות קשה ממה שסוכם- פטור<sup id="ref68"><a href="#fn68">[68]</a></sup>. בהתאמה, המקרה השני עוסק בבהמה שנשכרה בכדי לדוש בתבואה, החליקה וניזוקה. אם השוכר דש בתבואה מחליקה יותר ממה שסוכם, הרי הוא חייב<sup id="ref69"><a href="#fn69">[69]</a></sup>, אך אם דש בתבואה מחליקה פחות, הרי הוא פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה הראשון מדובר באדם ששכר בהמה ומחרשה (וכפי שיתבאר בהמשך, גם פועלים המבצעים את החרישה בפועל), ונשברה המחרשה. אם סוכם שיחרוש באדמת בקעה, וחרש באדמה הררית וקשה, חייב, ואם חרש באדמה פחות קשה ממה שסוכם- פטור<sup id="ref68"><a href="#fn68">[68]</a></sup>. בהתאמה, המקרה השני עוסק בבהמה שנשכרה בכדי לדוש בתבואה, החליקה וניזוקה. אם השוכר דש בתבואה מחליקה יותר ממה שסוכם, הרי הוא חייב<sup id="ref69"><a href="#fn69">[69]</a></sup>, אך אם דש בתבואה מחליקה פחות, הרי הוא פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא דנה בחורשים שעשו את העבודה בפועל-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא דנה בחורשים שעשו את העבודה בפועל-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>היכא דלא שני בה (=שינה בה), מאן משלם? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>היכא דלא שני בה (=שינה בה), מאן משלם? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב פפא</strong>: דנקיט פרשא משלם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב פפא</strong>: דנקיט פרשא משלם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב שישא בריה דרב אידי</strong> אמר: דנקיט מנא משלם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רב שישא בריה דרב אידי</strong> אמר: דנקיט מנא משלם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והלכתא: דנקיט מנא משלם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והלכתא: דנקיט מנא משלם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואי דוכתא דמחזקי גונדרי - תרוייהו משלמין</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואי דוכתא דמחזקי גונדרי - תרוייהו משלמין</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, ההנחה היא ששני אנשים עוסקים בעבודה, האחד מנהיג את הבהמה והשני מחזיק את מחרשה ונועץ אותה בקרקע. הגמרא שואלת מי משלם על שבירת המחרשה כאשר אין להחזיק את השוכר כאחראי (כלומר, אם לא שינה). <strong>רב פפא</strong> סובר שהמנהיג את הבהמה משלם, ואילו <strong>רב שישא בריה דרב אידי</strong> סובר שהנועץ את המחרשה בקרקע, וכך נפסקת הלכה. מלבד זה, הגמרא מוסיפה שאם מדובר במקום בו ישנם סלעים, ולכן הוא מוּעד לשבירה, שניהם משלמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, ההנחה היא ששני אנשים עוסקים בעבודה, האחד מנהיג את הבהמה והשני מחזיק את מחרשה ונועץ אותה בקרקע. הגמרא שואלת מי משלם על שבירת המחרשה כאשר אין להחזיק את השוכר כאחראי (כלומר, אם לא שינה). <strong>רב פפא</strong> סובר שהמנהיג את הבהמה משלם, ואילו <strong>רב שישא בריה דרב אידי</strong> סובר שהנועץ את המחרשה בקרקע, וכך נפסקת הלכה. מלבד זה, הגמרא מוסיפה שאם מדובר במקום בו ישנם סלעים, ולכן הוא מוּעד לשבירה, שניהם משלמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו ביחס בין דין השוכר לבין דין החורשים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו ביחס בין דין השוכר לבין דין החורשים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong>, <strong>תוספות</strong> (ד"ה "היכא"), ה<strong>רא"ש</strong> (סי' יג) וה<strong>טור</strong> (שט) מבינים מלשון הגמרא, שהחורשים עצמם משלמים דווקא במקום בו אין להאשים את השוכר (כלומר, "היכא דלא שני ביה"), אך במקום שהשוכר שינה ומשלם למשכיר, אין החורשים אחראים. התוספות מסבירים, שהחורשים לא קיבלו עליהם שמירה כאשר מדובר במקום מועד לתקלה. לכן, העובדה שהשוכר שינה ובחר במקום מועד לתקלה מסירה מהם אחריות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong>, <strong>תוספות</strong> (ד"ה "היכא"), ה<strong>רא"ש</strong> (סי' יג) וה<strong>טור</strong> (שט) מבינים מלשון הגמרא, שהחורשים עצמם משלמים דווקא במקום בו אין להאשים את השוכר (כלומר, "היכא דלא שני ביה"), אך במקום שהשוכר שינה ומשלם למשכיר, אין החורשים אחראים. התוספות מסבירים, שהחורשים לא קיבלו עליהם שמירה כאשר מדובר במקום מועד לתקלה. לכן, העובדה שהשוכר שינה ובחר במקום מועד לתקלה מסירה מהם אחריות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>רמב"ם</strong> כתב שתמיד משלמים החורשים (כלומר, לעיתים האוחז במחרשה ולעיתים שניהם וכדלעיל), אלא שאם השוכר שינה, משלם הוא למשכיר ואח"כ תובע את החורשים ואם לא שינה, המשכיר תובע אותם, והשוכר פטור מכל וכל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם, ה<strong>רמב"ם</strong> כתב שתמיד משלמים החורשים (כלומר, לעיתים האוחז במחרשה ולעיתים שניהם וכדלעיל), אלא שאם השוכר שינה, משלם הוא למשכיר ואח"כ תובע את החורשים ואם לא שינה, המשכיר תובע אותם, והשוכר פטור מכל וכל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> (ד"ה "אמר המאירי") מחדש שהחורשים משלמים רק אם פשעו. הגמרא מדברת על כך שהם משלמים אם לא שינה השוכר רק משום שאם שינה לאדמה קשה, יש להניח שלא פשעו ושרק מחמת שינוי הקרקע אירע הנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> (ד"ה "אמר המאירי") מחדש שהחורשים משלמים רק אם פשעו. הגמרא מדברת על כך שהם משלמים אם לא שינה השוכר רק משום שאם שינה לאדמה קשה, יש להניח שלא פשעו ושרק מחמת שינוי הקרקע אירע הנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שט ד) פסק כרמב"ם, וה<strong>רמ"א</strong> פסק כטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שט ד) פסק כרמב"ם, וה<strong>רמ"א</strong> פסק כטור.</p>
                     
                 </div>
                 
                 <div id="topic-1-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מיגו בשומר ששינה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מיגו בשומר ששינה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא מציעא פא:) מובא מעשה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (בבא מציעא פא:) מובא מעשה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דאוגר ליה חמרא לחבריה, אמר ליה: חזי, לא תיזול באורחא דנהר פקוד דאיכא מיא, זיל באורחא דנרש דליכא מיא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא גברא דאוגר ליה חמרא לחבריה, אמר ליה: חזי, לא תיזול באורחא דנהר פקוד דאיכא מיא, זיל באורחא דנרש דליכא מיא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אזיל באורחא דנהר פקוד, ומית חמרא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אזיל באורחא דנהר פקוד, ומית חמרא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כי אתא אמר: אין, באורחא דנהר פקוד אזלי, ומיהו ליכא מיא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כי אתא אמר: אין, באורחא דנהר פקוד אזלי, ומיהו ליכא מיא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רבא</strong>: מה ליה לשקר, אי בעי אמר ליה: אנא באורחא דנרש אזלי. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>רבא</strong>: מה ליה לשקר, אי בעי אמר ליה: אנא באורחא דנרש אזלי. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>אביי</strong>: מה לי לשקר במקום עדים - לא אמרינן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>אביי</strong>: מה לי לשקר במקום עדים - לא אמרינן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר באדם שהשכיר חמור לחברו, ואמר לו במפורש לא ללכת בדרך נהר פקוד משום שיש שם מים. השוכר לא שעה לתנאי, הלך באותה הדרך, ומת החמור. השוכר טוען לפנינו שאכן שינה ממה שהתנה עימו המשכיר, והלך בנהר פקוד, אך כלל לא היו שם מים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדובר באדם שהשכיר חמור לחברו, ואמר לו במפורש לא ללכת בדרך נהר פקוד משום שיש שם מים. השוכר לא שעה לתנאי, הלך באותה הדרך, ומת החמור. השוכר טוען לפנינו שאכן שינה ממה שהתנה עימו המשכיר, והלך בנהר פקוד, אך כלל לא היו שם מים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נראה שהאמוראים מסכימים, שלו היה ברור שדברי השוכר נכונים, והחמור מת מאליו<sup id="ref70"><a href="#fn70">[70]</a></sup>, היה השוכר פטור. ועדיין חלקו האמוראים בדבר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נראה שהאמוראים מסכימים, שלו היה ברור שדברי השוכר נכונים, והחמור מת מאליו<sup id="ref70"><a href="#fn70">[70]</a></sup>, היה השוכר פטור. ועדיין חלקו האמוראים בדבר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> טוען שיש לפטור את השוכר, כיוון שיש לו מיגו- לו היה רוצה לשקר יכול היה לטעון שעמד בתנאי, ומתוך שמודה שהלך דרך נהר פקוד, יש להאמין לו שלא היו שם מים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> טוען שיש לפטור את השוכר, כיוון שיש לו מיגו- לו היה רוצה לשקר יכול היה לטעון שעמד בתנאי, ומתוך שמודה שהלך דרך נהר פקוד, יש להאמין לו שלא היו שם מים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו <strong>אביי</strong> אומר שזהו "מיגו במקום עדים". כלומר, מיגו שאם נבוא להאמין לו, נצטרך להכחיש עדים, ולכן אביי מחייבו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו <strong>אביי</strong> אומר שזהו "מיגו במקום עדים". כלומר, מיגו שאם נבוא להאמין לו, נצטרך להכחיש עדים, ולכן אביי מחייבו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בהבנת דברי אביי-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בהבנת דברי אביי-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שאין הכוונה לעדים ממש, אלא שבדרך נהר פקוד ברור  לנו כבעדים ("אנן סהדי") שיש מים מצויים. על פי פירוש זה, סביר לומר שאף רבא עצמו לא יאמר שמיגו עומד מול עדים של ממש, אך שכנגד "עדות" שכזו, שאינה אלא ידיעה מפורסמת, חלקו אביי ורבא האם מיגו עומד או לא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שאין הכוונה לעדים ממש, אלא שבדרך נהר פקוד ברור  לנו כבעדים ("אנן סהדי") שיש מים מצויים. על פי פירוש זה, סביר לומר שאף רבא עצמו לא יאמר שמיגו עומד מול עדים של ממש, אך שכנגד "עדות" שכזו, שאינה אלא ידיעה מפורסמת, חלקו אביי ורבא האם מיגו עומד או לא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינו חננאל</strong> (מובא בשטמ"ק) כותב שמדובר בכגון שקיימים עדים ממש המעידים שהיו מים באותו זמן בנהר פקוד. מדברי ה<strong>רמב"ם</strong> נראה שכך גם דעתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבינו חננאל</strong> (מובא בשטמ"ק) כותב שמדובר בכגון שקיימים עדים ממש המעידים שהיו מים באותו זמן בנהר פקוד. מדברי ה<strong>רמב"ם</strong> נראה שכך גם דעתו.</p>
                     
                 </div>
                 
@@ -1118,157 +1118,157 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד-ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     השוכר את הבהמה להביא עליה מאתים ליטרין של חטים והביא מאתים ליטרין של שעורים ומתה חייב מפני שהנפח קשה למשאוי והשעורין יש להן נפח, וכן אם שכרה להביא תבואה והביא במשקלה תבן, אבל אם שכרה להביא עליה שעורים והביא במשקלן חטים ומתה פטור וכן כל כיוצא בזה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     שכר את הבהמה לרכוב עליה איש לא ירכיב עליה אשה, שכרה לרכוב עליה אשה מרכיב עליה איש, ומרכיב עליה כל אשה בין קטנה בין גדולה ואפילו מעוברת שהיא מניקה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     השוכר את הבהמה לשאת עליה משקל ידוע והוסיף על משאו אם הוסיף חלק משלשים על השיעור שפסק עמו ומתה חייב פחות מכאן פטור אבל נותן הוא שכר התוספת, שכר סתם אינו נושא אלא במשקל הידוע במדינה לאותה בהמה, ואם הוסיף חלק משלשים כגון שדרכה לשאת שלשים וטען עליה ל"א ומתה או נשברה חייב, וכן ספינה שהוסיף בה אחד משלשים על משאה וטבעה חייב לשלם דמיה.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">העמסת משקל יתר על אמצעי תובלה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">העמסת משקל יתר על אמצעי תובלה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (ב"מ פ:) מביאה <strong>ברייתא</strong> ובה מפורטים שיעורי חריגה ממטען תקין עבור אמצעי תובלה שונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (ב"מ פ:) מביאה <strong>ברייתא</strong> ובה מפורטים שיעורי חריגה ממטען תקין עבור אמצעי תובלה שונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>קב לכָּתַּף, אדריב לעריבה, כור לספינה, שלשת כורים לבורני גדולה</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>קב לכָּתַּף, אדריב לעריבה, כור לספינה, שלשת כורים לבורני גדולה</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המעמיס על סבל (=כָּתַּף) מטען החורג בשיעור של קב (6 קבים=1 סאה) מהמטען הנורמטיבי חייב בנזקיו של הסבל. בהתאמה, המעמיס על ספינה קטנה אדריב (=לתך=15 סאה) על ספינה בינונית כור (30 סאה) או על ספינה גדולה 3 כורים (90 סאה) יתר על משאם הראוי, חייב בנזקיהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, המעמיס על סבל (=כָּתַּף) מטען החורג בשיעור של קב (6 קבים=1 סאה) מהמטען הנורמטיבי חייב בנזקיו של הסבל. בהתאמה, המעמיס על ספינה קטנה אדריב (=לתך=15 סאה) על ספינה בינונית כור (30 סאה) או על ספינה גדולה 3 כורים (90 סאה) יתר על משאם הראוי, חייב בנזקיהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב פפא</strong> מסיק מהדברים הלכה בדיני מקח וממכר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב פפא</strong> מסיק מהדברים הלכה בדיני מקח וממכר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב פפא</strong>: שמע מינה סתם ספינות בת תלתין כורין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב פפא</strong>: שמע מינה סתם ספינות בת תלתין כורין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>למאי נפקא מינה? - למקח וממכר</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>למאי נפקא מינה? - למקח וממכר</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, רב פפא מבין מהברייתא שמטען ראוי עבור ספינה בינונית הוא 30 כור (בין 6 ל12 מטרים מעוקבים). מדבריו ניתן ללמוד שכל החריגות המתוארות בברייתא הן בשיעור של 1/30 מהמטען הנורמטיבי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, רב פפא מבין מהברייתא שמטען ראוי עבור ספינה בינונית הוא 30 כור (בין 6 ל12 מטרים מעוקבים). מדבריו ניתן ללמוד שכל החריגות המתוארות בברייתא הן בשיעור של 1/30 מהמטען הנורמטיבי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכל הדוגמאות שהובאו בברייתא, יוצאת דופן היא זו העוסקת בחריגת הטענה של סבל, שכן אין מדובר בו על נזק שאירע לפיקדון, אלא נזק שאדם גרם לחבירו. שוני זה הוא היסוד לשתי שאלות- ראשית, הרי גם לסבל עצמו יש חלק בנזק, שהרי יכול היה להשליכו מעליו כשהרגיש בכובדו, ושנית, מדובר בנזק עקיף בלבד, שאפשר ואינו עונה על הקריטריונים דרושים לחייב את המזיק לחבירו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכל הדוגמאות שהובאו בברייתא, יוצאת דופן היא זו העוסקת בחריגת הטענה של סבל, שכן אין מדובר בו על נזק שאירע לפיקדון, אלא נזק שאדם גרם לחבירו. שוני זה הוא היסוד לשתי שאלות- ראשית, הרי גם לסבל עצמו יש חלק בנזק, שהרי יכול היה להשליכו מעליו כשהרגיש בכובדו, ושנית, מדובר בנזק עקיף בלבד, שאפשר ואינו עונה על הקריטריונים דרושים לחייב את המזיק לחבירו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בראשונה משתי שאלות אלה מטפלת הגמרא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בראשונה משתי שאלות אלה מטפלת הגמרא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אם איתא דלא מצי ביה - בר דעת הוא, לשדיה! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אם איתא דלא מצי ביה - בר דעת הוא, לשדיה! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אביי</strong>: בשחבטו לאלתר.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>אביי</strong>: בשחבטו לאלתר.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> אמר: אפילו תימא בשלא חבטו לאלתר, לא צריכא אלא לאגרא יתירא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> אמר: אפילו תימא בשלא חבטו לאלתר, לא צריכא אלא לאגרא יתירא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב אשי</strong> אמר: הוא סבור חולשא הוא דנקיט ליה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רב אשי</strong> אמר: הוא סבור חולשא הוא דנקיט ליה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אביי</strong> מסביר שמדובר בכגון שמיד כשהניח בעל הבית את המשקל העודף על הסבל, התמוטט הלה והוזק<sup id="ref71"><a href="#fn71">[71]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אביי</strong> מסביר שמדובר בכגון שמיד כשהניח בעל הבית את המשקל העודף על הסבל, התמוטט הלה והוזק<sup id="ref71"><a href="#fn71">[71]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מסביר שאין הכוונה שבעל הבית חייב בנזקיו של הסבל, אלא שאין הסבל יכול לגבות יותר על תוספת המשקל עד שתעבור החריגה את השיעור שציינה הברייתא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> מסביר שאין הכוונה שבעל הבית חייב בנזקיו של הסבל, אלא שאין הסבל יכול לגבות יותר על תוספת המשקל עד שתעבור החריגה את השיעור שציינה הברייתא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב אשי</strong> מסביר שהסבל לא חשב שהוא נושא שיעור החורג מהרגיל וחשב שהקושי שהוא חש נובע מחולשה זמנית שלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב אשי</strong> מסביר שהסבל לא חשב שהוא נושא שיעור החורג מהרגיל וחשב שהקושי שהוא חש נובע מחולשה זמנית שלו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">להלכה פסקו כל הראשונים כרב אשי, כאשר ברור שכל שכן שבסיטואציה שמתאר אביי, חייב בעל הבית גם כן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">להלכה פסקו כל הראשונים כרב אשי, כאשר ברור שכל שכן שבסיטואציה שמתאר אביי, חייב בעל הבית גם כן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השאלה השניה נידונה בראשונים וקשורה לדין גרימת נזק בעקיפין (עי' בדברינו הלכות חובל ומזיק פ"ז הל' ז-ח). ה<strong>רמב"ן</strong> מבין שהמציאות המתוארת נכנסת בגדר של גרמא (נזק עקיף ביותר שאין מחייבים עליו) ולכן תמה מדוע חייב בעל הבית בנזקו של הסבל גם אם לא ניזוק זה מיד עם הנחת המטען העודף.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השאלה השניה נידונה בראשונים וקשורה לדין גרימת נזק בעקיפין (עי' בדברינו הלכות חובל ומזיק פ"ז הל' ז-ח). ה<strong>רמב"ן</strong> מבין שהמציאות המתוארת נכנסת בגדר של גרמא (נזק עקיף ביותר שאין מחייבים עליו) ולכן תמה מדוע חייב בעל הבית בנזקו של הסבל גם אם לא ניזוק זה מיד עם הנחת המטען העודף.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו ה<strong>ריטב"א</strong> משווה מקרה זה לדוגמה מוכרת של גרמי (נזק שמחייבים עליו)- המראה דינר לשולחני והטעהו. במקרה זה חייב אדם שנגרם לו נזק בגלל עצה שגויה של בעל מקצוע. במקביל, גם כאן הטעה בעל הבית המעמיס את הסבל בכך שהוסיף לו מטען עודף שלא מדעתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו ה<strong>ריטב"א</strong> משווה מקרה זה לדוגמה מוכרת של גרמי (נזק שמחייבים עליו)- המראה דינר לשולחני והטעהו. במקרה זה חייב אדם שנגרם לו נזק בגלל עצה שגויה של בעל מקצוע. במקביל, גם כאן הטעה בעל הבית המעמיס את הסבל בכך שהוסיף לו מטען עודף שלא מדעתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלבד סוגיית החיוב בנזק שנגרם לפיקדון (או לסבל) מהטענת היתר, דנים הראשונים גם בשאלה האם צריך השוכר לשלם יותר למשכיר על כך שהשתמש בכלי התובלה השכור למטען עודף על המתוכנן. שאלה זו שייכת, כמובן, אפילו בהיעדר נזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלבד סוגיית החיוב בנזק שנגרם לפיקדון (או לסבל) מהטענת היתר, דנים הראשונים גם בשאלה האם צריך השוכר לשלם יותר למשכיר על כך שהשתמש בכלי התובלה השכור למטען עודף על המתוכנן. שאלה זו שייכת, כמובן, אפילו בהיעדר נזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המפרשים הבינו מדברי רבא, שלדעתו כל עוד שיעור חריגת ההטענה אינו חוצה את סף ה 1/30 (בו נוצר חיוב אם הוזק אמצעי התובלה), אין צריך השוכר לשלם למשכיר את החריגה. כיוון שהלכה לא נפסקה כרבא, נחלקו הראשונים האם יש לשלם על חריגה גם כאשר היא קטנה מ 1/30-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המפרשים הבינו מדברי רבא, שלדעתו כל עוד שיעור חריגת ההטענה אינו חוצה את סף ה 1/30 (בו נוצר חיוב אם הוזק אמצעי התובלה), אין צריך השוכר לשלם למשכיר את החריגה. כיוון שהלכה לא נפסקה כרבא, נחלקו הראשונים האם יש לשלם על חריגה גם כאשר היא קטנה מ 1/30-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי ה<strong>ריטב"א</strong> (ד"ה "אמר אבי"), משמע שלדעתו, למרות שדברי רבא בהבנת המקרה של העמסת יתר על סבל אינם נפסקים להלכה, הרקע שלהם נשאר להלכה, ולכן יש לשלם תוספת רק על חריגת הטענה מעבר לסף המביא לחיוב בנזק. גם ה<strong>רמ"ך</strong> (מובא בשטמ"ק) שוקל אפשרות זו אך נשאר בצ"ע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי ה<strong>ריטב"א</strong> (ד"ה "אמר אבי"), משמע שלדעתו, למרות שדברי רבא בהבנת המקרה של העמסת יתר על סבל אינם נפסקים להלכה, הרקע שלהם נשאר להלכה, ולכן יש לשלם תוספת רק על חריגת הטענה מעבר לסף המביא לחיוב בנזק. גם ה<strong>רמ"ך</strong> (מובא בשטמ"ק) שוקל אפשרות זו אך נשאר בצ"ע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רמב"ם</strong> לפנינו פוסק שיש לשלם תוספת עבור כל חריגה, אפילו היא קטנה מהחריגה המחייבת על נזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>רמב"ם</strong> לפנינו פוסק שיש לשלם תוספת עבור כל חריגה, אפילו היא קטנה מהחריגה המחייבת על נזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שח ה-ז) כותב כלשון הרמב"ם להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שח ה-ז) כותב כלשון הרמב"ם להלכה.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">העמסת יתר על בהמה- משקל מול נפח</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">העמסת יתר על בהמה- משקל מול נפח</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (פ.)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (פ.)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>השוכר את החמור להביא עליה חטין והביא עליה שעורין - חייב, תבואה והביא עליה תבן - חייב, מפני שהנפח קשה כמשאוי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>השוכר את החמור להביא עליה חטין והביא עליה שעורין - חייב, תבואה והביא עליה תבן - חייב, מפני שהנפח קשה כמשאוי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>להביא לתך חטין והביא לתך שעורין – פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>להביא לתך חטין והביא לתך שעורין – פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואם מוסיף על משאו – חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואם מוסיף על משאו – חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכמה יוסיף על משאו ויהא חייב? <strong>סומכוס</strong> אומר משום <strong>רבי מאיר</strong>: סאה לגמל, שלשה קבין לחמור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>וכמה יוסיף על משאו ויהא חייב? <strong>סומכוס</strong> אומר משום <strong>רבי מאיר</strong>: סאה לגמל, שלשה קבין לחמור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הנחת העבודה מאחורי הדוגמאות שבמשנה היא שמשא חיטים כבד ממשא שעורים באותו הנפח. ליתר דיוק, מדברי הגמרא עולה שנפח של 15 סאה חיטים, שהם נפח של לתך (שהוא חצי כור<sup id="ref72"><a href="#fn72">[72]</a></sup>), כבד כמשא שעורים בנפח של 16 סאה. בנוסף נזכיר את יחסי מידות הנפח- 1 לתך = 15 סאה וכמו כן, 1 סאה = 6 קבים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הנחת העבודה מאחורי הדוגמאות שבמשנה היא שמשא חיטים כבד ממשא שעורים באותו הנפח. ליתר דיוק, מדברי הגמרא עולה שנפח של 15 סאה חיטים, שהם נפח של לתך (שהוא חצי כור<sup id="ref72"><a href="#fn72">[72]</a></sup>), כבד כמשא שעורים בנפח של 16 סאה. בנוסף נזכיר את יחסי מידות הנפח- 1 לתך = 15 סאה וכמו כן, 1 סאה = 6 קבים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה מביאה שני מקרים בהם סוכם שהחמור ישמש למשא חיטים, והשוכר שינה והעמיס עליו שעורים והוזק החמור. בחלק השני ("להביא לתך חטין...") מדובר בכגון שסוכם על <strong>נפח</strong> מסויים של חיטים, והשוכר העמיס סחורה קלה יותר באותו נפח. במקרה זה ברור שמה ששינה השוכר מקל על החמור, ולכן פטור הוא על הנזק שאירע לחמור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה מביאה שני מקרים בהם סוכם שהחמור ישמש למשא חיטים, והשוכר שינה והעמיס עליו שעורים והוזק החמור. בחלק השני ("להביא לתך חטין...") מדובר בכגון שסוכם על <strong>נפח</strong> מסויים של חיטים, והשוכר העמיס סחורה קלה יותר באותו נפח. במקרה זה ברור שמה ששינה השוכר מקל על החמור, ולכן פטור הוא על הנזק שאירע לחמור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ברישא המקרה המדובר אינו מתואר במדוייק. המשנה מטעימה את הדין בכך שריבוי הנפח שקול כריבוי משקל ("שהנפח קשה כמשאוי"), ומתוך הסבר זה ניתן להבין שמדובר בשוכר שהרבה על המטען עליו הוסכם, אך לא (רק) במובן של המשקל אלא (גם) במובן של הנפח. על רקע הסבר זה חלקו האמוראים בביאור הרישא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ברישא המקרה המדובר אינו מתואר במדוייק. המשנה מטעימה את הדין בכך שריבוי הנפח שקול כריבוי משקל ("שהנפח קשה כמשאוי"), ומתוך הסבר זה ניתן להבין שמדובר בשוכר שהרבה על המטען עליו הוסכם, אך לא (רק) במובן של המשקל אלא (גם) במובן של הנפח. על רקע הסבר זה חלקו האמוראים בביאור הרישא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>אביי</strong> אמר: קשה <strong>כ</strong>משאוי תנן,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>אביי</strong> אמר: קשה <strong>כ</strong>משאוי תנן,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> אמר: קשה <strong>ל</strong>משאוי תנן.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> אמר: קשה <strong>ל</strong>משאוי תנן.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מסבירה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אביי אמר: קשה <strong>כ</strong>משאוי תנן- נפחא כי תקלא, ואי מוסיף שלשה קבין - חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אביי אמר: קשה <strong>כ</strong>משאוי תנן- נפחא כי תקלא, ואי מוסיף שלשה קבין - חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רבא אמר: קשה <strong>ל</strong>משאוי תנן- תקלא כי תקלא, ונפחא הוי תוספת.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רבא אמר: קשה <strong>ל</strong>משאוי תנן- תקלא כי תקלא, ונפחא הוי תוספת.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לדעת <strong>אביי</strong>, יש לגרוס "שהנפח קשה <strong>כ</strong>משאוי". כלומר, מדובר בכגון שהעמיס משא שעורים <strong>שנפחו</strong> חורג משמעותית מנפח החיטים אותם היה אמור להעמיס. כפי שיתבאר בהלכה הבאה, חריגה משמעותית מוגדרת כחריגה של 1/30, ולכן אם היה אמור להעמיס לתך של חיטים, אם העמיס שעורים בנפח של לתך ושלושה קבים (= 15.5 סאה), אף ש<strong>משקלם</strong> <strong>נמוך</strong> ממשקל לתך החיטים אותו היה אמור להעמיס, עדיין מביאה חריגת <strong>הנפח</strong> את השוכר לשאת באחריות לנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, לדעת <strong>אביי</strong>, יש לגרוס "שהנפח קשה <strong>כ</strong>משאוי". כלומר, מדובר בכגון שהעמיס משא שעורים <strong>שנפחו</strong> חורג משמעותית מנפח החיטים אותם היה אמור להעמיס. כפי שיתבאר בהלכה הבאה, חריגה משמעותית מוגדרת כחריגה של 1/30, ולכן אם היה אמור להעמיס לתך של חיטים, אם העמיס שעורים בנפח של לתך ושלושה קבים (= 15.5 סאה), אף ש<strong>משקלם</strong> <strong>נמוך</strong> ממשקל לתך החיטים אותו היה אמור להעמיס, עדיין מביאה חריגת <strong>הנפח</strong> את השוכר לשאת באחריות לנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, לדעת <strong>רבא</strong> יש לגרוס "שהנפח קשה <strong>ל</strong>משאוי". כלומר, חריגת הנפח אינה שוות ערך לחריגה מהמשקל, ולכן היא בעלת משמעות רק בין משקלים שווים. לפיכך מפרש רבא, שמדובר בכגון שטען השוכר את החמור בשעורים עד כדי משקל החיטים אותם היה אמור לטעון. כיוון שהשעורים כבדות מהחיטים, נמצא שהמטען חורג בנפחו ממה שסוכם. במקרה זה יהיה השוכר חייב. כך, דרך משל, אם סוכם על מטען חיטים בנפח לתך, אם הטעין השוכר את החמור בשעורים באותו משקל (שנפחם 16 סאה, כדלעיל), חייב על חריגת הנפח (16 סאה פחות 1 לתך = סאה אחת יתרה).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת, לדעת <strong>רבא</strong> יש לגרוס "שהנפח קשה <strong>ל</strong>משאוי". כלומר, חריגת הנפח אינה שוות ערך לחריגה מהמשקל, ולכן היא בעלת משמעות רק בין משקלים שווים. לפיכך מפרש רבא, שמדובר בכגון שטען השוכר את החמור בשעורים עד כדי משקל החיטים אותם היה אמור לטעון. כיוון שהשעורים כבדות מהחיטים, נמצא שהמטען חורג בנפחו ממה שסוכם. במקרה זה יהיה השוכר חייב. כך, דרך משל, אם סוכם על מטען חיטים בנפח לתך, אם הטעין השוכר את החמור בשעורים באותו משקל (שנפחם 16 סאה, כדלעיל), חייב על חריגת הנפח (16 סאה פחות 1 לתך = סאה אחת יתרה).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו כיצד להבין את ההשוואה שעושה אביי בין נפח לבין משקל<sup id="ref73"><a href="#fn73">[73]</a></sup>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו כיצד להבין את ההשוואה שעושה אביי בין נפח לבין משקל<sup id="ref73"><a href="#fn73">[73]</a></sup>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי ה<strong>תוספות</strong> (פ: ד"ה "תרגמה") עולה, שאין לקחת עיקרון זה עד לקצה, שהרי ברור שישנם מטענים בעלי משקל סגולי (משקל לק"ג) גבוה, שבהם נפח המשא יהיה קטן ביותר, וברור שאם הטעין השוכר מטען בעל משקל סגולי נמוך מאד באותו הנפח הדבר לא הביא לשום נזק לבהמה<sup id="ref74"><a href="#fn74">[74]</a></sup>. מאידך, התוספות אינם מתווים קו ברור עד היכן ניתן למתוח את העיקרון שבדברי אביי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי ה<strong>תוספות</strong> (פ: ד"ה "תרגמה") עולה, שאין לקחת עיקרון זה עד לקצה, שהרי ברור שישנם מטענים בעלי משקל סגולי (משקל לק"ג) גבוה, שבהם נפח המשא יהיה קטן ביותר, וברור שאם הטעין השוכר מטען בעל משקל סגולי נמוך מאד באותו הנפח הדבר לא הביא לשום נזק לבהמה<sup id="ref74"><a href="#fn74">[74]</a></sup>. מאידך, התוספות אינם מתווים קו ברור עד היכן ניתן למתוח את העיקרון שבדברי אביי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רמב"ן</strong> מסביר את דברי אביי באופן שמאפשר את ההבנה, שדבריו אמורים בכל חריגת נפח. הרמב"ן מסביר שלאביי</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>רמב"ן</strong> מסביר את דברי אביי באופן שמאפשר את ההבנה, שדבריו אמורים בכל חריגת נפח. הרמב"ן מסביר שלאביי</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כל המשנה ידו על התחתונה ותולין לו בדברים שאין דרכן בכך, ואזדא לטעמיה דאמר בפשע בה ומתה כדרכה חייב</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כל המשנה ידו על התחתונה ותולין לו בדברים שאין דרכן בכך, ואזדא לטעמיה דאמר בפשע בה ומתה כדרכה חייב</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אביי אכן מסכים שריבוי הנפח, בניגוד לריבוי משקל, אינו יכול להביא, כשלעצמו, למיתת הבהמה, אך בדיוק כשם שאביי מחייב אם פשע בבהמה ויצאה לאגם ושם מתה כדרכה (עי' לעיל סוף פרק ג' בדין "תחילתו בפשיעה וסופו באונס"), למרות שהיתה מתה בכל אופן, מחייב הוא גם כאן<sup id="ref75"><a href="#fn75">[75]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אביי אכן מסכים שריבוי הנפח, בניגוד לריבוי משקל, אינו יכול להביא, כשלעצמו, למיתת הבהמה, אך בדיוק כשם שאביי מחייב אם פשע בבהמה ויצאה לאגם ושם מתה כדרכה (עי' לעיל סוף פרק ג' בדין "תחילתו בפשיעה וסופו באונס"), למרות שהיתה מתה בכל אופן, מחייב הוא גם כאן<sup id="ref75"><a href="#fn75">[75]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נקודה נוספת בה נחלקו הראשונים קשורה לעובדה שבניגוד למציעתא, בה נתבאר שהחמור הושכר בשביל לשאת לתך חיטים, ברישא לא צויינה שום מידה מסויימת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נקודה נוספת בה נחלקו הראשונים קשורה לעובדה שבניגוד למציעתא, בה נתבאר שהחמור הושכר בשביל לשאת לתך חיטים, ברישא לא צויינה שום מידה מסויימת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong>, ה<strong>רמב"ן</strong> ורוב הראשונים הבינו שגם ברישא מדובר על בהמה שהושכרה על מנת לשאת לתך חיטים, שהוא נפח החיטים המקובל שחמור אמור לשאת. לכן, החריגה המחייבת את השוכר (בין לפי הסברו של אביי ובין לפי הסברו של רבא) היא חריגה מהמקובל כמטען בבהמות אחרות מסוג זה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong>, ה<strong>רמב"ן</strong> ורוב הראשונים הבינו שגם ברישא מדובר על בהמה שהושכרה על מנת לשאת לתך חיטים, שהוא נפח החיטים המקובל שחמור אמור לשאת. לכן, החריגה המחייבת את השוכר (בין לפי הסברו של אביי ובין לפי הסברו של רבא) היא חריגה מהמקובל כמטען בבהמות אחרות מסוג זה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong> הבין מדברי ה<strong>רמב"ם</strong> אחרת. לדבריו, הרמב"ם מפרש שברישא מדובר בכגון שסוכם על משקל חיטים מסויים (200 ליטרים בדוגמה שמביא הרמב"ם<sup id="ref76"><a href="#fn76">[76]</a></sup>). חריגה מנפח החיטים המקביל למשקל זה מחייבת את השוכר אפילו אם עדיין המטען מצומצם ממה שנהוג בבהמות אחרות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong> הבין מדברי ה<strong>רמב"ם</strong> אחרת. לדבריו, הרמב"ם מפרש שברישא מדובר בכגון שסוכם על משקל חיטים מסויים (200 ליטרים בדוגמה שמביא הרמב"ם<sup id="ref76"><a href="#fn76">[76]</a></sup>). חריגה מנפח החיטים המקביל למשקל זה מחייבת את השוכר אפילו אם עדיין המטען מצומצם ממה שנהוג בבהמות אחרות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>בית יוסף</strong> (שח, ד"ה "לשון הרמב"ם") מציע  בשם <strong>תלמיד הרשב"א</strong>, שאין באמת מחלוקת בדבר, אלא שדברי הרמב"ם אמורים דווקא במקום בו המשכיר עצמו הגביל את המשא המותר עבור בהמתו. במקרה זה יש להבין שמתוך היכרותו את הבהמה ידע שאם תישא משא רב יותר, אפילו ששאר בהמות נושאות אותו, היא עלולה להינזק. לעומת זה, אם השוכר ציין את המשקל/נפח אותו הוא רוצה לשאת על הבהמה, אם הוסיף עליו עד כדי המידה אותה רגילות לשאת בהמות אחרות, אין להחזיקו כאחראי על נזקים הנגרמים לבהמה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>בית יוסף</strong> (שח, ד"ה "לשון הרמב"ם") מציע  בשם <strong>תלמיד הרשב"א</strong>, שאין באמת מחלוקת בדבר, אלא שדברי הרמב"ם אמורים דווקא במקום בו המשכיר עצמו הגביל את המשא המותר עבור בהמתו. במקרה זה יש להבין שמתוך היכרותו את הבהמה ידע שאם תישא משא רב יותר, אפילו ששאר בהמות נושאות אותו, היא עלולה להינזק. לעומת זה, אם השוכר ציין את המשקל/נפח אותו הוא רוצה לשאת על הבהמה, אם הוסיף עליו עד כדי המידה אותה רגילות לשאת בהמות אחרות, אין להחזיקו כאחראי על נזקים הנגרמים לבהמה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>נימוקי יוסף</strong> (נ. מדפי הרי"ף ד"ה "פטור") מציע מעין שיטת ביניים, לפיה אם הוסיף על המשא המקסימלי הראוי לבהמה, חייב אפילו אם לא בטוח שמחמת תוספת המשא מתה הבהמה. לעומת זאת, אם הוסיף רק ביחס למה שסוכם, אך המשא לא חרג מהמקובל לבהמה כדוגמת זו, חייב רק אם ברור שמחמת תוספת המשא מתה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>נימוקי יוסף</strong> (נ. מדפי הרי"ף ד"ה "פטור") מציע מעין שיטת ביניים, לפיה אם הוסיף על המשא המקסימלי הראוי לבהמה, חייב אפילו אם לא בטוח שמחמת תוספת המשא מתה הבהמה. לעומת זאת, אם הוסיף רק ביחס למה שסוכם, אך המשא לא חרג מהמקובל לבהמה כדוגמת זו, חייב רק אם ברור שמחמת תוספת המשא מתה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שח ד) מעתיק את לשון הרמב"ם להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שח ד) מעתיק את לשון הרמב"ם להלכה.</p>
                     
                 </div>
                 
                 <div id="topic-2-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השוכר בהמה לרכיבת איש או אשה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">השוכר בהמה לרכיבת איש או אשה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (מ"ב עט:) מובאת <strong>ברייתא</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (מ"ב עט:) מובאת <strong>ברייתא</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: השוכר את החמור לרכוב עליה איש - לא תרכב עליה אשה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנו רבנן: השוכר את החמור לרכוב עליה איש - לא תרכב עליה אשה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אשה - רוכב עליה איש.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אשה - רוכב עליה איש.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואשה - בין גדולה ובין קטנה אפילו מעוברת ואפילו מניקה. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואשה - בין גדולה ובין קטנה אפילו מעוברת ואפילו מניקה. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבהירה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מבהירה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>השתא מניקה אמרת, מעוברת מיבעיא? - אמר <strong>רב פפא</strong>: מעוברת והיא מניקה קאמר</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>השתא מניקה אמרת, מעוברת מיבעיא? - אמר <strong>רב פפא</strong>: מעוברת והיא מניקה קאמר</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, השוכר חמור למטרת רכיבה של איש, אסור לו להשתמש בו לרכיבת אשה. מאידך, אם שכרו לרכיבת אשה, מותר לגבר לרכוב עליו. כמו כן, במקרה זה מותר לכל אשה לרכוב עליו, אפילו אם הדבר כרוך במשקל יתר, כגון באשה מעוברת שהיא גם מניקה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, השוכר חמור למטרת רכיבה של איש, אסור לו להשתמש בו לרכיבת אשה. מאידך, אם שכרו לרכיבת אשה, מותר לגבר לרכוב עליו. כמו כן, במקרה זה מותר לכל אשה לרכוב עליו, אפילו אם הדבר כרוך במשקל יתר, כגון באשה מעוברת שהיא גם מניקה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בטעם ההבדל בין גבר לאשה מסביר <strong>רבינו יונתן</strong> שישיבת אשה קשה לבהמה יותר מישיבת איש<sup id="ref77"><a href="#fn77">[77]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בטעם ההבדל בין גבר לאשה מסביר <strong>רבינו יונתן</strong> שישיבת אשה קשה לבהמה יותר מישיבת איש<sup id="ref77"><a href="#fn77">[77]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong>, ה<strong>ריטב"א</strong> וה<strong>ר"ן</strong> מציינים שבניגוד להעמסת יתר על בהמה, במקרה דנן, אין בשינוי מרכיבת גבר לרכיבת אשה בכדי לחייב את השוכר אם מתה הבהמה, שכן סוף סוף מדובר בשימוש סביר ושכיח בבהמות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"א</strong>, ה<strong>ריטב"א</strong> וה<strong>ר"ן</strong> מציינים שבניגוד להעמסת יתר על בהמה, במקרה דנן, אין בשינוי מרכיבת גבר לרכיבת אשה בכדי לחייב את השוכר אם מתה הבהמה, שכן סוף סוף מדובר בשימוש סביר ושכיח בבהמות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לא כתב במפורש דברים שונים מאלה, אך <strong>המגיד משנה</strong> מעלה את האפשרות שמחלוקת הרמב"ם עם הרשב"א שהזכרנו בנושא הקודם שייכת גם לגבי שינוי הרוכב מגבר לאשה. לפיכך, יש לחייב את השוכר ששינה מרוכב גבר לרוכבת אשה אם מתה הבהמה בעקבות המעשה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לא כתב במפורש דברים שונים מאלה, אך <strong>המגיד משנה</strong> מעלה את האפשרות שמחלוקת הרמב"ם עם הרשב"א שהזכרנו בנושא הקודם שייכת גם לגבי שינוי הרוכב מגבר לאשה. לפיכך, יש לחייב את השוכר ששינה מרוכב גבר לרוכבת אשה אם מתה הבהמה בעקבות המעשה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שח א-ב) כותב את דברי הרמב"ם להלכה. ה<strong>רמ"א</strong> מוסיף את דברי הרשב"א והריטב"א וכנגדה את שיטת הרמב"ם על פי הבנת המגיד משנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שח א-ב) כותב את דברי הרמב"ם להלכה. ה<strong>רמ"א</strong> מוסיף את דברי הרשב"א והריטב"א וכנגדה את שיטת הרמב"ם על פי הבנת המגיד משנה.</p>
                     
                 </div>
                 
@@ -1276,19 +1276,19 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הכתף שהוסיף על משאו קב אחד הוזק במשא זה חייב בנזקיו, שאע"פ שהוא בן דעת והרי הוא מרגיש בכובד המשא יעלה על לבו שמא מחמת חוליו הוא זה הכובד.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המעמיס מטען חורג על סבל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המעמיס מטען חורג על סבל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' מה שכתבנו בדין זה לעיל (החל מעמוד 64)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' מה שכתבנו בדין זה לעיל (החל מעמוד 64)</p>
                     
                 </div>
                 
@@ -1296,43 +1296,43 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     השוכר את החמור לרכוב עליה יש לו להניח עליה כסותו ולגינו ומזונותיו של אותו הדרך לפי שאין דרך השוכר לחזור בכל מלון ומלון לקנות מזונות יתר על זה הרי מעכב עליו בעל החמור, וכן יש לבעל החמור להניח עליה שעורים ותבן מזונות של אותו היום יתר על זה השוכר מעכב מפני שאפשר לו לקנות בכל מלון ומלון, לפיכך אם אין שם מאין יקנה מניח עליו מזונותיו ומזונות בהמתו של כל אותה הדרך, וכל אלו הדברים בשוכר סתם ובמקום שאין מנהג ידוע אבל במקום שיש מנהג הכל לפי המנהג.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מטען מותר ואסור בחמור הנשכר לרכיבה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מטען מותר ואסור בחמור הנשכר לרכיבה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (בבא מציעא דף עט:) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (בבא מציעא דף עט:) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: השוכר את החמור לרכוב עליה - שוכר מניח עליה כסותו ולגנותו ומזונות של אותה הדרך,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנו רבנן: השוכר את החמור לרכוב עליה - שוכר מניח עליה כסותו ולגנותו ומזונות של אותה הדרך,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מכאן ואילך חמר מעכב עליו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מכאן ואילך חמר מעכב עליו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חמר - מניח עליו שעורים ותבן ומזונותיו של אותו היום,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>חמר - מניח עליו שעורים ותבן ומזונותיו של אותו היום,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מכאן ואילך שוכר מעכב עליו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מכאן ואילך שוכר מעכב עליו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, השוכר חמור לרכוב עליו, כוונתו בוודאי לכך שהחמור יסחוב גם את כל צרכי הדרך. אמנם, כיוון שיש צרכי דרך שניתן לקנותם בתחנות שלאורך הדרך (כך שהחמור יסחוב רק את הנצרך מתחנה לתחנה) יש כאן נקודת מחלוקת בין השוכר למשכיר. באשר לצרכי הרוכב, שוכר מעדיף לקחת על החמור את כל צרכי הדרך, כך שלא יצטרך לקנות באמצע הדרך דברי מאכל ומשקה. מולו למשכיר יש אינטרס להקל ממשא החמור במידת האפשר. בזה פוסקת הברייתא שיכול השוכר לקחת את מזונות כל הדרך על החמור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, השוכר חמור לרכוב עליו, כוונתו בוודאי לכך שהחמור יסחוב גם את כל צרכי הדרך. אמנם, כיוון שיש צרכי דרך שניתן לקנותם בתחנות שלאורך הדרך (כך שהחמור יסחוב רק את הנצרך מתחנה לתחנה) יש כאן נקודת מחלוקת בין השוכר למשכיר. באשר לצרכי הרוכב, שוכר מעדיף לקחת על החמור את כל צרכי הדרך, כך שלא יצטרך לקנות באמצע הדרך דברי מאכל ומשקה. מולו למשכיר יש אינטרס להקל ממשא החמור במידת האפשר. בזה פוסקת הברייתא שיכול השוכר לקחת את מזונות כל הדרך על החמור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נקודה אחרת היא במקרה של שוכר חמור עם אדם המטפל בו ומוליכו- חַמַר. במקרה זה בוודאי שהחמור נושא גם את הדברם הנחוצים לחמר ובכללם את מזונותיו של החמר והחמור עצמו. כאן מתהפכים האינטרסים- החמר מעדיף לקחת את הצידה לכל הדרך, גם אם הדבר אומר שהחמור יכול לסחוב פחות מחפצי השוכר, בכדי שלא יצטרך לקנות מזון לו לחמור לאורך הדרך. כנגדו, השוכר רוצה להעמיס את החמור מחפציו כל מה שיוכל, ולכן הוא מעדיף שהחמר יקנה מזון לאורך הדרך ולא יקח את מזון כל הדרך על החמור. בעניין זה פוסקת הברייתא גם כן לטובת השוכר, שהחמר רשאי לקחת על החמר רק מזון ליום אחד, עד שיוכל לקנות עוד בעצירה הבאה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נקודה אחרת היא במקרה של שוכר חמור עם אדם המטפל בו ומוליכו- חַמַר. במקרה זה בוודאי שהחמור נושא גם את הדברם הנחוצים לחמר ובכללם את מזונותיו של החמר והחמור עצמו. כאן מתהפכים האינטרסים- החמר מעדיף לקחת את הצידה לכל הדרך, גם אם הדבר אומר שהחמור יכול לסחוב פחות מחפצי השוכר, בכדי שלא יצטרך לקנות מזון לו לחמור לאורך הדרך. כנגדו, השוכר רוצה להעמיס את החמור מחפציו כל מה שיוכל, ולכן הוא מעדיף שהחמר יקנה מזון לאורך הדרך ולא יקח את מזון כל הדרך על החמור. בעניין זה פוסקת הברייתא גם כן לטובת השוכר, שהחמר רשאי לקחת על החמר רק מזון ליום אחד, עד שיוכל לקנות עוד בעצירה הבאה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבררת את חוסר הסימטריה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מבררת את חוסר הסימטריה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>היכי דמי? אי דשכיח למזבן - חמר נמי ליעכב, ואי דלא שכיח למזבן - שוכר נמי לא ליעכב!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>היכי דמי? אי דשכיח למזבן - חמר נמי ליעכב, ואי דלא שכיח למזבן - שוכר נמי לא ליעכב!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר רב פפא: לא צריכא, דשכיח למטרח ולמזבן מאוונא לאוונא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר רב פפא: לא צריכא, דשכיח למטרח ולמזבן מאוונא לאוונא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חמר דרכיה למטרח ולמזבן שוכר לאו דרכיה למטרח ולמזבן.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>חמר דרכיה למטרח ולמזבן שוכר לאו דרכיה למטרח ולמזבן.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אין דרכו של השוכר לקנות מזון בכל מלון ומלון בדרך, מה שאין כן החמר שזו דרכו ולכן יש לו לקחת רק צידה של יום אחד המספיקה עד העצירה הבאה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אין דרכו של השוכר לקנות מזון בכל מלון ומלון בדרך, מה שאין כן החמר שזו דרכו ולכן יש לו לקחת רק צידה של יום אחד המספיקה עד העצירה הבאה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כדברי הברייתא ומוסיף שאם אין אפשרות לקנות בדרך, יש גם לחמר לקחת על החמור צידה לכל הדרך. ה<strong>שו"ע</strong> (שח ג) כותב כדברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כדברי הברייתא ומוסיף שאם אין אפשרות לקנות בדרך, יש גם לחמר לקחת על החמור צידה לכל הדרך. ה<strong>שו"ע</strong> (שח ג) כותב כדברי הרמב"ם.</p>
                     
                 </div>
                 
@@ -1340,7 +1340,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1429,6 +1429,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

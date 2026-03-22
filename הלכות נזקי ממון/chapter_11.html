@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק יא</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק יא)</h3>
                 <ul class="space-y-3">
@@ -1028,7 +1028,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1041,25 +1041,25 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כמה הוא הכופר, כמו שיראו הדיינין שהוא דמי הנהרג הכל לפי שוויו של נהרג שנ' +שמות כ"א ל"ב+ ונתן פדיון נפשו ככל אשר יושת עליו, וכופר העבדים בין גדולים בין קטנים זכרים או נקבות הוא הקנס הקצוב בתורה +שמות כ"א ל"ב+ שלשים סלע כסף יפה בין שהיה העבד שוה מאה מנה בין שאינו שוה אלא דינר, וכל המעוכב גט שחרור אין לו קנס הואיל ואין לו אדון שהרי יצא לחירות. </strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומת הכופר וקנס העבד</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שומת הכופר וקנס העבד</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מ.) מביאה ברייתא ובה מחלוקת תנאים לגבי משמעות הביטוי "ונתן פדיון נפשו" האמור בקנס (כלומר, 'נפשו' של מי)- <strong>תנא קמא</strong> סובר שיש לתת את דמי הניזק, ואילו <strong>ר' ישמעאל בנו של ר' יוחנן בן ברוקא</strong> סובר שיש לתת את דמי המזיק. הגמרא מסבירה ששתי הדעות מסכימות שלכופר יש משמעות של כפרה, אך חלוקות הן באופי הכפרה. ר' ישמעאל סובר שהמזיק צריך לתת את פדיון נפשו, דהיינו הוא נותן כביכול את עצמו. ואילו תנא קמא לומד מהביטוי "אם כופר <strong>יושת</strong> עליו", שהכוונה לדמי הניזק כמו בפסוק המקביל לגבי איש שנגף אשה הרה ויצאו ולדותיה- "כאשר <strong>ישית</strong> עליו בעל האשה", שם מדובר בוודאי על תשלום דמי הוולדות. ה<strong>רמב"ם</strong> פסק כתנא קמא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (מ.) מביאה ברייתא ובה מחלוקת תנאים לגבי משמעות הביטוי "ונתן פדיון נפשו" האמור בקנס (כלומר, 'נפשו' של מי)- <strong>תנא קמא</strong> סובר שיש לתת את דמי הניזק, ואילו <strong>ר' ישמעאל בנו של ר' יוחנן בן ברוקא</strong> סובר שיש לתת את דמי המזיק. הגמרא מסבירה ששתי הדעות מסכימות שלכופר יש משמעות של כפרה, אך חלוקות הן באופי הכפרה. ר' ישמעאל סובר שהמזיק צריך לתת את פדיון נפשו, דהיינו הוא נותן כביכול את עצמו. ואילו תנא קמא לומד מהביטוי "אם כופר <strong>יושת</strong> עליו", שהכוונה לדמי הניזק כמו בפסוק המקביל לגבי איש שנגף אשה הרה ויצאו ולדותיה- "כאשר <strong>ישית</strong> עליו בעל האשה", שם מדובר בוודאי על תשלום דמי הוולדות. ה<strong>רמב"ם</strong> פסק כתנא קמא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הסכום של קנס על הריגת עבד, דברי הרמב"ם שלפנינו הם העתקה מדברי המשנה (מא.), הקובעת שהקנס על הריגת עבד הוא סכום קצוב שאינו תלוי בדמי העבד הנהרג.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי הסכום של קנס על הריגת עבד, דברי הרמב"ם שלפנינו הם העתקה מדברי המשנה (מא.), הקובעת שהקנס על הריגת עבד הוא סכום קצוב שאינו תלוי בדמי העבד הנהרג.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>במסכת גיטין</strong> (מב:) דנה ה<strong>גמרא</strong> במעמדו של מעוכב גט שחרור, דהיינו, עבד שהוא כבר חופשי מאדוניו, אך בכל זאת על אדוניו לתת לו גט שחרור. דוגמאות למעמד שכזה הם עבד שהקדישו רבו או הפקירו רבו, או חציו עבד וחציו בן חורין, שמפקיעים אותו מרשות רבו ובכל זאת צריך עדיין רבו לתת לו גט שחרור. בין השאר, מעלה הגמרא שם את השאלה מה הדין אם שור הרג עבד המעוכב גט שחרור. מצד אחד, העבד כבר לא היה תחת יד האדון, ולכן לא ניתן לקיים את הפסוק "כסף יתן לאדוניו". אמנם, מצד שני אולי מתוך שהאדון עדיין צריך לתת לו גט שחרור, הוא עדיין קרוי אדונו. הגמרא אינה מגיעה להכרעה בשאלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>במסכת גיטין</strong> (מב:) דנה ה<strong>גמרא</strong> במעמדו של מעוכב גט שחרור, דהיינו, עבד שהוא כבר חופשי מאדוניו, אך בכל זאת על אדוניו לתת לו גט שחרור. דוגמאות למעמד שכזה הם עבד שהקדישו רבו או הפקירו רבו, או חציו עבד וחציו בן חורין, שמפקיעים אותו מרשות רבו ובכל זאת צריך עדיין רבו לתת לו גט שחרור. בין השאר, מעלה הגמרא שם את השאלה מה הדין אם שור הרג עבד המעוכב גט שחרור. מצד אחד, העבד כבר לא היה תחת יד האדון, ולכן לא ניתן לקיים את הפסוק "כסף יתן לאדוניו". אמנם, מצד שני אולי מתוך שהאדון עדיין צריך לתת לו גט שחרור, הוא עדיין קרוי אדונו. הגמרא אינה מגיעה להכרעה בשאלה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">למרות שאין בגמרא הכרעה, פוסק ה<strong>רמב"ם </strong>שאין משלמים קנס על הריגת מעוכב גט שחרור. אמנם ה<strong>מגיד משנה</strong> אומר, שנראה שדעתו של הרמב"ם היא כבכל ספק, שאם תפס בעל העבד (לשעבר) דמי קנס מהמזיק, אין מוציאים מידו. זאת לומד הרב המגיד מתוך פסקו של הרמב"ם בהלכות חובל ומזיק (פרק ד הל' יא) לפיו מעוכב גט שחרור שחבלו בו (וספק הוא אם משלמים לו או לאדוניו), אם תפס העבד אין מוציאין מידו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">למרות שאין בגמרא הכרעה, פוסק ה<strong>רמב"ם </strong>שאין משלמים קנס על הריגת מעוכב גט שחרור. אמנם ה<strong>מגיד משנה</strong> אומר, שנראה שדעתו של הרמב"ם היא כבכל ספק, שאם תפס בעל העבד (לשעבר) דמי קנס מהמזיק, אין מוציאים מידו. זאת לומד הרב המגיד מתוך פסקו של הרמב"ם בהלכות חובל ומזיק (פרק ד הל' יא) לפיו מעוכב גט שחרור שחבלו בו (וספק הוא אם משלמים לו או לאדוניו), אם תפס העבד אין מוציאין מידו.</p>
                     
                 </div>
                 
@@ -1067,38 +1067,38 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>למי נותנין הכופר, ליורשי הנהרג, ואם המית אשה הכופר ליורשיה מאביה ואינו לבעל, המית מי שחציו עבד וחציו בן חורין נותן חצי הקנס לרבו והחצי ראוי ליתן ואין לו מי יקחנו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">למי ניתן כופר על הריגת אשה נשואה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">למי ניתן כופר על הריגת אשה נשואה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מב:) מביאה ברייתא בה אומר <strong>ר' עקיבא</strong>, ש"אשה- נזקיה ליורשיה". דהיינו, הנזק שמשלם המזיק על שורו שהזיק אשה נשואה, הולך ליורשיה ממשפחתה שלה ולא לבעלה. <strong>ריש לקיש</strong> מסביר שמדובר דווקא על כופר המשלם בעל שור שהרג אשה. והסיבה היא, שהכופר אינו משתלם עד שהאשה מתה, ולאחר מות האשה אין בעלה יורש נכסים שלא היו בחזקתה בשעת מיתתה. ה<strong>רמב"ם</strong> פוסק כהסברו של ריש לקיש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (מב:) מביאה ברייתא בה אומר <strong>ר' עקיבא</strong>, ש"אשה- נזקיה ליורשיה". דהיינו, הנזק שמשלם המזיק על שורו שהזיק אשה נשואה, הולך ליורשיה ממשפחתה שלה ולא לבעלה. <strong>ריש לקיש</strong> מסביר שמדובר דווקא על כופר המשלם בעל שור שהרג אשה. והסיבה היא, שהכופר אינו משתלם עד שהאשה מתה, ולאחר מות האשה אין בעלה יורש נכסים שלא היו בחזקתה בשעת מיתתה. ה<strong>רמב"ם</strong> פוסק כהסברו של ריש לקיש.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">כופר על חציו עבד וחציו בן חורין</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">כופר על חציו עבד וחציו בן חורין</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן כללי קיימת מחלוקת בין התנאים לגבי מעמדו של חציו עבד וחציו בן חורין (גיטין מא.).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">באופן כללי קיימת מחלוקת בין התנאים לגבי מעמדו של חציו עבד וחציו בן חורין (גיטין מא.).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בית שמאי</strong> אומרים שכיוון שהחצי העבדותי מעכב את החצי בן החורין ממצוות פריה ורביה, כופין את רבו לשחררו, ועוד לפני שרבו כותב לו גט שחרור, הוא כבר משוחרר בפועל מרבו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>בית שמאי</strong> אומרים שכיוון שהחצי העבדותי מעכב את החצי בן החורין ממצוות פריה ורביה, כופין את רבו לשחררו, ועוד לפני שרבו כותב לו גט שחרור, הוא כבר משוחרר בפועל מרבו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בית הלל</strong> חלקו תחילה על בית שמאי, וסברו שהוא ממשיך לעבוד את רבו יום אחד ואת עצמו יום אחד, אך בסוף הודו לבית שמאי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>בית הלל</strong> חלקו תחילה על בית שמאי, וסברו שהוא ממשיך לעבוד את רבו יום אחד ואת עצמו יום אחד, אך בסוף הודו לבית שמאי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> במסכת גיטין (מב:) דנה בתשלום כופר על הריגת עבד המעוכב גט שחרור (ראה הלכה א'), ומביאה <strong>ברייתא</strong>, לפיה שור שנגח חציו עבד וחציו בן חורין והרגו, נותן חצי קנס לאדון וחצי כופר ליורשיו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> במסכת גיטין (מב:) דנה בתשלום כופר על הריגת עבד המעוכב גט שחרור (ראה הלכה א'), ומביאה <strong>ברייתא</strong>, לפיה שור שנגח חציו עבד וחציו בן חורין והרגו, נותן חצי קנס לאדון וחצי כופר ליורשיו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבינה תחילה שחלוקת נזקי הריגת חציו עבד וחציו בן חורין בין חצי הקנס לאדון ובין חצי הכופר ליורשיו היא כשיטת בית הלל למסקנה, ואז הרי הוא מעוכב גט שחרור, וניתן ללמוד מהברייתא לגבי הדיון במעוכב גט שחרור, שעדיין אדוניו זכאי במחציתו. אך הגמרא חוזרת ודוחה את הראיה, ומעמידה את הברייתא כשיטת בית הלל הראשונה, שעובד את עצמו יום אחד ואת רבו יום אחד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מבינה תחילה שחלוקת נזקי הריגת חציו עבד וחציו בן חורין בין חצי הקנס לאדון ובין חצי הכופר ליורשיו היא כשיטת בית הלל למסקנה, ואז הרי הוא מעוכב גט שחרור, וניתן ללמוד מהברייתא לגבי הדיון במעוכב גט שחרור, שעדיין אדוניו זכאי במחציתו. אך הגמרא חוזרת ודוחה את הראיה, ומעמידה את הברייתא כשיטת בית הלל הראשונה, שעובד את עצמו יום אחד ואת רבו יום אחד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נראה שה<strong>רמב"ם </strong>פוסק בכל זאת כאותה ברייתא, ולכן חצי הקנס על הריגת חציו עבד וחציו בן חורין, נתון לאדון. החצי השני אמור להיות נתון ליורשים לפי הברייתא, אך הרמב"ם מסביר שמטבע הדברים אין יורשים לעבד כדי לתיתו להם (כפי שלגר אין יורשים).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נראה שה<strong>רמב"ם </strong>פוסק בכל זאת כאותה ברייתא, ולכן חצי הקנס על הריגת חציו עבד וחציו בן חורין, נתון לאדון. החצי השני אמור להיות נתון ליורשים לפי הברייתא, אך הרמב"ם מסביר שמטבע הדברים אין יורשים לעבד כדי לתיתו להם (כפי שלגר אין יורשים).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה </strong>מקשה, שהרי הגמרא מעמידה את הברייתא כשיטת בית הלל הראשונה, ואילו אנו פוסקים כשיטת בית הלל האחרונה, שחציו עבד וחציו בן חורין הוא מעוכב שחרור, ולכן צריך להיות דינו (לפחות דין חצי העבד שבו) כדין מעוכב גט שחרור המופיע בהלכה א', שאין משלמים עבור מיתתו קנס. לכן פוסק המגיד משנה כנגד הרמב"ם, שעל הריגת חציו עבד וחציו בן חורין אין משתלם אפילו חצי קנס.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה </strong>מקשה, שהרי הגמרא מעמידה את הברייתא כשיטת בית הלל הראשונה, ואילו אנו פוסקים כשיטת בית הלל האחרונה, שחציו עבד וחציו בן חורין הוא מעוכב שחרור, ולכן צריך להיות דינו (לפחות דין חצי העבד שבו) כדין מעוכב גט שחרור המופיע בהלכה א', שאין משלמים עבור מיתתו קנס. לכן פוסק המגיד משנה כנגד הרמב"ם, שעל הריגת חציו עבד וחציו בן חורין אין משתלם אפילו חצי קנס.</p>
                     
                 </div>
                 
@@ -1106,62 +1106,62 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור שנגח את האשה ויצאו ילדיה אע"פ שהוא מועד ליגח הבעלים פטורין מדמי ולדות, שלא חייבה תורה בדמי ולדות אלא לאדם. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>נגח שפחה ויצאו ילדיה משלם דמי ולדות, שזה כמי שנגח חמור מעוברת, ואם היה תם משלם חצי דמי ולדות מגופו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כיצד שמין אותה, אומדין כמה היתה שוה שפחה זו כשהיתה מעוברת וכמה היא שוה עתה ונותן לבעליה הפחת או חציו, ואם המית את השפחה משלם הכופר הקצוב בתורה בלבד כמו שבארנו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דמי ולדות של בת חורין ושפחה בשור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דמי ולדות של בת חורין ושפחה בשור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (מח:) כותבת הבדל בין אדם לבין שור שהזיקוּ. בעוד שאדם שנתכוון לחברו, אך פגע באשה מעוברת והפילה, משלם דמי ולדות לבעל, שור שהיה מתכוון לחברו, ופגע באשה מעוברת והפילה, אינו משלם דמי ולדות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (מח:) כותבת הבדל בין אדם לבין שור שהזיקוּ. בעוד שאדם שנתכוון לחברו, אך פגע באשה מעוברת והפילה, משלם דמי ולדות לבעל, שור שהיה מתכוון לחברו, ופגע באשה מעוברת והפילה, אינו משלם דמי ולדות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (מב.) דנה בפסוק האמור בשור תם שהרג אדם "וּבַעַל הַשּׁוֹר נָקִי" (שמות כא כח). בגמרא מובאת דעת <strong>ר' יוסי</strong>, המפרש ש"נקי" הכונה שבעל השור פטור מדמי ולדות. בצד זה מעלה הגמרא עוד לימוד בשם <strong>ר' עקיבא</strong>, לפיו אין שייכות לשור בדמי ולדות, שהרי נאמר בפסוק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (מב.) דנה בפסוק האמור בשור תם שהרג אדם "וּבַעַל הַשּׁוֹר נָקִי" (שמות כא כח). בגמרא מובאת דעת <strong>ר' יוסי</strong>, המפרש ש"נקי" הכונה שבעל השור פטור מדמי ולדות. בצד זה מעלה הגמרא עוד לימוד בשם <strong>ר' עקיבא</strong>, לפיו אין שייכות לשור בדמי ולדות, שהרי נאמר בפסוק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"וְכִי יִנָּצוּ <strong>אֲנָשִׁים</strong> וְנָגְפוּ אִשָּׁה הָרָה וְיָצְאוּ יְלָדֶיהָ וְלֹא יִהְיֶה אָסוֹן עָנוֹשׁ יֵעָנֵשׁ כַּאֲשֶׁר יָשִׁית עָלָיו בַּעַל הָאִשָּׁה וְנָתַן בִּפְלִלִים" (שמות כא כב)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"וְכִי יִנָּצוּ <strong>אֲנָשִׁים</strong> וְנָגְפוּ אִשָּׁה הָרָה וְיָצְאוּ יְלָדֶיהָ וְלֹא יִהְיֶה אָסוֹן עָנוֹשׁ יֵעָנֵשׁ כַּאֲשֶׁר יָשִׁית עָלָיו בַּעַל הָאִשָּׁה וְנָתַן בִּפְלִלִים" (שמות כא כב)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">והכוונה אנשים ולא שוורים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">והכוונה אנשים ולא שוורים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> דנה מה מחדש לנו הלימוד של ר' יוסי יתר על הלימוד של ר' עקיבא, ובהקשר זה מביאה מחלוקת אמוראים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> דנה מה מחדש לנו הלימוד של ר' יוסי יתר על הלימוד של ר' עקיבא, ובהקשר זה מביאה מחלוקת אמוראים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת <strong>רבא</strong> ו<strong>אביי</strong>, אין דין תשלומי ולדות אמור אלא במקרה בו נפגעה האשה שלא בכוונה, ולא מתה, שכן אם היא מתה, יש לפנינו מקרה של נפשות, בו פטור הפוגע מתשלומים אפילו אם בפועל היה שוגג ולא נתחייב במיתה. לשיטתם, מהלימוד "ובעל השור נקי", לומדים שכאשר מדובר בשור שהזיק, יש פטור על תשלומי ולדות, בין אם מתה האשה ובין אם לאו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת <strong>רבא</strong> ו<strong>אביי</strong>, אין דין תשלומי ולדות אמור אלא במקרה בו נפגעה האשה שלא בכוונה, ולא מתה, שכן אם היא מתה, יש לפנינו מקרה של נפשות, בו פטור הפוגע מתשלומים אפילו אם בפועל היה שוגג ולא נתחייב במיתה. לשיטתם, מהלימוד "ובעל השור נקי", לומדים שכאשר מדובר בשור שהזיק, יש פטור על תשלומי ולדות, בין אם מתה האשה ובין אם לאו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת <strong>ר' אדא</strong>, תשלומי ולדות אמורים בכל מקרה, אפילו אם נפגעה האשה שלא בכוונה ומתה. המקרה היחיד בו אין תשלומי ולדות, הוא כאשר הנוגף פגע באשה בכוונה, והרגהּ, שאז חייב מיתה ופטור מתשלומין מדין 'קים ליה בדרבה מיניה' (הפעלת העונש החמור יותר). לפיו, יש ללמוד מהפסוק "ובעל השור נקי", ששור פטור מתשלומי ולדות אפילו אם נתכוון לאשה ונגחהּ והרגהּ.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת <strong>ר' אדא</strong>, תשלומי ולדות אמורים בכל מקרה, אפילו אם נפגעה האשה שלא בכוונה ומתה. המקרה היחיד בו אין תשלומי ולדות, הוא כאשר הנוגף פגע באשה בכוונה, והרגהּ, שאז חייב מיתה ופטור מתשלומין מדין 'קים ליה בדרבה מיניה' (הפעלת העונש החמור יותר). לפיו, יש ללמוד מהפסוק "ובעל השור נקי", ששור פטור מתשלומי ולדות אפילו אם נתכוון לאשה ונגחהּ והרגהּ.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נראה שה<strong>רמב"ם</strong> פוטר את בעל השור מדמי ולדות באופן קטגורי, אפילו אם נגח בכוונה, ובכך פוסק הרמב"ם כרב אדא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נראה שה<strong>רמב"ם</strong> פוטר את בעל השור מדמי ולדות באופן קטגורי, אפילו אם נגח בכוונה, ובכך פוסק הרמב"ם כרב אדא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (מט.) מוסיף ופוסק <strong>ר' פפא</strong>, ששור שנגח שפחה מעוברת והפילה, משלם דמי ולדות לאדוניה. ר' פפא מסביר שבאופן עקרוני הרי זה כאילו נגח השור אתון מעוברת והפילה, שמשלם נזק לבעל האתון. והשפחה משולה לאתון מתוך המדרש על הנאמר בעקידת יצחק "שבו לכם פה עִם החמור" (בראשית כב ה)- עָם הדומה לחמור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (מט.) מוסיף ופוסק <strong>ר' פפא</strong>, ששור שנגח שפחה מעוברת והפילה, משלם דמי ולדות לאדוניה. ר' פפא מסביר שבאופן עקרוני הרי זה כאילו נגח השור אתון מעוברת והפילה, שמשלם נזק לבעל האתון. והשפחה משולה לאתון מתוך המדרש על הנאמר בעקידת יצחק "שבו לכם פה עִם החמור" (בראשית כב ה)- עָם הדומה לחמור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (שם) וה<strong>רא"ש</strong> (סימן ה') מסבירים שאין הכוונה להשוות עבדים ושפחות כנענים לחמור לכל דבר, אלא הכוונה היא שכיוון שאין הם מתייחסים אחר האב, אלא הוולדות לאדון, נמצא שפרשיית "כי ינצו אנשים" העוסקת בפגיעה באשה הרה בה הוולדות לבעל, אינה אמורה לגביהם, ולכן לא נתמעט המקרה של שור שנגח והזיק וולדות של שפחה, ויש לתת בו תשלומי נזיקין רגילים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (שם) וה<strong>רא"ש</strong> (סימן ה') מסבירים שאין הכוונה להשוות עבדים ושפחות כנענים לחמור לכל דבר, אלא הכוונה היא שכיוון שאין הם מתייחסים אחר האב, אלא הוולדות לאדון, נמצא שפרשיית "כי ינצו אנשים" העוסקת בפגיעה באשה הרה בה הוולדות לבעל, אינה אמורה לגביהם, ולכן לא נתמעט המקרה של שור שנגח והזיק וולדות של שפחה, ויש לתת בו תשלומי נזיקין רגילים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק שאם היה השור תם, ונגח שפחה, משלם חצי נזק מגופו, שהרי זהו דין נזיקין רגיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק שאם היה השור תם, ונגח שפחה, משלם חצי נזק מגופו, שהרי זהו דין נזיקין רגיל.</p>
                     
                 </div>
                 
                 <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הדרך לשום דמי ולדות</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הדרך לשום דמי ולדות</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התורה קובעת שדמי הוולדות שמקבלת אשה שהוכתה והפילה שייכים לבעלה. אמנם, נזקים אחרים שבאו לה בעקבות המכה שייכים לה. ה<strong>משנה</strong> (מח:) עוסקת בהגדרת דמי הוולדות ובאיפיונם משאר הנזק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">התורה קובעת שדמי הוולדות שמקבלת אשה שהוכתה והפילה שייכים לבעלה. אמנם, נזקים אחרים שבאו לה בעקבות המכה שייכים לה. ה<strong>משנה</strong> (מח:) עוסקת בהגדרת דמי הוולדות ובאיפיונם משאר הנזק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כיצד משלם דמי ולדות? שמין את האשה כמה היא יפה עד שלא ילדה, וכמה היא יפה משילדה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כיצד משלם דמי ולדות? שמין את האשה כמה היא יפה עד שלא ילדה, וכמה היא יפה משילדה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אמר רבן שמעון בן גמליאל</strong>: א"כ, משהאשה יולדת משבחת! אלא, שמין את הולדות כמה הן יפין ונותן לבעל"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אמר רבן שמעון בן גמליאל</strong>: א"כ, משהאשה יולדת משבחת! אלא, שמין את הולדות כמה הן יפין ונותן לבעל"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> מסביר <strong>רבא</strong>, ש<strong>רבן</strong><strong> שמעון בן גמליאל</strong> חולק על <strong>תנא קמא</strong> בדין שבח הוולדות. כלומר, לפי תנא קמא הדרך בה שמין את האשה מבטיחה שכל שבח שבא באשה מחמת ההריון, יגיע לבעל. כנגד זה אומר רבן שמעון ב"ג, ששבח הוולדות, דהיינו עילוי שבח האשה שנראית בריאה ומלאה יותר בעקבות ההריון, אינו רק של הבעל, כיוון שהוא שייך גם לְגופה, ולכן חולקים אותו. לגבי תשלום דמי הוולדות עצמם מסכימים ת"ק ורשב"ג שכולו של הבעל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> מסביר <strong>רבא</strong>, ש<strong>רבן</strong><strong> שמעון בן גמליאל</strong> חולק על <strong>תנא קמא</strong> בדין שבח הוולדות. כלומר, לפי תנא קמא הדרך בה שמין את האשה מבטיחה שכל שבח שבא באשה מחמת ההריון, יגיע לבעל. כנגד זה אומר רבן שמעון ב"ג, ששבח הוולדות, דהיינו עילוי שבח האשה שנראית בריאה ומלאה יותר בעקבות ההריון, אינו רק של הבעל, כיוון שהוא שייך גם לְגופה, ולכן חולקים אותו. לגבי תשלום דמי הוולדות עצמם מסכימים ת"ק ורשב"ג שכולו של הבעל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כאן על פי תנא קמא, וזאת גם על פי דבריו בפרק ט' הלכה ד-ה. וכך גם בשו"ע (תה ג).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כאן על פי תנא קמא, וזאת גם על פי דבריו בפרק ט' הלכה ד-ה. וכך גם בשו"ע (תה ג).</p>
                     
                 </div>
                 
@@ -1169,31 +1169,31 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור שנתכוון לבהמה ונגח את האדם אע"פ שאם המיתו פטור כמו שבארנו אם חבל בו חייב בנזק, ואם תם הוא משלם חצי נזק מגופו ואם מועד נזק שלם. </strong>
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלומי נזק בשור שנגח את האדם שלא בכוונה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלומי נזק בשור שנגח את האדם שלא בכוונה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (מד:) מביאה <strong>ברייתא</strong> הפוסקת ששור שהרג ונתכוון להרוג בן חיוב (כלומר, אדם שעל הריגתו חייב סקילה), תמיד נסקל בין תם ובין מועד. כמו כן, בין נתכוון ובין אם לא נתכוון, אם הוא מועד, על בעליו לשלם כופר. הברייתא מוסיפה ומביאה את מחלוקת התנאים בהיקש מהריגה לנזק-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (מד:) מביאה <strong>ברייתא</strong> הפוסקת ששור שהרג ונתכוון להרוג בן חיוב (כלומר, אדם שעל הריגתו חייב סקילה), תמיד נסקל בין תם ובין מועד. כמו כן, בין נתכוון ובין אם לא נתכוון, אם הוא מועד, על בעליו לשלם כופר. הברייתא מוסיפה ומביאה את מחלוקת התנאים בהיקש מהריגה לנזק-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יהודה</strong> אומר שכשם שהבעלים חייב כופר על שורו המועד שהרג, בין בכוונה ובין שלא בכוונה, כך הוא חייב לשלם נזק על שורו שהזיק אדם, בין שהזיק בכוונה ובין שהזיק שלא בכוונה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יהודה</strong> אומר שכשם שהבעלים חייב כופר על שורו המועד שהרג, בין בכוונה ובין שלא בכוונה, כך הוא חייב לשלם נזק על שורו שהזיק אדם, בין שהזיק בכוונה ובין שהזיק שלא בכוונה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' שמעון</strong> חולק וסובר, שכשם שאת השור לא סוקלים אלא אם הרג בכוונה, כך אין בעליו משלם נזק אלא אם הזיק השור בכוונה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' שמעון</strong> חולק וסובר, שכשם שאת השור לא סוקלים אלא אם הרג בכוונה, כך אין בעליו משלם נזק אלא אם הזיק השור בכוונה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שר' יהודה מקיש תשלומי כופר לתשלומי נזק, ואילו ר' שמעון מבין שכופר הוא כפרת נפשו של הבעלים ואינו דומה לתשלומי נזק, ולכן המקבילה לתשלומי נזק בשור שהרג, היא סקילת השור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שר' יהודה מקיש תשלומי כופר לתשלומי נזק, ואילו ר' שמעון מבין שכופר הוא כפרת נפשו של הבעלים ואינו דומה לתשלומי נזק, ולכן המקבילה לתשלומי נזק בשור שהרג, היא סקילת השור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים פוסקים כר' יהודה. ה<strong>רמב"ם </strong>כותב ששור שהזיק ללא כוונה משלם נזק שלם אם הוא מועד וחצי נזק אם הוא תם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים פוסקים כר' יהודה. ה<strong>רמב"ם </strong>כותב ששור שהזיק ללא כוונה משלם נזק שלם אם הוא מועד וחצי נזק אם הוא תם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> לעומתו פוסק שכיוון שר' יהודה לומד חיוב נזקין בלא מתכוון מכופר, הרי שכמו שהבעלים משלמים כופר רק על שור מועד, כך גם על נזק ללא כוונה שהשור גרם לאדם, יש לחייב את הבעלים רק אם השור מועד, אך בשור תם שהזיק אדם ללא כוונה, פטור הבעלים, ואינו חייב אפילו חצי נזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> לעומתו פוסק שכיוון שר' יהודה לומד חיוב נזקין בלא מתכוון מכופר, הרי שכמו שהבעלים משלמים כופר רק על שור מועד, כך גם על נזק ללא כוונה שהשור גרם לאדם, יש לחייב את הבעלים רק אם השור מועד, אך בשור תם שהזיק אדם ללא כוונה, פטור הבעלים, ואינו חייב אפילו חצי נזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תה א) פסק כרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תה א) פסק כרמב"ם.</p>
                     
                 </div>
                 
@@ -1201,55 +1201,55 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז-ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז-ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור תם שהמית והזיק דנין אותו דיני נפשות ואין דנין אותו דיני ממונות, ומועד שהמית והזיק דנין אותו דיני ממונות וחוזרין ודנין אותו דיני נפשות. קדמו ודנוהו דיני נפשות תחלה חוזרין ודנין אותו דיני ממונות. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ומהיכן משתלם מן השבח שהשביח ברדייתו אחר שנגמר דינו, שכיון שנגמר דינו לסקילה אין לו בעלים שיתחייבו בנזקיו, דנוהו דיני נפשות וברח אין דנין אותו דיני ממונות. </strong>קדמו ודנוהו דיני נפשות וכו' דנוהו דיני נפשות וברח השור אין דנין אותו דיני ממונות. א"א כל זו הסוגיא אינה מסכמת עם הגמ' שלנו והיא עצמה שבוש היא דאיהו סבר דאין חוששין במיתת השור משום עינוי הדין וא"כ תם שהמית והזיק נדייניה דיני נפשות והדר נדייניה דיני ממונות מאי אמרת רדייא עליה דמרא היא והא כיון דדנוהו דיני נפשות שוב אין לבעליו רשות בו ועוד דאמרי' בגמרא דקבול סהדי וברח ומה לנו אם ברח השור אם לא ברח אלא ודאי כשברחו הבעלים כמו שאנו מפרשים והכל בענין אחר וחוששין לעינוי הדין של שור.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור שהזיק והמית</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שור שהזיק והמית</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (סוף צ:) מביאה <strong>ברייתא</strong> בעניין שור שהזיק וגם המית:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (סוף צ:) מביאה <strong>ברייתא</strong> בעניין שור שהזיק וגם המית:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שור תם שהמית והזיק - דנין אותו דיני נפשות ואין דנין אותו דיני ממונות,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שור תם שהמית והזיק - דנין אותו דיני נפשות ואין דנין אותו דיני ממונות,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מועד שהמית והזיק - דנין אותו דיני ממונות וחוזרין ודנין אותו דיני נפשות,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מועד שהמית והזיק - דנין אותו דיני ממונות וחוזרין ודנין אותו דיני נפשות,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">קדמו ודנוהו דיני נפשות - אין חוזרין ודנין אותו דיני ממונות."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">קדמו ודנוהו דיני נפשות - אין חוזרין ודנין אותו דיני ממונות."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי שור תם מסביר <strong>רש"י</strong>, שכיוון שמשתלם מגופו, לא ניתן לדונו גם ממונות וגם נפשות, שהרי משדנוהו נפשות הרי הוא נסקל, ואין משתלם ממנו הנזק, ואף אין יכולים לדונו ממונות בתחילה, כי נזק תם משתלם מגופו, ואנו זקוקים לשור לצורך דיני הנפשות שכן יכול להיות שיתחייב סקילה על מה שהרג. לגבי שור מועד, לא קיימת בעיה זו, ולכן דנים אותו ממונות, הבעלים משלם מעליה (ממיטב נכסיו), חוזרים ודנים אותו דיני נפשות ואז הוא נסקל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי שור תם מסביר <strong>רש"י</strong>, שכיוון שמשתלם מגופו, לא ניתן לדונו גם ממונות וגם נפשות, שהרי משדנוהו נפשות הרי הוא נסקל, ואין משתלם ממנו הנזק, ואף אין יכולים לדונו ממונות בתחילה, כי נזק תם משתלם מגופו, ואנו זקוקים לשור לצורך דיני הנפשות שכן יכול להיות שיתחייב סקילה על מה שהרג. לגבי שור מועד, לא קיימת בעיה זו, ולכן דנים אותו ממונות, הבעלים משלם מעליה (ממיטב נכסיו), חוזרים ודנים אותו דיני נפשות ואז הוא נסקל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שעקרונית ניתן לדון שור מועד בנפשות תחילה ורק אח"כ בממונות, ומעמידה באוקימתא את הברייתא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שעקרונית ניתן לדון שור מועד בנפשות תחילה ורק אח"כ בממונות, ומעמידה באוקימתא את הברייתא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכא במאי עסקינן - כגון שברח"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הכא במאי עסקינן - כגון שברח"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מקשה על אוקימתא זו:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מקשה על אוקימתא זו:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אי ברח, כי לא דנוהו דיני נפשות, היכי דיינינא ליה דיני ממונות בלא בעלים?"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אי ברח, כי לא דנוהו דיני נפשות, היכי דיינינא ליה דיני ממונות בלא בעלים?"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ועונה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ועונה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"דקביל סהדי וברח"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"דקביל סהדי וברח"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ועוד מבהירה הגמרא את אופן תשלום הנזק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ועוד מבהירה הגמרא את אופן תשלום הנזק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"סוף סוף מהיכא משתלם? מרידיא [כלומר משכר שמשכירים אותו לחרישה]"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"סוף סוף מהיכא משתלם? מרידיא [כלומר משכר שמשכירים אותו לחרישה]"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בהבנת האוקימתא של הברייתא, ובהבנת דברי הגמרא עליה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בהבנת האוקימתא של הברייתא, ובהבנת דברי הגמרא עליה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> וה<strong>ראב"ד</strong> מסבירים שהכוונה באוקימתא "כגון שברח" היא <strong>ל</strong><strong>בעל השור</strong>. כלומר, בעל השור ברח מיד לאחר שהעידו העדים בדיני נפשות, ולא השאיר בעל השור שום רכוש לגבות ממנו. לכן, אם דנוהו ממונות לפני שדנוהו נפשות, ניתן לחכות עד שהשור "ירוויח" מהשכרתו לחרישה את תשלומי הנזק, ואז ידינוהו נפשות ויסקלוהו. אך אם קדמו ודנוהו נפשות, אין דנים אותו ממונות, כיוון שממילא לא יהיה ניתן לשלם, כי הבעלים איננו כאן, ואף לא נשהה את השור לחרישה כי השהייתו לחרישה לאחר שנגמר דינו לסקילה היא עינוי דין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> וה<strong>ראב"ד</strong> מסבירים שהכוונה באוקימתא "כגון שברח" היא <strong>ל</strong><strong>בעל השור</strong>. כלומר, בעל השור ברח מיד לאחר שהעידו העדים בדיני נפשות, ולא השאיר בעל השור שום רכוש לגבות ממנו. לכן, אם דנוהו ממונות לפני שדנוהו נפשות, ניתן לחכות עד שהשור "ירוויח" מהשכרתו לחרישה את תשלומי הנזק, ואז ידינוהו נפשות ויסקלוהו. אך אם קדמו ודנוהו נפשות, אין דנים אותו ממונות, כיוון שממילא לא יהיה ניתן לשלם, כי הבעלים איננו כאן, ואף לא נשהה את השור לחרישה כי השהייתו לחרישה לאחר שנגמר דינו לסקילה היא עינוי דין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מבין אחרת לגמרי- הברייתא מועמדת בכגון שברח <strong>השור</strong>. אם דנוהו דיני נפשות תחילה ויצא חייב, הרי הוא מופקע מבעליו, ולכן לא ניתן לחייב את בעליו עתה בתשלומי נזקיו. לכן, אם השור עדיין קיים לפנינו, משכירים אותו, והוא מרוויח בחרישתו את תשלומי הנזק. לכן ניתן עקרונית לדונו נפשות ואח"כ לדונו ממונות. אמנם, אם השור ברח לאחר שדנוהו נפשות, הרי שלא ניתן לשלם את הנזק. מצד אחד הבעלים כבר אינו בעליו, ולכן לא ניתן לגבות ממנו את הנזק. ומצד שני גם השור אינו יכול להרוויח את תשלומי נזקיו בעבודתו, שהרי ברח. במקרה זה מדברת הברייתא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מבין אחרת לגמרי- הברייתא מועמדת בכגון שברח <strong>השור</strong>. אם דנוהו דיני נפשות תחילה ויצא חייב, הרי הוא מופקע מבעליו, ולכן לא ניתן לחייב את בעליו עתה בתשלומי נזקיו. לכן, אם השור עדיין קיים לפנינו, משכירים אותו, והוא מרוויח בחרישתו את תשלומי הנזק. לכן ניתן עקרונית לדונו נפשות ואח"כ לדונו ממונות. אמנם, אם השור ברח לאחר שדנוהו נפשות, הרי שלא ניתן לשלם את הנזק. מצד אחד הבעלים כבר אינו בעליו, ולכן לא ניתן לגבות ממנו את הנזק. ומצד שני גם השור אינו יכול להרוויח את תשלומי נזקיו בעבודתו, שהרי ברח. במקרה זה מדברת הברייתא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לכאורה, לפי פירוש הרמב"ם, אין חוששים לעינוי דינו של השור, שהרי לאחר שנגמר דינו לסקילה, עוד משהים אותו שיחרוש כדי להרוויח את תשלומי נזקו. אך ה<strong>כסף משנה </strong>מפרש שאין משהים אותו משום עינוי דין. ומה שכותב הרמב"ם שהוא חורש כדי להרוויח את תשלומי נזקו זה אם הושהה בטעות, או ממילא, ובינתיים חרש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לכאורה, לפי פירוש הרמב"ם, אין חוששים לעינוי דינו של השור, שהרי לאחר שנגמר דינו לסקילה, עוד משהים אותו שיחרוש כדי להרוויח את תשלומי נזקו. אך ה<strong>כסף משנה </strong>מפרש שאין משהים אותו משום עינוי דין. ומה שכותב הרמב"ם שהוא חורש כדי להרוויח את תשלומי נזקו זה אם הושהה בטעות, או ממילא, ובינתיים חרש.</p>
                     
                 </div>
                 
@@ -1257,43 +1257,43 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור שהמית את האדם והקדישו בעליו אינו קדוש, וכן אם הפקירו אינו מופקר, מכרו אינו מכור, החזירו שומר לבעליו אינה חזרה, שחטו בשרו אסור בהנייה. במה דברים אמורים אחר שנגמר דינו לסקילה, אבל עד שלא נגמר דינו לסקילה אם הקדישו בעליו הרי זה קדוש ואם הפקירו הרי זה מופקר ואם מכרו מכור החזירו שומר לבעליו הרי זה מוחזר ואם קדם ושחטו הרי זה מותר באכילה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מעמדו הממוני של השור הנסקל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מעמדו הממוני של השור הנסקל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מתוך הנאמר בפסוק (שמות כא כח):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מתוך הנאמר בפסוק (שמות כא כח):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"וְכִי יִגַּח שׁוֹר אֶת אִישׁ אוֹ אֶת אִשָּׁה וָמֵת סָקוֹל יִסָּקֵל הַשּׁוֹר וְלֹא יֵאָכֵל אֶת בְּשָׂרוֹ וּבַעַל הַשּׁוֹר נָקִי"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"וְכִי יִגַּח שׁוֹר אֶת אִישׁ אוֹ אֶת אִשָּׁה וָמֵת סָקוֹל יִסָּקֵל הַשּׁוֹר וְלֹא יֵאָכֵל אֶת בְּשָׂרוֹ וּבַעַל הַשּׁוֹר נָקִי"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לומדת ה<strong>גמרא</strong> (מא.) ששור הנסקל משנגמר דינו, אסור באכילה, שהרי אם נאסר באכילה רק לאחר סקילתו, הרי שאסור ככל נבילה. כמו כן מהמילים "בעל השור נקי", לומדת הגמרא שהשור אסור בהנאה (המילה "נקי" מתפרשת  כמנושל מהנכס). וכך פוסק ה<strong>רמב"ם</strong> (הלכות מאכלות אסורות ד, כב)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לומדת ה<strong>גמרא</strong> (מא.) ששור הנסקל משנגמר דינו, אסור באכילה, שהרי אם נאסר באכילה רק לאחר סקילתו, הרי שאסור ככל נבילה. כמו כן מהמילים "בעל השור נקי", לומדת הגמרא שהשור אסור בהנאה (המילה "נקי" מתפרשת  כמנושל מהנכס). וכך פוסק ה<strong>רמב"ם</strong> (הלכות מאכלות אסורות ד, כב)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (מד:) מובאת ברייתא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (מד:) מובאת ברייתא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שור שהמית, עד שלא נגמר דינו, מכרו - מכור, הקדישו - מוקדש, שחטו - בשרו מותר, החזירו שומר לבית בעליו - מוחזר;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שור שהמית, עד שלא נגמר דינו, מכרו - מכור, הקדישו - מוקדש, שחטו - בשרו מותר, החזירו שומר לבית בעליו - מוחזר;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">משנגמר דינו, מכרו - אינו מכור, הקדישו - אינו מוקדש, שחטו - בשרו אסור, החזירו שומר לבית בעליו - אינו מוחזר;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">משנגמר דינו, מכרו - אינו מכור, הקדישו - אינו מוקדש, שחטו - בשרו אסור, החזירו שומר לבית בעליו - אינו מוחזר;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יעקב</strong> אומר: אף משנגמר דינו, החזירו שומר לבעליו – מוחזר"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יעקב</strong> אומר: אף משנגמר דינו, החזירו שומר לבעליו – מוחזר"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, עם גמר דינו של שור הנסקל למיתה, משתנה מעמדו המשפטי- לא ניתן עוד למוכרו ולהקדישו, בשרו אסור, ולשיטת תנא קמא, אם שומר החזיר לבעלים שור המופקד אצלו לאחר שנגמר דינו, אין זו נחשבת החזרה, והשומר עודו חייב באחריות השור (ור' יעקב חולק).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, עם גמר דינו של שור הנסקל למיתה, משתנה מעמדו המשפטי- לא ניתן עוד למוכרו ולהקדישו, בשרו אסור, ולשיטת תנא קמא, אם שומר החזיר לבעלים שור המופקד אצלו לאחר שנגמר דינו, אין זו נחשבת החזרה, והשומר עודו חייב באחריות השור (ור' יעקב חולק).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י </strong>מסביר שעם גמר דינו של השור, נאסר השור בהנאה ולכן אין הוא נחשב בחזקתו של בעליו. לכן אין בעליו יכולים למוכרו ולהקדישו. כמו כן בשרו אסור בהנאה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י </strong>מסביר שעם גמר דינו של השור, נאסר השור בהנאה ולכן אין הוא נחשב בחזקתו של בעליו. לכן אין בעליו יכולים למוכרו ולהקדישו. כמו כן בשרו אסור בהנאה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"ת</strong> סובר ששור הנסקל אינו נאסר בהנאה עד סקילתו (כלומר, רק בשרו נאסר בהנאה). לפי פירוש זה הבעיה במכירת השור לחרישה היא משום עינוי דינו של השור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר"ת</strong> סובר ששור הנסקל אינו נאסר בהנאה עד סקילתו (כלומר, רק בשרו נאסר בהנאה). לפי פירוש זה הבעיה במכירת השור לחרישה היא משום עינוי דינו של השור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (מה. ד"ה "מכור") מביאים גרסה ברש"י שנותנת הסבר נוסף לברייתא, המתאים לשיטת ר"ת, שאין השור נאסר עד לאחר מיתתו. לפי גרסה זו, מכרו משנגמר דינו אינו מכור משום שזהו מיקח טעות, זאת להבדיל ממכירה לפני שנגמר דינו, שאז יכול המוכר לומר שמכר את השור כדי שהקונה ישחטו ויהנה ממנו לפני שיגמר דינו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (מה. ד"ה "מכור") מביאים גרסה ברש"י שנותנת הסבר נוסף לברייתא, המתאים לשיטת ר"ת, שאין השור נאסר עד לאחר מיתתו. לפי גרסה זו, מכרו משנגמר דינו אינו מכור משום שזהו מיקח טעות, זאת להבדיל ממכירה לפני שנגמר דינו, שאז יכול המוכר לומר שמכר את השור כדי שהקונה ישחטו ויהנה ממנו לפני שיגמר דינו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שר' יעקב ותנא קמא חלוקים בשאלה האם גומרים דינו של שור שלא בפניו. לפי ר' יעקב גומרים דינו של שור שלא בפניו, ולכן השומר המחזיר את השור אומר שלא שינו מעשיו דבר, שכן היו דנים את השור לסקילה בין אם היה מחזיר לפני גמר הדין ובין אם לא. תנא קמא לעומתו סוברים שאין גומרים דינו של השור אלא בפניו (באנלוגיה לאדם) לכן טוען הבעלים שלו השומר היה מחזיר את השור מבעוד מועד, היה מסתיר אותו כדי שלא יוכלו לגמור את דינו, וכך היה השור ניצל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שר' יעקב ותנא קמא חלוקים בשאלה האם גומרים דינו של שור שלא בפניו. לפי ר' יעקב גומרים דינו של שור שלא בפניו, ולכן השומר המחזיר את השור אומר שלא שינו מעשיו דבר, שכן היו דנים את השור לסקילה בין אם היה מחזיר לפני גמר הדין ובין אם לא. תנא קמא לעומתו סוברים שאין גומרים דינו של השור אלא בפניו (באנלוגיה לאדם) לכן טוען הבעלים שלו השומר היה מחזיר את השור מבעוד מועד, היה מסתיר אותו כדי שלא יוכלו לגמור את דינו, וכך היה השור ניצל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כותב כלשון הברייתא, ואינו מסביר את הטעם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> כותב כלשון הברייתא, ואינו מסביר את הטעם.</p>
                     
                 </div>
                 
@@ -1301,31 +1301,31 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור שלא נגמר דינו שנתערב בשוורים אחרים כולן פטורין לפי שאין גומרין דינו של שור אלא בפני השור כדין האדם, נגמר דינו ואחר כך נתערב באחרים אפילו באלף כולן נסקלין ונקברין והן אסורין בהנייה כדין בהמה הנסקלת. </strong>
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור שהמית ונתערב באחרים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שור שהמית ונתערב באחרים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> במסכת סנהדרין (עט:) מביאה מחלוקת תנאים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> במסכת סנהדרין (עט:) מביאה מחלוקת תנאים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"רוצח שנתערב באחרים - כולן פטורין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"רוצח שנתערב באחרים - כולן פטורין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי יהודה</strong> אומר: כונסין אותן לכיפה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי יהודה</strong> אומר: כונסין אותן לכיפה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> חלוקים האמוראים בהבנת המשנה. <strong>ריש לקיש</strong> מבאר שמדובר בשור שהרג (אותו מכנה המשנה "רוצח"), ולא נגמר דינו, שנתערב בשוורים אחרים שנגמר דינם לסקילה. <strong>תנא קמא</strong> סובר שיש לגמור דינו של השור בפניו, כמו האדם, ולכן כולם פטורים, ואילו <strong>ר' יהודה</strong> מצריך בכל זאת לכלוא את כולם עד שימותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> חלוקים האמוראים בהבנת המשנה. <strong>ריש לקיש</strong> מבאר שמדובר בשור שהרג (אותו מכנה המשנה "רוצח"), ולא נגמר דינו, שנתערב בשוורים אחרים שנגמר דינם לסקילה. <strong>תנא קמא</strong> סובר שיש לגמור דינו של השור בפניו, כמו האדם, ולכן כולם פטורים, ואילו <strong>ר' יהודה</strong> מצריך בכל זאת לכלוא את כולם עד שימותו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת מסביר <strong>רבא</strong>, שהמשנה חסרה, ובעצם עוסקת בשני מקרים. הראשון הוא רוצח שאין אנו יודעים לזהותו בין כמה אנשים, ובזה כולם מודים שכולם פטורים. המקרה הנוסף הוא של שור שנגמר דינו לסקילה שנתערב בין שוורים רגילים.במקרה זה <strong>תנא קמא</strong> (שדעתו אינה כתובה במפורש) סובר שיש לסקול את כולם כדי שתמצא מצוות סקילה מתקיימת במחוייב בה, ואילו <strong>ר' יהודה</strong> סובר שניתן לכנוס את כולם לכיפה ושם ימותו ברעב ואין צורך להטריח את בית הדין ולסקול את כולם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת מסביר <strong>רבא</strong>, שהמשנה חסרה, ובעצם עוסקת בשני מקרים. הראשון הוא רוצח שאין אנו יודעים לזהותו בין כמה אנשים, ובזה כולם מודים שכולם פטורים. המקרה הנוסף הוא של שור שנגמר דינו לסקילה שנתערב בין שוורים רגילים.במקרה זה <strong>תנא קמא</strong> (שדעתו אינה כתובה במפורש) סובר שיש לסקול את כולם כדי שתמצא מצוות סקילה מתקיימת במחוייב בה, ואילו <strong>ר' יהודה</strong> סובר שניתן לכנוס את כולם לכיפה ושם ימותו ברעב ואין צורך להטריח את בית הדין ולסקול את כולם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דיון ממצה במקרה של שור הנסקל שנתערב בבהמות אחרות, נמצא ב<strong>משנה</strong> בזבחים (ע:), הקובעת שכל בהמות הקודשים, שנתערבו בשור הנסקל, ימותו כולן. ב<strong>גמרא</strong> מוסבר שלא פועל כאן הכלל של הליכה אחר הרוב, משום שבהמות האיסור הן דבר הנמכר במניין ולכן הוא חשוב ואינו בטל, או שכל בעל חיים דבר חשוב הוא ואינו בטל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דיון ממצה במקרה של שור הנסקל שנתערב בבהמות אחרות, נמצא ב<strong>משנה</strong> בזבחים (ע:), הקובעת שכל בהמות הקודשים, שנתערבו בשור הנסקל, ימותו כולן. ב<strong>גמרא</strong> מוסבר שלא פועל כאן הכלל של הליכה אחר הרוב, משום שבהמות האיסור הן דבר הנמכר במניין ולכן הוא חשוב ואינו בטל, או שכל בעל חיים דבר חשוב הוא ואינו בטל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כתנא קמא לפי הסברו של ריש לקיש, שיש לגמור את דינו של השור בפניו. ובמקביל הוא פוסק גם לפי הסברו של רבא, וכפי המשנה בזבחים, ששור שנגמר דינו להריגה, ונתערב בין שוורים אחרים, נהרגים כולם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כתנא קמא לפי הסברו של ריש לקיש, שיש לגמור את דינו של השור בפניו. ובמקביל הוא פוסק גם לפי הסברו של רבא, וכפי המשנה בזבחים, ששור שנגמר דינו להריגה, ונתערב בין שוורים אחרים, נהרגים כולם.</p>
                     
                 </div>
                 
@@ -1333,51 +1333,51 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא-יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>פרה מעוברת שהמיתה את האדם וכן כל בהמה מעוברת שנעברה בה עבירה הרי עוברה כמוה היא ועוברה נגחה היא ועוברה נרבעה. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>נגחה והמיתה ואחר כך נתעברה, אם עד שלא נגמר דינה נתעברה וילדה קודם גמר דין ולדה מותר, ואם ילדה אחר גמר דין ולדה אסור, שהעובר ירך אמו הוא, ואם נתערב ולד זה באחרים כונסין את כולן לכיפה עד שימותו שם. </strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין ולד הפרה שהרגה אדם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דין ולד הפרה שהרגה אדם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> במסכת סנהדרין (פ.) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> במסכת סנהדרין (פ.) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"פרה שהמיתה ואחר כך ילדה,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"פרה שהמיתה ואחר כך ילדה,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם עד שלא נגמר דינה ילדה - וולדה מותר,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם עד שלא נגמר דינה ילדה - וולדה מותר,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם משנגמר דינה ילדה - וולדה אסור".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם משנגמר דינה ילדה - וולדה אסור".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כפי ששור שנגמר דינו לסקילה אסור הוא, כך גם ולד הפרה שנגמר דינה לסקילה דינו כמותה ואסור הוא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כפי ששור שנגמר דינו לסקילה אסור הוא, כך גם ולד הפרה שנגמר דינה לסקילה דינו כמותה ואסור הוא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקביל, מובאים דברי <strong>רבא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקביל, מובאים דברי <strong>רבא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ולד הנוגחת - אסור, היא וולדה נגחו. ולד הנרבעת אסור, היא וולדה נרבעו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ולד הנוגחת - אסור, היא וולדה נגחו. ולד הנרבעת אסור, היא וולדה נרבעו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, ולד הבהמה הנוגחת נאסר כאילו נגח בעצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, ולד הבהמה הנוגחת נאסר כאילו נגח בעצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומקשה הגמרא, שהרי מהברייתא עולה שמה שאוסר את הוולד היא העובדה שנולד לבהמה שנגמר דינה לסקילה, ואילו מדברי רבא נובע שהוולד יכול להיאסר עוד קודם מעצם כך שהיה עוּבר במעי הבהמה כשנגחה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומקשה הגמרא, שהרי מהברייתא עולה שמה שאוסר את הוולד היא העובדה שנולד לבהמה שנגמר דינה לסקילה, ואילו מדברי רבא נובע שהוולד יכול להיאסר עוד קודם מעצם כך שהיה עוּבר במעי הבהמה כשנגחה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לכן מתרצת הגמרא שני תירוצים, האחד לפי מי שסובר ש"זה וזה גורם- מותר" והשני לפי מי שסובר ש"זה וזה גורם- אסור". אך לפני שיובאו התירוצים, נסביר את המשמעות של "זה וזה גורם"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לכן מתרצת הגמרא שני תירוצים, האחד לפי מי שסובר ש"זה וזה גורם- מותר" והשני לפי מי שסובר ש"זה וזה גורם- אסור". אך לפני שיובאו התירוצים, נסביר את המשמעות של "זה וזה גורם"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בכמה מקומות בתלמוד מצינו שאלה לגבי מעמדו של דבר הבא מכמה גורמים שאחד מהם הוא גורם היוצר איסור. למשל, ולד של בהמה האסורה להקרבה, האם גם הוא אסור להקרבה כדין אימו, או שמא משום שהוא תולדה של אב מותר ואם אסורה, ואין אימו גורם בלעדי, יהיה מותר למזבח. או לחילופין, ירקות שגדלו בצל אשרה, שאסורה בהנאה, כיוון שצילה של האשרה לא היה הגורם היחיד לגידול הירקות, הרי שאיסור הירקות משום הנאה מעבודה זרה תלוי בשאלה האם זה וזה גורם מותר או אסור. להלכה נפסק שזה וזה גורם מותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בכמה מקומות בתלמוד מצינו שאלה לגבי מעמדו של דבר הבא מכמה גורמים שאחד מהם הוא גורם היוצר איסור. למשל, ולד של בהמה האסורה להקרבה, האם גם הוא אסור להקרבה כדין אימו, או שמא משום שהוא תולדה של אב מותר ואם אסורה, ואין אימו גורם בלעדי, יהיה מותר למזבח. או לחילופין, ירקות שגדלו בצל אשרה, שאסורה בהנאה, כיוון שצילה של האשרה לא היה הגורם היחיד לגידול הירקות, הרי שאיסור הירקות משום הנאה מעבודה זרה תלוי בשאלה האם זה וזה גורם מותר או אסור. להלכה נפסק שזה וזה גורם מותר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהקשר של היחס בין דברי רבא לבין הברייתא מועלים כאמור שני תירוצים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהקשר של היחס בין דברי רבא לבין הברייתא מועלים כאמור שני תירוצים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי מי שאומר שזה וזה גורם אסור, מפרשת הגמרא את הברייתא כך- אם נתעברה וילדה לפני גמר הדין מותרת היא, ואם נתעברה וילדה לאחר גמר הדין הרי היא אסורה כי דבר האיסור גרם לה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי מי שאומר שזה וזה גורם אסור, מפרשת הגמרא את הברייתא כך- אם נתעברה וילדה לפני גמר הדין מותרת היא, ואם נתעברה וילדה לאחר גמר הדין הרי היא אסורה כי דבר האיסור גרם לה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם לפי מי שסובר שזה וזה גורם מותר, צריך לפרש שאם נתעברה וילדה לאחר הנגיחה ולפני גמר הדין מותרת היא, ואם נתעברה בין הנגיחה לגמר הדין, וילדה לאחר גמר הדין, אז הולד אסור. טעם האיסור במקרה זה הוא משום שהעובר נחשב חלק מהבהמה, וכאשר נפסק דין סקילה על הבהמה, הרי שהעובר שבמעיה כלול בו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם לפי מי שסובר שזה וזה גורם מותר, צריך לפרש שאם נתעברה וילדה לאחר הנגיחה ולפני גמר הדין מותרת היא, ואם נתעברה בין הנגיחה לגמר הדין, וילדה לאחר גמר הדין, אז הולד אסור. טעם האיסור במקרה זה הוא משום שהעובר נחשב חלק מהבהמה, וכאשר נפסק דין סקילה על הבהמה, הרי שהעובר שבמעיה כלול בו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק בהלכה יא כרבא, ששעת הנגיחה אוסרת את העובר שבמעי הנוגחת. בהלכה יב פוסק ה<strong>רמב"</strong><strong>ם</strong> לפי הסבר הברייתא, (על פי ההלכה שזה וזה גורם מותר), שאף שעת גמר הדין אוסרת את העובר שבמעי הבהמה הנוגחת, מה שבא לידי ביטוי כאשר נתעברה רק לאחר שנגחה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק בהלכה יא כרבא, ששעת הנגיחה אוסרת את העובר שבמעי הנוגחת. בהלכה יב פוסק ה<strong>רמב"</strong><strong>ם</strong> לפי הסבר הברייתא, (על פי ההלכה שזה וזה גורם מותר), שאף שעת גמר הדין אוסרת את העובר שבמעי הבהמה הנוגחת, מה שבא לידי ביטוי כאשר נתעברה רק לאחר שנגחה.</p>
                     
                 </div>
                 
@@ -1385,21 +1385,21 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור הנסקל שהוזמו עדיו כל הקודם בו זכה שהרי משנגמר דינו הפקירוהו בעליו, ואם העידו שבעליו רבעוהו והזים את העדים הרי השור לבעליו והקודם ומשכו לא זכה בו, שכיון שהבעל יודע בעצמו שלא חטא ושאלו עידי שקר והרי הוא מיחל להזימם לא הפקיר.</strong>
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור הנסקל שהוזמו עדיו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שור הנסקל שהוזמו עדיו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> במסכת כריתות (כג:) מבהירה, שברגע שמתברר ששור שנגמר דינו לסקילה, הינו חף מפשע, הרי איסור ההנאה סר ממנו, ואין סוקלים אותו, אלא הוא חוזר להיות בהמה רגילה. בהקשר זה, מביאה הגמרא (כד.) את דברי <strong>ר' יוחנן</strong>, ששור שנגמר דינו לסקילה, כיוון שבעליו מפקירים אותו, הרי שאם מוזמים עדיו, והוא חוזר להיות בהמה רגילה, נחשב הוא להפקר, וכל המחזיק בו זכה בו. אמנם, <strong>רבא </strong>מבאר, שאם ברורה לבעלים חפותו של השור, אין הבעלים מפקירים אותו, משום שהם מצפים שיבואו עדים שיזימו את הראשונים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> במסכת כריתות (כג:) מבהירה, שברגע שמתברר ששור שנגמר דינו לסקילה, הינו חף מפשע, הרי איסור ההנאה סר ממנו, ואין סוקלים אותו, אלא הוא חוזר להיות בהמה רגילה. בהקשר זה, מביאה הגמרא (כד.) את דברי <strong>ר' יוחנן</strong>, ששור שנגמר דינו לסקילה, כיוון שבעליו מפקירים אותו, הרי שאם מוזמים עדיו, והוא חוזר להיות בהמה רגילה, נחשב הוא להפקר, וכל המחזיק בו זכה בו. אמנם, <strong>רבא </strong>מבאר, שאם ברורה לבעלים חפותו של השור, אין הבעלים מפקירים אותו, משום שהם מצפים שיבואו עדים שיזימו את הראשונים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כ<strong>ר' יוחנן</strong> וכדברי <strong>רבא</strong>. בהלכות מאכלות אסורות (ד, כב) פוסק הרמב"ם כדברי המשנה, ששור שנגמר דינו לסקילה, והתבררה חפותו, חוזר להיות כבהמה רגילה (ואם נתגלתה חפותו רק לאחר שנסקל, מותר בהנאה כבהמה רגילה)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כ<strong>ר' יוחנן</strong> וכדברי <strong>רבא</strong>. בהלכות מאכלות אסורות (ד, כב) פוסק הרמב"ם כדברי המשנה, ששור שנגמר דינו לסקילה, והתבררה חפותו, חוזר להיות כבהמה רגילה (ואם נתגלתה חפותו רק לאחר שנסקל, מותר בהנאה כבהמה רגילה)</p>
                     
                 </div>
                 
@@ -1424,6 +1424,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

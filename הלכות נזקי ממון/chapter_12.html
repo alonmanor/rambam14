@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק יב</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק יב)</h3>
                 <ul class="space-y-3">
@@ -1212,7 +1212,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1225,31 +1225,31 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>החופר בור ברשות הרבים ונפל לתוכו שור או חמור ומת אפילו היה הבור מלא גזות של צמר וכיוצא בהן הרי בעל הבור חייב לשלם נזק שלם שנאמר בעל הבור ישלם, ואחד שור וחמור או שאר מיני בהמה וחיה ועוף, לא נאמר שור או חמור אלא בהווה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הקדמה לדין הבור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הקדמה לדין הבור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>תורה</strong> (שמות כא, לג-לד):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר ב<strong>תורה</strong> (שמות כא, לג-לד):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְכִי יִפְתַּח אִישׁ בּוֹר אוֹ כִּי יִכְרֶה אִישׁ בֹּר וְלֹא יְכַסֶּנּוּ וְנָפַל שָׁמָּה שּׁוֹר אוֹ חֲמוֹר:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְכִי יִפְתַּח אִישׁ בּוֹר אוֹ כִּי יִכְרֶה אִישׁ בֹּר וְלֹא יְכַסֶּנּוּ וְנָפַל שָׁמָּה שּׁוֹר אוֹ חֲמוֹר:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בַּעַל הַבּוֹר יְשַׁלֵּם כֶּסֶף יָשִׁיב לִבְעָלָיו וְהַמֵּת יִהְיֶה לּוֹ:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בַּעַל הַבּוֹר יְשַׁלֵּם כֶּסֶף יָשִׁיב לִבְעָלָיו וְהַמֵּת יִהְיֶה לּוֹ:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נ:) בעוסקה בדיון האם חייב בבור על הבלו או על החבטה (עי' להלן הלכה יד), מסבירה מדוע מוסכם על הכל, שחייב על הבלו של הבור ואומרת שהתורה העידה על בור, שבעליו חייב אפילו היה מלא גיזי צמר (דהיינו, אפילו כשאין הנופל לתוכו נחבט כלל).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נ:) בעוסקה בדיון האם חייב בבור על הבלו או על החבטה (עי' להלן הלכה יד), מסבירה מדוע מוסכם על הכל, שחייב על הבלו של הבור ואומרת שהתורה העידה על בור, שבעליו חייב אפילו היה מלא גיזי צמר (דהיינו, אפילו כשאין הנופל לתוכו נחבט כלל).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שהדבר נלמד מכך שכתוב סתם בור, ולכן זה כולל את כל סוגי הבורות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש שהדבר נלמד מכך שכתוב סתם בור, ולכן זה כולל את כל סוגי הבורות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>מפרש שהדבר נלמד מהמילים "בַּעַל הַבּוֹר", המלמדות שחלל הבור (=ההבל), השייך לחופר, גם הוא גורם המחייב, ולא רק החבטה בקרקע, שאינה שייכת לאיש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>מפרש שהדבר נלמד מהמילים "בַּעַל הַבּוֹר", המלמדות שחלל הבור (=ההבל), השייך לחופר, גם הוא גורם המחייב, ולא רק החבטה בקרקע, שאינה שייכת לאיש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפסוק מפורשים שור וחמור, אך ה<strong>משנה</strong> (נד:) כותבת שאף כל בהמה וחיה בכלל, אלא שדיבר הכתוב בהווה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפסוק מפורשים שור וחמור, אך ה<strong>משנה</strong> (נד:) כותבת שאף כל בהמה וחיה בכלל, אלא שדיבר הכתוב בהווה.</p>
                     
                 </div>
                 
@@ -1257,43 +1257,43 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אחד החופר בור ברשות הרבים או החופר ברשותו ופתח לרשות הרבים או פתח לרשות חבירו או שחפר ופתח ברשותו והפקיר רשותו ולא הפקיר בורו הרי זה חייב בנזקיו, אבל אם הפקיר רשותו ובורו או שהפקיר בורו שברשותו או הקדישו הרי זה פטור שנאמר בעל הבור ישלם מי שיש לו בעלים וזה הפקר ובתחלה ברשות חפר מפני שחפר ברשותו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החופר בור ברשותו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">החופר בור ברשותו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (מט:) מביאה מחלוקת תנאים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (מט:) מביאה מחלוקת תנאים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"החופר בור ברה"י ופתחו לרה"ר, (ברה"ר ופתחו לרה"י) - חייב, וזהו בור האמור בתורה, דברי <strong>ר' ישמעאל</strong><strong>.</strong></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"החופר בור ברה"י ופתחו לרה"ר, (ברה"ר ופתחו לרה"י) - חייב, וזהו בור האמור בתורה, דברי <strong>ר' ישמעאל</strong><strong>.</strong></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר</strong><strong>' </strong><strong>ע</strong><strong>קיבא</strong> אומר: הפקיר רשותו ולא הפקיר בורו - זהו בור האמור בתורה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר</strong><strong>' </strong><strong>ע</strong><strong>קיבא</strong> אומר: הפקיר רשותו ולא הפקיר בורו - זהו בור האמור בתורה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המחלוקת מתמודדת עם הבנת הפסוקים. בפסוקי פרשיית הבור נראה שהכריה של הבור היתה בהיתר (מלשון "כי יכרה"). לכן, נראה שהכריה היתה ברשות הכורה. עם זאת, מדוע אנו מחייבים את הכורה כשנפלה בהמה בבור? הרי יכול בעל הבור לטעון שלא היתה צריכה להיכנס לרשותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המחלוקת מתמודדת עם הבנת הפסוקים. בפסוקי פרשיית הבור נראה שהכריה של הבור היתה בהיתר (מלשון "כי יכרה"). לכן, נראה שהכריה היתה ברשות הכורה. עם זאת, מדוע אנו מחייבים את הכורה כשנפלה בהמה בבור? הרי יכול בעל הבור לטעון שלא היתה צריכה להיכנס לרשותו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' ישמעאל </strong>מסביר, שאכן החפירה היתה ברשותו של החופר, אלא שפי הבור נמצא ברשות הרבים, ולכן העוברים שם עלולים ליפול לתוכו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' ישמעאל </strong>מסביר, שאכן החפירה היתה ברשותו של החופר, אלא שפי הבור נמצא ברשות הרבים, ולכן העוברים שם עלולים ליפול לתוכו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' עקיבא</strong> מסביר, שמדובר במקרה שהפקיר את רשותו שסביב בורו, אך לא את הבור עצמו, ולכן יוצא שהכריה היתה בהיתר, ברשותו, ובכל זאת מובן כיצד יכולים בני רשות הרבים ליפול בבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' עקיבא</strong> מסביר, שמדובר במקרה שהפקיר את רשותו שסביב בורו, אך לא את הבור עצמו, ולכן יוצא שהכריה היתה בהיתר, ברשותו, ובכל זאת מובן כיצד יכולים בני רשות הרבים ליפול בבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהבנת היקף מחלוקת התנאים, חלקו האמוראים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהבנת היקף מחלוקת התנאים, חלקו האמוראים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבה</strong> מפרש, שההסבר של ר' ישמעאל, דהיינו, שהתורה מחייבת בבור שפתחו לרשות הרבים, מקובל גם על ר' עקיבא. אלא שר' עקיבא טוען שיש להבין בכתוב, שהתורה חייבה גם במקרה שהפקיר בעל הבור את רשותו ולא את בורו. לדעת רבה חולקים התנאים בהבנת הביטוי "בעל הבור". ר' עקיבא מפרש שכוונת הפסוק היא (בין השאר) לחיוב בגלל בעלות ממונית על הבור, כמו במקרה שהפקיר את הרשות שסביב הבור ולא את הבור עצמו, ואילו ר' ישמעאל מפרש שכוונת הביטוי הוא "בעל התקלה", כלומר, זה שגרם לתקלה שתהיה. לכן לפי ר' ישמעאל, אם נחפר הבור ברשות, והפקיר החופר את רשותו ולא הפקיר בורו, <strong>לא</strong> יתחייב בנזקי הבור, שכן ההפקרה לא עשתה דבר בבור עצמו, וממילא אין לקרוא בו "בעל הבור" במשמעות של הגורם לתקלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבה</strong> מפרש, שההסבר של ר' ישמעאל, דהיינו, שהתורה מחייבת בבור שפתחו לרשות הרבים, מקובל גם על ר' עקיבא. אלא שר' עקיבא טוען שיש להבין בכתוב, שהתורה חייבה גם במקרה שהפקיר בעל הבור את רשותו ולא את בורו. לדעת רבה חולקים התנאים בהבנת הביטוי "בעל הבור". ר' עקיבא מפרש שכוונת הפסוק היא (בין השאר) לחיוב בגלל בעלות ממונית על הבור, כמו במקרה שהפקיר את הרשות שסביב הבור ולא את הבור עצמו, ואילו ר' ישמעאל מפרש שכוונת הביטוי הוא "בעל התקלה", כלומר, זה שגרם לתקלה שתהיה. לכן לפי ר' ישמעאל, אם נחפר הבור ברשות, והפקיר החופר את רשותו ולא הפקיר בורו, <strong>לא</strong> יתחייב בנזקי הבור, שכן ההפקרה לא עשתה דבר בבור עצמו, וממילא אין לקרוא בו "בעל הבור" במשמעות של הגורם לתקלה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוסף</strong> מבין הפוך. לדעתו כל התנאים מסכימים שבור שנחפר בהיתר, ברשותו, ואז הפקיר רשותו ולא הפקיר בורו, זהו בור שהתורה חייבה עליו. דהיינו, כולם מסכימים שהביטוי "בעל הבור" מבטא בעלות ממונית על הבור. ר' ישמעאל אומר שגם על חפירת בור ברשות הרבים חייבה התורה, ואילו ר' עקיבא סובר שעל בור ברשות הרבים לא חייבה תורה, מפני שהוא אינו שלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יוסף</strong> מבין הפוך. לדעתו כל התנאים מסכימים שבור שנחפר בהיתר, ברשותו, ואז הפקיר רשותו ולא הפקיר בורו, זהו בור שהתורה חייבה עליו. דהיינו, כולם מסכימים שהביטוי "בעל הבור" מבטא בעלות ממונית על הבור. ר' ישמעאל אומר שגם על חפירת בור ברשות הרבים חייבה התורה, ואילו ר' עקיבא סובר שעל בור ברשות הרבים לא חייבה תורה, מפני שהוא אינו שלו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (ד"ה "בעל התקלה") מסביר שר' עקיבא מדבר על חופר ברשות והפקיר רשותו, ולא בורו, ואינו מדבר על חופר ברשות והפקיר רשותו ובורו, משום שזה מקרה השווה בדיוק לדין החופר בור ברשות הרבים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (ד"ה "בעל התקלה") מסביר שר' עקיבא מדבר על חופר ברשות והפקיר רשותו, ולא בורו, ואינו מדבר על חופר ברשות והפקיר רשותו ובורו, משום שזה מקרה השווה בדיוק לדין החופר בור ברשות הרבים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים אחרים, ובהם ה<strong>רמב"ם</strong> וה<strong>רא"ש</strong>, הבינו שר' עקיבא מחייב דווקא בהפקיר רשותו ולא הפקיר בורו, משום שאם חפר ברשותו ואח"כ הפקיר רשותו ובורו, לכולי עלמא פטור החופר, וזאת משום שמצד אחד הכריה היתה בהיתר, ומצד שני אין הבור כעת של החופר שיתחייב עליו משום רכושו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשונים אחרים, ובהם ה<strong>רמב"ם</strong> וה<strong>רא"ש</strong>, הבינו שר' עקיבא מחייב דווקא בהפקיר רשותו ולא הפקיר בורו, משום שאם חפר ברשותו ואח"כ הפקיר רשותו ובורו, לכולי עלמא פטור החופר, וזאת משום שמצד אחד הכריה היתה בהיתר, ומצד שני אין הבור כעת של החופר שיתחייב עליו משום רכושו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">להלכה פוסק ה<strong>רמב"ם </strong>כר' עקיבא, שבין בהפקיר רשותו ולא הפקיר בורו (כריה בהיתר), ובין בכּורה בור ברה"ר (כריה באיסור), חייב בעל הבור. לכן להלכה במקרה שהפקיר רשותו ובורו שבה, קיים הבדל בין רש"י לבין שאר הראשונים.  בעוד שרש"י מחייב כמו בחופר בור ברשות הרבים, הרמב"ם פוטר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">להלכה פוסק ה<strong>רמב"ם </strong>כר' עקיבא, שבין בהפקיר רשותו ולא הפקיר בורו (כריה בהיתר), ובין בכּורה בור ברה"ר (כריה באיסור), חייב בעל הבור. לכן להלכה במקרה שהפקיר רשותו ובורו שבה, קיים הבדל בין רש"י לבין שאר הראשונים.  בעוד שרש"י מחייב כמו בחופר בור ברשות הרבים, הרמב"ם פוטר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי ו) פוסק כשיטת הרמב"ם והרא"ש, שהפקיר רשותו ובורו- פטור על נזקי הבור, שכן אינו שלו ואף נחפר ברשות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי ו) פוסק כשיטת הרמב"ם והרא"ש, שהפקיר רשותו ובורו- פטור על נזקי הבור, שכן אינו שלו ואף נחפר ברשות.</p>
                     
                 </div>
                 
@@ -1301,21 +1301,21 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אחד החופר או שנחפר הבור מאליו או שחפרתו בהמה או חיה הואיל והוא חייב למלאותו או לכסותו ולא עשה הרי זה חייב בנזקיו, ואחד החופר או הלוקח או שנתן לו במתנה שנאמר בעל הבור ישלם מי שיש לו בעלים מכל מקום. </strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חובת כיסוי הבור והבעלות על הבור כמחייבים על נזקיו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חובת כיסוי הבור והבעלות על הבור כמחייבים על נזקיו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל (פרק ז' הלכה ו') ראינו, שלמרות שהתורה פטרה בעל בהמה שחפרה בור על נזקי הבור שחפרה, שנאמר "כי יכרה <strong>איש</strong> בור", עדיין אם הבור נמצא ברשותו חלה עליו חובה למלאו, ואם לא עשה כן הרי הוא חייב בנזקיו, אפילו אם הבהמה שחפרתו אינה שלו כלל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעיל (פרק ז' הלכה ו') ראינו, שלמרות שהתורה פטרה בעל בהמה שחפרה בור על נזקי הבור שחפרה, שנאמר "כי יכרה <strong>איש</strong> בור", עדיין אם הבור נמצא ברשותו חלה עליו חובה למלאו, ואם לא עשה כן הרי הוא חייב בנזקיו, אפילו אם הבהמה שחפרתו אינה שלו כלל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף, בהלכה הקודמת, ראינו שר' עקיבא (ולפי ר' יוסף אף ר' ישמעאל) מפרשים שהביטוי "בעל הבור" מלמדנו שאדם יכול להתחייב על נזקי בור למרות שחפרו בהיתר, ולו רק משום שהוא בעליו. על פי דרך זו פוסק כאן הרמב"ם, שבעל הבור חייב בנזקיו ללא קשר ליחס שלו לכריית הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף, בהלכה הקודמת, ראינו שר' עקיבא (ולפי ר' יוסף אף ר' ישמעאל) מפרשים שהביטוי "בעל הבור" מלמדנו שאדם יכול להתחייב על נזקי בור למרות שחפרו בהיתר, ולו רק משום שהוא בעליו. על פי דרך זו פוסק כאן הרמב"ם, שבעל הבור חייב בנזקיו ללא קשר ליחס שלו לכריית הבור.</p>
                     
                 </div>
                 
@@ -1323,43 +1323,43 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אחד החופר או המגלה מקום שהיה מכוסה שנאמר +שמות כ"א ל"ג+ וכי יפתח איש בור או כי יכרה איש בור ולא יכסנו, ואם כסהו כראוי אע"פ שהתליע מתוכו ונפל לתוכו שור ומת פטור שנאמר ולא יכסנו הא אם כסהו פטור. כסהו בדבר שיכול לעמוד בפני שוורים ואינו יכול לעמוד בפני גמלים והלכו עליו גמלים ונתרועע והלכו עליו שוורים ונפלו בו, אם אין הגמלים מצויין באותו מקום הרי זה פטור מפני שזה אונס ואם יבואו שם גמלים אפילו לפרקים הרי זה חייב. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>התליע מתוכו ונפלו בו שוורים אע"פ שהגמלים מצויין שם תמיד והרי הוא פושע לגמלים הואיל ומחמת שהתליע נפלו בו השוורים הרי זה פטור, </strong><strong>וכן כל כיוצא בזה.</strong> התליע מתוכו ונפלו בו שורים וכו' הרי זה פטור וכן כל כיוצא בזה. א"א הרב רבי יצחק לא הביא בהלכותיו מכל אותה הסוגיא כלום דומה שאינה עיקר וסמך על מה שהסכימו בעלי הגמרא דתחלתו בפשיעה וסופו באונס חייב וצריך עיון.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גדר חובת כיסוי הבור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גדר חובת כיסוי הבור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נ.) מבארת שדרך אחת להסביר את הכפילות "כי יפתח" ו"כי יכרה", (שהרי אם על פתיחה חייב, לא כל שכן שחייב על כריית הבור ממש) היא שהוא בא ללמדנו שאף אם אדם חפר ממש בור, ולא רק פתחו, עדיין אם כיסהו כראוי, פטור על נזקיו. ה<strong>גמרא</strong> (נה:) לומדת זאת גם מהפסוק "ולא יכסנו", דהיינו אם כיסה את הבור הרי הוא פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נ.) מבארת שדרך אחת להסביר את הכפילות "כי יפתח" ו"כי יכרה", (שהרי אם על פתיחה חייב, לא כל שכן שחייב על כריית הבור ממש) היא שהוא בא ללמדנו שאף אם אדם חפר ממש בור, ולא רק פתחו, עדיין אם כיסהו כראוי, פטור על נזקיו. ה<strong>גמרא</strong> (נה:) לומדת זאת גם מהפסוק "ולא יכסנו", דהיינו אם כיסה את הבור הרי הוא פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נב.) מעלה את השאלה מה הדין כאשר בעל הבור כיסה את בורו כראוי עבור שוורים ולא עבור גמלים (הכבדים יותר משוורים), אך בינתיים עברו על הכיסוי גמלים, ועירערוהו, ואז עבר עליו שור, הכיסוי קרס ונפל השור לבור. השאלה העקרונית היא עד כמה צריך המְכסה את הבור להיות אחראי לעמידותו של הכיסוי. הגמרא מבהירה שאם גמלים שכיחים, אזי ברור שחייב, כיוון שאז הכיסוי אינו עמיד כלל. מצד שני, אם הגמלים נדירים, אזי בוודאי פטור. כל השאלה אינה אמורה אלא במקרה הביניים בו גמלים אינם שכיחים כל כך אך הם מצויים לפרקים. ממהלך הגמרא משמע שיש לפסוק שאף אם גמלים מצויים רק לפרקים, צריך הכיסוי להיות עמיד כזה שלא יערערוהו הגמלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נב.) מעלה את השאלה מה הדין כאשר בעל הבור כיסה את בורו כראוי עבור שוורים ולא עבור גמלים (הכבדים יותר משוורים), אך בינתיים עברו על הכיסוי גמלים, ועירערוהו, ואז עבר עליו שור, הכיסוי קרס ונפל השור לבור. השאלה העקרונית היא עד כמה צריך המְכסה את הבור להיות אחראי לעמידותו של הכיסוי. הגמרא מבהירה שאם גמלים שכיחים, אזי ברור שחייב, כיוון שאז הכיסוי אינו עמיד כלל. מצד שני, אם הגמלים נדירים, אזי בוודאי פטור. כל השאלה אינה אמורה אלא במקרה הביניים בו גמלים אינם שכיחים כל כך אך הם מצויים לפרקים. ממהלך הגמרא משמע שיש לפסוק שאף אם גמלים מצויים רק לפרקים, צריך הכיסוי להיות עמיד כזה שלא יערערוהו הגמלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (ד"ה "ואתו שוורים") מדייק מהגמרא, שאם כיסה בכיסוי שאינו עמיד בפני גמלים ונפל גמל לבור, אין עוררין על כך שחייב בעל הבור אפילו אם אין גמלים מצויים כלל. זאת למרות שכאמור לעיל, באותו מקום, בו אין גמלים מצויים, אין צריך בעל הבור לדאוג שמא יערערו גמלים את כיסוי בורו המותאם לשוורים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (ד"ה "ואתו שוורים") מדייק מהגמרא, שאם כיסה בכיסוי שאינו עמיד בפני גמלים ונפל גמל לבור, אין עוררין על כך שחייב בעל הבור אפילו אם אין גמלים מצויים כלל. זאת למרות שכאמור לעיל, באותו מקום, בו אין גמלים מצויים, אין צריך בעל הבור לדאוג שמא יערערו גמלים את כיסוי בורו המותאם לשוורים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מניחה שאם כיסה את הבור בכיסוי מספיק, והתליע הכיסוי מתוכו (באופן שאינו ניכר כלפי חוץ), ומתוך כך נפלה בהמה לתוך הבור, פטור בעל הבור כי הדבר נחשב כאונס. על רקע זה ממשיכה ה<strong>גמרא</strong> (נב:) ודנה בשאלה מה הדין אם כיסה את הבור בכיסוי המותאם לשוורים ולא לגמלים, במקום ששכיחים הגמלים, ויש לחשוש שמא יערערו גמלים את הכיסוי, אך בסופו של דבר נפל שור לבור לא משום שגמל עירער את הכיסוי אלא משום שהכיסוי התליע מתוכו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מניחה שאם כיסה את הבור בכיסוי מספיק, והתליע הכיסוי מתוכו (באופן שאינו ניכר כלפי חוץ), ומתוך כך נפלה בהמה לתוך הבור, פטור בעל הבור כי הדבר נחשב כאונס. על רקע זה ממשיכה ה<strong>גמרא</strong> (נב:) ודנה בשאלה מה הדין אם כיסה את הבור בכיסוי המותאם לשוורים ולא לגמלים, במקום ששכיחים הגמלים, ויש לחשוש שמא יערערו גמלים את הכיסוי, אך בסופו של דבר נפל שור לבור לא משום שגמל עירער את הכיסוי אלא משום שהכיסוי התליע מתוכו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במילים אחרות שאלת הגמרא היא, האם פשיעה בכיסוי הבור בכך שהוא אינו עמיד לערעורים גורם לחיובו של בעל הבור גם כשבסופו של דבר נפל שור לבור בגלל סיבה של אונס כמו שהתליע הכיסוי מתוכו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במילים אחרות שאלת הגמרא היא, האם פשיעה בכיסוי הבור בכך שהוא אינו עמיד לערעורים גורם לחיובו של בעל הבור גם כשבסופו של דבר נפל שור לבור בגלל סיבה של אונס כמו שהתליע הכיסוי מתוכו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כתשובה לשאלה זו קובעת הגמרא שפשיעה בדבר אחד אינה נחשבת כפשיעה בדבר אחר. כלומר, אם בסופו של דבר נפל השור לבור משום שהתליע הכיסוי מתוכו, הרי בעל השור פטור אפילו אם מראש הכיסוי לא היה אמור להיות עמיד כאשר יערערוהו הגמלים ההולכים עליו. הגמרא מוכיחה קביעה זו מכך שאם אדם לא כיסה בור, ונפל לתוכו שור פיקח- פטור (ראה הלכה טז לקמן), למרות שאם היה נופל שור סומא היה חייב, הרי לנו שהפשיעה לגבי שור סומא, איננה גורמת לחיוב כאשר בסופו של דבר ניזוק שור פיקח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כתשובה לשאלה זו קובעת הגמרא שפשיעה בדבר אחד אינה נחשבת כפשיעה בדבר אחר. כלומר, אם בסופו של דבר נפל השור לבור משום שהתליע הכיסוי מתוכו, הרי בעל השור פטור אפילו אם מראש הכיסוי לא היה אמור להיות עמיד כאשר יערערוהו הגמלים ההולכים עליו. הגמרא מוכיחה קביעה זו מכך שאם אדם לא כיסה בור, ונפל לתוכו שור פיקח- פטור (ראה הלכה טז לקמן), למרות שאם היה נופל שור סומא היה חייב, הרי לנו שהפשיעה לגבי שור סומא, איננה גורמת לחיוב כאשר בסופו של דבר ניזוק שור פיקח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (שם ד"ה "ושכיחי") מעלים את השאלה כיצד מסקנת הגמרא הנ"ל עולה בקנה אחד עם המסקנה במקומות אחרים, שתחילתו בפשיעה וסופו באונס חייב (ראה למשל לעיל פרק ב הלכה טו-טז). והרי גם כאן, פשע בעל הבור בכך שכיסה את הבור בכיסוי שאינו עמיד (כי הוא מתערער בהליכת הגמלים) ולכן אינו טוב אף לשוורים, ולכן הגם שלבסוף נפל שור לבור משום שהכיסוי התליע מתוכו, עדיין צריך להיות חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (שם ד"ה "ושכיחי") מעלים את השאלה כיצד מסקנת הגמרא הנ"ל עולה בקנה אחד עם המסקנה במקומות אחרים, שתחילתו בפשיעה וסופו באונס חייב (ראה למשל לעיל פרק ב הלכה טו-טז). והרי גם כאן, פשע בעל הבור בכך שכיסה את הבור בכיסוי שאינו עמיד (כי הוא מתערער בהליכת הגמלים) ולכן אינו טוב אף לשוורים, ולכן הגם שלבסוף נפל שור לבור משום שהכיסוי התליע מתוכו, עדיין צריך להיות חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ריב"א</strong> מתרץ, שיש להבין שתחילתו בפשיעה וסופו באונס חייב רק כאשר ישנו קשר סיבתי בין פשיעתו לבין מה שקרה, כלומר, אלמלא פשע לא היה בא לכדי אונס. לכן כאן פטור, שכן ההתלעה היתה גורמת לנזק בין אם היה הכיסוי טוב לגמלים ובין אם לאו. בדרך זו הולך גם ה<strong>רשב"א</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ריב"א</strong> מתרץ, שיש להבין שתחילתו בפשיעה וסופו באונס חייב רק כאשר ישנו קשר סיבתי בין פשיעתו לבין מה שקרה, כלומר, אלמלא פשע לא היה בא לכדי אונס. לכן כאן פטור, שכן ההתלעה היתה גורמת לנזק בין אם היה הכיסוי טוב לגמלים ובין אם לאו. בדרך זו הולך גם ה<strong>רשב"א</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו מתרץ <strong>ר"י</strong> (ולכך מסכימים ה<strong>רא"ש</strong> וה<strong>טור</strong>), שמדובר במקרה בו הכיסוי היה כזה שלו גמל היה עובר עליו, היה מיד נופל, וממילא לא פשע בעל הבור כלל ביחס לשוורים (אלא רק ביחס לגמלים), שכן לו יעבור שור על הכיסוי, הרי יחזיק הכיסוי מעמד, ולו יעבור גמל, מיד יפול הכיסוי ושוב לא יפול שור פיקח לבור ביום משום שיראה ויזהר<sup id="ref27"><a href="#fn27">[27]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו מתרץ <strong>ר"י</strong> (ולכך מסכימים ה<strong>רא"ש</strong> וה<strong>טור</strong>), שמדובר במקרה בו הכיסוי היה כזה שלו גמל היה עובר עליו, היה מיד נופל, וממילא לא פשע בעל הבור כלל ביחס לשוורים (אלא רק ביחס לגמלים), שכן לו יעבור שור על הכיסוי, הרי יחזיק הכיסוי מעמד, ולו יעבור גמל, מיד יפול הכיסוי ושוב לא יפול שור פיקח לבור ביום משום שיראה ויזהר<sup id="ref27"><a href="#fn27">[27]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף </strong>לא פסק דבר בעניין, וה<strong>ראב"ד</strong> מציע שהסיבה היא משום שהוא אינו מקבל סוגיה זו להלכה, שכן היא סותרת את הפסק בעניין תחילתו בפשיעה וסופו באונס. אמנם, ה<strong>מגיד משנה</strong> חולק על הראב"ד, ומסביר שהרי"ף לא כתב דבר משום שמדובר במקרה שאינו שכיח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רי"ף </strong>לא פסק דבר בעניין, וה<strong>ראב"ד</strong> מציע שהסיבה היא משום שהוא אינו מקבל סוגיה זו להלכה, שכן היא סותרת את הפסק בעניין תחילתו בפשיעה וסופו באונס. אמנם, ה<strong>מגיד משנה</strong> חולק על הראב"ד, ומסביר שהרי"ף לא כתב דבר משום שמדובר במקרה שאינו שכיח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פסק כדברי הגמרא גם במקרה שהשור נפל כי עירערו הגמלים את הכיסוי וגם במקרה שהשור נפל כי התליע מתוכו, ולא התייחס לשאלת התוס'. ה<strong>שו"ע</strong> (תי כג-כד) פוסק כדברי הרמב"ם. ה<strong>רמ"א</strong> מוסיף את דברי רש"י דלעיל, ובהמשך חולק על השו"ע, ופוסק כר"י, שיש לחלק בין כיסוי שגמלים מערערים אותו (בו חייב בעל הבור בנפילת שור, אפילו אם נפל בגלל התלעת הכיסוי, שכן פשע לגבי שוורים), לבין כיסוי שגמלים מפילים אותו (בו אין פשיעה ביחס לשוורים כמוסבר לעיל, וממילא אם נפל שור בגלל התלעה, פטור).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פסק כדברי הגמרא גם במקרה שהשור נפל כי עירערו הגמלים את הכיסוי וגם במקרה שהשור נפל כי התליע מתוכו, ולא התייחס לשאלת התוס'. ה<strong>שו"ע</strong> (תי כג-כד) פוסק כדברי הרמב"ם. ה<strong>רמ"א</strong> מוסיף את דברי רש"י דלעיל, ובהמשך חולק על השו"ע, ופוסק כר"י, שיש לחלק בין כיסוי שגמלים מערערים אותו (בו חייב בעל הבור בנפילת שור, אפילו אם נפל בגלל התלעת הכיסוי, שכן פשע לגבי שוורים), לבין כיסוי שגמלים מפילים אותו (בו אין פשיעה ביחס לשוורים כמוסבר לעיל, וממילא אם נפל שור בגלל התלעה, פטור).</p>
                     
                 </div>
                 
@@ -1367,27 +1367,27 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המוצא בור וכסהו וחזר וגילהו, בעל הבור חייב וזה האחרון פטור, סתמו בעפר וחזר והוציא את כל העפר זה האחרון חייב, שכיון שטממו בעפר נסתלקו מעשה הראשון. </strong> המוצא בור וכסהו וחזר וגלהו בעל הבור חייב. א"א בכדי שידע.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">זהות בעל הבור ביצירה מחודשת של בור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">זהות בעל הבור ביצירה מחודשת של בור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ל.) כותבת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (ל.) כותבת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ההופך את הגלל ברה"ר והוזק בהן אחר - חייב בנזקו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ההופך את הגלל ברה"ר והוזק בהן אחר - חייב בנזקו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כט:) מובאים דברי <strong>ר' אלעזר</strong> שפירש שדברי המשנה אמורים רק אם נתכוון ההופך לזכות בגַלל. בהסבר דברי ר' אלעזר, מציע <strong>ר' אדא בר אהבה</strong>, שמדובר במקרה בו החזיר את הגלל למקומו לאחר שהפכו, לכן רק אם נתכוון לזכות בו חייב עליו, ואם לא נתכוון לזכות בו, הרי הוא הפקר כמו שהיה ואף באותו מקום שהיה, ונמצא שלא עשה ההופכו כלום. ר' אדא משווה דין זה לדין אדם שמצא בור מגולה, כיסהו, וחזר וגילהו, בו מוסכם שהוא פטור, שכן השאיר את הבור באותו מצב בו מצאו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (כט:) מובאים דברי <strong>ר' אלעזר</strong> שפירש שדברי המשנה אמורים רק אם נתכוון ההופך לזכות בגַלל. בהסבר דברי ר' אלעזר, מציע <strong>ר' אדא בר אהבה</strong>, שמדובר במקרה בו החזיר את הגלל למקומו לאחר שהפכו, לכן רק אם נתכוון לזכות בו חייב עליו, ואם לא נתכוון לזכות בו, הרי הוא הפקר כמו שהיה ואף באותו מקום שהיה, ונמצא שלא עשה ההופכו כלום. ר' אדא משווה דין זה לדין אדם שמצא בור מגולה, כיסהו, וחזר וגילהו, בו מוסכם שהוא פטור, שכן השאיר את הבור באותו מצב בו מצאו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, <strong>מר זוטרא בריה דרב מרי</strong> חולק על השוואה זו. לדעתו ההופך את הגלל ומשיבו למקומו דומה למי שמצא בור מגולה, מילאו עפר וחזר וחפרו. במקרה זה מוסכם על הכל כי הבור שחפר נחשב בור חדש והוא (ולא החופר הראשון), יהיה חייב בנזקיו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, <strong>מר זוטרא בריה דרב מרי</strong> חולק על השוואה זו. לדעתו ההופך את הגלל ומשיבו למקומו דומה למי שמצא בור מגולה, מילאו עפר וחזר וחפרו. במקרה זה מוסכם על הכל כי הבור שחפר נחשב בור חדש והוא (ולא החופר הראשון), יהיה חייב בנזקיו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מעבר לדין ההופך את הגלל, נמצאנו למדים בגמרא, שלדברי הכל המוצא בור, מכסהו וחוזר ומגלו- פטור, ולעומתו המוצא בור, ממלאהו וחוזר וחופרו- חייב. וכך פוסק הרמב"ם. ואף ה<strong>שו"ע</strong> (תי ג) פוסק כלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מעבר לדין ההופך את הגלל, נמצאנו למדים בגמרא, שלדברי הכל המוצא בור, מכסהו וחוזר ומגלו- פטור, ולעומתו המוצא בור, ממלאהו וחוזר וחופרו- חייב. וכך פוסק הרמב"ם. ואף ה<strong>שו"ע</strong> (תי ג) פוסק כלשון הרמב"ם.</p>
                     
                 </div>
                 
@@ -1395,72 +1395,72 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בור של שני שותפין ועבר עליו הראשון ולא כסהו והשני ולא כסהו, הראשון חייב עד שימסור דליו לשני ומשמסר דליו לשני לדלות ממנו נפטר הראשון ונתחייב השני לכסותו. כסהו הראשון ובא השני ומצאו מגולה ולא כסהו השני חייב, ועד אימתי יהיה השני לבדו חייב עד שידע הראשון שהבור מגולה וכדי שישכור פועלים ויכרות ארזים ויכסנו, וכל שימות בו בתוך זמן זה השני לבדו חייב בו וכל שימות בו אחר זמן כזה שניהן חייבין לשלם שהרי שניהן פשעו בו. </strong>כסהו הראשון וכו' עד שידע הראשון שהבור מגולה. א"א אין בגמרא עד שידע הראשון אלא כדי שידע, משמע שיעור מנהגו שחוזר לדלות מבורו.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חלוקת האחריות בבור של שני שותפים – מתי יכול הראשון להשאיר את הבור מגולה ולסמוך על השני</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חלוקת האחריות בבור של שני שותפים – מתי יכול הראשון להשאיר את הבור מגולה ולסמוך על השני</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (נא.)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אומרת ה<strong>משנה</strong> (נא.)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"בור של שני שותפין, עבר עליו הראשון ולא כסהו, והשני ולא כסהו - השני חייב" [לגרסת הרי"ף- "הראשון חייב"]</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"בור של שני שותפין, עבר עליו הראשון ולא כסהו, והשני ולא כסהו - השני חייב" [לגרסת הרי"ף- "הראשון חייב"]</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר, שחייבים לפרש ש"עבר" שבמשנה, הכוונה לנשתמש, שהרי אם נבין שהכוונה לשימת לב בלבד שהבור איננו מכוסה, מה הבדל יש בין הראשון לשני? הרי שניהם היו מודעים לתקלה ואחראים על תיקונה. לכן יש להבין את המקרה הנדון כך- הראשון השתמש בבור, ולכן היה חייב לגלותו, ולא כיסהו. אחריו השתמש השני בבור, (ולו היה הבור מכוסה היה גם הוא מגלהו, אך הוא היה כבר גלוי משימושו של הראשון). בסופו של דבר גם השני לא כיסה את הבור, והמשנה פוסקת שהשני חייב בנזקי הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר, שחייבים לפרש ש"עבר" שבמשנה, הכוונה לנשתמש, שהרי אם נבין שהכוונה לשימת לב בלבד שהבור איננו מכוסה, מה הבדל יש בין הראשון לשני? הרי שניהם היו מודעים לתקלה ואחראים על תיקונה. לכן יש להבין את המקרה הנדון כך- הראשון השתמש בבור, ולכן היה חייב לגלותו, ולא כיסהו. אחריו השתמש השני בבור, (ולו היה הבור מכוסה היה גם הוא מגלהו, אך הוא היה כבר גלוי משימושו של הראשון). בסופו של דבר גם השני לא כיסה את הבור, והמשנה פוסקת שהשני חייב בנזקי הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>לגרסת רש"י</strong>, "השני חייב", הכוונה ששניהם חייבים (דהיינו יש להבין "אף השני חייב"), אלא אם כן התמלאו התנאים המובאים בגמרא, כדלקמן. אך <strong>לגרסת הרי"ף</strong> הדבר אינו חד משמעי. ניתן לפרש ש<strong>רק</strong> הראשון חייב, עד שיעשה את המפורט בגמרא כדי להעביר את האחריות לשני, שכן הוא זה שגילה את הבור מלכתחילה, וכך מסביר ה<strong>רמב"ם</strong>. אמנם, ה<strong>רא"ש</strong> מבאר, שאף לפי גירסה זו, שניהם חייבים, שכן במה שונה אחריותו של השני מזו של הראשון, שהרי הבור שייך לשניהם, ויש לפרש כוונת הדברים- אף הראשון חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>לגרסת רש"י</strong>, "השני חייב", הכוונה ששניהם חייבים (דהיינו יש להבין "אף השני חייב"), אלא אם כן התמלאו התנאים המובאים בגמרא, כדלקמן. אך <strong>לגרסת הרי"ף</strong> הדבר אינו חד משמעי. ניתן לפרש ש<strong>רק</strong> הראשון חייב, עד שיעשה את המפורט בגמרא כדי להעביר את האחריות לשני, שכן הוא זה שגילה את הבור מלכתחילה, וכך מסביר ה<strong>רמב"ם</strong>. אמנם, ה<strong>רא"ש</strong> מבאר, שאף לפי גירסה זו, שניהם חייבים, שכן במה שונה אחריותו של השני מזו של הראשון, שהרי הבור שייך לשניהם, ויש לפרש כוונת הדברים- אף הראשון חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נא:) מסבירה שאין מדובר במקרה בו השאיר הראשון את הבור גלוי סתם כך, אלא הוא היה מודע לכך שהשני זקוק להשתמש בו. ונחלקו התנאים מה צריך הראשון לעשות על מנת להעביר את האחריות לכיסוי הבור למשתמש השני. <strong>חכמים</strong> אומרים שצריך הראשון לעזוב כאשר הוא רואה שהשני משתמש, ואז הוא יכול לסמוך על זה שבתום השימוש יכסה השני את הבור. ואילו <strong>ר' אליעזר בן יעקב</strong> דורש שימסור הראשון לשני את דלייו של הבור כדי שיעבור החיוב לשני.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נא:) מסבירה שאין מדובר במקרה בו השאיר הראשון את הבור גלוי סתם כך, אלא הוא היה מודע לכך שהשני זקוק להשתמש בו. ונחלקו התנאים מה צריך הראשון לעשות על מנת להעביר את האחריות לכיסוי הבור למשתמש השני. <strong>חכמים</strong> אומרים שצריך הראשון לעזוב כאשר הוא רואה שהשני משתמש, ואז הוא יכול לסמוך על זה שבתום השימוש יכסה השני את הבור. ואילו <strong>ר' אליעזר בן יעקב</strong> דורש שימסור הראשון לשני את דלייו של הבור כדי שיעבור החיוב לשני.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שהמחלוקת היא בשאלה "ברירה". כלומר, לדעת חכמים כל אחד מהשותפים שדולה מהבור, דולה מרכוש המשותף לשניהם, ואילו לשיטת ראב"י, למרות שהם שותפים בנכס, עדיין כל אחד מהם דולה כביכול את המים שלו עצמו, ואינו נחשב כמשתמש בשל חברו. ונחלקו הראשונים בהבנת דברי ראב"י-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שהמחלוקת היא בשאלה "ברירה". כלומר, לדעת חכמים כל אחד מהשותפים שדולה מהבור, דולה מרכוש המשותף לשניהם, ואילו לשיטת ראב"י, למרות שהם שותפים בנכס, עדיין כל אחד מהם דולה כביכול את המים שלו עצמו, ואינו נחשב כמשתמש בשל חברו. ונחלקו הראשונים בהבנת דברי ראב"י-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שלדעת החכמים, כל אחד מהשותפים המשתמש בבור, משתמש גם בשלו וגם בשל חברו, וכל אחד מהשותפים נחשב כשואל לגבי חברו, ולכן חובת השמירה על חלקו של הראשון עוברת לשני כאשר הוא משתמש בבור, כדין שומר החייב בנזקי החפץ עליו הוא שומר. לעומת זאת, לדעת ראב"י, אין השותפים משתמשים זה בשל זה כאשר הם דולים, ולכן הראשון צריך למנות בפירוש את השני לשומר על שלו כדי שהאחריות תעבור אליו. מינוי זה נעשה על ידי מסירת דליי הבור, דהיינו, כיסויו, שזוהי הדרך למנות שומר על בור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש שלדעת החכמים, כל אחד מהשותפים המשתמש בבור, משתמש גם בשלו וגם בשל חברו, וכל אחד מהשותפים נחשב כשואל לגבי חברו, ולכן חובת השמירה על חלקו של הראשון עוברת לשני כאשר הוא משתמש בבור, כדין שומר החייב בנזקי החפץ עליו הוא שומר. לעומת זאת, לדעת ראב"י, אין השותפים משתמשים זה בשל זה כאשר הם דולים, ולכן הראשון צריך למנות בפירוש את השני לשומר על שלו כדי שהאחריות תעבור אליו. מינוי זה נעשה על ידי מסירת דליי הבור, דהיינו, כיסויו, שזוהי הדרך למנות שומר על בור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"ח</strong> לעומת זאת מפרש שמסירת הדלי אינה מינוי שומר, אלא הבעה של הסתלקות (ולכן אין מדובר דווקא על הכיסוי, אלא אף על דלי המילוי). מכיוון שלדעת ראב"י כל אחד מהשותפים משתמש בשלו, יש צורך במעשה המביע הסתלקות של אחד מהם, כדי שהבור יהפוך להיות באחריות השני.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר"ח</strong> לעומת זאת מפרש שמסירת הדלי אינה מינוי שומר, אלא הבעה של הסתלקות (ולכן אין מדובר דווקא על הכיסוי, אלא אף על דלי המילוי). מכיוון שלדעת ראב"י כל אחד מהשותפים משתמש בשלו, יש צורך במעשה המביע הסתלקות של אחד מהם, כדי שהבור יהפוך להיות באחריות השני.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כראב"י, וכותב כלשון הגמרא, שיש לראשון למסור את הדליים כדי להיפטר. כמו כן, מפרש הרמב"ם לפי גירסת הרי"ף, שהראשון אחראי <strong>בלעדית</strong> עד שיעביר את הדליים לשני.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כראב"י, וכותב כלשון הגמרא, שיש לראשון למסור את הדליים כדי להיפטר. כמו כן, מפרש הרמב"ם לפי גירסת הרי"ף, שהראשון אחראי <strong>בלעדית</strong> עד שיעביר את הדליים לשני.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי כה) פוסק כרמב"ם, וה<strong>רמ"א</strong> מביא את דברי הרא"ש, לפיהם תמיד שניהם חייבים עד שיעביר הראשון את הדליים לשני.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי כה) פוסק כרמב"ם, וה<strong>רמ"א</strong> מביא את דברי הרא"ש, לפיהם תמיד שניהם חייבים עד שיעביר הראשון את הדליים לשני.</p>
                     
                 </div>
                 
                 <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חלוקת האחריות בבור של שני שותפים – מי מהשותפים אחראי לבור שנתגלה מעצמו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חלוקת האחריות בבור של שני שותפים – מי מהשותפים אחראי לבור שנתגלה מעצמו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך למשנה הנ"ל אומרת ה<strong>משנה</strong> (נב.):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך למשנה הנ"ל אומרת ה<strong>משנה</strong> (נב.):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כסהו הראשון, ובא השני ומצאו מגולה ולא כסהו - השני חייב"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כסהו הראשון, ובא השני ומצאו מגולה ולא כסהו - השני חייב"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם הראשון עשה את שלו בכיסוי הבור, והשני יודע שהבור נתגלה, חייב השני בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם הראשון עשה את שלו בכיסוי הבור, והשני יודע שהבור נתגלה, חייב השני בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> יוצאת מנקודת הנחה שכעבור זמן ארוך דיו, חוזרת האחריות להיות של שני השותפים, שהרי שניהם חייבים בתחזוקת הבור השייך לשניהם. על רקע הנחה זו שואלת הגמרא מהו אותו זמן שלאחריו חוזר אף הראשון להיות אחראי בנזקי הבור. שלוש דעות נאמרות בגמרא כתשובה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> יוצאת מנקודת הנחה שכעבור זמן ארוך דיו, חוזרת האחריות להיות של שני השותפים, שהרי שניהם חייבים בתחזוקת הבור השייך לשניהם. על רקע הנחה זו שואלת הגמרא מהו אותו זמן שלאחריו חוזר אף הראשון להיות אחראי בנזקי הבור. שלוש דעות נאמרות בגמרא כתשובה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אמר <strong>רב</strong>: בכדי שידע,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אמר <strong>רב</strong>: בכדי שידע,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ו<strong>שמואל</strong> אמר: בכדי שיודיעוהו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ו<strong>שמואל</strong> אמר: בכדי שיודיעוהו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ו<strong>רבי יוחנן</strong> אמר: בכדי שיודיעוהו, וישכור פועלים, ויכרות ארזים ויכסנו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ו<strong>רבי יוחנן</strong> אמר: בכדי שיודיעוהו, וישכור פועלים, ויכרות ארזים ויכסנו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שלדעת רב חייב השותף הנוסף לבוא ולראות שהבור מגולה כדי שיפול החיוב גם עליו. לדעת שמואל די בכך שידע על כך שהבור מגולה, ולדעת ר' יוחנן גם אם יודע שהבור מגולה עדיין חל עליו החיוב רק לאחר זמן הראוי כדי לדאוג לכיסוי הגון של הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש שלדעת רב חייב השותף הנוסף לבוא ולראות שהבור מגולה כדי שיפול החיוב גם עליו. לדעת שמואל די בכך שידע על כך שהבור מגולה, ולדעת ר' יוחנן גם אם יודע שהבור מגולה עדיין חל עליו החיוב רק לאחר זמן הראוי כדי לדאוג לכיסוי הגון של הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו רש"י, הדורש בכל אופן שידע השותף כדי שיתחייב באחריות לבור, מבין ה<strong>ראב"ד</strong> שכל שלוש הדעות אינן מצריכות שידע השותף בפועל שהבור מכוסה, אלא שיעבור זמן המספיק לכך שידע, שיודיעוהו, או שיודיעוהו ויכין כיסוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו רש"י, הדורש בכל אופן שידע השותף כדי שיתחייב באחריות לבור, מבין ה<strong>ראב"ד</strong> שכל שלוש הדעות אינן מצריכות שידע השותף בפועל שהבור מכוסה, אלא שיעבור זמן המספיק לכך שידע, שיודיעוהו, או שיודיעוהו ויכין כיסוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בין שתי הדעות הנ"ל עומדת דעת ה<strong>תוספות</strong>, המפרשים שבעוד שרב מסתפק בכך שיצא הקול על גילוי הבור, שמואל דורש שהמידע יגיע בפועל אל בעל הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בין שתי הדעות הנ"ל עומדת דעת ה<strong>תוספות</strong>, המפרשים שבעוד שרב מסתפק בכך שיצא הקול על גילוי הבור, שמואל דורש שהמידע יגיע בפועל אל בעל הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהבנת שיטת ר' יוחנן נחלקו הראשונים בנקודה נוספת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהבנת שיטת ר' יוחנן נחלקו הראשונים בנקודה נוספת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שאפילו לפי ר' יוחנן, השותף שמצא לראשונה את הבור מגולה חייב בנזקיו מיד, ולא ממתינים לו עד שיתקן כיסוי, ומוטל עליו להושיב אנשים שישמרו שם עד שיכין כיסוי, שכן הוא זה שגילה את העובדה שהבור מגולה. וכך נראה גם מדברי ה<strong>רמב"ם</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שאפילו לפי ר' יוחנן, השותף שמצא לראשונה את הבור מגולה חייב בנזקיו מיד, ולא ממתינים לו עד שיתקן כיסוי, ומוטל עליו להושיב אנשים שישמרו שם עד שיכין כיסוי, שכן הוא זה שגילה את העובדה שהבור מגולה. וכך נראה גם מדברי ה<strong>רמב"ם</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>תוספות</strong>, ה<strong>רא"ש </strong>וה<strong>טור</strong>, מפרשים שלדעת ר' יוחנן גם לשותף שגילה את הבור מגולה יש לתת זמן לכסות את הבור לפני שיתחייב בנזקי הבור הגלוי. יש להניח שלדעתם של ראשונים אלה, גם בבור של אדם אחד שמצאו מגולה, נותנים לו את אותה השהות לפני שיתחייב בנזקי בורו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>תוספות</strong>, ה<strong>רא"ש </strong>וה<strong>טור</strong>, מפרשים שלדעת ר' יוחנן גם לשותף שגילה את הבור מגולה יש לתת זמן לכסות את הבור לפני שיתחייב בנזקי הבור הגלוי. יש להניח שלדעתם של ראשונים אלה, גם בבור של אדם אחד שמצאו מגולה, נותנים לו את אותה השהות לפני שיתחייב בנזקי בורו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כדברי ר' יוחנן וכדברי הראשונים הדורשים שידע השותף השני ממש ולא רק שיעבור זמן המאפשר לו לדעת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כדברי ר' יוחנן וכדברי הראשונים הדורשים שידע השותף השני ממש ולא רק שיעבור זמן המאפשר לו לדעת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי כו) פוסק כרמב"ם, וה<strong>רמ"א</strong> מביא את דברי הרא"ש והטור, שדברי ר' יוחנן אמורים לגבי שני השותפים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי כו) פוסק כרמב"ם, וה<strong>רמ"א</strong> מביא את דברי הרא"ש והטור, שדברי ר' יוחנן אמורים לגבי שני השותפים.</p>
                     
                 </div>
                 
@@ -1468,29 +1468,29 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המוסר בורו לשומר השומר חייב בנזקיו, ואם מסרו לחרש שוטה וקטן אע"פ שהיה מכוסה הרי הבעלים חייבין שהבור עשוי להתגלות ואלו אין בהן דעת. </strong>המוסר בורו לשומר וכו' הרי הבעלים חייבין. א"א אני אומר שלא היה מכוסה כראוי.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המוסר בורו לחרש שוטה וקטן</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המוסר בורו לחרש שוטה וקטן</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ט:) מביאה <strong>ברייתא</strong> לפיה אם מסר שור או בור לידי חרש שוטה או קטן, חייב המוסר, אך אם מסר אש לידיו פטור המוסר. בפירוש הברייתא חלקו האמוראים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (ט:) מביאה <strong>ברייתא</strong> לפיה אם מסר שור או בור לידי חרש שוטה או קטן, חייב המוסר, אך אם מסר אש לידיו פטור המוסר. בפירוש הברייתא חלקו האמוראים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ריש לקיש</strong> מסביר שמסירת אש הכוונה למסירת גחלת, אותה ליבה הקטן, אך אם מסר שלהבת ממש, הרי שגם באש חייב, שכן ההיזק כאן הוא ברור. הגמרא מסבירה שלפי שיטה זו, יש להבין שמדובר בברייתא בשור קשור ובבור מכוסה, (הדומים לגחלת בכך שהם כשלעצמם אינם מזיקים אם לא יפגע הקטן בקשירת השור ובכיסוי הבור) ובכל זאת המוסרם לחרש שוטה וקטן חייב משום שדרך השור להתנתק ודרך הבור להיגלות, להבדיל מהגחלת ההולכת ומתעמעמת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ריש לקיש</strong> מסביר שמסירת אש הכוונה למסירת גחלת, אותה ליבה הקטן, אך אם מסר שלהבת ממש, הרי שגם באש חייב, שכן ההיזק כאן הוא ברור. הגמרא מסבירה שלפי שיטה זו, יש להבין שמדובר בברייתא בשור קשור ובבור מכוסה, (הדומים לגחלת בכך שהם כשלעצמם אינם מזיקים אם לא יפגע הקטן בקשירת השור ובכיסוי הבור) ובכל זאת המוסרם לחרש שוטה וקטן חייב משום שדרך השור להתנתק ודרך הבור להיגלות, להבדיל מהגחלת ההולכת ומתעמעמת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוחנן</strong> מסביר שאף על מסירת שלהבת לחרש שוטה וקטן פטור המוסר. לכן, ניתן לפיו לפרש שהברייתא מחייבת דווקא על מסירת שור שאינו קשור ובור שאינו מכוסה (הדומים לשלהבת בכך שהם כבר מזיקים כמו שהם), אך על מסירת שור קשור ובור מכוסה, ייתכן שאין לחייב את המוסר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יוחנן</strong> מסביר שאף על מסירת שלהבת לחרש שוטה וקטן פטור המוסר. לכן, ניתן לפיו לפרש שהברייתא מחייבת דווקא על מסירת שור שאינו קשור ובור שאינו מכוסה (הדומים לשלהבת בכך שהם כבר מזיקים כמו שהם), אך על מסירת שור קשור ובור מכוסה, ייתכן שאין לחייב את המוסר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong> וה<strong>רמב"ם</strong> פסקו כריש לקיש, ולכן כותב הרמב"ם שחייב המוסר לחרש שוטה וקטן אפילו אם מסר בור מכוסה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"א</strong> וה<strong>רמב"ם</strong> פסקו כריש לקיש, ולכן כותב הרמב"ם שחייב המוסר לחרש שוטה וקטן אפילו אם מסר בור מכוסה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מהשגת ה<strong>ראב"ד</strong> כאן משמע שהוא פסק כר' יוחנן, ולכן רק אם אין הבור מכוסה כראוי יש לחייב את המוסר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מהשגת ה<strong>ראב"ד</strong> כאן משמע שהוא פסק כר' יוחנן, ולכן רק אם אין הבור מכוסה כראוי יש לחייב את המוסר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי ל) פסק כרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי ל) פסק כרמב"ם.</p>
                     
                 </div>
                 
@@ -1498,23 +1498,23 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המכסה בורו בדליו של חבירו ובא בעל הדלי ונטל דליו בעל הבור חייב. </strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המכסה בורו בדלי של חברו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המכסה בורו בדלי של חברו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (ל.) מובאת <strong>ברייתא</strong> לפיה מי שטומן את קוציו בתוך כותל של חברו, ובא בעל הכותל, והרס את כותלו, והוזק מישהו בקוצים, חייב בעל הקוצים ולא בעל הכותל. הגמרא מבהירה שמדובר במקרה בו הכותל רעוע, ולכן היה על בעל הקוצים לדעת שהכותל מועד להריסה ולא להניח את קוציו בו (עי' בפרק הבא הלכות כ'-כב').</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (ל.) מובאת <strong>ברייתא</strong> לפיה מי שטומן את קוציו בתוך כותל של חברו, ובא בעל הכותל, והרס את כותלו, והוזק מישהו בקוצים, חייב בעל הקוצים ולא בעל הכותל. הגמרא מבהירה שמדובר במקרה בו הכותל רעוע, ולכן היה על בעל הקוצים לדעת שהכותל מועד להריסה ולא להניח את קוציו בו (עי' בפרק הבא הלכות כ'-כב').</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינא</strong> מסיק מדין זה, שמי שמכסה את בורו בדלי של חברו ובא בעל הדלי ונטל את דליו, חייב בעל הבור. בעל הבור דומה לבעל הקוצים, והוא שומר את נזקו באמצעות רכוש חבירו העשוי להיות מוּסָר על ידי חבירו. הגמרא מדגישה שחידושו של רבינא הוא בכך שאף שבעל הדלי, (בניגוד לבעל הכותל), ידע על ההיזק שהוא יוצר במעשיו, עדיין לא הוא החייב בנזק אלא בעל הבור<sup id="ref28"><a href="#fn28">[28]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבינא</strong> מסיק מדין זה, שמי שמכסה את בורו בדלי של חברו ובא בעל הדלי ונטל את דליו, חייב בעל הבור. בעל הבור דומה לבעל הקוצים, והוא שומר את נזקו באמצעות רכוש חבירו העשוי להיות מוּסָר על ידי חבירו. הגמרא מדגישה שחידושו של רבינא הוא בכך שאף שבעל הדלי, (בניגוד לבעל הכותל), ידע על ההיזק שהוא יוצר במעשיו, עדיין לא הוא החייב בנזק אלא בעל הבור<sup id="ref28"><a href="#fn28">[28]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>ובעקבותיו ה<strong>שו"ע</strong> (תי כט) פסקו את דינו של רבינא להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>ובעקבותיו ה<strong>שו"ע</strong> (תי כט) פסקו את דינו של רבינא להלכה.</p>
                     
                 </div>
                 
@@ -1522,19 +1522,19 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אחד החופר בור או שיח או מערה או חריץ, ולמה נאמר בור עד שיהיה בו כדי להמית, וכמה כדי להמית עומק עשרה טפחים אבל אם היה פחות מעשרה ונפל לתוכו שור או שאר בהמה חיה ועוף ומת פטור, ואם הוזקו חייב בעל התקלה נזק שלם. </strong>
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק ומיתה בבור פחות מעשרה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק ומיתה בבור פחות מעשרה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (נ:) כותבת שדין כל סוגי חפירות הקרקע כדין בור. והתורה ציינה בור כדי להודיענו שרק אם עמוק 10 טפחים ומעלה חייב על מיתת בע"ח בו (כי בפסוק מדובר על מיתה). עם זאת, המשנה פוסקת שעל נזק חייב גם בפחות מ-10 טפחים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (נ:) כותבת שדין כל סוגי חפירות הקרקע כדין בור. והתורה ציינה בור כדי להודיענו שרק אם עמוק 10 טפחים ומעלה חייב על מיתת בע"ח בו (כי בפסוק מדובר על מיתה). עם זאת, המשנה פוסקת שעל נזק חייב גם בפחות מ-10 טפחים.</p>
                     
                 </div>
                 
@@ -1542,23 +1542,23 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>היה עומק הבור תשעה ומהן טפח אחד מים חייב, שהטפח של מים חשוב כעומק שני טפחים ביבשה, היה עמקו שמונה ומהן שני טפחים מים או שהיה עמקו שבעה ומהן שלשה טפחים מים ונפל לתוכו שור וכיוצא בו ומת אין מחייבין אותו לשלם, ואם תפש הניזק אין מוציאין מידו, שהדברים האלו ספק יש בהן. </strong>
                 </div>
                 
 
                 
                 <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עומק הממית בבור שבו מים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עומק הממית בבור שבו מים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נא:) דנה במקרים בהם ישנם פחות מעשרה טפחים בבור, אך כמה מהם מלאים מים. לפי גרסתנו בגמרא, קובע רבה בר בר חנה שאם יש בבור שמונה טפחים אך שנים מהם מלאים מים נחשב הבור כבור של עשרה טפחים, שכן כל טפח שבו מים נחשב כשני טפחים ללא מים. <strong>רש"י</strong> מסביר שהמים מרבים הבל. אמנם, אם יש שבעה טפחים שמתוכם שלושה מלאים מים, או תשעה שמתוכם אחד מלא מים, הגמרא נשארת בספק, האם ללכת אחר ריבוי המים או אחר ריבוי העומק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נא:) דנה במקרים בהם ישנם פחות מעשרה טפחים בבור, אך כמה מהם מלאים מים. לפי גרסתנו בגמרא, קובע רבה בר בר חנה שאם יש בבור שמונה טפחים אך שנים מהם מלאים מים נחשב הבור כבור של עשרה טפחים, שכן כל טפח שבו מים נחשב כשני טפחים ללא מים. <strong>רש"י</strong> מסביר שהמים מרבים הבל. אמנם, אם יש שבעה טפחים שמתוכם שלושה מלאים מים, או תשעה שמתוכם אחד מלא מים, הגמרא נשארת בספק, האם ללכת אחר ריבוי המים או אחר ריבוי העומק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי גרסת ה<strong>רמב"ם</strong>, המקרה שנפשט לחומרה הוא דווקא המקרה של בור תשעה כשטפח אחד מלא מים. אך בשני המקרים האחרים הגמרא נשארת בשאלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי גרסת ה<strong>רמב"ם</strong>, המקרה שנפשט לחומרה הוא דווקא המקרה של בור תשעה כשטפח אחד מלא מים. אך בשני המקרים האחרים הגמרא נשארת בשאלה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק על פי גרסתו, וה<strong>שו"ע</strong> (תי יא-יב) פוסק כמותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק על פי גרסתו, וה<strong>שו"ע</strong> (תי יא-יב) פוסק כמותו.</p>
                     
                 </div>
                 
@@ -1566,70 +1566,70 @@
             
             
             <div id="halacha-11" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב-יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב-יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>החופר בור עמוק עשרה טפחים ובא אחר והשלימו לעשרים ובא שלישי והשלימו לשלשים כולן חייבין, חפר הראשון פחות מעשרה אפילו טפח ובא האחרון והשלימו לעשרה בין שחפר בו טפח או שהגביה בנין על שפתו טפח זה האחרון חייב, סתם טפח שהוסיף או שסתר טפח שבנה הרי זה ספק אם כבר נסתלקו מעשה הראשון או עדיין לא נסתלקו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>חפר הראשון בור עמוק ובא האחרון והרחיבו ונפל לתוכו שור ומת, אם מחמת הבלו מת האחרון פטור שהרי מיעט הבלו ואם מחמת חבטו מת האחרון חייב שהרי הוא הקריב הזק בור זה. וכן אם נפל השור מאותו הצד שהרחיב האחרון האחרון חייב שהרי הקריב הזק בור זה אע"פ שמת מן ההבל, ואם מן הצד שחפר הראשון נפל הראשון חייב שזה האחרון מיעט הבלו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שנים שנשתתפו בחפירת בור, כשהאחרון העמיק את הבור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שנים שנשתתפו בחפירת בור, כשהאחרון העמיק את הבור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נא.) מביאה את מחלוקת התנאים במקרה של אדם החופר בור של תשעה טפחים ובא אחר והשלימו לעשרה- <strong>חכמים</strong> אומרים שהאחרון חייב, ואילו <strong>רבי</strong> אומר, שלעניין נזקין (בהם חייב גם החופר בור של תשעה טפחים), חייבים שניהם, ואילו לעניין מיתה חייב רק זה שהשלים לעשרה טפחים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נא.) מביאה את מחלוקת התנאים במקרה של אדם החופר בור של תשעה טפחים ובא אחר והשלימו לעשרה- <strong>חכמים</strong> אומרים שהאחרון חייב, ואילו <strong>רבי</strong> אומר, שלעניין נזקין (בהם חייב גם החופר בור של תשעה טפחים), חייבים שניהם, ואילו לעניין מיתה חייב רק זה שהשלים לעשרה טפחים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שטעמם של חכמים הוא מתוך שכתוב "כי יכרה איש" ולא שני אנשים, לכן האיש האחרון בלבד נחשב לכורה הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שטעמם של חכמים הוא מתוך שכתוב "כי יכרה איש" ולא שני אנשים, לכן האיש האחרון בלבד נחשב לכורה הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מובאות שתי ברייתות הנראות כסותרות. האחת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מובאות שתי ברייתות הנראות כסותרות. האחת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחד החופר בור עשרה, ובא אחר והשלימה לעשרים, ובא אחר והשלימה לשלשים - כולן חייבין</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחד החופר בור עשרה, ובא אחר והשלימה לעשרים, ובא אחר והשלימה לשלשים - כולן חייבין</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">והשניה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">והשניה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחד החופר בור עשרה, ובא אחר וסייד וכייד - האחרון חייב</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחד החופר בור עשרה, ובא אחר וסייד וכייד - האחרון חייב</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי הברייתא הראשונה, לא רק האחרון חייב, מה שתואם עקרונית את שיטת רבי, ואילו לפי הברייתא השניה, דווקא האחרון חייב, מה שתואם לכאורה את שיטת חכמים. אמנם, <strong>ר' זביד</strong> מעלה אפשרות להבין אף את הברייתא הראשונה כשיטת חכמים, ולחילופין אף את השניה כשיטת רבי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי הברייתא הראשונה, לא רק האחרון חייב, מה שתואם עקרונית את שיטת רבי, ואילו לפי הברייתא השניה, דווקא האחרון חייב, מה שתואם לכאורה את שיטת חכמים. אמנם, <strong>ר' זביד</strong> מעלה אפשרות להבין אף את הברייתא הראשונה כשיטת חכמים, ולחילופין אף את השניה כשיטת רבי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי האפשרות הראשונה, הברייתא הראשונה אף היא כשיטת חכמים, ומה שאמרו חכמים שבחופר בור תשעה ובא אחר והשלימו לעשרה רק האחרון חייב, הכוונה דווקא כשהראשון לא חפר שיעור מיתה, אך בברייתא הראשון כבר חפר עשרה טפחים, ולכן כל החופרים חייבים. לאור זה, יש להעמיד שבברייתא השניה, למרות שהראשון חפר עשרה טפחים, שהם שיעור מיתה, עדיין לא היה בבור הבל שיש בו שיעור מיתה, שכן רחבו היה יתר על עמקו, ורק השניה שצמצם את רחבו של הבור, גרם לכך שיהיה בבור שיעור מיתה. לכן רק השני חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי האפשרות הראשונה, הברייתא הראשונה אף היא כשיטת חכמים, ומה שאמרו חכמים שבחופר בור תשעה ובא אחר והשלימו לעשרה רק האחרון חייב, הכוונה דווקא כשהראשון לא חפר שיעור מיתה, אך בברייתא הראשון כבר חפר עשרה טפחים, ולכן כל החופרים חייבים. לאור זה, יש להעמיד שבברייתא השניה, למרות שהראשון חפר עשרה טפחים, שהם שיעור מיתה, עדיין לא היה בבור הבל שיש בו שיעור מיתה, שכן רחבו היה יתר על עמקו, ורק השניה שצמצם את רחבו של הבור, גרם לכך שיהיה בבור שיעור מיתה. לכן רק השני חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לפי האפשרות השניה, הברייתא השניה גם היא כשיטת רבי, ומדובר במקרה בו הבור כפי שנחפר על ידי הראשון, היה אמנם בעומק 10 טפחים, אך היה כל כך עמוק שלא היה בו די הבל לא למיתה ולא לנזיקין, ובא השני וצמצם את רחבו של הבור כך שיהיה בו הבל בשיעור שממית ומזיק, ולכן הראשון פטור מכל וכל אפילו לרבי שכן לא עשה דבר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לפי האפשרות השניה, הברייתא השניה גם היא כשיטת רבי, ומדובר במקרה בו הבור כפי שנחפר על ידי הראשון, היה אמנם בעומק 10 טפחים, אך היה כל כך עמוק שלא היה בו די הבל לא למיתה ולא לנזיקין, ובא השני וצמצם את רחבו של הבור כך שיהיה בו הבל בשיעור שממית ומזיק, ולכן הראשון פטור מכל וכל אפילו לרבי שכן לא עשה דבר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מבהירה, שאם חפר הראשון תשעה טפחים, והוסיף חברו עוד טפח, אין הבדל בין אם הוסיף עוד טפח על ידי חפירה בתחתית הבור, או על ידי תוספת גובה של טפח לשפת הבור, ובכל אופן יהיה רק האחרון חייב, אפילו אם לא הוסיף חלל אמיתי בתוך הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מבהירה, שאם חפר הראשון תשעה טפחים, והוסיף חברו עוד טפח, אין הבדל בין אם הוסיף עוד טפח על ידי חפירה בתחתית הבור, או על ידי תוספת גובה של טפח לשפת הבור, ובכל אופן יהיה רק האחרון חייב, אפילו אם לא הוסיף חלל אמיתי בתוך הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסתפקת (ללא הכרעה) מה הדין אם אותו אחד שחפר טפח נוסף והשלים לעשרה (שלפי חכמים כל האחריות עליו) סתם מחדש את אותו הטפח שחפר, והחזיר את המצב לקדמותו. האם נאמר שמרגע שחפר בטלו מעשי הראשון והוא לא אחראי יותר, או שמא כיוון שהחזיר השני את המצב לכמו שהיה לפני שחפר, הרי שחזרה אחריותו של הראשון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסתפקת (ללא הכרעה) מה הדין אם אותו אחד שחפר טפח נוסף והשלים לעשרה (שלפי חכמים כל האחריות עליו) סתם מחדש את אותו הטפח שחפר, והחזיר את המצב לקדמותו. האם נאמר שמרגע שחפר בטלו מעשי הראשון והוא לא אחראי יותר, או שמא כיוון שהחזיר השני את המצב לכמו שהיה לפני שחפר, הרי שחזרה אחריותו של הראשון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כחכמים ולפי האפשרות שמעלה ר' זביד להבין את שתי הברייתות כחכמים. לכן אם החופר הראשון לא חפר שיעור מיתה, ובא השני והשלים לשיעור מיתה חייב השני בלבד. אמנם, אם הראשון כבר חפר שיעור מיתה, חייבים שניהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כחכמים ולפי האפשרות שמעלה ר' זביד להבין את שתי הברייתות כחכמים. לכן אם החופר הראשון לא חפר שיעור מיתה, ובא השני והשלים לשיעור מיתה חייב השני בלבד. אמנם, אם הראשון כבר חפר שיעור מיתה, חייבים שניהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong> מוסיף, שכמו שכשהראשון חפר שיעור מיתה והוסיף השני, חייבים שניהם על נזק מיתה, כך גם אם חפר הראשון שיעור נזק, והוסיף השני, ועדיין יש בבור שיעור נזק ולא שיעור מיתה (כגון שחפר הראשון שמונה טפחים והוסיף השני עוד טפח), חייבים שניהם על נזקי הבור. וכך פוסקים גם ה<strong>תוס'</strong> (ד"ה "האחרון") ה<strong>רא"ש </strong>(סי' ח) וה<strong>טור</strong>. הטור מוסיף מסברתו, שכל אחד מהחופרים יתחייב בתשלום ביחס לחלקו בחפירה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong> מוסיף, שכמו שכשהראשון חפר שיעור מיתה והוסיף השני, חייבים שניהם על נזק מיתה, כך גם אם חפר הראשון שיעור נזק, והוסיף השני, ועדיין יש בבור שיעור נזק ולא שיעור מיתה (כגון שחפר הראשון שמונה טפחים והוסיף השני עוד טפח), חייבים שניהם על נזקי הבור. וכך פוסקים גם ה<strong>תוס'</strong> (ד"ה "האחרון") ה<strong>רא"ש </strong>(סי' ח) וה<strong>טור</strong>. הטור מוסיף מסברתו, שכל אחד מהחופרים יתחייב בתשלום ביחס לחלקו בחפירה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי יג) פסק כדברי הטור האלה. ובהמשך (תי יד-טו) פסק את דברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי יג) פסק כדברי הטור האלה. ובהמשך (תי יד-טו) פסק את דברי הרמב"ם.</p>
                     
                 </div>
                 
                 <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שנים שנשתתפו בחפירת בור, כשהאחרון הרחיב את הבור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שנים שנשתתפו בחפירת בור, כשהאחרון הרחיב את הבור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (נא:) מועלית השאלה, מה הדין אם האחד חפר בור עמוק עשרה טפחים, וחברו לא העמיק את הבור כמו בדוגמה הקודמת, אלא הרחיבו. מצד אחד מיעט החופר את הבל הבור (שכן ככל שהבור רחב ביחס לעומקו, כך יש בו פחות הבל, וראה בהלכה הבאה) ולכן יש סברה שיהיה פטור, אך מצד שני "קירב היזקו", כלומר, החופר השני קירב את שפת הבור לבהמה שנפלה לתוכו ואלמלא היה עושה זאת אולי לא היתה הבהמה נופלת (רש"י).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (נא:) מועלית השאלה, מה הדין אם האחד חפר בור עמוק עשרה טפחים, וחברו לא העמיק את הבור כמו בדוגמה הקודמת, אלא הרחיבו. מצד אחד מיעט החופר את הבל הבור (שכן ככל שהבור רחב ביחס לעומקו, כך יש בו פחות הבל, וראה בהלכה הבאה) ולכן יש סברה שיהיה פטור, אך מצד שני "קירב היזקו", כלומר, החופר השני קירב את שפת הבור לבהמה שנפלה לתוכו ואלמלא היה עושה זאת אולי לא היתה הבהמה נופלת (רש"י).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' אשי</strong> מכריע בשאלה, אך בגמרא מובאות שתי לישנות של הכרעתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' אשי</strong> מכריע בשאלה, אך בגמרא מובאות שתי לישנות של הכרעתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי הלישנא הראשונה, יש לחקור האם הבהמה שנפלה מתה כתוצאה מההבל או מהחבטה של הבור. אם מתה מההבל בלבד, פטור המרחיב, שכן אדרבא, הוא הקטין את ההבל. לעומת זאת, אם מתה הבהמה מהחבטה, חייב המרחיב את הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי הלישנא הראשונה, יש לחקור האם הבהמה שנפלה מתה כתוצאה מההבל או מהחבטה של הבור. אם מתה מההבל בלבד, פטור המרחיב, שכן אדרבא, הוא הקטין את ההבל. לעומת זאת, אם מתה הבהמה מהחבטה, חייב המרחיב את הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי הלישנא השניה יש לחקור מאיזה צד נפלה הבהמה לבור. אם נפלה מאותו הצד שהרחיב החופר השני, הרי שהוא חייב, שכן אלמלא הוא אולי לא היתה נופלת. לעומת זה, אם נפלה מצד אחר, פטור המרחיב את הבור, כיוון שנפילתה לא הושפעה מחפירתו, וגם את ההבל שבבור הרי מיעט.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי הלישנא השניה יש לחקור מאיזה צד נפלה הבהמה לבור. אם נפלה מאותו הצד שהרחיב החופר השני, הרי שהוא חייב, שכן אלמלא הוא אולי לא היתה נופלת. לעומת זה, אם נפלה מצד אחר, פטור המרחיב את הבור, כיוון שנפילתה לא הושפעה מחפירתו, וגם את ההבל שבבור הרי מיעט.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> פוסק כלישנא השניה, ולכן כל מה שקובע את אחריותו של החופר השני הוא האם הבהמה נפלה מהצד אותו הרחיב החופר השני או לא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> פוסק כלישנא השניה, ולכן כל מה שקובע את אחריותו של החופר השני הוא האם הבהמה נפלה מהצד אותו הרחיב החופר השני או לא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק את שתי הלישנות להלכה, וכותב, שאם נפלה הבהמה מהצד אותו לא הרחיב השני, אזי אם מחמת הבל מתה- פטור השני, ואם מחמת החבטה מתה- חייב השני. לעומת זאת, אם נפלה מהצד אותו הרחיב השני, בין אם מתה מחמת ההבל ובין אם מתה מחמת החבטה- חייב השני, שהרי אלמלא מעשיו לא היתה נופלת במקום שנפלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק את שתי הלישנות להלכה, וכותב, שאם נפלה הבהמה מהצד אותו לא הרחיב השני, אזי אם מחמת הבל מתה- פטור השני, ואם מחמת החבטה מתה- חייב השני. לעומת זאת, אם נפלה מהצד אותו הרחיב השני, בין אם מתה מחמת ההבל ובין אם מתה מחמת החבטה- חייב השני, שהרי אלמלא מעשיו לא היתה נופלת במקום שנפלה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גר"א</strong> כותב שהסיבה שהרמב"ם סובר שהלישנות אינן חלוקות זו על זו היא, שקשה לקבל שלפי הלישנא הראשונה יהיה פטור החופר השני אם מתה הבהמה מההבל, אם נפלה מאותו צד שהרחיב (שכן ההרחבה היא שגרמה להגעתה של הבהמה לבור, וממילא למיתתה, תהא סיבת המוות אשר תהא). ולכן יש לפרש שאף ללישנא הראשונה יש לבחון מאיזה צד נפלה הבהמה, ולא רק אם מתה מהבל או מחבטה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גר"א</strong> כותב שהסיבה שהרמב"ם סובר שהלישנות אינן חלוקות זו על זו היא, שקשה לקבל שלפי הלישנא הראשונה יהיה פטור החופר השני אם מתה הבהמה מההבל, אם נפלה מאותו צד שהרחיב (שכן ההרחבה היא שגרמה להגעתה של הבהמה לבור, וממילא למיתתה, תהא סיבת המוות אשר תהא). ולכן יש לפרש שאף ללישנא הראשונה יש לבחון מאיזה צד נפלה הבהמה, ולא רק אם מתה מהבל או מחבטה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי טז) פוסק כרמב"ם, ולעומתו מביא ה<strong>רמ"א</strong> את דעת הרא"ש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי טז) פוסק כרמב"ם, ולעומתו מביא ה<strong>רמ"א</strong> את דעת הרא"ש.</p>
                     
                 </div>
                 
@@ -1637,39 +1637,39 @@
             
             
             <div id="halacha-12" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד-טו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יד-טו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בור שחייבה עליו התורה אפילו לא מתה הבהמה אלא מהבלו ואין צריך לומר אם מתה מחבטו, לפיכך אם היה עומק הבור כרחבו אין לו הבל ואם לא נחבטה בו הבהמה ומתה פטור, היה עמקו יתר על רחבו יש לו הבל ואם מתה בו הבהמה חייב אע"פ שלא נחבטה בקרקעו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>עשה תל גבוה ברשות הרבים ונחבטה בו הבהמה ומתה, אם היה גבוה עשרה טפחים חייב לשלם, ואם היה פחו</strong><strong>ת מעשרה פטור על מיתת הבהמה אבל </strong><strong>א</strong><strong>ם הוזקה בלבד חייב לשלם נזק שלם, ואפילו בתל גבוה כל שהוא או בחפירה כל שהוא, שהנזק בכל שהוא דבר מצוי וידוע ואין המיתה בכל שהוא מצויה והרי הוא כמו אונס. </strong>
                 </div>
                 
 
                 
                 <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הבל וחבטה בבור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הבל וחבטה בבור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נ:) מביאה את מחלוקת האמוראים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נ:) מביאה את מחלוקת האמוראים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב</strong> סובר שבעל הבור חייב על ההבל שהמית את הבהמה שנפלה לתוכו, ולא על החבטה שהמיתה את הבהמה, שכן את החבטה ספגה הבהמה מהקרקע, והקרקע אינה של בעל הבור (אלא אם כן הבור נמצא ברשותו של המזיק, שם הקרקע שייכת למזיק-<strong>רא"ש</strong>). <strong>שמואל</strong> סובר שבעל הבור אחראי על הנזק שגרם ההבל וכל שכן על הנזק שגרמה החבטה<sup id="ref29"><a href="#fn29">[29]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב</strong> סובר שבעל הבור חייב על ההבל שהמית את הבהמה שנפלה לתוכו, ולא על החבטה שהמיתה את הבהמה, שכן את החבטה ספגה הבהמה מהקרקע, והקרקע אינה של בעל הבור (אלא אם כן הבור נמצא ברשותו של המזיק, שם הקרקע שייכת למזיק-<strong>רא"ש</strong>). <strong>שמואל</strong> סובר שבעל הבור אחראי על הנזק שגרם ההבל וכל שכן על הנזק שגרמה החבטה<sup id="ref29"><a href="#fn29">[29]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שכולם מודים שעל הבלו של הבור חייב, שמתוך שהתורה לא פרטה את סוג הבור, משמע שאפילו אם היה הבור מרופד בצמר, ואין בו חבטה, עדיין חייב בעל הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שכולם מודים שעל הבלו של הבור חייב, שמתוך שהתורה לא פרטה את סוג הבור, משמע שאפילו אם היה הבור מרופד בצמר, ואין בו חבטה, עדיין חייב בעל הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (נא:) חלקו <strong>רבה</strong> ו<strong>רב יוסף</strong> בבור שרוחבו כעומקו בדיוק. לשיטה אחת, יש בבור זה הבל, וכל שכן אם עומקו יתר על רחבו, ולפי השיטה השניה, בבור זה אין הבל, אלא רק אם עומקו יותר מרחבו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (נא:) חלקו <strong>רבה</strong> ו<strong>רב יוסף</strong> בבור שרוחבו כעומקו בדיוק. לשיטה אחת, יש בבור זה הבל, וכל שכן אם עומקו יתר על רחבו, ולפי השיטה השניה, בבור זה אין הבל, אלא רק אם עומקו יותר מרחבו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נ:) אומרת שאם עשה גובה ברשות הרבים, לרב לא יתחייב ואילו לשמואל יתחייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נ:) אומרת שאם עשה גובה ברשות הרבים, לרב לא יתחייב ואילו לשמואל יתחייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שמדובר בתל בגובה 10 טפחים ברשות הרבים, ועלה למעלה שור, ונפל משם ומת. לפי שמואל יתחייב העושה את התל, מכיוון שגם בבור חייב על חבטה אפילו מקרקע שהיא של רשות הרבים. לעומת זאת, לפי רב, כיוון שאין כאן הבל, פטור העושה את התל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שמדובר בתל בגובה 10 טפחים ברשות הרבים, ועלה למעלה שור, ונפל משם ומת. לפי שמואל יתחייב העושה את התל, מכיוון שגם בבור חייב על חבטה אפילו מקרקע שהיא של רשות הרבים. לעומת זאת, לפי רב, כיוון שאין כאן הבל, פטור העושה את התל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> מסבירים שלא ניתן לומר שנחבטה הבהמה מהתל עצמו אלא יש לומר שנחבטה מהקרקע, שכן לו היתה נחבטת מהתל עצמו, היה רב מודה שחייב, שהרי באבנו סכינו ומשאו שהניחם ברשות הרבים והזיקו, מודה רב שחייב המניח (אא"כ הנזק היה מהחבטה בקרקע, ועיין לקמן פרק יג הלכה ג). לכן חייבים לפרש כרש"י, שכתוצאה מהתל, נחבטה הבהמה בקרקע. אמנם, התוספות מתלבטים כיצד שמואל מחייב כאשר הבהמה נחבטה מהקרקע, והרי בשור שנתקל בבור ונחבט בקרקע שאחרי הבור פוטר שמואל (עי' לקמן הלכה יח). ולקמן בפרק יג הלכה ג יפורט עוד בנושא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> מסבירים שלא ניתן לומר שנחבטה הבהמה מהתל עצמו אלא יש לומר שנחבטה מהקרקע, שכן לו היתה נחבטת מהתל עצמו, היה רב מודה שחייב, שהרי באבנו סכינו ומשאו שהניחם ברשות הרבים והזיקו, מודה רב שחייב המניח (אא"כ הנזק היה מהחבטה בקרקע, ועיין לקמן פרק יג הלכה ג). לכן חייבים לפרש כרש"י, שכתוצאה מהתל, נחבטה הבהמה בקרקע. אמנם, התוספות מתלבטים כיצד שמואל מחייב כאשר הבהמה נחבטה מהקרקע, והרי בשור שנתקל בבור ונחבט בקרקע שאחרי הבור פוטר שמואל (עי' לקמן הלכה יח). ולקמן בפרק יג הלכה ג יפורט עוד בנושא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת רש"י והתוספות, מסביר ה<strong>רמב"ם</strong> שהשור נחבט בתל עצמו ולא נפל ממנו על גבי הקרקע<sup id="ref30"><a href="#fn30">[30]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת רש"י והתוספות, מסביר ה<strong>רמב"ם</strong> שהשור נחבט בתל עצמו ולא נפל ממנו על גבי הקרקע<sup id="ref30"><a href="#fn30">[30]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי יח) פסק כלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי יח) פסק כלשון הרמב"ם.</p>
                     
                 </div>
                 
@@ -1677,43 +1677,43 @@
             
             
             <div id="halacha-13" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן אינו חייב על מיתת הבהמה בבור או על חביטתה בתל אלא אם היתה הבהמה קטנה או חרשת או שוטה או סומא או שנפלה בלילה, אבל אם היתה פקחת ונפלה ביום ומתה פטור שזה כמו אונס מפני שדרך הבהמה לראות ולסור מן המכשולות. וכן אם נפל לתוכו אדם ומת אפילו היה סומא או שנפל בלילה בין שהיה בן חורין או עבד הרי זה פטור, ואם הוזק בו האדם או הבהמה הפקחת חייב נזק שלם כמו שביארנו. </strong>וכן אם נפל לתוכו אדם ומת וכו' ואם הוזק בו האדם או הבהמה הפקחת חייב נזק שלם. א"א ובהמה פקחת ביום למה ומה בין נזק למיתה לענין זה.
                 </div>
                 
 
                 
                 <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נפילת בהמה פיקחת ואדם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נפילת בהמה פיקחת ואדם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (נב.) כותבת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (נב.) כותבת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"נפל לתוכו שור וכליו ונשתברו, חמור וכליו ונתקרעו - חייב על הבהמה ופטור על הכלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"נפל לתוכו שור וכליו ונשתברו, חמור וכליו ונתקרעו - חייב על הבהמה ופטור על הכלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נפל לתוכו שור חרש שוטה וקטן - חייב;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נפל לתוכו שור חרש שוטה וקטן - חייב;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בן או בת, עבד או אמה – פטור"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בן או בת, עבד או אמה – פטור"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נד:) מסבירה שהמילים "חרש שוטה וקטן" מתייחסות לשור. וחלקו האמוראים בכוונת הדברים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נד:) מסבירה שהמילים "חרש שוטה וקטן" מתייחסות לשור. וחלקו האמוראים בכוונת הדברים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' ירמיה</strong> מפרש, שבין אם היה השור שוטה ובין אם היה פיקח, אם נפל לבור- חייב. לפי דבריו, המשנה כתבה שחייב רק בשור חרש שוטה וקטן כי בהם יש סברה שפטור בעל הבור על נפילתם, כיוון שיכול לומר שהמום שבשור גרם לו שיפול, ולכן המשנה מבהירה שבכל זאת חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' ירמיה</strong> מפרש, שבין אם היה השור שוטה ובין אם היה פיקח, אם נפל לבור- חייב. לפי דבריו, המשנה כתבה שחייב רק בשור חרש שוטה וקטן כי בהם יש סברה שפטור בעל הבור על נפילתם, כיוון שיכול לומר שהמום שבשור גרם לו שיפול, ולכן המשנה מבהירה שבכל זאת חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> חולק ואומר שאכן <strong>רק</strong> בשור חרש שוטה וקטן חייב, אך אם השור היה פיקח וגדול, ונפל ביום, פטור בעל הבור, שכן היה על השור לעיין להיכן הוא הולך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> חולק ואומר שאכן <strong>רק</strong> בשור חרש שוטה וקטן חייב, אך אם השור היה פיקח וגדול, ונפל ביום, פטור בעל הבור, שכן היה על השור לעיין להיכן הוא הולך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי נפילת האדם, המשנה פוסקת שאדם שנפל לבור פטור, והטעם מובא בגמרא (נג:-נד.) מגזירת הכתוב "שור- ולא אדם". <strong>רש"י</strong> (על המשנה) מסביר שהמשנה פוטרת בבן או בת קטנים כדי ללמדנו שעל אדם שנפל לבור פטור תמיד מגזירת הכתוב, אפילו אם מדובר באדם קטן או שוטה שלא יכול לעיין להיכן הוא הולך. דהיינו הבדל ישנו בין פטור על בהמה פיקחת, שהוא מפני שיכלה לעיין בהילוכה, לבין פטור על האדם שהוא קטגורי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי נפילת האדם, המשנה פוסקת שאדם שנפל לבור פטור, והטעם מובא בגמרא (נג:-נד.) מגזירת הכתוב "שור- ולא אדם". <strong>רש"י</strong> (על המשנה) מסביר שהמשנה פוטרת בבן או בת קטנים כדי ללמדנו שעל אדם שנפל לבור פטור תמיד מגזירת הכתוב, אפילו אם מדובר באדם קטן או שוטה שלא יכול לעיין להיכן הוא הולך. דהיינו הבדל ישנו בין פטור על בהמה פיקחת, שהוא מפני שיכלה לעיין בהילוכה, לבין פטור על האדם שהוא קטגורי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי נזק אדם בבור, שאינו מיתה, ב<strong>גמרא</strong> בפרק המניח מובאים דברי שמואל לפיהם הפטור על האדם שנפל בבור אינו אלא לגבי מיתה, אך לגבי היזקו של האדם חייב בעל הבור. עוד אומרת הגמרא (כז:) שאין דרכם של בני אדם להתבונן בדרכים. ומוסיפים ה<strong>תוספות</strong> (שם ד"ה "לפי") שהמשמעות היא שבאדם שניזק (ולא מת) בבור, חייב בעל הבור אפילו אם האדם פיקח, להבדיל מבהמה עליה חייב רק אם היא שוטה, והסיבה להבדל היא שעיני הבהמה כלפי מטה, ועיני האדם למעלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי נזק אדם בבור, שאינו מיתה, ב<strong>גמרא</strong> בפרק המניח מובאים דברי שמואל לפיהם הפטור על האדם שנפל בבור אינו אלא לגבי מיתה, אך לגבי היזקו של האדם חייב בעל הבור. עוד אומרת הגמרא (כז:) שאין דרכם של בני אדם להתבונן בדרכים. ומוסיפים ה<strong>תוספות</strong> (שם ד"ה "לפי") שהמשמעות היא שבאדם שניזק (ולא מת) בבור, חייב בעל הבור אפילו אם האדם פיקח, להבדיל מבהמה עליה חייב רק אם היא שוטה, והסיבה להבדל היא שעיני הבהמה כלפי מטה, ועיני האדם למעלה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מוסיף ואומר שלא רק על אדם שהוזק חייב בעל הבור, אלא אף על בהמה שהוזקה, אפילו היא פיקחת. דהיינו, אם בהמה פיקחת מתה בבור, פטור כי היה לה לעיין, אך אם בהמה פיקחת הוזקה בלבד, חייב בעל הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מוסיף ואומר שלא רק על אדם שהוזק חייב בעל הבור, אלא אף על בהמה שהוזקה, אפילו היא פיקחת. דהיינו, אם בהמה פיקחת מתה בבור, פטור כי היה לה לעיין, אך אם בהמה פיקחת הוזקה בלבד, חייב בעל הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד</strong> חולק על הרמב"ם ואומר שכיוון שעל בהמה פיקחת לעיין הרי שבעל הבור פטור על נפילתה בין אם מתה ובין אם הוזקה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד</strong> חולק על הרמב"ם ואומר שכיוון שעל בהמה פיקחת לעיין הרי שבעל הבור פטור על נפילתה בין אם מתה ובין אם הוזקה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה </strong>מסביר שהרמב"ם מחלק בין נזק לבין מיתה בבהמה פיקחת כיוון שהבהמה, אפילו הפיקחת, דרכה להיזהר ממכשולים גדולים המביאים למיתה אך אין דרכה להיזהר ממכשולים קטנים המביאים לידי נזק בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה </strong>מסביר שהרמב"ם מחלק בין נזק לבין מיתה בבהמה פיקחת כיוון שהבהמה, אפילו הפיקחת, דרכה להיזהר ממכשולים גדולים המביאים למיתה אך אין דרכה להיזהר ממכשולים קטנים המביאים לידי נזק בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי יט-כ) פסק כרמב"ם, וה<strong>רמ"א</strong> (שם כ) פסק כראב"ד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי יט-כ) פסק כרמב"ם, וה<strong>רמ"א</strong> (שם כ) פסק כראב"ד.</p>
                     
                 </div>
                 
@@ -1721,25 +1721,25 @@
             
             
             <div id="halacha-14" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>נפל לתוכו שור פסולי המוקדשין ומת הרי זה פטור שנאמר +שמות כ"א ל"ד+ והמת יהיה לו מי שהמת שלו יצא זה שהוא אסור בהנייה ודינו שיקבר.</strong> נפל לתוכו שור פסולי המוקדשין. א"א אע"ג דפרקיה.
                 </div>
                 
 
                 
                 <div id="topic-14-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נפילת שור פסולי המוקדשים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נפילת שור פסולי המוקדשים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (נא.) מובאים דברי <strong>רבא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (נא.) מובאים דברי <strong>רבא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שור פסולי המוקדשין שנפל לבור - פטור, שנאמר: והמת יהיה לו, במי שהמת שלו!"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שור פסולי המוקדשין שנפל לבור - פטור, שנאמר: והמת יהיה לו, במי שהמת שלו!"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שהכוונה לבהמה שהיא רכוש בעליה כגון בכור בעל מום, שנאכל לכהן, או בהמת קודשים שנפל בה מום ונפדתה. המשותף לשתי דוגמאות אלה הוא שהגם שמותר לאכול את הבהמה אכילת חולין, אין להשתמש בה לצמר, לחלב או לתת את נבלתה לכלבים (עפ"י הגמרא בבכורות טו). לכן סוג כזה של בהמה ממועטת מהפסוק "והמת יהיה לו", כיוון שאין שימוש בבהמה כזו לאחר שמתה. רש"י מוסיף, שאם מדובר בבהמה שהיא בהמת הקדש ממש, לא רק בבור פטור עליה אלא גם בשור, כיוון שדווקא בשור רעהו מחייבים נזקין ולא בשור של הקדש (עי' לעיל פ"ז ה"א).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש שהכוונה לבהמה שהיא רכוש בעליה כגון בכור בעל מום, שנאכל לכהן, או בהמת קודשים שנפל בה מום ונפדתה. המשותף לשתי דוגמאות אלה הוא שהגם שמותר לאכול את הבהמה אכילת חולין, אין להשתמש בה לצמר, לחלב או לתת את נבלתה לכלבים (עפ"י הגמרא בבכורות טו). לכן סוג כזה של בהמה ממועטת מהפסוק "והמת יהיה לו", כיוון שאין שימוש בבהמה כזו לאחר שמתה. רש"י מוסיף, שאם מדובר בבהמה שהיא בהמת הקדש ממש, לא רק בבור פטור עליה אלא גם בשור, כיוון שדווקא בשור רעהו מחייבים נזקין ולא בשור של הקדש (עי' לעיל פ"ז ה"א).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כתב כלשון הגמרא, וה<strong>ראב"ד</strong> מוסיף, כדברי רש"י, שאפילו פדאו עדיין פטור עליו בבור. ה<strong>מגיד משנה</strong> כותב שהרמב"ם אינו חולק על הראב"ד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> כתב כלשון הגמרא, וה<strong>ראב"ד</strong> מוסיף, כדברי רש"י, שאפילו פדאו עדיין פטור עליו בבור. ה<strong>מגיד משנה</strong> כותב שהרמב"ם אינו חולק על הראב"ד.</p>
                     
                 </div>
                 
@@ -1747,43 +1747,43 @@
             
             
             <div id="halacha-15" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>היה חופר בבור ונפלה הבהמה מקול החפירה בתוך הבור ומתה, אם נפלה מלפניה חייב נפלה מאחוריה כגון שנבעתה וחזרה על עקיבה לאחור ונפלה ומתה פטור שנאמר +שמות כ"א ל"ג+ ונפל עד שיפול דרך נפילה. נפל לפניו מקול החפירה חוץ לבור ומת או ניזק אין בית דין מחייבין אותו, ואם תפש הניזק אין מוציאין מידו, ואם נפל לאחוריו חוץ לבור ומת או הוזק בעל הבור פטור.</strong> היה חופר בבור ונפלה הבהמה וכו' נפלה לפניו מקול החפירה וכו' בעל הבור פטור. א"א נראה לי כל הסוגיא אינה נצלת מן השבוש ואולי חזרה היתה לו שנסתפק לו הלכה כרב או כשמואל וכתב למעלה כשמואל ועכשיו בא לכתוב כרב, מכל מקום שבושין יש כאן שאם נתקל בבור מקול החפירה ונפל חוץ לבור לדברי הכל פטור ואם נפל לאחוריו בבור זהו הספק שאמר שאין ב"ד מחייבין אותו.
                 </div>
                 
 
                 
                 <div id="topic-15-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נפילה "לפניו" ו"לאחריו"</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נפילה "לפניו" ו"לאחריו"</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומרת ה<strong>משנה</strong> (נב.):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אומרת ה<strong>משנה</strong> (נב.):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נפל לפניו מקול הכרייה - חייב, לאחריו מקול הכרייה – פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נפל לפניו מקול הכרייה - חייב, לאחריו מקול הכרייה – פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שהמשנה דיברה על מקרה בו היה אדם הכורה את הבור בתוך הבור, והבהמה, שהלכה על שפת הבור, נבעתה מהקול ונפלה לבור. רש"י מביא שני פירושים למשמעות של נפילה מקול הכריה- לפי האחד, מלמדת אותנו המשנה מקרה בו חייב אפילו על נפילת בהמה פיקחת (עי' לעיל הלכה טז), כיוון שנפלה מתוך בהלה. הפירוש השני הוא כך- במקרה שלפנינו שני מזיקים, בעל הבור, והכורה. אמנם הכורה הזיק רק בגרמא, ולכן לא ניתן לחייבו. המשנה משמיעה לנו, שבמקום שאין לגבות מאחד מהמזיקים (הכורה) גובים את כל הנזק מהמזיק השני (בעל הבור), כמבואר בהלכה הבאה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שהמשנה דיברה על מקרה בו היה אדם הכורה את הבור בתוך הבור, והבהמה, שהלכה על שפת הבור, נבעתה מהקול ונפלה לבור. רש"י מביא שני פירושים למשמעות של נפילה מקול הכריה- לפי האחד, מלמדת אותנו המשנה מקרה בו חייב אפילו על נפילת בהמה פיקחת (עי' לעיל הלכה טז), כיוון שנפלה מתוך בהלה. הפירוש השני הוא כך- במקרה שלפנינו שני מזיקים, בעל הבור, והכורה. אמנם הכורה הזיק רק בגרמא, ולכן לא ניתן לחייבו. המשנה משמיעה לנו, שבמקום שאין לגבות מאחד מהמזיקים (הכורה) גובים את כל הנזק מהמזיק השני (בעל הבור), כמבואר בהלכה הבאה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (נב:) חלקו <strong>רב</strong> ו<strong>שמואל</strong> בפירוש המקרה שבמשנה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (נב:) חלקו <strong>רב</strong> ו<strong>שמואל</strong> בפירוש המקרה שבמשנה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>רב</strong>: לפניו - לפניו ממש, לאחריו - אחריו ממש, וזה וזה בבור ...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמר <strong>רב</strong>: לפניו - לפניו ממש, לאחריו - אחריו ממש, וזה וזה בבור ...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ו<strong>שמואל</strong> אמר: בבור, בין מלפניו בין מלאחריו - חייב...אלא היכי דמי לאחריו מקול הכרייה דפטור? כגון דנתקל בבור, ונפל לאחורי הבור חוץ לבור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ו<strong>שמואל</strong> אמר: בבור, בין מלפניו בין מלאחריו - חייב...אלא היכי דמי לאחריו מקול הכרייה דפטור? כגון דנתקל בבור, ונפל לאחורי הבור חוץ לבור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מביאה הגמרא ברייתא לסייע לרב:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מביאה הגמרא ברייתא לסייע לרב:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"ונפל" - עד שיפול דרך נפילה, מכאן אמרו: נפל לפניו מקול הכרייה - חייב, לאחריו מקול הכרייה - פטור, וזה וזה בבור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"ונפל" - עד שיפול דרך נפילה, מכאן אמרו: נפל לפניו מקול הכרייה - חייב, לאחריו מקול הכרייה - פטור, וזה וזה בבור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר, שלפי רב, (לפיו חייב המזיק על נזק ההבל שבבור), יש הבדל בין מקרה בו הבהמה נפלה עם פניה לכיוון הבור (ואז שאפה את ההבל), לבין מקרה בו נפלה עם אחוריה לכיוון הבור, בו מתה מהחבטה בלבד, ולכן פטור. לעומת זאת, לפי שמואל אין הבדל בין נפילת פנים או אחור, שכן בין אם מתה מההבל ובין אם נחבטה, חייב בעל הבור. לכן מפרש שמואל שהמילים "לפניו" ו"אחריו" כלל אינן מתייחסות לבהמה אלא לבור. כלומר, "לאחריו" הכוונה שכלל לא נפלה לבור עצמו, אלא נתקלה בבור ונפלה הלאה אחרי הבור. במקרה זה שמואל פוטר, שכן הנזק לא בא ישירות מהבור עצמו, לא מהבלו ולא מקרקעיתו. לפי הסבר זה המשנה המדברת על נפילה לפניו ולאחריו מקול הכריה אינה מדברת דווקא על נפילה מקול הכריה אלא כורכת יחדיו שני עניינים שונים. כך הבינו והסבירו רוב רובם של הראשונים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר, שלפי רב, (לפיו חייב המזיק על נזק ההבל שבבור), יש הבדל בין מקרה בו הבהמה נפלה עם פניה לכיוון הבור (ואז שאפה את ההבל), לבין מקרה בו נפלה עם אחוריה לכיוון הבור, בו מתה מהחבטה בלבד, ולכן פטור. לעומת זאת, לפי שמואל אין הבדל בין נפילת פנים או אחור, שכן בין אם מתה מההבל ובין אם נחבטה, חייב בעל הבור. לכן מפרש שמואל שהמילים "לפניו" ו"אחריו" כלל אינן מתייחסות לבהמה אלא לבור. כלומר, "לאחריו" הכוונה שכלל לא נפלה לבור עצמו, אלא נתקלה בבור ונפלה הלאה אחרי הבור. במקרה זה שמואל פוטר, שכן הנזק לא בא ישירות מהבור עצמו, לא מהבלו ולא מקרקעיתו. לפי הסבר זה המשנה המדברת על נפילה לפניו ולאחריו מקול הכריה אינה מדברת דווקא על נפילה מקול הכריה אלא כורכת יחדיו שני עניינים שונים. כך הבינו והסבירו רוב רובם של הראשונים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מסביר הסבר שונה לגמרי, המעלה תמיהות רבות. ראשית, בניגוד לרש"י, הרמב"ם מגביל את כל הדיון לבהמה שנפלה כתוצאה מכך שנבעתה מקול רעש הכריה בבור, כלומר, על פי דברי המשנה "...לפניו מקול הכריה...לאחריו מקול הכריה", כורך הרמב"ם את המקרה של נפילת לפניו ולאחריו במקרה של נפילה מקול הכריה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מסביר הסבר שונה לגמרי, המעלה תמיהות רבות. ראשית, בניגוד לרש"י, הרמב"ם מגביל את כל הדיון לבהמה שנפלה כתוצאה מכך שנבעתה מקול רעש הכריה בבור, כלומר, על פי דברי המשנה "...לפניו מקול הכריה...לאחריו מקול הכריה", כורך הרמב"ם את המקרה של נפילת לפניו ולאחריו במקרה של נפילה מקול הכריה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שנית, הרמב"ם מסביר שאם נבעתה הבהמה והלכה לפניה ונפלה, חייב בעל הבור, אך אם נבעתה והלכה אחורה ונפלה- פטור. כטעם להבדל שבין הליכה קדימה להליכה אחורה, מביא הרמב"ם את הטעם שבברייתא- "עד שיפול דרך נפילה". בנוסף, מדבר הרמב"ם על שני המקרים הללו- נפילה תוך הליכה קדימה ונפילה תוך הליכה אחורה, גם כאשר הבהמה נפלה מחוץ לבור. במקרה זה אומר הרמב"ם שאם נפלה בהליכה קדימה הרי זה ספק, ואם נפלה מחוץ לבור תוך כדי הליכה אחורה, הרי שוודאי פטור בעל הבור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שנית, הרמב"ם מסביר שאם נבעתה הבהמה והלכה לפניה ונפלה, חייב בעל הבור, אך אם נבעתה והלכה אחורה ונפלה- פטור. כטעם להבדל שבין הליכה קדימה להליכה אחורה, מביא הרמב"ם את הטעם שבברייתא- "עד שיפול דרך נפילה". בנוסף, מדבר הרמב"ם על שני המקרים הללו- נפילה תוך הליכה קדימה ונפילה תוך הליכה אחורה, גם כאשר הבהמה נפלה מחוץ לבור. במקרה זה אומר הרמב"ם שאם נפלה בהליכה קדימה הרי זה ספק, ואם נפלה מחוץ לבור תוך כדי הליכה אחורה, הרי שוודאי פטור בעל הבור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong>, ה<strong>ראב"ד </strong>ועוד ראשונים, מקשים רבות על הרמב"ם, כיוון שנראה שלקח את שיטת רב שבגמרא, בעוד שבשאר המקומות פסק כשמואל<sup id="ref31"><a href="#fn31">[31]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong>, ה<strong>ראב"ד </strong>ועוד ראשונים, מקשים רבות על הרמב"ם, כיוון שנראה שלקח את שיטת רב שבגמרא, בעוד שבשאר המקומות פסק כשמואל<sup id="ref31"><a href="#fn31">[31]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות התמיהות על הרמב"ם, פסק ה<strong>שו"ע </strong>(תי לא) כרש"י וכטור, וכשמואל, שאם נפל השור לבור מקול הכריה, תמיד חייב בעל הבור, אך אם נפל לאחורי הבור (מחוץ לבור) פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעקבות התמיהות על הרמב"ם, פסק ה<strong>שו"ע </strong>(תי לא) כרש"י וכטור, וכשמואל, שאם נפל השור לבור מקול הכריה, תמיד חייב בעל הבור, אך אם נפל לאחורי הבור (מחוץ לבור) פטור.</p>
                     
                 </div>
                 
@@ -1791,43 +1791,43 @@
             
             
             <div id="halacha-16" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור שדחף בהמה לתוך הבור ומתה, אם מועד הוא בעל הבור משלם מחצה ובעל השור מחצה, ואם תם הוא בעל השור משלם רביע מגופו ובעל הבור משלם שלשה חלקים מן היפה שבנכסיו, שבעל הנבלה אומר לבעל הבור פחת נבלה זו יש לי אצלך אע"פ שהיא גדולה ופקחת כיון שנדחפה הרי זו כמי שנפלה בלילה כל שאני יכול להוציא מבעל השור אני מוציא והשאר אתה חייב לשלמו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-16-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק משולב של שור ובור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק משולב של שור ובור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (נג.) מובאת <strong>ברייתא</strong> ובה מחלוקת תנאים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (נג.) מובאת <strong>ברייתא</strong> ובה מחלוקת תנאים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שור שדחף את חבירו לבור - בעל השור חייב, בעל הבור פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שור שדחף את חבירו לבור - בעל השור חייב, בעל הבור פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי נתן</strong> אומר: בעל השור משלם מחצה ובעל הבור משלם מחצה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי נתן</strong> אומר: בעל השור משלם מחצה ובעל הבור משלם מחצה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאשר ישנם שני מזיקים- השור הדוחף והבור, <strong>תנא קמא</strong> פוסק שהראשון מביניהם חייב, ואילו <strong>ר' נתן</strong> סובר שהנזק מתחלק בין שניהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כאשר ישנם שני מזיקים- השור הדוחף והבור, <strong>תנא קמא</strong> פוסק שהראשון מביניהם חייב, ואילו <strong>ר' נתן</strong> סובר שהנזק מתחלק בין שניהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יג.) אומרת שדעתם של תנא קמא היא "כי ליכא לאישתלומי מהאי, לא משתלמא מהאי" [אם אין לשלם מזה, לא משלם מזה], ואילו דעתו של ר' נתן היא ש"כי ליכא לאישתלומי מהאי, משתלם מהאי" [אם אין לשלם מזה, משלם מזה].</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (יג.) אומרת שדעתם של תנא קמא היא "כי ליכא לאישתלומי מהאי, לא משתלמא מהאי" [אם אין לשלם מזה, לא משלם מזה], ואילו דעתו של ר' נתן היא ש"כי ליכא לאישתלומי מהאי, משתלם מהאי" [אם אין לשלם מזה, משלם מזה].</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלקו הראשונים בהבנת שיטת תנא קמא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חלקו הראשונים בהבנת שיטת תנא קמא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (יג.) מפרש שלדעת תנא קמא אם השור הדוחף מועד משלם בעליו נזק שלם, ואם הוא תם משלם בעליו חצי נזק. לשיטתם של תנא קמא בעל הבור כלל אינו נחשב מזיק, שכן אלמלא לא היה השור דוחף את השור הניזק, לא היה האחרון נופל לבור, לכן כל הנזק נזקף לחובתו של השור הדוחף<sup id="ref32"><a href="#fn32">[32]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (יג.) מפרש שלדעת תנא קמא אם השור הדוחף מועד משלם בעליו נזק שלם, ואם הוא תם משלם בעליו חצי נזק. לשיטתם של תנא קמא בעל הבור כלל אינו נחשב מזיק, שכן אלמלא לא היה השור דוחף את השור הניזק, לא היה האחרון נופל לבור, לכן כל הנזק נזקף לחובתו של השור הדוחף<sup id="ref32"><a href="#fn32">[32]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (יג. ד"ה "אי") חולקים, ומסבירים שלפי תנא קמא חייב השור חצי נזק אם הוא מועד, ורבע נזק אם הוא תם, ואת החצי  השני פטור בעל הבור מלשלם (למרות שהוא נחשב מזיק, ולכן רק חצי מהנזק נזקף לחובת השור הדוחף!), שכן גזירת הכתוב היא שיפול בדרך נפילה ולא על ידי שיידחף<sup id="ref33"><a href="#fn33">[33]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (יג. ד"ה "אי") חולקים, ומסבירים שלפי תנא קמא חייב השור חצי נזק אם הוא מועד, ורבע נזק אם הוא תם, ואת החצי  השני פטור בעל הבור מלשלם (למרות שהוא נחשב מזיק, ולכן רק חצי מהנזק נזקף לחובת השור הדוחף!), שכן גזירת הכתוב היא שיפול בדרך נפילה ולא על ידי שיידחף<sup id="ref33"><a href="#fn33">[33]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (נג.) מוסיפה שלפי ר' נתן, במקרה בו השור הדוחף הוא תם, משלם בעליו רק רבע מהנזק, ואת שאר הנזק משלם בעל הבור<sup id="ref34"><a href="#fn34">[34]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (נג.) מוסיפה שלפי ר' נתן, במקרה בו השור הדוחף הוא תם, משלם בעליו רק רבע מהנזק, ואת שאר הנזק משלם בעל הבור<sup id="ref34"><a href="#fn34">[34]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כר' נתן, ומביא את דבריו ש"כי ליכא לאישתלומי מהאי משתלם מהאי" רק כהסבר מדוע כשהדוחף היה שור תם, משלם בעל הבור שלושה רבעים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כר' נתן, ומביא את דבריו ש"כי ליכא לאישתלומי מהאי משתלם מהאי" רק כהסבר מדוע כשהדוחף היה שור תם, משלם בעל הבור שלושה רבעים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> עולה הסברא, שההשלמה שמשלים בעל הבור על הרבע שמשלם בעל השור התם נובעת מכך שהשור המת נמצא בבורו ויש לו אחריות מיוחדת יתרה על זאת של בעל השור הדוחף. למרות זאת, <strong>המהר"ם מרוטנבורג</strong> (מובא בהגהות מיימוניות כאן) פוסק שאף בשני מזיקים סימטריים, כגון שני אנשים שמסרו ממון חברם, אם לא ניתן לגבות מהאחד, יגבו מחברו<sup id="ref35"><a href="#fn35">[35]</a></sup>, ובלבד שחוסר היכולת לגבות הוא מהותי (כגון שמדובר על מי שאינו בן חיוב וכדומה) אך אם לא ניתן לגבות ממנו כי הוא עני, אין לגבות מחברו. כמו כן אם לא ניתן לגבות מאחד המזיקים מפני שהנזק הוא קנס (שאין גובים בזמן הזה), ג"כ אין צריך השני להשלים במקומו (<strong>הגהות אשר"י</strong> סימן יב).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> עולה הסברא, שההשלמה שמשלים בעל הבור על הרבע שמשלם בעל השור התם נובעת מכך שהשור המת נמצא בבורו ויש לו אחריות מיוחדת יתרה על זאת של בעל השור הדוחף. למרות זאת, <strong>המהר"ם מרוטנבורג</strong> (מובא בהגהות מיימוניות כאן) פוסק שאף בשני מזיקים סימטריים, כגון שני אנשים שמסרו ממון חברם, אם לא ניתן לגבות מהאחד, יגבו מחברו<sup id="ref35"><a href="#fn35">[35]</a></sup>, ובלבד שחוסר היכולת לגבות הוא מהותי (כגון שמדובר על מי שאינו בן חיוב וכדומה) אך אם לא ניתן לגבות ממנו כי הוא עני, אין לגבות מחברו. כמו כן אם לא ניתן לגבות מאחד המזיקים מפני שהנזק הוא קנס (שאין גובים בזמן הזה), ג"כ אין צריך השני להשלים במקומו (<strong>הגהות אשר"י</strong> סימן יב).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> (מובא בבית יוסף תי ד"ה "וכתב הרמ"ה") מסכים לכך שאת עיקרון הערבות ההדדית של המזיקים שמחדש ר' נתן, ניתן ליישם גם במזיקים סימטריים, אך הוא חולק על המהר"ם ואומר שגם אם אחד המזיקים אינו יכול לשלם מסיבות צדדיות (שאין דנים קנסות בזמן הזה, שהוא ברח או שאין לו כסף לשלם), עדיין ערב לו המזיק השני, ועליו להשלים משלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"ה</strong> (מובא בבית יוסף תי ד"ה "וכתב הרמ"ה") מסכים לכך שאת עיקרון הערבות ההדדית של המזיקים שמחדש ר' נתן, ניתן ליישם גם במזיקים סימטריים, אך הוא חולק על המהר"ם ואומר שגם אם אחד המזיקים אינו יכול לשלם מסיבות צדדיות (שאין דנים קנסות בזמן הזה, שהוא ברח או שאין לו כסף לשלם), עדיין ערב לו המזיק השני, ועליו להשלים משלו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תי לב) העתיק את דברי הרמב"ם להלכה. ובהמשך (סעיף ל"ז) הביא את מחלוקת המהר"ם והרמ"ה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תי לב) העתיק את דברי הרמב"ם להלכה. ובהמשך (סעיף ל"ז) הביא את מחלוקת המהר"ם והרמ"ה.</p>
                     
                 </div>
                 
@@ -1835,25 +1835,25 @@
             
             
             <div id="halacha-17" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כ</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה כ</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן המניח אבן על פי הבור ובא השור ונתקל בה ונפל לבור ומת, המניח את האבן משלם מחצה ובעל הבור מחצה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-17-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק משולב של בור ואבן שעל פיו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק משולב של בור ואבן שעל פיו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (נג.) משווה <strong>רבא</strong> בין המקרה שבהלכה הקודמת לבין מקרה בו אבן הונחה על פי הבור, ושור נתקל באבן ונפל לבור. רבא אומר שניתן לראות את האבן כשור דוחף, וגם כאן יחלקו התנאים כפי שחלקו במקרה של שור שדחף את חברו לבור- לדעת <strong>ר' נתן</strong> ישלמו בעל הבור ובעל האבן כל אחד חצי נזק, ולדעת <strong>תנא קמא</strong> ישלם בעל האבן את מלוא הנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (נג.) משווה <strong>רבא</strong> בין המקרה שבהלכה הקודמת לבין מקרה בו אבן הונחה על פי הבור, ושור נתקל באבן ונפל לבור. רבא אומר שניתן לראות את האבן כשור דוחף, וגם כאן יחלקו התנאים כפי שחלקו במקרה של שור שדחף את חברו לבור- לדעת <strong>ר' נתן</strong> ישלמו בעל הבור ובעל האבן כל אחד חצי נזק, ולדעת <strong>תנא קמא</strong> ישלם בעל האבן את מלוא הנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שרבא מבהיר נקודה זאת כדי להוציא מחשבת טעות מליבנו. היינו יכולים לחשוב שדווקא בשור שדוחף לבור מחייבים את בעל השור הדוחף, כיוון שאפשר שהיה השור הדוחף הורג את השור הנדחף אף ללא בור, זאת להבדיל מאבן שעל פי הבור, שכשלעצמה אין בה כדי להרוג, ולכן אולי לא נחייב את בעל האבן על מיתת השור. ומלמדנו רבא שלא כך, אלא עצם העובדה שהאבן או השור הדוחף גרמו לנפילה לבור, כבר מצדיק שבעליהם יתחיבו בתשלום הנזק (חצי הנזק לר' נתן וכולו לתנא קמא).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שרבא מבהיר נקודה זאת כדי להוציא מחשבת טעות מליבנו. היינו יכולים לחשוב שדווקא בשור שדוחף לבור מחייבים את בעל השור הדוחף, כיוון שאפשר שהיה השור הדוחף הורג את השור הנדחף אף ללא בור, זאת להבדיל מאבן שעל פי הבור, שכשלעצמה אין בה כדי להרוג, ולכן אולי לא נחייב את בעל האבן על מיתת השור. ומלמדנו רבא שלא כך, אלא עצם העובדה שהאבן או השור הדוחף גרמו לנפילה לבור, כבר מצדיק שבעליהם יתחיבו בתשלום הנזק (חצי הנזק לר' נתן וכולו לתנא קמא).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מ<strong>רש"י</strong> (ד"ה "הניח") משמע שדברי רבא אינם אמורים אלא כאשר בעל האבן הניחה ליד הבור בשעה שזה היה כבר חפור, אולם אם נחפר הבור לאחר הנחת האבן, אין לחייב את בעל האבן על נזק מיתה שלא היה יכול להתחולל מהאבן כשלעצמה ללא הנפילה לבור, כיוון שבשעה שהונחה האבן לא היה בה בכדי להמית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מ<strong>רש"י</strong> (ד"ה "הניח") משמע שדברי רבא אינם אמורים אלא כאשר בעל האבן הניחה ליד הבור בשעה שזה היה כבר חפור, אולם אם נחפר הבור לאחר הנחת האבן, אין לחייב את בעל האבן על נזק מיתה שלא היה יכול להתחולל מהאבן כשלעצמה ללא הנפילה לבור, כיוון שבשעה שהונחה האבן לא היה בה בכדי להמית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם כאן העתיק ה<strong>שו"ע</strong> (תי לג) את לשון הרמב"ם להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם כאן העתיק ה<strong>שו"ע</strong> (תי לג) את לשון הרמב"ם להלכה.</p>
                     
                 </div>
                 
@@ -1861,39 +1861,39 @@
             
             
             <div id="halacha-18" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה כא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן שור של הדיוט ושור פסולי המוקדשין שנגחו כאחד, אם תם הוא זה של הדיוט משלם חצי נזק ואם מועד נזק שלם, שהניזק אומר לו כל שאני יכול להוציא מזה אני מוציא והשאר ממך וזה הואיל והקדש הוא ופטור אתה תשלם לי הכל. </strong>
                 </div>
                 
 
                 
                 <div id="topic-18-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק משולב של שני שוורים שרק מאחד ניתן לגבות</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק משולב של שני שוורים שרק מאחד ניתן לגבות</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מדברת על שני שוורים, האחד של הדיוט והשני של הקדש (למשל, שור בכור בעל מום) שנגחו והמיתו שור שלישי. כאן לא ניתן לגבות מהשור של ההקדש והשאלה היא כמה משלם ההדיוט.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מדברת על שני שוורים, האחד של הדיוט והשני של הקדש (למשל, שור בכור בעל מום) שנגחו והמיתו שור שלישי. כאן לא ניתן לגבות מהשור של ההקדש והשאלה היא כמה משלם ההדיוט.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בדין זה חלקו <strong>אביי</strong> ו<strong>רבינא</strong>, שתי לישנות במחלוקתם, ובהבנת כל אחת מהן מציעה הגמרא שתי דרכים שונות כאשר לפי הדרך הראשונה משתיהן אין כלל מחלוקת (אלא דיברו האמוראים במקרים שונים) ולפי הדרך השניה המחלוקת היא מחלוקתם של חכמים ור' נתן (שבהלכה יט)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בדין זה חלקו <strong>אביי</strong> ו<strong>רבינא</strong>, שתי לישנות במחלוקתם, ובהבנת כל אחת מהן מציעה הגמרא שתי דרכים שונות כאשר לפי הדרך הראשונה משתיהן אין כלל מחלוקת (אלא דיברו האמוראים במקרים שונים) ולפי הדרך השניה המחלוקת היא מחלוקתם של חכמים ור' נתן (שבהלכה יט)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לשון ראשונה – <strong>אביי</strong> סובר שמשלם חצי נזק ו<strong>רבינא</strong> סובר שמשלם רביע נזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לשון ראשונה – <strong>אביי</strong> סובר שמשלם חצי נזק ו<strong>רבינא</strong> סובר שמשלם רביע נזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וניתן להבין זאת בשתי דרכים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וניתן להבין זאת בשתי דרכים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שניהם סוברים כתנא קמא, שמה שלא יכול האחד לשלם, אין משלם חברו, ולכן אין אחראי בעל שור החולין אלא לחצי נזק בלבד. אלא שאביי דיבר על שור מועד, המשלם את מלוא החצי שהזיק, ואילו רבינא דיבר על שור תם, המשלם חצי מהחצי שהזיק, דהיינו רבע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שניהם סוברים כתנא קמא, שמה שלא יכול האחד לשלם, אין משלם חברו, ולכן אין אחראי בעל שור החולין אלא לחצי נזק בלבד. אלא שאביי דיבר על שור מועד, המשלם את מלוא החצי שהזיק, ואילו רבינא דיבר על שור תם, המשלם חצי מהחצי שהזיק, דהיינו רבע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת הכל גם שור החולין וגם שור ההקדש תמים הם, ולכן בסך הכל גובה התשלום הוא לכל היותר חצי נזק. לדעת רבינא הלכה כתנא קמא, ולכן משלם ההדיוט את חלקו מחצי הנזק, דהיינו רביע נזק, ואינו מחוייב לחצי (דהיינו רביע הנזק) השני שעשה שור ההקדש. לדעת אביי, הלכה כר' נתן, שמה שלא יכול האחד לשלם, משלים חברו, ולכן משלם ההדיוט גם את הרבע שלו, וגם את רביע הנזק שעשה שור ההקדש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת הכל גם שור החולין וגם שור ההקדש תמים הם, ולכן בסך הכל גובה התשלום הוא לכל היותר חצי נזק. לדעת רבינא הלכה כתנא קמא, ולכן משלם ההדיוט את חלקו מחצי הנזק, דהיינו רביע נזק, ואינו מחוייב לחצי (דהיינו רביע הנזק) השני שעשה שור ההקדש. לדעת אביי, הלכה כר' נתן, שמה שלא יכול האחד לשלם, משלים חברו, ולכן משלם ההדיוט גם את הרבע שלו, וגם את רביע הנזק שעשה שור ההקדש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לשון שניה – <strong>אביי</strong> סובר שמשלם חצי נזק ו<strong>רבינא</strong> סובר שמשלם נזק שלם</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לשון שניה – <strong>אביי</strong> סובר שמשלם חצי נזק ו<strong>רבינא</strong> סובר שמשלם נזק שלם</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם לישנא זו ניתן להבין זאת בשתי דרכים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם לישנא זו ניתן להבין זאת בשתי דרכים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שניהם סוברים כר' נתן, שמה שלא יכול האחד לשלם, משלם חברו, אלא שאביי דיבר על שור תם, המשלם חצי נזק אפילו כשהוא המזיק היחיד, ואילו רבינא דיבר על שור מועד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שניהם סוברים כר' נתן, שמה שלא יכול האחד לשלם, משלם חברו, אלא שאביי דיבר על שור תם, המשלם חצי נזק אפילו כשהוא המזיק היחיד, ואילו רבינא דיבר על שור מועד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שניהם מדברים על שור מועד, אך אביי סובר כתנא קמא, ולכן משלם ההדיוט רק את חצי הנזק שהוא אחראי לו, ואילו לפי רבינא הלכה כר' נתן, ולכן משלם ההדיוט גם את חלקו של שור ההקדש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שניהם מדברים על שור מועד, אך אביי סובר כתנא קמא, ולכן משלם ההדיוט רק את חצי הנזק שהוא אחראי לו, ואילו לפי רבינא הלכה כר' נתן, ולכן משלם ההדיוט גם את חלקו של שור ההקדש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכיוון שה<strong>רמב"ם</strong> פוסק כר' נתן, פוסק הרמב"ם כאן שאם שור ההדיוט תם, משלם הוא חצי נזק, ואם הוא מועד משלם נזק שלם, דהיינו הוא משלם תמיד כאילו לא היה עוד מזיק, כשיטת ר' נתן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכיוון שה<strong>רמב"ם</strong> פוסק כר' נתן, פוסק הרמב"ם כאן שאם שור ההדיוט תם, משלם הוא חצי נזק, ואם הוא מועד משלם נזק שלם, דהיינו הוא משלם תמיד כאילו לא היה עוד מזיק, כשיטת ר' נתן.</p>
                     
                 </div>
                 
@@ -1901,23 +1901,23 @@
             
             
             <div id="halacha-19" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה כב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מי שהיה חופר בור ברשות הרבים ונפל עליו שור והרגו, בעל השור פטור, ואם מת השור נוטל בעל השור דמי שורו מיורשי בעל הבור.</strong>
                 </div>
                 
 
                 
                 <div id="topic-19-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גביה מיורשי המזיק כשמת המזיק לפני עמידה בדין</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גביה מיורשי המזיק כשמת המזיק לפני עמידה בדין</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (בבא בתרא קעה:) מחלוקת אמוראים האם מִלווה על פה גובה מן היורשים, דהיינו, האם כאשר ההלוואה איננה בשטר ניתן לגבות מיורשי הלווה לאחר מיתתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (בבא בתרא קעה:) מחלוקת אמוראים האם מִלווה על פה גובה מן היורשים, דהיינו, האם כאשר ההלוואה איננה בשטר ניתן לגבות מיורשי הלווה לאחר מיתתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כראיה לשיטה שמלווה ע"פ גובה מן היורשים, מובאת <strong>ברייתא </strong>לפיה החופר בור ברשות הרבים ונפל עליו שור והרגו, בעל השור פטור, ואם מת השור גובה בעליו מיורשי בעל הבור, ומשמע שניתן לגבות נזק מיורשי המזיק גם אם זה מת לפני העמדה בדין. ומשמע ג"כ שמלווה בעל פה, כמו החוב של המזיק לניזק, ניתן להיגבות גם מהיורשים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כראיה לשיטה שמלווה ע"פ גובה מן היורשים, מובאת <strong>ברייתא </strong>לפיה החופר בור ברשות הרבים ונפל עליו שור והרגו, בעל השור פטור, ואם מת השור גובה בעליו מיורשי בעל הבור, ומשמע שניתן לגבות נזק מיורשי המזיק גם אם זה מת לפני העמדה בדין. ומשמע ג"כ שמלווה בעל פה, כמו החוב של המזיק לניזק, ניתן להיגבות גם מהיורשים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק (מלוה ולווה פרק יא הלכה ד) שאפילו מלווה בע"פ ניתן להיגבות מיורשים, ולכן הוא פוסק כפשט הברייתא. ה<strong>שו"ע</strong> (תי לח) העתיק לשונו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק (מלוה ולווה פרק יא הלכה ד) שאפילו מלווה בע"פ ניתן להיגבות מיורשים, ולכן הוא פוסק כפשט הברייתא. ה<strong>שו"ע</strong> (תי לח) העתיק לשונו.</p>
                     
                 </div>
                 
@@ -1925,7 +1925,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1994,6 +1994,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

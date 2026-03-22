@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק ח</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ח)</h3>
                 <ul class="space-y-3">
@@ -1014,7 +1014,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1027,25 +1027,25 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור של ישראל שנגח שור של הקדש או של הקדש שנגח שור של ישראל פטור שנ' +שמות כ"א ל"ה+ שור רעהו, וכל הקדשים שחייבין עליהן מעילה הן שאין בהן דין נזקין, ופסולי המוקדשין יש בהן דין נזקין בין שהזיקו בין שהוזקו שהרי יצאו לפדיון ולהיותן חולין. </strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזקין בין רכוש הדיוט להקדש</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזקין בין רכוש הדיוט להקדש</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (לז:) פוטרת בין בשור של ישראל שנגח לשור של הקדש, ובין במקרה ההפוך. המשנה לומדת דין זה מהאמור בעניין נגיחת שור תם:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המשנה</strong> (לז:) פוטרת בין בשור של ישראל שנגח לשור של הקדש, ובין במקרה ההפוך. המשנה לומדת דין זה מהאמור בעניין נגיחת שור תם:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וְכִי יִגֹּף שׁוֹר אִישׁ אֶת שׁוֹר רֵעֵהוּ וָמֵת (שמות כא לה) - "רעהו" ולא הקדש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וְכִי יִגֹּף שׁוֹר אִישׁ אֶת שׁוֹר רֵעֵהוּ וָמֵת (שמות כא לה) - "רעהו" ולא הקדש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> מובא, שדעה זו שבמשנה, חולקת על <strong>ר' שמעון בן מנסיא</strong>, לפיו אמנם שור של הקדש שנגח שור של הדיוט פטור, אך שור של הדיוט שנגח שור של הקדש חייב נזק שלם גם בתם וגם במועד. <strong>ריש לקיש</strong> מסביר שטעמו של ר' שמעון בן מנסיא הוא שעקרונית כל שור שנגח היה אמור לשלם נזק שלם, והתורה מיעטה שור תם שישלם חצי נזק. ולא מיעטה תורה אלא בשור של הדיוט שנגח שור של הדיוט (רעהו), אך בשור של שהדיוט שנגח שור של הקדש נשאר הדין בעינו שחייב נזק שלם. כמו כן, העובדה שהתורה מייחדת דין חצי נזק בשור תם לנזק הדיוט בהדיוט, מלמדת שעל נזק תם של שור הקדש בשור הדיוט פטור (תוס' ד"ה "דאם").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> מובא, שדעה זו שבמשנה, חולקת על <strong>ר' שמעון בן מנסיא</strong>, לפיו אמנם שור של הקדש שנגח שור של הדיוט פטור, אך שור של הדיוט שנגח שור של הקדש חייב נזק שלם גם בתם וגם במועד. <strong>ריש לקיש</strong> מסביר שטעמו של ר' שמעון בן מנסיא הוא שעקרונית כל שור שנגח היה אמור לשלם נזק שלם, והתורה מיעטה שור תם שישלם חצי נזק. ולא מיעטה תורה אלא בשור של הדיוט שנגח שור של הדיוט (רעהו), אך בשור של שהדיוט שנגח שור של הקדש נשאר הדין בעינו שחייב נזק שלם. כמו כן, העובדה שהתורה מייחדת דין חצי נזק בשור תם לנזק הדיוט בהדיוט, מלמדת שעל נזק תם של שור הקדש בשור הדיוט פטור (תוס' ד"ה "דאם").</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> (ט:) כותבת שדין תשלומי נזק שייך רק בנכסים שאין בהם מעילה. <strong>רש"י</strong> מסביר שהכוונה לפטור את המזיק נכסי הקדש, כמבואר לעיל. אמנם, <strong>הגמרא</strong> בהמשך (יב:) מבארת שהכוונה שהמזיק קדשים פטור רק אם מדובר בקדשים שיש בהם דין מעילה, ולא בכל סוגי הקדשים יש דין מעילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המשנה</strong> (ט:) כותבת שדין תשלומי נזק שייך רק בנכסים שאין בהם מעילה. <strong>רש"י</strong> מסביר שהכוונה לפטור את המזיק נכסי הקדש, כמבואר לעיל. אמנם, <strong>הגמרא</strong> בהמשך (יב:) מבארת שהכוונה שהמזיק קדשים פטור רק אם מדובר בקדשים שיש בהם דין מעילה, ולא בכל סוגי הקדשים יש דין מעילה.</p>
                     
                 </div>
                 
@@ -1053,25 +1053,25 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב-ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב-ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שלמים שהזיקו גובה מבשרם ואינו גובה מן הבשר כנגד האימורין שהאימורין של קדשים קלים מועלין בהן כמו שביארנו בהלכות מעילה, וכן תודה שהזיקה גובה מבשרה ואינו גובה מן הלחם הבא עמה שאין הלחם מכלל הבשר. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכיצד גובה, שיאכל הניזק וחבורתו מן הבשר בקדושה כנגד חצי נזק שלו. וכיצד אינו גובה כנגד האימורין, שאם היה לו לגבות בחצי נזקו שוה דינר והיה כל הבשר עם האימורין שוה שני דינרים והבשר בלא אימורין שוה דינר וחצי אינו גובה שני שלישי הבשר אלא חצי הבשר בלבד. </strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גבייה מבשר שלמים שהזיקו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גבייה מבשר שלמים שהזיקו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמת שלמים היא דוגמה לקדשים שאין בהם מעילה ולכן חייבים לשלם אם הזיקו. <strong>בגמרא</strong> (יג.) מובאים דברי <strong>ר' אבא</strong>, הקובע שאם בהמת שלמים הזיקה, ניתן לגבות מבשרה בלבד, ולא מהאימורים, שכן האימורים הם החלקים שאינם נאכלים לבעלים, שכן הם אינם ממון בעלים, יש בהם מעילה ואין בהם דין נזיקין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמת שלמים היא דוגמה לקדשים שאין בהם מעילה ולכן חייבים לשלם אם הזיקו. <strong>בגמרא</strong> (יג.) מובאים דברי <strong>ר' אבא</strong>, הקובע שאם בהמת שלמים הזיקה, ניתן לגבות מבשרה בלבד, ולא מהאימורים, שכן האימורים הם החלקים שאינם נאכלים לבעלים, שכן הם אינם ממון בעלים, יש בהם מעילה ואין בהם דין נזיקין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פשוט הוא שלא ניתן לגבות מחלק האימורים, שהרי קודש הוא. החידוש בדברי ר' אבא נעוץ בכך, שהניזק אף אינו גובה מהבשר כנגד האימורים. כלומר, אם יש לשלם חצי נזק מגוף הבהמה, אין הניזק גובה את כל חצי הנזק מחלק הבעלים (הבשר), אלא אנו רואים זאת כשני מזיקים שהזיקו וכל אחד מהמזיקים חייב על חלקו בנזק. הבהמה מורכבת משני 'חלקים', אחד (הבשר) של בעליה והשני (האימורים) של גבוה. בשר הבהמה מחוייב רק בחלק מתשלום חצי הנזק, ורק אותו ניתן לגבות מהבשר. שאר הסכום נזקף לחובת חלק הגבוה שבבהמה, אך כיוון שבממון גבוה אין דין נזקין (שהרי שור של הקדש שהזיק שור של הדיוט פטור), לא ניתן לגבות אותו כלל, אף לא מהבשר. (ועין לקמן פרק יב הלכה יט לגבי דין ריבוי מזיקים)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פשוט הוא שלא ניתן לגבות מחלק האימורים, שהרי קודש הוא. החידוש בדברי ר' אבא נעוץ בכך, שהניזק אף אינו גובה מהבשר כנגד האימורים. כלומר, אם יש לשלם חצי נזק מגוף הבהמה, אין הניזק גובה את כל חצי הנזק מחלק הבעלים (הבשר), אלא אנו רואים זאת כשני מזיקים שהזיקו וכל אחד מהמזיקים חייב על חלקו בנזק. הבהמה מורכבת משני 'חלקים', אחד (הבשר) של בעליה והשני (האימורים) של גבוה. בשר הבהמה מחוייב רק בחלק מתשלום חצי הנזק, ורק אותו ניתן לגבות מהבשר. שאר הסכום נזקף לחובת חלק הגבוה שבבהמה, אך כיוון שבממון גבוה אין דין נזקין (שהרי שור של הקדש שהזיק שור של הדיוט פטור), לא ניתן לגבות אותו כלל, אף לא מהבשר. (ועין לקמן פרק יב הלכה יט לגבי דין ריבוי מזיקים)</p>
                     
                 </div>
                 
@@ -1079,31 +1079,31 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן שור ההפקר שהזיק פטור שנ' שור רעהו עד שיהיו הנכסים מיוחדים לבעלים, כיצד, שור ההפקר שנגח וקודם שיתפוש אותו הניזק עמד אחר וזכה בו הרי זה פטור, ולא עוד אלא שור המיוחד לבעלים שהזיק ואחר שהזיק הקדישו או הפקירו הרי זה פטור עד שיהיו לו בעלים בשעת היזקו ובשעת העמדה בדין. </strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שור של הפקר שנגח</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שור של הפקר שנגח</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ט:) מחייבת בנזק "נכסים מיוחדים [מלשון ייחוד, שמיוחדים ויש להם זיקה לאדם מסויים]". ה<strong>גמרא</strong> (יג:) דנה בכוונת המשנה, ומסיקה על פי ברייתא, שהמשנה באה למעט נכסי הפקר מדין נזיקין. כלומר, אם הזיק שור הפקר ואח"כ זכה בו אדם אחר, לא ניתן לגבות ממנו, אף לא אם הזיק בנזק תם. בגמרא מובא גם פירושו של רבינא למשנה. <strong>רבינא</strong> מסביר שהמשנה ממעטת מדין נזקין שור שהופקר או הוקדש לאחר שנגח. רבינא מוסיף שדין זה נלמד מהפסוק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (ט:) מחייבת בנזק "נכסים מיוחדים [מלשון ייחוד, שמיוחדים ויש להם זיקה לאדם מסויים]". ה<strong>גמרא</strong> (יג:) דנה בכוונת המשנה, ומסיקה על פי ברייתא, שהמשנה באה למעט נכסי הפקר מדין נזיקין. כלומר, אם הזיק שור הפקר ואח"כ זכה בו אדם אחר, לא ניתן לגבות ממנו, אף לא אם הזיק בנזק תם. בגמרא מובא גם פירושו של רבינא למשנה. <strong>רבינא</strong> מסביר שהמשנה ממעטת מדין נזקין שור שהופקר או הוקדש לאחר שנגח. רבינא מוסיף שדין זה נלמד מהפסוק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">[וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם] וְהוּעַד בִּבְעָלָיו וְלֹא יִשְׁמְרֶנּוּ וְהֵמִית אִישׁ אוֹ אִשָּׁה הַשּׁוֹר יִסָּקֵל וְגַם בְּעָלָיו יוּמָת (שמות כא כט)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">[וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם] וְהוּעַד בִּבְעָלָיו וְלֹא יִשְׁמְרֶנּוּ וְהֵמִית אִישׁ אוֹ אִשָּׁה הַשּׁוֹר יִסָּקֵל וְגַם בְּעָלָיו יוּמָת (שמות כא כט)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ממנו לומדים שיש הקבלה בין שעת הנזק ("והמית איש או אשה"), ובין שעת ההעמדה בדין ("השור יסקל", עי' תוס' ד"ה "שנאמר"), ובשתיהן צריך השור להיות של בעליו. הגמרא מוסיפה ומדייקת מהפסוק, שעד גמר הדין, בו מוחלט על סקילת השור, צריך שיהיו לשור בעלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ממנו לומדים שיש הקבלה בין שעת הנזק ("והמית איש או אשה"), ובין שעת ההעמדה בדין ("השור יסקל", עי' תוס' ד"ה "שנאמר"), ובשתיהן צריך השור להיות של בעליו. הגמרא מוסיפה ומדייקת מהפסוק, שעד גמר הדין, בו מוחלט על סקילת השור, צריך שיהיו לשור בעלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> (ד"ה "שור") פוסק על פי הגמרא, שאם הקדישו לפני גמר הדין פטור, וכמו כן, אם הפקירו לפני גמר הדין, וקדם אחר ותפסו, פטור אף אותו אדם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> (ד"ה "שור") פוסק על פי הגמרא, שאם הקדישו לפני גמר הדין פטור, וכמו כן, אם הפקירו לפני גמר הדין, וקדם אחר ותפסו, פטור אף אותו אדם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לעומת זאת, מגביל את האפשרות להקדישו או להפקירו עד שעת ההעמדה בדין בלבד. ובין ההעמדה בדין לגמר הדין, אין ההפקר פוטר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לעומת זאת, מגביל את האפשרות להקדישו או להפקירו עד שעת ההעמדה בדין בלבד. ובין ההעמדה בדין לגמר הדין, אין ההפקר פוטר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמו כן חלקו הראשונים מה הדין אם הפקירו בעליו לאחר הנגיחה, וחזר וזכה בו לפני ההעמדה בדין. <strong>רש"י</strong> מפרש שלומדים מהפסוק, שצריך שיהיו לו בעלים אחד משעת נגיחה ועד שעת העמדה בדין, ולכן בנדון דנן פטור. לעומתו ה<strong>טור</strong> פוסק שאם הבעלים חזרו וזכו בשור-חייבים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כמו כן חלקו הראשונים מה הדין אם הפקירו בעליו לאחר הנגיחה, וחזר וזכה בו לפני ההעמדה בדין. <strong>רש"י</strong> מפרש שלומדים מהפסוק, שצריך שיהיו לו בעלים אחד משעת נגיחה ועד שעת העמדה בדין, ולכן בנדון דנן פטור. לעומתו ה<strong>טור</strong> פוסק שאם הבעלים חזרו וזכו בשור-חייבים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תו ב) פוסק כרמב"ם, שיכול בעל השור להפקירו עד זמן ההעמדה בדין. ובהמשך (שם ג) פוסק כטור כנגד דברי רש"י.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תו ב) פוסק כרמב"ם, שיכול בעל השור להפקירו עד זמן ההעמדה בדין. ובהמשך (שם ג) פוסק כטור כנגד דברי רש"י.</p>
                     
                 </div>
                 
@@ -1111,23 +1111,23 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור של ישראל שנגח שור של נכרי בין תם בין מועד פטור, לפי שאין הגוים מחייבין את האדם על בהמתו שהזיקה והרי אנו דנין להם כדיניהן, ושור של נכרי שנגח שור של ישראל בין תם </strong><strong>בין מועד משלם נזק שלם, קנס הוא זה לגוים לפי שאינן זהירין במצות אינן מסלקין הזיקן ואם לא תחייב אותן על נזקי בהמתן אין משמרין אותה ומפסידין ממון הבריות. </strong>שור של ישראל שנגח שור של נכרי. א"א הטענה הזאת אינה מספקת שהרי הם תופסים גוף המזיק ונפרעין ממנו.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הדין כשהניזק או המזיק הוא גוי</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הדין כשהניזק או המזיק הוא גוי</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (לז:) אומרת, ששור של ישראל שנגח שור של גוי, פטור, ואילו שור של גוי שנגח שור של ישראל, משלם נזק שלם בין תם ובין מועד. ב<strong>גמרא</strong> מובא הטעם לחוסר הסימטריה- שהקב"ה התיר את ממונם של הגויים לישראל כיוון שאלה אינם מקיימים את שבע מצוות בני נח המוטלות עליהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (לז:) אומרת, ששור של ישראל שנגח שור של גוי, פטור, ואילו שור של גוי שנגח שור של ישראל, משלם נזק שלם בין תם ובין מועד. ב<strong>גמרא</strong> מובא הטעם לחוסר הסימטריה- שהקב"ה התיר את ממונם של הגויים לישראל כיוון שאלה אינם מקיימים את שבע מצוות בני נח המוטלות עליהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לעומת זאת, מסביר את הדין בכך שמדובר בגויים שאינם מחייבים את האדם על בהמתו שהזיקה ולכן אנו דנים להם כדיניהם, ופוטרים את היהודי בעל השור המזיק. לכאורה משמע לפירושו של הרמב"ם, שאם מדובר בגויים שנוהגים לחייב אדם על נזקי בהמתו, הדין שונה, ויש לשלם גם כאשר שור של ישראל נוגח לשור של גוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לעומת זאת, מסביר את הדין בכך שמדובר בגויים שאינם מחייבים את האדם על בהמתו שהזיקה ולכן אנו דנים להם כדיניהם, ופוטרים את היהודי בעל השור המזיק. לכאורה משמע לפירושו של הרמב"ם, שאם מדובר בגויים שנוהגים לחייב אדם על נזקי בהמתו, הדין שונה, ויש לשלם גם כאשר שור של ישראל נוגח לשור של גוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תו א) פוסק כדברי המשנה, ואינו נותן טעם או חילוק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תו א) פוסק כדברי המשנה, ואינו נותן טעם או חילוק.</p>
                     
                 </div>
                 
@@ -1135,66 +1135,66 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו-ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור תם שהזיק אם מכרו המזיק עד שלא עמד בדין אע"פ שהוא מכור הרי הניזק גובה ממנו וחוזר הלוקח וגובה מן המזיק שמכר לו, שכיון שנגח קול יש לו ולא היה לו ליקח עד שיגבה הניזק. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הקדישו המזיק הרי זה מוקדש כדי שלא יאמרו הקדש יוצא בלא פדיון, שחטו גובה הניזק מבשרו, נתנו במתנה מה שעשה עשוי ויגבה הניזק ממנו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הזיק ועמד בדין ואחר כך מכרו אינו מכור, הקדישו אינו מוקדש, נתנו במתנה לא עשה כלום, קדמו בעלי חובות של מזיק ותפסוהו בין שחב עד שלא הזיק בין הזיק עד שלא חב לא זכו אלא הניזק גובה ממנו, שאפילו היה של בעלי חובות מתחלה והזיק הרי זה גובה מגופו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מועד שהזיק בין עמד בדין בין שלא עמד בדין והקדישו או מכרו או נתנו במתנה או שחטו, מה שעשה עשוי, קדמו בעלי חובות והנהיגוהו בין חב להם עד שלא הזיק בין הזיק עד שלא חב זכו בו, לפי שאין משתלם הניזק אלא מן היפה שבנכסי המזיק והרי כל נכסיו משועבדין לנזק זה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מכר או הקדיש המזיק את שורו – שייכות הניזק בשור המזיק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מכר או הקדיש המזיק את שורו – שייכות הניזק בשור המזיק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כזכור, נזק שור תם נגבה מגופו. ה<strong>גמרא</strong> (לג.) מביאה את מחלוקת התנאים לעניין שייכות הניזק בשור תם. <strong>ר' עקיבא</strong> סבור שמיד עם הנגיחה הופך הניזק להיות שותף ממש בשור המזיק, שהרי הוא משתלם חצי נזק מגופו של השור המזיק. <strong>ר' ישמעאל </strong>סובר שאין הניזק זוכה בחלקו בשור המזיק עד שיחייבוהו בי"ד, ועד אז הרי הנזק כחוב על המזיק, והשור המזיק שייך עדיין כולו למזיק. לפי זה, אם מכר או הקדיש המזיק את השור, לפי ר' עקיבא יש סברה שאין מעשיו כלום שהרי השור אינו כולו שלו, ואילו לפי ר' ישמעאל הדעת נותנת שמה שעשה עשוי. סוגיית הגמרא ממשיכה ומבררת את המקרים הללו לפי כל אחת מהדעות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כזכור, נזק שור תם נגבה מגופו. ה<strong>גמרא</strong> (לג.) מביאה את מחלוקת התנאים לעניין שייכות הניזק בשור תם. <strong>ר' עקיבא</strong> סבור שמיד עם הנגיחה הופך הניזק להיות שותף ממש בשור המזיק, שהרי הוא משתלם חצי נזק מגופו של השור המזיק. <strong>ר' ישמעאל </strong>סובר שאין הניזק זוכה בחלקו בשור המזיק עד שיחייבוהו בי"ד, ועד אז הרי הנזק כחוב על המזיק, והשור המזיק שייך עדיין כולו למזיק. לפי זה, אם מכר או הקדיש המזיק את השור, לפי ר' עקיבא יש סברה שאין מעשיו כלום שהרי השור אינו כולו שלו, ואילו לפי ר' ישמעאל הדעת נותנת שמה שעשה עשוי. סוגיית הגמרא ממשיכה ומבררת את המקרים הללו לפי כל אחת מהדעות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' נחמן</strong> פוסק שאפילו לפי ר' ישמעאל, אם מכר המזיק את השור לפני ההעמדה בדין, חוזר הניזק וגובהו מהלקוח. אמנם בד"כ אין גובים ממטלטלין, כיוון שאין להם פירסום שהם משועבדים, כאן כיוון שנגח השור, הדבר מפורסם ויש ללקוחות להיזהר שלא לקנות את השור מהמזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' נחמן</strong> פוסק שאפילו לפי ר' ישמעאל, אם מכר המזיק את השור לפני ההעמדה בדין, חוזר הניזק וגובהו מהלקוח. אמנם בד"כ אין גובים ממטלטלין, כיוון שאין להם פירסום שהם משועבדים, כאן כיוון שנגח השור, הדבר מפורסם ויש ללקוחות להיזהר שלא לקנות את השור מהמזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' תחליפא</strong> מביא ברייתא הקובעת שלפני ההעמדה בדין, אם מכרו- אינו מכור, אך אם הקדישו מוקדש. אמנם ממבט ראשון הרישא נראית כשיטת ר' עקיבא והסיפא כשיטת ר' ישמעאל, אך למסקנה הגמרא אומרת שאף לר' ישמעאל אינו מכור, שכן הוא משועבד לניזק, ואף לר' עקיבא, אם הקדישו מוקדש כי גזרו חכמים שיתן דבר מה לפדיונו שמא יאמרו שהקדש יוצא בלא פדיון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' תחליפא</strong> מביא ברייתא הקובעת שלפני ההעמדה בדין, אם מכרו- אינו מכור, אך אם הקדישו מוקדש. אמנם ממבט ראשון הרישא נראית כשיטת ר' עקיבא והסיפא כשיטת ר' ישמעאל, אך למסקנה הגמרא אומרת שאף לר' ישמעאל אינו מכור, שכן הוא משועבד לניזק, ואף לר' עקיבא, אם הקדישו מוקדש כי גזרו חכמים שיתן דבר מה לפדיונו שמא יאמרו שהקדש יוצא בלא פדיון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לסיום מביאה הגמרא <strong>ברייתא</strong> ודנה בה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לסיום מביאה הגמרא <strong>ברייתא</strong> ודנה בה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בשור תם שנגח, פוסקת הברייתא, שאם לפני ההעמדה בדין מכרו או נתנו המזיק במתנה- הרי הוא מכור ונתון, אם הקדישו- הרי הוא מוקדש, ואם שחטו, אין הניזק גובה אלא מן הבשר (ולא מחייב את המזיק בפחת שנפחת בשחיטתו). לעומת זאת, לאחר ההעמדה בדין, אם מכרו או נתנו במתנה- לא עשה כלום, אם הקדישו אינו מוקדש, ואם שחטו, יכול הניזק לגבות מנכסי המזיק האחרים כמה שהיה שוה השור בחייו יותר מהבשר. הטעם לשינוי הדין בין לפני העמדה בדין לבין אחרי העמדה בדין הוא, שלאחר ההעמדה בדין יש לניזק שייכות ממונית גמורה בשור המזיק אפילו לשיטת ר' ישמעאל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בשור תם שנגח, פוסקת הברייתא, שאם לפני ההעמדה בדין מכרו או נתנו המזיק במתנה- הרי הוא מכור ונתון, אם הקדישו- הרי הוא מוקדש, ואם שחטו, אין הניזק גובה אלא מן הבשר (ולא מחייב את המזיק בפחת שנפחת בשחיטתו). לעומת זאת, לאחר ההעמדה בדין, אם מכרו או נתנו במתנה- לא עשה כלום, אם הקדישו אינו מוקדש, ואם שחטו, יכול הניזק לגבות מנכסי המזיק האחרים כמה שהיה שוה השור בחייו יותר מהבשר. הטעם לשינוי הדין בין לפני העמדה בדין לבין אחרי העמדה בדין הוא, שלאחר ההעמדה בדין יש לניזק שייכות ממונית גמורה בשור המזיק אפילו לשיטת ר' ישמעאל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסייגת את הרישא של הברייתא (מכרו, הקדישו או נתנו לפני ההעמדה בדין)- "מכרו-מכור" הכוונה שמכור לחרישה בלבד, ולא לגופו, והניזק גובה מהלקוחות\מקבלים. "הקדישו מוקדש" הכוונה היא שמעיקר הדין לא היה צריך להיות מוקדש, ורק מגזירת חכמים שלא יאמרו שהקדש יוצא בלא פדיון, אנו מצריכים לפדותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסייגת את הרישא של הברייתא (מכרו, הקדישו או נתנו לפני ההעמדה בדין)- "מכרו-מכור" הכוונה שמכור לחרישה בלבד, ולא לגופו, והניזק גובה מהלקוחות\מקבלים. "הקדישו מוקדש" הכוונה היא שמעיקר הדין לא היה צריך להיות מוקדש, ורק מגזירת חכמים שלא יאמרו שהקדש יוצא בלא פדיון, אנו מצריכים לפדותו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאשר מדובר בשור מועד הברייתא פוסקת שיכול המזיק למוכרו או להקדישו ללא הגבלה, שכן הוא חייב לניזק חוב ממוני גרידא, שאינו קשור לגוף השור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאשר מדובר בשור מועד הברייתא פוסקת שיכול המזיק למוכרו או להקדישו ללא הגבלה, שכן הוא חייב לניזק חוב ממוני גרידא, שאינו קשור לגוף השור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>הראשונים</strong> פסקו כר' עקיבא, על פי הכלל "הלכה כר' עקיבא מחברו", אמנם חלקו הראשונים האם הדינים הנאמרים בגמרא לכאורה לשיטת ר' ישמעאל, נכונים גם אליבא דרבי עקיבא, וכדלקמן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>הראשונים</strong> פסקו כר' עקיבא, על פי הכלל "הלכה כר' עקיבא מחברו", אמנם חלקו הראשונים האם הדינים הנאמרים בגמרא לכאורה לשיטת ר' ישמעאל, נכונים גם אליבא דרבי עקיבא, וכדלקמן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong>, וה<strong>רשב"א</strong> הבינו שמתוך שר' נחמן דן באפשרותו של המזיק למכור את השור רק אליבא דשיטתו של ר' ישמעאל, משמע שלפי ר' עקיבא אין כלל אפשרות שכזו, ואם מכרו ברור שאינו מכור. מתוך כך הבינו אותם ראשונים שהברייתא המובאת בהמשך, הקובעת שאם מכרו או הקדישו- מכור ומוקדש, הרי היא כשיטת ר' ישמעאל בלבד, ואין הלכה כמותה (והגם שהגמרא מסייגת את אותה מכירה למכירה לחרישה בלבד, ואת ההקדש להקדש שלא יאמרו הקדש יוצא בלא פדיון, עדיין שיטת ר' ישמעאל היא). לכן, לדעתם, כיוון שהלכה כר' עקיבא, הרי שההלכה לפני העמדה בדין שווה להלכה לאחר העמדה בדין. בזה ובזה אם מכרו אינו מכור אפילו לחרישה ואם הקדישו אינו מוקדש ואין צריך לתת כלום בפדיונו. כמו כן בכל שלב, אם שחט המזיק את השור, מחוייב הוא לשאת בפחת ולשלמו לניזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong>, וה<strong>רשב"א</strong> הבינו שמתוך שר' נחמן דן באפשרותו של המזיק למכור את השור רק אליבא דשיטתו של ר' ישמעאל, משמע שלפי ר' עקיבא אין כלל אפשרות שכזו, ואם מכרו ברור שאינו מכור. מתוך כך הבינו אותם ראשונים שהברייתא המובאת בהמשך, הקובעת שאם מכרו או הקדישו- מכור ומוקדש, הרי היא כשיטת ר' ישמעאל בלבד, ואין הלכה כמותה (והגם שהגמרא מסייגת את אותה מכירה למכירה לחרישה בלבד, ואת ההקדש להקדש שלא יאמרו הקדש יוצא בלא פדיון, עדיין שיטת ר' ישמעאל היא). לכן, לדעתם, כיוון שהלכה כר' עקיבא, הרי שההלכה לפני העמדה בדין שווה להלכה לאחר העמדה בדין. בזה ובזה אם מכרו אינו מכור אפילו לחרישה ואם הקדישו אינו מוקדש ואין צריך לתת כלום בפדיונו. כמו כן בכל שלב, אם שחט המזיק את השור, מחוייב הוא לשאת בפחת ולשלמו לניזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ל<strong>רמב"ם</strong> הבנה שונה בסוגיה. לדעתו הברייתא המאפשרת מכירה או הקדשה מוגבלת והפוטרת מפחת שחיטה, היא אפילו לשיטת ר' עקיבא, הרואה את הניזק כשותף בשור. ה<strong>רמב"ם</strong> מפרש כך כיוון שאם הברייתא היא כשיטת ר' ישמעאל, אזי אם הקדישו צריך להיות קדוש לכתחילה (ולא רק כדי שלא יאמרו שהקדש יוצא בלא פדיון)<sup id="ref18"><a href="#fn18">[18]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ל<strong>רמב"ם</strong> הבנה שונה בסוגיה. לדעתו הברייתא המאפשרת מכירה או הקדשה מוגבלת והפוטרת מפחת שחיטה, היא אפילו לשיטת ר' עקיבא, הרואה את הניזק כשותף בשור. ה<strong>רמב"ם</strong> מפרש כך כיוון שאם הברייתא היא כשיטת ר' ישמעאל, אזי אם הקדישו צריך להיות קדוש לכתחילה (ולא רק כדי שלא יאמרו שהקדש יוצא בלא פדיון)<sup id="ref18"><a href="#fn18">[18]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעניין מזיק שמכר הקדיש או שחט שור מועד, מוסכם על כל הפוסקים, שמה שעשה עשוי, כיוון שהמזיק חייב לניזק חוב ממוני שאינו קשור כלל לגוף השור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעניין מזיק שמכר הקדיש או שחט שור מועד, מוסכם על כל הפוסקים, שמה שעשה עשוי, כיוון שהמזיק חייב לניזק חוב ממוני שאינו קשור כלל לגוף השור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (סי' תז) פוסק כרמב"ם, ואף ה<strong>רמ"א</strong>, אך לעניין שחטו לפני העמדה בדין, ה<strong>רמ"א</strong> חולק ופוסק כטור. ה<strong>גר"א</strong> (ס"ק ה) מעיר, שאפילו לשיטת הרמב"ם מסתבר שניתן לחייב את הבעלים ששחטו בתשלום הפחת, שאפילו אם השור עדיין אינו של הניזק, בכל זאת השוחט הזיק את הניזק בכך, והרי הדבר דומה לשורף שטר חוב של חברו, או למוכר שטר חוב לחברו וחזר ומחלו, שזה נחשב היזק בגרמי, וכל מי שפוסק שחייבים על דינא דגרמי (ואף הרמב"ם עצמו, ראה מלוה ולוה יח ו) יחייב כאן<sup id="ref19"><a href="#fn19">[19]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (סי' תז) פוסק כרמב"ם, ואף ה<strong>רמ"א</strong>, אך לעניין שחטו לפני העמדה בדין, ה<strong>רמ"א</strong> חולק ופוסק כטור. ה<strong>גר"א</strong> (ס"ק ה) מעיר, שאפילו לשיטת הרמב"ם מסתבר שניתן לחייב את הבעלים ששחטו בתשלום הפחת, שאפילו אם השור עדיין אינו של הניזק, בכל זאת השוחט הזיק את הניזק בכך, והרי הדבר דומה לשורף שטר חוב של חברו, או למוכר שטר חוב לחברו וחזר ומחלו, שזה נחשב היזק בגרמי, וכל מי שפוסק שחייבים על דינא דגרמי (ואף הרמב"ם עצמו, ראה מלוה ולוה יח ו) יחייב כאן<sup id="ref19"><a href="#fn19">[19]</a></sup>.</p>
                     
                 </div>
                 
                 <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קדמו בעלי חובות ותפסוהו- דין קדימות בגביה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">קדמו בעלי חובות ותפסוהו- דין קדימות בגביה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ברייתא</strong> הנ"ל מוסיפה ודנה בדין קדימות בגבייה. אם באו בעלי חובות של המזיק (לפני ההעמדה בדין) וגבו את השור לפני שהספיק הניזק לגבותו, יש הבדל בדין בין שור תם לשור מועד. בשור תם הניזק קודם לבעלי החובות וגובה מהם, ולעומת זאת בשור מועד כל הקודם לגבות זוכה. הגמרא מסבירה שקדימות הניזק על פני בעלי החוב בשור תם נובעת מכך שיש בפיו של הניזק טענה כלפיהם- 'לו היה השור ברשותך בשעה שהזיק, לא ממך הייתי גובה?'</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ברייתא</strong> הנ"ל מוסיפה ודנה בדין קדימות בגבייה. אם באו בעלי חובות של המזיק (לפני ההעמדה בדין) וגבו את השור לפני שהספיק הניזק לגבותו, יש הבדל בדין בין שור תם לשור מועד. בשור תם הניזק קודם לבעלי החובות וגובה מהם, ולעומת זאת בשור מועד כל הקודם לגבות זוכה. הגמרא מסבירה שקדימות הניזק על פני בעלי החוב בשור תם נובעת מכך שיש בפיו של הניזק טענה כלפיהם- 'לו היה השור ברשותך בשעה שהזיק, לא ממך הייתי גובה?'</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק שהניזק קודם על פני בעלי החוב, ומסביר כפשט הלשון. אך ה<strong>תוספות</strong> (ד"ה "אילו גבך") שואלים- כיצד ניתן לומר שאף לו היה השור תחת יד בעלי החוב, היה הניזק גובהו? והלא יכולים בעלי החוב לומר, שהם היו שומרים על השור, ולא היה השור מזיק! לכן מפרשים התוס', שכוונת הגמרא לומר, שיש זיקה מיוחדת בין הניזק לבין השור, שאינה קיימת לגבי בעלי החוב, שכן בעלי החוב יכולים לגבות את חובם מכל מה שימצאו, ואילו הניזק גובה מגוף השור בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק שהניזק קודם על פני בעלי החוב, ומסביר כפשט הלשון. אך ה<strong>תוספות</strong> (ד"ה "אילו גבך") שואלים- כיצד ניתן לומר שאף לו היה השור תחת יד בעלי החוב, היה הניזק גובהו? והלא יכולים בעלי החוב לומר, שהם היו שומרים על השור, ולא היה השור מזיק! לכן מפרשים התוס', שכוונת הגמרא לומר, שיש זיקה מיוחדת בין הניזק לבין השור, שאינה קיימת לגבי בעלי החוב, שכן בעלי החוב יכולים לגבות את חובם מכל מה שימצאו, ואילו הניזק גובה מגוף השור בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ההשלכה ההלכתית העולה מדברי התוספות היא, שאם השור הוא אפותיקי לגביית חובם של בעלי החוב, כך שאף הם אינם יכולים לגבות את חובם אלא ממנו, משתווה מעמדם למעמדו של הניזק. במקרה זה, הרשאי לגבות את השור הוא זה שהשור שועבד לו קודם- אם הנזק קדם, קודם הניזק, ואם החוב קדם, קודם בעל החוב (כיוון שאנו פוסקים שבעל חוב מאוחר שגבה, מה שגבה לא גבה). ואכן, כך פוסק ה<strong>טור</strong> (סי' תז).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ההשלכה ההלכתית העולה מדברי התוספות היא, שאם השור הוא אפותיקי לגביית חובם של בעלי החוב, כך שאף הם אינם יכולים לגבות את חובם אלא ממנו, משתווה מעמדם למעמדו של הניזק. במקרה זה, הרשאי לגבות את השור הוא זה שהשור שועבד לו קודם- אם הנזק קדם, קודם הניזק, ואם החוב קדם, קודם בעל החוב (כיוון שאנו פוסקים שבעל חוב מאוחר שגבה, מה שגבה לא גבה). ואכן, כך פוסק ה<strong>טור</strong> (סי' תז).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תז ד) כתב כדברי ה<strong>רמב"ם</strong>, ואילו הרמ"א הביא להלכה את דברי ה<strong>טור</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תז ד) כתב כדברי ה<strong>רמב"ם</strong>, ואילו הרמ"א הביא להלכה את דברי ה<strong>טור</strong>.</p>
                     
                 </div>
                 
@@ -1202,34 +1202,34 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כשבית דין נזקקין לגבות הניזק מנכסי המזיק גובין מן המטלטלין תחלה, אם לא היו לו מטלטלין כלל או שלא היו המטלטלין כנגד כל הנזק גובין השאר מן הקרקע מן היפה שבנכסי המזיק, וכל זמן שימצאו מטלטלין אפילו סובין אין נזקקין לקרקע. </strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גובים לנזקין ממטלטלין</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גובים לנזקין ממטלטלין</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יד:) בתארה את דין תשלומי נזקין, כותבת "שווה כסף". ה<strong>גמרא</strong> (שם) מביאה ברייתא, המפרשת שביטוי זה כוונתו היא שבית דין אינם גובים תשלומי נזיקין אלא מנכסים שיש להם אחריות, ולא ממיטלטלין (דהיינו הכוונה היא ל"שווה כסף", להבדיל ממיטלטלין החשובים ככסף ממש). אמנם, הגמרא קובעת למסקנה שאין זה הדין הרגיל- בדרך כלל גובים תשלומי נזק גם ממיטלטלין, והמשנה המחייבת תשלומי נזק מנכסים שיש להם אחריות בלבד, מדברת על גביה מיתומיו של המזיק, שאין לגבות מהם מיטלטלין כיוון שאולי קנאום לאחר מיתת אביהם (עי' לקמן הלכה יא).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (יד:) בתארה את דין תשלומי נזקין, כותבת "שווה כסף". ה<strong>גמרא</strong> (שם) מביאה ברייתא, המפרשת שביטוי זה כוונתו היא שבית דין אינם גובים תשלומי נזיקין אלא מנכסים שיש להם אחריות, ולא ממיטלטלין (דהיינו הכוונה היא ל"שווה כסף", להבדיל ממיטלטלין החשובים ככסף ממש). אמנם, הגמרא קובעת למסקנה שאין זה הדין הרגיל- בדרך כלל גובים תשלומי נזק גם ממיטלטלין, והמשנה המחייבת תשלומי נזק מנכסים שיש להם אחריות בלבד, מדברת על גביה מיתומיו של המזיק, שאין לגבות מהם מיטלטלין כיוון שאולי קנאום לאחר מיתת אביהם (עי' לקמן הלכה יא).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ז:) דנה בדין התורה לשלם ממיטב הארץ, ושואלת כיצד דין זה עולה בקנה אחד עם ההלכה שניתן לגבות נזיקין מכל מיטלטלין ואף מהגרועים שבהם. הגמרא מסבירה, שכל דבר של מיטלטלין עונה להגדרת מיטב, כיוון שמיטלטלין הם דבר שקל למכור, שכן אם אינם נמכרים כאן, ניתן ליטלם למקום אחר בו יש ביקוש להם, מה שאין כן קרקע, שנמכרת בקלות הרבה ביותר רק כאשר מדובר על עידית (ובלשון הגמרא "כי היכי דלקפוץ עלה זבינא"), שכן אי אפשר לנייד אותה למקום אחר בו ישנו ביקוש לה<sup id="ref20"><a href="#fn20">[20]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (ז:) דנה בדין התורה לשלם ממיטב הארץ, ושואלת כיצד דין זה עולה בקנה אחד עם ההלכה שניתן לגבות נזיקין מכל מיטלטלין ואף מהגרועים שבהם. הגמרא מסבירה, שכל דבר של מיטלטלין עונה להגדרת מיטב, כיוון שמיטלטלין הם דבר שקל למכור, שכן אם אינם נמכרים כאן, ניתן ליטלם למקום אחר בו יש ביקוש להם, מה שאין כן קרקע, שנמכרת בקלות הרבה ביותר רק כאשר מדובר על עידית (ובלשון הגמרא "כי היכי דלקפוץ עלה זבינא"), שכן אי אפשר לנייד אותה למקום אחר בו ישנו ביקוש לה<sup id="ref20"><a href="#fn20">[20]</a></sup>.</p>
                     
                 </div>
                 
                 <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עידית של ניזק או של מזיק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עידית של ניזק או של מזיק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ז:) מביאה את מחלוקת ר' עקיבא ור' ישמעאל בהבנת דברי התורה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (ז:) מביאה את מחלוקת ר' עקיבא ור' ישמעאל בהבנת דברי התורה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"[כִּי יַבְעֶר אִישׁ שָׂדֶה אוֹ כֶרֶם וְשִׁלַּח אֶת בעירה בְּעִירוֹ וּבִעֵר בִּשְׂדֵה אַחֵר] מֵיטַב שָׂדֵהוּ וּמֵיטַב כַּרְמוֹ יְשַׁלֵּם" (שמות כב ד)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"[כִּי יַבְעֶר אִישׁ שָׂדֶה אוֹ כֶרֶם וְשִׁלַּח אֶת בעירה בְּעִירוֹ וּבִעֵר בִּשְׂדֵה אַחֵר] מֵיטַב שָׂדֵהוּ וּמֵיטַב כַּרְמוֹ יְשַׁלֵּם" (שמות כב ד)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' עקיבא</strong> סובר שהתשלום צריך להיות ממיטב שדותיו של המזיק, ואילו לדעת <strong>ר' ישמעאל</strong> האיכות המוגדרת "מיטב" נקבעת על פי מיטב שדותיו של הניזק. ה<strong>משנה</strong> בגיטין (מח:) אומרת שתשלום נזיקין ממיטב הוא מפני תיקון העולם. ה<strong>גמרא</strong> (שם מט:) מסבירה שהכוונה לשיטת ר"ע, וכוונת המשנה להסביר את טעם התורה- התורה מחייבת תשלום ממיטב שדותיהם של גזלנים כדי שלא יחשבו שאין להם מה להפסיד. כל הפוסקים פסקו כר' עקיבא על פי הכלל שהלכה כרבי עקיבא מחבירו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' עקיבא</strong> סובר שהתשלום צריך להיות ממיטב שדותיו של המזיק, ואילו לדעת <strong>ר' ישמעאל</strong> האיכות המוגדרת "מיטב" נקבעת על פי מיטב שדותיו של הניזק. ה<strong>משנה</strong> בגיטין (מח:) אומרת שתשלום נזיקין ממיטב הוא מפני תיקון העולם. ה<strong>גמרא</strong> (שם מט:) מסבירה שהכוונה לשיטת ר"ע, וכוונת המשנה להסביר את טעם התורה- התורה מחייבת תשלום ממיטב שדותיהם של גזלנים כדי שלא יחשבו שאין להם מה להפסיד. כל הפוסקים פסקו כר' עקיבא על פי הכלל שהלכה כרבי עקיבא מחבירו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ז:) דנה גם בשאלה האם, אליבא דרבי עקיבא, מיטב הוא מיטב של המזיק או מיטב דעלמא. כלומר, האם לפי ר' עקיבא, שגובים מהמיטב שבנכסי המזיק, קובעים את איכות השדה ביחס לשדותיו האחרים של המזיק, או שמא מה שנחשב שדה מעולה באופן כללי, גם אם ביחס לשדותיו האחרים של המזיק אינה כל כך משובחת, בכ"ז גם ממנה גובים לנזקין. בגמרא אין הכרעה חד משמעית, אך הרמב"ם והראשונים האחרים פסקו שבשל מזיק שמים, וכך נפסק ב<strong>שו"ע</strong> (תיט א).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (ז:) דנה גם בשאלה האם, אליבא דרבי עקיבא, מיטב הוא מיטב של המזיק או מיטב דעלמא. כלומר, האם לפי ר' עקיבא, שגובים מהמיטב שבנכסי המזיק, קובעים את איכות השדה ביחס לשדותיו האחרים של המזיק, או שמא מה שנחשב שדה מעולה באופן כללי, גם אם ביחס לשדותיו האחרים של המזיק אינה כל כך משובחת, בכ"ז גם ממנה גובים לנזקין. בגמרא אין הכרעה חד משמעית, אך הרמב"ם והראשונים האחרים פסקו שבשל מזיק שמים, וכך נפסק ב<strong>שו"ע</strong> (תיט א).</p>
                     
                 </div>
                 
@@ -1237,35 +1237,35 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא-יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא-יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>מת המזיק קודם שישלם אין בית דין נזקקין למטלטלין של יתומים אלא לקרקע וגובין לניזק מן הזבורית, מפני שהניזק נעשה כבעל חוב והמטלטלין אינן משועבדין לבעל חוב, ואם תפס הניזק המטלטלין בחיי המזיק גובין לו מהן אחר מותו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כבר תקנו הגאונים לגבות בעל חוב מן המטלטלין ופשטה תקנה זו בכל בתי דינין, לפיכך מגבין הנזקין מן המטלטלין של יתומים, ואם לא הניח מטלטלין גובין להם מן הזבורית שכל הבא ליפרע מנכסי יתומים לא יגבה אלא מן הזבורית כמו שיתבאר. </strong>
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גביית תשלומי נזקין מיתומי המזיק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גביית תשלומי נזקין מיתומי המזיק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (יד:) מגיעה למסקנה (עי' לעיל הלכה י), שמיתומים אין לגבות ממטלטלין אלא רק מקרקע. <strong>רש"י</strong> מסביר שטעם הדבר משום שבמטלטלין יכול להיות שהיתומים קנו לאחר מיתת אביהם, ולכן אינם משתעבדים לפריעת החוב. וכך פוסק כאן ה<strong>רמב"ם</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (יד:) מגיעה למסקנה (עי' לעיל הלכה י), שמיתומים אין לגבות ממטלטלין אלא רק מקרקע. <strong>רש"י</strong> מסביר שטעם הדבר משום שבמטלטלין יכול להיות שהיתומים קנו לאחר מיתת אביהם, ולכן אינם משתעבדים לפריעת החוב. וכך פוסק כאן ה<strong>רמב"ם</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>המשנה</strong> בגיטין (מח:) כותבת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>המשנה</strong> בגיטין (מח:) כותבת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אין נפרעין מנכסי יתומין אלא מן הזיבורית"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אין נפרעין מנכסי יתומין אלא מן הזיבורית"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ובגמרא</strong> חלקו בדבר האמוראים. <strong>ר' נחמן</strong> פוסק, שאפילו אם כתוב בשטר הלוואה, שעל ההלואה להיגבות ממיטב הקרקע, עדיין אם גובים מהיתומים, אין לגבות אלא מזיבורית. כלומר, שאף כאשר מעיקר הדין יש לגבות מעידית או מבינונית, בכל זאת גובים ליתומים מזיבורית, כיוון שזו תקנה כללית להגנה על יתומים. וכמו כן, גם בנזקין, אף על פי שמדין תורה יש לגבות מעידית, תקנו חכמים שיש להגן על יתומים ולגבות להם מזיבורית. <strong>רבא</strong> חולק. הוא לומד כ<strong>עולא</strong> המבין שמדין תורה בעל חוב גובה מזיבורית וחכמים הם שתיקנו לבעל חוב לגבות מבינונית כדי שלא ימנעו אנשים מלהלוות. וביתומים, העמידו דין תורה על כנו, וגובים מזיבורית. אולם, אם מראש שועבדה עידית לטובת החזר ההלוואה, הרי דין תורה הוא שיגבו מעידית, ואם כך יש לגבות מעידית אפילו מיתומים. כמו כן גם בנזקין, כיוון שדין תורה הוא שיגבו מעידית, גם מיתומים יש לגבות מעידית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ובגמרא</strong> חלקו בדבר האמוראים. <strong>ר' נחמן</strong> פוסק, שאפילו אם כתוב בשטר הלוואה, שעל ההלואה להיגבות ממיטב הקרקע, עדיין אם גובים מהיתומים, אין לגבות אלא מזיבורית. כלומר, שאף כאשר מעיקר הדין יש לגבות מעידית או מבינונית, בכל זאת גובים ליתומים מזיבורית, כיוון שזו תקנה כללית להגנה על יתומים. וכמו כן, גם בנזקין, אף על פי שמדין תורה יש לגבות מעידית, תקנו חכמים שיש להגן על יתומים ולגבות להם מזיבורית. <strong>רבא</strong> חולק. הוא לומד כ<strong>עולא</strong> המבין שמדין תורה בעל חוב גובה מזיבורית וחכמים הם שתיקנו לבעל חוב לגבות מבינונית כדי שלא ימנעו אנשים מלהלוות. וביתומים, העמידו דין תורה על כנו, וגובים מזיבורית. אולם, אם מראש שועבדה עידית לטובת החזר ההלוואה, הרי דין תורה הוא שיגבו מעידית, ואם כך יש לגבות מעידית אפילו מיתומים. כמו כן גם בנזקין, כיוון שדין תורה הוא שיגבו מעידית, גם מיתומים יש לגבות מעידית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך שואלת ה<strong>גמרא</strong>- האם הדין שמיתומים גובים מזיבורית בלבד, מדבר על יתומים קטנים בלבד, או גם על יתומים גדולים? צדדי הספק מבוארים בגמרא: אם מה שהקלו על יתומים לגבות מהם רק מזיבורית הוא כדי להגן עליהם, הרי ששייך הדבר רק ביתומים קטנים, אך אם הטעם שמיתומים גובים חובות מזיבורית הוא משום שמראש בעל חוב גובה מבינונית רק כדי שלא ימנע המלווה מלהלוות, הרי חשש זה אינו קיים ביתומים, שכן המלווה לא יחשוש שימות הלווה, שאין הדבר שכיח. לפי זה הדין ביתומים חוזר לדין התורה לגבות מזיבורית, וטעם זה שייך בין ביתומים גדולים ובין ביתומים קטנים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך שואלת ה<strong>גמרא</strong>- האם הדין שמיתומים גובים מזיבורית בלבד, מדבר על יתומים קטנים בלבד, או גם על יתומים גדולים? צדדי הספק מבוארים בגמרא: אם מה שהקלו על יתומים לגבות מהם רק מזיבורית הוא כדי להגן עליהם, הרי ששייך הדבר רק ביתומים קטנים, אך אם הטעם שמיתומים גובים חובות מזיבורית הוא משום שמראש בעל חוב גובה מבינונית רק כדי שלא ימנע המלווה מלהלוות, הרי חשש זה אינו קיים ביתומים, שכן המלווה לא יחשוש שימות הלווה, שאין הדבר שכיח. לפי זה הדין ביתומים חוזר לדין התורה לגבות מזיבורית, וטעם זה שייך בין ביתומים גדולים ובין ביתומים קטנים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> ושאר הראשונים פוסקים כר' נחמן, ולכן בין בעל חוב ובין ניזק גובים מיתומים מזיבורית בלבד. וכך נפסק ב<strong>שו"ע</strong> (תיט ג).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> ושאר הראשונים פוסקים כר' נחמן, ולכן בין בעל חוב ובין ניזק גובים מיתומים מזיבורית בלבד. וכך נפסק ב<strong>שו"ע</strong> (תיט ג).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> אינו מציין האם מדובר רק על קטנים או גם על גדולים, וה<strong>מגיד משנה</strong> מעיר שמשמע מהרמב"ם שהדין אמור גם ביתומים גדולים. אמנם ה<strong>רשב"א</strong> (ד"ה "בעי") מפרש בגמרא, שכל שאלת הגמרא אמורה רק בגביית בעל חוב, אך בגביית הניזק אין כל ספק שטעם התקנה לגבות מזיבורית הוא כדי להגן על היתומים, ולכן אין הדין אמור אלא בקטנים<sup id="ref21"><a href="#fn21">[21]</a></sup>. וב<strong>שו"ע</strong> (קח כא) פסק כרשב"א.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> אינו מציין האם מדובר רק על קטנים או גם על גדולים, וה<strong>מגיד משנה</strong> מעיר שמשמע מהרמב"ם שהדין אמור גם ביתומים גדולים. אמנם ה<strong>רשב"א</strong> (ד"ה "בעי") מפרש בגמרא, שכל שאלת הגמרא אמורה רק בגביית בעל חוב, אך בגביית הניזק אין כל ספק שטעם התקנה לגבות מזיבורית הוא כדי להגן על היתומים, ולכן אין הדין אמור אלא בקטנים<sup id="ref21"><a href="#fn21">[21]</a></sup>. וב<strong>שו"ע</strong> (קח כא) פסק כרשב"א.</p>
                     
                 </div>
                 
@@ -1273,37 +1273,37 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג-יד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג-יד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אין הנזקין משתלמין ואין חייבין בכופר ואין הבהמה נהרגת אלא בראיה ברורה ובעדים הכשרים להעיד, שלא תאמר הואיל ואין מצויין באוריות הסוסים וברפת הבקר וגדרות הצאן אלא העבדים והרועים וכיוצא בהן אם העידו שבהמה זו היא שהזיקה את זו שומעין להן או אם העידו קטנים או נשים שאדם זה חבל את זה או העידו בשאר נזקין סומכין עליהן, אין הדבר כן, אלא לעולם אין מחייבין ממון על פי עדים עד שיהיו עדים הכשרים להעיד שאר עדיות ויעידו בבית דין ויחייבו בית דין המזיק לשלם. </strong>אין הנזקין משתלמין ואין חייבין בכופר ואין הבהמה נהרגת אלא בראיה ברורה. א"א לא בא למעט אלא עדים פסולים אבל ע"פ עצמו חייב בנזק ובכופר אלא שאינו נהרג על פיו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שור שהיה רועה על גב הנהר ונמצא שור הרוג בצדו, אף על פי שזה מנוגח וזה מועד ליגח זה מנושך וזה מועד לישך אין אומרין בידוע שזה נשכו וזה נגחו אפילו גמל האוחר בין הגמלים ונמצא גמל הרוג בצדו אין אומרין בידוע שזה הרגו עד שיראוהו עדים כשרים.</strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חובת הראיה בנזיקין</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חובת הראיה בנזיקין</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (יד:) כותבת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (יד:) כותבת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"בפני בית דין, ועל פי עדים בני חורין בני ברית"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"בפני בית דין, ועל פי עדים בני חורין בני ברית"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, החיוב בנזקין הוא על פי הקריטריון הראייתי שבכל דיני ממונות. ה<strong>רמב"ם</strong> לפנינו מסביר מה ההו"א המצריכה את המשנה לכתוב דין זה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, החיוב בנזקין הוא על פי הקריטריון הראייתי שבכל דיני ממונות. ה<strong>רמב"ם</strong> לפנינו מסביר מה ההו"א המצריכה את המשנה לכתוב דין זה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בבבא בתרא (צג.) מביאה <strong>ברייתא</strong> ובה מחלוקת תנאים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בבבא בתרא (צג.) מביאה <strong>ברייתא</strong> ובה מחלוקת תנאים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שור שהיה רועה ונמצא שור הרוג בצדו, אע"פ שזה מנוגח וזה מועד ליגח, זה מנושך וזה מועד לישוך - אין אומרים בידוע שזה נגחו וזה נשכו;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שור שהיה רועה ונמצא שור הרוג בצדו, אע"פ שזה מנוגח וזה מועד ליגח, זה מנושך וזה מועד לישוך - אין אומרים בידוע שזה נגחו וזה נשכו;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי אחא</strong> אומר: גמל האוחר בין הגמלים ונמצא גמל הרוג בצדו - בידוע שזה הרגו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי אחא</strong> אומר: גמל האוחר בין הגמלים ונמצא גמל הרוג בצדו - בידוע שזה הרגו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, חולקים התנאים במידת הוודאות הדרושה על מנת לחייב בנזקין. כש<strong>רבי אחא</strong> מקל יותר מ<strong>תנא קמא</strong>, ומאפשר לחייב אף כאשר לא ראו עדים את הנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, חולקים התנאים במידת הוודאות הדרושה על מנת לחייב בנזקין. כש<strong>רבי אחא</strong> מקל יותר מ<strong>תנא קמא</strong>, ומאפשר לחייב אף כאשר לא ראו עדים את הנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כל הראשונים פוסקים כתנא קמא, אמנם נחלקו בהבנת שיטתו. <strong>רש"י</strong> שם מסביר שמדובר דווקא על שור שהיה רועה, כיוון שמדובר על מקום בו ישנם שוורים רבים אחרים שבאים ורועים אף הם, ובמקום שכזה אכן אין העובדה שהשור המועד נמצא שם כעת מספיקה כדי לחייבו. משמע מפירוש זה, שאם קרוב לוודאי שלא היו שם שום שוורים אחרים חוץ מזה הנגחן, יהיה אפשר בכל זאת לחייבו גם אליבא דחכמים. אמנם ה<strong>רמב"ם</strong> כותב לפנינו, שיש צורך דווקא בעדים, ומשמע שאין אפשרות לחייב בנזקין גם על פי ראיה חזקה של סבירות גבוהה. ה<strong>שו"ע</strong> (תח א-ב) פוסק כלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כל הראשונים פוסקים כתנא קמא, אמנם נחלקו בהבנת שיטתו. <strong>רש"י</strong> שם מסביר שמדובר דווקא על שור שהיה רועה, כיוון שמדובר על מקום בו ישנם שוורים רבים אחרים שבאים ורועים אף הם, ובמקום שכזה אכן אין העובדה שהשור המועד נמצא שם כעת מספיקה כדי לחייבו. משמע מפירוש זה, שאם קרוב לוודאי שלא היו שם שום שוורים אחרים חוץ מזה הנגחן, יהיה אפשר בכל זאת לחייבו גם אליבא דחכמים. אמנם ה<strong>רמב"ם</strong> כותב לפנינו, שיש צורך דווקא בעדים, ומשמע שאין אפשרות לחייב בנזקין גם על פי ראיה חזקה של סבירות גבוהה. ה<strong>שו"ע</strong> (תח א-ב) פוסק כלשון הרמב"ם.</p>
                     
                 </div>
                 
@@ -1311,7 +1311,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1355,6 +1355,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

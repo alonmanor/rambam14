@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות גזילה ואבידה - פרק ה</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ה)</h3>
                 <ul class="space-y-3">
@@ -970,7 +970,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -983,78 +983,78 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסור לקנות דבר הגזול מן הגזלן ואסור לסעדו על שינויו כדי שיקנהו שכל העושה דברים אלו וכיוצא בהן מחזק ידי עוברי עבירה ועובר על ולפני עור לא תתן מכשול.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסור ליהנות בדבר הגזול ואפילו לאחר יאוש והוא שידע בודאי שדבר זה הוא הגזלה עצמה, כיצד ידע בודאי שבהמה זו גזולה אסור לרכוב עליה או לחרוש בה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     גזל בית או שדה אסור לעבור בתוכה או ליכנס בה בחמה מפני החמה ובגשמים מפני הגשמים, ואם דר בתוכה חייב להעלות שכר לבעלים כדין הדר בחצר חבירו שלא מדעתו, גזל דקלים ועשה מהן גשר אסור לעבור עליו וכן כל כיוצא בזה.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור שימוש בגזילה, והצורך בוודאות בזהות הגזילה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איסור שימוש בגזילה, והצורך בוודאות בזהות הגזילה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בבבא קמא (קיח:) מונה מספר דברים שאין לקנות מתוך חשש שמא הם גזולים או גנובים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> בבבא קמא (קיח:) מונה מספר דברים שאין לקנות מתוך חשש שמא הם גזולים או גנובים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אין לוקחין מן הרועים צמר וחלב וגדיים, ולא משומרי פירות - עצים ופירות; אבל לוקחין מן הנשים כלי צמר ביהודה, וכלי פשתן בגליל, ועגלים בשרון; וכולן שאמרו להטמין - אסור. ולוקחין ביצים ותרנגולין מכל מקום</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אין לוקחין מן הרועים צמר וחלב וגדיים, ולא משומרי פירות - עצים ופירות; אבל לוקחין מן הנשים כלי צמר ביהודה, וכלי פשתן בגליל, ועגלים בשרון; וכולן שאמרו להטמין - אסור. ולוקחין ביצים ותרנגולין מכל מקום</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong> המרחיבה באותו נושא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה <strong>ברייתא</strong> המרחיבה באותו נושא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אין לוקחין מן הרועים לא עזים ולא גדיים, ולא גיזין ולא תלושין של צמר, אבל לוקחין מהן תפורין מפני שהן שלהן; ולוקחין מהן חלב וגבינה במדבר ולא בישוב; ולוקחין מהן ד' וה' צאן, ד' וה' גיזין, אבל לא שתי צאן ולא שתי גיזין. ר"י אומר: בייתות לוקחין מהן, מדבריות אין לוקחין מהן; כללו של דבר: כל שהרועה מוכר ובעל הבית מרגיש בו - לוקחין מהן, אין מרגיש בו - אין לוקחין מהן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אין לוקחין מן הרועים לא עזים ולא גדיים, ולא גיזין ולא תלושין של צמר, אבל לוקחין מהן תפורין מפני שהן שלהן; ולוקחין מהן חלב וגבינה במדבר ולא בישוב; ולוקחין מהן ד' וה' צאן, ד' וה' גיזין, אבל לא שתי צאן ולא שתי גיזין. ר"י אומר: בייתות לוקחין מהן, מדבריות אין לוקחין מהן; כללו של דבר: כל שהרועה מוכר ובעל הבית מרגיש בו - לוקחין מהן, אין מרגיש בו - אין לוקחין מהן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ברייתא</strong> נוספת מופיעה בעמוד הבא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ברייתא</strong> נוספת מופיעה בעמוד הבא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שומרי פירות, לוקחין מהן כשהן יושבין ומוכרין והסלין לפניהם וטורטני לפניהם, וכולן שאמרו הטמן - אסור</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שומרי פירות, לוקחין מהן כשהן יושבין ומוכרין והסלין לפניהם וטורטני לפניהם, וכולן שאמרו הטמן - אסור</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ביאור הדברים- המשנה והברייתא מונות מקרים בהם מדובר על אנשים שבמקרים רבים מוכרים דברים שאינם שלהם, כמו רועים ושומרי פירות המוכרים את הרכוש עליו הם מופקדים לשמור, או נשים המוכרות את רכוש בעליהן ללא ידיעת הבעל. מאפיין בולט של מקרים כאלה הוא שאותם גזלנים, המוכרים דברים שאינם שלהם, אינם מעוניינים שהדבר יגיע לידיעת הבריות ובייחוד לא לידיעת בעל הבית שנתן בהם את אמונו. לכן, במקרים בהם המכירה היא בפומבי ובאופן בולט (הסלין לפניהם וכדומה), או כגון כאשר מדובר בכמות גדולה (ד' וה' צאן וכדומה) שמרגיש בה בעל הבית, יש נטיה להתיר לקנות מהם. בהתאמה, כאשר יש סיבה מיוחדת לחשוד ביושרם של המוכרים, כגון שאמרו לקונה "הטמן" (כלומר, החבא את הסחורה שלא ירגישו בה), אסור לקנות מהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ביאור הדברים- המשנה והברייתא מונות מקרים בהם מדובר על אנשים שבמקרים רבים מוכרים דברים שאינם שלהם, כמו רועים ושומרי פירות המוכרים את הרכוש עליו הם מופקדים לשמור, או נשים המוכרות את רכוש בעליהן ללא ידיעת הבעל. מאפיין בולט של מקרים כאלה הוא שאותם גזלנים, המוכרים דברים שאינם שלהם, אינם מעוניינים שהדבר יגיע לידיעת הבריות ובייחוד לא לידיעת בעל הבית שנתן בהם את אמונו. לכן, במקרים בהם המכירה היא בפומבי ובאופן בולט (הסלין לפניהם וכדומה), או כגון כאשר מדובר בכמות גדולה (ד' וה' צאן וכדומה) שמרגיש בה בעל הבית, יש נטיה להתיר לקנות מהם. בהתאמה, כאשר יש סיבה מיוחדת לחשוד ביושרם של המוכרים, כגון שאמרו לקונה "הטמן" (כלומר, החבא את הסחורה שלא ירגישו בה), אסור לקנות מהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך חלוקים האמוראים בנוגע לקני דבר שאין זהותו ידועה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך חלוקים האמוראים בנוגע לקני דבר שאין זהותו ידועה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איתמר: גזלן, מאימת מותר לקנות הימנו?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איתמר: גזלן, מאימת מותר לקנות הימנו?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב</strong> אמר: עד שתהא רוב משלו, ו<strong>שמואל</strong> אמר: אפילו מיעוט שלו</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רב</strong> אמר: עד שתהא רוב משלו, ו<strong>שמואל</strong> אמר: אפילו מיעוט שלו</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לפנינו פוסק שהאיסור לקנות מהגזלן הוא כאשר ידוע בוודאות שאותו החפץ הנמכר הוא גזול, וניתן לבאר שמקורו של הרמב"ם נובע משיטת שמואל. כלומר, כיוון ששמואל סובר שאפילו אם מיעוט חפציו של הגזלן הם שלו, מותר בכל זאת לקנות ממנו חפץ שזהותו אינה ידועה, יוצא שרק אם ידועה בוודאות זהותו של החפץ כגנוב אסור לקנותו מהגזלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לפנינו פוסק שהאיסור לקנות מהגזלן הוא כאשר ידוע בוודאות שאותו החפץ הנמכר הוא גזול, וניתן לבאר שמקורו של הרמב"ם נובע משיטת שמואל. כלומר, כיוון ששמואל סובר שאפילו אם מיעוט חפציו של הגזלן הם שלו, מותר בכל זאת לקנות ממנו חפץ שזהותו אינה ידועה, יוצא שרק אם ידועה בוודאות זהותו של החפץ כגנוב אסור לקנותו מהגזלן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מאידך, בהלכות גניבה (ו א) הביא הרמב"ם את הדוגמאות השונות שבמשנתנו ובברייתות, ובפתח דבריו כתב:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מאידך, בהלכות גניבה (ו א) הביא הרמב"ם את הדוגמאות השונות שבמשנתנו ובברייתות, ובפתח דבריו כתב:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כל דבר שחזקתו שהוא גנוב אסור ליקח אותו, <strong>וכן אם רוב אותו הדבר שהוא גנוב אין לוקחין אותו</strong>...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כל דבר שחזקתו שהוא גנוב אסור ליקח אותו, <strong>וכן אם רוב אותו הדבר שהוא גנוב אין לוקחין אותו</strong>...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומשמע שכן הולכים על פי הרוב, כפי שיטת רב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומשמע שכן הולכים על פי הרוב, כפי שיטת רב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>כסף משנה</strong> (הל' גניבה ו א) מסביר שההלכה שאין הולכים על פי רוב, עוסקת בקניה מגזלן ודאי, שיש ספק לגבי החפץ הספיציפי שאני קונה ממנו. בעוד שההלכה שהולכים על פי רוב עוסקת באדם שאינו מוחזק בגזלנות באופן כללי, אך הוא מוכר סחורה כזו בהקשר כזה שמוחזק שהא גזל<sup id="ref83"><a href="#fn83">[83]</a></sup>. אכן, <strong>שו"ע</strong> (שנח א) פוסק כדברי הרמב"ם בהלכות גניבה, ובמקביל (שסט ג) פוסק כדברי הרמב"ם בהלכות גזילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>כסף משנה</strong> (הל' גניבה ו א) מסביר שההלכה שאין הולכים על פי רוב, עוסקת בקניה מגזלן ודאי, שיש ספק לגבי החפץ הספיציפי שאני קונה ממנו. בעוד שההלכה שהולכים על פי רוב עוסקת באדם שאינו מוחזק בגזלנות באופן כללי, אך הוא מוכר סחורה כזו בהקשר כזה שמוחזק שהא גזל<sup id="ref83"><a href="#fn83">[83]</a></sup>. אכן, <strong>שו"ע</strong> (שנח א) פוסק כדברי הרמב"ם בהלכות גניבה, ובמקביל (שסט ג) פוסק כדברי הרמב"ם בהלכות גזילה.</p>
                     
                 </div>
                 
                 <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שימוש בגזילה לאחר יאוש בעלים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שימוש בגזילה לאחר יאוש בעלים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לפנינו פוסק שגם אם נתייאש הבעלים, אסור ליהנות מהחפץ הגזול. ולכאורה הדברים פשוטים מהדין הפסוק בדברי הרמב"ם עצמו ושאר ראשונים, שיאוש כשלעצמו אינו קונה (לעיל פרק ב הלכה א).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לפנינו פוסק שגם אם נתייאש הבעלים, אסור ליהנות מהחפץ הגזול. ולכאורה הדברים פשוטים מהדין הפסוק בדברי הרמב"ם עצמו ושאר ראשונים, שיאוש כשלעצמו אינו קונה (לעיל פרק ב הלכה א).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם הטור (שסט) מקשה על הרמב"ם מאחד המקורות לאיסור שימוש בגזילה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם הטור (שסט) מקשה על הרמב"ם מאחד המקורות לאיסור שימוש בגזילה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>שמואל</strong>: דינא דמלכותא דינא (=ממון שמפקיעה המלכות אינו נחשב גזל<sup id="ref84"><a href="#fn84">[84]</a></sup>).</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>שמואל</strong>: דינא דמלכותא דינא (=ממון שמפקיעה המלכות אינו נחשב גזל<sup id="ref84"><a href="#fn84">[84]</a></sup>).</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: תדע, דקטלי דיקלי וגשרי גישרי ועברינן עלייהו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: תדע, דקטלי דיקלי וגשרי גישרי ועברינן עלייהו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א"ל <strong>אביי</strong>: ודלמא משום דאייאוש להו מינייהו מרייהו!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>א"ל <strong>אביי</strong>: ודלמא משום דאייאוש להו מינייהו מרייהו!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: אי לא דינא דמלכותא דינא היכי מייאשי?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: אי לא דינא דמלכותא דינא היכי מייאשי?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, <strong>רבא</strong> מנסה להוכיח שממון שהפקיעה המלכות, מאבד את שייכותו לבעלים על פי דין, ומותר ליהנות ממנו, מכך שמעשים בכל יום שעוברים אנשים על גשרים שבונה המלכות מעצים שהופקעו מאנשים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, <strong>רבא</strong> מנסה להוכיח שממון שהפקיעה המלכות, מאבד את שייכותו לבעלים על פי דין, ומותר ליהנות ממנו, מכך שמעשים בכל יום שעוברים אנשים על גשרים שבונה המלכות מעצים שהופקעו מאנשים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכאן לומד הטור, שלאחר יאוש ניתן להשתמש בגזילה<sup id="ref85"><a href="#fn85">[85]</a></sup> למרות שהיא לא נקנתה עדיין לגזלן<sup id="ref86"><a href="#fn86">[86]</a></sup> (כמבואר בדבריו סי' שנג).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכאן לומד הטור, שלאחר יאוש ניתן להשתמש בגזילה<sup id="ref85"><a href="#fn85">[85]</a></sup> למרות שהיא לא נקנתה עדיין לגזלן<sup id="ref86"><a href="#fn86">[86]</a></sup> (כמבואר בדבריו סי' שנג).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שסט ב) כותב כדברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שסט ב) כותב כדברי הרמב"ם.</p>
                     
                 </div>
                 
@@ -1062,72 +1062,72 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד-</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מי שעבר ואכל הגזלה אחר יאוש פטור מלשלם ואם אכל קודם יאוש ורצו הבעלים לגבות מן האוכל גובין שעדיין ברשותן היא, ואם רצו גובין מן הגזלן.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הגוזל ומת בין שהאכיל את הגזלה לבנים אחר יאוש בין שלא האכילם אלא מכרה או אבדה, אם הניח קרקע חייבין לשלם אבל מן המטלטלין אינן חייבין לשלם, שדמי הגזלה חוב הן על הגזלן ואין המטלטלין משתעבדין לבעל חוב.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השבת הגזילה בידי יורשי הגזלן</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">השבת הגזילה בידי יורשי הגזלן</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בבבא קמא (קיא:) עוסקת בחובת יורשי הגזלן לשלם לנגזל:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> בבבא קמא (קיא:) עוסקת בחובת יורשי הגזלן לשלם לנגזל:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הגוזל ומאכיל את בניו, והניח לפניהם - פטורין מלשלם, ואם היה דבר שיש בו אחריות - חייבין לשלם</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הגוזל ומאכיל את בניו, והניח לפניהם - פטורין מלשלם, ואם היה דבר שיש בו אחריות - חייבין לשלם</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברי הגמרא משמע, שקיימות בין התנאים שתי דרכים בהבנת הדין אליו מתייחסת המשנה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי הגמרא משמע, שקיימות בין התנאים שתי דרכים בהבנת הדין אליו מתייחסת המשנה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הדרך האחת משתמעת מהערתו של <strong>רבי</strong> למשנה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הדרך האחת משתמעת מהערתו של <strong>רבי</strong> למשנה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא דבר שיש בו אחריות ממש, אלא אפילו פרה וחורש בה, חמור ומחמר אחריו - חייבין להחזיר מפני כבוד אביהן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא דבר שיש בו אחריות ממש, אלא אפילו פרה וחורש בה, חמור ומחמר אחריו - חייבין להחזיר מפני כבוד אביהן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, הסיפא, לפיה אם מדובר ב"דבר שיש בו אחריות" חייבים הבנים לשלם, עוסקת במקרה בו נותר אצלם החפץ הגזול עצמו, ובכל זאת לא בכל מקרה חייבים הבנים לשלם לנגזל, אלא רק אם מדובר בדבר משמעותי שמושך את תשומת לב הבריות, שאז חייבים הם להשיבו מפני כבוד אביהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, הסיפא, לפיה אם מדובר ב"דבר שיש בו אחריות" חייבים הבנים לשלם, עוסקת במקרה בו נותר אצלם החפץ הגזול עצמו, ובכל זאת לא בכל מקרה חייבים הבנים לשלם לנגזל, אלא רק אם מדובר בדבר משמעותי שמושך את תשומת לב הבריות, שאז חייבים הם להשיבו מפני כבוד אביהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דרך אחרת משתמעת בדברי <strong>רבי אושעיא</strong> בברייתא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דרך אחרת משתמעת בדברי <strong>רבי אושעיא</strong> בברייתא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תני <strong>רבי אושעיא</strong>: הגוזל ומאכיל את בניו - פטורין מלשלם; הניח לפניהם, גזילה קיימת - חייבין, אין הגזילה קיימת - פטורין; הניח להם אביהם אחריות נכסים - חייבין לשלם</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תני <strong>רבי אושעיא</strong>: הגוזל ומאכיל את בניו - פטורין מלשלם; הניח לפניהם, גזילה קיימת - חייבין, אין הגזילה קיימת - פטורין; הניח להם אביהם אחריות נכסים - חייבין לשלם</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכאן משמע שאם הגזילה קיימת, חייבים היורשים תמיד להשיבה, ואם הגזילה איננה בנמצא, אם הניח הגזלן נכס המשתעבד לחוב, כגון קרקע, משלמים היורשים את הגזילה ממנו, ואם הניח מיטלטלין בלבד, כיוון שתשלומי הגזילה הינם חוב על הגזלן, אין בניו צריכים לשלם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכאן משמע שאם הגזילה קיימת, חייבים היורשים תמיד להשיבה, ואם הגזילה איננה בנמצא, אם הניח הגזלן נכס המשתעבד לחוב, כגון קרקע, משלמים היורשים את הגזילה ממנו, ואם הניח מיטלטלין בלבד, כיוון שתשלומי הגזילה הינם חוב על הגזלן, אין בניו צריכים לשלם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מזהה מחלוקת תנאים זו עם מחלוקת אמוראים באשר להסתכלות על ירושת הבנים כעל שינוי רשות:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מזהה מחלוקת תנאים זו עם מחלוקת אמוראים באשר להסתכלות על ירושת הבנים כעל שינוי רשות:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רמי בר חמא</strong>, זאת אומרת: רשות יורש כרשות לוקח דמי</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רמי בר חמא</strong>, זאת אומרת: רשות יורש כרשות לוקח דמי</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> אמר: רשות יורש לאו כרשות לוקח דמי</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> אמר: רשות יורש לאו כרשות לוקח דמי</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, <strong>רמי בר חמא</strong> מבין את המשנה על פי דרכו של <strong>רבי</strong>, כך שאם לא מדובר בגזילה משמעותית, שיש להחזיר משום כבוד האב, לא חייבים הבנים להחזיר אפילו אם הגזילה עדיין בנמצא. מכאן מסיק רמי בר חמא, שההורשה לבנים שקולה לשינוי רשות, והגזילה נקנית לבנים בשילוב של יאוש ושינוי רשות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, <strong>רמי בר חמא</strong> מבין את המשנה על פי דרכו של <strong>רבי</strong>, כך שאם לא מדובר בגזילה משמעותית, שיש להחזיר משום כבוד האב, לא חייבים הבנים להחזיר אפילו אם הגזילה עדיין בנמצא. מכאן מסיק רמי בר חמא, שההורשה לבנים שקולה לשינוי רשות, והגזילה נקנית לבנים בשילוב של יאוש ושינוי רשות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, <strong>רבא</strong> מבין את המשנה על פי דרכו של <strong>רבי אושעיא</strong>, כך שבכל אופן, אם הגזילה קיימת יש להשיבה, ומה שאומרת המשנה שפטורים הבנים, הכוונה למקרה בו הגזילה כבר איננה קיימת<sup id="ref87"><a href="#fn87">[87]</a></sup>. לדעתו של רבא, הוֹרשה לבנים אינה נחשבת לשינוי רשות, ולכן אין הגזילה נקנית לבנים (כיוון שלדעת רוב האמוראים יאוש כשלעצמו אינו קונה, עי' לעיל פרק ב') וממילא, אם היא בנמצא, יש להשיבה בעינה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, <strong>רבא</strong> מבין את המשנה על פי דרכו של <strong>רבי אושעיא</strong>, כך שבכל אופן, אם הגזילה קיימת יש להשיבה, ומה שאומרת המשנה שפטורים הבנים, הכוונה למקרה בו הגזילה כבר איננה קיימת<sup id="ref87"><a href="#fn87">[87]</a></sup>. לדעתו של רבא, הוֹרשה לבנים אינה נחשבת לשינוי רשות, ולכן אין הגזילה נקנית לבנים (כיוון שלדעת רוב האמוראים יאוש כשלעצמו אינו קונה, עי' לעיל פרק ב') וממילא, אם היא בנמצא, יש להשיבה בעינה.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גזל ובא אחר ואכלו- דינו של רב חסדא</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גזל ובא אחר ואכלו- דינו של רב חסדא</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (קיא:) מביאה את דברי <strong>רב חסדא</strong> במקרה הדומה לזה של המשנה הנ"ל, כלומר, הגזילה עברה מהגזלן לאדם אחר:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (קיא:) מביאה את דברי <strong>רב חסדא</strong> במקרה הדומה לזה של המשנה הנ"ל, כלומר, הגזילה עברה מהגזלן לאדם אחר:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב חסדא</strong>: גזל ולא נתייאשו הבעלים, ובא אחר ואכלו ממנו, רצה - מזה גובה, רצה - מזה גובה;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב חסדא</strong>: גזל ולא נתייאשו הבעלים, ובא אחר ואכלו ממנו, רצה - מזה גובה, רצה - מזה גובה;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מאי טעמא? כל כמה דלא נתייאשו הבעלים, ברשותיה דמריה קאי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מאי טעמא? כל כמה דלא נתייאשו הבעלים, ברשותיה דמריה קאי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, <strong>רב חסדא</strong> מניח שכל עוד לא התייאש הנגזל, עדיין עומדת הגזילה ברשותו, ולכן השני שבא ואכל מהגזלן, נחשב גם הוא כגזלן בפני עצמו. מכאן נובע ששניהם, הגזלן הראשון וה"גזלן" השני, הם בעלי דברו של הנגזל ויכול לגבות מהם שירצה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, <strong>רב חסדא</strong> מניח שכל עוד לא התייאש הנגזל, עדיין עומדת הגזילה ברשותו, ולכן השני שבא ואכל מהגזלן, נחשב גם הוא כגזלן בפני עצמו. מכאן נובע ששניהם, הגזלן הראשון וה"גזלן" השני, הם בעלי דברו של הנגזל ויכול לגבות מהם שירצה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מקשה על הדברים מהמשנה הנ"ל, שהרי במשנה נתבאר שהבנים פטורים מלשלם את הגזילה, ואינם נחשבים לגזלנים בפני עצמם!</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מקשה על הדברים מהמשנה הנ"ל, שהרי במשנה נתבאר שהבנים פטורים מלשלם את הגזילה, ואינם נחשבים לגזלנים בפני עצמם!</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא עונה, שרב חסדא מפרש את המשנה בלאחר יאוש. כלומר, כיוון שהתייאשו הבעלים, פטורים הבנים מלהשיב את הגזילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא עונה, שרב חסדא מפרש את המשנה בלאחר יאוש. כלומר, כיוון שהתייאשו הבעלים, פטורים הבנים מלהשיב את הגזילה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (קיא: ד"ה "גזל") מדייקים מדברי רב חסדא "גזל ולא נתייאשו הבעלים...רצה מזה גובה רצה מזה גובה", שאם כן נתייאשו הבעלים, והגזילה אינה קיימת כי אכלה השני, אין גובים מהשני, וזאת אפילו במקרה בו לו היתה הגזילה קיימת היו גובים אותה מהשני<sup id="ref88"><a href="#fn88">[88]</a></sup>. לאור זה, מתקשים התוספות בהבנת הדין, שכן מדוע שישנה היאוש של הנגזל כשלעצמו<sup id="ref89"><a href="#fn89">[89]</a></sup>? התוספות מסבירים שלמרות שיאושו של הנגזל אינו קונה את הגזילה לגזלן, הוא בכל זאת גורם לכך שהגזילה לא תיחשב ברשותו של הבעלים, ולכן השני שאכל מהגזלן אינו נחשב כאילו גזל את הבעלים בעצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (קיא: ד"ה "גזל") מדייקים מדברי רב חסדא "גזל ולא נתייאשו הבעלים...רצה מזה גובה רצה מזה גובה", שאם כן נתייאשו הבעלים, והגזילה אינה קיימת כי אכלה השני, אין גובים מהשני, וזאת אפילו במקרה בו לו היתה הגזילה קיימת היו גובים אותה מהשני<sup id="ref88"><a href="#fn88">[88]</a></sup>. לאור זה, מתקשים התוספות בהבנת הדין, שכן מדוע שישנה היאוש של הנגזל כשלעצמו<sup id="ref89"><a href="#fn89">[89]</a></sup>? התוספות מסבירים שלמרות שיאושו של הנגזל אינו קונה את הגזילה לגזלן, הוא בכל זאת גורם לכך שהגזילה לא תיחשב ברשותו של הבעלים, ולכן השני שאכל מהגזלן אינו נחשב כאילו גזל את הבעלים בעצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>רמב"ם </strong>משמע שהוא מסכים לדברי התוספות<sup id="ref90"><a href="#fn90">[90]</a></sup></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>רמב"ם </strong>משמע שהוא מסכים לדברי התוספות<sup id="ref90"><a href="#fn90">[90]</a></sup></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> (שסא) כותב את דברי התוספות, וה<strong>שו"ע</strong>, לאחר שפסק את דינו של רב חסדא (שסא ה), כתב את דברי הטור להלכה (שם ו).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> (שסא) כותב את דברי התוספות, וה<strong>שו"ע</strong>, לאחר שפסק את דינו של רב חסדא (שסא ה), כתב את דברי הטור להלכה (שם ו).</p>
                     
                 </div>
                 
@@ -1135,10 +1135,10 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     דין הלוקח מטלטלין מן הגזלן כלוקח מן הגנב, אם גזלן מפורסם הוא לא עשו בו תקנת השוק ואם אינו מפורסם עשו בו תקנת השוק ונותן הנגזל ללוקח דמים שנתן ולוקח גזלתו וחוזר ותובע הגזלן בדמי הגזלה, ואם כבר נתיאשו הבעלים קנה לוקח עצמה של גזלה ואינו מחזירה.
                 </div>
                 
@@ -1148,10 +1148,10 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אסור ליהנות מן הגזלן ואם היה מיעוט שלו אף על פי שרוב ממונו גזול מותר ליהנות ממנו עד שיודע בודאי שדבר זה גזול בידו.
                 </div>
                 
@@ -1161,10 +1161,10 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     בני אדם שחזקתן גזלנין וחזקת כל ממונן מן הגזל מפני שמלאכתן גזלנות כגון המוכסין והליסטין אסור ליהנות מהן שחזקת מלאכה זו שהוא גזול ואין מצרפין דינרים מן התיבה שלהן שהכל בחזקת גזלה.
                 </div>
                 
@@ -1174,10 +1174,10 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     נטלו מוכסין כסותו והחזירו לו כסות אחרת, נטלו חמורו והחזירו לו חמור אחר, הרי אלו שלו מפני שזו כמכירה היא וחזקתן שנתיאשו הבעלים מהן ואינו יודע בודאי שזו גזלה, ואם היה ותיק ומחמיר על עצמו מחזירן לבעלים הראשונים.
                 </div>
                 
@@ -1187,10 +1187,10 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     במה דברים אמורים שהמוכס כליסטיס בזמן שהמוכס גוי או מוכס העומד מאליו או מוכס העומד מחמת המלך ואין לו קצבה אלא לוקח מה שירצה ומניח מה שירצה, אבל מכס שפסקו המלך ואמר שילקח שליש או רביע או דבר קצוב והעמיד מוכס ישראל לגבות חלק זה למלך ונודע שאדם זה נאמן ואינו מוסיף כלום על מה שגזר המלך אינו בחזקת גזלן לפי שדין המלך דין הוא, ולא עוד אלא שהוא עובר המבריח ממכס זה מפני שהוא גוזל מנת המלך, בין שהיה המלך גוי בין שהיה מלך ישראל.
                 </div>
                 
@@ -1200,10 +1200,10 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מלך שהיו דיניו שכל מי שלא יתן המס שעל השדה תהיה השדה לנותן המס וברח בעל השדה מפני המס ובא זה ונתן מס שעליה למלך ואכל פירותיה אין זה גזל אלא אוכל פירות ונותן המס עד שיחזרו הבעלים, שדין המלך דין הוא כמו שאמרנו.
                 </div>
                 
@@ -1213,10 +1213,10 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מלך שכרת אילנות של בעלי בתים ועשה מהן גשר מותר לעבור עליו וכן אם הרס בתים ועשה אותן דרך או חומה מותר ליהנות בה וכן כל כיוצא בזה שדין המלך דין.
                 </div>
                 
@@ -1226,10 +1226,10 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     במה דברים אמורים במלך שמטבעו יוצא באותן הארצות שהרי הסכימו עליו בני אותה הארץ וסמכה דעתן שהוא אדוניהם והם לו עבדים אבל אם אין מטבעו יוצא הרי הוא כגזלן בעל זרוע וכמו חבורת ליסטים המזויינין שאין דיניהן דין וכן מלך זה וכל עבדיו כגזלן לכל דבר.
                 </div>
                 
@@ -1239,7 +1239,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1303,6 +1303,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

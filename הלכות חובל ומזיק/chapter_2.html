@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות חובל ומזיק - פרק ב'</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ב')</h3>
                 <ul class="space-y-3">
@@ -1116,7 +1116,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1128,7 +1128,7 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">פרק זה ממשיך לעסוק בתשלומי החובל השונים, תוך התמקדות בתשלומי הנזק, הצער, הריפוי והשבת. תחילת הפרק (הלכות א-ד) עוסקת בדוגמאות ומקרים הממחישים את חוסר התלות בין תשלומי הנזק השונים. ישנם מקרים בהם יחוייב המזיק לשלם רק את דמי הצער, רק את הבושת, רק את הריפוי או רק את השבת. למרות שכל אחד מהתשלומים עומד בפני עצמו ואינו תלוי באחרים, הלכות ה-ו מלמדות שבפועל, כאשר מתחייב המזיק בתשלומי נזק, עקב גרימת נזק שאינו חוזר לניזק, מן הנמנע שיפטר מאף אחד מהתשלומים האחרים.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">פרק זה ממשיך לעסוק בתשלומי החובל השונים, תוך התמקדות בתשלומי הנזק, הצער, הריפוי והשבת. תחילת הפרק (הלכות א-ד) עוסקת בדוגמאות ומקרים הממחישים את חוסר התלות בין תשלומי הנזק השונים. ישנם מקרים בהם יחוייב המזיק לשלם רק את דמי הצער, רק את הבושת, רק את הריפוי או רק את השבת. למרות שכל אחד מהתשלומים עומד בפני עצמו ואינו תלוי באחרים, הלכות ה-ו מלמדות שבפועל, כאשר מתחייב המזיק בתשלומי נזק, עקב גרימת נזק שאינו חוזר לניזק, מן הנמנע שיפטר מאף אחד מהתשלומים האחרים.</p>
                 
             </div>
             
@@ -1136,41 +1136,41 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>החובל בחבירו חבל שהוא ראוי לשלם החמשה דברים כולן משלם חמשה, הזיקו נזק שאין בו אלא ארבעה משלם ארבעה, שלשה משלם שלשה, שנים משלם שנים, אחד משלם אחד. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כיצד, קטע ידו או רגלו או אצבע מהן או שסימא עינו משלם חמשה נזק וצער וריפוי ושבת ובושת, הכהו על ידו וצבתה וסופה לחזור, על עינו ומרדה וסופה לחיות, משלם ארבעה צער ורפוי ושבת ובושת. הכהו על ראשו וצבה משלם שלשה צער רפוי ובושת, הכהו במקום שאינו נראה כגון שהכהו על ברכיו או בגבו משלם שנים צער ורפוי. הכהו במטפחת שבידו או בשטר וכיוצא באלו נותן אחת והיא הבושת בלבד. </strong>הכהו במקום שאינו נראה כגון שהכהו על ברכיו או בגבו. א"א שלא במקום רואין. הכהו במטפחת שבידו. א"א במקום רואין.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מקרים בהם יש לשלם רק חלק מחמשת התשלומים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מקרים בהם יש לשלם רק חלק מחמשת התשלומים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור דברי הרמב"ם ב<strong>ברייתא</strong> המובאת בירושלמי (פרק ח הלכה א):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקור דברי הרמב"ם ב<strong>ברייתא</strong> המובאת בירושלמי (פרק ח הלכה א):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"תני החובל בחבירו חמשה נותן לו חמשה ארבעה נותן לו ארבעה שלשה נותן לו ג' שנים נותן ב' א' נותן לו א'- והיכי?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"תני החובל בחבירו חמשה נותן לו חמשה ארבעה נותן לו ארבעה שלשה נותן לו ג' שנים נותן ב' א' נותן לו א'- והיכי?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכהו על ידו וקטעה נותן לו חמשה נזק צער ריפוי שבת ובושת</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הכהו על ידו וקטעה נותן לו חמשה נזק צער ריפוי שבת ובושת</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכהו על ידו וצבת נותן לו ארבעה צער ריפוי שבת ובושת</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הכהו על ידו וצבת נותן לו ארבעה צער ריפוי שבת ובושת</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכהו על ראשו וצבת נותן לו ג' צער ריפוי בשת</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הכהו על ראשו וצבת נותן לו ג' צער ריפוי בשת</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקום שאינו נראה נותן לו ב' צער ריפוי</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקום שאינו נראה נותן לו ב' צער ריפוי</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בטומוס שבידו נותן לו א' בושת"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בטומוס שבידו נותן לו א' בושת"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא ממחישה שחמשת התשלומים אינם תלויים זה בזה, והמזיק יכול להתחייב בכל אחד מהם באופן נפרד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתא ממחישה שחמשת התשלומים אינם תלויים זה בזה, והמזיק יכול להתחייב בכל אחד מהם באופן נפרד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סימן א) וה<strong>רי"ף</strong> (ל. מדפיו) העתיקו ברייתא זו להלכה, וכך פוסק ה<strong>שו"ע</strong> (תכ ב-ח).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סימן א) וה<strong>רי"ף</strong> (ל. מדפיו) העתיקו ברייתא זו להלכה, וכך פוסק ה<strong>שו"ע</strong> (תכ ב-ח).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לשון הברייתא והרמב"ם היא שפטור מבושת כאשר הכהו במקום "שאינו נראה", ה<strong>ראב"ד</strong> מעיר שהכוונה למקרה בו ההכאה לא היתה לעיני אדם. ה<strong>שו"ע</strong> (תכ ח) כתב שפטור מבושת רק אם המכה היא כזו שאין רואים את סימניה, ואף ההכאה היתה במקום בו לא ראה אותה אף אחד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לשון הברייתא והרמב"ם היא שפטור מבושת כאשר הכהו במקום "שאינו נראה", ה<strong>ראב"ד</strong> מעיר שהכוונה למקרה בו ההכאה לא היתה לעיני אדם. ה<strong>שו"ע</strong> (תכ ח) כתב שפטור מבושת רק אם המכה היא כזו שאין רואים את סימניה, ואף ההכאה היתה במקום בו לא ראה אותה אף אחד.</p>
                     
                 </div>
                 
@@ -1178,55 +1178,55 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כווהו בשפוד או במסמר על צפרניו במקום שאינו עושה חבורה ולא מעכב מלאכה משלם הצער בלבד, השקהו סם או סכו סם ושינה מראה עורו משלם לו רפוי בלבד עד שיחזור מראהו כמות שהיה, אסרו בחדר נותן לו דמי שבת בלבד, וכן כל כיוצא באלו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">צער שלא במקום נזק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">צער שלא במקום נזק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) מביאה דוגמה למקרה בו יש לשלם על הצער בלבד:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (פג:) מביאה דוגמה למקרה בו יש לשלם על הצער בלבד:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כואו [=גרם כוויה] בשפוד או במסמר ואפילו על ציפורנו מקום שאינו עושה חבורה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כואו [=גרם כוויה] בשפוד או במסמר ואפילו על ציפורנו מקום שאינו עושה חבורה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאשר המזיק רק גרם לכאב לניזק, ללא שום פצע מום או חיסרון, וללא צורך בטיפול רפואי, בכל זאת עליו לשלם על עצם הכאב והצער שגרם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כאשר המזיק רק גרם לכאב לניזק, ללא שום פצע מום או חיסרון, וללא צורך בטיפול רפואי, בכל זאת עליו לשלם על עצם הכאב והצער שגרם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (פד:) מביאה מחלוקת תנאים העוסקת בעניין זה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (פד:) מביאה מחלוקת תנאים העוסקת בעניין זה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"<strong>רבי</strong> אומר כויה נאמרה תחילה,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"<strong>רבי</strong> אומר כויה נאמרה תחילה,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בן עזאי</strong> אומר חבורה נאמרה תחילה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>בן עזאי</strong> אומר חבורה נאמרה תחילה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דברי התנאים נסובים על הפסוק (שמות כא כה):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דברי התנאים נסובים על הפסוק (שמות כא כה):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כְּוִיָּה תַּחַת כְּוִיָּה פֶּצַע תַּחַת פָּצַע חַבּוּרָה תַּחַת חַבּוּרָה"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כְּוִיָּה תַּחַת כְּוִיָּה פֶּצַע תַּחַת פָּצַע חַבּוּרָה תַּחַת חַבּוּרָה"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' פפא</strong> מסביר ש<strong>רבי</strong> לומד מתוך שנאמר "חבורה" שהכוויה שנאמרה בתחילת הפסוק היא גם כזו שאין בה חבורה, דהיינו, שהיא מלווה בכאב בלבד, ללא פציעה. <strong>בן עזאי</strong> לעומתו, לומד מהמילה "חבורה", שדווקא כוויה המלווה בפצע היא זו שחייבים עליה. נמצא, שמשנתנו היא כשיטת רבי, המחייב גם על כאב בלבד, ללא פציעה ממשית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' פפא</strong> מסביר ש<strong>רבי</strong> לומד מתוך שנאמר "חבורה" שהכוויה שנאמרה בתחילת הפסוק היא גם כזו שאין בה חבורה, דהיינו, שהיא מלווה בכאב בלבד, ללא פציעה. <strong>בן עזאי</strong> לעומתו, לומד מהמילה "חבורה", שדווקא כוויה המלווה בפצע היא זו שחייבים עליה. נמצא, שמשנתנו היא כשיטת רבי, המחייב גם על כאב בלבד, ללא פציעה ממשית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> וכל הראשונים פסקו כמשנה וכרבי, וכן פסק ב<strong>שו"ע</strong> (תכ ט)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> וכל הראשונים פסקו כמשנה וכרבי, וכן פסק ב<strong>שו"ע</strong> (תכ ט)</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ריפוי שלא במקום נזק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ריפוי שלא במקום נזק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (פה:) מביאה דוגמה למקרה בו יש תשלומי ריפוי בלבד- כאשר המזיק הזיק על ידי סיכתו של הניזק בסם חריף המשנה את מראה הבשר ללבן, צריך הוא לשלם לו עבור ריפוי המחזיר את מראה עורו לכשהיה. וכן פסקו ה<strong>רמב"ם</strong>, ה<strong>טור</strong> (תכ) וה<strong>שו"ע</strong> (תכ י)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (פה:) מביאה דוגמה למקרה בו יש תשלומי ריפוי בלבד- כאשר המזיק הזיק על ידי סיכתו של הניזק בסם חריף המשנה את מראה הבשר ללבן, צריך הוא לשלם לו עבור ריפוי המחזיר את מראה עורו לכשהיה. וכן פסקו ה<strong>רמב"ם</strong>, ה<strong>טור</strong> (תכ) וה<strong>שו"ע</strong> (תכ י)</p>
                     
                 </div>
                 
                 <div id="topic-2-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שבת שלא במקום נזק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שבת שלא במקום נזק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) מביאה דוגמה למקרה בו יש לשלם על ביטול המלאכה בלבד- כאשר סגר המזיק את הניזק בחדר כך שלא יוכל לצאת ולעבוד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (פג:) מביאה דוגמה למקרה בו יש לשלם על ביטול המלאכה בלבד- כאשר סגר המזיק את הניזק בחדר כך שלא יוכל לצאת ולעבוד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סימן ג) מעיר על כך, שחייב המזיק דווקא אם הכניס את הניזק לחדר ונעל בעדו, אך אם היה כבר הניזק בחדר, והמזיק רק נעל בעדו, הרי זה גרמא, ופטור<sup id="ref17"><a href="#fn17">[17]</a></sup> (עוד בדיני גרמא, עי' להלן בפרק ז הל' ז-י).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סימן ג) מעיר על כך, שחייב המזיק דווקא אם הכניס את הניזק לחדר ונעל בעדו, אך אם היה כבר הניזק בחדר, והמזיק רק נעל בעדו, הרי זה גרמא, ופטור<sup id="ref17"><a href="#fn17">[17]</a></sup> (עוד בדיני גרמא, עי' להלן בפרק ז הל' ז-י).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ יא) פסק כדברי הגמרא, וכפירוש הרא"ש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ יא) פסק כדברי הגמרא, וכפירוש הרא"ש.</p>
                     
                 </div>
                 
@@ -1234,50 +1234,50 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד-ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המגלח שער ראש חבירו נותן לו דמי בשתו בלבד מפני שסופו לחזור, גלחו בסם או שכווהו עד שאין סוף השער לחזור חייב בחמשה דברים, בנזק וצער ורפוי שהרי ראשו יתחמם מן הכויה או מן הסם ונמצא חש בראשו, ומשלם לו שבת שהרי הוא ראוי לרקד ולנדנד דלת ראשו בשעת רקוד ונמצא בטל ממלאכה זו, ובושת שאין לך בושת גדולה מזו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הנה למדת שכל המחסר חבירו אבר שאינו חוזר חייב בכל החמשה דברים, אפילו הפיל שינו חייב בכל שאי אפשר שלא יחלה פיו שעה אחת, אף על פי שהשן אין לה רפואה בשר השינים צריך רפואה. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אפילו חסרו כשערה מעור בשרו חייב בחמשה דברים שהעור אינו חוזר אלא צלקת, לפיכך החובל בחבירו וקרע העור וה</strong><strong>וציא ממנו דם חייב בחמשה דברים. </strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלומי נזק על דבר שסופו לחזור</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלומי נזק על דבר שסופו לחזור</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (פה:) מעלה <strong>רבה</strong> שאלה- מהו דין "שבת הפוחתתו בדמים"? ומסביר <strong>רש"י</strong>, שהכוונה למקרים בהם שוויו של הניזק פוחת רק באופן זמני, והשאלה היא האם הדבר נכנס בגדר שבת בלבד, או שיש לגבותו בגדר נזק, למרות שהוא חוזר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (פה:) מעלה <strong>רבה</strong> שאלה- מהו דין "שבת הפוחתתו בדמים"? ומסביר <strong>רש"י</strong>, שהכוונה למקרים בהם שוויו של הניזק פוחת רק באופן זמני, והשאלה היא האם הדבר נכנס בגדר שבת בלבד, או שיש לגבותו בגדר נזק, למרות שהוא חוזר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מבררת הגמרא ששאלה זו נתונה במחלוקת האמוראים, <strong>אביי</strong> סובר שיש לתת את דמי האיבר גם כאשר הוא נוטרל רק באופן זמני, ואילו <strong>רבא</strong> סובר שתשלומי השבת בלבד מפצים על חוסר התפקוד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מבררת הגמרא ששאלה זו נתונה במחלוקת האמוראים, <strong>אביי</strong> סובר שיש לתת את דמי האיבר גם כאשר הוא נוטרל רק באופן זמני, ואילו <strong>רבא</strong> סובר שתשלומי השבת בלבד מפצים על חוסר התפקוד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כרבא, וכן פוסק ב<strong>שו"ע</strong> (תכ יב-יד)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כרבא, וכן פוסק ב<strong>שו"ע</strong> (תכ יב-יד)</p>
                     
                 </div>
                 
                 <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלום חמישה דברים במקום שאין חבורה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלום חמישה דברים במקום שאין חבורה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (פה:) מביאה <strong>ברייתא</strong> לפיה המכה אביו ואמו ולא גרם להם לחבורה חייב חמישה דברים. כלומר, כיוון שהעושה חבורה באביו ואמו חייב מיתה, יהיה חייב בתשלומי חמישה דברים רק במקרה <strong>שלא</strong> עשה בהם חבורה. ה<strong>גמרא</strong> שואלת כיצד ייתכן מקרה שאפילו חבורה לא עשה המכה, ובכל זאת חייב הוא בחמישה דברים, ועונה שמדובר באדם שהשיר את שער הראש של חברו בעזרת משחה, באופן בלתי הפיך. נזק חייב משום שחיסר בחברו דבר באופן בלתי הפיך הפוחת מדמיו. צער וריפוי על הכאב המתלווה לפגיעה, ועל הטיפול הנדרש. שבת במקרה בו האדם משתמש בשער ראשו למלאכתו, כגון רקדן המנענע שער ראשו מתוך ריקוד, וכמובן גם בושת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (פה:) מביאה <strong>ברייתא</strong> לפיה המכה אביו ואמו ולא גרם להם לחבורה חייב חמישה דברים. כלומר, כיוון שהעושה חבורה באביו ואמו חייב מיתה, יהיה חייב בתשלומי חמישה דברים רק במקרה <strong>שלא</strong> עשה בהם חבורה. ה<strong>גמרא</strong> שואלת כיצד ייתכן מקרה שאפילו חבורה לא עשה המכה, ובכל זאת חייב הוא בחמישה דברים, ועונה שמדובר באדם שהשיר את שער הראש של חברו בעזרת משחה, באופן בלתי הפיך. נזק חייב משום שחיסר בחברו דבר באופן בלתי הפיך הפוחת מדמיו. צער וריפוי על הכאב המתלווה לפגיעה, ועל הטיפול הנדרש. שבת במקרה בו האדם משתמש בשער ראשו למלאכתו, כגון רקדן המנענע שער ראשו מתוך ריקוד, וכמובן גם בושת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק כל זאת להלכה<sup id="ref18"><a href="#fn18">[18]</a></sup>, וכן גם ב<strong>שו"ע</strong> (תכ יב).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק כל זאת להלכה<sup id="ref18"><a href="#fn18">[18]</a></sup>, וכן גם ב<strong>שו"ע</strong> (תכ יב).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לומד מהדין הנ"ל, שבכל מקרה בו חיסר את חברו באופן שאינו חוזר, אפילו הפיל שן אחת או חיסרו כשערה מעור בשרו, חייב בכל החמישה דברים, כולל תשלומי נזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לומד מהדין הנ"ל, שבכל מקרה בו חיסר את חברו באופן שאינו חוזר, אפילו הפיל שן אחת או חיסרו כשערה מעור בשרו, חייב בכל החמישה דברים, כולל תשלומי נזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (פז:) נידונה השאלה למי משלם החובל בבת קטנה, לה או לאביה (עי' לקמן פרק ד הלכה יד) ומבואר שהדבר נתון במחלוקת האמוראים. <strong>ריש לקיש</strong> אומר שהתשלומים שייכים לבת עצמה ולא לאב, ואילו <strong>ר' יוחנן</strong> אומר ש"אפילו בפציעה" (שאין בה חסרון איבר) משלם החובל לאב. הגמרא מסבירה שמדובר דווקא על פציעה הפוחתת אותה מכספה כגון שפצעה בפניה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (פז:) נידונה השאלה למי משלם החובל בבת קטנה, לה או לאביה (עי' לקמן פרק ד הלכה יד) ומבואר שהדבר נתון במחלוקת האמוראים. <strong>ריש לקיש</strong> אומר שהתשלומים שייכים לבת עצמה ולא לאב, ואילו <strong>ר' יוחנן</strong> אומר ש"אפילו בפציעה" (שאין בה חסרון איבר) משלם החובל לאב. הגמרא מסבירה שמדובר דווקא על פציעה הפוחתת אותה מכספה כגון שפצעה בפניה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong> (כאן) מסיק מגמרא זו, שלא על כל פצע קטן כשעורה מעור הבשר חייבים בתשלומי נזק בכלל חמשת הדברים, אלא רק על פצע הנראה בפנים, היוצר צלקת, והגורם לכך שהערך הכספי של הנפצע יקטן באופן קבוע. מתוך כך הוא מקשה על דברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong> (כאן) מסיק מגמרא זו, שלא על כל פצע קטן כשעורה מעור הבשר חייבים בתשלומי נזק בכלל חמשת הדברים, אלא רק על פצע הנראה בפנים, היוצר צלקת, והגורם לכך שהערך הכספי של הנפצע יקטן באופן קבוע. מתוך כך הוא מקשה על דברי הרמב"ם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ יג-יד) כתב כלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ יג-יד) כתב כלשון הרמב"ם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גר"א</strong> (תכ ס"ק יט) מביא את דברי המגיד משנה. מלבד ההוכחה מהגמרא (פז:) מוסיף הגר"א, שרק פציעה וצלקת במקום גלוי מורידה מערכו של הנפצע בשוק העבדים, ולכן בפועל רק היא ניתנת לתרגום לתשלומי נזק<sup id="ref19"><a href="#fn19">[19]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גר"א</strong> (תכ ס"ק יט) מביא את דברי המגיד משנה. מלבד ההוכחה מהגמרא (פז:) מוסיף הגר"א, שרק פציעה וצלקת במקום גלוי מורידה מערכו של הנפצע בשוק העבדים, ולכן בפועל רק היא ניתנת לתרגום לתשלומי נזק<sup id="ref19"><a href="#fn19">[19]</a></sup>.</p>
                     
                 </div>
                 
@@ -1285,39 +1285,39 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המבעית את חבירו אף על פי שחלה מן הפחד הרי זה פטור מדיני אדם וחייב בדיני שמים, והוא שלא נגע בו אלא כגון שצעק מאחוריו או נתראה לו באפילה וכיוצא בזה, וכן אם צעק באזנו וחרשו פטור מדיני אדם וחייב בדיני שמים, אחזו ותקע באזנו וחרשו או שנגע בו ודחפו בעת שהבעיתו או שאחז בבגדיו וכיוצא בדברים אלו חייב בתשלומין. </strong>
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נזק ללא מגע</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נזק ללא מגע</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (צא.) מביאה <strong>ברייתא</strong> המבדילה בין נזק בו יש מגע בין המזיק לניזק לנזק לנזק ללא מגע:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (צא.) מביאה <strong>ברייתא</strong> המבדילה בין נזק בו יש מגע בין המזיק לניזק לנזק לנזק ללא מגע:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"הכהו על עינו וסימאו על אזנו וחירשו עבד יוצא בהן לחירות</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"הכהו על עינו וסימאו על אזנו וחירשו עבד יוצא בהן לחירות</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כנגד עינו ואינו רואה כנגד אזנו ואינו שומע אין עבד יוצא בהן לחירות"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כנגד עינו ואינו רואה כנגד אזנו ואינו שומע אין עבד יוצא בהן לחירות"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שבסיפא אין העבד יוצא לחירות משום שהניזק הבעית את עצמו<sup id="ref20"><a href="#fn20">[20]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שבסיפא אין העבד יוצא לחירות משום שהניזק הבעית את עצמו<sup id="ref20"><a href="#fn20">[20]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה כהוכחה <strong>ברייתא</strong> נוספת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה כהוכחה <strong>ברייתא</strong> נוספת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"המבעית את חבירו פטור מדיני אדם וחייב בדיני שמים. כיצד?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"המבעית את חבירו פטור מדיני אדם וחייב בדיני שמים. כיצד?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תקע באזנו וחירשו – פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תקע באזנו וחירשו – פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחזו ותקע באזנו וחירשו – חייב."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחזו ותקע באזנו וחירשו – חייב."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>רמב"ם</strong> שלפנינו משמע שההבדל בין המקרה בו פטור לבין המקרה בו חייב נעוץ בכך שבראשון לא נגע המזיק בניזק, ואילו בשני נגע בו. כך גם מפרש ה<strong>נימוק"י</strong> (לב. מדפי הרי"ף).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>רמב"ם</strong> שלפנינו משמע שההבדל בין המקרה בו פטור לבין המקרה בו חייב נעוץ בכך שבראשון לא נגע המזיק בניזק, ואילו בשני נגע בו. כך גם מפרש ה<strong>נימוק"י</strong> (לב. מדפי הרי"ף).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמ"ה</strong> (הובא בשטמ"ק ד"ה "ולעניין פסק") מפרש באופן שונה. לדבריו המקרה של 'הכהו כנגד אזנו ואינו שומע' הוא כגון שיכול היה הניזק להפנות את ראשו לצד אחר ולהינצל מהנזק, ולכן נחשב הדבר כאילו הוא הזיק את עצמו. לפי הבנה זו ממשיך הרמ"ה ומסביר, ש"אחזו ותקע באזנו-חייב" הוא מקרה בו לא יכול היה הניזק להימלט ולהציל את עצמו מהנזק משום שהמזיק אחזו ולכן חייב, וממילא אם תקע באזנו מבלי שאחזו פטור המזיק מדיני אדם משום שגם לניזק יש חלק בנזק. כלומר, המגע הישיר בניזק אינו משנה כשלעצמו, והוא חשוב רק לעניין השאלה האם יכול היה הניזק להתחמק מהמכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמ"ה</strong> (הובא בשטמ"ק ד"ה "ולעניין פסק") מפרש באופן שונה. לדבריו המקרה של 'הכהו כנגד אזנו ואינו שומע' הוא כגון שיכול היה הניזק להפנות את ראשו לצד אחר ולהינצל מהנזק, ולכן נחשב הדבר כאילו הוא הזיק את עצמו. לפי הבנה זו ממשיך הרמ"ה ומסביר, ש"אחזו ותקע באזנו-חייב" הוא מקרה בו לא יכול היה הניזק להימלט ולהציל את עצמו מהנזק משום שהמזיק אחזו ולכן חייב, וממילא אם תקע באזנו מבלי שאחזו פטור המזיק מדיני אדם משום שגם לניזק יש חלק בנזק. כלומר, המגע הישיר בניזק אינו משנה כשלעצמו, והוא חשוב רק לעניין השאלה האם יכול היה הניזק להתחמק מהמכה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ כה) פסק כדברי הברייתא, המבדילה בין תקע באזנו עם אחיזה ובלי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ כה) פסק כדברי הברייתא, המבדילה בין תקע באזנו עם אחיזה ובלי.</p>
                     
                 </div>
                 
@@ -1325,21 +1325,21 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>יראה לי שהנחבל שאמר נתחרשתי או נסמית עיני והרי איני רואה או איני שומע אינו נאמן שהרי אין אנו מכירין הדבר שמא יערים, ואינו נוטל הנזק עד שיבדק זמן מרובה ויהיה מוחזק שאבד מאור עיניו או נתחרש ואח"כ ישלם זה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נאמנות הניזק במקרה של הטלת מום הניכר לו בלבד</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נאמנות הניזק במקרה של הטלת מום הניכר לו בלבד</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> כותב מסברה שכדי למנוע מעשי רמאות, כאשר הניזק לכאורה מתלונן על כך שמכת המזיק סימאה את עינו או חרשה אותו, אין להאמין לו מיד אלא יש לראות האם יוחזק בסביבתו כחרש או עיוור כדבריו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> כותב מסברה שכדי למנוע מעשי רמאות, כאשר הניזק לכאורה מתלונן על כך שמכת המזיק סימאה את עינו או חרשה אותו, אין להאמין לו מיד אלא יש לראות האם יוחזק בסביבתו כחרש או עיוור כדבריו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> וה<strong>בית יוסף</strong> מביאים את דברי הרמב"ם האלה, אך ב<strong>שו"ע</strong> לא כתבם להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> וה<strong>בית יוסף</strong> מביאים את דברי הרמב"ם האלה, אך ב<strong>שו"ע</strong> לא כתבם להלכה.</p>
                     
                 </div>
                 
@@ -1347,37 +1347,37 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט-י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כמה הוא הצער, הכל לפי הניזק, יש אדם שהוא רך וענוג ביותר ובעל ממון ואילו נתנו לו ממון הרבה לא היה מצטער מעט ויש אדם שהוא עמל וחזק ועני ומפני זוז אחד מצטער צער הרבה, ועל פי הדברים האלה אומדין ופוסקין הצער. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כיצד משערין הצער במקום שחסרו אבר, הרי שקטע ידו או אצבעו אומדין ואומרין כמה אדם כזה רוצה ליתן בין לקטוע לו אבר זה בסייף או לקטוע אותו בסם אם גזר המלך עליו לקטוע ידו או רגלו ואומדין כמה יש בין זה לזה ומשלם המזיק. </strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אומדן צער במקום נזק ושלא במקום נזק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אומדן צער במקום נזק ושלא במקום נזק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) כותבת כיצד יש להעריך את גובה התשלום על הצער-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (פג:) כותבת כיצד יש להעריך את גובה התשלום על הצער-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"כואו בשפוד או במסמר ואפילו על ציפורנו מקום שאינו עושה חבורה,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"כואו בשפוד או במסמר ואפילו על ציפורנו מקום שאינו עושה חבורה,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אומדין כמה אדם כיוצא בזה רוצה ליטול להיות מצטער כך"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אומדין כמה אדם כיוצא בזה רוצה ליטול להיות מצטער כך"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאשר הצער אינו מלווה בנזק, ניתן לשייך לו ערך כספי על ידי אומדן לגבי אדם הדומה לניזק בכח הסיבולת שלו, בעבור כמה כסף היה מוכן לקבל על עצמו כזה צער.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כאשר הצער אינו מלווה בנזק, ניתן לשייך לו ערך כספי על ידי אומדן לגבי אדם הדומה לניזק בכח הסיבולת שלו, בעבור כמה כסף היה מוכן לקבל על עצמו כזה צער.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (פה.) שואלת כיצד ניתן לשום את תשלומי הצער במקום בו הם לא באו לבדם אלא נלווה להם נזק. הבעיה במקרה כזה היא שהסכום אותו מוכן אדם לקבל בכדי להסכים לעבור את מה שעולל המזיק לניזק כולל גם את הנזק, הריפוי, השבת והבושת. הגמרא מגיעה למסקנה, שבמקרה כזה יש לאמוד כמה אדם שהמלכות הורתה לקטוע לו את האיבר אותו איבד הניזק, היה נותן בכדי שיקטעוהו באלחוש (ללא כאב) ולא בהכרה מלאה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (פה.) שואלת כיצד ניתן לשום את תשלומי הצער במקום בו הם לא באו לבדם אלא נלווה להם נזק. הבעיה במקרה כזה היא שהסכום אותו מוכן אדם לקבל בכדי להסכים לעבור את מה שעולל המזיק לניזק כולל גם את הנזק, הריפוי, השבת והבושת. הגמרא מגיעה למסקנה, שבמקרה כזה יש לאמוד כמה אדם שהמלכות הורתה לקטוע לו את האיבר אותו איבד הניזק, היה נותן בכדי שיקטעוהו באלחוש (ללא כאב) ולא בהכרה מלאה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק על פי המשנה שכאשר הצער בא כשלעצמו, שלא במקום נזק, יש לאמוד בעבור כמה כסף היה אדם כמו הניזק מסכים לקבל צער כזה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק על פי המשנה שכאשר הצער בא כשלעצמו, שלא במקום נזק, יש לאמוד בעבור כמה כסף היה אדם כמו הניזק מסכים לקבל צער כזה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> חולק ואומר שדרך האומדן לפי הרמב"ם אינה עושה צדק עם המזיק, כיוון שאנשים מתרצים אך בקושי לקבל צער משמעותי אפילו בעבור דמים רבים. לכן פוסק הרא"ש שדרך האומדן של צער שאינו במקום נזק, דומה לזו של צער שבמקום נזק. כלומר, יש לאמוד כמה מוכן אדם, שהמלכות ציוותה לצער אותו בדרך זו, לשלם כדי שתתבטל הגזירה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> חולק ואומר שדרך האומדן לפי הרמב"ם אינה עושה צדק עם המזיק, כיוון שאנשים מתרצים אך בקושי לקבל צער משמעותי אפילו בעבור דמים רבים. לכן פוסק הרא"ש שדרך האומדן של צער שאינו במקום נזק, דומה לזו של צער שבמקום נזק. כלומר, יש לאמוד כמה מוכן אדם, שהמלכות ציוותה לצער אותו בדרך זו, לשלם כדי שתתבטל הגזירה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ טז) פוסק כדברי הרמב"ם לגבי צער במקום בו יש נזק, וה<strong>רמ"א</strong> מוסיף את שיטת הרא"ש במקרה של צער ללא נזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ טז) פוסק כדברי הרמב"ם לגבי צער במקום בו יש נזק, וה<strong>רמ"א</strong> מוסיף את שיטת הרא"ש במקרה של צער ללא נזק.</p>
                     
                 </div>
                 
@@ -1385,62 +1385,62 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כיצד משערין השבת, אם לא חסרו אבר אלא חלה ונפל למשכב או שצבתה ידו וסופה לחזור נותן לו דמי שבתו של כל יום ויום כפועל בטל של אותה מלאכה שבטל ממנה, ואם חסרו אבר או קטע ידו נותן דמי ידו שהוא הנזק ושבת רואין אותו כאילו הוא שומר קישואין ורואין כמה הוא שכר שומר קישואין בכל יום ועושין חשבון </strong><strong>כל ימי חליו של זה ונותן לו. וכן אם קטע רגלו רואין אותו כאילו הוא שומר על הפתח, סימא את עינו רואין אותו כאילו הוא טוחן ברחים וכן כל כיוצא בזה. </strong>
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אומדן תשלומי שבת במקום נזק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אומדן תשלומי שבת במקום נזק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג:) כותבת לעניין תשלומי שבת במקום נזק (כלומר, במקום בו איבד הניזק איבר כלשהו באופן בלתי הפיך):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (פג:) כותבת לעניין תשלומי שבת במקום נזק (כלומר, במקום בו איבד הניזק איבר כלשהו באופן בלתי הפיך):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שבת רואין אותו כאילו הוא שומר קישואין שכבר נתן לו דמי ידו ודמי רגלו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שבת רואין אותו כאילו הוא שומר קישואין שכבר נתן לו דמי ידו ודמי רגלו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong> המרחיבה בביאור העניין:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה <strong>ברייתא</strong> המרחיבה בביאור העניין:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"שבת רואין אותו כאילו הוא שומר קישואין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"שבת רואין אותו כאילו הוא שומר קישואין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ואם תאמר לקתה מדת הדין,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ואם תאמר לקתה מדת הדין,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דכי מיתפח האי גברא (שכאשר הניזק בריא) לאו אגרא דשומר קישואים הוא שקיל (לא שכר שומר קישואים הוא לוקח) אלא דלי דוולא ושקיל אגרא אי נמי אזיל בשליח ושקיל אגרא (אלא שכר שואב מים או שליח),</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דכי מיתפח האי גברא (שכאשר הניזק בריא) לאו אגרא דשומר קישואים הוא שקיל (לא שכר שומר קישואים הוא לוקח) אלא דלי דוולא ושקיל אגרא אי נמי אזיל בשליח ושקיל אגרא (אלא שכר שואב מים או שליח),</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדת הדין לא לקתה שכבר נתן לו דמי ידו ודמי רגלו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדת הדין לא לקתה שכבר נתן לו דמי ידו ודמי רגלו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו בהבנת הברייתא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו בהבנת הברייתא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong>, ה<strong>תוספות</strong> וה<strong>רא"ש</strong>, מפרשים שבמילים "דכי מיתפח האי גברא" הכוונה היא שכאשר <strong>היה</strong> הניזק בריא היה יכול לעבוד כשליח או כדולה מים. ובכל זאת הברייתא מסבירה שאין אנו רואים את ימי חוליו כימים בהם הוא מתבטל ממלאכתו הראשונה, שכן גם לו היה בריא בימים אלה (ורק חסר איבר) לא היה יכול לעשות את מלאכתו הראשונה, אלא הוא מסוגל להיות שומר קישואים בלבד, ודמי היד או הרגל הקטועה כבר ניתנים במסגרת תשלומי הנזק. במילים אחרות, יש לתת כשבת דמי ביטול של המלאכה המורכבת ביותר לה ראוי הניזק לאחר שהוא מחלים וחוזר לעבוד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong>, ה<strong>תוספות</strong> וה<strong>רא"ש</strong>, מפרשים שבמילים "דכי מיתפח האי גברא" הכוונה היא שכאשר <strong>היה</strong> הניזק בריא היה יכול לעבוד כשליח או כדולה מים. ובכל זאת הברייתא מסבירה שאין אנו רואים את ימי חוליו כימים בהם הוא מתבטל ממלאכתו הראשונה, שכן גם לו היה בריא בימים אלה (ורק חסר איבר) לא היה יכול לעשות את מלאכתו הראשונה, אלא הוא מסוגל להיות שומר קישואים בלבד, ודמי היד או הרגל הקטועה כבר ניתנים במסגרת תשלומי הנזק. במילים אחרות, יש לתת כשבת דמי ביטול של המלאכה המורכבת ביותר לה ראוי הניזק לאחר שהוא מחלים וחוזר לעבוד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ר</strong><strong>אב"ד</strong> וה<strong>רז"ה</strong> הבינו אחרת מרש"י את המילים "דכי מיתפח האי גברא". להבנתם, הכוונה ש<strong>כשיבריא</strong> (בעתיד!) הניזק יהיה מסוגל למלאכת שליחות או שאיבה, שהיא מכניסה יותר משמירת קישואים. אמנם נחלקו הרשב"א והרז"ה בסיבה מדוע בכל זאת משלמים לניזק שבת של שומר קישואים בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ר</strong><strong>אב"ד</strong> וה<strong>רז"ה</strong> הבינו אחרת מרש"י את המילים "דכי מיתפח האי גברא". להבנתם, הכוונה ש<strong>כשיבריא</strong> (בעתיד!) הניזק יהיה מסוגל למלאכת שליחות או שאיבה, שהיא מכניסה יותר משמירת קישואים. אמנם נחלקו הרשב"א והרז"ה בסיבה מדוע בכל זאת משלמים לניזק שבת של שומר קישואים בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד </strong>(הובא ב<strong>רשב"א</strong> פה:) כתב שאמנם לאחר הטלת המום ותקופת ההחלמה ראוי הניזק לדברים מכניסים יותר מאשר שמירת קישואים כגון שליחות ושאיבה, אך אנשים אינם קונים עבד קיטע לתשמיש אחר חוץ משמירת קישואים. ונמצא, שההפרש בין מחירו של הניזק בשוק העבדים לפני הנזק ואחריו, כולל גם מלאכות מורכבות יותר משמירת קישואים, שקיטע מסוגל להן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד </strong>(הובא ב<strong>רשב"א</strong> פה:) כתב שאמנם לאחר הטלת המום ותקופת ההחלמה ראוי הניזק לדברים מכניסים יותר מאשר שמירת קישואים כגון שליחות ושאיבה, אך אנשים אינם קונים עבד קיטע לתשמיש אחר חוץ משמירת קישואים. ונמצא, שההפרש בין מחירו של הניזק בשוק העבדים לפני הנזק ואחריו, כולל גם מלאכות מורכבות יותר משמירת קישואים, שקיטע מסוגל להן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רז"ה</strong> (ל: מדפי הרי"ף) כתב אחרת. לדבריו, אומדן הנזק הוא ההפרש בין מחירו של הניזק לפני הנזק לבין מחירו של הניזק עכשיו, כקיטע הדורש תקופת החלמה לפני שיחזור לעבוד עבודה כלשהי. מי שקונה עבד שיכול לעבוד במלאכה מורכבת (זו שהיה ראוי לה הניזק לפני הנזק) קונה אותו בכסף הכולל את הרווח מהמלאכה בה יעסוק החל מהרגע שלאחר הקניה. כאשר העבד דורש תקופת החלמה לפני שיתחיל לעבוד, מתבטא הדבר במחיר נמוך, כי קונה העבד יודע שיפסיד תקופת עבודה. ונמצא שההפרש בין שני המחירים כולל תקופת ביטול מלאכה מהסוג לה היה ראוי קודם הנזק. מכיוון שאין אדם עוסק בשתי מלאכות בעת ובעונה אחת, ומכיוון שביטול מלאכה מהסוג הקודם לוֹ היה מסוגל הניזק כלול כבר בתשלום הנזק, הרי שכתשלום שבת יש לשלם סכום מינימלי של שומר קישואים בלבד<sup id="ref21"><a href="#fn21">[21]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רז"ה</strong> (ל: מדפי הרי"ף) כתב אחרת. לדבריו, אומדן הנזק הוא ההפרש בין מחירו של הניזק לפני הנזק לבין מחירו של הניזק עכשיו, כקיטע הדורש תקופת החלמה לפני שיחזור לעבוד עבודה כלשהי. מי שקונה עבד שיכול לעבוד במלאכה מורכבת (זו שהיה ראוי לה הניזק לפני הנזק) קונה אותו בכסף הכולל את הרווח מהמלאכה בה יעסוק החל מהרגע שלאחר הקניה. כאשר העבד דורש תקופת החלמה לפני שיתחיל לעבוד, מתבטא הדבר במחיר נמוך, כי קונה העבד יודע שיפסיד תקופת עבודה. ונמצא שההפרש בין שני המחירים כולל תקופת ביטול מלאכה מהסוג לה היה ראוי קודם הנזק. מכיוון שאין אדם עוסק בשתי מלאכות בעת ובעונה אחת, ומכיוון שביטול מלאכה מהסוג הקודם לוֹ היה מסוגל הניזק כלול כבר בתשלום הנזק, הרי שכתשלום שבת יש לשלם סכום מינימלי של שומר קישואים בלבד<sup id="ref21"><a href="#fn21">[21]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סימן ד) מוכיח מדין תשלומי שבת למי שרגיל להראות שער ראשו בשעת ריקוד (לעיל הלכה ד) שיש לשלם לכל אחד תשלומי שבת בהתאם לראוי לו. כלומר, אם הנזק לא פוגע משמעותית ביכולתו של האדם לעבוד, כגון שקטע ידו והיה מלמד תינוקות, או שקטע רגלו והיה סופר, יש לתת לו דמי ביטול מלאכה של מלמד תינוקות או סופר ולא של שומר קישואין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סימן ד) מוכיח מדין תשלומי שבת למי שרגיל להראות שער ראשו בשעת ריקוד (לעיל הלכה ד) שיש לשלם לכל אחד תשלומי שבת בהתאם לראוי לו. כלומר, אם הנזק לא פוגע משמעותית ביכולתו של האדם לעבוד, כגון שקטע ידו והיה מלמד תינוקות, או שקטע רגלו והיה סופר, יש לתת לו דמי ביטול מלאכה של מלמד תינוקות או סופר ולא של שומר קישואין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ יז) כתב כדברי הרמב"ם, וה<strong>רמ"א</strong> הוסיף את דברי הרא"ש לגבי אדם שהפציעה לא פוגמת באופן סופי ביכולת שלו לעסוק באומנותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ יז) כתב כדברי הרמב"ם, וה<strong>רמ"א</strong> הוסיף את דברי הרא"ש לגבי אדם שהפציעה לא פוגמת באופן סופי ביכולת שלו לעסוק באומנותו.</p>
                     
                 </div>
                 
                 <div id="topic-7-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלומי ביטול מלאכה כפועל בטל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלומי ביטול מלאכה כפועל בטל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>ברייתא</strong> בבבא מציעא (עו:) מבואר שפועלים שנשכרו, הגיעו לעבודה ובסוף לא עבדו שלא באשמתם, מקבלים את שכרם, אך לא את כל שכרם, משום ש"אינו דומה עושה מלאכה ליושב בטל". כלומר, גם כאשר בעל הבית צריך לפצות את הפועלים על איבוד השתכרות במקום אחר, אין הוא משלם להם את כל מה שהיה משלם לו היו עובדים אצלו בפועל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>ברייתא</strong> בבבא מציעא (עו:) מבואר שפועלים שנשכרו, הגיעו לעבודה ובסוף לא עבדו שלא באשמתם, מקבלים את שכרם, אך לא את כל שכרם, משום ש"אינו דומה עושה מלאכה ליושב בטל". כלומר, גם כאשר בעל הבית צריך לפצות את הפועלים על איבוד השתכרות במקום אחר, אין הוא משלם להם את כל מה שהיה משלם לו היו עובדים אצלו בפועל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכאן לומד ה<strong>רמב"ם</strong> גם לעניינו, שתשלומי שבת על ביטול המלאכה אינם על כל מה שיכול היה הניזק להרוויח במלאכתו, אלא "כפועל בטל".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכאן לומד ה<strong>רמב"ם</strong> גם לעניינו, שתשלומי שבת על ביטול המלאכה אינם על כל מה שיכול היה הניזק להרוויח במלאכתו, אלא "כפועל בטל".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בדרך שומא זו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בדרך שומא זו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> וה<strong>טור</strong> פוסקים שיש לאמוד כמה אדם שעוסק בסוג כזה של מלאכה יהיה מוכן ליטול בכדי להתבטל ממלאכתו. סכום זה נמוך מהסכום אותו משתכר אדם באותה מלאכה, אך אדם עשוי להסכים ליטלו במקום לעבוד משום שזה חוסך ממנו עמל. לכן, כאשר מדובר באדם שאוהב לעבוד ולכן אינו חפץ להתבטל בשום סכום הקטן משכרו כעובד, יש לתת לו את מלוא השכר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> וה<strong>טור</strong> פוסקים שיש לאמוד כמה אדם שעוסק בסוג כזה של מלאכה יהיה מוכן ליטול בכדי להתבטל ממלאכתו. סכום זה נמוך מהסכום אותו משתכר אדם באותה מלאכה, אך אדם עשוי להסכים ליטלו במקום לעבוד משום שזה חוסך ממנו עמל. לכן, כאשר מדובר באדם שאוהב לעבוד ולכן אינו חפץ להתבטל בשום סכום הקטן משכרו כעובד, יש לתת לו את מלוא השכר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"ח</strong> (ב"מ לא:) מפרש אחרת. לדבריו לתת כ"פועל בטל" הכוונה היא לתת את הסכום המינימלי עבורו פועלים מסכימים להשכיר עצמם למלאכה כזו, כאשר הביקוש לה מאד נמוך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר"ח</strong> (ב"מ לא:) מפרש אחרת. לדבריו לתת כ"פועל בטל" הכוונה היא לתת את הסכום המינימלי עבורו פועלים מסכימים להשכיר עצמם למלאכה כזו, כאשר הביקוש לה מאד נמוך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע </strong>כותב כלשון הרמב"ם, וה<strong>סמ"ע </strong>מסביר את דברי השו"ע כשיטת רש"י באמדן שכר "פועל בטל".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע </strong>כותב כלשון הרמב"ם, וה<strong>סמ"ע </strong>מסביר את דברי השו"ע כשיטת רש"י באמדן שכר "פועל בטל".</p>
                     
                 </div>
                 
@@ -1448,35 +1448,35 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הכה את חבירו על אזנו או אחזו ותקע באזנו וחרשו נותן לו דמי כולו שהרי אינו ראוי למלאכה כלל. </strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המחריש את חברו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המחריש את חברו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (פה:) העוסקת בתשלומי שבת במקום שיש בו נזק, מביאה את דברי <strong>רבא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (פה:) העוסקת בתשלומי שבת במקום שיש בו נזק, מביאה את דברי <strong>רבא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"קטע את ידו- נותן לו דמי ידו, ושבת רואין אותו כאילו הוא שומר קישואין,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"קטע את ידו- נותן לו דמי ידו, ושבת רואין אותו כאילו הוא שומר קישואין,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שיבר את רגלו- נותן לו דמי רגלו, ושבת רואין אותו כאילו הוא שומר את הפתח,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שיבר את רגלו- נותן לו דמי רגלו, ושבת רואין אותו כאילו הוא שומר את הפתח,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סימא את עינו- נותן לו דמי עינו, ושבת רואין אותו כאילו הוא מטחינו בריחים,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">סימא את עינו- נותן לו דמי עינו, ושבת רואין אותו כאילו הוא מטחינו בריחים,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חירשו- נותן לו דמי כולו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חירשו- נותן לו דמי כולו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בניגוד לנזקים כמו קטיעת יד או רגל, בהם קיימים גם תשלומי שבת נמוכים, וגם תשלומי נזק, הכוללים בתוכם את ביטול המלאכה המובחרת שהיה ראוי לה הניזק לפני הנזק (עי' בהלכה הקודמת), כאשר מדובר על חרשות, <strong>כל</strong> השבת כלולה בתשלומי הנזק. טעם הדבר הוא משום שהניזק כבר אינו ראוי לשום מלאכה, ולכן כל דמי ביטול מלאכתו באים לידי ביטוי בפחת בשוויו, המשתלם בנזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, בניגוד לנזקים כמו קטיעת יד או רגל, בהם קיימים גם תשלומי שבת נמוכים, וגם תשלומי נזק, הכוללים בתוכם את ביטול המלאכה המובחרת שהיה ראוי לה הניזק לפני הנזק (עי' בהלכה הקודמת), כאשר מדובר על חרשות, <strong>כל</strong> השבת כלולה בתשלומי הנזק. טעם הדבר הוא משום שהניזק כבר אינו ראוי לשום מלאכה, ולכן כל דמי ביטול מלאכתו באים לידי ביטוי בפחת בשוויו, המשתלם בנזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> וה<strong>תוספות</strong> (ד"ה "חרשו") מבינים שהמקרים המתוארים בדברי רבא אינם תלויים זה בזה, דהיינו, רבא מדבר על מזיק שקטע את ידו של חברו <strong>או</strong> שבר את רגל חברו <strong>או</strong> סימאו <strong>או</strong> חרשו. לפי הבנה זו, די בחרשות כשלעצמה בכדי שהאדם יאבד את כל שוויו, ויהיה חייב המזיק לשלם לו נזק מקסימלי. אף ה<strong>ראב"ד </strong>(הובא בשטמ"ק ד"ה "וזה לשון הראב"ד") מפרש כך ומסביר שבני אדם קצים בחרש (כנראה משום שיש בעיות תקשורת איתו), וממילא הוא אינו ראוי לשום עבודה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> וה<strong>תוספות</strong> (ד"ה "חרשו") מבינים שהמקרים המתוארים בדברי רבא אינם תלויים זה בזה, דהיינו, רבא מדבר על מזיק שקטע את ידו של חברו <strong>או</strong> שבר את רגל חברו <strong>או</strong> סימאו <strong>או</strong> חרשו. לפי הבנה זו, די בחרשות כשלעצמה בכדי שהאדם יאבד את כל שוויו, ויהיה חייב המזיק לשלם לו נזק מקסימלי. אף ה<strong>ראב"ד </strong>(הובא בשטמ"ק ד"ה "וזה לשון הראב"ד") מפרש כך ומסביר שבני אדם קצים בחרש (כנראה משום שיש בעיות תקשורת איתו), וממילא הוא אינו ראוי לשום עבודה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> ו<strong>רבינו י</strong><strong>ה</strong><strong>ונתן</strong> (הובא בשטמ"ק ד"ה "וזה לשון הר' יהונתן") מפרשים שרבא מתאר שלבים שונים של אותו מקרה. כלומר, מדובר באותו אדם, שתחילה נקטעה ידו, ואז נקטעה רגלו ואז הפך לעיוור ואז גם לחרש. רק אדם שבע תחלואים כזה אינו ראוי לדבר כאשר הוא מתחרש, אך אם הוא חרש בלבד, יש לאמוד למה הוא מסוגל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> ו<strong>רבינו י</strong><strong>ה</strong><strong>ונתן</strong> (הובא בשטמ"ק ד"ה "וזה לשון הר' יהונתן") מפרשים שרבא מתאר שלבים שונים של אותו מקרה. כלומר, מדובר באותו אדם, שתחילה נקטעה ידו, ואז נקטעה רגלו ואז הפך לעיוור ואז גם לחרש. רק אדם שבע תחלואים כזה אינו ראוי לדבר כאשר הוא מתחרש, אך אם הוא חרש בלבד, יש לאמוד למה הוא מסוגל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ יז) פוסק כהבנת הרמב"ם בגמרא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ יז) פוסק כהבנת הרמב"ם בגמרא.</p>
                     
                 </div>
                 
@@ -1484,33 +1484,33 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>סימא את עינו ולא אמדוהו וקטע את ידו ולא אמדוהו וקטע את רגלו ולא אמדוהו ואחר כך חרשו, הואיל ולא אמדוהו בכל נזק ונזק נותן לו דמי כולו. אמדוהו לכל נזק ונזק ואחר כך אמדוהו לכולו אין גובין ממנו אלא דמי כולו בלבד, ואם תפש הניזק נזק כל אבר ואבר ודמי כולו אין מוציאין מידו</strong>. אמדוהו לכל נזק ונזק וכו' ואם תפס ניזק נזק כל אבר ואבר ודמי כולו אין מוציאין מידו. א"א בעל ההלכות פירש דמי כל אבר ואבר צער ובשת לכל אחד ואחד.
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איחוד כמה חבלות לתביעה אחת</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איחוד כמה חבלות לתביעה אחת</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (פה:) מעלה <strong>רבא</strong> את השאלה הבאה- במקרה בו המזיק קטע את ידו של הניזק, ואז, בריחוק זמן, שבר את רגלו ושוב לאחר זמן סימאו, ולאחר זמן גם חרשו. ולא אמדו בית הדין את התשלומים בין מעשה למעשה. האם במקרה כזה יש לשום את תשלומי הצער והבושת של כל אחת מהחבלות בנפרד, או שמא יש לשום הכל ביחד?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (פה:) מעלה <strong>רבא</strong> את השאלה הבאה- במקרה בו המזיק קטע את ידו של הניזק, ואז, בריחוק זמן, שבר את רגלו ושוב לאחר זמן סימאו, ולאחר זמן גם חרשו. ולא אמדו בית הדין את התשלומים בין מעשה למעשה. האם במקרה כזה יש לשום את תשלומי הצער והבושת של כל אחת מהחבלות בנפרד, או שמא יש לשום הכל ביחד?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מסביר שלגבי השבת והנזק אין הבדל בין שומת כל חבלה בנפרד לבין שומה של הכל ביחד, כי כל נזק רק מוסיף על הקודם לו, והשבת היא סך זמן ביטול המלאכה של הניזק, ללא קשר להתפלגות הנזקים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> מסביר שלגבי השבת והנזק אין הבדל בין שומת כל חבלה בנפרד לבין שומה של הכל ביחד, כי כל נזק רק מוסיף על הקודם לו, והשבת היא סך זמן ביטול המלאכה של הניזק, ללא קשר להתפלגות הנזקים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מוסיף כמו כן, שלגבי הריפוי גם כן ברור ששמים הכל ביחד ולא אחד אחד. אמנם לגבי עניין זה נחלקו הראשונים- <strong>רש"י</strong> הסביר שלגבי הריפוי יש לשום הכל ביחד כי מדובר במקרה בו חבל חבלה אחת בעת שהניזק עוד לא הצליח להתרפא מהחבלה הקודמת. אמנם, ה<strong>תוספות</strong> (ד"ה "נהי" בתחילתו) הקשו מדוע שונה הריפוי המיוחד לכל חבלה, מהצער או הבושת, שאף הם מיוחדים לכל חבלה בנפרד. לכן העלו התוספות אפשרות שיש לגרוס את הריפוי עם הצער והבושת שרבא מתלבט אם שמים אותם לכל חבלה וחבלה או להכל ביחד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> מוסיף כמו כן, שלגבי הריפוי גם כן ברור ששמים הכל ביחד ולא אחד אחד. אמנם לגבי עניין זה נחלקו הראשונים- <strong>רש"י</strong> הסביר שלגבי הריפוי יש לשום הכל ביחד כי מדובר במקרה בו חבל חבלה אחת בעת שהניזק עוד לא הצליח להתרפא מהחבלה הקודמת. אמנם, ה<strong>תוספות</strong> (ד"ה "נהי" בתחילתו) הקשו מדוע שונה הריפוי המיוחד לכל חבלה, מהצער או הבושת, שאף הם מיוחדים לכל חבלה בנפרד. לכן העלו התוספות אפשרות שיש לגרוס את הריפוי עם הצער והבושת שרבא מתלבט אם שמים אותם לכל חבלה וחבלה או להכל ביחד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> ממשיך ואומר שגם אם נאמר שיש לשום את הכל כאחד, תישאל שאלה מהו הדין אם שמו באמת כל חבלה בפני עצמה, אך לא גבו מאומה עדיין. האם לאחר החבלה האחרונה יש לגבות תשלום תשלום כפי שנישום, או שמא יש לשום מחדש את הכל ביחד. שאלה זו נשארת בספק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> ממשיך ואומר שגם אם נאמר שיש לשום את הכל כאחד, תישאל שאלה מהו הדין אם שמו באמת כל חבלה בפני עצמה, אך לא גבו מאומה עדיין. האם לאחר החבלה האחרונה יש לגבות תשלום תשלום כפי שנישום, או שמא יש לשום מחדש את הכל ביחד. שאלה זו נשארת בספק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "נהי") מפרשים, שהגמרא אינה מעלה על דעתה בשום שלב, מצב בו לא ישלם המזיק על הצער, הבושת והריפוי של כל חבלה וחבלה בפני עצמה, שהרי סוף סוף ציער, בייש והזקיק ריפוי לניזק כמה פעמים בכמה אופנים שונים. לדברי התוספות, השאלה הראשונה ששואל רבא היא האם לשום כל חבלה וחבלה בפני עצמה או שמא לשום את כולן כאירוע אחד. באפשרות השניה השומה תהיה לטובת המזיק, שכן סכום תשלומי צער על חבלות הנישומות אחת אחת הינו גדול מאותן חבלות הנישומות ביחד. ה<strong>רא"ש</strong> (סימן ה) וה<strong>רשב"א </strong>סוברים אף הם כתוספות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ד"ה "נהי") מפרשים, שהגמרא אינה מעלה על דעתה בשום שלב, מצב בו לא ישלם המזיק על הצער, הבושת והריפוי של כל חבלה וחבלה בפני עצמה, שהרי סוף סוף ציער, בייש והזקיק ריפוי לניזק כמה פעמים בכמה אופנים שונים. לדברי התוספות, השאלה הראשונה ששואל רבא היא האם לשום כל חבלה וחבלה בפני עצמה או שמא לשום את כולן כאירוע אחד. באפשרות השניה השומה תהיה לטובת המזיק, שכן סכום תשלומי צער על חבלות הנישומות אחת אחת הינו גדול מאותן חבלות הנישומות ביחד. ה<strong>רא"ש</strong> (סימן ה) וה<strong>רשב"א </strong>סוברים אף הם כתוספות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong>, וכמותו שאר הראשונים, פוסק בבעיה הראשונה של רבא כאפשרות האומרת שאין גובים כל איבר ואיבר בנפרד. בשאלה השניה של רבא, נשאר הרמב"ם בספק ולכן פוסק שאם תפס הניזק אין מוציאים מידו<sup id="ref22"><a href="#fn22">[22]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong>, וכמותו שאר הראשונים, פוסק בבעיה הראשונה של רבא כאפשרות האומרת שאין גובים כל איבר ואיבר בנפרד. בשאלה השניה של רבא, נשאר הרמב"ם בספק ולכן פוסק שאם תפס הניזק אין מוציאים מידו<sup id="ref22"><a href="#fn22">[22]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, פסק ה<strong>רא"ש</strong> בבעיה השניה כאפשרות שגובים על כל חבלה בפני עצמה, כיוון שכבר אמדוה בבית הדין, והרי התשלום כאילו כבר גבוי הוא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, פסק ה<strong>רא"ש</strong> בבעיה השניה כאפשרות שגובים על כל חבלה בפני עצמה, כיוון שכבר אמדוה בבית הדין, והרי התשלום כאילו כבר גבוי הוא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ כו) כותב את לשון הרמב"ם, וה<strong>רמ"א </strong>מעיר, שההבדל בין ראיית כל נזק בנפרד לבין שומה של הכל ביחד, אינו נוגע לצער, לריפוי ולבושת, כדברי הרא"ש והתוספות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ כו) כותב את לשון הרמב"ם, וה<strong>רמ"א </strong>מעיר, שההבדל בין ראיית כל נזק בנפרד לבין שומה של הכל ביחד, אינו נוגע לצער, לריפוי ולבושת, כדברי הרא"ש והתוספות.</p>
                     
                 </div>
                 
@@ -1518,45 +1518,45 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד-טז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יד-טז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כיצד משערין הריפוי, אומדין בכמה ימים יחיה זה מחולי זה וכמה הוא צריך ונותן לו מיד, ואין מחייבין אותו ליתן דבר יום ביומו, ודבר זה תקנה היא למזיק. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>וכן השבת אומדין אותה ונותן הכל מיד, אם היה מתגלגל בחליו והולך וארך בו החולי יתר על מה שאמדוהו אינו מוסיף לו כלום, וכן אם הבריא מיד אין פוחתין לו ממה שאמדוהו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>במה דברים אמורים בשרצה המזיק, שזו תקנה היא לו, אבל אם אמר המזיק אין רצוני בתקנה זו אלא ארפאהו דבר יום ביומו שומעין לו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אומדן עתידי של הריפוי והשבת בשעת השומה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אומדן עתידי של הריפוי והשבת בשעת השומה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (צא.) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (צא.) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"חמשה דברים אומדין אותו ונותנין לו מיד,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"חמשה דברים אומדין אותו ונותנין לו מיד,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ריפוי ושבת עד שיתרפא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ריפוי ושבת עד שיתרפא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמדוהו והיה מתנונה והולך אין נותנין לו אלא כמו שאמדוהו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמדוהו והיה מתנונה והולך אין נותנין לו אלא כמו שאמדוהו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמדוהו והבריא נותנין לו כל מה שאמדוהו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמדוהו והבריא נותנין לו כל מה שאמדוהו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">משמע, שלא רק שאת הנזק, הצער והבושת, שערכם ברור כבר בשעת השומה, מוציאים מיד המזיק בשעת העמידה בבית דין, אלא אף את הריפוי והשבת, שהאומדן שלהם כולל תחזית לעתיד (כמה זמן יקח תהליך הריפוי וכמה זמן יעבור עד שיחזור הנחבל לעבוד) שאפשר שלא תתממש במלואה, גם כן אומדים ונותנים במקום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">משמע, שלא רק שאת הנזק, הצער והבושת, שערכם ברור כבר בשעת השומה, מוציאים מיד המזיק בשעת העמידה בבית דין, אלא אף את הריפוי והשבת, שהאומדן שלהם כולל תחזית לעתיד (כמה זמן יקח תהליך הריפוי וכמה זמן יעבור עד שיחזור הנחבל לעבוד) שאפשר שלא תתממש במלואה, גם כן אומדים ונותנים במקום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ההשלכה של דין זה היא, שגם כאשר התחזית לא התקיימה במלואה, כגון שהתרפא מהר מהצפוי או לאט מהצפוי, אין מקבל הניזק אלא כמו שאמדו לו בתחילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ההשלכה של דין זה היא, שגם כאשר התחזית לא התקיימה במלואה, כגון שהתרפא מהר מהצפוי או לאט מהצפוי, אין מקבל הניזק אלא כמו שאמדו לו בתחילה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">קביעה זו מפתיעה במידת מה, שכן היה אפשר לצפות שתהיה חובה על המזיק לדאוג לרפואתו השלמה של הניזק כל עוד ברור שמצבו הרפואי נובע מהחבלה. לכן אומר ה<strong>רמב"ם </strong>שתקנה זו, שנותן לו את האומדן מיד, היא תקנה שתיקנו חכמים לטובת המזיק, בכדי שלא יגרר לממן סיבוכים רפואיים בלתי צפויים של הניזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">קביעה זו מפתיעה במידת מה, שכן היה אפשר לצפות שתהיה חובה על המזיק לדאוג לרפואתו השלמה של הניזק כל עוד ברור שמצבו הרפואי נובע מהחבלה. לכן אומר ה<strong>רמב"ם </strong>שתקנה זו, שנותן לו את האומדן מיד, היא תקנה שתיקנו חכמים לטובת המזיק, בכדי שלא יגרר לממן סיבוכים רפואיים בלתי צפויים של הניזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכאן מסיק ה<strong>רמב"ם</strong>, שאם המזיק חפץ לחזור לדין הראשוני, בו הוא דואג לרפואתו של הניזק דבר יום ביומו, שומעים לו, שכן סוף סוף, אף אם יתרפא הניזק מהר יותר מכפי שניתן היה להעריך, הרי המזיק דואג לטיפול בו עד לרפואתו השלמה, ובכך הוא ממלא את צו התורה "ורפא ירפא" (<strong>מגיד משנה</strong>).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכאן מסיק ה<strong>רמב"ם</strong>, שאם המזיק חפץ לחזור לדין הראשוני, בו הוא דואג לרפואתו של הניזק דבר יום ביומו, שומעים לו, שכן סוף סוף, אף אם יתרפא הניזק מהר יותר מכפי שניתן היה להעריך, הרי המזיק דואג לטיפול בו עד לרפואתו השלמה, ובכך הוא ממלא את צו התורה "ורפא ירפא" (<strong>מגיד משנה</strong>).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ יח-יט) פסק כדברי הרמב"ם בהלכות אלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ יח-יט) פסק כדברי הרמב"ם בהלכות אלו.</p>
                     
                 </div>
                 
@@ -1564,29 +1564,29 @@
             
             
             <div id="halacha-11" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יז-יח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יז-יח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אמר לו הניזק פסוק עמי ותן על ידי ואני ארפא עצמי אין שומעין לו, שהרי אומר לו שמא לא תרפא עצמך ואחזיק אני עצמי במזיקין, אלא נותן לו דבר יום ביומו או פוסק על הכל ונותן דמי הרפוי על ידי בית דין. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אמר לו המזיק אני ארפא אותך או יש לי רופא שמרפא בחנם אין שומעין לו אלא מביא רופא אומן ומרפאהו בשכר. </strong>
                 </div>
                 
 
                 
                 <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ניזק שרוצה לרפא את עצמו, ומזיק שרוצה לרפא בעצמו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ניזק שרוצה לרפא את עצמו, ומזיק שרוצה לרפא בעצמו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (פה.) אומרת שהניזק אינו יכול לדרוש שיתנו לו מראש את כסף הריפוי בידו, ושהוא ירפא את עצמו, שכן המזיק יכול לטעון שהוא חושש שהניזק לא ישתמש בכסף לשם ריפוי, וגנאי הוא למזיק, שמתפרסם בין הבריות כחובל שאינו מרפא. על פי הנפסק בהלכה הקודמת, שבכפוף להסכמת המזיק, ניתן לאפשר מימון של הריפוי על בסיס יום יומי, פוסק הרמב"ם כאן, שאם אכן החליטו על צורת תשלום כזו, יכול הניזק לדרוש את התשלום במזומן בידו, שכן אז אין חשש שישתמש בו לצרכים אחרים לאורך זמן מבלי שישימו לב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (פה.) אומרת שהניזק אינו יכול לדרוש שיתנו לו מראש את כסף הריפוי בידו, ושהוא ירפא את עצמו, שכן המזיק יכול לטעון שהוא חושש שהניזק לא ישתמש בכסף לשם ריפוי, וגנאי הוא למזיק, שמתפרסם בין הבריות כחובל שאינו מרפא. על פי הנפסק בהלכה הקודמת, שבכפוף להסכמת המזיק, ניתן לאפשר מימון של הריפוי על בסיס יום יומי, פוסק הרמב"ם כאן, שאם אכן החליטו על צורת תשלום כזו, יכול הניזק לדרוש את התשלום במזומן בידו, שכן אז אין חשש שישתמש בו לצרכים אחרים לאורך זמן מבלי שישימו לב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (שם) מוסיפה, שאם המזיק לא רוצה לתת את תשלומי הריפוי אלא אומר שהוא עצמו ירפא את הניזק, או שיש לו רופא שמסכים לרפא בחינם, אין שומעין לו, שכן הניזק יכול לטעון שרופא המרפא בחינם אינו מדקדק במלאכתו, ועל המזיק עצמו אינו סומך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (שם) מוסיפה, שאם המזיק לא רוצה לתת את תשלומי הריפוי אלא אומר שהוא עצמו ירפא את הניזק, או שיש לו רופא שמסכים לרפא בחינם, אין שומעין לו, שכן הניזק יכול לטעון שרופא המרפא בחינם אינו מדקדק במלאכתו, ועל המזיק עצמו אינו סומך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמו כן אומרת הגמרא, שאם רוצה המזיק להביא רופא מרחוק, אך בזול, יכול הניזק לומר שרופא שבא מרחוק אינו זהיר כיוון שהוא אינו חושש למוניטין המקומי שלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כמו כן אומרת הגמרא, שאם רוצה המזיק להביא רופא מרחוק, אך בזול, יכול הניזק לומר שרופא שבא מרחוק אינו זהיר כיוון שהוא אינו חושש למוניטין המקומי שלו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק שאין הניזק רשאי לטעון שהוא רוצה לרפא את עצמו, ושאין המזיק יכול לרפא בעצמו או להביא רופא בחינם. ב<strong>שו"ע</strong> (תכ כא-כג) מוסיף על כך, שאין המזיק רשאי להביא רופא מרחוק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק שאין הניזק רשאי לטעון שהוא רוצה לרפא את עצמו, ושאין המזיק יכול לרפא בעצמו או להביא רופא בחינם. ב<strong>שו"ע</strong> (תכ כא-כג) מוסיף על כך, שאין המזיק רשאי להביא רופא מרחוק.</p>
                     
                 </div>
                 
@@ -1594,59 +1594,59 @@
             
             
             <div id="halacha-12" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הרי שלא פסק עמו אלא היה מרפא יום יום ועלו בו צמחים מחמת המכה או נסתרה המכה אחר שחיית חייב לרפאותו וליתן לו דמי שבתו, עלו צמחים שלא מחמת המכה חייב לרפאותו ואינו נותן לו דמי שבתו, עבר על דברי רופא והכביד החולי אינו חייב לרפאותו.</strong> עלו צמחים שלא מחמת המכה חייב לרפאותו. א"א אינו חייב לרפאותו.+
                 </div>
                 
 
                 
                 <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אחריות המזיק במקרים של סיבוכים רפואיים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אחריות המזיק במקרים של סיבוכים רפואיים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (פג.) מדברת על מקרה בו התפתחו סיבוכים הקשורים למכה, והריפוי של המכה מתעכב-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (פג.) מדברת על מקרה בו התפתחו סיבוכים הקשורים למכה, והריפוי של המכה מתעכב-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"עלה בו צמחים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"עלה בו צמחים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם מחמת המכה – חייב,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם מחמת המכה – חייב,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שלא מחמת המכה – פטור."</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שלא מחמת המכה – פטור."</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (פה.) מובאת <strong>ברייתא</strong> המרחיבה בעניין:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (פה.) מובאת <strong>ברייתא</strong> המרחיבה בעניין:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"עלו בו צמחים –</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"עלו בו צמחים –</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מחמת המכה ונסתרה המכה- חייב לרפאותו וחייב ליתן לו דמי שבתו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מחמת המכה ונסתרה המכה- חייב לרפאותו וחייב ליתן לו דמי שבתו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שלא מחמת המכה- אינו חייב לרפאותו ואינו חייב ליתן לו דמי שבתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שלא מחמת המכה- אינו חייב לרפאותו ואינו חייב ליתן לו דמי שבתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יהודה</strong> אומר: אף מחמת המכה חייב לרפאותו ואינו חייב ליתן לו דמי שבתו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יהודה</strong> אומר: אף מחמת המכה חייב לרפאותו ואינו חייב ליתן לו דמי שבתו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ו<strong>חכמים</strong> אומרים שבתו ורפואתו כל שחייב בשבת חייב בריפוי ושאינו חייב בשבת אינו חייב בריפוי"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ו<strong>חכמים</strong> אומרים שבתו ורפואתו כל שחייב בשבת חייב בריפוי ושאינו חייב בשבת אינו חייב בריפוי"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש שלפנינו שלוש דעות תנאים במקרה בו הסיבוך בא מחמת המכה- שיטת <strong>תנא קמא</strong>, המחייבת שבת וריפוי, שיטת <strong>ר' יהודה</strong>, המחייבת ריפוי בלבד, ושיטת ה<strong>חכמים</strong>, הפוטרים מזה ומזה. מבין השלוש, השיטה התואמת את המשנה היא שיטת תנא קמא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש שלפנינו שלוש דעות תנאים במקרה בו הסיבוך בא מחמת המכה- שיטת <strong>תנא קמא</strong>, המחייבת שבת וריפוי, שיטת <strong>ר' יהודה</strong>, המחייבת ריפוי בלבד, ושיטת ה<strong>חכמים</strong>, הפוטרים מזה ומזה. מבין השלוש, השיטה התואמת את המשנה היא שיטת תנא קמא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> עולות שתי אפשרויות להסבר מחלוקת ר' יהודה ותנא קמא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> עולות שתי אפשרויות להסבר מחלוקת ר' יהודה ותנא קמא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבנן בבי רב</strong> סוברים שהצמחים עלו במכה מחמת שהניזק עטף את הפצע בכיסוי. תנא קמא סובר שזהו מעשה ראוי, ואילו ר' יהודה סובר שזהו מעשה הגובל בפשיעה, שכן הוא מזיק לפצע, ולכן חייב המזיק רק בריפוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבנן בבי רב</strong> סוברים שהצמחים עלו במכה מחמת שהניזק עטף את הפצע בכיסוי. תנא קמא סובר שזהו מעשה ראוי, ואילו ר' יהודה סובר שזהו מעשה הגובל בפשיעה, שכן הוא מזיק לפצע, ולכן חייב המזיק רק בריפוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבה</strong> חולק ומסביר שלדעת כל התנאים לגיטימי לעטוף את הפצע ולא לגיטימי לעוטפו יותר מדאי. ר' יהודה סובר שכיוון שעלו הצמחים בפצע כי עטפו יותר מדאי, חייב רק בריפוי בו כפל הכתוב ("רפא ירפא") ולא בשבת. לעומתו תנא קמא סובר, שלא ניתן להפריד בין הריפוי לבין השבת כי הכתוב הקישן זה לזה, ולכן למרות שעשה הניזק דבר לא לגיטימי כשעטף את הפצע בהגזמה, חייב המזיק גם בריפוי וגם בשבת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבה</strong> חולק ומסביר שלדעת כל התנאים לגיטימי לעטוף את הפצע ולא לגיטימי לעוטפו יותר מדאי. ר' יהודה סובר שכיוון שעלו הצמחים בפצע כי עטפו יותר מדאי, חייב רק בריפוי בו כפל הכתוב ("רפא ירפא") ולא בשבת. לעומתו תנא קמא סובר, שלא ניתן להפריד בין הריפוי לבין השבת כי הכתוב הקישן זה לזה, ולכן למרות שעשה הניזק דבר לא לגיטימי כשעטף את הפצע בהגזמה, חייב המזיק גם בריפוי וגם בשבת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "עלו") מעיר, שדברי המשנה והברייתא אמורים במקרה בו עדיין לא הספיקו לאמוד את התשלומים (או במקרה בו לקח המזיק על עצמו לתת דמי ריפוי דבר יום ביומו עד להחלמה מוחלטת), שהרי אם כבר אמדו, הרי משלם המזיק הכל בפעם אחת, ופטור מכל תוספות תשלום אף אם עלו לאחר זמן צמחים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ד"ה "עלו") מעיר, שדברי המשנה והברייתא אמורים במקרה בו עדיין לא הספיקו לאמוד את התשלומים (או במקרה בו לקח המזיק על עצמו לתת דמי ריפוי דבר יום ביומו עד להחלמה מוחלטת), שהרי אם כבר אמדו, הרי משלם המזיק הכל בפעם אחת, ופטור מכל תוספות תשלום אף אם עלו לאחר זמן צמחים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מבארת, ש"שלא מחמת המכה" אין הכוונה לדבר שכלל אינו קשור לחבלה, שהרי אז בוודאי פטור המזיק מהכל, אלא הכוונה למקרה בו הניזק עבר על דברי הרופא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מבארת, ש"שלא מחמת המכה" אין הכוונה לדבר שכלל אינו קשור לחבלה, שהרי אז בוודאי פטור המזיק מהכל, אלא הכוונה למקרה בו הניזק עבר על דברי הרופא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> וה<strong>טור</strong> פוסקים כמשנה וכתנא קמא שבברייתא, שאם עלו הצמחים מחמת המכה חייב המזיק בתוספת השבת והריפוי שנגרמה מכך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> וה<strong>טור</strong> פוסקים כמשנה וכתנא קמא שבברייתא, שאם עלו הצמחים מחמת המכה חייב המזיק בתוספת השבת והריפוי שנגרמה מכך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שיטת ה<strong>רמב"ם</strong> בהלכה זו קשה. כאחרים, פסק ה<strong>רמב"ם</strong> שבצמחים שעלו מחמת המכה חייב בשבת וברפואה, אך באופן ייחודי, פוסק הרמב"ם שאם הצמחים עלו <strong>שלא</strong> מחמת המכה, חייב רק בריפוי ופטור משבת. עוד קושי העולה מדברי הרמב"ם הוא שהרמב"ם כותב שאם לא שמע לדברי הרופא והחמיר החולי פטור מריפוי ושבת, אך אם עלו צמחים שלא מחמת המכה, פטור משבת אך חייב בריפוי. וזאת בשעה שהגמרא הביאה את המקרה של חולה שעבר על דברי הרופא כדוגמה ל"שלא מחמת המכה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שיטת ה<strong>רמב"ם</strong> בהלכה זו קשה. כאחרים, פסק ה<strong>רמב"ם</strong> שבצמחים שעלו מחמת המכה חייב בשבת וברפואה, אך באופן ייחודי, פוסק הרמב"ם שאם הצמחים עלו <strong>שלא</strong> מחמת המכה, חייב רק בריפוי ופטור משבת. עוד קושי העולה מדברי הרמב"ם הוא שהרמב"ם כותב שאם לא שמע לדברי הרופא והחמיר החולי פטור מריפוי ושבת, אך אם עלו צמחים שלא מחמת המכה, פטור משבת אך חייב בריפוי. וזאת בשעה שהגמרא הביאה את המקרה של חולה שעבר על דברי הרופא כדוגמה ל"שלא מחמת המכה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong>, לאור שאלות אלה, משנה את הגרסה ברמב"ם כך ששיטתו שווה לשיטת הטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong>, לאור שאלות אלה, משנה את הגרסה ברמב"ם כך ששיטתו שווה לשיטת הטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>כסף משנה</strong> לעומתו מסביר שלרמב"ם גרסה שונה בגמרא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>כסף משנה</strong> לעומתו מסביר שלרמב"ם גרסה שונה בגמרא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ יט-ב) פוסק להלכה כדברי הטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ יט-ב) פוסק להלכה כדברי הטור.</p>
                     
                 </div>
                 
@@ -1654,29 +1654,29 @@
             
             
             <div id="halacha-13" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה כ</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה כ</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כשפוסקין בית דין על המזיק ומחייבין אותו לשלם גובין ממנו הכל מיד ואין קובעין לו זמן כלל, ואם בבושת בלבד נתחייב קובעין לו זמן לשלם שהרי לא חסרו ממון.</strong>
                 </div>
                 
 
                 
                 <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נתינת זמן למזיק לפרוע</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נתינת זמן למזיק לפרוע</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (צ:) מספרת על מקרה בו פסק בית הדין לחובת אדם שבייש. אותו אדם ביקש ארכה לפני התשלום ובית הדין נעתר לו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (צ:) מספרת על מקרה בו פסק בית הדין לחובת אדם שבייש. אותו אדם ביקש ארכה לפני התשלום ובית הדין נעתר לו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (צא.) מקשה על כך מהדין המפורש בשם <strong>ר' חנינא</strong>, ש"אין נותנים זמן לחבלות", כלומר, אין בית הדין נותן ארכה לתשלום. הגמרא מתרצת, שדברי ר' חנינא אמורים במקום בו חיסר המזיק את הניזק ממון, אך לעניין תשלומי בושת, כיוון שלא חסרו ממון, נותנים למזיק ארכה לתשלום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (צא.) מקשה על כך מהדין המפורש בשם <strong>ר' חנינא</strong>, ש"אין נותנים זמן לחבלות", כלומר, אין בית הדין נותן ארכה לתשלום. הגמרא מתרצת, שדברי ר' חנינא אמורים במקום בו חיסר המזיק את הניזק ממון, אך לעניין תשלומי בושת, כיוון שלא חסרו ממון, נותנים למזיק ארכה לתשלום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וחלקו הראשונים מה דין דחיית תשלומי הבושת כאשר הם מלווים בתשלומי נזק-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וחלקו הראשונים מה דין דחיית תשלומי הבושת כאשר הם מלווים בתשלומי נזק-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> אומר, שגם אם נתחייב המזיק בתשלומים אחרים בנוסף לבושת, כגון נזק, יכול המזיק לבקש ארכה לגבי תשלומי הבושת<sup id="ref23"><a href="#fn23">[23]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> אומר, שגם אם נתחייב המזיק בתשלומים אחרים בנוסף לבושת, כגון נזק, יכול המזיק לבקש ארכה לגבי תשלומי הבושת<sup id="ref23"><a href="#fn23">[23]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, מה<strong>רמב"ם</strong> משמע, שרק אם נתחייב המזיק בבושת בלבד, ללא שאר ארבעת הדברים, ניתן לדחות את התשלום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת, מה<strong>רמב"ם</strong> משמע, שרק אם נתחייב המזיק בבושת בלבד, ללא שאר ארבעת הדברים, ניתן לדחות את התשלום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תכ כז) פסק כדברי הרמב"ם. וה<strong>סמ"ע</strong> (ס"ק לא) מוסיף שהוא הדין גם בצער שלא במקום נזק, כגון כוויה במקום שאינו עושה פצע, שגם בזה לא חסרו ממון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תכ כז) פסק כדברי הרמב"ם. וה<strong>סמ"ע</strong> (ס"ק לא) מוסיף שהוא הדין גם בצער שלא במקום נזק, כגון כוויה במקום שאינו עושה פצע, שגם בזה לא חסרו ממון.</p>
                     
                 </div>
                 
@@ -1684,7 +1684,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1743,6 +1743,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

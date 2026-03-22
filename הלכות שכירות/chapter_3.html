@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות שכירות - פרק ג</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ג)</h3>
                 <ul class="space-y-3">
@@ -960,7 +960,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -973,151 +973,151 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     שומר שטען שנאנס אונס גדול כגון שבורה ומתה, אם נאנס במקום שהעדים מצויין שם מצריכין אותו ראייה על טענתו שנאנס ויפטר אף משבועת שומרים ואם לא הביא ראייה ישלם שנאמר אין רואה שבועת ה' תהיה בין שניהם הא במקום שאפשר להביא ראייה אין שם שבועה אלא או יביא ראייה או ישלם, אבל אם טען שנאנס במקום שאין העדים מצויין שם אין מצריכין אותו ראייה אלא ישבע שנאנס ויפטר, ואם הביא עדים שלא פשע בה נפטר אף מן השבועה, מעשה באחד שהביא חבית של יין בשכר ושברה בשוק של מחוזא ובאו לפני חכמים ואמרו שוק זה שטענת שנשברה בו חבית בני אדם מצויין שם או תביא ראייה שלא פשעת אלא נתקלת ונפלת או תשלם דמיה וכן כל כיוצא בזה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     המעביר חבית ממקום למקום בשכר ונשברה דין תורה הוא שישלם שאין זה אונס גדול והרי השבירה כגניבה ואבידה שהוא חייב בהן אבל תקנו חכמים שיהיה חייב שבועה שלא פשע בה שאם אתה אומר ישלם אין לך אדם שיעביר חבית לחבירו לפיכך עשו בו שבירת החבית כמיתת הבהמה ושבירתה, ועוד תקנו בדבר זה שאם נשאו אותה שנים במוט ונשברה משלמין חצי דמיה הואיל ומשוי זה גדול לגבי אחד וקל לגבי שנים הרי הוא כאונס ואינו אונס ומשלמין מחצה אם יש עדים שלא פשעו בה, נשברה במקום שאין העדים מצויין נשבעין שלא שברוה בפשיעה ומשלמין חצי דמיה, שהרי לא היה לכל אחד להעביר אלא משוי שיכול להעבירו בפני עצמו, מכאן אתה למד שהאחד שהעביר חבית גדולה שאין דרך כל הסבלים להעבירה שהוא פושע ואם נשברה בידו משלם הכל.  מכאן אתה למד וכו' עד ואם נשברה בידו משלם הכל. א"א הוא נותן את הפשיעה בעבור הכבדות ואני סבור שאין הפשיעה אלא בשביל הקלות שהנתקל במשא הקל פושע הוא עכ"ל.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המעביר חבית ממקום למקום ושברה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המעביר חבית ממקום למקום ושברה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (בבא מציעא פב:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (בבא מציעא פב:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המעביר חבית ממקום למקום ושברה, בין שומר חנם בין שומר שכר - ישבע.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>המעביר חבית ממקום למקום ושברה, בין שומר חנם בין שומר שכר - ישבע.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי אליעזר</strong> אומר: זה וזה ישבע, ותמיה אני אם יכולין זה וזה לישבע</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי אליעזר</strong> אומר: זה וזה ישבע, ותמיה אני אם יכולין זה וזה לישבע</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה ברייתא ובה דעה נוספת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה ברייתא ובה דעה נוספת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>המעביר חבית לחבירו ממקום למקום ושברה, בין שומר חנם בין שומר שכר - ישבע, דברי <strong>רבי מאיר</strong>.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>המעביר חבית לחבירו ממקום למקום ושברה, בין שומר חנם בין שומר שכר - ישבע, דברי <strong>רבי מאיר</strong>.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יהודה</strong> אומר: שומר חנם - ישבע, נושא שכר - ישלם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי יהודה</strong> אומר: שומר חנם - ישבע, נושא שכר - ישלם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי אליעזר</strong> אומר זה וזה ישבע, ותמיה אני אם יכולין זה וזה לישבע</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי אליעזר</strong> אומר זה וזה ישבע, ותמיה אני אם יכולין זה וזה לישבע</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מחלוקת תנאים משולשת היא, מה דינו של הסבל המעביר חבית חבירו ושברה- <strong>רבי מאיר</strong> פוטרו בשבועה בין אם העבירה בחינם ובין אם העבירה בשכר. <strong>רבי יהודה</strong> פוטר בשבועה רק שומר חינם אך לא שומר שכר, ו<strong>רבי אליעזר</strong> מסכים עקרונית עם רבי מאיר, אך מעלה ספיקות לגבי הדין, כמבואר להלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מחלוקת תנאים משולשת היא, מה דינו של הסבל המעביר חבית חבירו ושברה- <strong>רבי מאיר</strong> פוטרו בשבועה בין אם העבירה בחינם ובין אם העבירה בשכר. <strong>רבי יהודה</strong> פוטר בשבועה רק שומר חינם אך לא שומר שכר, ו<strong>רבי אליעזר</strong> מסכים עקרונית עם רבי מאיר, אך מעלה ספיקות לגבי הדין, כמבואר להלן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מקשה מ<strong>ברייתא</strong> (מובאת גם בב"ק כח:) העוסקת גם כן באדם שנשבר כדו ברשות הרבים, אך מתוך התייחסות לשאלה אחרת- כאשר אדם אחר הוזק בשברי הכד, האם חייב בעל הכד-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מקשה מ<strong>ברייתא</strong> (מובאת גם בב"ק כח:) העוסקת גם כן באדם שנשבר כדו ברשות הרבים, אך מתוך התייחסות לשאלה אחרת- כאשר אדם אחר הוזק בשברי הכד, האם חייב בעל הכד-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נשברה כדו ולא סלקו, נפל גמלו ולא העמידו –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נשברה כדו ולא סלקו, נפל גמלו ולא העמידו –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי מאיר</strong> מחייב בהזיקן,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי מאיר</strong> מחייב בהזיקן,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ו<strong>חכמים</strong> אומרים: פטור מדיני אדם וחייב בדיני שמים;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ו<strong>חכמים</strong> אומרים: פטור מדיני אדם וחייב בדיני שמים;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומודים חכמים לרבי מאיר, באבנו סכינו ומשאו שהניחן בראש גגו ונפלו ברוח מצויה והזיקו - שהוא חייב;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ומודים חכמים לרבי מאיר, באבנו סכינו ומשאו שהניחן בראש גגו ונפלו ברוח מצויה והזיקו - שהוא חייב;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומודה רבי מאיר לרבנן, במעלה קנקנין על הגג ע"מ לנגבן ונפלו ברוח שאינה מצויה והזיקו - שהוא פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ומודה רבי מאיר לרבנן, במעלה קנקנין על הגג ע"מ לנגבן ונפלו ברוח שאינה מצויה והזיקו - שהוא פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא אצלנו (וביתר אריכות בסוגיית בבא קמא) מסבירה שרבי מאיר וחכמים חלוקים בשאלה האם נתקל פושע. כלומר, אפילו כאשר לא היה זמן לבעל הכד (השברים) לפנות את המפגע, וכבר הוזק בהם אדם אחר, מחייב <strong>רבי מאיר</strong> את בעל הכד על נזקיו של הנתקל משום שלדעתו אדם ההולך ברחוב, נתקל ונופל, ותוך כדי כך מפיל דבר מידיו, הרי הוא פושע, שכן היה לו להיזהר שלא ליפול. <strong>חכמים</strong> לעומתו סוברים שנתקל אינו פושע ולכן אין לראות את הנתקל כאחראי למפגע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא אצלנו (וביתר אריכות בסוגיית בבא קמא) מסבירה שרבי מאיר וחכמים חלוקים בשאלה האם נתקל פושע. כלומר, אפילו כאשר לא היה זמן לבעל הכד (השברים) לפנות את המפגע, וכבר הוזק בהם אדם אחר, מחייב <strong>רבי מאיר</strong> את בעל הכד על נזקיו של הנתקל משום שלדעתו אדם ההולך ברחוב, נתקל ונופל, ותוך כדי כך מפיל דבר מידיו, הרי הוא פושע, שכן היה לו להיזהר שלא ליפול. <strong>חכמים</strong> לעומתו סוברים שנתקל אינו פושע ולכן אין לראות את הנתקל כאחראי למפגע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בסוגייתנו שואלת כיצד מצד אחד, לדעת רבי מאיר נתקל פושע, אך מצד שני במשנתנו הוא פוטר (בשבועה) בין שומר שכר ובין שומר חינם, אף ששניהם חייבים בפשיעה!</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בסוגייתנו שואלת כיצד מצד אחד, לדעת רבי מאיר נתקל פושע, אך מצד שני במשנתנו הוא פוטר (בשבועה) בין שומר שכר ובין שומר חינם, אף ששניהם חייבים בפשיעה!</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על שאלה זו מוצעות בגמרא שתי תשובות אפשריות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על שאלה זו מוצעות בגמרא שתי תשובות אפשריות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי אלעזר</strong> סובר שסתירה זו אין לה פתרון. לכן הוא מגיע למסקנה ש"מי ששנה זו לא שנה זו". כלומר, מדובר בשמועות סותרות בשם רבי מאיר. לפיכך הדעה השנויה במשנתנו בשם רבי מאיר מתבססת על ההבנה שנתקל אינו פושע, ולכן שובר החבית פטור מלשלם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי אלעזר</strong> סובר שסתירה זו אין לה פתרון. לכן הוא מגיע למסקנה ש"מי ששנה זו לא שנה זו". כלומר, מדובר בשמועות סותרות בשם רבי מאיר. לפיכך הדעה השנויה במשנתנו בשם רבי מאיר מתבססת על ההבנה שנתקל אינו פושע, ולכן שובר החבית פטור מלשלם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי חייא</strong> בשם <strong>ר' יוחנן</strong> מסביר שאכן שיטת רבי מאיר היא שנתקל פושע הוא, אלא שלדעתו תקנה מיוחדת תיקנו חכמים במעביר חבית חבירו ממקום למקום, שלא יהיה חייב אפילו אם פשע בה, לא בשומר חינם ולא בשומר שכר. טעם התקנה הוא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי חייא</strong> בשם <strong>ר' יוחנן</strong> מסביר שאכן שיטת רבי מאיר היא שנתקל פושע הוא, אלא שלדעתו תקנה מיוחדת תיקנו חכמים במעביר חבית חבירו ממקום למקום, שלא יהיה חייב אפילו אם פשע בה, לא בשומר חינם ולא בשומר שכר. טעם התקנה הוא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שאם אי אתה אומר כן - אין לך אדם המעביר חבית לחבירו ממקום למקום</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שאם אי אתה אומר כן - אין לך אדם המעביר חבית לחבירו ממקום למקום</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מכיוון שקיים סיכון בהעברת חבית שבירה וגדולה ממקום למקום, לו היה הסבל נושא באחריות על העברה שאינה זהירה דיה (=פשיעה), היו נמנעים אנשים מלעזור זה לזה בהעברת חביות, אפילו בשכר, שכן השכר על העברת החבית נמוך בהרבה מהתשלום על שבירתה. על פי הבנה זו לפיה פטרו חכמים את המעביר חבית חבירו אפילו אם פשע בה, כמובן שהשבועה שמחייב רבי מאיר אינה יכולה להיות שבועת השומרים הרגילה- שבועה שלא פשע בה. לכן מסביר רבא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מכיוון שקיים סיכון בהעברת חבית שבירה וגדולה ממקום למקום, לו היה הסבל נושא באחריות על העברה שאינה זהירה דיה (=פשיעה), היו נמנעים אנשים מלעזור זה לזה בהעברת חביות, אפילו בשכר, שכן השכר על העברת החבית נמוך בהרבה מהתשלום על שבירתה. על פי הבנה זו לפיה פטרו חכמים את המעביר חבית חבירו אפילו אם פשע בה, כמובן שהשבועה שמחייב רבי מאיר אינה יכולה להיות שבועת השומרים הרגילה- שבועה שלא פשע בה. לכן מסביר רבא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: שבועה שלא בכוונה שברתיה</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: שבועה שלא בכוונה שברתיה</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, חכמים תיקנו שכל עוד לא שבר הסבל את החבית בכוונה, הרי הוא פטור, ולכן צריך הוא להישבע על כך שאכן לא היתה השבירה בכוונה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, חכמים תיקנו שכל עוד לא שבר הסבל את החבית בכוונה, הרי הוא פטור, ולכן צריך הוא להישבע על כך שאכן לא היתה השבירה בכוונה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלבד העיסוק בשיטת רבי מאיר, מבארת הגמרא את דעותיהם של שאר התנאים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלבד העיסוק בשיטת רבי מאיר, מבארת הגמרא את דעותיהם של שאר התנאים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואתא <strong>רבי יהודה</strong> למימר: שומר חנם - ישבע, נושא שכר - ישלם, האי כי דיניה והאי כי דיניה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואתא <strong>רבי יהודה</strong> למימר: שומר חנם - ישבע, נושא שכר - ישלם, האי כי דיניה והאי כי דיניה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, רבי יהודה סובר שהסבל שנתקל אינו פושע, ולכן אם עשה מלאכתו בחינם נשבע ונפטר<sup id="ref37"><a href="#fn37">[37]</a></sup>. אמנם, אם עשה זאת בשכר, צריך לשלם, כיוון שמידת האחריות של הנתקל דומה למידת האחריות על גניבה ואבידה, בהן חייב שומר שכר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, רבי יהודה סובר שהסבל שנתקל אינו פושע, ולכן אם עשה מלאכתו בחינם נשבע ונפטר<sup id="ref37"><a href="#fn37">[37]</a></sup>. אמנם, אם עשה זאת בשכר, צריך לשלם, כיוון שמידת האחריות של הנתקל דומה למידת האחריות על גניבה ואבידה, בהן חייב שומר שכר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואתא <strong>רבי אליעזר</strong> למימר: אין, גמרא כרבי מאיר. ומיהו, תמיה אני אם יכולין זה וזה לישבע.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואתא <strong>רבי אליעזר</strong> למימר: אין, גמרא כרבי מאיר. ומיהו, תמיה אני אם יכולין זה וזה לישבע.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בשלמא שומר חנם - משתבע דלא פשע בה, אלא שומר שכר אמאי משתבע? כי לא פשע נמי שלומי בעי!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בשלמא שומר חנם - משתבע דלא פשע בה, אלא שומר שכר אמאי משתבע? כי לא פשע נמי שלומי בעי!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואפילו שומר חנם נמי, התינח במקום מדרון, שלא במקום מדרון, מי מצי משתבע דלא פשע? ואפילו במקום מדרון נמי, התינח היכא דליכא ראיה, אבל היכא דאיכא ראיה - ניתי ראיה ונפטר.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואפילו שומר חנם נמי, התינח במקום מדרון, שלא במקום מדרון, מי מצי משתבע דלא פשע? ואפילו במקום מדרון נמי, התינח היכא דליכא ראיה, אבל היכא דאיכא ראיה - ניתי ראיה ונפטר.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דתניא, <strong>איסי בן יהודה</strong> אומר: אין ראה שבעת ה' תהיה בין שניהם, הא יש רואה - יביא ראיה ויפטר.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>דתניא, <strong>איסי בן יהודה</strong> אומר: אין ראה שבעת ה' תהיה בין שניהם, הא יש רואה - יביא ראיה ויפטר.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, רבי אליעזר שמע אף הוא מרבותיו את הדין שאומר רבי מאיר. ברם, כמה תמיהות יש לו על דין זה- ראשית, לדעתו הנתקל אינו אנוס, וכיוון שכך, הסבל שהעביר בשכר חייב לכאורה לשלם, כי דינו כשומר שכר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, רבי אליעזר שמע אף הוא מרבותיו את הדין שאומר רבי מאיר. ברם, כמה תמיהות יש לו על דין זה- ראשית, לדעתו הנתקל אינו אנוס, וכיוון שכך, הסבל שהעביר בשכר חייב לכאורה לשלם, כי דינו כשומר שכר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שנית, אף בשומר חינם שנתקל, דין "נשבע ונפטר" הנאמר באופן גורף במשנה צריך להיות מסוייג בכמה אופנים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שנית, אף בשומר חינם שנתקל, דין "נשבע ונפטר" הנאמר באופן גורף במשנה צריך להיות מסוייג בכמה אופנים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לא תמיד ניתן לומר שנתקל אינו פושע. כאשר תנאי הדרך טובים ("לא מקום מדרון" בלשון הגמרא) הנתקל נחשב פושע, כיוון שמסתבר שזלזל ולא הביט בדרך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לא תמיד ניתן לומר שנתקל אינו פושע. כאשר תנאי הדרך טובים ("לא מקום מדרון" בלשון הגמרא) הנתקל נחשב פושע, כיוון שמסתבר שזלזל ולא הביט בדרך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שומר חינם נשבע ונפטר רק במקום בו אין עדים למעשה. בכל מקום בו ישנם עדים, על השומר להביא את עדותם כראיה שלא פשע (עי' לקמן).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שומר חינם נשבע ונפטר רק במקום בו אין עדים למעשה. בכל מקום בו ישנם עדים, על השומר להביא את עדותם כראיה שלא פשע (עי' לקמן).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו לגבי פסיקת ההלכה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו לגבי פסיקת ההלכה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינו יונתן</strong> (נא. מדפי הרי"ף) ה<strong>רשב"א</strong> ו<strong>בעל המאור</strong> (ב"ק טו. מדפי הרי"ף) כותבים שהלכה כרבי מאיר, שנתקל פושע, ולפי ההסבר של רבי יוחנן. כלומר, למרות שנתקל פושע, תיקנו חכמים שכל עוד לא נשברה החבית במזיד, ישבע הסבל ויפטר, בין בשומר שכר ובין בשומר חינם, כדי שימצא אדם סבל המוכן להעביר את חביתו. על פי ההסבר הזה, בין לשומר שכר ובין לשומר חינם, צריכה השבועה להיות- "שבועה שלא שברתיה בכוונה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבינו יונתן</strong> (נא. מדפי הרי"ף) ה<strong>רשב"א</strong> ו<strong>בעל המאור</strong> (ב"ק טו. מדפי הרי"ף) כותבים שהלכה כרבי מאיר, שנתקל פושע, ולפי ההסבר של רבי יוחנן. כלומר, למרות שנתקל פושע, תיקנו חכמים שכל עוד לא נשברה החבית במזיד, ישבע הסבל ויפטר, בין בשומר שכר ובין בשומר חינם, כדי שימצא אדם סבל המוכן להעביר את חביתו. על פי ההסבר הזה, בין לשומר שכר ובין לשומר חינם, צריכה השבועה להיות- "שבועה שלא שברתיה בכוונה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מולם פסקו רוב הראשונים ובכללם ה<strong>רי"ף</strong> (נא. מדפיו), ה<strong>רא"ש</strong> (סי' יט), ה<strong>טור</strong> (שד) וה<strong>רמב"ם</strong> (לפנינו), שנתקל אינו פושע, כיוון שאין דרכם של אנשים להביט בדרכים. זוהי שיטתו של רבי יהודה<sup id="ref38"><a href="#fn38">[38]</a></sup>. על פי ר' יהודה הדין היה צריך להיות שהסבל הנושא בחינם יפטר (כי נתקל אינו פושע), והסבל הנושא בשכר ישלם (כי מאידך, נתקל אינו אנוס). ברם, מהמשנה בסוגייתנו שבבבא מציעא משמע שנושא החבית פטור בין אם נשאה בחינם ובין אם נשאה בשכר. מתוך כך, ומתוך דברי רבי יוחנן ודברי רבא, פסקו הראשונים להלכה שאכן קיימת תקנת חכמים לפטור את הסבל, כדי שימצא אדם סבלים שיעזרוהו. מתוך כך פסקו הראשונים הנ"ל, שתקנת חכמים שונה מהמתואר בגמרא. התקנה אינה פוטרת את הסבל מפשיעה, אלא רק מנזקים שהם "כעין גניבה ואבידה", כלומר, שאינם בגדר פשיעה אך גם אינם בגדר אונס גמור. לכן התקנה אינה נצרכת בסַבַּל חינם, הפטור ממילא בכל מה שאינו פשיעה אלא בסבל בשכר בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מולם פסקו רוב הראשונים ובכללם ה<strong>רי"ף</strong> (נא. מדפיו), ה<strong>רא"ש</strong> (סי' יט), ה<strong>טור</strong> (שד) וה<strong>רמב"ם</strong> (לפנינו), שנתקל אינו פושע, כיוון שאין דרכם של אנשים להביט בדרכים. זוהי שיטתו של רבי יהודה<sup id="ref38"><a href="#fn38">[38]</a></sup>. על פי ר' יהודה הדין היה צריך להיות שהסבל הנושא בחינם יפטר (כי נתקל אינו פושע), והסבל הנושא בשכר ישלם (כי מאידך, נתקל אינו אנוס). ברם, מהמשנה בסוגייתנו שבבבא מציעא משמע שנושא החבית פטור בין אם נשאה בחינם ובין אם נשאה בשכר. מתוך כך, ומתוך דברי רבי יוחנן ודברי רבא, פסקו הראשונים להלכה שאכן קיימת תקנת חכמים לפטור את הסבל, כדי שימצא אדם סבלים שיעזרוהו. מתוך כך פסקו הראשונים הנ"ל, שתקנת חכמים שונה מהמתואר בגמרא. התקנה אינה פוטרת את הסבל מפשיעה, אלא רק מנזקים שהם "כעין גניבה ואבידה", כלומר, שאינם בגדר פשיעה אך גם אינם בגדר אונס גמור. לכן התקנה אינה נצרכת בסַבַּל חינם, הפטור ממילא בכל מה שאינו פשיעה אלא בסבל בשכר בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי הסבר זה, שבועת הסבל על פי התקנה, אינה "שבועה שלא שברתיה בכוונה" (כמבואר בגמרא על פי שיטת רבי מאיר) אלא פשוט "שבועה שלא פשעתי".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי הסבר זה, שבועת הסבל על פי התקנה, אינה "שבועה שלא שברתיה בכוונה" (כמבואר בגמרא על פי שיטת רבי מאיר) אלא פשוט "שבועה שלא פשעתי".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בתוך סיעת ראשונים זו, נחלקו הפוסקים להלכה בעוד נקודה, הנוגעת לחילוק שמחלק רבי אליעזר בין מקום מדרון לבין מקום שאינו מקום מדרון-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בתוך סיעת ראשונים זו, נחלקו הפוסקים להלכה בעוד נקודה, הנוגעת לחילוק שמחלק רבי אליעזר בין מקום מדרון לבין מקום שאינו מקום מדרון-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> (שד) פוסק שסבל שנתקל במקום מישורי וחלק נחשב פושע אפילו לשיטת רבי יהודה, ומכיוון שתקנת חכמים (על פי הטור) לא נתקנה בכדי לפטור את הפושע, הרי שסבל שנשברה משאו במקום שאינו מקום מדרון נחשב כפושע וחייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> (שד) פוסק שסבל שנתקל במקום מישורי וחלק נחשב פושע אפילו לשיטת רבי יהודה, ומכיוון שתקנת חכמים (על פי הטור) לא נתקנה בכדי לפטור את הפושע, הרי שסבל שנשברה משאו במקום שאינו מקום מדרון נחשב כפושע וחייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, ה<strong>רמב"ם</strong> וה<strong>רא"ש</strong> אינם מחלקים חילוק זה להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת, ה<strong>רמב"ם</strong> וה<strong>רא"ש</strong> אינם מחלקים חילוק זה להלכה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שד א) כתב להלכה כדברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שד א) כתב להלכה כדברי הרמב"ם.</p>
                     
                 </div>
                 
                 <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הני דדרו באגרא</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הני דדרו באגרא</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך הגמרא (פג.) מובאות שתי תקנות שתיקן<strong> רב חייא בר יוסף</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך הגמרא (פג.) מובאות שתי תקנות שתיקן<strong> רב חייא בר יוסף</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אתקין <strong>רב חייא בר יוסף</strong> בסיכרא:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אתקין <strong>רב חייא בר יוסף</strong> בסיכרא:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הני דדרו באגרא ואיתבר - נשלם פלגא. מאי טעמא - נפיש לחד וזוטר לתרי, קרוב לאונס וקרוב לפשיעה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הני דדרו באגרא ואיתבר - נשלם פלגא. מאי טעמא - נפיש לחד וזוטר לתרי, קרוב לאונס וקרוב לפשיעה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בדיגלא - משלם כולה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בדיגלא - משלם כולה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר בסבלים הנושאים משא במוט והוזק המשא. במקרה אחד חייבים הם רק מחצה כי אין הדבר פשיעה גמורה ואילו במקרה השני הדבר נחשב לפשיעה גמורה וחייבים בכל. הראשונים נחלקו בהסבר הדברים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדובר בסבלים הנושאים משא במוט והוזק המשא. במקרה אחד חייבים הם רק מחצה כי אין הדבר פשיעה גמורה ואילו במקרה השני הדבר נחשב לפשיעה גמורה וחייבים בכל. הראשונים נחלקו בהסבר הדברים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> פירש ש"אגרא" ו"דיגלא" הם סוגי מוטות המשמשים לנשיאת משא. "אגרא" משמש לנשיאת משא על הכתף ו"דיגלא" הוא מוט מפוצל המיועד לנשיאת משא על השכם. בעזרת "אגרא" ניתן לשאת משא שהוא מעט יותר מהמותר לנשיאה עבור אדם אחד, אך משא כזה לו יחלקוהו לשנים, יהיה בכל חצי מעט מכדי שיעור נשיאת אדם. מתוך כך, נוהגים הסבלים לשאת משא כזה. לכן, אם נשבר המוט מחמת המשקל, משלם הסבל רק חצי, כי מצד אחד פשע, שנשא משא יותר מהמיועד לאדם אחד, אך מצד שני נהג כמנהג הסבלים<sup id="ref39"><a href="#fn39">[39]</a></sup>. לעומת זאת, הנושא ב"דיגלא" משא שני בני אדם הרי הוא נושא ממש משא כפול, שהיה ראוי לחלקו לשתי נשיאות. לכן אם נשבר המוט הרי זה מחמת פשיעתו וחייב בכל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> פירש ש"אגרא" ו"דיגלא" הם סוגי מוטות המשמשים לנשיאת משא. "אגרא" משמש לנשיאת משא על הכתף ו"דיגלא" הוא מוט מפוצל המיועד לנשיאת משא על השכם. בעזרת "אגרא" ניתן לשאת משא שהוא מעט יותר מהמותר לנשיאה עבור אדם אחד, אך משא כזה לו יחלקוהו לשנים, יהיה בכל חצי מעט מכדי שיעור נשיאת אדם. מתוך כך, נוהגים הסבלים לשאת משא כזה. לכן, אם נשבר המוט מחמת המשקל, משלם הסבל רק חצי, כי מצד אחד פשע, שנשא משא יותר מהמיועד לאדם אחד, אך מצד שני נהג כמנהג הסבלים<sup id="ref39"><a href="#fn39">[39]</a></sup>. לעומת זאת, הנושא ב"דיגלא" משא שני בני אדם הרי הוא נושא ממש משא כפול, שהיה ראוי לחלקו לשתי נשיאות. לכן אם נשבר המוט הרי זה מחמת פשיעתו וחייב בכל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> מסביר באופן דומה, אך מסביר שמשקל היתר הביא לא לשבירת המוט, אלא להיתקלותו של הסבל. כלומר, מקרים אלה ממשיכים את המקרים הנידונים קודם לכן בסוגיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ריטב"א</strong> מסביר באופן דומה, אך מסביר שמשקל היתר הביא לא לשבירת המוט, אלא להיתקלותו של הסבל. כלומר, מקרים אלה ממשיכים את המקרים הנידונים קודם לכן בסוגיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> (שד) מסביר באופן פשוט, שכל משא הכבד עבור אחד אך קל עבור שנים, אין נשיאתו נחשבת פשיעה, כיוון שאינו כבד בהרבה מהראוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> (שד) מסביר באופן פשוט, שכל משא הכבד עבור אחד אך קל עבור שנים, אין נשיאתו נחשבת פשיעה, כיוון שאינו כבד בהרבה מהראוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מאירי</strong> מביא הסבר דומה, אך לדעתו בניגוד לאגרא, שהיא נשיאת המשא מחולק לשני קצותיו של מוט הנישא על הכתף, דיגלא הוא כאשר המשא נמצא בקצה אחד של מוט, ודרך נשיאה זו רגישה יותר לשבירה. המאירי מוסיף שישנם הסברים רבים למציאות המדוייקת של "אגרא" ו"דיגלא", אך העיקרון ברור- ישנה מציאות בה יש לחייב את הסבל רק במחצה כיוון שהדבר אינו פשיעה גמורה ואינו אונס גמור. לכן על הדיינים לעשות בכל מקרה כראות עיניהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> מביא הסבר דומה, אך לדעתו בניגוד לאגרא, שהיא נשיאת המשא מחולק לשני קצותיו של מוט הנישא על הכתף, דיגלא הוא כאשר המשא נמצא בקצה אחד של מוט, ודרך נשיאה זו רגישה יותר לשבירה. המאירי מוסיף שישנם הסברים רבים למציאות המדוייקת של "אגרא" ו"דיגלא", אך העיקרון ברור- ישנה מציאות בה יש לחייב את הסבל רק במחצה כיוון שהדבר אינו פשיעה גמורה ואינו אונס גמור. לכן על הדיינים לעשות בכל מקרה כראות עיניהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בניגוד לכל הדעות הנ"ל, לפיהן מדובר באדם יחיד שנשא יותר מהמשקל הראוי לו, ה<strong>רמב"ם</strong> מסביר שמדובר בשני בני אדם שנשאו מטען שעבור אדם אחד היה כבד מדי. כיוון שמדובר בשנים, אין הדבר נחשב כפשיעה גמורה, וחייבים הסבלים רק בחצי. לעומת זאת, סבל הנושא לבדו משקל שכזה ונשבר המשא, הרי הוא פושע גמור וחייב לשלם הכל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בניגוד לכל הדעות הנ"ל, לפיהן מדובר באדם יחיד שנשא יותר מהמשקל הראוי לו, ה<strong>רמב"ם</strong> מסביר שמדובר בשני בני אדם שנשאו מטען שעבור אדם אחד היה כבד מדי. כיוון שמדובר בשנים, אין הדבר נחשב כפשיעה גמורה, וחייבים הסבלים רק בחצי. לעומת זאת, סבל הנושא לבדו משקל שכזה ונשבר המשא, הרי הוא פושע גמור וחייב לשלם הכל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ל<strong>ראב"ד</strong> שיטה יחידאית בפירוש הדברים. בניגוד לכל שאר הראשונים שפירשו שיסוד הפשיעה של הסבל נעוץ בכך שלקח משא כבד מדי, הראב"ד מסביר שהפשיעה דווקא נובעת מכך שהמשא היה קל. טעמו הוא שכאשר פועל נושא משא קל ונתקל, יש להניח שהיתקלותו נובעת מזילזול והיא מוגדרת כפשיעה אפילו לפי הדעה שנתקל אינו פושע. את הגמרא מפרש הראב"ד כעוסקת תמיד בשני פועלים הנושאים משא. אם המשא קל עבור שניהם יחד, אך כבד עבור אדם יחיד, היתקלותם היא "פשיעה למחצה", ולכן משלמים חצי נזק, אך אם המשא קל אף ליחיד ("דיגלא") ההיתקלות נחשבת כפשיעה וחייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ל<strong>ראב"ד</strong> שיטה יחידאית בפירוש הדברים. בניגוד לכל שאר הראשונים שפירשו שיסוד הפשיעה של הסבל נעוץ בכך שלקח משא כבד מדי, הראב"ד מסביר שהפשיעה דווקא נובעת מכך שהמשא היה קל. טעמו הוא שכאשר פועל נושא משא קל ונתקל, יש להניח שהיתקלותו נובעת מזילזול והיא מוגדרת כפשיעה אפילו לפי הדעה שנתקל אינו פושע. את הגמרא מפרש הראב"ד כעוסקת תמיד בשני פועלים הנושאים משא. אם המשא קל עבור שניהם יחד, אך כבד עבור אדם יחיד, היתקלותם היא "פשיעה למחצה", ולכן משלמים חצי נזק, אך אם המשא קל אף ליחיד ("דיגלא") ההיתקלות נחשבת כפשיעה וחייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל הבאנו את מחלוקת הראשונים האם תיקנו חכמים לפטור את הסבל ששבר את משאו אפילו מפשיעה (<strong>רבינו</strong><strong> יונתן</strong>, ה<strong>רשב"א</strong>, <strong>בעה"מ</strong>), או שלהלכה לא נפסק כך, וסבל שפשע חייב (<strong>רא"ש</strong>, <strong>רי"ף</strong>, <strong>רמב"ם</strong>). בני הסיעה הראשונה נדרשים להסביר מדוע במקרה של רב חייא חייבים הסבלים על פשיעה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעיל הבאנו את מחלוקת הראשונים האם תיקנו חכמים לפטור את הסבל ששבר את משאו אפילו מפשיעה (<strong>רבינו</strong><strong> יונתן</strong>, ה<strong>רשב"א</strong>, <strong>בעה"מ</strong>), או שלהלכה לא נפסק כך, וסבל שפשע חייב (<strong>רא"ש</strong>, <strong>רי"ף</strong>, <strong>רמב"ם</strong>). בני הסיעה הראשונה נדרשים להסביר מדוע במקרה של רב חייא חייבים הסבלים על פשיעה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריא"ז</strong> (קונטרס הראיות) מסביר שסבל הנושא חבית כבידה מדי היא פשיעה חמורה, והרי זה כאילו עשה במזיד, ולא תיקנו חכמים שיפטר הסבל בפשיעה אלא בפשיעה קלה כגון שנתקל ונפל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ריא"ז</strong> (קונטרס הראיות) מסביר שסבל הנושא חבית כבידה מדי היא פשיעה חמורה, והרי זה כאילו עשה במזיד, ולא תיקנו חכמים שיפטר הסבל בפשיעה אלא בפשיעה קלה כגון שנתקל ונפל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם על פי הסברו של רש"י, שלא נתקל הסבל אלא נשבר המוט, ניתן להסביר באופן דומה, שתקנת חכמים היתה לפטור את הסבל הנתקל, אך לא את הסבל שמחמת רשלנותו ופשיעתו לא השתמש באמצעי נשיאה המתאים למשקל המשא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם על פי הסברו של רש"י, שלא נתקל הסבל אלא נשבר המוט, ניתן להסביר באופן דומה, שתקנת חכמים היתה לפטור את הסבל הנתקל, אך לא את הסבל שמחמת רשלנותו ופשיעתו לא השתמש באמצעי נשיאה המתאים למשקל המשא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שד ב-ג) כותב את דברי הרמב"ם להלכה, וה<strong>רמ"א</strong> מביא להלכה את דעת הטור, הסובר שתשלום מחצה אמור גם באדם יחיד שסחב משא הכבד לאחד וקל לשנים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שד ב-ג) כותב את דברי הרמב"ם להלכה, וה<strong>רמ"א</strong> מביא להלכה את דעת הטור, הסובר שתשלום מחצה אמור גם באדם יחיד שסחב משא הכבד לאחד וקל לשנים.</p>
                     
                 </div>
                 
                 <div id="topic-1-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שומר שנאנס במקום שהרבים מצויים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שומר שנאנס במקום שהרבים מצויים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סוגיית הגמרא הנ"ל (פג.) מביאה <strong>ברייתא</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">סוגיית הגמרא הנ"ל (פג.) מביאה <strong>ברייתא</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תניא, <strong>איסי בן יהודה</strong> אומר: ["כי יתן איש אל רעהו... לשמר ומת...] <strong>אין ראה</strong> שבעת ה' תהיה בין שניהם" הא יש רואה - יביא ראיה ויפטר.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תניא, <strong>איסי בן יהודה</strong> אומר: ["כי יתן איש אל רעהו... לשמר ומת...] <strong>אין ראה</strong> שבעת ה' תהיה בין שניהם" הא יש רואה - יביא ראיה ויפטר.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">איסי בן יהודה מחדש שהשומר יכול להישבע דווקא במקום בו לא סביר שמישהו ראה מה היה ויכול להעיד על כך. לעומת זה, במקום בו היה מי שראה מה שקרה ויכול להעיד, אין להניח לשומר להישבע ולהיפטר, אלא יש לדרוש שיביא עדות שאכן נאנס כדבריו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">איסי בן יהודה מחדש שהשומר יכול להישבע דווקא במקום בו לא סביר שמישהו ראה מה היה ויכול להעיד על כך. לעומת זה, במקום בו היה מי שראה מה שקרה ויכול להעיד, אין להניח לשומר להישבע ולהיפטר, אלא יש לדרוש שיביא עדות שאכן נאנס כדבריו.</p>
                     
                 </div>
                 
@@ -1125,51 +1125,51 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הסבל ששבר חבית של יין לחנווני ונתחייב לשלם והרי היא שוה ביום השוק ארבעה ובשאר הימים שלשה אם החזירו ביום השוק חייבין להחזיר חבית של יין או ישלמו לו ארבעה והוא שלא היה לו יין למכור ביום השוק אבל אם היה לו יין מחזירין לו שלשה, החזירו לו בשאר הימים מחזירין לו שלשה ומנכין לו בכל זמן טורח שהיה טורח במכירתה ופגם הנקב שהיה נוקב החבית וכן כל כיוצא בזה. הסבל ששבר חבית וכו' עד וכן כל כיוצא בזה. א"א לא נהיר דה"ל לאפלוגי נמי בהא בין דה"ל חמרא או לא עכ"ל.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הסבל ששבר דבר הנמכר בשני תעריפים, כיצד משלם?</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הסבל ששבר דבר הנמכר בשני תעריפים, כיצד משלם?</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (בבא מציעא צט:) דנה במקרים בהם אדם התחייב לשלם על דבר מה שהזיק (או גזל או שהיה אחראי עליו כשומר) ואותו חפץ יכול להימכר בשני תעריפים שונים<sup id="ref40"><a href="#fn40">[40]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (בבא מציעא צט:) דנה במקרים בהם אדם התחייב לשלם על דבר מה שהזיק (או גזל או שהיה אחראי עליו כשומר) ואותו חפץ יכול להימכר בשני תעריפים שונים<sup id="ref40"><a href="#fn40">[40]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בין השאר נידון המקרה של סבלים ששברו חבית יין של חנווני, במצב בו ביום השוק שווה היין יותר מאשר ביום אחר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בין השאר נידון המקרה של סבלים ששברו חבית יין של חנווני, במצב בו ביום השוק שווה היין יותר מאשר ביום אחר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: הני שקולאי דתברו חביתא דחמרא לחנוואה, ביומא דשוקא מיזדבנא בחמש, בשאר יומי מיזדבנא בארבע.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: הני שקולאי דתברו חביתא דחמרא לחנוואה, ביומא דשוקא מיזדבנא בחמש, בשאר יומי מיזדבנא בארבע.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אהדרו ליה ביומא דשוקא - מהדרו ליה חביתא דחמרא,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אהדרו ליה ביומא דשוקא - מהדרו ליה חביתא דחמרא,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בשאר יומי - מהדרו ליה חמש.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בשאר יומי - מהדרו ליה חמש.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ולא אמרן אלא דלא הוה ליה חמרא לזבוני, אבל הוה ליה חמרא לזבוני - הא איבעי ליה לזבוני.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ולא אמרן אלא דלא הוה ליה חמרא לזבוני, אבל הוה ליה חמרא לזבוני - הא איבעי ליה לזבוני.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומנכי ליה אגר טירחיה, ודמי ברזנייתא</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ומנכי ליה אגר טירחיה, ודמי ברזנייתא</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי הגרסה שלפנינו, אם מחזיר הסבל ביום השוק, מחזיר חבית יין, ואם מחזיר בשאר ימים, מחזיר את שווי החבית ביום שוק, דהיינו, חמישה זוזים. הגמרא מוסיפה סייג, שהדברים אמורים במקרה בו לא היה לו לחנווני יין למכור. הראשונים חלקו בהבנת הדין והסייג, וניתן לחלק את דעותיהם לשלוש קבוצות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי הגרסה שלפנינו, אם מחזיר הסבל ביום השוק, מחזיר חבית יין, ואם מחזיר בשאר ימים, מחזיר את שווי החבית ביום שוק, דהיינו, חמישה זוזים. הגמרא מוסיפה סייג, שהדברים אמורים במקרה בו לא היה לו לחנווני יין למכור. הראשונים חלקו בהבנת הדין והסייג, וניתן לחלק את דעותיהם לשלוש קבוצות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שההקשר של הדין הוא <strong>פיצוי על אובדן השתכרות</strong>. כלומר, אם הסבל מבצע את ההשבה לאחר יום השוק, הפסיד בכך החנווני זוז אחד, כיוון שהיה יכול למכור את חבית היין שמחירה 4 זוז בחמישה זוז ביום השוק. לכן, צריך הסבל לשלם חמישה זוזים. ה<strong>תוספות</strong> (ד"ה "אהדרו ליה") מסבירים באופן דומה ומוסיפים שלא יכול הסבל לתת לאחר יום השוק חבית יין או ארבעה זוזים ולדרוש שהחנווני ימכור את היין ביום השוק הבא, כיוון שהדבר יכריח את החנווני להמתין עד ליום השוק הבא עד שירוויח בפועל את הכסף. על פי הסבר זה סְייג הגמרא ("ולא אמרן אלא...") מתפרש כך- אם ביום השוק, שעבר בטרם ביצע הסבל את ההשבה (ועל הפסד ההשתכרות בו תובע החנווני פיצוי), היה לחנווני יין ולא מכרו, זהו סימן לכך שגם לו היה הסבל מזדרז ומשלם לפני יום השוק, לא היה החנווני ממיר את היין לכסף, וממילא יוצא שתשלומו המאוחר של הסבל לא הביא להפסד לחנווני ויכול הסבל לשלם ארבעה זוזים או לתת חבית יין גם לאחר יום השוק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שההקשר של הדין הוא <strong>פיצוי על אובדן השתכרות</strong>. כלומר, אם הסבל מבצע את ההשבה לאחר יום השוק, הפסיד בכך החנווני זוז אחד, כיוון שהיה יכול למכור את חבית היין שמחירה 4 זוז בחמישה זוז ביום השוק. לכן, צריך הסבל לשלם חמישה זוזים. ה<strong>תוספות</strong> (ד"ה "אהדרו ליה") מסבירים באופן דומה ומוסיפים שלא יכול הסבל לתת לאחר יום השוק חבית יין או ארבעה זוזים ולדרוש שהחנווני ימכור את היין ביום השוק הבא, כיוון שהדבר יכריח את החנווני להמתין עד ליום השוק הבא עד שירוויח בפועל את הכסף. על פי הסבר זה סְייג הגמרא ("ולא אמרן אלא...") מתפרש כך- אם ביום השוק, שעבר בטרם ביצע הסבל את ההשבה (ועל הפסד ההשתכרות בו תובע החנווני פיצוי), היה לחנווני יין ולא מכרו, זהו סימן לכך שגם לו היה הסבל מזדרז ומשלם לפני יום השוק, לא היה החנווני ממיר את היין לכסף, וממילא יוצא שתשלומו המאוחר של הסבל לא הביא להפסד לחנווני ויכול הסבל לשלם ארבעה זוזים או לתת חבית יין גם לאחר יום השוק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סי' יז) מסביר שדין זה הולך אחר העיקרון לפיו <strong>יש לפצות כפי השווי של החפץ בשעת הנזק</strong>. מדובר בכגון ששבר הסבל את החבית ביום השוק, בו היתה שווה חמישה זוזים. לכן, אם מחזיר לו ביום השוק, יכול להחזיר לו חבית יין. לעומת זאת, אם מחזיר לו בשאר ימים, חייב להחזיר לו חמישה זוזים, ואינו יכול להחזיר לו חבית יין, השווה בסתם יום רק ד' זוזים. הסבר זה כותב גם ה<strong>ראב"ד</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סי' יז) מסביר שדין זה הולך אחר העיקרון לפיו <strong>יש לפצות כפי השווי של החפץ בשעת הנזק</strong>. מדובר בכגון ששבר הסבל את החבית ביום השוק, בו היתה שווה חמישה זוזים. לכן, אם מחזיר לו ביום השוק, יכול להחזיר לו חבית יין. לעומת זאת, אם מחזיר לו בשאר ימים, חייב להחזיר לו חמישה זוזים, ואינו יכול להחזיר לו חבית יין, השווה בסתם יום רק ד' זוזים. הסבר זה כותב גם ה<strong>ראב"ד</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי דרך זו מתפרש הסייג בשתי דרכים אפשריות:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי דרך זו מתפרש הסייג בשתי דרכים אפשריות:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם מחזיר הסבל לחנווני ביום השוק, ובאותו יום יש די יין לחנווני למכור (ואינו יכול למכור יותר ממה שכבר יש לו), חייב להחזיר לו חמישה זוזים ולא חבית יין, כיוון שלא יהיה סיפק ביד החנווני ביום שוק זה לתרגם את חבית היין שיקבל כתשלום לשווי של חמישה זוזים, שהוא גובה הפיצוי הראוי לו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם מחזיר הסבל לחנווני ביום השוק, ובאותו יום יש די יין לחנווני למכור (ואינו יכול למכור יותר ממה שכבר יש לו), חייב להחזיר לו חמישה זוזים ולא חבית יין, כיוון שלא יהיה סיפק ביד החנווני ביום שוק זה לתרגם את חבית היין שיקבל כתשלום לשווי של חמישה זוזים, שהוא גובה הפיצוי הראוי לו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אם, ביום השוק בו שבר הסבל את החבית, היה לחנווני די והותר יין למכירה, יכול הסבל לטעון שלא הפסיד לחנווני בפועל חמישה זוזים, ולכן משלם לו, בכל יום, ארבעה זוזים בלבד<sup id="ref41"><a href="#fn41">[41]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אם, ביום השוק בו שבר הסבל את החבית, היה לחנווני די והותר יין למכירה, יכול הסבל לטעון שלא הפסיד לחנווני בפועל חמישה זוזים, ולכן משלם לו, בכל יום, ארבעה זוזים בלבד<sup id="ref41"><a href="#fn41">[41]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> גורס בגמרא "בשאר יומי - מהדרו ליה ארבע" (ולא "חמש" כמו לפנינו). בהתאם לגירסה זו מסביר הרמב"ם שאין הסבל חייב לשלם שווי ממוני ידוע (כפי' הרא"ש) ואף לא לפצות את החנווני על הפסדיו (כפי' רש"י), אלא להשיב לחנווני חבית יין כמו זו ששבר. לכן, יכול הסבל להשיב חבית יין בכל יום, אף אם אין זה יום השוק. אמנם, אם משיב לו כסף, צריך להשיב לו סכום הניתן להמרה לחבית יין. לכן, אם משלם לו בשאר ימים, משלם לו ד', כשיעור שווי חבית אז, ואם משלם לו ביום השוק, משלם לו ה' כשיעור שווי חבית אז.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> גורס בגמרא "בשאר יומי - מהדרו ליה ארבע" (ולא "חמש" כמו לפנינו). בהתאם לגירסה זו מסביר הרמב"ם שאין הסבל חייב לשלם שווי ממוני ידוע (כפי' הרא"ש) ואף לא לפצות את החנווני על הפסדיו (כפי' רש"י), אלא להשיב לחנווני חבית יין כמו זו ששבר. לכן, יכול הסבל להשיב חבית יין בכל יום, אף אם אין זה יום השוק. אמנם, אם משיב לו כסף, צריך להשיב לו סכום הניתן להמרה לחבית יין. לכן, אם משלם לו בשאר ימים, משלם לו ד', כשיעור שווי חבית אז, ואם משלם לו ביום השוק, משלם לו ה' כשיעור שווי חבית אז.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסייג שבדברי הגמרא מתבאר כך- אם בחר הסבל לשלם ביום השוק, וביום זה יש לו לחנווני די יין שימכור, אין צריך לשלם לו ה', אלא די שישלם לו ד', כיוון שממילא לא יקנה החנווני בכסף זה יין היום, אלא יחכה למחר, ומחר שוויה של חבית יין הוא ד' זוזים<sup id="ref42"><a href="#fn42">[42]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הסייג שבדברי הגמרא מתבאר כך- אם בחר הסבל לשלם ביום השוק, וביום זה יש לו לחנווני די יין שימכור, אין צריך לשלם לו ה', אלא די שישלם לו ד', כיוון שממילא לא יקנה החנווני בכסף זה יין היום, אלא יחכה למחר, ומחר שוויה של חבית יין הוא ד' זוזים<sup id="ref42"><a href="#fn42">[42]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא </strong>מוסיף שאם הסבל משלם את השווי שיכול היה החנווני להרוויח, יש לנכות מהתשלום הוצאות שהיה החנווני מוציא לו היה מוכר, כדוגמת שכר טורח המכירה ודמי הטיפול בחבית<sup id="ref43"><a href="#fn43">[43]</a></sup> (יש גורסים "דמי כרזנייתא"- עלות ההכרזה או הפרסומת).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא </strong>מוסיף שאם הסבל משלם את השווי שיכול היה החנווני להרוויח, יש לנכות מהתשלום הוצאות שהיה החנווני מוציא לו היה מוכר, כדוגמת שכר טורח המכירה ודמי הטיפול בחבית<sup id="ref43"><a href="#fn43">[43]</a></sup> (יש גורסים "דמי כרזנייתא"- עלות ההכרזה או הפרסומת).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שד ה) העתיק את לשון הרמב"ם להלכה, וה<strong>רמ"א</strong> פוסק כרא"ש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שד ה) העתיק את לשון הרמב"ם להלכה, וה<strong>רמ"א</strong> פוסק כרא"ש.</p>
                     
                 </div>
                 
@@ -1177,65 +1177,65 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     רועה שבאו זאבים וטרפו ממנו אם היה זאב אחד אין זה אונס אפילו בשעת משלחת זאבים, ואם היו שני זאבים הרי זה אונס, שני כלבים אינן אונס אפילו באו משתי רוחות היו יתר על שנים הרי זה אונס, ליסטים מזויין הרי הוא אונס ואפילו היה הרועה מזויין ובא לו ליסטים אחר מזויין הרי זה אונס שאין הרועה מוסר נפשו כליסטים, הארי והדוב והנמר והברדלס והנחש הרי אלו אונסין אימתי בזמן שבאו מאליהן אבל אם הוליכם למקום גדודי חיות וליסטים אין אלו אונסין וחייב לשלם.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     רועה שמצא גנב והתחיל להתגרות בו ולהראותו שאינו חושש ממנו ואמר לו הרי אנו במקום פלוני וכך וכך רועים אנחנו וכך וכך כלי מלחמה יש לנו ובא אותו הליסטים ונצחו ולקח מהן הרי הרועה חייב שאחד המוליך את הבהמה למקום גדודי חיות וליסטים או מביא את הליסטים בהתגרותו למקום הבהמה.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מקרים של אונס ברועה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מקרים של אונס ברועה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור לעיל, בין שומר חינם ובין שומר שכר פטורים על אונס. ה<strong>משנה</strong> (בבא מציעא צג:) נותנת דוגמאות למקרים הנחשבים אונס ולמקרים שאינם נחשבים אונס, כאשר מדובר ברועה בהמות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאמור לעיל, בין שומר חינם ובין שומר שכר פטורים על אונס. ה<strong>משנה</strong> (בבא מציעא צג:) נותנת דוגמאות למקרים הנחשבים אונס ולמקרים שאינם נחשבים אונס, כאשר מדובר ברועה בהמות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>זאב אחד - אינו אונס, שני זאבים - אונס.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>זאב אחד - אינו אונס, שני זאבים - אונס.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יהודה</strong> אומר: בשעת משלחת זאבים, אף זאב אחד אונס.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי יהודה</strong> אומר: בשעת משלחת זאבים, אף זאב אחד אונס.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שני כלבים - אינו אונס.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שני כלבים - אינו אונס.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ידוע הבבלי</strong> אומר משום <strong>רבי מאיר</strong>: מרוח אחת - אינו אונס, משתי רוחות - אונס.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>ידוע הבבלי</strong> אומר משום <strong>רבי מאיר</strong>: מרוח אחת - אינו אונס, משתי רוחות - אונס.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הלסטים - הרי זה אונס.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הלסטים - הרי זה אונס.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הארי הדוב והנמר והברדלס והנחש - הרי אלו אונס.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הארי הדוב והנמר והברדלס והנחש - הרי אלו אונס.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אימתי - בזמן שבאו מאליהן, אבל הוליכן למקום גדודי חיה ולסטים - אינו אונס...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אימתי - בזמן שבאו מאליהן, אבל הוליכן למקום גדודי חיה ולסטים - אינו אונס...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה מחלקת בין שלושה מקרים- מקרה בו העדר מותקף על ידי זאבים, מקרה בו הוא מותקף על ידי כלבים ומקרה שלישי בו התקיפוהו שאר חיות מזיקות כמון ארי, דוב, נמר, ברדלס ונחש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה מחלקת בין שלושה מקרים- מקרה בו העדר מותקף על ידי זאבים, מקרה בו הוא מותקף על ידי כלבים ומקרה שלישי בו התקיפוהו שאר חיות מזיקות כמון ארי, דוב, נמר, ברדלס ונחש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה הראשון המשנה מחלקת בין זאב אחד, שאינו נחשב אונס, לבין שני זאבים- מקרה הנחשב אונס<sup id="ref44"><a href="#fn44">[44]</a></sup>. <strong>ו</strong><strong>רבי</strong> <strong>יהודה</strong> מוסיף שבשעת "משלחת זאבים" אף תקיפה ע"י זאב אחד נחשבת לאונס. הראשונים נחלקו בהסבר המונח "משלחת זאבים"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה הראשון המשנה מחלקת בין זאב אחד, שאינו נחשב אונס, לבין שני זאבים- מקרה הנחשב אונס<sup id="ref44"><a href="#fn44">[44]</a></sup>. <strong>ו</strong><strong>רבי</strong> <strong>יהודה</strong> מוסיף שבשעת "משלחת זאבים" אף תקיפה ע"י זאב אחד נחשבת לאונס. הראשונים נחלקו בהסבר המונח "משלחת זאבים"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שבזמן "משלחת זאבים" אף זאב בודד מתנהג בצורה נועזת ותוקפנית מהרגיל ולכן סובר ר' יהודה שאפילו זאב אחד שכזה נחשב לאונס<sup id="ref45"><a href="#fn45">[45]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שבזמן "משלחת זאבים" אף זאב בודד מתנהג בצורה נועזת ותוקפנית מהרגיל ולכן סובר ר' יהודה שאפילו זאב אחד שכזה נחשב לאונס<sup id="ref45"><a href="#fn45">[45]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי ברוך הספרדי</strong> מבין שמשלחת זאבים הוא מצב בו זאבים רבים מצויים וטורפים. לפיכך לא מובן המצב של "זאב אחד" בשעת "משלחת זאבים". לכן מסביר ר' ברוך שאם יהדוף הרועה את אותו זאב יחיד, "יצאו (זאבים) אחרים ומריעין לרועה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי ברוך הספרדי</strong> מבין שמשלחת זאבים הוא מצב בו זאבים רבים מצויים וטורפים. לפיכך לא מובן המצב של "זאב אחד" בשעת "משלחת זאבים". לכן מסביר ר' ברוך שאם יהדוף הרועה את אותו זאב יחיד, "יצאו (זאבים) אחרים ומריעין לרועה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">משני ההסברים המבארים את שיטת ר' יהודה, ניתן ללמוד את העיקרון הבסיסי של כל המשנה- <strong>אונס מוגדר כמקרה בו הרועה אינו יכול למנוע את ההפסד מבלי לסכן בכך את חייו שלו עצמו</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">משני ההסברים המבארים את שיטת ר' יהודה, ניתן ללמוד את העיקרון הבסיסי של כל המשנה- <strong>אונס מוגדר כמקרה בו הרועה אינו יכול למנוע את ההפסד מבלי לסכן בכך את חייו שלו עצמו</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במקרה השני העדר מותקף על ידי כלבים, ובמקרה זה אף שני כלבים אינם נחשבים כאונס<sup id="ref46"><a href="#fn46">[46]</a></sup>, אא"כ, לדברי <strong>ידוע הבבלי</strong>, באים הם מכיוונים שונים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקרה השני העדר מותקף על ידי כלבים, ובמקרה זה אף שני כלבים אינם נחשבים כאונס<sup id="ref46"><a href="#fn46">[46]</a></sup>, אא"כ, לדברי <strong>ידוע הבבלי</strong>, באים הם מכיוונים שונים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בקטגוריה השלישית ישנם איומים מסכני חיים, שהרועה נחשב כאנוס מולם, ללא קשר במספרם כגון ליסטים (אפילו שודד אחד) וחיות רעות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בקטגוריה השלישית ישנם איומים מסכני חיים, שהרועה נחשב כאנוס מולם, ללא קשר במספרם כגון ליסטים (אפילו שודד אחד) וחיות רעות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מתברר שהשודד האחד הנחשב כאונס הוא דוקא שודד חמוש, המהווה סכנה לחייו של השומר. מול שודד שאינו חמוש אמור הרועה להיות מסוגל להתעמת (בלשון הגמרא "אוקי גברא להדי גברא"<sup id="ref47"><a href="#fn47">[47]</a></sup>). הגמרא מוסיפה שגם אם שניהם, הרועה והשודד, חמושים, הדבר נחשב כאונס, כיוון שהשודד "מסר נפשיה". כלומר, כל מעשה השוד כרוך בהשלכת נפשו של השודד מנגד, ולכן הוא אינו נרתע מנשקו של השומר, ואף מהווה סכנה לחייו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מתברר שהשודד האחד הנחשב כאונס הוא דוקא שודד חמוש, המהווה סכנה לחייו של השומר. מול שודד שאינו חמוש אמור הרועה להיות מסוגל להתעמת (בלשון הגמרא "אוקי גברא להדי גברא"<sup id="ref47"><a href="#fn47">[47]</a></sup>). הגמרא מוסיפה שגם אם שניהם, הרועה והשודד, חמושים, הדבר נחשב כאונס, כיוון שהשודד "מסר נפשיה". כלומר, כל מעשה השוד כרוך בהשלכת נפשו של השודד מנגד, ולכן הוא אינו נרתע מנשקו של השומר, ואף מהווה סכנה לחייו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה כתבה שאם הרועה פשע והוליך את הבהמות למקום שודדים או חיות רעות, אין הדבר נחשב אונס וחייב. בגמרא שואל אביי מה הדין במקרה בו הרועה לא הביא את העדר למקום סכנה, אך הביא את הסכנה למקומו של העדר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה כתבה שאם הרועה פשע והוליך את הבהמות למקום שודדים או חיות רעות, אין הדבר נחשב אונס וחייב. בגמרא שואל אביי מה הדין במקרה בו הרועה לא הביא את העדר למקום סכנה, אך הביא את הסכנה למקומו של העדר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>אביי</strong> ל<strong>רבא</strong>: אשכחיה רועה (=מצא הרועה את הגנב), ואמר ליה: גנבא סריא! (=גנב מסריח), בדוכתא פלניא יתיבינן, כך וכך גברי איכא בהדן, כך וכך כלבי איכא בהדן, כך וכך זוקתא פסיקא לן, ואזל ושקל מיניה, מאי?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>אביי</strong> ל<strong>רבא</strong>: אשכחיה רועה (=מצא הרועה את הגנב), ואמר ליה: גנבא סריא! (=גנב מסריח), בדוכתא פלניא יתיבינן, כך וכך גברי איכא בהדן, כך וכך כלבי איכא בהדן, כך וכך זוקתא פסיקא לן, ואזל ושקל מיניה, מאי?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: הרי הוליכן למקום גדודי חיה ולסטים.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: הרי הוליכן למקום גדודי חיה ולסטים.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם הרועה התגרה בשודד, ומסר לו מידע הנוגע לעדר ולשמירתו, ובא הגזלן ולקח, חייב הרועה ואין הדבר נחשב לאונס<sup id="ref48"><a href="#fn48">[48]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם הרועה התגרה בשודד, ומסר לו מידע הנוגע לעדר ולשמירתו, ובא הגזלן ולקח, חייב הרועה ואין הדבר נחשב לאונס<sup id="ref48"><a href="#fn48">[48]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>טור</strong> (שג) מובאת דעת ה<strong>רמ"ה</strong> המסביר שגם במקרים שאינם נחשבים אונס, אם ניסה השומר להציל ולא הצליח "אין לך אונס גדול מזה". על פי דבריו אלה יוצא, שהחילוק בין מקרי אונס לבין מקרים שאינם אונס אינו אמור בשומר שניסה להציל (שהרי שומר שכזה פטור תמיד), אלא ביחס לשומר שלא השתדל בהצלה. כאשר מדובר באונס יש לשומר שכזה צידוק מדוע לא התאמץ- אם משום שהדבר מלווה בסכנת נפשות עבורו, או משום שאין לו סיכוי להצליח בהצלה. לעומת זאת, מצב שאינו מוגדר כאונס הוא מצב בו אין לשומר צידוק מדוע לא פעל להצלת הפיקדון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>טור</strong> (שג) מובאת דעת ה<strong>רמ"ה</strong> המסביר שגם במקרים שאינם נחשבים אונס, אם ניסה השומר להציל ולא הצליח "אין לך אונס גדול מזה". על פי דבריו אלה יוצא, שהחילוק בין מקרי אונס לבין מקרים שאינם אונס אינו אמור בשומר שניסה להציל (שהרי שומר שכזה פטור תמיד), אלא ביחס לשומר שלא השתדל בהצלה. כאשר מדובר באונס יש לשומר שכזה צידוק מדוע לא התאמץ- אם משום שהדבר מלווה בסכנת נפשות עבורו, או משום שאין לו סיכוי להצליח בהצלה. לעומת זאת, מצב שאינו מוגדר כאונס הוא מצב בו אין לשומר צידוק מדוע לא פעל להצלת הפיקדון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שג ג-ד) פוסק כדברי תנא קמא במשנה וכפי שפירשה הגמרא. בהבנת משמעות הגדרת האונס כותב השו"ע (שם ה) להלכה כדברי ה<strong>רמ"ה</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שג ג-ד) פוסק כדברי תנא קמא במשנה וכפי שפירשה הגמרא. בהבנת משמעות הגדרת האונס כותב השו"ע (שם ה) להלכה כדברי ה<strong>רמ"ה</strong>.</p>
                     
                 </div>
                 
@@ -1243,308 +1243,308 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו-י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     רועה שהיה לו להציל הטריפה או השבויה ברועים אחרים ובמקלות ולא קרא רועים אחרים ולא הביא מקלות להציל הרי זה חייב אחד שומר חינם ואחד שומר שכר אלא ששומר חינם קורא רועים ומביא מקלות בחנם ואם לא מצא פטור אבל שומר שכר חייב לשוכר הרועים והמקלות עד כדי דמי הבהמה כדי להציל וחוזר ולוקח שכרן מבעל הבית, ואם לא עשה כן והיה לו לשכור ולא שכר הרי זה פושע וחייב.  רועה שהיה לו להציל וכו' עד ה"ז פושע וחייב. א"א דבר זה צריך פירוש שאינו משלם כל דמי הבהמות אלא מנכין לו השכר שהיה צריך לשכור הרועים להציל ואם אותו השכר עולה עד כדי דמיהם אומדין כמה אדם רוצה ליתן ולא יטרח לקנות בהמות יפות כאלה וישלם לו האומד עכ"ל.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     רועה שטען שהצלתי על ידי רועים בשכר נשבע ונוטל מה שטען שאינו יכול לטעון אלא עד כדי דמיהן ויכול היה לומר נטרפה וישבע בנקיטת חפץ כדין כל הנשבעין ונוטלין.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     רועה שהניח עדרו ובא לעיר בין בעת שדרך הרועים להכנס ובין בעת שאין דרך הרועים להכנס ובאו זאבים וטרפו ארי ודרס אין אומרים אילו היה שם היה מציל אלא אומדין אותו אם יכול להציל על ידי רועים ומקלות חייב ואם לאו פטור ואם אין הדבר ידוע חייב לשלם.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מתה הבהמה כדרכה הרי זה אונס והרועה פטור, סגפה ומתה אינו אונס, תקפתו ועלתה לראשי צוקין ותקפתו ונפלה הרי זה אונס, העלה לראשי צוקין או שעלתה מאליה והוא יכול למנעה ולא מנעה אף על פי שתקפתו ונפלה ומתה או נשברה חייב שכל שתחלתו בפשיעה וסופו באונס חייב, וכן רועה שהעביר הבהמות על הגשר ודחפה אחת מהן לחבירתה ונפלה לשבולת הנהר הרי זה חייב שהיה לו להעבירן אחת אחת שאין השומר נוטל שכר אלא לשמור שמירה מעולה והואיל ופשע בתחלה והעבירן כאחד אף על פי שנאנס בסוף בעת הנפילה הרי הוא חייב.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     פשע בה ויצאה לאגם ומתה שם כדרכה פטור שאין יציאתה גרמה לה שתבוא לידי אונס זה הואיל וכדרכה מתה מה לי בבית שומר מה לי באגם, אבל אם גנבה גנב מהאגם ומתה כדרכה בבית הגנב הרי השומר חייב אף על פי שהוא שומר חנם שאפילו לא מתה הרי היא אבדה ביד הגנב ויציאתה גרמה לה להגנב וכן כל כיוצא בזה.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">רמת השמירה הנדרשת משומר שכר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">רמת השמירה הנדרשת משומר שכר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית הגמרא (בבא מציעא צג.) מועלות דעות שונות באשר להגדרת האונס בו נפטר שומר שכר. הסוגיה מתחילה בתיאור מקרה שהובא לפני <strong>רבה</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגיית הגמרא (בבא מציעא צג.) מועלות דעות שונות באשר להגדרת האונס בו נפטר שומר שכר. הסוגיה מתחילה בתיאור מקרה שהובא לפני <strong>רבה</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא רעיא דהוה קא רעי חיותא אגודא דנהר פפא, שריג חדא מינייהו ונפלת למיא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא רעיא דהוה קא רעי חיותא אגודא דנהר פפא, שריג חדא מינייהו ונפלת למיא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אתא לקמיה ד<strong>רבה</strong> ופטריה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אתא לקמיה ד<strong>רבה</strong> ופטריה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר: מאי הוה ליה למיעבד? הא נטר כדנטרי אינשי</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר: מאי הוה ליה למיעבד? הא נטר כדנטרי אינשי</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר ברועה בהמות, על גדת הנהר. אחת הבהמות החליקה ונפלה לנהר ועתה נתבע הרועה עליה. רבה פטר את הרועה וסברתו היא "מאי הוה ליה למיעבד? הא נטר כדנטרי אינשי"- כלומר, מה יכול היה הרועה לעשות? הרי שמר הוא כדרך ששומרים בני אדם (מן הסתם אף על רכושם שלהם).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדובר ברועה בהמות, על גדת הנהר. אחת הבהמות החליקה ונפלה לנהר ועתה נתבע הרועה עליה. רבה פטר את הרועה וסברתו היא "מאי הוה ליה למיעבד? הא נטר כדנטרי אינשי"- כלומר, מה יכול היה הרועה לעשות? הרי שמר הוא כדרך ששומרים בני אדם (מן הסתם אף על רכושם שלהם).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אביי</strong> מנסה למתוח את סברתו של רבה עד הקצה (וניכר שאינו מודה לה)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אביי</strong> מנסה למתוח את סברתו של רבה עד הקצה (וניכר שאינו מודה לה)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>אביי</strong>: אלא מעתה, על למתא בעידנא דעיילי אינשי - הכי נמי דפטור? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>אביי</strong>: אלא מעתה, על למתא בעידנא דעיילי אינשי - הכי נמי דפטור? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: אין. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: אין. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>גנא פורתא בעידנא דגנו אינשי - הכי נמי דפטור? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>גנא פורתא בעידנא דגנו אינשי - הכי נמי דפטור? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: אין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: אין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אביי מצייר מצבים שלדעתו הרועה לא שמר בהם כנדרש למרות שעשה את מה שאנשים נוהגים לעשות, למשל, אם עזב הרועה את העדר ונכנס לעיר בזמן בו נוהגים רועי הבהמות להיכנס, או שישן מעט בזמן בו רגילים לישון. לדעת אביי, רועה שנהג כך חייב. אביי מוסיף ומביא שתי ברייתות להצדקת דבריו. האחת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אביי מצייר מצבים שלדעתו הרועה לא שמר בהם כנדרש למרות שעשה את מה שאנשים נוהגים לעשות, למשל, אם עזב הרועה את העדר ונכנס לעיר בזמן בו נוהגים רועי הבהמות להיכנס, או שישן מעט בזמן בו רגילים לישון. לדעת אביי, רועה שנהג כך חייב. אביי מוסיף ומביא שתי ברייתות להצדקת דבריו. האחת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלו הם אונסין ששומר שכר פטור עליהן - כגון ותפל שבא ותקחם ואת הנערים הכו לפי חרב...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלו הם אונסין ששומר שכר פטור עליהן - כגון ותפל שבא ותקחם ואת הנערים הכו לפי חרב...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">והשניה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">והשניה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>עד מתי שומר שכר חייב לשמור - עד כדי הייתי ביום אכלני חרב וקרח בלילה [ותדד שנתי מעיני].</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>עד מתי שומר שכר חייב לשמור - עד כדי הייתי ביום אכלני חרב וקרח בלילה [ותדד שנתי מעיני].</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתות מציבות רף גבוה מאד בפני שומר שכר. הוא נפטר רק בסיטואציות קיצוניות כמו זו המתוארת באובדן רכושו של איוב- כח חמוש המגיע במפתיע, הורג את האדם ולוקח לו את הבהמה לשלל. כמו כן חיוב השמירה של שומר שכר נלמד מדברי יעקב ללבן, המעיד על עצמו ששמר על הצאן יום ולילה ללא הפסק, מתוך מיעוט שינה קיצוני.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתות מציבות רף גבוה מאד בפני שומר שכר. הוא נפטר רק בסיטואציות קיצוניות כמו זו המתוארת באובדן רכושו של איוב- כח חמוש המגיע במפתיע, הורג את האדם ולוקח לו את הבהמה לשלל. כמו כן חיוב השמירה של שומר שכר נלמד מדברי יעקב ללבן, המעיד על עצמו ששמר על הצאן יום ולילה ללא הפסק, מתוך מיעוט שינה קיצוני.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מובאות דעותיהם של <strong>רב חסדא</strong> ו<strong>רבה בר רב הונא</strong> המצדדים אף הם בשיטתו של אביי כנגד רבה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מובאות דעותיהם של <strong>רב חסדא</strong> ו<strong>רבה בר רב הונא</strong> המצדדים אף הם בשיטתו של אביי כנגד רבה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב חסדא</strong> ו<strong>רבה בר רב הונא</strong> לא סבירא להו הא דרבה, דאמרי: להכי יהבי לך אגרא לנטורי לי נטירותא יתירתא</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רב חסדא</strong> ו<strong>רבה בר רב הונא</strong> לא סבירא להו הא דרבה, דאמרי: להכי יהבי לך אגרא לנטורי לי נטירותא יתירתא</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש, המפקיד אצל שומר שכר משלם לו מכיוון שהוא מצפה לשמירה טובה יותר מאשר השמירה הרגילה שכל אחד שומר על רכושו שלו. לכן מחוייב שומר שכר לשמור אף יותר מאשר הדרך בו שומרים בני אדם בדרך כלל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פירוש, המפקיד אצל שומר שכר משלם לו מכיוון שהוא מצפה לשמירה טובה יותר מאשר השמירה הרגילה שכל אחד שומר על רכושו שלו. לכן מחוייב שומר שכר לשמור אף יותר מאשר הדרך בו שומרים בני אדם בדרך כלל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כך גם משמע ממעשה המובא בהמשך-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כך גם משמע ממעשה המובא בהמשך-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בר אדא סבולאה הוי קא מעבר חיותא אגמלא דנרש, דחפה חדא לחברתה ושדיתה במיא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בר אדא סבולאה הוי קא מעבר חיותא אגמלא דנרש, דחפה חדא לחברתה ושדיתה במיא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אתא לקמיה ד<strong>רב פפא</strong>, חייביה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אתא לקמיה ד<strong>רב פפא</strong>, חייביה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: מאי הוה לי למעבד? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: מאי הוה לי למעבד? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: אבעי לך לעבורי חדא חדא. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: אבעי לך לעבורי חדא חדא. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: ידעת ביה בבר אחתיך דמצי למעבר חדא חדא? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: ידעת ביה בבר אחתיך דמצי למעבר חדא חדא? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: כבר צווחו קמאי דקמך, ולא איכא דאשגח בהו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: כבר צווחו קמאי דקמך, ולא איכא דאשגח בהו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אדם בשם בר אדא סבולאה שמר על בהמות שאינן שלו והעביר אותן על גשר. אחת הבהמות נדחפה ע"י חברתה, נפלה לנהר וטבעה. <strong>רב פפא</strong> חייב את בר אדא (למרות ששמר בדרך שכל אדם לשמור! כלומר, כשיטת אביי ולא כשיטת רבה), ונימק זאת בכך שיכול היה בר אדא להעביר את הבהמות אחת אחת, אף שהדבר קשה (ולפי תגובת בר אדא- "ידעת ביה בבר אחתיך<sup id="ref49"><a href="#fn49">[49]</a></sup>..." אולי אף גובל בבלתי אפשרי).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אדם בשם בר אדא סבולאה שמר על בהמות שאינן שלו והעביר אותן על גשר. אחת הבהמות נדחפה ע"י חברתה, נפלה לנהר וטבעה. <strong>רב פפא</strong> חייב את בר אדא (למרות ששמר בדרך שכל אדם לשמור! כלומר, כשיטת אביי ולא כשיטת רבה), ונימק זאת בכך שיכול היה בר אדא להעביר את הבהמות אחת אחת, אף שהדבר קשה (ולפי תגובת בר אדא- "ידעת ביה בבר אחתיך<sup id="ref49"><a href="#fn49">[49]</a></sup>..." אולי אף גובל בבלתי אפשרי).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכיוון שהגמרא האריכה בשיטת אביי וסיעתו החולקים על רבה ומחייבים שמירה ברמה גבוהה, פסקו הראשונים כמותה להלכה. אמנם נחלקו הראשונים בשאלה מתי שומר שכר פטור בשל אונס-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכיוון שהגמרא האריכה בשיטת אביי וסיעתו החולקים על רבה ומחייבים שמירה ברמה גבוהה, פסקו הראשונים כמותה להלכה. אמנם נחלקו הראשונים בשאלה מתי שומר שכר פטור בשל אונס-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (בבא מציעא מב. ד"ה "אמר שמואל") הבינו שאביי דורש שמירה ברמה גבוהה מאד, כזו שבה לא ניתן לבוא אל השומר בטענה שהיה עליו לעשות דבר מה נוסף שלא עשה. כך למשל טוענים התוספות, ששומר שכר יהיה פטור "אם העמיק בקרקע ק' אמות דמאי ה"ל תו למיעבד או אם תקפתו שינה או חולי גדול...". גם מלשון ה<strong>רמב"ם</strong> להלן בהלכה ט'- "...שאין השומר נוטל שכר אלא לשמור שמירה מעולה..." משמע שהוא מפרש את דרישתו של אביי כדרישה לשמירה ברמה גבוהה מאד, אך עדיין, על אירועים שאינם תלויים בשומר, הרי הוא פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (בבא מציעא מב. ד"ה "אמר שמואל") הבינו שאביי דורש שמירה ברמה גבוהה מאד, כזו שבה לא ניתן לבוא אל השומר בטענה שהיה עליו לעשות דבר מה נוסף שלא עשה. כך למשל טוענים התוספות, ששומר שכר יהיה פטור "אם העמיק בקרקע ק' אמות דמאי ה"ל תו למיעבד או אם תקפתו שינה או חולי גדול...". גם מלשון ה<strong>רמב"ם</strong> להלן בהלכה ט'- "...שאין השומר נוטל שכר אלא לשמור שמירה מעולה..." משמע שהוא מפרש את דרישתו של אביי כדרישה לשמירה ברמה גבוהה מאד, אך עדיין, על אירועים שאינם תלויים בשומר, הרי הוא פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong> (צג: ד"ה "לאביי") מחלק בין שני סוגי אונס- "אונס בגופו של הפיקדון" ו"אונס בגופו של שומר". הראשון הוא אירוע שקרה בגופו של הפיקדון ושהשומר לא היה יכול למנוע, כגון טרִיפה ע"י חיות רעות, גזל ע"י ליסטים מזויין או מיתה כדרכה. השני מתייחס למאורעות שארעו לשומר עצמו, כגון שחלה, נרדם באונס, או עזב את הפיקדון אפילו מתוך נסיבות שאינן תלויות בו ושנכפו עליו לאונסו. הרשב"א מסביר שלדעת אביי, שומר שכר חייב על כל אונס בגופו של השומר, <strong>אפילו אם לשומר לא היתה שום אפשרות למונעו</strong><sup id="ref50"><a href="#fn50">[50]</a></sup>. כך למשל, אם שומר שכר נופל למשכב והפיקדון נגנב יהיה השומר חייב, אך לעומת זה, אם גנב מאיים על חיי השומר בנשק יהיה השומר פטור, אפילו אם יצוייר מצב בו במקרה הראשון מידת היכולת של השומר לשנות את התוצאה (להתגבר על החולי) קטנה יותר מאשר יכולתו לעמוד מול הליסטים במקרה השני<sup id="ref51"><a href="#fn51">[51]</a></sup>. במקום אחר (בבא מציעא מב. ד"ה "ויש מי") מוסיף הרשב"א, שאפילו אם שומר שכר הניח את הפיקדון במקום שמור מאד ("אפילו הקיפו חומה של ברזל...") ונגנב, הרי הוא חייב, שאין שומר שכר נפטר אלא אם כן "עומד ומשמר", ובכ"ז לא יכול למנוע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"א</strong> (צג: ד"ה "לאביי") מחלק בין שני סוגי אונס- "אונס בגופו של הפיקדון" ו"אונס בגופו של שומר". הראשון הוא אירוע שקרה בגופו של הפיקדון ושהשומר לא היה יכול למנוע, כגון טרִיפה ע"י חיות רעות, גזל ע"י ליסטים מזויין או מיתה כדרכה. השני מתייחס למאורעות שארעו לשומר עצמו, כגון שחלה, נרדם באונס, או עזב את הפיקדון אפילו מתוך נסיבות שאינן תלויות בו ושנכפו עליו לאונסו. הרשב"א מסביר שלדעת אביי, שומר שכר חייב על כל אונס בגופו של השומר, <strong>אפילו אם לשומר לא היתה שום אפשרות למונעו</strong><sup id="ref50"><a href="#fn50">[50]</a></sup>. כך למשל, אם שומר שכר נופל למשכב והפיקדון נגנב יהיה השומר חייב, אך לעומת זה, אם גנב מאיים על חיי השומר בנשק יהיה השומר פטור, אפילו אם יצוייר מצב בו במקרה הראשון מידת היכולת של השומר לשנות את התוצאה (להתגבר על החולי) קטנה יותר מאשר יכולתו לעמוד מול הליסטים במקרה השני<sup id="ref51"><a href="#fn51">[51]</a></sup>. במקום אחר (בבא מציעא מב. ד"ה "ויש מי") מוסיף הרשב"א, שאפילו אם שומר שכר הניח את הפיקדון במקום שמור מאד ("אפילו הקיפו חומה של ברזל...") ונגנב, הרי הוא חייב, שאין שומר שכר נפטר אלא אם כן "עומד ומשמר", ובכ"ז לא יכול למנוע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דברים קרובים לכך מובאים בשם <strong>ר"י</strong> (מובא בתוספות בבא קמא נז. ד"ה "כגון"). לדעתו, מתוך כך שהתורה חייבה שומר שכר על גניבה באופן כללי, וכל גניבה קרובה להיחשב כאונס, משמע שהתורה חייבה שומר שכר אפילו על <strong>אונס גמור</strong><sup id="ref52"><a href="#fn52">[52]</a></sup>, אלא אם כן עמד ושמר שם ולא היה יכול לעמוד בפני הגנב (כגון שהיה מדובר בליסטים מזויין). התוספות הנ"ל מוסיפים שדברי ר"י דחוקים, אך ה<strong>רא"ש</strong> (בבא קמא פרק ו סי' ה) ובעקבותיו ה<strong>טור</strong> (שג) פוסקים לפיהם<sup id="ref53"><a href="#fn53">[53]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דברים קרובים לכך מובאים בשם <strong>ר"י</strong> (מובא בתוספות בבא קמא נז. ד"ה "כגון"). לדעתו, מתוך כך שהתורה חייבה שומר שכר על גניבה באופן כללי, וכל גניבה קרובה להיחשב כאונס, משמע שהתורה חייבה שומר שכר אפילו על <strong>אונס גמור</strong><sup id="ref52"><a href="#fn52">[52]</a></sup>, אלא אם כן עמד ושמר שם ולא היה יכול לעמוד בפני הגנב (כגון שהיה מדובר בליסטים מזויין). התוספות הנ"ל מוסיפים שדברי ר"י דחוקים, אך ה<strong>רא"ש</strong> (בבא קמא פרק ו סי' ה) ובעקבותיו ה<strong>טור</strong> (שג) פוסקים לפיהם<sup id="ref53"><a href="#fn53">[53]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דעת ה<strong>רמב"ן</strong> (מב. ד"ה "ומיהו תימה" ובהמשך שם) מהווה שיטה שלישית. הרמב"ן פוסק על פי שיטת הר"ן, הרא"ש והרשב"א, אך רק באופן חלקי- אם נאנס השומר (בשכר) מחמת חולי או אונס אחר, ולא היה יכול לשמור, נחשב הדבר לאונס ופטור השומר. לעומת זאת, אם הניח את הפיקדון במקום משתמר והלך לו, והפיקדון נגנב באופן שלו היה השומר שם היה יכול למנוע זאת, חייב השומר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דעת ה<strong>רמב"ן</strong> (מב. ד"ה "ומיהו תימה" ובהמשך שם) מהווה שיטה שלישית. הרמב"ן פוסק על פי שיטת הר"ן, הרא"ש והרשב"א, אך רק באופן חלקי- אם נאנס השומר (בשכר) מחמת חולי או אונס אחר, ולא היה יכול לשמור, נחשב הדבר לאונס ופטור השומר. לעומת זאת, אם הניח את הפיקדון במקום משתמר והלך לו, והפיקדון נגנב באופן שלו היה השומר שם היה יכול למנוע זאת, חייב השומר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שג ב-ג) כותב את דעת הטור, וה<strong>גר"א</strong> מסתייג ונוטה לכיוון הפוסקים כרמב"ם. <strong>ערוה"ש</strong> (שם ז) קובע שלהלכה אין ללכת כפסק השו"ע, כי רבים חלקו עליו, אלא מדובר בספיקא דדינא. עוד הוא מוסיף, שכאשר יש סטנדרט ברור של השמירה המצופה משומרים בשכר, והשומר עמד בסטנדרט זה, פטור השומר לכל הדעות, שכן רואים את הדרך המקובלת לשמור כתנאי בלתי כתוב בהסכם השמירה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שג ב-ג) כותב את דעת הטור, וה<strong>גר"א</strong> מסתייג ונוטה לכיוון הפוסקים כרמב"ם. <strong>ערוה"ש</strong> (שם ז) קובע שלהלכה אין ללכת כפסק השו"ע, כי רבים חלקו עליו, אלא מדובר בספיקא דדינא. עוד הוא מוסיף, שכאשר יש סטנדרט ברור של השמירה המצופה משומרים בשכר, והשומר עמד בסטנדרט זה, פטור השומר לכל הדעות, שכן רואים את הדרך המקובלת לשמור כתנאי בלתי כתוב בהסכם השמירה.</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תחילתו בפשיעה וסופו באונס ביחס לשומר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תחילתו בפשיעה וסופו באונס ביחס לשומר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן פשוט, דין "תחילתו בפשיעה וסופו באונס" חל במקרה בו השומר התרשל, אך בסופו של דבר אירע נזק לפיקדון שאינו קשור באופן ישיר להתרשלותו. שתי שאלות בסיסיות המועלות בהקשר זה הן-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">באופן פשוט, דין "תחילתו בפשיעה וסופו באונס" חל במקרה בו השומר התרשל, אך בסופו של דבר אירע נזק לפיקדון שאינו קשור באופן ישיר להתרשלותו. שתי שאלות בסיסיות המועלות בהקשר זה הן-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האם צריך להיות קשר סיבתי כלשהו בין פשיעתו של השומר לבין מה שאירע אח"כ לפיקדון?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">האם צריך להיות קשר סיבתי כלשהו בין פשיעתו של השומר לבין מה שאירע אח"כ לפיקדון?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מה סוג ההתרשלות המחייבת שומר אפילו אם לא הביאה ישירות לנזק?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מה סוג ההתרשלות המחייבת שומר אפילו אם לא הביאה ישירות לנזק?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נסקור תחילה את הסוגיות הנצרכות לעניין זה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נסקור תחילה את הסוגיות הנצרכות לעניין זה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בבבא מציעא (מב.) מביאה מקרה ושתי אפשרויות לפסוק בו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בבבא מציעא (מב.) מביאה מקרה ושתי אפשרויות לפסוק בו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דאפקיד זוזי גבי חבריה, אותבינהו בצריפא דאורבני, איגנוב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא גברא דאפקיד זוזי גבי חבריה, אותבינהו בצריפא דאורבני, איגנוב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יוסף</strong>: אף על גב דלענין גנבי נטירותא היא, לענין נורא - פשיעותא היא, הוה תחילתו בפשיעה וסופו באונס - חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב יוסף</strong>: אף על גב דלענין גנבי נטירותא היא, לענין נורא - פשיעותא היא, הוה תחילתו בפשיעה וסופו באונס - חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואיכא דאמרי: אף על גב דלענין נורא פשיעותא היא, לענין גנבי נטירותא היא, ותחלתו בפשיעה וסופו באונס - פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואיכא דאמרי: אף על גב דלענין נורא פשיעותא היא, לענין גנבי נטירותא היא, ותחלתו בפשיעה וסופו באונס - פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והילכתא: תחילתו בפשיעה וסופו באונס - חייב</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והילכתא: תחילתו בפשיעה וסופו באונס - חייב</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר בשומר שהופקדו אצלו מעות והניחן ב"צריפא דאורבני", שהוא מעין מבנה נמוך עשוי מעצי ערבה (יש המפרשים שהחביא את המעות בתוך קיר העשוי ענפי ערבה). אילו האיום היחיד היה גניבה, היה מדובר בשמירה טובה, שכן מחבוא זה אינו מיועד למעות וגנבים לא יחפשו אותן שם (רש"י). ברם, שמירה זו אינה טובה עבור סכנת דליקה. במקרה הנדון נגנבו המעות, ולכן הגמרא מגדירה אותו כ"תחילתו בפשיעה וסופו באונס". כלומר, הנחת המעות ב"צריפא דאורבני" אינה שמירה ראויה ומוגדרת כפשיעה. אמנם, ביחס למה שקרה בסופו של דבר מדובר באונס, כיוון שכנגד גנבים עשה השומר השתדלות מספקת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדובר בשומר שהופקדו אצלו מעות והניחן ב"צריפא דאורבני", שהוא מעין מבנה נמוך עשוי מעצי ערבה (יש המפרשים שהחביא את המעות בתוך קיר העשוי ענפי ערבה). אילו האיום היחיד היה גניבה, היה מדובר בשמירה טובה, שכן מחבוא זה אינו מיועד למעות וגנבים לא יחפשו אותן שם (רש"י). ברם, שמירה זו אינה טובה עבור סכנת דליקה. במקרה הנדון נגנבו המעות, ולכן הגמרא מגדירה אותו כ"תחילתו בפשיעה וסופו באונס". כלומר, הנחת המעות ב"צריפא דאורבני" אינה שמירה ראויה ומוגדרת כפשיעה. אמנם, ביחס למה שקרה בסופו של דבר מדובר באונס, כיוון שכנגד גנבים עשה השומר השתדלות מספקת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שתי אפשרויות מועלות. האחת, שמשום שתחילתו בפשיעה- חייב, והשניה, שכיוון שסופו באונס פטור. הגמרא פוסקת להלכה כאפשרות הראשונה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שתי אפשרויות מועלות. האחת, שמשום שתחילתו בפשיעה- חייב, והשניה, שכיוון שסופו באונס פטור. הגמרא פוסקת להלכה כאפשרות הראשונה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין תחילתו בפשיעה וסופו באונס מובא גם בהקשר של הסוגיה שנידונה בנושא הקודם (ב"מ צג.)- במסגרת הדיון בין האמוראים בעניין רמת השמירה הנדרשת משומר שכר. כזכור, בדיון זה טוען <strong>רבה</strong> שדי לו לשומר שישמור כמנהג העולם, ומולו <strong>אביי</strong> טוען שצריך לשמור בהשתדלות יתירה (ר' בנושא הקודם). אביי מנסה להביא ראיה מברייתא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דין תחילתו בפשיעה וסופו באונס מובא גם בהקשר של הסוגיה שנידונה בנושא הקודם (ב"מ צג.)- במסגרת הדיון בין האמוראים בעניין רמת השמירה הנדרשת משומר שכר. כזכור, בדיון זה טוען <strong>רבה</strong> שדי לו לשומר שישמור כמנהג העולם, ומולו <strong>אביי</strong> טוען שצריך לשמור בהשתדלות יתירה (ר' בנושא הקודם). אביי מנסה להביא ראיה מברייתא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רועה שהיה רועה והניח עדרו ובא לעיר, בא זאב וטרף, ובא ארי ודרס –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רועה שהיה רועה והניח עדרו ובא לעיר, בא זאב וטרף, ובא ארי ודרס –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אין אומדים אילו היה שם היה מציל,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אין אומדים אילו היה שם היה מציל,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אומדין אותו: אם יכול להציל - חייב, אם לאו - פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא אומדין אותו: אם יכול להציל - חייב, אם לאו - פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">באופן פשוט הברייתא מדברת על רועה שעזב את עדרו ובינתיים באה חיית טרף וטרפה מהעדר. הברייתא מלמדת שלא בכל מקרה יש לחייב את הרועה על שעזב את העדר אלא רק במקרה בו לוּ היה נשאר היה יכול להציל, שרק אז נמצא שעזיבתו הביאה להפסד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">באופן פשוט הברייתא מדברת על רועה שעזב את עדרו ובינתיים באה חיית טרף וטרפה מהעדר. הברייתא מלמדת שלא בכל מקרה יש לחייב את הרועה על שעזב את העדר אלא רק במקרה בו לוּ היה נשאר היה יכול להציל, שרק אז נמצא שעזיבתו הביאה להפסד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אביי מסביר את הברייתא על פי שיטתו- הרועה חייב על עזיבת העדר אפילו אם דרך העולם לעשות זאת. מולו נאלץ רבה להסביר שהרועה עזב את העדר בזמן בו לא עושים זאת רוב בני אדם, ולכן נחשב הוא פושע, שהרי לשיטתו, אם נהג כמנהג העולם, לא ניתן לבוא אליו בטענות כלל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אביי מסביר את הברייתא על פי שיטתו- הרועה חייב על עזיבת העדר אפילו אם דרך העולם לעשות זאת. מולו נאלץ רבה להסביר שהרועה עזב את העדר בזמן בו לא עושים זאת רוב בני אדם, ולכן נחשב הוא פושע, שהרי לשיטתו, אם נהג כמנהג העולם, לא ניתן לבוא אליו בטענות כלל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אביי ממשיך ומקשה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אביי ממשיך ומקשה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי, אמאי פטור? <strong>תחילתו בפשיעה וסופו באונס</strong> <strong>- חייב</strong>! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי הכי, אמאי פטור? <strong>תחילתו בפשיעה וסופו באונס</strong> <strong>- חייב</strong>! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דשמע קל אריה ועל. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>דשמע קל אריה ועל. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי, "אומדין אותו"? מאי הוה ליה למעבד? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי הכי, "אומדין אותו"? מאי הוה ליה למעבד? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>היה לו לקדם ברועים ובמקלות...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>היה לו לקדם ברועים ובמקלות...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שראינו לעיל, נפסק להלכה ש"תחילתו בפשיעה וסופו באונס- חייב". כאן אביי מקשה מעיקרון זה- כיוון ששומר שלא שמר כיאות, חייב אפילו אם בסופו של דבר אירע דבר המוגדר כאונס. לפיכך גם כאן, אם הכניסה לעיר נחשבת כהתרשלות בשמירה, אמור השומר להיות חייב אפילו אם לפי אומדננו לא היה יכול למנוע את הטריפה. על רקע קושיה זו מסביר רבה את הברייתא כך- מדובר ברועה ששמע קול אריה וברח. "אומדים אותו" הכוונה שאנו אומדים את המצב- האם יכול היה הרועה להשיג עזרה או לא. אם היה יכול, נחשבת בריחתו כפשיעה, ואם אינו יכול להשיג עזרה, הרי הוא אנוס ופטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שראינו לעיל, נפסק להלכה ש"תחילתו בפשיעה וסופו באונס- חייב". כאן אביי מקשה מעיקרון זה- כיוון ששומר שלא שמר כיאות, חייב אפילו אם בסופו של דבר אירע דבר המוגדר כאונס. לפיכך גם כאן, אם הכניסה לעיר נחשבת כהתרשלות בשמירה, אמור השומר להיות חייב אפילו אם לפי אומדננו לא היה יכול למנוע את הטריפה. על רקע קושיה זו מסביר רבה את הברייתא כך- מדובר ברועה ששמע קול אריה וברח. "אומדים אותו" הכוונה שאנו אומדים את המצב- האם יכול היה הרועה להשיג עזרה או לא. אם היה יכול, נחשבת בריחתו כפשיעה, ואם אינו יכול להשיג עזרה, הרי הוא אנוס ופטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">דין "תחילתו בפשיעה וסופו באונס" בהקשר של שומר מופיע גם בסוגיה בבבא מציעא (לו.), שם מדובר על שומר בהמה שבעקבות רשלנותו יצאה לאגם, שהוא מקום שאינו משתמר לא מגנבים ולא מחיות טרף. ברם, בסופו של דבר מתה הבהמה שם כדרכה. בעניין זה חלקו <strong>אביי</strong> ו<strong>רבא</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">דין "תחילתו בפשיעה וסופו באונס" בהקשר של שומר מופיע גם בסוגיה בבבא מציעא (לו.), שם מדובר על שומר בהמה שבעקבות רשלנותו יצאה לאגם, שהוא מקום שאינו משתמר לא מגנבים ולא מחיות טרף. ברם, בסופו של דבר מתה הבהמה שם כדרכה. בעניין זה חלקו <strong>אביי</strong> ו<strong>רבא</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אתמר, פשע בה ויצאת לאגם, ומתה כדרכה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אתמר, פשע בה ויצאת לאגם, ומתה כדרכה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>אביי</strong> משמיה ד<strong>רבה</strong> אמר: חייב,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>אביי</strong> משמיה ד<strong>רבה</strong> אמר: חייב,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> משמיה ד<strong>רבה</strong> אמר: פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> משמיה ד<strong>רבה</strong> אמר: פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אביי ורבא ממשיכים ומסבירים את היחס בין דבריהם לבין האפשרויות השונות בדין "תחילתו בפשיעה וסופו באונס"-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אביי ורבא ממשיכים ומסבירים את היחס בין דבריהם לבין האפשרויות השונות בדין "תחילתו בפשיעה וסופו באונס"-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>אביי</strong> משמיה דרבה אמר: חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>אביי</strong> משמיה דרבה אמר: חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>...</strong>לא מבעיא למאן דאמר תחילתו בפשיעה וסופו באונס חייב - דחייב. אלא אפילו למאן דאמר פטור - הכא חייב. מאי טעמא - דאמרינן: הבלא דאגמא קטלה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>...</strong>לא מבעיא למאן דאמר תחילתו בפשיעה וסופו באונס חייב - דחייב. אלא אפילו למאן דאמר פטור - הכא חייב. מאי טעמא - דאמרינן: הבלא דאגמא קטלה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> משמיה דרבה אמר: פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> משמיה דרבה אמר: פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>...</strong>לא מיבעיא למאן דאמר: תחילתו בפשיעה וסופו באונס פטור - דפטור. אלא אפילו למאן דאמר חייב - הכא פטור. מאי טעמא - דאמרינן: מלאך המות, מה לי הכא ומה לי התם?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>...</strong>לא מיבעיא למאן דאמר: תחילתו בפשיעה וסופו באונס פטור - דפטור. אלא אפילו למאן דאמר חייב - הכא פטור. מאי טעמא - דאמרינן: מלאך המות, מה לי הכא ומה לי התם?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אביי מסביר שאפילו מי שאומר בדרך כלל שתחילתו בפשיעה וסופו באונס פטור, יחייב בנידון דנן משום ש"הבלא דאגמא קטלה", כלומר, אפשר שההבל המצוי באגם היה הגורם למיתת הבהמה, ונמצא שפשיעתו של השומר הובילה למות הבהמה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אביי מסביר שאפילו מי שאומר בדרך כלל שתחילתו בפשיעה וסופו באונס פטור, יחייב בנידון דנן משום ש"הבלא דאגמא קטלה", כלומר, אפשר שההבל המצוי באגם היה הגורם למיתת הבהמה, ונמצא שפשיעתו של השומר הובילה למות הבהמה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מולו מסביר רבא, שאפילו מי שאומר בדרך כלל שתחילתו בפשיעה וסופו באונס חייב, יודה בנידון דנן שפטור, משום ש"מלאך המוות, מה לי הכא ומה לי התם". כלומר, רבא מניח שאין קשר בין מקומה של הבהמה לבין מיתתה, וכיוון שמתה כדרכה, היתה מתה גם אם היתה נשארת בדיר. מכאן שפשיעתו של השומר לא השפיעה כלל על הבהמה, והרי הוא פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מולו מסביר רבא, שאפילו מי שאומר בדרך כלל שתחילתו בפשיעה וסופו באונס חייב, יודה בנידון דנן שפטור, משום ש"מלאך המוות, מה לי הכא ומה לי התם". כלומר, רבא מניח שאין קשר בין מקומה של הבהמה לבין מיתתה, וכיוון שמתה כדרכה, היתה מתה גם אם היתה נשארת בדיר. מכאן שפשיעתו של השומר לא השפיעה כלל על הבהמה, והרי הוא פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ובהמשך-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ובהמשך-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומודי אביי דאי הדרא לבי מרה ומתה דפטור. מאי טעמא - דהא הדרא לה, וליכא למימר הבלא דאגמא קטלה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ומודי אביי דאי הדרא לבי מרה ומתה דפטור. מאי טעמא - דהא הדרא לה, וליכא למימר הבלא דאגמא קטלה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ומודי רבא כל היכא דאיגנבה גנב באגם ומתה כדרכה בי גנב דחייב. מאי טעמא, דאי שבקה מלאך המות - בביתיה דגנבא הוה קיימא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ומודי רבא כל היכא דאיגנבה גנב באגם ומתה כדרכה בי גנב דחייב. מאי טעמא, דאי שבקה מלאך המות - בביתיה דגנבא הוה קיימא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש, במקרה בו חזרה הפרה לבית השומר ומתה שם, אביי מודה לרבא, משום שאין מקום לומר ש"הבלא דאגמא קטלה", והשומר פטור. כמו כן, במקרה בו הפרה נגנבה באגם, ומתה כדרכה בבית הגנב, יודה רבא לאביי שהשומר חייב, שכן הטעם "מלאך המוות מה לי תם מה לי הכא" אינו שייך כאן, כיוון שבין אם היתה מתה ובין אם לא, הרי אבודה היא בבית הגנב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פירוש, במקרה בו חזרה הפרה לבית השומר ומתה שם, אביי מודה לרבא, משום שאין מקום לומר ש"הבלא דאגמא קטלה", והשומר פטור. כמו כן, במקרה בו הפרה נגנבה באגם, ומתה כדרכה בבית הגנב, יודה רבא לאביי שהשומר חייב, שכן הטעם "מלאך המוות מה לי תם מה לי הכא" אינו שייך כאן, כיוון שבין אם היתה מתה ובין אם לא, הרי אבודה היא בבית הגנב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו כמי לפסוק להלכה, כרבא או כאביי-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו כמי לפסוק להלכה, כרבא או כאביי-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינו חננאל</strong> מבין שמחלוקת רבא ואביי היא ממש סביב השאלה האם תחילתו בפשיעה וסופו באונס חייב (אביי) או פטור (רבא)<sup id="ref54"><a href="#fn54">[54]</a></sup>. לכן, מתוך קביעת הסוגיה (בדף מב.) שלהלכה תחילתו בפשיעה וסופו באונס חייב, פוסק כאן רבינו חננאל כאביי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבינו חננאל</strong> מבין שמחלוקת רבא ואביי היא ממש סביב השאלה האם תחילתו בפשיעה וסופו באונס חייב (אביי) או פטור (רבא)<sup id="ref54"><a href="#fn54">[54]</a></sup>. לכן, מתוך קביעת הסוגיה (בדף מב.) שלהלכה תחילתו בפשיעה וסופו באונס חייב, פוסק כאן רבינו חננאל כאביי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רי"ף</strong> (כ. מדפיו) וכן הרמב"ם לפנינו, פסקו כרבא, ש"מלאך המוות מה לי התם ומה לי הכא". הרי"ף מסביר שגם אביי וגם רבא מסכימים שתחילתו בפשיעה וסופו באונס חייב, אלא שהם חלוקים בשאלה האם צריך להיות קשר סיבתי בין הפשיעה לאונס שאירע בעקבותיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>רי"ף</strong> (כ. מדפיו) וכן הרמב"ם לפנינו, פסקו כרבא, ש"מלאך המוות מה לי התם ומה לי הכא". הרי"ף מסביר שגם אביי וגם רבא מסכימים שתחילתו בפשיעה וסופו באונס חייב, אלא שהם חלוקים בשאלה האם צריך להיות קשר סיבתי בין הפשיעה לאונס שאירע בעקבותיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נקודה נוספת בה חלקו הראשונים היא השאלה הכללית- האם צריך קשר סיבתי בין הפשיעה לבין האונס בכדי להחיל את הפסיקה שתחילתו בפשיעה וסופו באונס חייב. במילים אחרות- לו יצוייר שהנזק היה  נגרם גם ללא הפשיעה, האם עדיין יתחייב השומר שפשע, או שמא יפטר? ברור שרבא מבין שאם אין שום קשר סיבתי בין הפשיעה לבין הנזק, פטור השומר<sup id="ref55"><a href="#fn55">[55]</a></sup>. אך בשיטת אביי הדברים אינם חד משמעיים<sup id="ref56"><a href="#fn56">[56]</a></sup>. ואכן, נחלקו הראשונים בהבנתו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נקודה נוספת בה חלקו הראשונים היא השאלה הכללית- האם צריך קשר סיבתי בין הפשיעה לבין האונס בכדי להחיל את הפסיקה שתחילתו בפשיעה וסופו באונס חייב. במילים אחרות- לו יצוייר שהנזק היה  נגרם גם ללא הפשיעה, האם עדיין יתחייב השומר שפשע, או שמא יפטר? ברור שרבא מבין שאם אין שום קשר סיבתי בין הפשיעה לבין הנזק, פטור השומר<sup id="ref55"><a href="#fn55">[55]</a></sup>. אך בשיטת אביי הדברים אינם חד משמעיים<sup id="ref56"><a href="#fn56">[56]</a></sup>. ואכן, נחלקו הראשונים בהבנתו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת ה<strong>רי"ף</strong>, כאמור, אביי סובר שאף אם הפשיעה לא משפיעה על התוצאה ("מלאך המוות מה לי התם מה לי הכא"), בכל זאת חייב השומר שפשע. גם מדברי <strong>רש"י</strong> (לו: ד"ה "אלא אפילו"), משתמע כך<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת ה<strong>רי"ף</strong>, כאמור, אביי סובר שאף אם הפשיעה לא משפיעה על התוצאה ("מלאך המוות מה לי התם מה לי הכא"), בכל זאת חייב השומר שפשע. גם מדברי <strong>רש"י</strong> (לו: ד"ה "אלא אפילו"), משתמע כך<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם אומרים ה<strong>תוספות</strong> (עח. ד"ה "הוחמה"), שאביי סובר שאף המחייבים בתחילתו בפשיעה וסופו באונס, דורשים קשר מסויים בין הפשיעה לבין התוצאה<sup id="ref58"><a href="#fn58">[58]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם אומרים ה<strong>תוספות</strong> (עח. ד"ה "הוחמה"), שאביי סובר שאף המחייבים בתחילתו בפשיעה וסופו באונס, דורשים קשר מסויים בין הפשיעה לבין התוצאה<sup id="ref58"><a href="#fn58">[58]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, לדעת רוב הראשונים שיטת אביי אינה נפסקת להלכה, אך המחלוקת הנ"ל בהנבת אביי משליכה על הבנת סוגיית "רועה שהניח עדרו" (צג., סוגיה ב' לעיל) ממנה עולה רושם שהכלל "תחילתו בפשיעה וסופו באונס חייב" אמור גם כאשר אין קשר סיבתי כלל בין הפשיעה לתוצאה. רושם זה עולה מדברי אביי, הטוען כלפי רבה, ששומר שנכנס לעיר בפשיעה ("בעידנא דלא עיילי אינשי") צריך להיות חייב תמיד, בין אם יכול היה להציל לו היה שם ובין אם לא היה יכול להציל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, לדעת רוב הראשונים שיטת אביי אינה נפסקת להלכה, אך המחלוקת הנ"ל בהנבת אביי משליכה על הבנת סוגיית "רועה שהניח עדרו" (צג., סוגיה ב' לעיל) ממנה עולה רושם שהכלל "תחילתו בפשיעה וסופו באונס חייב" אמור גם כאשר אין קשר סיבתי כלל בין הפשיעה לתוצאה. רושם זה עולה מדברי אביי, הטוען כלפי רבה, ששומר שנכנס לעיר בפשיעה ("בעידנא דלא עיילי אינשי") צריך להיות חייב תמיד, בין אם יכול היה להציל לו היה שם ובין אם לא היה יכול להציל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים התייחסו לרושם זה בשתי דרכים עיקריות, בהתאמה לדרכיהן השונות בהבנת שיטת אביי-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים התייחסו לרושם זה בשתי דרכים עיקריות, בהתאמה לדרכיהן השונות בהבנת שיטת אביי-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי שיטת הרי"ף וסיעתו, שאביי מחייב בתחילתו בפשיעה וסופו באונס אפילו ללא קשר סיבתי בין הפשיעה לנזק, מסבירים ה<strong>רי"ף</strong> (כ. מדפיו) וה<strong>רא"ש</strong> (פרק ג סי' ז) שקושיית אביי אמורה רק על פי שיטתו שלו. מתוך כך, מה שטורח רבה להעמיד שמדובר בשומר שנכנס מתוך אונס ("שמע קול ארי ועל") אינו נצרך להלכה, משום שאנו פוסקים כרבא, שאם אין שום קשר סיבתי בין הפשיעה לנזק, פטור השומר שפשע. ממילא להלכה, יש לפסוק כפשט הברייתא, שגם אם הרועה נכנס לעיר בפשיעה, עדיין יש לאמוד אם היה יכול למנוע את הטריפה לו לא היה נכנס. קרי, בכדי לחייב יש להראות שהטריפה היא תוצאת הפשיעה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי שיטת הרי"ף וסיעתו, שאביי מחייב בתחילתו בפשיעה וסופו באונס אפילו ללא קשר סיבתי בין הפשיעה לנזק, מסבירים ה<strong>רי"ף</strong> (כ. מדפיו) וה<strong>רא"ש</strong> (פרק ג סי' ז) שקושיית אביי אמורה רק על פי שיטתו שלו. מתוך כך, מה שטורח רבה להעמיד שמדובר בשומר שנכנס מתוך אונס ("שמע קול ארי ועל") אינו נצרך להלכה, משום שאנו פוסקים כרבא, שאם אין שום קשר סיבתי בין הפשיעה לנזק, פטור השומר שפשע. ממילא להלכה, יש לפסוק כפשט הברייתא, שגם אם הרועה נכנס לעיר בפשיעה, עדיין יש לאמוד אם היה יכול למנוע את הטריפה לו לא היה נכנס. קרי, בכדי לחייב יש להראות שהטריפה היא תוצאת הפשיעה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (עח. ד"ה "הוחמה") וה<strong>ראב"ד</strong> (נימוק"י כ. מדפי הרי"ף) מציעים כיוון אחר- קיים קשר סיבתי עקיף בין הטרִיפה לבין כניסתו של הרועה לעיר, וזאת אפילו אם לא היה יכול הרועה לגרש את האריה. קשר זה מתבטא בכך שהרועה היה אמור להעביר את העדר למקום שמור לפני שנכנס (ראב"ד) או בכך שהרועה עזב את עדרו באותו מקום, ואילו לא היה עוזבו, היה מעבירו באופן טבעי ממקום למקום ואפשר שלא היה האריה מגיע למקום העדר (תוספות). על פי דרך זו, אם השומר נכנס בפשיעה לעיר, יחוייב מצד "תחילתו בפשיעה וסופו באונס" אפילו אם לא היה יכול לעמוד מול הסכנה. לכן, פירוש הברייתא להלכה הוא לפי ההעמדה שמעמידהּ רבה בשומר שנכנס לעיר לאונסו כי "שמע קול אריה"<sup id="ref59"><a href="#fn59">[59]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (עח. ד"ה "הוחמה") וה<strong>ראב"ד</strong> (נימוק"י כ. מדפי הרי"ף) מציעים כיוון אחר- קיים קשר סיבתי עקיף בין הטרִיפה לבין כניסתו של הרועה לעיר, וזאת אפילו אם לא היה יכול הרועה לגרש את האריה. קשר זה מתבטא בכך שהרועה היה אמור להעביר את העדר למקום שמור לפני שנכנס (ראב"ד) או בכך שהרועה עזב את עדרו באותו מקום, ואילו לא היה עוזבו, היה מעבירו באופן טבעי ממקום למקום ואפשר שלא היה האריה מגיע למקום העדר (תוספות). על פי דרך זו, אם השומר נכנס בפשיעה לעיר, יחוייב מצד "תחילתו בפשיעה וסופו באונס" אפילו אם לא היה יכול לעמוד מול הסכנה. לכן, פירוש הברייתא להלכה הוא לפי ההעמדה שמעמידהּ רבה בשומר שנכנס לעיר לאונסו כי "שמע קול אריה"<sup id="ref59"><a href="#fn59">[59]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מחלוקת זו, בין הרי"ף וסיעתו לבין התוספות וסיעתם, מבטאת את הבנתם השונה בדברי רבא "מלאך המוות מה לי הכא מה לי התם"- ה<strong>תוספות</strong> מבינים שרבא אינו מחייב משום "תחילתו בפשיעה וסופו באונס" רק במקרים בהם התוצאה (האונס) היתה מתרחשת ללא קשר לפשיעה. אם לעומת זאת אפשר שהתוצאה לא היתה מתרחשת אלמלא הפשיעה, יודה רבא שיש לחייב משום "תחילתו בפשיעה וסופו באונס". מאידך, לדעת ה<strong>רי"ף</strong>, יש קשר ישיר יותר בין הפשיעה לבין האונס ולכן די בכך שהרועה אינו יכול לעמוד מול הזאבים, בכדי להפוך את פשיעתו (בכך שנכנס לעיר) לאונס<sup id="ref60"><a href="#fn60">[60]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מחלוקת זו, בין הרי"ף וסיעתו לבין התוספות וסיעתם, מבטאת את הבנתם השונה בדברי רבא "מלאך המוות מה לי הכא מה לי התם"- ה<strong>תוספות</strong> מבינים שרבא אינו מחייב משום "תחילתו בפשיעה וסופו באונס" רק במקרים בהם התוצאה (האונס) היתה מתרחשת ללא קשר לפשיעה. אם לעומת זאת אפשר שהתוצאה לא היתה מתרחשת אלמלא הפשיעה, יודה רבא שיש לחייב משום "תחילתו בפשיעה וסופו באונס". מאידך, לדעת ה<strong>רי"ף</strong>, יש קשר ישיר יותר בין הפשיעה לבין האונס ולכן די בכך שהרועה אינו יכול לעמוד מול הזאבים, בכדי להפוך את פשיעתו (בכך שנכנס לעיר) לאונס<sup id="ref60"><a href="#fn60">[60]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עניין נוסף הנוגע לפרשנות הסוגיה בדף צג. (סוגיה ב לעיל), ושיש לו השלכות להלכה, נובע מקושיה שהקשו המפרשים- אביי מקשה על רבה, שאם פירוש הברייתא כדברי רבה, שנכנס הרועה לעיר בעת שלא ראוי היה לו להיכנס ("עידנא דלא עיילי אינשי"), צריך להיות הרועה חייב בכל אופן, מדין תחילתו בפשיעה וסופו באונס. לכאורה דבר זה אינו קשה רק לרבה, אלא גם לאביי עצמו, שכן לדעת אביי בין אם נכנס הרועה בשעה שנוהגים להיכנס ובין בשעה שלא נוהגים להיכנס, הרי הוא חייב, ואם כן, כניסתו נחשבת כ"תחילתו בפשיעה" וצריך להתחייב בכל מקרה, גם לשיטת אביי!</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עניין נוסף הנוגע לפרשנות הסוגיה בדף צג. (סוגיה ב לעיל), ושיש לו השלכות להלכה, נובע מקושיה שהקשו המפרשים- אביי מקשה על רבה, שאם פירוש הברייתא כדברי רבה, שנכנס הרועה לעיר בעת שלא ראוי היה לו להיכנס ("עידנא דלא עיילי אינשי"), צריך להיות הרועה חייב בכל אופן, מדין תחילתו בפשיעה וסופו באונס. לכאורה דבר זה אינו קשה רק לרבה, אלא גם לאביי עצמו, שכן לדעת אביי בין אם נכנס הרועה בשעה שנוהגים להיכנס ובין בשעה שלא נוהגים להיכנס, הרי הוא חייב, ואם כן, כניסתו נחשבת כ"תחילתו בפשיעה" וצריך להתחייב בכל מקרה, גם לשיטת אביי!</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים רבים, ובתוכם ה<strong>תוספות</strong> (צג. ד"ה "אי הכי"), ה<strong>רמב"ן</strong> (ד"ה "אי הכי"), וה<strong>ריטב"א</strong>, מגיעים בעקבות קושי זה למסקנה, שב"תחילתו בפשיעה וסופו באונס" חייב רק כאשר פשיעתו של השומר היתה כזו ששומר חינם מתחייב עליה. אם, לעומת זאת, השומר התרשל ברמה פחותה, כזו המחייבת אותו רק אם הוא שומר שכר, והשתלשל בעקיפין ממעשיו מקרה של נזק לפיקדון מתוך אונס, הרי הוא פטור<sup id="ref61"><a href="#fn61">[61]</a></sup>. לפיכך, שומר בשכר שנכנס לעיר בזמן שרגילים בני אדם להיכנס, ובא אריה וטרף, אף שחייב לשיטת אביי, אין לחייבו מדין "תחילתו בפשיעה וסופו באונס".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשונים רבים, ובתוכם ה<strong>תוספות</strong> (צג. ד"ה "אי הכי"), ה<strong>רמב"ן</strong> (ד"ה "אי הכי"), וה<strong>ריטב"א</strong>, מגיעים בעקבות קושי זה למסקנה, שב"תחילתו בפשיעה וסופו באונס" חייב רק כאשר פשיעתו של השומר היתה כזו ששומר חינם מתחייב עליה. אם, לעומת זאת, השומר התרשל ברמה פחותה, כזו המחייבת אותו רק אם הוא שומר שכר, והשתלשל בעקיפין ממעשיו מקרה של נזק לפיקדון מתוך אונס, הרי הוא פטור<sup id="ref61"><a href="#fn61">[61]</a></sup>. לפיכך, שומר בשכר שנכנס לעיר בזמן שרגילים בני אדם להיכנס, ובא אריה וטרף, אף שחייב לשיטת אביי, אין לחייבו מדין "תחילתו בפשיעה וסופו באונס".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לשיטה זו השלכה למעשה, שכן, כפי שנתבאר לעיל, הלכה כאביי בכך ששומר שכר צריך לשמור שמירה יתירה. לכן, דברי הברייתא לגבי רועה שנכנס לעיר (שלא תמיד חייב, אלא אומדים אותו וכו'), מועמדים דווקא במקום שנכנס בזמן שרגילים להיכנס, שהרי אם נכנס בפשיעה בזמן שלא רגילים להיכנס, צריך הוא להיות חייב תמיד מדין תחילתו בפשיעה, אפילו אם אמדנוהו שלא היה יכול לעמוד מול האריה. אכן, כך פוסק ה<strong>טור</strong> (שג).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לשיטה זו השלכה למעשה, שכן, כפי שנתבאר לעיל, הלכה כאביי בכך ששומר שכר צריך לשמור שמירה יתירה. לכן, דברי הברייתא לגבי רועה שנכנס לעיר (שלא תמיד חייב, אלא אומדים אותו וכו'), מועמדים דווקא במקום שנכנס בזמן שרגילים להיכנס, שהרי אם נכנס בפשיעה בזמן שלא רגילים להיכנס, צריך הוא להיות חייב תמיד מדין תחילתו בפשיעה, אפילו אם אמדנוהו שלא היה יכול לעמוד מול האריה. אכן, כך פוסק ה<strong>טור</strong> (שג).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עם זאת, השלכה הלכתית זו היא דווקא לשיטת ה<strong>תוספות</strong> וה<strong>ראב"ד</strong>, המצריכים קשר עקיף בין הכניסה לעיר לבין הטריפה. לעומתם, על פי ה<strong>רי"ף</strong>, לא נאמר להלכה דין תחילתו בפשיעה בשומר שנכנס לעיר, כיוון שממה נפשך- אם הרועה יכול היה לעמוד בפני האריה, הרי הוא מתחייב באופן ישיר על כניסתו לעיר, ואם לא היה יכול לעמוד בפני האריה, הרי שאין שום קשר בין כניסתו לבין הטריפה, ולכן גם אי אפשר לחייבו מדין תחילתו בפשיעה וסופו באונס (על פי העיקרון של "מלאך המוות מה לי התם מה לי הכא"), ונמצא לפי הרי"ף, שבין אם נכנס הרועה לעיר בזמן שדרך אנשים להיכנס ובין אם נכנס, בפשיעה, בזמן שאין דרך הרועים להיכנס, יש לאמוד אם יכול היה לעמוד בפני האריה לו היה נותר לצד העדר. כך פסק להלכה ה<strong>רמב"ם</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עם זאת, השלכה הלכתית זו היא דווקא לשיטת ה<strong>תוספות</strong> וה<strong>ראב"ד</strong>, המצריכים קשר עקיף בין הכניסה לעיר לבין הטריפה. לעומתם, על פי ה<strong>רי"ף</strong>, לא נאמר להלכה דין תחילתו בפשיעה בשומר שנכנס לעיר, כיוון שממה נפשך- אם הרועה יכול היה לעמוד בפני האריה, הרי הוא מתחייב באופן ישיר על כניסתו לעיר, ואם לא היה יכול לעמוד בפני האריה, הרי שאין שום קשר בין כניסתו לבין הטריפה, ולכן גם אי אפשר לחייבו מדין תחילתו בפשיעה וסופו באונס (על פי העיקרון של "מלאך המוות מה לי התם מה לי הכא"), ונמצא לפי הרי"ף, שבין אם נכנס הרועה לעיר בזמן שדרך אנשים להיכנס ובין אם נכנס, בפשיעה, בזמן שאין דרך הרועים להיכנס, יש לאמוד אם יכול היה לעמוד בפני האריה לו היה נותר לצד העדר. כך פסק להלכה ה<strong>רמב"ם</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצא ו) פוסק שתחילתו בפשיעה וסופו באונס- חייב, ולכן פוסק שבמקרה של שומר מעות שהניחם ב"צריפא דאורבני" ונגנבו- חייב. השו"ע אף פוסק כרבא לעניין "מלאך המוות מה לי הכא מה לי התם" (רצא ו, שג טו), ומתוך כך מעיר ה<strong>סמ"ע</strong> (רצא ס"ק י), שב"תחילתו בפשיעה וסופו באונס" חייב רק אם יש קשר סיבתי עקיף כלשהו בין הפשיעה לנזק כך ש"נוכל לתלות ולומר אם לא היתה הפשיעה מתחילה לא הוה נעשה האונס, ואז אף שהתליה בהאונס הוא ענין רחוק, תלינן בו וחייב".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (רצא ו) פוסק שתחילתו בפשיעה וסופו באונס- חייב, ולכן פוסק שבמקרה של שומר מעות שהניחם ב"צריפא דאורבני" ונגנבו- חייב. השו"ע אף פוסק כרבא לעניין "מלאך המוות מה לי הכא מה לי התם" (רצא ו, שג טו), ומתוך כך מעיר ה<strong>סמ"ע</strong> (רצא ס"ק י), שב"תחילתו בפשיעה וסופו באונס" חייב רק אם יש קשר סיבתי עקיף כלשהו בין הפשיעה לנזק כך ש"נוכל לתלות ולומר אם לא היתה הפשיעה מתחילה לא הוה נעשה האונס, ואז אף שהתליה בהאונס הוא ענין רחוק, תלינן בו וחייב".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעניין הרועה שעזב את עדרו ונכנס לעיר, מעתיק ה<strong>שו"ע</strong> (שג י) את דברי הרמב"ם שכתב, על פי דרכו של הרי"ף, שבין אם נכנס בזמן שדרך הרועים להיכנס ובין בשעה שאין דרך הרועים להיכנס, אומדים אם יכול היה להציל על ידי קריאה לעזרה ואם מתברר שיכול היה להציל- חייב. זאת על פי דרכו של הרי"ף, המסביר שבכגון דא, אין אומרים להלכה את דין תחילתו בפשיעה וסופו באונס, משום שאין קשר בין הכניסה לעיר לבין מה שאירע בסוף. ה<strong>רמ"א</strong> (שם) מביא את שיטת הטור, הפוסק שהדברים אמורים דווקא אם נכנס לעיר בזמן שדרך הרועים להיכנס, אך אם נכנס שלא בזמן שדרך הרועים להיכנס, הרי זו כניסה בפשיעה ומדין "תחילתו בפשיעה וסופו באונס" הרי הוא חייב אף אם לא היה יכול לקרוא לעזרה (וזאת עפ"י הבנת התוספות, שיש קשר סיבתי עקיף בין הכניסה לעיר לבין הטריפה, המאפשר החלת דין "תחילתו בפשיעה וסופו באונס").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעניין הרועה שעזב את עדרו ונכנס לעיר, מעתיק ה<strong>שו"ע</strong> (שג י) את דברי הרמב"ם שכתב, על פי דרכו של הרי"ף, שבין אם נכנס בזמן שדרך הרועים להיכנס ובין בשעה שאין דרך הרועים להיכנס, אומדים אם יכול היה להציל על ידי קריאה לעזרה ואם מתברר שיכול היה להציל- חייב. זאת על פי דרכו של הרי"ף, המסביר שבכגון דא, אין אומרים להלכה את דין תחילתו בפשיעה וסופו באונס, משום שאין קשר בין הכניסה לעיר לבין מה שאירע בסוף. ה<strong>רמ"א</strong> (שם) מביא את שיטת הטור, הפוסק שהדברים אמורים דווקא אם נכנס לעיר בזמן שדרך הרועים להיכנס, אך אם נכנס שלא בזמן שדרך הרועים להיכנס, הרי זו כניסה בפשיעה ומדין "תחילתו בפשיעה וסופו באונס" הרי הוא חייב אף אם לא היה יכול לקרוא לעזרה (וזאת עפ"י הבנת התוספות, שיש קשר סיבתי עקיף בין הכניסה לעיר לבין הטריפה, המאפשר החלת דין "תחילתו בפשיעה וסופו באונס").</p>
                     
                 </div>
                 
                 <div id="topic-4-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עלתה לראשי צוקים ונפלה משם</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עלתה לראשי צוקים ונפלה משם</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה בבבא מציעא (צג:) מחדדת את הגדרתו של אונס עליו שומרים פטורים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה בבבא מציעא (צג:) מחדדת את הגדרתו של אונס עליו שומרים פטורים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מתה כדרכה - הרי זה אונס, סגפה ומתה - אינו אונס.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מתה כדרכה - הרי זה אונס, סגפה ומתה - אינו אונס.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>עלתה לראשי צוקין ונפלה - הרי זה אונס. העלה לראשי צוקין ונפלה ומתה - אינו אונס.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>עלתה לראשי צוקין ונפלה - הרי זה אונס. העלה לראשי צוקין ונפלה ומתה - אינו אונס.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אף דברים שנחשבים עקרונית כאונס, אם ההקשר שלהם הוא פשיעה של השומר, יכולים להיחשב כפשיעה (או, לכל הפחות, לא להיחשב כאונס).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אף דברים שנחשבים עקרונית כאונס, אם ההקשר שלהם הוא פשיעה של השומר, יכולים להיחשב כפשיעה (או, לכל הפחות, לא להיחשב כאונס).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעיל (סוגיה ג בעמוד 54) הובאה מחלוקת האמוראים בדין שומר שעקב פשיעתו יצאה הבהמה לאגם ומתה כדרכה. בדין זה אומר <strong>אביי</strong> שחייב כי תולים שמאווירו של אותו מקום מתה ("הבלא דאגם קטלה"), ומולו אומר <strong>רבא</strong> שפטור, כיוון שהיתה מתה בכל אופן גם אלמלא היה פושע בה ("מלאך המוות מה ל התם מה לי הכא").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעיל (סוגיה ג בעמוד 54) הובאה מחלוקת האמוראים בדין שומר שעקב פשיעתו יצאה הבהמה לאגם ומתה כדרכה. בדין זה אומר <strong>אביי</strong> שחייב כי תולים שמאווירו של אותו מקום מתה ("הבלא דאגם קטלה"), ומולו אומר <strong>רבא</strong> שפטור, כיוון שהיתה מתה בכל אופן גם אלמלא היה פושע בה ("מלאך המוות מה ל התם מה לי הכא").</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במסגרת מחלוקת זו, מובא דין המשנה כסייעתא לשיטת רבא, וכנגד שיטתו של אביי ("אווירא דאגמא קטלה")-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במסגרת מחלוקת זו, מובא דין המשנה כסייעתא לשיטת רבא, וכנגד שיטתו של אביי ("אווירא דאגמא קטלה")-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מתיב <strong>רמי בר חמא</strong>: העלה לראשי צוקין ונפלה - אין זה אונס, וחייב. הא מתה כדרכה - הרי זה אונס, ופטור. ואמאי? לימא ליה אוירא דהר קטלה, אי נמי אובצנא דהר קטלה! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מתיב <strong>רמי בר חמא</strong>: העלה לראשי צוקין ונפלה - אין זה אונס, וחייב. הא מתה כדרכה - הרי זה אונס, ופטור. ואמאי? לימא ליה אוירא דהר קטלה, אי נמי אובצנא דהר קטלה! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הכא במאי עסקינן שהעלה למרעה שמן וטוב. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הכא במאי עסקינן שהעלה למרעה שמן וטוב. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי, נפלה נמי! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי הכי, נפלה נמי! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שהיה לו לתוקפה, ולא תקפה. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שהיה לו לתוקפה, ולא תקפה. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי, אימא רישא: עלתה לראשי צוקין ונפלה - הרי זה אונס, איבעי ליה למיתקפה! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי הכי, אימא רישא: עלתה לראשי צוקין ונפלה - הרי זה אונס, איבעי ליה למיתקפה! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא צריכא, <strong>שתקפתו ועלתה, תקפתו וירדה</strong>.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא צריכא, <strong>שתקפתו ועלתה, תקפתו וירדה</strong>.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רמי בר חמא</strong> מקשה על שיטת אביי מלשון המשנה. במשנה נאמר שאם העלה את הבהמה לראשי צוקים (=מקום סכנה), אך מתה שם כדרכה, ולא מנפילה מהצוק, פטור השומר, וזה כשיטת רבא ("מלאך המוות מה לי התם מה לי הכא"), וכנגד שיטת אביי, התולה את סיבת המיתה במקום ("הבלא דאגם קטלה")!</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רמי בר חמא</strong> מקשה על שיטת אביי מלשון המשנה. במשנה נאמר שאם העלה את הבהמה לראשי צוקים (=מקום סכנה), אך מתה שם כדרכה, ולא מנפילה מהצוק, פטור השומר, וזה כשיטת רבא ("מלאך המוות מה לי התם מה לי הכא"), וכנגד שיטת אביי, התולה את סיבת המיתה במקום ("הבלא דאגם קטלה")!</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בכדי להעמיד את המשנה כשיטת אביי, נאלצת הגמרא אם כן להסביר שהעלאת הבהמה לראשי הצוקים לא היתה פשיעה, שכן היה שם "מרעה שמן וטוב" (כלומר, כלל אין כאן מקרה של תחילתו בפשיעה). והסיבה שבכל זאת חייב אם נפלה היא משום שהיה יכול לאחוז בה שלא תיפול ולא עשה זאת ("היה לו לתוקפה ולא תקפה"). לעומת זה, בַמקרה בו "עלתה לראשי צוקים ונפלה", המוגדר כאונס, מדובר בכגון ש"תקפתו ועלתה, תקפתו וירדה". כלומר, לא היה בידו למנוע את עלייתה לראשי הצוקים ואף לא את נפילתה<sup id="ref62"><a href="#fn62">[62]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בכדי להעמיד את המשנה כשיטת אביי, נאלצת הגמרא אם כן להסביר שהעלאת הבהמה לראשי הצוקים לא היתה פשיעה, שכן היה שם "מרעה שמן וטוב" (כלומר, כלל אין כאן מקרה של תחילתו בפשיעה). והסיבה שבכל זאת חייב אם נפלה היא משום שהיה יכול לאחוז בה שלא תיפול ולא עשה זאת ("היה לו לתוקפה ולא תקפה"). לעומת זה, בַמקרה בו "עלתה לראשי צוקים ונפלה", המוגדר כאונס, מדובר בכגון ש"תקפתו ועלתה, תקפתו וירדה". כלומר, לא היה בידו למנוע את עלייתה לראשי הצוקים ואף לא את נפילתה<sup id="ref62"><a href="#fn62">[62]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בשאלה האם ההעמדה "תקפתו ועלתה, תקפתו וירדה", אמורה רק לפי שיטת אביי, או גם לשיטת רבא. מכיוון שהלכה כרבא, שאלה זו משליכה על תקפותה להלכה של העמדה זו-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בשאלה האם ההעמדה "תקפתו ועלתה, תקפתו וירדה", אמורה רק לפי שיטת אביי, או גם לשיטת רבא. מכיוון שהלכה כרבא, שאלה זו משליכה על תקפותה להלכה של העמדה זו-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד</strong> (בהגהה ובשטמ"ק) מסביר שרק אביי נזקק להסבר זה. שכן רק אביי מסביר שעיקר ההבדל בין "עלתה" לבין "העלה" אינו ההעלאה עצמה, אלא השאלה האם יכול היה השומר לשלוט בבהמה או לא. לעומת זאת, על פי דרכו של רבא, המשנה מתפרשת כפשוטה- אדם המעלה בהמה למקום מסוכן ללא צורך, הרי הוא פושע וחייב אם מפשיעתו התגלגל נזק. לעומת זאת, אם עלתה הבהמה מעצמה, אין לבוא אליו בטענות כיוון ששמירה על כל צעד ושעל של הבהמה אינה אפשרית<sup id="ref63"><a href="#fn63">[63]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד</strong> (בהגהה ובשטמ"ק) מסביר שרק אביי נזקק להסבר זה. שכן רק אביי מסביר שעיקר ההבדל בין "עלתה" לבין "העלה" אינו ההעלאה עצמה, אלא השאלה האם יכול היה השומר לשלוט בבהמה או לא. לעומת זאת, על פי דרכו של רבא, המשנה מתפרשת כפשוטה- אדם המעלה בהמה למקום מסוכן ללא צורך, הרי הוא פושע וחייב אם מפשיעתו התגלגל נזק. לעומת זאת, אם עלתה הבהמה מעצמה, אין לבוא אליו בטענות כיוון ששמירה על כל צעד ושעל של הבהמה אינה אפשרית<sup id="ref63"><a href="#fn63">[63]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, רוב הראשונים ובתוכם, ה<strong>רי"ף</strong> (נד. מדפיו), ה<strong>רמב"ם</strong>, ה<strong>רשב"א</strong> וה<strong>רמב"ן</strong> כתבו שאף להלכה, אם עלתה לראשי צוקים ונפלה, נחשב הדבר לאונס רק אם ניסה לעצור בעדה והתגברה עליו. הרמב"ן מסביר שכיוון שהוכרע להלכה, שאף שומר השומר באופן סביר ואירעו דבר, לא הגיע בהכרח לכלל דין אנוס מוחלט (עי' לעיל בנושא "רמת השמירה הנדרשת משומר שכר") אלא יכול להיות ברמת "גניבה ואבידה", לכן, אף כאן, אפילו אם הבהמה עלתה מעצמה לראשי צוקין אין הדבר נחשב כאונס אא"כ ניסה לעצור בעדה ולא הצליח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, רוב הראשונים ובתוכם, ה<strong>רי"ף</strong> (נד. מדפיו), ה<strong>רמב"ם</strong>, ה<strong>רשב"א</strong> וה<strong>רמב"ן</strong> כתבו שאף להלכה, אם עלתה לראשי צוקים ונפלה, נחשב הדבר לאונס רק אם ניסה לעצור בעדה והתגברה עליו. הרמב"ן מסביר שכיוון שהוכרע להלכה, שאף שומר השומר באופן סביר ואירעו דבר, לא הגיע בהכרח לכלל דין אנוס מוחלט (עי' לעיל בנושא "רמת השמירה הנדרשת משומר שכר") אלא יכול להיות ברמת "גניבה ואבידה", לכן, אף כאן, אפילו אם הבהמה עלתה מעצמה לראשי צוקין אין הדבר נחשב כאונס אא"כ ניסה לעצור בעדה ולא הצליח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (רצא י-יא) כתב כדברי המשנה על פי שיטת רבא, שהמעלה בהמה להר ונפלה משם ומתה חייב, אך אם מתה שם כדרכה פטור. עוד פסק השו"ע על פי דעת רוב הראשונים ועפ"י דברי הרמב"ן, שאם עלתה הבהמה בעצמה ונפלה ומתה, אין הדבר נחשב כאונס, אך גם אינו נחשב כפשיעה. לכן, אם מדובר בשומר חינם פטור ואם מדובר בשומר שכר, חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (רצא י-יא) כתב כדברי המשנה על פי שיטת רבא, שהמעלה בהמה להר ונפלה משם ומתה חייב, אך אם מתה שם כדרכה פטור. עוד פסק השו"ע על פי דעת רוב הראשונים ועפ"י דברי הרמב"ן, שאם עלתה הבהמה בעצמה ונפלה ומתה, אין הדבר נחשב כאונס, אך גם אינו נחשב כפשיעה. לכן, אם מדובר בשומר חינם פטור ואם מדובר בשומר שכר, חייב.</p>
                     
                 </div>
                 
                 <div id="topic-4-4" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החיוב על שומר להשקיע משאבים מיוחדים על מנת להציל את הפיקדון</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">החיוב על שומר להשקיע משאבים מיוחדים על מנת להציל את הפיקדון</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנושא הקודם (סוגיה ב', עי' לעיל בעמוד 53) הובאה הברייתא העוסקת ברועה שעזב את עדרו ונכנס לעיר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנושא הקודם (סוגיה ב', עי' לעיל בעמוד 53) הובאה הברייתא העוסקת ברועה שעזב את עדרו ונכנס לעיר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רועה שהיה רועה והניח עדרו ובא לעיר, בא זאב וטרף, ובא ארי ודרס –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רועה שהיה רועה והניח עדרו ובא לעיר, בא זאב וטרף, ובא ארי ודרס –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אין אומדים אילו היה שם היה מציל,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אין אומדים אילו היה שם היה מציל,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אומדין אותו: אם יכול להציל - חייב, אם לאו - פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא אומדין אותו: אם יכול להציל - חייב, אם לאו - פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שראינו לעיל, <strong>אביי</strong> מקשה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שראינו לעיל, <strong>אביי</strong> מקשה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי, אמאי פטור? <strong>תחילתו בפשיעה וסופו באונס</strong> <strong>- חייב</strong>! –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי הכי, אמאי פטור? <strong>תחילתו בפשיעה וסופו באונס</strong> <strong>- חייב</strong>! –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דשמע קל אריה ועל. –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>דשמע קל אריה ועל. –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי, "אומדין אותו"? מאי הוה ליה למעבד? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי הכי, "אומדין אותו"? מאי הוה ליה למעבד? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>היה לו לקדם ברועים ובמקלות.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>היה לו לקדם ברועים ובמקלות.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, על פי העמדתו של רבה מדובר ברועה שנטש את עדרו מתוך (מה שיכול להתפרש כ)אונס, קרי, שמיעת קול אריה. על רקע מעשה זה יש לדיינים לאמוד האם יכול היה הרועה לעשות משהו כנגד האריה (למשל לתגבר את כח האדם- "רועים", או את החימוש שברשותם- "מקלות"). רק אם מתברר שלא היה הרועה יכול לעשות דבר כנגד האריה, האירוע מוגדר כאונס והרועה נפטר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, על פי העמדתו של רבה מדובר ברועה שנטש את עדרו מתוך (מה שיכול להתפרש כ)אונס, קרי, שמיעת קול אריה. על רקע מעשה זה יש לדיינים לאמוד האם יכול היה הרועה לעשות משהו כנגד האריה (למשל לתגבר את כח האדם- "רועים", או את החימוש שברשותם- "מקלות"). רק אם מתברר שלא היה הרועה יכול לעשות דבר כנגד האריה, האירוע מוגדר כאונס והרועה נפטר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אביי ממשיך ומקשה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אביי ממשיך ומקשה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אי הכי, מאי איריא שומר שכר? אפילו שומר חנם נמי!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי הכי, מאי איריא שומר שכר? אפילו שומר חנם נמי!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דהא מר הוא דאמר: שומר חנם שהיה לו לקדם ברועים ובמקלות ולא קידם - חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>דהא מר הוא דאמר: שומר חנם שהיה לו לקדם ברועים ובמקלות ולא קידם - חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, על פי אביי, הברייתא מלמדת שהרועה העוזב את העדר, אפילו בזמן שדרך הרועים לעשות כן, חייב. מתוך כך ברור מדוע הברייתא עוסקת דווקא בשומר שכר, שהרי רק הוא חייב גם כאשר שמר כדרך העולם. אמנם, להבנת רבה, הברייתא רק מלמדת שאפילו אריה (המוגדר כאונס במשנה), אינו נחשב תמיד לאונס, אלא רק כאשר לא היתה אפשרות להתגונן מפניו. דבר זה שייך גם בשומר חינם, שאילו היתה לו אפשרות להניס אריה ולא עשה זאת, חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, על פי אביי, הברייתא מלמדת שהרועה העוזב את העדר, אפילו בזמן שדרך הרועים לעשות כן, חייב. מתוך כך ברור מדוע הברייתא עוסקת דווקא בשומר שכר, שהרי רק הוא חייב גם כאשר שמר כדרך העולם. אמנם, להבנת רבה, הברייתא רק מלמדת שאפילו אריה (המוגדר כאונס במשנה), אינו נחשב תמיד לאונס, אלא רק כאשר לא היתה אפשרות להתגונן מפניו. דבר זה שייך גם בשומר חינם, שאילו היתה לו אפשרות להניס אריה ולא עשה זאת, חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שומר חנם - בחנם, שומר שכר - בשכר.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שומר חנם - בחנם, שומר שכר - בשכר.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ועד כמה? עד כדי דמיהן...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ועד כמה? עד כדי דמיהן...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>דהדר שקיל דמיהן מבעל הבית.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>דהדר שקיל דמיהן מבעל הבית.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה רב פפא לאביי: אי הכי, מאי אהני ליה מינה? - נפקא מינה לכושרא דחיותא, אי נמי לטרחא יתירתא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה רב פפא לאביי: אי הכי, מאי אהני ליה מינה? - נפקא מינה לכושרא דחיותא, אי נמי לטרחא יתירתא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רבה מסביר שלשון הברייתא "אם יכול להציל - חייב, אם לאו - פטור", מכוונת דווקא לשומר שכר. טעם הדבר הוא משום ששומר חינם, אף אם יכול להציל על ידי הוצאות נוספות, אין מחייבים אותו לעשות כן. לעומת זאת, שומר שכר מחוייב גם להוציא כספים, עד שווי הפיקדון, בכדי להצילו, ולכן "אם יכול להציל", <strong>בכל</strong> דרך שהיא, אפילו ע"י ממון, חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רבה מסביר שלשון הברייתא "אם יכול להציל - חייב, אם לאו - פטור", מכוונת דווקא לשומר שכר. טעם הדבר הוא משום ששומר חינם, אף אם יכול להציל על ידי הוצאות נוספות, אין מחייבים אותו לעשות כן. לעומת זאת, שומר שכר מחוייב גם להוציא כספים, עד שווי הפיקדון, בכדי להצילו, ולכן "אם יכול להציל", <strong>בכל</strong> דרך שהיא, אפילו ע"י ממון, חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מדגישה שעבור כל הוצאה שהוציא השומר לשם הצלת הפיקדון, הוא זכאי לקבל החזר מבעל הפיקדון, כל עוד לא הוציא יותר משווי הפיקדון. אביי מסביר, שגם במקרה בו הוציא השומר את שווי הפיקדון עצמו (כך שבעל הפיקדון הפסיד את כל שוויו), יש עדיין אינטרס לבעל הפיקדון בכך, כיוון שלו היו נטרפות בהמותיו, היה צריך לטרוח בקניית בהמות חדשות או בהכשרתן לשימוש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מדגישה שעבור כל הוצאה שהוציא השומר לשם הצלת הפיקדון, הוא זכאי לקבל החזר מבעל הפיקדון, כל עוד לא הוציא יותר משווי הפיקדון. אביי מסביר, שגם במקרה בו הוציא השומר את שווי הפיקדון עצמו (כך שבעל הפיקדון הפסיד את כל שוויו), יש עדיין אינטרס לבעל הפיקדון בכך, כיוון שלו היו נטרפות בהמותיו, היה צריך לטרוח בקניית בהמות חדשות או בהכשרתן לשימוש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (בבא קמא נח. ד"ה "אי נמי") וה<strong>רמ"ך</strong> (מובא בשטמ"ק) כותבים שגם שומר חינם, שעשה יותר מהמוטל עליו והוציא כסף בכדי לשכור רועים ומקלות ולהציל מהארי, זכאי לקבלת החזר מהבעלים, שהרי אין דינו גרוע יותר מסתם אדם הזכאי להחזר ידוע אם הוציא ממון להצלת רכוש חברו (עי' הלכות גזלה ואבידה פר' יב, הלכה ד).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (בבא קמא נח. ד"ה "אי נמי") וה<strong>רמ"ך</strong> (מובא בשטמ"ק) כותבים שגם שומר חינם, שעשה יותר מהמוטל עליו והוציא כסף בכדי לשכור רועים ומקלות ולהציל מהארי, זכאי לקבלת החזר מהבעלים, שהרי אין דינו גרוע יותר מסתם אדם הזכאי להחזר ידוע אם הוציא ממון להצלת רכוש חברו (עי' הלכות גזלה ואבידה פר' יב, הלכה ד).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נחלקו הראשונים בדינו של שומר שכר שהיה אמור להציל על ידי הוצאת דמים אך לא עשה זאת, וכתוצאה מכך ירד הפיקדון לטמיון-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נחלקו הראשונים בדינו של שומר שכר שהיה אמור להציל על ידי הוצאת דמים אך לא עשה זאת, וכתוצאה מכך ירד הפיקדון לטמיון-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ן</strong>, ה<strong>מאירי</strong>, ה<strong>טור</strong> (שג), ה<strong>ראב"ד</strong> (בהגהה) ועוד ראשונים נוספים פוסקים שעל השומר לשלם את הפיקדון פחות הדמים שהיה אמור להוציא בכדי להצילו. כמה מראשונים אלה מוסיפים ואומרים שאפילו אם הדמים שהיה אמור השומר להוציא, משתווים לדמי הבהמה, עדיין עליו לשלם למפקיד את הסכום שיצטרך זה להוציא על טרחת החיפוש אחר בהמות חדשות והרגלתן לשימושו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ן</strong>, ה<strong>מאירי</strong>, ה<strong>טור</strong> (שג), ה<strong>ראב"ד</strong> (בהגהה) ועוד ראשונים נוספים פוסקים שעל השומר לשלם את הפיקדון פחות הדמים שהיה אמור להוציא בכדי להצילו. כמה מראשונים אלה מוסיפים ואומרים שאפילו אם הדמים שהיה אמור השומר להוציא, משתווים לדמי הבהמה, עדיין עליו לשלם למפקיד את הסכום שיצטרך זה להוציא על טרחת החיפוש אחר בהמות חדשות והרגלתן לשימושו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>נימוק"י</strong> (נד. מדפי הרי"ף) כותב שהשומר משלם לבעלים את מלוא דמיה של הבהמה ורק אותם, ככל שומר שלא שמר כיאות. הנימוק"י מוסיף שכך גם משתמע מדברי ה<strong>רמב"ם</strong> שלא חילק בדבר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם, ה<strong>נימוק"י</strong> (נד. מדפי הרי"ף) כותב שהשומר משלם לבעלים את מלוא דמיה של הבהמה ורק אותם, ככל שומר שלא שמר כיאות. הנימוק"י מוסיף שכך גם משתמע מדברי ה<strong>רמב"ם</strong> שלא חילק בדבר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שג ח) העתיק את דברי הרמב"ם, ששומר שכר שהיה צריך להוציא מעות בכדי להציל, ולא עשה כן- חייב. השו"ע לא התייחס לדברי הראב"ד וסיעתו. בעל <strong>נתיבות המשפט</strong> מתייחס לדברי הראב"ד לפיהם על השומר לקזז מהתשלום את הממון שהיה אמור להוציא בכדי לשכור רועים ומקלות, ונראה שהוא מצדד כמותם להלכה. עם זאת, הוא אינו מקבל את דברי הטור, המוסיף שאפילו אם הסכום אותו היה צריך להוציא משתווה לדמי כל הבהמה, עדיין צריך השומר לשלם לבעלים פיצוי על הטירחה בקניית בהמה חדשה<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שג ח) העתיק את דברי הרמב"ם, ששומר שכר שהיה צריך להוציא מעות בכדי להציל, ולא עשה כן- חייב. השו"ע לא התייחס לדברי הראב"ד וסיעתו. בעל <strong>נתיבות המשפט</strong> מתייחס לדברי הראב"ד לפיהם על השומר לקזז מהתשלום את הממון שהיה אמור להוציא בכדי לשכור רועים ומקלות, ונראה שהוא מצדד כמותם להלכה. עם זאת, הוא אינו מקבל את דברי הטור, המוסיף שאפילו אם הסכום אותו היה צריך להוציא משתווה לדמי כל הבהמה, עדיין צריך השומר לשלם לבעלים פיצוי על הטירחה בקניית בהמה חדשה<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
                     
                 </div>
                 
@@ -1552,7 +1552,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1716,6 +1716,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

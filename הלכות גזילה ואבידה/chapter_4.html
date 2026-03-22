@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות גזילה ואבידה - פרק ד</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק ד)</h3>
                 <ul class="space-y-3">
@@ -1008,7 +1008,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1021,53 +1021,53 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א-ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     קנס קנסו חכמים לגזלנין שיהיה הנגזל נשבע על כל מה שיטעון ונוטל מן הגזלן, והוא שיהיה זה מוחזק שגזלו בשני עדים.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כיצד, הרי שנכנס לתוך בית חבירו למשכנו בפני עדים ולא היה תחת כנפיו כלום ויצא וכלים מוטלין לו תחת כנפיו ולא ידעו העדים מה הן, בעל הבית אומר כך וכך גזלתני, בין שאמר הגזלן מעולם לא נכנסתי ולא נטלתי כלום, בין שאמר נכנסתי למשכן כמו שאמרו העדים אבל לא נטלתי ולא היה תחת כנפי אלא כלים שלי, בין שאמר נטלתי כלי זה ובעל הבית טוען שנטל זה וכלי אחר, הרי בעל הבית נשבע בנקיטת חפץ ונוטל כל מה שיטעון.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     במה דברים אמורים בשטען דברים שהוא אמוד בהן או שהוא אמוד שמפקידין אצלו אותן הדברים שטען וטען בדברים שאפשר שינטלו תחת הכנפים כמו שהעידו העדים.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ראוהו עדים שנכנס למשכן את חבירו ולא ראוהו בעת שיצא או שיצא ואין נראה תחת כנפיו כלום ובעל הבית טוען ואומר כך וכך נטל, אפילו אמר מעולם לא נכנסתי שהרי מכחיש את העדים הרי זה פטור שאם אמר נכנסתי ולא נטלתי נשבע שבועת הסת שלא נטל כלום והולך, שאפשר שיכנס לגזול ולא גזל.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">נגזל נשבע ונוטל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">נגזל נשבע ונוטל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שנתבאר בדברינו על ההלכה האחרונה שבפרק הקודם, המשנה בשבועות (מד:) מונה את הנגזל בין אלה שתיקנו להם חכמים להיות נשבעים ונוטלים. בהמשך המשנה ובגמרא מבואר שהדברים אינם אמורים במקרה בו כל שראו העדים הוא רק שנכנס לבית חבירו במטרה למשכנו (ולא ראו שהוציא כלים) שהרי ידוע הדין ש</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שנתבאר בדברינו על ההלכה האחרונה שבפרק הקודם, המשנה בשבועות (מד:) מונה את הנגזל בין אלה שתיקנו להם חכמים להיות נשבעים ונוטלים. בהמשך המשנה ובגמרא מבואר שהדברים אינם אמורים במקרה בו כל שראו העדים הוא רק שנכנס לבית חבירו במטרה למשכנו (ולא ראו שהוציא כלים) שהרי ידוע הדין ש</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>האי מאן דנקיט נרגא בידיה (=לקח גרזן בידו), ואמר איזיל ואקטליה לדקלא דפלניא (=אלך ואכרות דקלו של פלוני), ואשתכח דקטיל ושדי - לא אמרינן דהוא קטליה, אלמא עביד איניש דגזים ולא עביד (=אומר אדם דבר גוזמה ולא עושה כדבריו)</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>האי מאן דנקיט נרגא בידיה (=לקח גרזן בידו), ואמר איזיל ואקטליה לדקלא דפלניא (=אלך ואכרות דקלו של פלוני), ואשתכח דקטיל ושדי - לא אמרינן דהוא קטליה, אלמא עביד איניש דגזים ולא עביד (=אומר אדם דבר גוזמה ולא עושה כדבריו)</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אדם שאמר שבכוונתו לעולל דבר מה לחבירו (במקרה זה, לקצוץ את דקלו), ואכן אירע הדבר (נמצא דקלו קצוץ), אין בעדות על אמירתו בכדי להוות הוכחה שהוא עשה זאת. ואף כאן, העובדה שנכנס לבית חבירו ליטול משם דברים, אינה מעידה שאכן נטל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אדם שאמר שבכוונתו לעולל דבר מה לחבירו (במקרה זה, לקצוץ את דקלו), ואכן אירע הדבר (נמצא דקלו קצוץ), אין בעדות על אמירתו בכדי להוות הוכחה שהוא עשה זאת. ואף כאן, העובדה שנכנס לבית חבירו ליטול משם דברים, אינה מעידה שאכן נטל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לכן מסבירה הגמרא שמדובר בכגון שראו עדים שנכנס לבית חבירו ונטל כלים, אך כיון שנטל את הכלים תחת כנפיו, אין העדים יכולים לומר מה בדיוק נטל. במקרה זה, כיוון שברור שנטל כלים, תיקנו חכמים לבעל הבית שיטול כדבריו בשבועה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לכן מסבירה הגמרא שמדובר בכגון שראו עדים שנכנס לבית חבירו ונטל כלים, אך כיון שנטל את הכלים תחת כנפיו, אין העדים יכולים לומר מה בדיוק נטל. במקרה זה, כיוון שברור שנטל כלים, תיקנו חכמים לבעל הבית שיטול כדבריו בשבועה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך (מו:) מעלה הגמרא את השאלה- מה הדין כאשר בעל הבית טוען שגזל הלה ממנו חפץ יקר מאד כגון כוס של כסף-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך (מו:) מעלה הגמרא את השאלה- מה הדין כאשר בעל הבית טוען שגזל הלה ממנו חפץ יקר מאד כגון כוס של כסף-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה <strong>רב יימר</strong> ל<strong>רב אשי</strong>: טענו בכסא דכספא, מאי?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה <strong>רב יימר</strong> ל<strong>רב אשי</strong>: טענו בכסא דכספא, מאי?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חזינא, אי איניש דאמיד הוא, או איניש דמהימן הוא דמפקדי אינשי גביה - משתבע ושקיל, ואי לא - לא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>חזינא, אי איניש דאמיד הוא, או איניש דמהימן הוא דמפקדי אינשי גביה - משתבע ושקיל, ואי לא - לא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, <strong>רב אשי</strong> מסביר, שמוציאים ממון מהגזלן על פי טענת התובע רק במקום בו סביר שהיה כזה ממון ברשות בעל הבית, אם משום שמדובר באדם אמיד, או משום שמדובר באדם שאנשים נוהגים לסמוך עליו ולהפקיד אצלו דברים יקרים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, <strong>רב אשי</strong> מסביר, שמוציאים ממון מהגזלן על פי טענת התובע רק במקום בו סביר שהיה כזה ממון ברשות בעל הבית, אם משום שמדובר באדם אמיד, או משום שמדובר באדם שאנשים נוהגים לסמוך עליו ולהפקיד אצלו דברים יקרים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו מה הדין כאשר העדים מעידים שנכנס לבית חבירו, אך לא ראו שהוציא כלים, והנתבע מכחיש את העדים וטוען שמעולם לא נכנס לבית חבירו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו מה הדין כאשר העדים מעידים שנכנס לבית חבירו, אך לא ראו שהוציא כלים, והנתבע מכחיש את העדים וטוען שמעולם לא נכנס לבית חבירו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> לפנינו כותב שבמקרה זה פטור הנתבע, כשם שהיה פטור לו היה אומר שאכן נכנס ולא לקח כלום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> לפנינו כותב שבמקרה זה פטור הנתבע, כשם שהיה פטור לו היה אומר שאכן נכנס ולא לקח כלום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> (צ) מביא את דברי הרמב"ם וחולק. לדעתו במקרה זה נשבע בעל הבית ונוטל, כיוון שלא ניתן להשביע את הנתבע, שהרי ברור שהוא משקר, ודי בכך בכדי לפוסלו לשבועה<sup id="ref72"><a href="#fn72">[72]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> (צ) מביא את דברי הרמב"ם וחולק. לדעתו במקרה זה נשבע בעל הבית ונוטל, כיוון שלא ניתן להשביע את הנתבע, שהרי ברור שהוא משקר, ודי בכך בכדי לפוסלו לשבועה<sup id="ref72"><a href="#fn72">[72]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (צ א-ב) פוסק את הדין הכללי, ובמקרה של המכחיש את העדים ואומר שמעולם לא נכנס (ולא ראו העדים כלים), פוסק כרמב"ם. ה<strong>רמ"א</strong> פוסק במקרה זה כטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (צ א-ב) פוסק את הדין הכללי, ובמקרה של המכחיש את העדים ואומר שמעולם לא נכנס (ולא ראו העדים כלים), פוסק כרמב"ם. ה<strong>רמ"א</strong> פוסק במקרה זה כטור.</p>
                     
                 </div>
                 
@@ -1075,19 +1075,19 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     היה עד אחד מעידו שנכנס ונטל כלים תחת כנפיו ואינו יודע מה הן, והוא אומר לא גזלתי כלום או שאמר בחובי נטלתי, הואיל ואין העד יודע מה היה תחת כנפיו הרי זה נשבע בנקיטת חפץ שלא גזל, שאינו מוחזק בגזלנות אלא בשני עדים. היה עד אחד מעידו שנכנס וכו' הרי זה נשבע בנקיטת חפץ שלא גזל שאינו מוחזק בגזלנות אלא בשני עדים. א"א ואילו היו שם שני עדים והיה בענין זה לא היה נאמן ואפילו בלא שבועה, לאו היינו שמעתיה דרב יהודה (שבועות מו.) ראוהו שהטמין כלים תחת כנפיו ויצא ואמר לקוחין הן בידי אינו נאמן ולא אמרן וכו', אלמא איכא ארחי טובא דמהימן ואף על גב דאיכא עדים.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עדות עד אחד בממשכן את חבירו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עדות עד אחד בממשכן את חבירו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עי' דברינו על הלכה יג להלן</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' דברינו על הלכה יג להלן</p>
                     
                 </div>
                 
@@ -1095,37 +1095,37 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו-ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כשם שבעל הבית נשבע ונוטל מן הגזלן כך שומר של בעל הבית אפילו אשתו של שומר נשבעת שזה נטל כך וכך ומשלם הגזלן.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     היה שם שכירו או לקיטו של בעל הבית אינן נשבעין ונוטלין, ואין הנגזל יכול לישבע שהרי לא היה בביתו בשעה שנגזל ואין העדים יודעים מה נטל תחת כנפיו כדי לחייב הגזלן להחזיר, ואין משביעין את הגזלן מפני שהוא חשוד על השבועה.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     וכיצד עושים בדין זה מחרים בעל הבית חרם סתם על מי שנטל מביתו כלום ואינו מודה בבית דין, ואפילו הודה הגזלן שגזל מקצת מחזיר המקצת שהודה בה בלבד שהרי אין בעל הבית טוענו טענת ודאי.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הנשבעים מכוחו של בעל הבית</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הנשבעים מכוחו של בעל הבית</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור, המשנה עוסקת במקרה בו קיימים שני עדים המעידים על הגזל אך לא יודעים מה בדיוק נגזל, ובנוסף ישנו את בעל הבית התובע בטענת ודאי, וטוען שהנכנס לקח כך וכך. הגמרא (שבועות מו:) מקרה בו בעל הבית עצמו אינו יודע מה נלקח, כיוון שלא היה שם, אך מצד שני, אנשים אחרים הבאים מכוחו של בעל הבית (ולכן אינם יכולים לשמש כעדים) טוענים שהם יודעים מה בדיוק לקח הממשכן:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאמור, המשנה עוסקת במקרה בו קיימים שני עדים המעידים על הגזל אך לא יודעים מה בדיוק נגזל, ובנוסף ישנו את בעל הבית התובע בטענת ודאי, וטוען שהנכנס לקח כך וכך. הגמרא (שבועות מו:) מקרה בו בעל הבית עצמו אינו יודע מה נלקח, כיוון שלא היה שם, אך מצד שני, אנשים אחרים הבאים מכוחו של בעל הבית (ולכן אינם יכולים לשמש כעדים) טוענים שהם יודעים מה בדיוק לקח הממשכן:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong>: אפילו שומר נשבע, אפי' אשתו של שומר נשבעת.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong>: אפילו שומר נשבע, אפי' אשתו של שומר נשבעת.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בעי <strong>רב פפא</strong>: שכירו ולקיטו, מאי? תיקו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בעי <strong>רב פפא</strong>: שכירו ולקיטו, מאי? תיקו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, <strong>רבא</strong> פוסק שהשומר שהפקיד בעל הבית על ביתו, או אפילו אשתו של השומר, אם ברור להם מה בדיוק לקח הממשכן, יכולים להישבע על כך, ויטול בעל הבית ממנו. רב פפא מעלה את השאלה האם אדם אחר הבא מכוחו של בעל הבית כמו פועל ("שכירו ולקיטו") יכול אף הוא להישבע עבור בעל הבית, ושאלה זו נשארת בלתי פתורה<sup id="ref73"><a href="#fn73">[73]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, <strong>רבא</strong> פוסק שהשומר שהפקיד בעל הבית על ביתו, או אפילו אשתו של השומר, אם ברור להם מה בדיוק לקח הממשכן, יכולים להישבע על כך, ויטול בעל הבית ממנו. רב פפא מעלה את השאלה האם אדם אחר הבא מכוחו של בעל הבית כמו פועל ("שכירו ולקיטו") יכול אף הוא להישבע עבור בעל הבית, ושאלה זו נשארת בלתי פתורה<sup id="ref73"><a href="#fn73">[73]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק שכיוון שמדובר בספק, אין משביעים את הפועל, כיוון שלא ניתן להוציא ממון מהגזלן על פיו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק שכיוון שמדובר בספק, אין משביעים את הפועל, כיוון שלא ניתן להוציא ממון מהגזלן על פיו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (צ ד) פוסק כרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (צ ד) פוסק כרמב"ם.</p>
                     
                 </div>
                 
@@ -1133,61 +1133,61 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט-י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הגוזל אחד מחמשה ואינו יודע מי הוא הנגזל וכל אחד ואחד מהן תובעו ואומר לי גזלת אף על פי שאין שם עדים שגזל הרי כל אחד מהן נשבע שזה גזלו ומשלם גזלה לכל אחד ואחד, אף דבר זה קנס הוא שקנסו אותו חכמים מפני שעבר עבירה וגזל אבל דין תורה אינו חייב לשלם מספק.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אמר לשנים גזלתי אחד מכם או אביו של אחד מכם ואיני יודע איזהו, אם בא לצאת ידי שמים חייב לשלם גזלה לכל אחד ואחד אבל בדין אינו נותן אלא גזלה אחת והן חולקין אותה ביניהן, שהרי אין אחד מהן יודע שנגזל אלא זה בא והודיעם ולא קנסו חכמים בדבר זה מפני שאין לו תובע.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השבת הגזילה כשזהות הנגזל מוטלת בספק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">השבת הגזילה כשזהות הנגזל מוטלת בספק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> ביבמות (קיח:) חולקים התנאים במקרה בו גזל אדם אחד מחמישה וכל אחד מהחמישה טוען שהוא הנגזל:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> ביבמות (קיח:) חולקים התנאים במקרה בו גזל אדם אחד מחמישה וכל אחד מהחמישה טוען שהוא הנגזל:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>גזל אחד מחמשה ואין יודע מאיזה גזל, כל אחד אומר אותי גזל - מניח גזילה ביניהן ומסתלק, דברי <strong>רבי טרפון</strong>;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>גזל אחד מחמשה ואין יודע מאיזה גזל, כל אחד אומר אותי גזל - מניח גזילה ביניהן ומסתלק, דברי <strong>רבי טרפון</strong>;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי עקיבא</strong> אומר: אין זו דרך מוציא מידי עבירה, עד שישלם לכל אחד ואחד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי עקיבא</strong> אומר: אין זו דרך מוציא מידי עבירה, עד שישלם לכל אחד ואחד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, <strong>רבי</strong> <strong>טרפון</strong> פוסק שאין לו לגזלן להשיב יותר ממה שגזל. לעומתו <strong>רבי</strong> <strong>עקיבא</strong> פוסק שעליו לשלם לכל אחד ואחד, כך שבכל אופן יקבל הנגזל האמיתי את הגזילה שנגזלה מאיתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, <strong>רבי</strong> <strong>טרפון</strong> פוסק שאין לו לגזלן להשיב יותר ממה שגזל. לעומתו <strong>רבי</strong> <strong>עקיבא</strong> פוסק שעליו לשלם לכל אחד ואחד, כך שבכל אופן יקבל הנגזל האמיתי את הגזילה שנגזלה מאיתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (שם) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (שם) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ר</strong><strong>בי </strong><strong>ש</strong><strong>מעון </strong><strong>ב</strong><strong>ן </strong><strong>א</strong><strong>לעזר</strong> אומר: ... לא נחלקו רבי טרפון ורבי עקיבא על שלקח מקח מחמשה בני אדם ואין יודע מאיזה מהן לקח, שמניח דמי מקח ביניהן ומסתלק,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>ר</strong><strong>בי </strong><strong>ש</strong><strong>מעון </strong><strong>ב</strong><strong>ן </strong><strong>א</strong><strong>לעזר</strong> אומר: ... לא נחלקו רבי טרפון ורבי עקיבא על שלקח מקח מחמשה בני אדם ואין יודע מאיזה מהן לקח, שמניח דמי מקח ביניהן ומסתלק,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא נחלקו אלא שגזל מחמשה, שאמר ר' טרפון: מניח גזילה ביניהם ומסתלק, ורבי עקיבא אומר: עד שישלם גזילה לכל אחד ואחד</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא נחלקו אלא שגזל מחמשה, שאמר ר' טרפון: מניח גזילה ביניהם ומסתלק, ורבי עקיבא אומר: עד שישלם גזילה לכל אחד ואחד</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך הגמרא מבואר, לדעת רבי <strong>שמעון בן אלעזר</strong>, ששיטת רבי עקיבא היא שיש לקנוס את הגזלן, שכן עבר איסור, ואילו שיטת ר' טרפון היא שאין לקונסו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך הגמרא מבואר, לדעת רבי <strong>שמעון בן אלעזר</strong>, ששיטת רבי עקיבא היא שיש לקנוס את הגזלן, שכן עבר איסור, ואילו שיטת ר' טרפון היא שאין לקונסו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> במסכת בבא מציעא (לז.) מובא מקרה דומה מאד שגם בו אדם יודע שהוא חייב למישהו אך מסופק למי הוא חייב:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> במסכת בבא מציעא (לז.) מובא מקרה דומה מאד שגם בו אדם יודע שהוא חייב למישהו אך מסופק למי הוא חייב:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לשנים: גזלתי לאחד מכם מנה, ואיני יודע איזה מכם. או: אביו של אחד מכם הפקיד לי מנה ואיני יודע איזה הוא - נותן לזה מנה ולזה מנה, שהודה מפי עצמו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר לשנים: גזלתי לאחד מכם מנה, ואיני יודע איזה מכם. או: אביו של אחד מכם הפקיד לי מנה ואיני יודע איזה הוא - נותן לזה מנה ולזה מנה, שהודה מפי עצמו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שנים שהפקידו אצל אחד, זה מנה וזה מאתים, זה אומר שלי מאתים וזה אומר שלי מאתים - נותן לזה מנה ולזה מנה, והשאר יהא מונח עד שיבא אליהו. אמר <strong>רבי יוסי</strong>: אם כן מה הפסיד הרמאי? - אלא, הכל יהא מונח עד שיבא אליהו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שנים שהפקידו אצל אחד, זה מנה וזה מאתים, זה אומר שלי מאתים וזה אומר שלי מאתים - נותן לזה מנה ולזה מנה, והשאר יהא מונח עד שיבא אליהו. אמר <strong>רבי יוסי</strong>: אם כן מה הפסיד הרמאי? - אלא, הכל יהא מונח עד שיבא אליהו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (שם) מסבירה שמשנה זו, בניגוד למשנה ביבמות, עוסקת במקרה בו הגזלן בא מיוזמתו ורוצה להשיב את הגזילה לנגזל, והנגזל עצמו אינו יודע שגזלו. כלומר, בעוד שבמשנה ביבמות ארבעה מתוך החמישה הם רמאים, במשנה שבבבא מציעא הנגזלים הפוטנציאליים אינם יודעים בעצמם מי הוא הנגזל האמיתי, והספק נובע כולו מאי ידיעתו של הגזלן, שכך מורה לשון המשנה "שהודה מפי עצמו". הגמרא מבארת שבמקרה זה המשנה דורשת שיחזיר לכל אחד אך רק אם רוצה לצאת ידי חובה כלפי שמיא. כלומר, בית הדין אינו מחייב אותו לשלם לכל אחד ואחד מהנגזלים האפשריים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (שם) מסבירה שמשנה זו, בניגוד למשנה ביבמות, עוסקת במקרה בו הגזלן בא מיוזמתו ורוצה להשיב את הגזילה לנגזל, והנגזל עצמו אינו יודע שגזלו. כלומר, בעוד שבמשנה ביבמות ארבעה מתוך החמישה הם רמאים, במשנה שבבבא מציעא הנגזלים הפוטנציאליים אינם יודעים בעצמם מי הוא הנגזל האמיתי, והספק נובע כולו מאי ידיעתו של הגזלן, שכך מורה לשון המשנה "שהודה מפי עצמו". הגמרא מבארת שבמקרה זה המשנה דורשת שיחזיר לכל אחד אך רק אם רוצה לצאת ידי חובה כלפי שמיא. כלומר, בית הדין אינו מחייב אותו לשלם לכל אחד ואחד מהנגזלים האפשריים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מבינה הגמרא (לז:) את לשון "מניח גזילה ביניהם ומסתלק" שבדברי רבי טרפון (במשנה ביבמות), באופן כזה שהגזלן מניח את הגזילה שיתחלקו בה הנגזלים כולם. על כך תמהה הגמרא לאור הדין האמור באבידה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מבינה הגמרא (לז:) את לשון "מניח גזילה ביניהם ומסתלק" שבדברי רבי טרפון (במשנה ביבמות), באופן כזה שהגזלן מניח את הגזילה שיתחלקו בה הנגזלים כולם. על כך תמהה הגמרא לאור הדין האמור באבידה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והאמר <strong>רבי אבא בר זבדא</strong> אמר <strong>רב</strong>: כל ספק הינוח - לכתחילה לא יטול, ואם נטל - לא יחזיר!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והאמר <strong>רבי אבא בר זבדא</strong> אמר <strong>רב</strong>: כל ספק הינוח - לכתחילה לא יטול, ואם נטל - לא יחזיר!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, חפץ שספק אבד ספק בעליו הניחו שם, ואין בו סימן, אין ליטלו אפילו במטרה להשיבו, שאם הניחוֹ הבעלים שם יחזור ולא ימצאו. ואם בכל זאת נטל, אסור להשיבו לאף אחד כי מאחר שאין בחפץ סימן, לעולם אין לדעת אם הוא אכן נותן את החפץ לבעליו או לא. מדין זה נלמד שאין לו לאדם, אם אינו הבעלים, למסור חפץ, כאשר סביר שעקב כך יגיע החפץ לידי אדם אחר שגם הוא אינו הבעלים<sup id="ref74"><a href="#fn74">[74]</a></sup>. ואם כן, גם כאן, מדוע מוציאים את הגזילה מיד הגזלן ומחלקים אותה בין הנגזלים, והרי בוודאי שיפסיד הנגזל האמיתי חלק גדול מרכושו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, חפץ שספק אבד ספק בעליו הניחו שם, ואין בו סימן, אין ליטלו אפילו במטרה להשיבו, שאם הניחוֹ הבעלים שם יחזור ולא ימצאו. ואם בכל זאת נטל, אסור להשיבו לאף אחד כי מאחר שאין בחפץ סימן, לעולם אין לדעת אם הוא אכן נותן את החפץ לבעליו או לא. מדין זה נלמד שאין לו לאדם, אם אינו הבעלים, למסור חפץ, כאשר סביר שעקב כך יגיע החפץ לידי אדם אחר שגם הוא אינו הבעלים<sup id="ref74"><a href="#fn74">[74]</a></sup>. ואם כן, גם כאן, מדוע מוציאים את הגזילה מיד הגזלן ומחלקים אותה בין הנגזלים, והרי בוודאי שיפסיד הנגזל האמיתי חלק גדול מרכושו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מתרצת שאכן הדין הוא שאין הגזילה מתחלקת בין החמישה אלא מונחת בבית דין עד שיסכימו החמישה מי יטלנה או עד שיתברר העניין בדרך אחרת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מתרצת שאכן הדין הוא שאין הגזילה מתחלקת בין החמישה אלא מונחת בבית דין עד שיסכימו החמישה מי יטלנה או עד שיתברר העניין בדרך אחרת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים, ובתוכם ה<strong>רמב</strong><strong>"ם</strong>, פוסקים כרבי עקיבא, שאם לא בא הגזלן מעצמו, קונסים אותו ומשלם גזילה לכל אחד מהטוענים כלפיו. כמו כן, בעקבות המשנה והגמרא בבבא מציעא, פוסק הרמב"ם שאם בא הגזלן מעצמו, ואף אחד מהנגזלים אינו טוען טענת ודאי שאותו גזל, אינו חייב הגזלן, מדיני אדם, לשלם גזילה לכל אחד ואחד<sup id="ref75"><a href="#fn75">[75]</a></sup>, ואם בא לצאת ידי שמים, עליו לשלם, גם במקרה זה, לכל אחד ואחד מהנגזלים האפשריים, כך שיוודא שהגזילה הושבה לבעליה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רוב הראשונים, ובתוכם ה<strong>רמב</strong><strong>"ם</strong>, פוסקים כרבי עקיבא, שאם לא בא הגזלן מעצמו, קונסים אותו ומשלם גזילה לכל אחד מהטוענים כלפיו. כמו כן, בעקבות המשנה והגמרא בבבא מציעא, פוסק הרמב"ם שאם בא הגזלן מעצמו, ואף אחד מהנגזלים אינו טוען טענת ודאי שאותו גזל, אינו חייב הגזלן, מדיני אדם, לשלם גזילה לכל אחד ואחד<sup id="ref75"><a href="#fn75">[75]</a></sup>, ואם בא לצאת ידי שמים, עליו לשלם, גם במקרה זה, לכל אחד ואחד מהנגזלים האפשריים, כך שיוודא שהגזילה הושבה לבעליה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי המקרה בו משלם הגזלן רק גזילה אחת, פוסק הרמב"ם שהנגזלים האפשריים חולקים אותה ביניהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי המקרה בו משלם הגזלן רק גזילה אחת, פוסק הרמב"ם שהנגזלים האפשריים חולקים אותה ביניהם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>לחם משנה </strong>תמה על פסק של הרמב"ם, שהרי הגמרא פסקה ש"מניח ביניהם ומסתלק" הכוונה אינה שיחלוקו, שאז בוודאי הנגזל האמיתי מפסיד, אלא שיהא מונח בבית דין. ה<strong>ש"ך</strong> (שסה ס"ק ג) מסביר, שהרמב"ם לומד את הגמרא כאמורה כלפי המקרה בו כל אחד מהטוענים כלפי הגזלן טוענים טענת ודאי, כך שבוודאות כולם חוץ מאחד רמאים. במקרה זה אין לחלוק ביניהם את הגזילה, מכיוון שבוודאי נותנים חלק לרמאי. לעומת זאת, כאשר בא הגזלן מעצמו, והנגזלים אינם טוענים טענות ודאיות, ניתן לחלוק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>לחם משנה </strong>תמה על פסק של הרמב"ם, שהרי הגמרא פסקה ש"מניח ביניהם ומסתלק" הכוונה אינה שיחלוקו, שאז בוודאי הנגזל האמיתי מפסיד, אלא שיהא מונח בבית דין. ה<strong>ש"ך</strong> (שסה ס"ק ג) מסביר, שהרמב"ם לומד את הגמרא כאמורה כלפי המקרה בו כל אחד מהטוענים כלפי הגזלן טוענים טענת ודאי, כך שבוודאות כולם חוץ מאחד רמאים. במקרה זה אין לחלוק ביניהם את הגזילה, מכיוון שבוודאי נותנים חלק לרמאי. לעומת זאת, כאשר בא הגזלן מעצמו, והנגזלים אינם טוענים טענות ודאיות, ניתן לחלוק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שסה א-ב) כותב כדברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שסה א-ב) כותב כדברי הרמב"ם.</p>
                     
                 </div>
                 
@@ -1195,19 +1195,19 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הטוען את חבירו ואמר לו גזלתני מאה, אם אמר לא גזלתי נשבע שבועת הסת כדין כל נתבע, ואם הודה שגזלו חמשים משלם חמשים ונשבע שבועת התורה על השאר כדין כל מודה במקצת שהרי לא הוחזק גזלן בעדים. וכן הטוען את חבירו שנכנס לביתו וגזלו כלים והוא אומר דרך משכון לקחתים בחוב שיש לי אצלך ובעל הבית אומר אין לך בידי כלום אף על פי שהודה שמשכנו שלא ברשות הואיל ואין שם עדים שמעידים שגזל הרי זה נשבע  וגובה חובו מן המשכון שהפה שאסר הוא הפה שהתיר, והואיל והוא נשבע ונוטל הרי זה נשבע בנקיטת חפץ כמו שיתבאר בהלכות טוען.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המודה (חלקית) בגזילה ואין עדים שגזל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המודה (חלקית) בגזילה ואין עדים שגזל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נושא זה יידון בהמשך (הלכה יד).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נושא זה יידון בהמשך (הלכה יד).</p>
                     
                 </div>
                 
@@ -1215,78 +1215,78 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב-יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב-יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ראוהו עדים שנכנס לתוך ביתו של חבירו שלא בפני בעל הבית ונטל משם כלים, אף על פי שהוציאן מגולין ואף על פי שבעל הבית הזה עשוי למכור את כליו, אם טען ואמר דרך גזל לקחן והלה אומר ברשותך באתי ואתה מכרתם לי או נתתם לי או בחוב שיש לי אצלך תפשתים אינו נאמן, שכל הנכנס לבית חבירו שלא בפניו ונטל כלים משם והוציאן בפני עדים הרי זה בחזקת גזלן, לפיכך מחזיר הכלים לבעל הבית ואין כאן שבועה שהרי העדים ראו מה גזל, ואחר שיחזיר חוזר ותובע את בעל הבית בכל מה שיטעון והדין ביניהן.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     וכן אם היה שם עד אחד בלבד ובעל הבית טוען שגזול הוא כלי זה בידו והלה אומר לקוח הוא בידי או בחובי גביתיו או שלי היה ופקדון הוא אצלך הרי זה חייב להחזיר הכלי לבעליו בלא שבועה שאילו היו שם שני עדים היה חייב לשלם ועכשיו שאין שם אלא עד אחד חייב שבועה ואינו יכול לישבע שהרי אינו מכחיש את העד וכל המחוייב שבועה ואינו יכול לישבע משלם. לפיכך אם כפר ואמר לא נכנסתי לביתו ולא נטלתי כלום הואיל ואין שם אלא עד אחד והוא מכחישו הרי זה נשבע שבועת התורה שלא לקח מביתו כלום ונפטר.  וכן אם היה שם עד אחד בלבד וכו' הרי זה חייב להחזיר הכלי לבעליו בלא שבועה. א"א זהו תימה ומאחר שבעל הבית לא היה שם איך יש כאן טענת בריא כדי שיהיה זה מחוייב שבועה שאינו יכול לישבע ואולי נאמר אחר שימצאנה בידו טענת בריא היא אף על פי שלא ראה כשהוציאו מביתו אלא שהעד מעיד מכל מקום מכל זה הדין גאון חולק עליו ודבריו הם דברי הרב ז"ל.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מה בין הנכנס לבית חבירו שלא בפניו לבין הנכנס לבית חבירו בפני חבירו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מה בין הנכנס לבית חבירו שלא בפניו לבין הנכנס לבית חבירו בפני חבירו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כאמור לעיל, הגמרא (מו.:) מבארת שהמשנה שקבעה שבעל הבית נשבע ונוטל, עוסקת במקרה בו ראו עדים שגזל ולא ראו מה גזל וכדברי הגמרא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כאמור לעיל, הגמרא (מו.:) מבארת שהמשנה שקבעה שבעל הבית נשבע ונוטל, עוסקת במקרה בו ראו עדים שגזל ולא ראו מה גזל וכדברי הגמרא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר רבה בר בר חנה אמר רבי יוחנן: בטוענו כלים הניטלין תחת כנפיו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר רבה בר בר חנה אמר רבי יוחנן: בטוענו כלים הניטלין תחת כנפיו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מיד לאחר מכן מביאה הגמרא דין בשם <strong>רב יהודה</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מיד לאחר מכן מביאה הגמרא דין בשם <strong>רב יהודה</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב יהודה</strong>: ראוהו שהטמין כלים תחת כנפיו ויצא, ואמר לקוחין הן בידי - אינו נאמן;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב יהודה</strong>: ראוהו שהטמין כלים תחת כנפיו ויצא, ואמר לקוחין הן בידי - אינו נאמן;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ולא אמרן אלא בעל הבית שאינו עשוי למכור כליו, אבל בעל הבית העשוי למכור את כליו - נאמן;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ולא אמרן אלא בעל הבית שאינו עשוי למכור כליו, אבל בעל הבית העשוי למכור את כליו - נאמן;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ושאין עשוי למכור את כליו נמי - לא אמרן אלא דברים שאין דרכן להטמין, אבל דברים שדרכן להטמין - נאמן;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ושאין עשוי למכור את כליו נמי - לא אמרן אלא דברים שאין דרכן להטמין, אבל דברים שדרכן להטמין - נאמן;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ושאין דרכן להטמין נמי - לא אמרן אלא איניש דלא צניע, אבל איניש דצניע - היינו אורחיה;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ושאין דרכן להטמין נמי - לא אמרן אלא איניש דלא צניע, אבל איניש דצניע - היינו אורחיה;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ולא אמרן אלא זה אומר שאולין וזה אומר לקוחין, אבל בגנובין - לאו כל כמיני', לאחזוקי איניש בגנבי לא מחזקינן;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ולא אמרן אלא זה אומר שאולין וזה אומר לקוחין, אבל בגנובין - לאו כל כמיני', לאחזוקי איניש בגנבי לא מחזקינן;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ולא אמרן אלא בדברים העשוין להשאיל ולהשכיר, אבל דברים שאין עשוין להשאיל ולהשכיר - נאמן, דשלח <strong>רב הונא בר אבין</strong>: דברים העשוין להשאיל ולהשכיר, ואמר לקוחין הן בידי - אינו נאמן.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ולא אמרן אלא בדברים העשוין להשאיל ולהשכיר, אבל דברים שאין עשוין להשאיל ולהשכיר - נאמן, דשלח <strong>רב הונא בר אבין</strong>: דברים העשוין להשאיל ולהשכיר, ואמר לקוחין הן בידי - אינו נאמן.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, רב יהודה מדבר על מקרה בו ישנה עדות שלקח אדם כלים מבית חבירו כאשר הם טמונים תחת כנפיו. לאחר מכן אותו אדם טוען שהם לקוחים בידו, כלומר, שקנאם מבעל הבית, בעוד שבעל הבית טוען ששאולים היו בידו. במקרה זה אומר רב יהודה שצריכים להיות כמה תנאים בכדי שנאמין לבעל הבית שהכלים שאולים ביד הנוטלם:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, רב יהודה מדבר על מקרה בו ישנה עדות שלקח אדם כלים מבית חבירו כאשר הם טמונים תחת כנפיו. לאחר מכן אותו אדם טוען שהם לקוחים בידו, כלומר, שקנאם מבעל הבית, בעוד שבעל הבית טוען ששאולים היו בידו. במקרה זה אומר רב יהודה שצריכים להיות כמה תנאים בכדי שנאמין לבעל הבית שהכלים שאולים ביד הנוטלם:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר בבעל בית שאין דרכו למכור את כליו (כלומר, אם מדובר למשל על חנות, סביר שהיוצא עם כלים משם קנאם מהבעלים).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדובר בבעל בית שאין דרכו למכור את כליו (כלומר, אם מדובר למשל על חנות, סביר שהיוצא עם כלים משם קנאם מהבעלים).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">העובדה שמוציא הכלים הטמינם תחת כנפיו, מאששת את טענת בעל הבית, שכן השואל כלים מתבייש ומחביאם, ואילו הקונה כלים אינו מצניעם. אמנם, אם מדובר בכלים שדרך בני אדם להצניע, או באדם שדרכו להצניע כלים שכאלה, אנו מאמינים למוציא הכלים, הטוען שקנאם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">העובדה שמוציא הכלים הטמינם תחת כנפיו, מאששת את טענת בעל הבית, שכן השואל כלים מתבייש ומחביאם, ואילו הקונה כלים אינו מצניעם. אמנם, אם מדובר בכלים שדרך בני אדם להצניע, או באדם שדרכו להצניע כלים שכאלה, אנו מאמינים למוציא הכלים, הטוען שקנאם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">צריך שבעל הבית יטעון דבר סביר, כמו שהכלים שאולים ביד המוציאם, אך אם טען שהמוציא גנב את הכלים, אם מדובר באדם שאינו מוחזק להיות גנב, אין מאמינים לבעל הבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">צריך שבעל הבית יטעון דבר סביר, כמו שהכלים שאולים ביד המוציאם, אך אם טען שהמוציא גנב את הכלים, אם מדובר באדם שאינו מוחזק להיות גנב, אין מאמינים לבעל הבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">צריך שהכלים המדוברים יהיו מסוג שרגילים להשאילם ולהשכירם. במקרה זה סביר שטענת בעל הבית, שרק השאיל את הכלים לחבירו ולא מכרם, היא הנכונה<sup id="ref76"><a href="#fn76">[76]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">צריך שהכלים המדוברים יהיו מסוג שרגילים להשאילם ולהשכירם. במקרה זה סביר שטענת בעל הבית, שרק השאיל את הכלים לחבירו ולא מכרם, היא הנכונה<sup id="ref76"><a href="#fn76">[76]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים דנו בהבנת דינו של רב יהודה וביחס בין דבריו לבין דין המשנה שנגזל נשבע ונוטל-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים דנו בהבנת דינו של רב יהודה וביחס בין דבריו לבין דין המשנה שנגזל נשבע ונוטל-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף</strong> (כז:-כח: מדפיו) ובעקבותיו ה<strong>רמב"ם</strong> (לפנינו ובהלכות טוען ונטען ט ד) סוברים שרב יהודה דיבר על עניין שונה לגמרי מאשר המשנה. לפירושם מדובר במשנה על אדם שנכנס לבית חבירו כאשר חבירו אינו שם, או שנכנס לבית חבירו כאשר חבירו שם, אך ברור שאינו עושה זאת בהסכמתו כגון שהעדים רואים שהוא מכריז שנכנס למשכנו, ובעל הבית עומד ומוחה. במקרה זה, אם העדים מעידים גם על כך שיצא עם כלים מסויימים בידו, הרי  באופן חד משמעי שאותו אדם הוא גזלן. במקרה שכזה תיקנו חכמים שהנגזל נשבע ונוטל, וזאת כקנס על העבירה שברור שעשה הנכנס. כל החילוקים שבדברי רב יהודה, הכוללים את השאלה האם דרכו של בעה"ב למכור, מה המשמעות של העובדה שהצניע את מה שהוציא וכו', אינם רלוונטיים במקרה של גזלן<sup id="ref77"><a href="#fn77">[77]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רי"ף</strong> (כז:-כח: מדפיו) ובעקבותיו ה<strong>רמב"ם</strong> (לפנינו ובהלכות טוען ונטען ט ד) סוברים שרב יהודה דיבר על עניין שונה לגמרי מאשר המשנה. לפירושם מדובר במשנה על אדם שנכנס לבית חבירו כאשר חבירו אינו שם, או שנכנס לבית חבירו כאשר חבירו שם, אך ברור שאינו עושה זאת בהסכמתו כגון שהעדים רואים שהוא מכריז שנכנס למשכנו, ובעל הבית עומד ומוחה. במקרה זה, אם העדים מעידים גם על כך שיצא עם כלים מסויימים בידו, הרי  באופן חד משמעי שאותו אדם הוא גזלן. במקרה שכזה תיקנו חכמים שהנגזל נשבע ונוטל, וזאת כקנס על העבירה שברור שעשה הנכנס. כל החילוקים שבדברי רב יהודה, הכוללים את השאלה האם דרכו של בעה"ב למכור, מה המשמעות של העובדה שהצניע את מה שהוציא וכו', אינם רלוונטיים במקרה של גזלן<sup id="ref77"><a href="#fn77">[77]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת הרי"ף והרמב"ם, רב יהודה, שלא כמשנה, דיבר על מקרה בו העדים אינם מעידים על גזל מובהק, אלא על מקרה בו הוציא האחד כלים מבית חבירו לעיני חבירו (בניגוד למקרה הראשון, כאן זהותם של הכלים אינה שנויה במחלוקת), וחבירו לא מחה בו, ולאחר זמן רוצה בעל הבית את הכלים בחזרה ואומר שרק היו שאולים ביד המוציא, ואילו המוציא אומר שקנאם. במקרה זה השאלה הבסיסית אינה קנס "נגזל נשבע ונוטל", בו עסקה המשנה, אלא שאלת חזקת מיטלטלין באופן כללי, כלומר, באיזו מידה ובאילו מצבים העובדה שחפצים מסויימים נמצאים תחת ידו של אדם מעידה על כך שהם שלו. בעקבות הבנה זו מביא הרמב"ם את דברי רב יהודה במלואם בהלכות טוען ונטען (ט ד) ולא כאן בהלכות גזילה<sup id="ref78"><a href="#fn78">[78]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת הרי"ף והרמב"ם, רב יהודה, שלא כמשנה, דיבר על מקרה בו העדים אינם מעידים על גזל מובהק, אלא על מקרה בו הוציא האחד כלים מבית חבירו לעיני חבירו (בניגוד למקרה הראשון, כאן זהותם של הכלים אינה שנויה במחלוקת), וחבירו לא מחה בו, ולאחר זמן רוצה בעל הבית את הכלים בחזרה ואומר שרק היו שאולים ביד המוציא, ואילו המוציא אומר שקנאם. במקרה זה השאלה הבסיסית אינה קנס "נגזל נשבע ונוטל", בו עסקה המשנה, אלא שאלת חזקת מיטלטלין באופן כללי, כלומר, באיזו מידה ובאילו מצבים העובדה שחפצים מסויימים נמצאים תחת ידו של אדם מעידה על כך שהם שלו. בעקבות הבנה זו מביא הרמב"ם את דברי רב יהודה במלואם בהלכות טוען ונטען (ט ד) ולא כאן בהלכות גזילה<sup id="ref78"><a href="#fn78">[78]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חלוקה זו, המפורשת בדברי הרי"ף והרמב"ם, פחות חד משמעית בדברי ה<strong>רא"ש</strong> (סי' ה) וה<strong>טור</strong> (צ) מהם ניתן להבין שארבעת התנאים הנ"ל רלוונטיים גם במקרה של הנכנס למשכן את חבירו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חלוקה זו, המפורשת בדברי הרי"ף והרמב"ם, פחות חד משמעית בדברי ה<strong>רא"ש</strong> (סי' ה) וה<strong>טור</strong> (צ) מהם ניתן להבין שארבעת התנאים הנ"ל רלוונטיים גם במקרה של הנכנס למשכן את חבירו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד נקודה הנמצאת במחלוקת בין הפוסקים קשורה לשאלה האם ארבעת התנאים שלעיל אמורים גם במקרה בו המעשה של הוצאת הכלים אירע כאשר בעל הבית לא היה בבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד נקודה הנמצאת במחלוקת בין הפוסקים קשורה לשאלה האם ארבעת התנאים שלעיל אמורים גם במקרה בו המעשה של הוצאת הכלים אירע כאשר בעל הבית לא היה בבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שצויין לעיל, דעת ה<strong>רי"ף</strong> (שם), ה<strong>רמב"</strong><strong>ם</strong> וה<strong>טור</strong> בזה, היא שכל עדות על לקיחת כלים מבית בעל הבית כאשר הוא אינו שם, הרי היא בהגדרתה עדות על גזל (כדברי הרמב"ם כאן "שכל הנכנס לבית חבירו שלא בפניו ונטל כלים משם והוציאן בפני עדים הרי זה בחזקת גזלן"), ולכן הדין בה שאם לא ידוע מה נטל הלוקח, ישבע בעל הבית ויטול ואם ידוע מה לקח, מחייבים אותו להשיב ללא שבועה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שצויין לעיל, דעת ה<strong>רי"ף</strong> (שם), ה<strong>רמב"</strong><strong>ם</strong> וה<strong>טור</strong> בזה, היא שכל עדות על לקיחת כלים מבית בעל הבית כאשר הוא אינו שם, הרי היא בהגדרתה עדות על גזל (כדברי הרמב"ם כאן "שכל הנכנס לבית חבירו שלא בפניו ונטל כלים משם והוציאן בפני עדים הרי זה בחזקת גזלן"), ולכן הדין בה שאם לא ידוע מה נטל הלוקח, ישבע בעל הבית ויטול ואם ידוע מה לקח, מחייבים אותו להשיב ללא שבועה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת דעת <strong>רב האי גאון</strong> (משפטי שבועות חלק ב שער ב, ובתשובה המובאת ברי"ף) היא שאפילו אם בעל הבית לא היה בבית כאשר נכנס המוציא את החפץ, בכל זאת, אם טוען המוציא שהוציא ברשותו של בעל הבית (כגון שמכר לו) זהו דינו של רב יהודה, וכל ארבעת החילוקים הנ"ל שרירים וקיימים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת דעת <strong>רב האי גאון</strong> (משפטי שבועות חלק ב שער ב, ובתשובה המובאת ברי"ף) היא שאפילו אם בעל הבית לא היה בבית כאשר נכנס המוציא את החפץ, בכל זאת, אם טוען המוציא שהוציא ברשותו של בעל הבית (כגון שמכר לו) זהו דינו של רב יהודה, וכל ארבעת החילוקים הנ"ל שרירים וקיימים.</p>
                     
                 </div>
                 
                 <div id="topic-6-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הדין כשעד אחד מעידו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הדין כשעד אחד מעידו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בכמה מקומות בש"ס (כתובות פז:, שבועות מ., ב"מ ג:) נפסק שעדות עד אחד אינה יכולה אמנם לחייב בעונשין, ולא ניתן להוציא ממון על פיה, אך היא כן מחייבת שבועה מהתורה. כלומר, אם במקרה של מישהו שנתבע לשלם חוב וכופר בכולו ואין עדים, הרי הוא פטור (מדין תורה) ללא שבועה, אם יש עד אחד שהוא חייב כסף, מוטלת עליו חובת שבועה מהתורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בכמה מקומות בש"ס (כתובות פז:, שבועות מ., ב"מ ג:) נפסק שעדות עד אחד אינה יכולה אמנם לחייב בעונשין, ולא ניתן להוציא ממון על פיה, אך היא כן מחייבת שבועה מהתורה. כלומר, אם במקרה של מישהו שנתבע לשלם חוב וכופר בכולו ואין עדים, הרי הוא פטור (מדין תורה) ללא שבועה, אם יש עד אחד שהוא חייב כסף, מוטלת עליו חובת שבועה מהתורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד כלל (עי' בהלכה הבאה) הוא שהמתחייב שבועה ואינו יכול להישבע, משלם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד כלל (עי' בהלכה הבאה) הוא שהמתחייב שבועה ואינו יכול להישבע, משלם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> דן בשני מקרים בהם עד אחד מעידו. הראשון הוא לעיל בהלכה ה, שם עוסק הרמב"ם בדין הדומה לזה המתואר במשנה, שיש עדות שלקח האחד כלים מבית חבירו, וחבירו מכחיש, אלא שהעדות היא של עד אחד בלבד. במקרה זה, כיוון שאין עדות של שנים על הגזילה, לא ניתן להחזיק את הנתבע כגזלן, ולכן אין בעל הבית נשבע ונוטל. מאידך, כיוון שעד אחד מחייב שבועה, צריך הנתבע להישבע שהאמת כדבריו ולא נטל מאומה מחבירו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> דן בשני מקרים בהם עד אחד מעידו. הראשון הוא לעיל בהלכה ה, שם עוסק הרמב"ם בדין הדומה לזה המתואר במשנה, שיש עדות שלקח האחד כלים מבית חבירו, וחבירו מכחיש, אלא שהעדות היא של עד אחד בלבד. במקרה זה, כיוון שאין עדות של שנים על הגזילה, לא ניתן להחזיק את הנתבע כגזלן, ולכן אין בעל הבית נשבע ונוטל. מאידך, כיוון שעד אחד מחייב שבועה, צריך הנתבע להישבע שהאמת כדבריו ולא נטל מאומה מחבירו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המקרה הנידון בהלכה זו, הוא מקרה אחר בו מוסכם על הכל שנטל הנתבע כלי מביתו של בעל הבית, וגם מוסכמת זהותו של הכלי. לו היתה עדות של שני עדים על כך, היה הנתבע חייב להחזיר את הכלי מיד, אף בלי שישבע בעל הבית, שכן, כפי שצויין לעיל, לדעת הרמב"ם כל נטילת דבר מבית בעל הבית כאשר הוא אינו שם היא בחזקת גזילה. אמנם כאן יש רק עד אחד, ולכן לו היה הנתבע מכחיש את כל המעשה מתחילה ועד סוף, היה נשבע שבועת התורה שהאמת כדבריו ונפטר, אלא שכאן הוא אינו מכחיש את העובדות שראה העד אלא רק מפרש אותן אחרת (הוא טוען שהכלי שנטל הוא שלו), ולכן אינו יכול להישבע כנגד העד, ומחזיר את הכלי כאילו היו שני עדים (העיקרון זהה למקרה שיבואר בהלכה הבאה).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המקרה הנידון בהלכה זו, הוא מקרה אחר בו מוסכם על הכל שנטל הנתבע כלי מביתו של בעל הבית, וגם מוסכמת זהותו של הכלי. לו היתה עדות של שני עדים על כך, היה הנתבע חייב להחזיר את הכלי מיד, אף בלי שישבע בעל הבית, שכן, כפי שצויין לעיל, לדעת הרמב"ם כל נטילת דבר מבית בעל הבית כאשר הוא אינו שם היא בחזקת גזילה. אמנם כאן יש רק עד אחד, ולכן לו היה הנתבע מכחיש את כל המעשה מתחילה ועד סוף, היה נשבע שבועת התורה שהאמת כדבריו ונפטר, אלא שכאן הוא אינו מכחיש את העובדות שראה העד אלא רק מפרש אותן אחרת (הוא טוען שהכלי שנטל הוא שלו), ולכן אינו יכול להישבע כנגד העד, ומחזיר את הכלי כאילו היו שני עדים (העיקרון זהה למקרה שיבואר בהלכה הבאה).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (צ יד-טו) פוסק כדברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (צ יד-טו) פוסק כדברי הרמב"ם.</p>
                     
                 </div>
                 
@@ -1294,33 +1294,33 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     מעשה באחד שחטף לשון של כסף מיד חבירו בפני עד אחד ובא החוטף ואמר חטפתי ושלי חטפתי וחייבו אותו חכמים להחזיר מפני שהוא מחוייב שבועה בעד זה ואינו יכול לישבע שהרי הודה כמו שאמר העד, ואילו לא היה שם עד כלל היה נשבע שבועת הסת ששלו חטף ואילו הכחיש העד ואמר מעולם לא חטפתי היה נשבע שבועת התורה שלא חטף, וכדין זה דנין בכל כיוצא בזה בכל מקום.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החוטף דבר מחבירו בפני עד אחד- דין "נסכא דרבי אבא"</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">החוטף דבר מחבירו בפני עד אחד- דין "נסכא דרבי אבא"</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בשבועות (לב:) מספרת על מקרה שבא לדין לפני <strong>רב אמי</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בשבועות (לב:) מספרת על מקרה שבא לדין לפני <strong>רב אמי</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ההוא גברא דחטף נסכא מחבריה, אתא לקמיה ד<strong>ר</strong><strong>ב</strong><strong> אמי</strong>; הוה יתיב <strong>ר</strong><strong>ב</strong><strong> אבא</strong> קמיה, אזל אייתי חד סהדא דמיחטף חטפה מיניה, אמר ליה: אין, חטפי ודידי חטפי;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא גברא דחטף נסכא מחבריה, אתא לקמיה ד<strong>ר</strong><strong>ב</strong><strong> אמי</strong>; הוה יתיב <strong>ר</strong><strong>ב</strong><strong> אבא</strong> קמיה, אזל אייתי חד סהדא דמיחטף חטפה מיניה, אמר ליה: אין, חטפי ודידי חטפי;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>א"ר אמי</strong>: היכי לדייני דייני להאי דינא? לישלם? ליכא תרי סהדי! ליפטריה? הא איכא חד סהדא דמחטף חטף! לישתבע? כיון דאמר: אין, חטפי ודידי חטפי, הוה ליה כגזלן!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>א"ר אמי</strong>: היכי לדייני דייני להאי דינא? לישלם? ליכא תרי סהדי! ליפטריה? הא איכא חד סהדא דמחטף חטף! לישתבע? כיון דאמר: אין, חטפי ודידי חטפי, הוה ליה כגזלן!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א"ל <strong>ר</strong><strong>ב</strong><strong> אבא</strong>: הוה ליה מחויב שבועה ואינו יכול לישבע, וכל המחויב שבועה ואינו יכול לישבע משלם</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>א"ל <strong>ר</strong><strong>ב</strong><strong> אבא</strong>: הוה ליה מחויב שבועה ואינו יכול לישבע, וכל המחויב שבועה ואינו יכול לישבע משלם</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדובר באדם שחטף מחבירו חתיכת מתכת יקרה, ובאו לפני בית דין, ויש עד אחד למעשה החטיפה. כמו כן, הנתבע מודה שהעד ראה נכונה, אלא שהוא אומר שמה שחטף הוא בכלל שלו. <strong>רב אמי</strong> התלבט כיצד לפסוק. מצד אחד לא ניתן לחייב על פי פחות משני עדים. מצד שני לא ניתן לפטור את הנתבע מכל וכל, שהרי עד אחד מעיד נגדו, ויש בעד אחד בכדי לחייב לפחות שבועה. מצד שלישי אף לא ניתן להשביע את הנתבע, שכן הוא מודה שחטף והרי הוא גזלן ואין משביעים גזלן. <strong>רב אבא</strong> פסק שכיוון שהוא מחוייב שבועה (שהרי יש עד אחד נגדו), ואינו יכול להישבע (שהרי אינו מכחיש את העד), משלם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר באדם שחטף מחבירו חתיכת מתכת יקרה, ובאו לפני בית דין, ויש עד אחד למעשה החטיפה. כמו כן, הנתבע מודה שהעד ראה נכונה, אלא שהוא אומר שמה שחטף הוא בכלל שלו. <strong>רב אמי</strong> התלבט כיצד לפסוק. מצד אחד לא ניתן לחייב על פי פחות משני עדים. מצד שני לא ניתן לפטור את הנתבע מכל וכל, שהרי עד אחד מעיד נגדו, ויש בעד אחד בכדי לחייב לפחות שבועה. מצד שלישי אף לא ניתן להשביע את הנתבע, שכן הוא מודה שחטף והרי הוא גזלן ואין משביעים גזלן. <strong>רב אבא</strong> פסק שכיוון שהוא מחוייב שבועה (שהרי יש עד אחד נגדו), ואינו יכול להישבע (שהרי אינו מכחיש את העד), משלם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (שם ד"ה "הוה ליה") מסבירים  פשוט מפני שהודה שחטף. והטעם- שאם היה מודה שחטף מבלי שהיה עד אחד נגדו, ניתן היה להאמין לו שאכן החפץ שלו מתוך כך שיש לו מיגו (כלומר, שהרי יכול היה להכחיש את העניין מכל וכל, ומכיוון שהודה בחטיפה נאמין לו גם שאת שלו חטף), ולכן רק בגלל העד שמעיד נגדו אנו לא מאמינים שהחפץ באמת שלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (שם ד"ה "הוה ליה") מסבירים  פשוט מפני שהודה שחטף. והטעם- שאם היה מודה שחטף מבלי שהיה עד אחד נגדו, ניתן היה להאמין לו שאכן החפץ שלו מתוך כך שיש לו מיגו (כלומר, שהרי יכול היה להכחיש את העניין מכל וכל, ומכיוון שהודה בחטיפה נאמין לו גם שאת שלו חטף), ולכן רק בגלל העד שמעיד נגדו אנו לא מאמינים שהחפץ באמת שלו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אכן, ה<strong>רמב"ם</strong> לעיל (הלכה יא) מדבר על מקרה בו לא היו עדים כלל, והודה הגזלן שגזל, אך טען שגזל פחות ממה שטוען בעל הבית, או שטוען שחטף דבר השייך לו. בהתאמה לדברי התוספות, פוסק הרמב"ם שמאמינים לטענת הגזלן מטעם "הפה שאסר הוא הפה שהתיר", ורק משביעים אותו שהאמת כדבריו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אכן, ה<strong>רמב"ם</strong> לעיל (הלכה יא) מדבר על מקרה בו לא היו עדים כלל, והודה הגזלן שגזל, אך טען שגזל פחות ממה שטוען בעל הבית, או שטוען שחטף דבר השייך לו. בהתאמה לדברי התוספות, פוסק הרמב"ם שמאמינים לטענת הגזלן מטעם "הפה שאסר הוא הפה שהתיר", ורק משביעים אותו שהאמת כדבריו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> ורוב הראשונים פוסקים כר' אבא, וכן פוסק ה<strong>שו"ע</strong> (שסד ג-ד).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> ורוב הראשונים פוסקים כר' אבא, וכן פוסק ה<strong>שו"ע</strong> (שסד ג-ד).</p>
                     
                 </div>
                 
@@ -1328,39 +1328,39 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו-יז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טו-יז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     חטף ממנו זהובים בפני עד אחד והוא אומר שלי חטפתי ועשרים היו אף על פי שאין העד יודע כמה חטף הרי זה משלם העשרים שהרי ידע בודאי שזהובים חטף ואילו היו שנים היה חייב לשלם ונמצא בעד אחד מחוייב שבועה ואינו יכול לישבע כמו שביארנו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     אמר החוטף עשרים חטפתי ועשרים שלי הן והנגזל אומר מאה חטף הואיל ואין העד יודע מניינן הרי משלם העשרים שהודה בהן שחטפן ונשבע שבועת התורה על השאר שהרי נתחייב במקצת, ודעתי נוטה בזה שישבע הסת שהרי לא הודה בכלום אלא אמר שלי חטפתי.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     נכנס לביתו של חבירו שלא בפניו ונטל משם כלים בפני עד אחד ואין העד יודע כמה נטל הרי בעל הבית אומר עשרים כלים היו בביתי והגוזל אומר לא נטלתי אלא עשרה והם שלי חייב להחזיר העשרה מפני שהוא מחוייב שבועה ואינו יכול לישבע, ואינו נשבע על השאר אפילו שבועת הסת מפני שאינו יכול לטעון על הגזלן טענת ודאי.  ואינו נשבע על השאר אפילו שבועת הסת מפני שאינו יכול לטעון על הגזלן טענה ודאי. א"א ואם טענת בעה"ב אינה טענת ודאי היאך זה מחוייב שבועה ולמה ישלם העשרה מכח מחוייב שבועה שאינו יכול לישבע.
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">החוטף מיד חבירו או הנוטל מביתו בפני עד אחד ואין העד יודע מה חטף</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">החוטף מיד חבירו או הנוטל מביתו בפני עד אחד ואין העד יודע מה חטף</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מסכם את הפרק בשלוש הלכות שהן וריאציות על המקרה של "נסכא דרבי אבא" כפי שהוא מובא בגמרא. המשותף לכולן הוא שמדובר במקרים בהם העד אינו יודע מה בדיוק או כמה בדיוק חטף:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מסכם את הפרק בשלוש הלכות שהן וריאציות על המקרה של "נסכא דרבי אבא" כפי שהוא מובא בגמרא. המשותף לכולן הוא שמדובר במקרים בהם העד אינו יודע מה בדיוק או כמה בדיוק חטף:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כשהתובע והנתבע מודים כמה חטף- במקרה זה היתה סברה לומר שדווקא נאמין לחוטף הטוען שאת שלו חטף, במיגו. כלומר, לו היה רוצה לשקר היה יכול לטעון שחטף רק משהו קטן (שהעד אינו מכחישו בזה), ומתוך שמודה שחטף עשרים (כפי שטוען התובע), נאמין לו גם שאת שלו חטף<sup id="ref79"><a href="#fn79">[79]</a></sup>. ה<strong>רמב"ם</strong> טוען שאין הדין כך, ושמחייבים את החוטף לשלם את כל מה שמודה שחטף<sup id="ref80"><a href="#fn80">[80]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כשהתובע והנתבע מודים כמה חטף- במקרה זה היתה סברה לומר שדווקא נאמין לחוטף הטוען שאת שלו חטף, במיגו. כלומר, לו היה רוצה לשקר היה יכול לטעון שחטף רק משהו קטן (שהעד אינו מכחישו בזה), ומתוך שמודה שחטף עשרים (כפי שטוען התובע), נאמין לו גם שאת שלו חטף<sup id="ref79"><a href="#fn79">[79]</a></sup>. ה<strong>רמב"ם</strong> טוען שאין הדין כך, ושמחייבים את החוטף לשלם את כל מה שמודה שחטף<sup id="ref80"><a href="#fn80">[80]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כשהתובע אומר שחטף הרבה, והנתבע אומר שחטף מעט- במקרה זה משלם החוטף את מה שמודה שחטף, על פי המבואר במקרה הקודם. לגבי הנותר קובע הרמב"ם שישבע החוטף ויפטר. אמנם הרמב"ם מתלבט איזו שבועה צריך החוטף להישבע על השאר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כשהתובע אומר שחטף הרבה, והנתבע אומר שחטף מעט- במקרה זה משלם החוטף את מה שמודה שחטף, על פי המבואר במקרה הקודם. לגבי הנותר קובע הרמב"ם שישבע החוטף ויפטר. אמנם הרמב"ם מתלבט איזו שבועה צריך החוטף להישבע על השאר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מצד אחד המקרה דומה למודה במקצת, החייב שבועה מדאורייתא, שהרי גם כאן התובע אומר שהחוטף חייב לו הרבה, והחוטף אומר שלא חטף אלא מעט.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מצד אחד המקרה דומה למודה במקצת, החייב שבועה מדאורייתא, שהרי גם כאן התובע אומר שהחוטף חייב לו הרבה, והחוטף אומר שלא חטף אלא מעט.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מצד שני יש הבדל בין מקרה זה לבין דין מודה במקצת הרגיל, כיוון שכאן החוטף אומר שהוא לא חייב כלום לחבירו, משום שלדבריו כל מה שחטף היה שלו. רק בגלל החזקה שכל מה שבידו של אדם שלו הוא אנו אומרים שמה שמודה החוטף שחטף יחזיר. לכן, המקרה שלנו אינו "מודה במקצת" במובן המקובל של המילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מצד שני יש הבדל בין מקרה זה לבין דין מודה במקצת הרגיל, כיוון שכאן החוטף אומר שהוא לא חייב כלום לחבירו, משום שלדבריו כל מה שחטף היה שלו. רק בגלל החזקה שכל מה שבידו של אדם שלו הוא אנו אומרים שמה שמודה החוטף שחטף יחזיר. לכן, המקרה שלנו אינו "מודה במקצת" במובן המקובל של המילה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק על פי הדרך השניה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק על פי הדרך השניה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כמו במקרה הקודם, אלא שהתובע אינו בטוח שאכן לקח כל כך הרבה (טענת שמא)- במקרה זה, השייך למשל אם מדובר על לקיחה מבית, כאשר אין בעל הבית שם, קובע הרמב"ם שעל ההפרש בין מה שמודה הנתבע שלקח לבין מה שטוען התובע, פטור הנתבע אפילו משבועה. טעמו של הרמב"ם הוא, מפני ששבועת היסת אין נשבעין על טענת ספק, אלא רק על טענת ודאי<sup id="ref81"><a href="#fn81">[81]</a></sup>. ה<strong>ראב"ד</strong> תמה על דין זה, שהרי אם טענתו של התובע על גובה הסכום היא טענת ספק, מדוע שנחשיב את הנתבע כ"מחוייב שבועה שאינו יכול להישבע"? ה<strong>מגיד משנה</strong> מסביר שכאן חלוקים הרמב"ם והראב"ד במחלוקת ראשונים כללית האם עד אחד מחייב שבועה גם במקום בו טוען התובע טענת שמא<sup id="ref82"><a href="#fn82">[82]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כמו במקרה הקודם, אלא שהתובע אינו בטוח שאכן לקח כל כך הרבה (טענת שמא)- במקרה זה, השייך למשל אם מדובר על לקיחה מבית, כאשר אין בעל הבית שם, קובע הרמב"ם שעל ההפרש בין מה שמודה הנתבע שלקח לבין מה שטוען התובע, פטור הנתבע אפילו משבועה. טעמו של הרמב"ם הוא, מפני ששבועת היסת אין נשבעין על טענת ספק, אלא רק על טענת ודאי<sup id="ref81"><a href="#fn81">[81]</a></sup>. ה<strong>ראב"ד</strong> תמה על דין זה, שהרי אם טענתו של התובע על גובה הסכום היא טענת ספק, מדוע שנחשיב את הנתבע כ"מחוייב שבועה שאינו יכול להישבע"? ה<strong>מגיד משנה</strong> מסביר שכאן חלוקים הרמב"ם והראב"ד במחלוקת ראשונים כללית האם עד אחד מחייב שבועה גם במקום בו טוען התובע טענת שמא<sup id="ref82"><a href="#fn82">[82]</a></sup>.</p>
                     
                 </div>
                 
@@ -1368,7 +1368,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1447,6 +1447,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

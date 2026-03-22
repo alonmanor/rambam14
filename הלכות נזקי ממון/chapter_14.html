@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות נזקי ממון - פרק יד</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק יד)</h3>
                 <ul class="space-y-3">
@@ -1104,7 +1104,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1117,25 +1117,25 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המדליק בתוך שדה חבירו ועברה הדליקה חייב לשלם נזק שלם שנ' +שמות כ"ב ה'+ כי תצא אש וכו' שלם ישלם המבעיר את הבעירה, והבעירה מאבות נזקים היא. </strong>
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אחריות המדליק על נזקים שעשתה האש בריחוק מקום ממנו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אחריות המדליק על נזקים שעשתה האש בריחוק מקום ממנו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כב:) מביאה את הפסוק האמור לגבי אש:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (כב:) מביאה את הפסוק האמור לגבי אש:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כִּי תֵצֵא אֵשׁ וּמָצְאָה קֹצִים וְנֶאֱכַל גָּדִישׁ אוֹ הַקָּמָה אוֹ הַשָּׂדֶה שַׁלֵּם יְשַׁלֵּם הַמַּבְעִר אֶת הַבְּעֵרָה (שמות כב ה)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כִּי תֵצֵא אֵשׁ וּמָצְאָה קֹצִים וְנֶאֱכַל גָּדִישׁ אוֹ הַקָּמָה אוֹ הַשָּׂדֶה שַׁלֵּם יְשַׁלֵּם הַמַּבְעִר אֶת הַבְּעֵרָה (שמות כב ה)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ועומדת על כך שלמרות שיצאה האש מעצמה, והמדליק הדליקה בריחוק מקום ממקום הנזק (ואף יכול להיות שהיה המדליק אנוס ביציאתה של האש), בכל זאת חייב הוא בנזק (הגמרא מביאה זאת כהוכחה לשיטת ר' יוחנן שאישו משום חיציו. ראה לקמן הלכה ה). ה<strong>רמב"ם</strong> עומד על טבע זה של האש בפתח הפרק. אף ה<strong>טור</strong> מביא פסוק זה בפתח דיני נזקי האש (תיח), אך הוא לומד ממנו תכונה שונה במקצת של האש – שהמדליק חייב אפילו אם הדליק ברשות בשדהו שלו, אם עברה האש לשדה חברו ולא נקט בכללי זהירות מתאימים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ועומדת על כך שלמרות שיצאה האש מעצמה, והמדליק הדליקה בריחוק מקום ממקום הנזק (ואף יכול להיות שהיה המדליק אנוס ביציאתה של האש), בכל זאת חייב הוא בנזק (הגמרא מביאה זאת כהוכחה לשיטת ר' יוחנן שאישו משום חיציו. ראה לקמן הלכה ה). ה<strong>רמב"ם</strong> עומד על טבע זה של האש בפתח הפרק. אף ה<strong>טור</strong> מביא פסוק זה בפתח דיני נזקי האש (תיח), אך הוא לומד ממנו תכונה שונה במקצת של האש – שהמדליק חייב אפילו אם הדליק ברשות בשדהו שלו, אם עברה האש לשדה חברו ולא נקט בכללי זהירות מתאימים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תיח ב) בחר להעתיק את דברי הטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תיח ב) בחר להעתיק את דברי הטור.</p>
                     
                 </div>
                 
@@ -1143,67 +1143,67 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב-ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב-ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הדליק בתוך רשותו צריך להרחיק מסוף המצר כדי שלא תעבור הדליקה לשדה חבירו, וכמה שיעור ההרחקה הכל לפי גבהה של דליקה, ואם לא הרחיק כראוי ועברה האש והזיקה חייב לשלם נזק שלם, הרחיק כראוי ועברה והזיקה פטור שזו מכה בידי שמים היא. וכן אם עברה נהר או שלולית שיש בהן מים ורחבן שמונה אמות פטור. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>עברה גדר אומדין גובה הגדר וגובה הדליקה והעצים או הקוצים המצויין שם אם אינה ראויה לעבור פטור ואם ראויה לעבור חייב. במה דברים אמורים באש הקודחת אבל אם היה לה להב גדול העולה ונכפף מגובה עליית הלהב והיו העצים מצויין שם אין לה אומד אלא אפילו עברה אלף אמה חייב. </strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">שיעור ההרחקה הראוי כדי לפטור מבעיר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">שיעור ההרחקה הראוי כדי לפטור מבעיר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (סא:) כותבת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (סא:) כותבת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המדליק בתוך שלו, עד כמה תעבור הדליקה?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המדליק בתוך שלו, עד כמה תעבור הדליקה?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי אלעזר בן עזריה</strong> אומר: רואין אותו כאילו הוא באמצע בית כור,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי אלעזר בן עזריה</strong> אומר: רואין אותו כאילו הוא באמצע בית כור,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר</strong><strong>בי אליעזר</strong> אומר: ט"ז אמות כדרך רה"ר,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר</strong><strong>בי אליעזר</strong> אומר: ט"ז אמות כדרך רה"ר,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבי עקיבא</strong> אומר: חמשים אמה,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי עקיבא</strong> אומר: חמשים אמה,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר</strong><strong>בי שמעון</strong> אומר: "שלם ישלם המבעיר את הבערה" - הכל לפי הדליקה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר</strong><strong>בי שמעון</strong> אומר: "שלם ישלם המבעיר את הבערה" - הכל לפי הדליקה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, התנאים במשנה חלוקים כמה אדם צריך להרחיק דליקה שבשדהו משדה חברו כדי להיפטר על נזקיה. דעתו של <strong>ר' שמעון</strong> יוצאת דופן משל כולם כיוון שהוא אינו נותן שיעור מוחלט אלא תולה את הדברים באומדן דעת ביחס לגובהה של הדליקה. כמותו פסקו כל הראשונים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, התנאים במשנה חלוקים כמה אדם צריך להרחיק דליקה שבשדהו משדה חברו כדי להיפטר על נזקיה. דעתו של <strong>ר' שמעון</strong> יוצאת דופן משל כולם כיוון שהוא אינו נותן שיעור מוחלט אלא תולה את הדברים באומדן דעת ביחס לגובהה של הדליקה. כמותו פסקו כל הראשונים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> שלעיל מזו (סא.), דנה בשאלה דומה- אם קיים מכשול החוצץ בין הדליקה לבין שדה חברו, מה דרוש מהמכשול כדי שהמדליק יפטר:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> שלעיל מזו (סא.), דנה בשאלה דומה- אם קיים מכשול החוצץ בין הדליקה לבין שדה חברו, מה דרוש מהמכשול כדי שהמדליק יפטר:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עברה גדר שהוא גבוה ד' אמות, או דרך הרבים או נהר – פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עברה גדר שהוא גבוה ד' אמות, או דרך הרבים או נהר – פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מעיר, שגדר בגובה ד' אמות מועילה אפילו אם מדובר בשדה קוצים, הנדלקים בנקל. <strong>ר' פפא</strong> מפרש את דבריו- שצריך שד' האמות יהיו מעל גובה הקוצים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> מעיר, שגדר בגובה ד' אמות מועילה אפילו אם מדובר בשדה קוצים, הנדלקים בנקל. <strong>ר' פפא</strong> מפרש את דבריו- שצריך שד' האמות יהיו מעל גובה הקוצים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וחלקו האמוראים בהבנת המשנה- <strong>רב</strong> סובר שהשיעור שנותנת המשנה אמור רק באש "קולחת", דהיינו אש המיתמרת כלפי מעלה, אך באש הנכפפת אין שיעור ואפילו עד מאה אמה חייב, ואילו <strong>שמואל</strong> סובר שבאש קולחת מספיק הפסק כל שהוא, ומשנתנו עסקה באש נכפפת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וחלקו האמוראים בהבנת המשנה- <strong>רב</strong> סובר שהשיעור שנותנת המשנה אמור רק באש "קולחת", דהיינו אש המיתמרת כלפי מעלה, אך באש הנכפפת אין שיעור ואפילו עד מאה אמה חייב, ואילו <strong>שמואל</strong> סובר שבאש קולחת מספיק הפסק כל שהוא, ומשנתנו עסקה באש נכפפת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מביאה <strong>ברייתא</strong> לפי שיטת רב:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מביאה <strong>ברייתא</strong> לפי שיטת רב:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בד"א - בקולחת, אבל בנכפפת ועצים מצויין לה - אפילו עד מאה מיל חייב</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בד"א - בקולחת, אבל בנכפפת ועצים מצויין לה - אפילו עד מאה מיל חייב</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מביא שני הסברים לאש נכפפת, הראשון, שמדובר על אש הנכפפת ומוטה מהרוח והשלהבת שבה נישאת ויכולה לקפוץ ולהצית, או שמדובר על אש נמוכה הנאחזת בעשבים ובקסמים שעל גבי הקרקע ולכן יכולה להגיע למרחוק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מביא שני הסברים לאש נכפפת, הראשון, שמדובר על אש הנכפפת ומוטה מהרוח והשלהבת שבה נישאת ויכולה לקפוץ ולהצית, או שמדובר על אש נמוכה הנאחזת בעשבים ובקסמים שעל גבי הקרקע ולכן יכולה להגיע למרחוק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אף ה<strong>רשב"א</strong> מתלבט כיצד להבין את המציאות של אש נכפפת כמתואר בברייתא. אמנם הוא מבין כפירושו הראשון של רש"י, אך הוא דן מה הכוונה "עצים מצויים לה". האם הכוונה לעצים קרובים המעבירים את הדליקה הלאה, ואז הדבר דומה לפירושו הראשון של רש"י, או שמא מדובר על העצים הרחוקים בהם יכולה הדליקה לאחוז כיוון שהיא נכפפת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אף ה<strong>רשב"א</strong> מתלבט כיצד להבין את המציאות של אש נכפפת כמתואר בברייתא. אמנם הוא מבין כפירושו הראשון של רש"י, אך הוא דן מה הכוונה "עצים מצויים לה". האם הכוונה לעצים קרובים המעבירים את הדליקה הלאה, ואז הדבר דומה לפירושו הראשון של רש"י, או שמא מדובר על העצים הרחוקים בהם יכולה הדליקה לאחוז כיוון שהיא נכפפת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף חלקו הראשונים לגבי ההיקף של מחלוקת רב ושמואל. ה<strong>טור</strong> כותב: "...אבל אם נסרכה לצדיה ועצים מצויין לה אין לה שיעור בין לענין גובה בין לענין רוחב אלא בכל מקום שתעבור חייב לשלם". כלומר, דברי רב, שבאש נכפפת חייב אפילו בריחוק גדול, אמורים לא רק לגבי שיעור גובה הכותל, אלא גם לגבי שיעור ההרחקה הראוי. לעומתו, מדברי ה<strong>רמב"ם</strong> משמע שדברי רב אמורים רק לגבי שיעור גובה הגדר, ועניינם הוא שגדר אינה יכולה לחצוץ ביעילות בפני להבה כפופה כאשר יש חומרי תבערה מצידה השני של הגדר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף חלקו הראשונים לגבי ההיקף של מחלוקת רב ושמואל. ה<strong>טור</strong> כותב: "...אבל אם נסרכה לצדיה ועצים מצויין לה אין לה שיעור בין לענין גובה בין לענין רוחב אלא בכל מקום שתעבור חייב לשלם". כלומר, דברי רב, שבאש נכפפת חייב אפילו בריחוק גדול, אמורים לא רק לגבי שיעור גובה הכותל, אלא גם לגבי שיעור ההרחקה הראוי. לעומתו, מדברי ה<strong>רמב"ם</strong> משמע שדברי רב אמורים רק לגבי שיעור גובה הגדר, ועניינם הוא שגדר אינה יכולה לחצוץ ביעילות בפני להבה כפופה כאשר יש חומרי תבערה מצידה השני של הגדר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם בשאלת היקף דבריו של ר' שמעון (שאין לדבר שיעור מוחלט אלא הכל תלוי באומדן), חלקו הראשונים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם בשאלת היקף דבריו של ר' שמעון (שאין לדבר שיעור מוחלט אלא הכל תלוי באומדן), חלקו הראשונים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף</strong> הבין שכל מחלוקתם של רב ושמואל, והחילוק שחילקו בין נכפפת לקולחת אינו אמור אלא לדעות התנאים הנותנים שיעורים שונים, אך לדעת ר' שמעון שהלכה כמותו, אף זה תלוי באומדן ואין לחלק בין סוגי תבערה שונים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רי"ף</strong> הבין שכל מחלוקתם של רב ושמואל, והחילוק שחילקו בין נכפפת לקולחת אינו אמור אלא לדעות התנאים הנותנים שיעורים שונים, אך לדעת ר' שמעון שהלכה כמותו, אף זה תלוי באומדן ואין לחלק בין סוגי תבערה שונים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רמב"ם</strong> פירש שדברי ר' שמעון אמורים על כל השיעורים שבשתי המשניות, בין שיעור גובה הגדר ובין שיעורי ההרחקה. ועדיין דברי רב תקפים, שבלהבה נכפפת ועצים מצויים לה אין מקום גם לאומדן אלא כל כמה שיעבור ויזיק - חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>רמב"ם</strong> פירש שדברי ר' שמעון אמורים על כל השיעורים שבשתי המשניות, בין שיעור גובה הגדר ובין שיעורי ההרחקה. ועדיין דברי רב תקפים, שבלהבה נכפפת ועצים מצויים לה אין מקום גם לאומדן אלא כל כמה שיעבור ויזיק - חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי אש שעברה נהר. המשנה כאמור פוטרת. ובגמרא מובאת <strong>ברייתא</strong> האומרת שאם עברה האש נהר או שלולית הרחבים ח' אמות- פטור. ואף בזה חלקו האמוראים- <strong>רב</strong> אומר שהמשנה פוטרת רק אם עברה האש נהר ממש אפילו מרוקן הוא ממים, ואילו <strong>שמואל</strong> אומר שפטור אפילו אם עברה האש תעלת השקיה קטנה ובלבד שתהיה מלאה מים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי אש שעברה נהר. המשנה כאמור פוטרת. ובגמרא מובאת <strong>ברייתא</strong> האומרת שאם עברה האש נהר או שלולית הרחבים ח' אמות- פטור. ואף בזה חלקו האמוראים- <strong>רב</strong> אומר שהמשנה פוטרת רק אם עברה האש נהר ממש אפילו מרוקן הוא ממים, ואילו <strong>שמואל</strong> אומר שפטור אפילו אם עברה האש תעלת השקיה קטנה ובלבד שתהיה מלאה מים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> פירש שאין מחלוקת ממש בין רב לשמואל, אלא אחד דיבר על מחסום המלא מים והשני על מחסום ריק ממים, לכן באש שעברה נהר של שמונה אמות אפילו ריק ממים או תעלה מלאה מים אפילו קטנה, פטור. לעומתו, ה<strong>רמב"ם</strong> פוסק על פי פשט המשנה והברייתא, שדווקא נהר מלא מים ורחב שמונה אמות נחשב חציצה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> פירש שאין מחלוקת ממש בין רב לשמואל, אלא אחד דיבר על מחסום המלא מים והשני על מחסום ריק ממים, לכן באש שעברה נהר של שמונה אמות אפילו ריק ממים או תעלה מלאה מים אפילו קטנה, פטור. לעומתו, ה<strong>רמב"ם</strong> פוסק על פי פשט המשנה והברייתא, שדווקא נהר מלא מים ורחב שמונה אמות נחשב חציצה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> וה<strong>טור</strong> לומדים מלשון המשנה "המדליק בתוך שלו" שכל השיעורים אמורים דווקא באדם שהדליק בהיתר בתוך שלו, אך אדם שהדליק מלכתחילה בתוך רשות חברו, חייב אפילו על דברים שהלהבה עברה מחסום גדול כדי להגיע אליה<sup id="ref49"><a href="#fn49">[49]</a></sup>. (כדבריהם אולי משמע גם מלשון ה<strong>רמב"ם</strong> שפתח בהלכה א' בחיוב המבעיר בשדה חברו, ולא כתב את גדרי ההרחקה אלא בהלכות ב'-ג' במבעיר בשדהו שלו).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> וה<strong>טור</strong> לומדים מלשון המשנה "המדליק בתוך שלו" שכל השיעורים אמורים דווקא באדם שהדליק בהיתר בתוך שלו, אך אדם שהדליק מלכתחילה בתוך רשות חברו, חייב אפילו על דברים שהלהבה עברה מחסום גדול כדי להגיע אליה<sup id="ref49"><a href="#fn49">[49]</a></sup>. (כדבריהם אולי משמע גם מלשון ה<strong>רמב"ם</strong> שפתח בהלכה א' בחיוב המבעיר בשדה חברו, ולא כתב את גדרי ההרחקה אלא בהלכות ב'-ג' במבעיר בשדהו שלו).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תיח ב-ה) פסק כדברי הרמב"ם, אך לא חילק כלל בין מדליק בשדה חברו לבין מדליק בשדהו שלו. ה<strong>רמ"א</strong> פסק כרא"ש וכטור שבמדליק בשדה חברו אין גדרי הרחקה וחייב תמיד. גם לגבי הגדרת הנהר, פסק ה<strong>שו"ע</strong> כרמב"ם, וה<strong>רמ"א</strong> פסק כטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תיח ב-ה) פסק כדברי הרמב"ם, אך לא חילק כלל בין מדליק בשדה חברו לבין מדליק בשדהו שלו. ה<strong>רמ"א</strong> פסק כרא"ש וכטור שבמדליק בשדה חברו אין גדרי הרחקה וחייב תמיד. גם לגבי הגדרת הנהר, פסק ה<strong>שו"ע</strong> כרמב"ם, וה<strong>רמ"א</strong> פסק כטור.</p>
                     
                 </div>
                 
@@ -1211,23 +1211,23 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>נפלה דליקה בחצרו ונפל גדר שלא מחמת הדליקה ועברה והדליקה בחצר אחרת, אם היה יכול לגדור הגדר שנפל ולא גדרו חייב, למה הדבר דומה לשורו שיצא והזיק שהיה לו לשמרו ולא שמרו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דליקה בטיחותית שהפכה למסוכנת</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דליקה בטיחותית שהפכה למסוכנת</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כג.) דנה בשאלת אישו משום חיציו או משום ממונו, דהיינו האם המדליק חייב כאילו הלך ושרף ישירות במו ידיו, או שבמעשה ההדלקה רק יצר את האש ועתה הוא חייב על שמירתה כפי שחייב לשמור על שורו שלא יזיק (ועי' עוד בעניין מחלוקת זו בהלכה הבאה, ולעיל פרק ב' הלכה יז). הגמרא טוענת, שלפי ההבנה שבאש חייב משום חיציו, לא מובן כיצד התורה פוטרת על שריפת חפצים מכוסים (דין "טמון", ועי' להלן הל' יא-יב), שכן אדם המזיק באופן ישיר חייב על כל מה שהוזק על ידו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (כג.) דנה בשאלת אישו משום חיציו או משום ממונו, דהיינו האם המדליק חייב כאילו הלך ושרף ישירות במו ידיו, או שבמעשה ההדלקה רק יצר את האש ועתה הוא חייב על שמירתה כפי שחייב לשמור על שורו שלא יזיק (ועי' עוד בעניין מחלוקת זו בהלכה הבאה, ולעיל פרק ב' הלכה יז). הגמרא טוענת, שלפי ההבנה שבאש חייב משום חיציו, לא מובן כיצד התורה פוטרת על שריפת חפצים מכוסים (דין "טמון", ועי' להלן הל' יא-יב), שכן אדם המזיק באופן ישיר חייב על כל מה שהוזק על ידו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">תשובת ה<strong>גמרא</strong> היא שאף מי שחושב שאישו משום חיציו, מודה שאישו היא גם משום ממונו, והפטור של טמון הוא במקרה בו הדליקה הודלקה במקום בטיחותי, כשגדר חוצצת בינה לבין החפצים שהוזקו, ואז נפלה הגדר מסיבה חיצונית כלשהי והאש עברה והזיקה. במקרה כזה כבר לא ניתן לחייב את האדם כמזיק ישיר, שכן בשעה שהדליק את האש לא פשע. לכן יש לחייבו משום ממונו אם יכול היה לעצור בעד האש ולא עצר, שהרי הדבר דומה אז לאדם שיכול היה לשמור את שורו מלהזיק ופשע ולא עשה זאת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">תשובת ה<strong>גמרא</strong> היא שאף מי שחושב שאישו משום חיציו, מודה שאישו היא גם משום ממונו, והפטור של טמון הוא במקרה בו הדליקה הודלקה במקום בטיחותי, כשגדר חוצצת בינה לבין החפצים שהוזקו, ואז נפלה הגדר מסיבה חיצונית כלשהי והאש עברה והזיקה. במקרה כזה כבר לא ניתן לחייב את האדם כמזיק ישיר, שכן בשעה שהדליק את האש לא פשע. לכן יש לחייבו משום ממונו אם יכול היה לעצור בעד האש ולא עצר, שהרי הדבר דומה אז לאדם שיכול היה לשמור את שורו מלהזיק ופשע ולא עשה זאת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק בהתאם, שאדם שיכול היה לעצור בפני אישו ולא עשה זאת, חייב אפילו אם בשעה שהדליקה היתה בטיחותית. וכך פוסק ה<strong>שו"ע</strong> (תיח ו)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק בהתאם, שאדם שיכול היה לעצור בפני אישו ולא עשה זאת, חייב אפילו אם בשעה שהדליקה היתה בטיחותית. וכך פוסק ה<strong>שו"ע</strong> (תיח ו)</p>
                     
                 </div>
                 
@@ -1235,41 +1235,41 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה-ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה-ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>השולח את הבעירה ביד חרש שוטה וקטן פטור מדיני אדם וחייב בדיני שמים, במה דברים אמורים שמסר להן גחלת וליבוה שדרך הגחלת להכבות מאיליה קודם שתעבור ותדליק, אבל אם מסר להן שלהבת חייב שהרי מעשיו גרמו. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>שלח את הבעירה ביד פקח, זה הפקח שהבעיר חייב לשלם והשולח פטור, וכן אם הניח שומר לשמור הבעירה השומר חייב. </strong>
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המשלח את הבעירה ביד אדם אחר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המשלח את הבעירה ביד אדם אחר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>משנה</strong> (נט:)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר ב<strong>משנה</strong> (נט:)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">השולח את הבערה ביד חרש שוטה וקטן - פטור בדיני אדם וחייב בדיני שמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">השולח את הבערה ביד חרש שוטה וקטן - פטור בדיני אדם וחייב בדיני שמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שלח ביד פקח - הפקח חייב</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שלח ביד פקח - הפקח חייב</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וב<strong>גמרא</strong> חלקו האמוראים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וב<strong>גמרא</strong> חלקו האמוראים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת <strong>ריש לקיש</strong> (בשם <strong>חזקיה</strong>), השולח את הבעירה ביד חש"ו (חרש שוטה או קטן) פטור מדיני אדם כדברי המשנה רק אם נתן בידו גחלת הדורשת ליבוי כדי שתצית, אך אם נתן בידו שלהבת בוערת, חייב הנותן. ב<strong>גמרא</strong> (ט:) מובא הטעם לפטור במוסר גחלת- שדרכה של הגחלת ללכת ולהתעמעם ולכבות מאליה (מה שאין כן שור, שאפילו אם הוא קשור, סופו להשתחרר, ועי' לעיל פרק ד הלכה ו). לעומת זאת, שלהבת היזקה ברור וחייב המוסרה כיוון שלא שמרה כראוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת <strong>ריש לקיש</strong> (בשם <strong>חזקיה</strong>), השולח את הבעירה ביד חש"ו (חרש שוטה או קטן) פטור מדיני אדם כדברי המשנה רק אם נתן בידו גחלת הדורשת ליבוי כדי שתצית, אך אם נתן בידו שלהבת בוערת, חייב הנותן. ב<strong>גמרא</strong> (ט:) מובא הטעם לפטור במוסר גחלת- שדרכה של הגחלת ללכת ולהתעמעם ולכבות מאליה (מה שאין כן שור, שאפילו אם הוא קשור, סופו להשתחרר, ועי' לעיל פרק ד הלכה ו). לעומת זאת, שלהבת היזקה ברור וחייב המוסרה כיוון שלא שמרה כראוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, <strong>ר' יוחנן</strong> סובר שאפילו אם נתן בידו שלהבת ממש עדיין פטור, כדברי המשנה משום שידו של החרש היא שגרמה לתבערה בפועל. ר' יוחנן מודה שחייב המוסר רק אם מסר לו נר או חומרי תבערה טובים במיוחד<sup id="ref50"><a href="#fn50">[50]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, <strong>ר' יוחנן</strong> סובר שאפילו אם נתן בידו שלהבת ממש עדיין פטור, כדברי המשנה משום שידו של החרש היא שגרמה לתבערה בפועל. ר' יוחנן מודה שחייב המוסר רק אם מסר לו נר או חומרי תבערה טובים במיוחד<sup id="ref50"><a href="#fn50">[50]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כב:) דנה במחלוקת האמוראים לגבי טבע חיוב הנזקין של האש. <strong>ר' יוחנן</strong> סובר ש"אישו משום חיציו", כלומר, יש לראות את המדליק כיורה חץ, והלהבה שנוצרת ומתפשטת הרי היא ככוחו הישיר של המדליק, לעומתו סובר <strong>ריש לקיש</strong> ש"אישו משום ממונו", כלומר, המדליק יצר בעירה בה יש פוטנציאל נזק, והוא חייב על כך שלא שמרה כראוי, והתפשטה והזיקה, בדומה לחיובו על שורו שהזיק. (עי' לעיל פרק ב הלכה יז).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (כב:) דנה במחלוקת האמוראים לגבי טבע חיוב הנזקין של האש. <strong>ר' יוחנן</strong> סובר ש"אישו משום חיציו", כלומר, יש לראות את המדליק כיורה חץ, והלהבה שנוצרת ומתפשטת הרי היא ככוחו הישיר של המדליק, לעומתו סובר <strong>ריש לקיש</strong> ש"אישו משום ממונו", כלומר, המדליק יצר בעירה בה יש פוטנציאל נזק, והוא חייב על כך שלא שמרה כראוי, והתפשטה והזיקה, בדומה לחיובו על שורו שהזיק. (עי' לעיל פרק ב הלכה יז).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה את טעמו של <strong>ריש לקיש</strong><strong>- </strong>אם נתן ביד החש"ו שלהבת ממש, הרי שהוא חייב משום שאישו כממונו ולא שמר כראוי על ממונו – שלהבתו. טעמו של <strong>ר' יוחנן </strong>הסובר שגם המוסר ביד חש"ו שלהבת ממש עדיין פטור, הוא ש"אישו משום חיציו", ומעשה ההצתה הינו של החש"ו, ולא של המוסר הראשון, ומעשה ההדלקה הראשון כבר אינו בר תוקף, ופטור המוסר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה את טעמו של <strong>ריש לקיש</strong><strong>- </strong>אם נתן ביד החש"ו שלהבת ממש, הרי שהוא חייב משום שאישו כממונו ולא שמר כראוי על ממונו – שלהבתו. טעמו של <strong>ר' יוחנן </strong>הסובר שגם המוסר ביד חש"ו שלהבת ממש עדיין פטור, הוא ש"אישו משום חיציו", ומעשה ההצתה הינו של החש"ו, ולא של המוסר הראשון, ומעשה ההדלקה הראשון כבר אינו בר תוקף, ופטור המוסר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם, בסופה של הסוגיה מגיעה הגמרא למסקנה שלדעת ר' יוחנן החיוב באש הוא גם משום חיציו וגם משום ממונו. על רקע זה אומרים ה<strong>תוספות</strong> (שם ד"ה "חציו") שר' יוחנן סובר שפטור המוסר אפילו אם מסר לחש"ו שלהבת ממש לא מפני שאישו משום חיציו אלא מפני שדעתו היא שמסירה שחש"ו היא שמירה מספיקה אפילו עבור שלהבת. לעומת זאת, מ<strong>רש"י</strong> (כב: ד"ה "ורבי יוחנן") משמע שדעתו של ר' יוחנן שפטור המוסר אפילו אם מסר גחלת היא פועל יוצא של דעתו שאישו משום חיציו בלבד, ולכן בסופו של דבר, כאשר ר' יוחנן הודה שאישו היא אף משום ממונו, יש לפרש שאף חזר בו ממחלוקתו עם ריש לקיש (גר"א תיח טו).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, בסופה של הסוגיה מגיעה הגמרא למסקנה שלדעת ר' יוחנן החיוב באש הוא גם משום חיציו וגם משום ממונו. על רקע זה אומרים ה<strong>תוספות</strong> (שם ד"ה "חציו") שר' יוחנן סובר שפטור המוסר אפילו אם מסר לחש"ו שלהבת ממש לא מפני שאישו משום חיציו אלא מפני שדעתו היא שמסירה שחש"ו היא שמירה מספיקה אפילו עבור שלהבת. לעומת זאת, מ<strong>רש"י</strong> (כב: ד"ה "ורבי יוחנן") משמע שדעתו של ר' יוחנן שפטור המוסר אפילו אם מסר גחלת היא פועל יוצא של דעתו שאישו משום חיציו בלבד, ולכן בסופו של דבר, כאשר ר' יוחנן הודה שאישו היא אף משום ממונו, יש לפרש שאף חזר בו ממחלוקתו עם ריש לקיש (גר"א תיח טו).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בניגוד למצוי, פסק ה<strong>רמב"ם</strong> במחלוקת זו כריש לקיש, מכיוון שחזקיה הוא רבו של ר' יוחנן, ונתן כסיבה לפטור המוסר גחלת את הטעם של הגמרא (ט.), וכך פסק ה<strong>שו"ע</strong> (תיח ז-ח)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בניגוד למצוי, פסק ה<strong>רמב"ם</strong> במחלוקת זו כריש לקיש, מכיוון שחזקיה הוא רבו של ר' יוחנן, ונתן כסיבה לפטור המוסר גחלת את הטעם של הגמרא (ט.), וכך פסק ה<strong>שו"ע</strong> (תיח ז-ח)</p>
                     
                 </div>
                 
@@ -1277,64 +1277,64 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אחד הביא את האור ואחד הביא את העצים המביא את העצים חייב, אחד הביא את העצים ואחד הביא את האור המביא את האור חייב, בא אחר וליבה המלבה חייב, ליבתו רוח שאינה מצויה תמיד הרי כולן פטורין, ליבה וליבתו הרוח חייב שהרי הוא גרם וכל הגורם להזיק משלם נזק שלם מן היפה שבנכסיו כשאר כל המזיקין. </strong>ליבה וליבתו הרוח חייב שהרי הוא גרם. א"א ואיך לא הפליג כמו שמפליג בברייתא אם יש בלבויו כדי ללבותה חייב ואם לאו פטור.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חיוב על נזקי האש בריבוי גורמים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חיוב על נזקי האש בריבוי גורמים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (נט:) דנה באש שכמה אנשים השתתפו בהצתתה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (נט:) דנה באש שכמה אנשים השתתפו בהצתתה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"אחד הביא את האור ואחד הביא את העצים - המביא את העצים חייב,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"אחד הביא את האור ואחד הביא את העצים - המביא את העצים חייב,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחד הביא את העצים ואחד הביא את האור - המביא את האור חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחד הביא את העצים ואחד הביא את האור - המביא את האור חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בא אחר וליבה - המלבה חייב,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בא אחר וליבה - המלבה חייב,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ליבתה הרוח - כולן פטורין"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ליבתה הרוח - כולן פטורין"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם כמה אנשים תרמו להצתת האש בזה אחר זה, למרות שלא היתה האש נוצרת לולא השתתפותם של כולם, בכל זאת דווקא האחרון חייב. בנוסף, אם במעשיהם של כל האנשים לא היה די ליצירת הבעירה המזיקה, ורק הרוח שבאה לבסוף ליבתה את האש וגרמה לנזק, אזי כולם פטורים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם כמה אנשים תרמו להצתת האש בזה אחר זה, למרות שלא היתה האש נוצרת לולא השתתפותם של כולם, בכל זאת דווקא האחרון חייב. בנוסף, אם במעשיהם של כל האנשים לא היה די ליצירת הבעירה המזיקה, ורק הרוח שבאה לבסוף ליבתה את האש וגרמה לנזק, אזי כולם פטורים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong>, ה<strong>תוספות</strong> וה<strong>רמב"ם</strong> מבינים שהמשנה מדברת ברוח שאינה מצויה. כלומר, אם אחד הביא את העצים ואחד את האור (או הפוך), ואז באה רוח מצויה, ליבתה, והאש יצאה והזיקה, אזי חייב האחרון, שהרי אותו אחרון דומה למניח משא בראש הגג, ונפל ברוח מצויה והזיק, שחייב משום אש (עי' לקמן הל' טז). לעומת זאת, המקרה בו המשנה פוטרת את כולם, הוא כאשר ברוח מצויה לא היה די בכדי לגרום לנזק, ולאחר ההצתה באה רוח שאינה מצויה וליבתה. בזה פטור אפילו האחרון, שכן לא היה לו להעלות על דעתו שתבוא רוח שכזו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong>, ה<strong>תוספות</strong> וה<strong>רמב"ם</strong> מבינים שהמשנה מדברת ברוח שאינה מצויה. כלומר, אם אחד הביא את העצים ואחד את האור (או הפוך), ואז באה רוח מצויה, ליבתה, והאש יצאה והזיקה, אזי חייב האחרון, שהרי אותו אחרון דומה למניח משא בראש הגג, ונפל ברוח מצויה והזיק, שחייב משום אש (עי' לקמן הל' טז). לעומת זאת, המקרה בו המשנה פוטרת את כולם, הוא כאשר ברוח מצויה לא היה די בכדי לגרום לנזק, ולאחר ההצתה באה רוח שאינה מצויה וליבתה. בזה פטור אפילו האחרון, שכן לא היה לו להעלות על דעתו שתבוא רוח שכזו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ר"י</strong> לעומתם, מפרש שהרוח שבמשנה היא אפילו רוח מצויה, ובכל זאת פטורים כולם שכן מדובר על מקרה בו ליבה האדם האחרון, והרוח המצויה ליבתה עימו, ובשניהם לחוד לא היה די כדי ללבות אלא רק ביחד (עי' בנושא הבא- ליבה וליבתה הרוח). מכל מקום נמצא שאין להלכה מחלוקת בין הר"י לבין שאר הראשונים, שכן כולם מודים שאם הותיר אדם להבה שנתלבתה ברוח מצויה והזיקה, מתחייב בנזקיה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ר"י</strong> לעומתם, מפרש שהרוח שבמשנה היא אפילו רוח מצויה, ובכל זאת פטורים כולם שכן מדובר על מקרה בו ליבה האדם האחרון, והרוח המצויה ליבתה עימו, ובשניהם לחוד לא היה די כדי ללבות אלא רק ביחד (עי' בנושא הבא- ליבה וליבתה הרוח). מכל מקום נמצא שאין להלכה מחלוקת בין הר"י לבין שאר הראשונים, שכן כולם מודים שאם הותיר אדם להבה שנתלבתה ברוח מצויה והזיקה, מתחייב בנזקיה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תיח ט) פסק בהתאם לדברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תיח ט) פסק בהתאם לדברי הרמב"ם.</p>
                     
                 </div>
                 
                 <div id="topic-5-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ליבה וליבתו הרוח</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ליבה וליבתו הרוח</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ס.) מובאת <strong>ברייתא</strong> הדנה במקרה בו הבעירה נוצרה בשיתוף של המזיק והרוח</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ס.) מובאת <strong>ברייתא</strong> הדנה במקרה בו הבעירה נוצרה בשיתוף של המזיק והרוח</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ליבה ולבתה הרוח, אם יש בלבויו כדי ללבותה - חייב, ואם לאו - פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ליבה ולבתה הרוח, אם יש בלבויו כדי ללבותה - חייב, ואם לאו - פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מעמתת ברייתא זו עם הדין הידוע בהלכות שבת, ש"זורה ורוח מסייעתו חייב", כלומר, דרכה של מלאכת הזורה, עליה חייבים בשבת, היא זריקה של תערובת הגרעינים והמוץ כלפי מעלה, כך שהמוץ הקל יעוף עם הרוח והגרעינים יחזרו ויפלו לתוך הכלי. ברור שלא הרוח לבדה ולא האדם הזורה לבדו יכולים לבצע את המלאכה, ובכל זאת, אם הם חוברים ביחד, האדם חייב. ובכן, שואלת הגמרא, מדוע יפטר אדם המלבה בשיתוף עם הרוח, אפילו אם בכל אחד מהם לבדו לא היה די בכדי ללבות את האש ולהזיק! ובמילים אחרות- מדוע אדם הנעזר בכוחות הטבע בכדי להזיק לא יהיה חייב על נזקו?</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מעמתת ברייתא זו עם הדין הידוע בהלכות שבת, ש"זורה ורוח מסייעתו חייב", כלומר, דרכה של מלאכת הזורה, עליה חייבים בשבת, היא זריקה של תערובת הגרעינים והמוץ כלפי מעלה, כך שהמוץ הקל יעוף עם הרוח והגרעינים יחזרו ויפלו לתוך הכלי. ברור שלא הרוח לבדה ולא האדם הזורה לבדו יכולים לבצע את המלאכה, ובכל זאת, אם הם חוברים ביחד, האדם חייב. ובכן, שואלת הגמרא, מדוע יפטר אדם המלבה בשיתוף עם הרוח, אפילו אם בכל אחד מהם לבדו לא היה די בכדי ללבות את האש ולהזיק! ובמילים אחרות- מדוע אדם הנעזר בכוחות הטבע בכדי להזיק לא יהיה חייב על נזקו?</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לאמוראים תשובות שונות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לאמוראים תשובות שונות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אביי</strong> מתרץ שהמזיק ליבה מצד אחד והרוח מצד אחר, כלומר, האדם והרוח ליבו בשני מקומות שונים והאדם לא נעזר ברוח באופן ישיר<sup id="ref51"><a href="#fn51">[51]</a></sup> (<strong>רש"י</strong>).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אביי</strong> מתרץ שהמזיק ליבה מצד אחד והרוח מצד אחר, כלומר, האדם והרוח ליבו בשני מקומות שונים והאדם לא נעזר ברוח באופן ישיר<sup id="ref51"><a href="#fn51">[51]</a></sup> (<strong>רש"י</strong>).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> אומר, שבעוד שהמזיק התחיל ללבות, היתה רוח מצויה, שלא היתה יכולה לעזור לו וללבות איתו, ורק לבסוף באה רוח שאינה מצויה, שראויה להצטרף עם מעשיו לכדי ליבוי המזיק. כלומר, כיוון שלא התכוון המלבה להשתמש ברוח, אין הדבר דומה לזורה ורוח מסייעתו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> אומר, שבעוד שהמזיק התחיל ללבות, היתה רוח מצויה, שלא היתה יכולה לעזור לו וללבות איתו, ורק לבסוף באה רוח שאינה מצויה, שראויה להצטרף עם מעשיו לכדי ליבוי המזיק. כלומר, כיוון שלא התכוון המלבה להשתמש ברוח, אין הדבר דומה לזורה ורוח מסייעתו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' זירא</strong> תירץ, שמדובר במקרה שהמלבה נשף בעדינות כדרך המחממים בהבל פיהם, ואין הדבר נחשב ליבוי כלל<sup id="ref52"><a href="#fn52">[52]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' זירא</strong> תירץ, שמדובר במקרה שהמלבה נשף בעדינות כדרך המחממים בהבל פיהם, ואין הדבר נחשב ליבוי כלל<sup id="ref52"><a href="#fn52">[52]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' אשי</strong> מסביר שבשבת האיסור הוא על "מלאכת מחשבת", כלומר, מלאכה בה מתקיימת מחשבתו של העושה<sup id="ref53"><a href="#fn53">[53]</a></sup>, מה שאין כן נזקין, בהם אדם המזיק בגרמא, דהיינו, באופן עקיף כמו כאן, למרות שתוכניתו להיעזר ברוח על מנת ללבות ולהזיק נתקיימה, בכל זאת יהיה פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' אשי</strong> מסביר שבשבת האיסור הוא על "מלאכת מחשבת", כלומר, מלאכה בה מתקיימת מחשבתו של העושה<sup id="ref53"><a href="#fn53">[53]</a></sup>, מה שאין כן נזקין, בהם אדם המזיק בגרמא, דהיינו, באופן עקיף כמו כאן, למרות שתוכניתו להיעזר ברוח על מנת ללבות ולהזיק נתקיימה, בכל זאת יהיה פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים, ובהם התוספות, ה<strong>רא"ש</strong> וה<strong>טור</strong>, פסקו כר' אשי, שאם ליבה ונעזר ברוח באופן כזה שאין ברוח בפני עצמה ללבות ואין בליבויו שלו בפני עצמו בכדי ללבות, פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רוב הראשונים, ובהם התוספות, ה<strong>רא"ש</strong> וה<strong>טור</strong>, פסקו כר' אשי, שאם ליבה ונעזר ברוח באופן כזה שאין ברוח בפני עצמה ללבות ואין בליבויו שלו בפני עצמו בכדי ללבות, פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמנם ה<strong>רמב"ם</strong> כתב שליבה וליבתו הרוח- חייב. ומסבירים ה<strong>מגיד משנה</strong> וה<strong>כסף משנה</strong>, שהרמב"ם פסק כאמוראים החולקים על ר' אשי, הסוברים שהיעזרות ברוח אין בה בכדי לחייב את המלבה כאשר אין בליבויו שלו בכדי ללבות<sup id="ref54"><a href="#fn54">[54]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם ה<strong>רמב"ם</strong> כתב שליבה וליבתו הרוח- חייב. ומסבירים ה<strong>מגיד משנה</strong> וה<strong>כסף משנה</strong>, שהרמב"ם פסק כאמוראים החולקים על ר' אשי, הסוברים שהיעזרות ברוח אין בה בכדי לחייב את המלבה כאשר אין בליבויו שלו בכדי ללבות<sup id="ref54"><a href="#fn54">[54]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ס. ד"ה "והכא") מגיעים למסקנה שאם שנים ליבו אש ואין בכל אחד מהם לבדו בכדי ללבותה, פטורים שניהם, שכן לפי ר' אשי כל אחד מהם עשה גרמא בלבד, כמו המלבה שנעזר ברוח, שהוא פטור. אמנם התוספות מסתייגים מדבריהם שלהם מסברה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ס. ד"ה "והכא") מגיעים למסקנה שאם שנים ליבו אש ואין בכל אחד מהם לבדו בכדי ללבותה, פטורים שניהם, שכן לפי ר' אשי כל אחד מהם עשה גרמא בלבד, כמו המלבה שנעזר ברוח, שהוא פטור. אמנם התוספות מסתייגים מדבריהם שלהם מסברה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תיח ט) פסק על פי דברי הרמב"ם, וה<strong>רמ"א</strong> הביא את דעת הראשונים הפוסקים כר' אשי. עוד מביא ה<strong>רמ"א</strong> את הדעה לפיה גם שנים שליבו יחד ואין בכל אחד מהם בכדי ללבות לחוד, פטורים שניהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תיח ט) פסק על פי דברי הרמב"ם, וה<strong>רמ"א</strong> הביא את דעת הראשונים הפוסקים כר' אשי. עוד מביא ה<strong>רמ"א</strong> את הדעה לפיה גם שנים שליבו יחד ואין בכל אחד מהם בכדי ללבות לחוד, פטורים שניהם.</p>
                     
                 </div>
                 
@@ -1342,71 +1342,71 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח-ט</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח-ט</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אש שיצאה ואכלה עצים או אבנים או עפר חייב לשלם שנ' +שמות כ"ב ה'+ ומצאה קוצים כו' או השדה, אכלה גדיש וכיוצא בו והיו כלים טמונים בתוך הגדיש אם היו כגון מורגים וכלי בקר וכיוצא בהן מדברים שדרך אנשי השדה לטמון אותן בגדיש חייב לשלם, היו בגדים וכלי זכוכית וכיוצא בהן פטור על הכלים. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>במה דברים אמורים במדליק בתוך שדה חבירו אבל במדליק בתוך שלו ועברה לשדה חבירו פטור על כל הכלים הטמונים בגדיש אבל משלם הוא שיעור מקום הכלים ורואין אותו כאילו הוא מלא גדיש של חטים או של שעורים. </strong>
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">דין טמון בגדיש בדברים שדרך לטומנם בגדיש ובשאין דרכם, במדליק בשלו ובמדליק בשל חברו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">דין טמון בגדיש בדברים שדרך לטומנם בגדיש ובשאין דרכם, במדליק בשלו ובמדליק בשל חברו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (סא:) מביאה מחלוקת תנאים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (סא:) מביאה מחלוקת תנאים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המדליק את הגדיש והיו בו כלים ודלקו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המדליק את הגדיש והיו בו כלים ודלקו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר</strong><strong>' </strong><strong>י</strong><strong>הודה</strong> אומר: משלם מה שבתוכו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר</strong><strong>' </strong><strong>י</strong><strong>הודה</strong> אומר: משלם מה שבתוכו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ו<strong>חכ</strong><strong>מים</strong> אומרים: אינו משלם אלא גדיש של חטין או של שעורין.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ו<strong>חכ</strong><strong>מים</strong> אומרים: אינו משלם אלא גדיש של חטין או של שעורין.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ובהמשך-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ובהמשך-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומודים <strong>חכמים</strong> ל<strong>ר</strong><strong>' </strong><strong>י</strong><strong>הודה</strong>, במדליק את הבירה שהוא משלם כל מה שבתוכה, שכן דרך בני אדם להניח בבתים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומודים <strong>חכמים</strong> ל<strong>ר</strong><strong>' </strong><strong>י</strong><strong>הודה</strong>, במדליק את הבירה שהוא משלם כל מה שבתוכה, שכן דרך בני אדם להניח בבתים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, <strong>חכמים</strong> סוברים שכאשר פלוני הזיק באש, ישנו פטור על כלים הטמונים בתוך הגדיש, ו<strong>ר' יהודה </strong>חולק. כמו כן, כמבואר בסיפא, אם הכלים הטמונים הם כאלה שניתן לצפות שיהיו שם, מודים חכמים שחייב עליהם. הגמרא לעיל (ס.) מביאה את המקור של <strong>חכמים</strong> לפטור הטמון- בדין נזק האש נאמר:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, <strong>חכמים</strong> סוברים שכאשר פלוני הזיק באש, ישנו פטור על כלים הטמונים בתוך הגדיש, ו<strong>ר' יהודה </strong>חולק. כמו כן, כמבואר בסיפא, אם הכלים הטמונים הם כאלה שניתן לצפות שיהיו שם, מודים חכמים שחייב עליהם. הגמרא לעיל (ס.) מביאה את המקור של <strong>חכמים</strong> לפטור הטמון- בדין נזק האש נאמר:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כי תצא אש ומצאה קוצים ונאכל גדיש או <strong>הקמה</strong> או השדה שלם ישלם המבעיר את הבערה (שמות כב ה)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כי תצא אש ומצאה קוצים ונאכל גדיש או <strong>הקמה</strong> או השדה שלם ישלם המבעיר את הבערה (שמות כב ה)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">וכשם שקמה היא בגלוי אף כל דבר גלוי, למעט את הטמון, שאינו בגלוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">וכשם שקמה היא בגלוי אף כל דבר גלוי, למעט את הטמון, שאינו בגלוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא מובאת <strong>ברייתא</strong> הכוללת את המשנה בתוספת ביאור -</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מובאת <strong>ברייתא</strong> הכוללת את המשנה בתוספת ביאור -</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המדליק את הגדיש והיו בו כלים ודלקו, <strong>ר</strong><strong>' </strong><strong>י</strong><strong>הודה</strong> אומר: משלם כל מה שהיה בתוכו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המדליק את הגדיש והיו בו כלים ודלקו, <strong>ר</strong><strong>' </strong><strong>י</strong><strong>הודה</strong> אומר: משלם כל מה שהיה בתוכו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ו<strong>חכמים</strong> אומרים: אינו משלם אלא גדיש של חטין או גדיש של שעורין,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ו<strong>חכמים</strong> אומרים: אינו משלם אלא גדיש של חטין או גדיש של שעורין,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ורואין מקום כלים כאילו הוא מלא תבואה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ורואין מקום כלים כאילו הוא מלא תבואה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">במה דברים אמורים - במדליק בתוך שלו והלכה ודלקה בתוך של חבירו,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במה דברים אמורים - במדליק בתוך שלו והלכה ודלקה בתוך של חבירו,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אבל מדליק בתוך של חבירו - (דברי הכל) משלם כל מה שהיה בתוכו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אבל מדליק בתוך של חבירו - (דברי הכל) משלם כל מה שהיה בתוכו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהבנת החילוק שבברייתא, בין המדליק בתוך שלו למדליק בתוך של חברו, נחלקו בגמרא האמוראים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהבנת החילוק שבברייתא, בין המדליק בתוך שלו למדליק בתוך של חברו, נחלקו בגמרא האמוראים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' כהנא</strong> מבין שהמחלוקת היא רק במדליק בתוך שלו, ויצאה והזיקה בשל חברו, ובמדליק בשל חברו כולם מודים שחייב אף על הטמון<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' כהנא</strong> מבין שהמחלוקת היא רק במדליק בתוך שלו, ויצאה והזיקה בשל חברו, ובמדליק בשל חברו כולם מודים שחייב אף על הטמון<sup id="ref55"><a href="#fn55">[55]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> לעומתו אומר, שהמחלוקת היא בין במדליק בתוך שלו ובין במדליק בתוך של חברו, אך מדובר במחלוקות שונות- אם הדליק בתוך שלו, סוברים חכמים שפטור על כל סוג של טמון, ואם הדליק בשל חברו, פוטרים חכמים רק על טמון שלא היה צפוי שם. ור' יהודה בין במדליק בתוך שלו ובין במדליק בתוך של חברו, סובר שחייבים על כל סוג של טמון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> לעומתו אומר, שהמחלוקת היא בין במדליק בתוך שלו ובין במדליק בתוך של חברו, אך מדובר במחלוקות שונות- אם הדליק בתוך שלו, סוברים חכמים שפטור על כל סוג של טמון, ואם הדליק בשל חברו, פוטרים חכמים רק על טמון שלא היה צפוי שם. ור' יהודה בין במדליק בתוך שלו ובין במדליק בתוך של חברו, סובר שחייבים על כל סוג של טמון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> ו<strong>תוספות</strong> מסבירים, שהמחלוקת הראשונה, במדליק בתוך שלו ויצאה האש והזיקה, היא שחכמים לומדים מגזירת הכתוב הנ"ל, שפטור המזיק בטמון, ואילו ר' יהודה אינו לומד גזירת כתוב זו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> ו<strong>תוספות</strong> מסבירים, שהמחלוקת הראשונה, במדליק בתוך שלו ויצאה האש והזיקה, היא שחכמים לומדים מגזירת הכתוב הנ"ל, שפטור המזיק בטמון, ואילו ר' יהודה אינו לומד גזירת כתוב זו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בפירוש טעם המחלוקת השניה, במדליק בתוך של חברו, כתבו ה<strong>רשב"א</strong> וה<strong>תוספות</strong>, שבשונה ממדליק בחצרו שלו, כאן לכולי עלמא אין גזירת הכתוב לפטור בטמון. כאן פוטרים חכמים משום שלדעתם אין ראוי לחייב אדם באש על דברים שלא ידע שהוא עשוי להזיק. לכן פטור רק על דברים שאין צפוי שיהיו טמונים כגון ארנק בגדיש. לעומתם, ר' יהודה מחייב על כל נזק שבא על ידי המדליק, כפי שהוא מחייב במדליק בתוך שלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפירוש טעם המחלוקת השניה, במדליק בתוך של חברו, כתבו ה<strong>רשב"א</strong> וה<strong>תוספות</strong>, שבשונה ממדליק בחצרו שלו, כאן לכולי עלמא אין גזירת הכתוב לפטור בטמון. כאן פוטרים חכמים משום שלדעתם אין ראוי לחייב אדם באש על דברים שלא ידע שהוא עשוי להזיק. לכן פטור רק על דברים שאין צפוי שיהיו טמונים כגון ארנק בגדיש. לעומתם, ר' יהודה מחייב על כל נזק שבא על ידי המדליק, כפי שהוא מחייב במדליק בתוך שלו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כג.) חלוקים <strong>ר' יוחנן</strong> ו<strong>ריש לקיש</strong> האם אישו משום חיציו וממונו או רק משום ממונו (עי' לעיל הל' ה-ו), והגמרא מניחה כדבר פשוט, שהפטוֹר על טמון אינו יכול להתקיים אם אישו משום חיציו, שכן אדם המזיק בידיים אינו נפטר על דברים שהזיק רק משום שהם נסתרים מן העין. לכן הגמרא מסבירה שלמאן דאמר שאישו היא גם משום חיציו, יהיה פטור בטמון רק אם בשעת ההצתה היתה גדר המפרידה בינו לבין חברו, ואחר כך נפלה הגדר שלא מחמת הדליקה, והיה יכול לגודרה ולא גדרה, ועברה הדליקה והזיקה ברשות חברו. במקרה זה חייב רק משום ממונו (כיוון שבשעת ההצתה לא פשע) ויש מקום לפטור בטמון.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (כג.) חלוקים <strong>ר' יוחנן</strong> ו<strong>ריש לקיש</strong> האם אישו משום חיציו וממונו או רק משום ממונו (עי' לעיל הל' ה-ו), והגמרא מניחה כדבר פשוט, שהפטוֹר על טמון אינו יכול להתקיים אם אישו משום חיציו, שכן אדם המזיק בידיים אינו נפטר על דברים שהזיק רק משום שהם נסתרים מן העין. לכן הגמרא מסבירה שלמאן דאמר שאישו היא גם משום חיציו, יהיה פטור בטמון רק אם בשעת ההצתה היתה גדר המפרידה בינו לבין חברו, ואחר כך נפלה הגדר שלא מחמת הדליקה, והיה יכול לגודרה ולא גדרה, ועברה הדליקה והזיקה ברשות חברו. במקרה זה חייב רק משום ממונו (כיוון שבשעת ההצתה לא פשע) ויש מקום לפטור בטמון.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>כל הראשונים</strong> פסקו כחכמים ואליבא דרבא, שהמדליק פטור על כל טמון אם הדליק בשלו, ופטור רק על טמון בלתי צפוי אם הדליק אצל חברו. אמנם חלקו הראשונים ביחס למשמעות הפסק שאישו משום חיציו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>כל הראשונים</strong> פסקו כחכמים ואליבא דרבא, שהמדליק פטור על כל טמון אם הדליק בשלו, ופטור רק על טמון בלתי צפוי אם הדליק אצל חברו. אמנם חלקו הראשונים ביחס למשמעות הפסק שאישו משום חיציו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> (ורוב הראשונים עימו) כתב, על פי הסוגיה הנ"ל, שאם הדליק בשלו בשעה שהיתה גדר חוצצת בין שלו לבין של חברו, ונפלה הגדר שלא מחמת הדליקה והזיקה, רק אז חייב על כל טמון שהוא. אך אם הדליק בשלו בשעה שאין גדר, או אפילו בשעה שיש גדר, אך נפלה היא מחמת הדליקה, נחשב הוא כמזיק בתוך של חברו, וחייב על כל טמון צפוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> (ורוב הראשונים עימו) כתב, על פי הסוגיה הנ"ל, שאם הדליק בשלו בשעה שהיתה גדר חוצצת בין שלו לבין של חברו, ונפלה הגדר שלא מחמת הדליקה והזיקה, רק אז חייב על כל טמון שהוא. אך אם הדליק בשלו בשעה שאין גדר, או אפילו בשעה שיש גדר, אך נפלה היא מחמת הדליקה, נחשב הוא כמזיק בתוך של חברו, וחייב על כל טמון צפוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> חלק, וללא התייחסות לדין אישו משום חיציו, כתב שפטור בטמון לגמרי בכל מקרה שמדליק בתוך שלו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> חלק, וללא התייחסות לדין אישו משום חיציו, כתב שפטור בטמון לגמרי בכל מקרה שמדליק בתוך שלו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תיח יג) פסק כטור. וה<strong>גר"א</strong> (ס"ק לג) צידד להלכה כרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תיח יג) פסק כטור. וה<strong>גר"א</strong> (ס"ק לג) צידד להלכה כרמב"ם.</p>
                     
                 </div>
                 
@@ -1414,35 +1414,35 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה י</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המדליק בתוך שדה חבירו ויצאת האש ונאכל הגדיש והיה גדי כפות לו ועבד סמוך לו ונשרף עמו חייב, שכן דרך בני אדם לעשות בגדיש, היה עבד כפות לו וגדי סמוך ל</strong><strong>ו ונשרף עמו פטור.</strong> המדליק בתוך שדה חבירו וכו' ונשרף עמו חייב. א"א זה איני יודע מהו דהכא לאו בטמון מיירי.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גדי ועבד שנשרפו עם הגדיש</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גדי ועבד שנשרפו עם הגדיש</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסמיכות להצגת דין טמון, אומרת ה<strong>משנה</strong> (סא:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסמיכות להצגת דין טמון, אומרת ה<strong>משנה</strong> (סא:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">היה גדי כפות לו ועבד סמוך לו ונשרף עמו - חייב,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">היה גדי כפות לו ועבד סמוך לו ונשרף עמו - חייב,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עבד כפות לו וגדי סמוך לו ונשרף עמו – פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עבד כפות לו וגדי סמוך לו ונשרף עמו – פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם הצית אדם אש והיא שרפה את גדישו של חברו, והיה גדי כפות לגדיש, ועבד סמוך לגדיש, חייב המצית, ובמקרה ההפוך, פטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם הצית אדם אש והיא שרפה את גדישו של חברו, והיה גדי כפות לגדיש, ועבד סמוך לגדיש, חייב המצית, ובמקרה ההפוך, פטור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגית ה<strong>גמרא</strong> העוסקת בשאלת אישו משום חיציו או משום ממונו (כב:), מובאת משנה זו כראיה לכך שאישו משום חיציו היא, שהרי אם אישו משום ממונו היא, מדוע שיפטר על נזק לעבד כפות? הרי אם ממונו (שורו) הרג עבד, חייב כופר! ואכן, הגמרא מבארת שריש לקיש, הסובר שאישו משום ממונו, צריך להסביר שההצתה היתה בגופו של העבד, ושבאה המשנה ללמדנו שבמקרה זה פטור על הגדי אף אם הוא שייך לאדם אחר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגית ה<strong>גמרא</strong> העוסקת בשאלת אישו משום חיציו או משום ממונו (כב:), מובאת משנה זו כראיה לכך שאישו משום חיציו היא, שהרי אם אישו משום ממונו היא, מדוע שיפטר על נזק לעבד כפות? הרי אם ממונו (שורו) הרג עבד, חייב כופר! ואכן, הגמרא מבארת שריש לקיש, הסובר שאישו משום ממונו, צריך להסביר שההצתה היתה בגופו של העבד, ושבאה המשנה ללמדנו שבמקרה זה פטור על הגדי אף אם הוא שייך לאדם אחר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר, שכאשר הגדי כפות, והעבד סמוך, יכול העבד לברוח, ולכן פטור המצית על הריגתו, וחייב על הגדיש ועל הגדי. לעומת זאת, כאשר העבד כפות, הרי שהמצית ביצע מעשה של הרג,  ופטור על הגדי והגדיש, על פי הכלל 'קים ליה בדרבה מיניה' (כלומר, אדם המתחייב שני עונשים במעשה אחד, מקויים בו רק החמור מבין שניהם) <sup id="ref56"><a href="#fn56">[56]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר, שכאשר הגדי כפות, והעבד סמוך, יכול העבד לברוח, ולכן פטור המצית על הריגתו, וחייב על הגדיש ועל הגדי. לעומת זאת, כאשר העבד כפות, הרי שהמצית ביצע מעשה של הרג,  ופטור על הגדי והגדיש, על פי הכלל 'קים ליה בדרבה מיניה' (כלומר, אדם המתחייב שני עונשים במעשה אחד, מקויים בו רק החמור מבין שניהם) <sup id="ref56"><a href="#fn56">[56]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"ם</strong> (תוס' שם ד"ה "והיה") מפרש שאם הגדי אינו כפות, אז פטור המצית עליו, בין אם העבד כפות (שאז זה משום 'קים ליה בדרבה מיניה') ובין אם הוא אינו כפות (שאז זה משום שהגדי יכול לברוח), ואם הגדי כפות, אזי חייב המצית עליו, שכן לא יכול היה לברוח, ובלבד שאינו פטור משום 'קים ליה' (אם גם העבד כפות). שיטה זו שונה מרש"י רק בכך שלפיה אין חייבים על גדי שאינו כפות, שכן ניתן לצפות שיברח. זאת לעומת רש"י ממנו משמע שאין הבדל בין גדי כפות לגדי שאינו כפות, כיוון שאין אנו מצפים מהגדי שיברח אפילו אם הוא אינו כפות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"ם</strong> (תוס' שם ד"ה "והיה") מפרש שאם הגדי אינו כפות, אז פטור המצית עליו, בין אם העבד כפות (שאז זה משום 'קים ליה בדרבה מיניה') ובין אם הוא אינו כפות (שאז זה משום שהגדי יכול לברוח), ואם הגדי כפות, אזי חייב המצית עליו, שכן לא יכול היה לברוח, ובלבד שאינו פטור משום 'קים ליה' (אם גם העבד כפות). שיטה זו שונה מרש"י רק בכך שלפיה אין חייבים על גדי שאינו כפות, שכן ניתן לצפות שיברח. זאת לעומת רש"י ממנו משמע שאין הבדל בין גדי כפות לגדי שאינו כפות, כיוון שאין אנו מצפים מהגדי שיברח אפילו אם הוא אינו כפות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר"ת</strong> (שם) הסביר אחרת את משמעות הגדי בדוגמה שבמשנה- לדבריו, אין דרכם של אנשים לכפות גדי. היינו יכולים לחשוב, שכל דבר שלא צפוי היה שישרף עם הגדיש, נחשב בגדר טמון ופטרה תורה עליו. על רקע זה משמיעה לנו המשנה, שגם דברים שאינם בגדר הרגיל, כגדי כפות, אינם נחשבים טמון, כיוון שהם גלויים. המקרה ההפוך (גדי סמוך ועבד כפות), מובא כדי להשמיענו, שאף במקום שמצד דין טמון לא היינו חושבים לפטור, עדיין יכול המדליק להיפטר מדין 'קים ליה'.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר"ת</strong> (שם) הסביר אחרת את משמעות הגדי בדוגמה שבמשנה- לדבריו, אין דרכם של אנשים לכפות גדי. היינו יכולים לחשוב, שכל דבר שלא צפוי היה שישרף עם הגדיש, נחשב בגדר טמון ופטרה תורה עליו. על רקע זה משמיעה לנו המשנה, שגם דברים שאינם בגדר הרגיל, כגדי כפות, אינם נחשבים טמון, כיוון שהם גלויים. המקרה ההפוך (גדי סמוך ועבד כפות), מובא כדי להשמיענו, שאף במקום שמצד דין טמון לא היינו חושבים לפטור, עדיין יכול המדליק להיפטר מדין 'קים ליה'.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ל<strong>רמב"ם</strong> הסבר מעט דומה, אך בהחלט אחר, המשאיר מקום לפרשנות. לדבריו, מדובר במקרה שהדליק בחצר חברו. כזכור, במקרה כזה אפילו חכמים אינם פוטרים אלא בדברים שאין דרכם להימצא בגדיש. הרמב"ם מסביר שבגדי כפות ועבד סמוך חייב "שכן דרך בני אדם לעשות בגדיש", דהיינו, דינו של הגדי הכפות הוא כשל מוריגים בגדיש, הרגילים להיות שם. אמנם, הרמב"ם אינו כותב במפורש את הסיבה שבגדי סמוך ועבד כפות פטור. ה<strong>מגיד משנה</strong> מניח שהסיבה היא כפירוש שאר הראשונים, משום 'קים ליה'<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ל<strong>רמב"ם</strong> הסבר מעט דומה, אך בהחלט אחר, המשאיר מקום לפרשנות. לדבריו, מדובר במקרה שהדליק בחצר חברו. כזכור, במקרה כזה אפילו חכמים אינם פוטרים אלא בדברים שאין דרכם להימצא בגדיש. הרמב"ם מסביר שבגדי כפות ועבד סמוך חייב "שכן דרך בני אדם לעשות בגדיש", דהיינו, דינו של הגדי הכפות הוא כשל מוריגים בגדיש, הרגילים להיות שם. אמנם, הרמב"ם אינו כותב במפורש את הסיבה שבגדי סמוך ועבד כפות פטור. ה<strong>מגיד משנה</strong> מניח שהסיבה היא כפירוש שאר הראשונים, משום 'קים ליה'<sup id="ref57"><a href="#fn57">[57]</a></sup>.</p>
                     
                 </div>
                 
@@ -1450,37 +1450,37 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יא</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המשאיל מקום לחבירו והגדיש בו והטמין כלים והדליק המשאיל ושרף הגדיש אינו משלם אלא דמי גדיש בלבד, השאילו מקום להגדיש חטים והגדיש שעורים או להגדיש שעורים והגדיש חטים או שהגדיש חטים וחיפן בשעורים או שהגדיש שעורים וחיפן בחטים אינו משלם אלא דמי שעורים בלבד. </strong>
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המשאיל מקום לחברו להגדיש</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המשאיל מקום לחברו להגדיש</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (סב.) מובאת <strong>ברייתא</strong> המתארת את מחלוקת <strong>חכמים</strong> ו<strong>ר' יהודה</strong> בטמון. הברייתא מסיימת-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (סב.) מובאת <strong>ברייתא</strong> המתארת את מחלוקת <strong>חכמים</strong> ו<strong>ר' יהודה</strong> בטמון. הברייתא מסיימת-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומודה ר' יהודה [שמחייב בטמון] לחכמים [הפוטרים בטמון], במשאיל מקום לחבירו להגדיש גדיש והגדיש והטמין, שאין משלם אלא דמי גדיש בלבד;</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומודה ר' יהודה [שמחייב בטמון] לחכמים [הפוטרים בטמון], במשאיל מקום לחבירו להגדיש גדיש והגדיש והטמין, שאין משלם אלא דמי גדיש בלבד;</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">[1] להגדיש חטין והגדיש שעורין, [2] שעורין והגדיש חטין,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">[1] להגדיש חטין והגדיש שעורין, [2] שעורין והגדיש חטין,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">[3] חטין וחיפן בשעורין, [4] שעורין וחיפן בחטים,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">[3] חטין וחיפן בשעורין, [4] שעורין וחיפן בחטים,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שאינו משלם אלא דמי שעורין בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שאינו משלם אלא דמי שעורין בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אפילו ר' יהודה, הסובר שחייב המדליק על כל סוג של טמון, בין שהדליק בשדה חברו ובין שהדליק בשדהו שלו, מודה לחכמים כאשר המזיק הוא שומר, שקיבל על עצמו שמירה של גדיש, והמפקיד הניח כלים, שחייב השומר רק על מה שקיבל על עצמו לשמור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אפילו ר' יהודה, הסובר שחייב המדליק על כל סוג של טמון, בין שהדליק בשדה חברו ובין שהדליק בשדהו שלו, מודה לחכמים כאשר המזיק הוא שומר, שקיבל על עצמו שמירה של גדיש, והמפקיד הניח כלים, שחייב השומר רק על מה שקיבל על עצמו לשמור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר לפי אותו העיקרון את ארבעת המקרים שבסיפא של הברייתא- אם נתן לו רשות להגדיש שעורים והגדיש חיטים, או אפילו שעורים המחופות חיטים, משלם המשאיל שהזיק רק דמי שעורים, שכך קיבל על עצמו (מקרה שני ורביעי בסיפא). בנוסף, אם נתן לו רשות להגדיש חיטים אך הגדיש שעורים (מקרה [1]), בוודאי שחייב רק על שעורים, שרק הם ניזוקו, ולבסוף, אם נתן לו רשות לחיטים, ואכן הגדיש חיטים אך חיפן בשעורים (מקרה [3]), חייב גם כן רק על שעורים שכן מצטדק המשאיל ואומר שלא ראה שם אלא שעורים, ולכן לא נזהר כל כך.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר לפי אותו העיקרון את ארבעת המקרים שבסיפא של הברייתא- אם נתן לו רשות להגדיש שעורים והגדיש חיטים, או אפילו שעורים המחופות חיטים, משלם המשאיל שהזיק רק דמי שעורים, שכך קיבל על עצמו (מקרה שני ורביעי בסיפא). בנוסף, אם נתן לו רשות להגדיש חיטים אך הגדיש שעורים (מקרה [1]), בוודאי שחייב רק על שעורים, שרק הם ניזוקו, ולבסוף, אם נתן לו רשות לחיטים, ואכן הגדיש חיטים אך חיפן בשעורים (מקרה [3]), חייב גם כן רק על שעורים שכן מצטדק המשאיל ואומר שלא ראה שם אלא שעורים, ולכן לא נזהר כל כך.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מה<strong>רמב"ם</strong> לעומת זאת, משמע שמקרים [3] ו[4] מדברים במקרה שהשאילו מקום סתם. במקרה כזה, אם הגדיש חיטים וחיפן בשעורים, חייב המדליק רק עד דמי שעורים, כי הוא טוען שהתחייב לשמור רק על מה שראה, שזה שעורים. כמו כן, אם הגדיש שעורים וחיפן בחיטים, חייב אמנם על החיטים שבחיפוי, אך על גוף הערימה משלם רק כדמי שעורים, כיוון ששעורים הוזקו. נמצא, שלדעת הרמב"ם, בניגוד לרש"י, אפשר שאם קיבל על עצמו לשמור חיטים, אפילו אם רואה שעורים (במקרה שהגדיש חיטים וחיפן בשעורים), חייב על דמי חיטים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מה<strong>רמב"ם</strong> לעומת זאת, משמע שמקרים [3] ו[4] מדברים במקרה שהשאילו מקום סתם. במקרה כזה, אם הגדיש חיטים וחיפן בשעורים, חייב המדליק רק עד דמי שעורים, כי הוא טוען שהתחייב לשמור רק על מה שראה, שזה שעורים. כמו כן, אם הגדיש שעורים וחיפן בחיטים, חייב אמנם על החיטים שבחיפוי, אך על גוף הערימה משלם רק כדמי שעורים, כיוון ששעורים הוזקו. נמצא, שלדעת הרמב"ם, בניגוד לרש"י, אפשר שאם קיבל על עצמו לשמור חיטים, אפילו אם רואה שעורים (במקרה שהגדיש חיטים וחיפן בשעורים), חייב על דמי חיטים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> מעירים, שמדובר במקרה שלא ראה המדליק את ערימתו של המגדיש, כיוון שאחרת אין להבין מדוע אם הגדיש חיטים יהיה חייב רק בדמי שעורים, אפילו אם התחייב בשמירת שעורים, שהרי ידע מה הוא מזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> מעירים, שמדובר במקרה שלא ראה המדליק את ערימתו של המגדיש, כיוון שאחרת אין להבין מדוע אם הגדיש חיטים יהיה חייב רק בדמי שעורים, אפילו אם התחייב בשמירת שעורים, שהרי ידע מה הוא מזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תיח טו) פוסק כלשון הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תיח טו) פוסק כלשון הרמב"ם.</p>
                     
                 </div>
                 
@@ -1488,33 +1488,33 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>המדליק את הבירה של חבירו משלם כל מה שבתוכה, שכן דרך בני אדם להניח כל כליהם וכל חפציהם בבתים, וכל שיטעון בעל הבית הרי זה נשבע בנקיטת חפץ ונוטל, ושבועה זו מדברי סופרים כמו שיתבאר, ובלבד שיטעון דברים שהוא אמוד בהן או שהוא אמוד להיות אותן הדברים שטען פקדון אצלו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">עשו תקנת נגזל באישו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">עשו תקנת נגזל באישו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">חז"ל תיקנו שכאשר נגזל וגזלן חלוקים בשאלה מה נגזל, יכול הנגזל להישבע שאכן כך גזלו כדבריו, ולגבות ממנו (שבועות מד:).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">חז"ל תיקנו שכאשר נגזל וגזלן חלוקים בשאלה מה נגזל, יכול הנגזל להישבע שאכן כך גזלו כדבריו, ולגבות ממנו (שבועות מד:).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראינו את שיטת <strong>ר' יהודה</strong> במשנה, המחייב בטמון בכל אופן, ואת שיטת ה<strong>חכמים</strong> המודים לו במקרה בו הדליק בשל חברו ומדובר בדבר טמון שצפוי שיהיה שם (למשל, המדליק את בית חברו, חייב אף על ארנק החבוי בו, כיוון שכן דרכם של אנשים לשמור ארנק בביתם).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראינו את שיטת <strong>ר' יהודה</strong> במשנה, המחייב בטמון בכל אופן, ואת שיטת ה<strong>חכמים</strong> המודים לו במקרה בו הדליק בשל חברו ומדובר בדבר טמון שצפוי שיהיה שם (למשל, המדליק את בית חברו, חייב אף על ארנק החבוי בו, כיוון שכן דרכם של אנשים לשמור ארנק בביתם).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (סב.) מביאה את דברי <strong>שמואל</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (סב.) מביאה את דברי <strong>שמואל</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">"לר' יהודה דמחייב על נזקי טמון באש עשו תקנת נגזל באשו"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">"לר' יהודה דמחייב על נזקי טמון באש עשו תקנת נגזל באשו"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לר' יהודה, המחייב על טמון באש, מצב מצוי הוא שאין עדים שיכולים להעיד מה נשרף, כיוון שלא ראו זאת קודם השריפה (כי היה זה טמון), ולאחר השריפה לא נותרו שרידים. לכן מחדש שמואל ש"עשו תקנת נגזל באישו". כלומר, כפי שהנגזל טוען מה גזלו מאיתו, נשבע ונוטל מהגזלן, כך הניזק באש נשבע מה נשרף לו ונוטל מהמצית. כיוון שחכמים מודים לר' יהודה במדליק בתוך של חברו בדברים שדרכם להיות שם, אמורים דברי שמואל גם לגבי שיטת חכמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, לר' יהודה, המחייב על טמון באש, מצב מצוי הוא שאין עדים שיכולים להעיד מה נשרף, כיוון שלא ראו זאת קודם השריפה (כי היה זה טמון), ולאחר השריפה לא נותרו שרידים. לכן מחדש שמואל ש"עשו תקנת נגזל באישו". כלומר, כפי שהנגזל טוען מה גזלו מאיתו, נשבע ונוטל מהגזלן, כך הניזק באש נשבע מה נשרף לו ונוטל מהמצית. כיוון שחכמים מודים לר' יהודה במדליק בתוך של חברו בדברים שדרכם להיות שם, אמורים דברי שמואל גם לגבי שיטת חכמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מעלה <strong>ר' יימר </strong>את השאלה, מה הדין אם טוען אדם שהיה לו בבית חפץ יקר ומיוחד, שנשרף, והוא תובע את שוויו מהמזיק. <strong>ר' אשי </strong>עונה, שרק אם סביר שהיה לו חפץ שכזה (למשל, אם הוא עשיר, או שהוא אמין וישר, ואנשים מפקידים אצלו דברים יקרים) יכול להישבע וליטול פיצוי מהמזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מעלה <strong>ר' יימר </strong>את השאלה, מה הדין אם טוען אדם שהיה לו בבית חפץ יקר ומיוחד, שנשרף, והוא תובע את שוויו מהמזיק. <strong>ר' אשי </strong>עונה, שרק אם סביר שהיה לו חפץ שכזה (למשל, אם הוא עשיר, או שהוא אמין וישר, ואנשים מפקידים אצלו דברים יקרים) יכול להישבע וליטול פיצוי מהמזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ראב"ד</strong> (מובא ברשב"א) סובר שדין זה, שיכול הניזק להכריז מה נשרף לו, להישבע וליטול, נאמר רק במקום בו טוען המזיק טענת שמא, כלומר, שאינו יודע בדיוק מה שרף, אך במקרה שהוא טוען טענת ברי, כלומר, שהוא יודע מה שרף, וזה פחות ממה שאומר הניזק, יכול המזיק להישבע ולהיפטר כדין כל מודה במקצת<sup id="ref58"><a href="#fn58">[58]</a></sup>. אמנם ה<strong>רשב"א</strong>, ה<strong>מגיד משנה</strong> וה<strong>בית יוסף</strong> חולקים על זה, ומפרשים שגם כאשר טוען המזיק טענת ברי יכול הניזק להישבע וליטול<sup id="ref59"><a href="#fn59">[59]</a></sup>. וכן פסק ב<strong>שו"ע</strong> (תיח יג)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב"ד</strong> (מובא ברשב"א) סובר שדין זה, שיכול הניזק להכריז מה נשרף לו, להישבע וליטול, נאמר רק במקום בו טוען המזיק טענת שמא, כלומר, שאינו יודע בדיוק מה שרף, אך במקרה שהוא טוען טענת ברי, כלומר, שהוא יודע מה שרף, וזה פחות ממה שאומר הניזק, יכול המזיק להישבע ולהיפטר כדין כל מודה במקצת<sup id="ref58"><a href="#fn58">[58]</a></sup>. אמנם ה<strong>רשב"א</strong>, ה<strong>מגיד משנה</strong> וה<strong>בית יוסף</strong> חולקים על זה, ומפרשים שגם כאשר טוען המזיק טענת ברי יכול הניזק להישבע וליטול<sup id="ref59"><a href="#fn59">[59]</a></sup>. וכן פסק ב<strong>שו"ע</strong> (תיח יג)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד בעניין זה, עיין ברמב"ם חובל ומזיק פרק ז הלכה יז-יט, ובדברינו שם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד בעניין זה, עיין ברמב"ם חובל ומזיק פרק ז הלכה יז-יט, ובדברינו שם.</p>
                     
                 </div>
                 
@@ -1522,35 +1522,35 @@
             
             
             <div id="halacha-10" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>גמל שהוא טעון פשתן ועובר ברשות הרבים ונכנס פשתנו לתוך החנות ודלקה בנרו של חנוני והדליק את כל הבירה בעל הגמל חייב מפני שהרבה במשוי בין שעמדה הבהמה בין שלא עמדה, הניח החנוני נרו מבחוץ החנוני חייב אף בדמי פשתן מפני שהניח נרו מבחוץ ואפילו נר חנוכה היה לו לישב ולשמור. </strong>
                 </div>
                 
 
                 
                 <div id="topic-10-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פשתן שעל גמל שהוצת מנרו של חנווני והצית בית</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">פשתן שעל גמל שהוצת מנרו של חנווני והצית בית</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (סב:) כותבת:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (סב:) כותבת:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גמל שהיה טעון פשתן ועבר ברשות הרבים, ונכנס פשתנו לתוך החנות ודלקו בנרו של חנוני והדליק את הבירה - בעל גמל חייב, הניח חנוני נרו מבחוץ - החנוני חייב; <strong>רבי יהודה</strong> אומר: בנר חנוכה - פטור</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גמל שהיה טעון פשתן ועבר ברשות הרבים, ונכנס פשתנו לתוך החנות ודלקו בנרו של חנוני והדליק את הבירה - בעל גמל חייב, הניח חנוני נרו מבחוץ - החנוני חייב; <strong>רבי יהודה</strong> אומר: בנר חנוכה - פטור</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כב:) הדנה בשאלת אישו משום חיציו או משום ממונו מביאה משנה זו כראיה לכך שאישו משום חיציו, שכן אם אישו היא משום ממונו, קשה להבין מדוע בעל הגמל חייב כשהיה נרו של חנווני בפנים, שהרי האש היא ממונו של החנווני, והגמל רק העביר את האש מנרו של החנווני לבירה<sup id="ref60"><a href="#fn60">[60]</a></sup>. לכן מפרש <strong>ריש לקיש</strong>, הסובר שאישו משום ממונו, שמדובר במקרה בו הגמל הלך לאורך דופן הבית והציתו באופן ישיר. במקרה כזה בעל הגמל חייב על כל מה ששרף גמלו באופן ישיר משום שיכול היה למשוך את גמלו משם. כמו כן, על פי דרך זו מעמיד ריש לקיש את המקרה שבסיפא, בו רק החנווני שהניח נרו בחוץ חייב, במקרה בו לא יכול היה בעל הגמל להפריד את גמלו הבוער מהבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (כב:) הדנה בשאלת אישו משום חיציו או משום ממונו מביאה משנה זו כראיה לכך שאישו משום חיציו, שכן אם אישו היא משום ממונו, קשה להבין מדוע בעל הגמל חייב כשהיה נרו של חנווני בפנים, שהרי האש היא ממונו של החנווני, והגמל רק העביר את האש מנרו של החנווני לבירה<sup id="ref60"><a href="#fn60">[60]</a></sup>. לכן מפרש <strong>ריש לקיש</strong>, הסובר שאישו משום ממונו, שמדובר במקרה בו הגמל הלך לאורך דופן הבית והציתו באופן ישיר. במקרה כזה בעל הגמל חייב על כל מה ששרף גמלו באופן ישיר משום שיכול היה למשוך את גמלו משם. כמו כן, על פי דרך זו מעמיד ריש לקיש את המקרה שבסיפא, בו רק החנווני שהניח נרו בחוץ חייב, במקרה בו לא יכול היה בעל הגמל להפריד את גמלו הבוער מהבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כיוון שלהלכה אישו משום חיציו, אין צורך להעמיד את המשנה כדברי ריש לקיש, לכן מדגיש ה<strong>רמב"ם </strong>שאם נרו של החנווני היה בתוך חנותו, חייב בעל הגמל בין אם עמדה הבהמה, ורק העבירה את האש, ובין אם לא עמדה אלא הבעירה ישירות את כל הבית. זאת משום שטעם החיוב אינו משום שהגמל הדליק את כל הבירה באופן ישיר (כבהעמדת ריש לקיש), אלא משום שבעל הגמל נחשב כמצית האש כיוון שהרבה בטעינת גמלו עד שיכנס הפשתן לתוך הבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כיוון שלהלכה אישו משום חיציו, אין צורך להעמיד את המשנה כדברי ריש לקיש, לכן מדגיש ה<strong>רמב"ם </strong>שאם נרו של החנווני היה בתוך חנותו, חייב בעל הגמל בין אם עמדה הבהמה, ורק העבירה את האש, ובין אם לא עמדה אלא הבעירה ישירות את כל הבית. זאת משום שטעם החיוב אינו משום שהגמל הדליק את כל הבירה באופן ישיר (כבהעמדת ריש לקיש), אלא משום שבעל הגמל נחשב כמצית האש כיוון שהרבה בטעינת גמלו עד שיכנס הפשתן לתוך הבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (ל.) מובאת ברייתא לפיה ר' יהודה פוטר את החנווני שהניח נר חנוכה בחוץ, משום שזוהי "רשות מצוה". הגמרא מתלבטת האם ר' יהודה פוטר את העושה ברשות דווקא ברשות מצווה, כיוון שאז אין לו ברירה, או גם ברשות אחרת, כמו צרכים מסויימים שהתירו לעשות ברשות הרבים. למסקנת הגמרא פוטר ר' יהודה על כל נזק שנעשה ברשות הרבים מתוך שימוש שיש לו רשות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (ל.) מובאת ברייתא לפיה ר' יהודה פוטר את החנווני שהניח נר חנוכה בחוץ, משום שזוהי "רשות מצוה". הגמרא מתלבטת האם ר' יהודה פוטר את העושה ברשות דווקא ברשות מצווה, כיוון שאז אין לו ברירה, או גם ברשות אחרת, כמו צרכים מסויימים שהתירו לעשות ברשות הרבים. למסקנת הגמרא פוטר ר' יהודה על כל נזק שנעשה ברשות הרבים מתוך שימוש שיש לו רשות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם </strong>פוסק שלא כר' יהודה, ולכן הוא כותב  שאפילו בנר חנוכה חייב החנווני, שכן היה עליו לשבת ולשמור<sup id="ref61"><a href="#fn61">[61]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם </strong>פוסק שלא כר' יהודה, ולכן הוא כותב  שאפילו בנר חנוכה חייב החנווני, שכן היה עליו לשבת ולשמור<sup id="ref61"><a href="#fn61">[61]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כב.), מובאת כאמור משנתנו בהקשר של הדיון אם אישו משום חיציו או משום ממונו. בנוסף מובאת בהקשר זה המשנה העוסקת בכלב שלקח חררה, אכלהּ והדליק אגב כך גדיש, שמשלם על החררה נזק שלם ועל הגדיש חצי נזק (עי' לעיל פרק ב הלכה יז). <strong>רש"י</strong> מסביר שעל הגדיש משלם הכלב חצי נזק בלבד מדין צרורות. בעקבות הבנה זו, שבע"ח שהצית חייב רק חצי נזק, מדין צרורות, פוסק ה<strong>טור</strong> (תיח), שאף הגמל שבנידוננו, אם הצית את הבית במקום אחד, והאש התפשטה משם ושרפה עוד מהבית, חייב בעל הגמל נזק שלם רק על מה שהצית הגמל באופן ישיר, אך על שאר הנזק לבית חייב בעל הגמל רק חצי נזק, מדין צרורות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (כב.), מובאת כאמור משנתנו בהקשר של הדיון אם אישו משום חיציו או משום ממונו. בנוסף מובאת בהקשר זה המשנה העוסקת בכלב שלקח חררה, אכלהּ והדליק אגב כך גדיש, שמשלם על החררה נזק שלם ועל הגדיש חצי נזק (עי' לעיל פרק ב הלכה יז). <strong>רש"י</strong> מסביר שעל הגדיש משלם הכלב חצי נזק בלבד מדין צרורות. בעקבות הבנה זו, שבע"ח שהצית חייב רק חצי נזק, מדין צרורות, פוסק ה<strong>טור</strong> (תיח), שאף הגמל שבנידוננו, אם הצית את הבית במקום אחד, והאש התפשטה משם ושרפה עוד מהבית, חייב בעל הגמל נזק שלם רק על מה שהצית הגמל באופן ישיר, אך על שאר הנזק לבית חייב בעל הגמל רק חצי נזק, מדין צרורות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>רמב"ם</strong> כתב בפשטות שאם נרו של החנווני היה בפנים, בעל הגמל חייב, ומשמע שחייב נזק שלם על כל הנזק לבית.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>רמב"ם</strong> כתב בפשטות שאם נרו של החנווני היה בפנים, בעל הגמל חייב, ומשמע שחייב נזק שלם על כל הנזק לבית.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תיח יב) פוסק כרמב"ם, וה<strong>רמ"א</strong> הביא את שיטת הטור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תיח יב) פוסק כרמב"ם, וה<strong>רמ"א</strong> הביא את שיטת הטור.</p>
                     
                 </div>
                 
@@ -1558,48 +1558,48 @@
             
             
             <div id="halacha-11" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>הכופף קמתו של חבירו לפני האש עד שתדלק אם אין האש מגעת לה אלא ברוח שאינה מצויה פטור מדיני אדם וחייב בדיני שמים, והטומן קמתו של חבירו בעפר או בתבן ועברה האש ואכלה אותה הרי זה הטומן פטור מדיני אדם וחייב בדיני שמים מפני שהמדליק את האש פטור על הטמון. </strong>
                 </div>
                 
 
                 
                 <div id="topic-11-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המקרב את החפץ הנשרף לאש</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המקרב את החפץ הנשרף לאש</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (נה:) מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (נה:) מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אמר <strong>ר' יהושע</strong>: ארבעה דברים, העושה אותן פטור מדיני אדם וחייב בדיני שמים, ואלו הן... והכופף קמתו של חבירו בפני הדליקה...</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמר <strong>ר' יהושע</strong>: ארבעה דברים, העושה אותן פטור מדיני אדם וחייב בדיני שמים, ואלו הן... והכופף קמתו של חבירו בפני הדליקה...</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מי שמקרב את קמתו של חברו כנגד האש, כך שבגללו האש אחזה בה, חייב בדיני שמים ופטור בדיני אדם. ב<strong>גמרא</strong> מבואר, שמדובר במקרה בו קירב את הקמה בכזה אופן שרק רוח שאינה מצויה תצליח להאחיז את האש בקמה, ולכן פטור, שכן לא העלה על דעתו שלפתע תתחיל רוח כזו לנשב. אמנם, אם קירב את קמת חברו למרחק בו אפילו רוח מצויה תוכל להעביר את האש לקמה, חייב גם בדיני אדם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מי שמקרב את קמתו של חברו כנגד האש, כך שבגללו האש אחזה בה, חייב בדיני שמים ופטור בדיני אדם. ב<strong>גמרא</strong> מבואר, שמדובר במקרה בו קירב את הקמה בכזה אופן שרק רוח שאינה מצויה תצליח להאחיז את האש בקמה, ולכן פטור, שכן לא העלה על דעתו שלפתע תתחיל רוח כזו לנשב. אמנם, אם קירב את קמת חברו למרחק בו אפילו רוח מצויה תוכל להעביר את האש לקמה, חייב גם בדיני אדם.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>גמרא</strong> (כג:) מבואר שהמשיך נחש בחברו (כלומר ששם יד חברו לתוך פי הנחש) פטור מדיני אדם למרות שבסבירות גבוהה הנחש יכישו. ה<strong>תוספות</strong> (ד"ה אילימא) שואלים מה ההבדל בין דין זה, לבין הדין שבסוגייתנו, בו המקרב את החפץ הניזוק לאש באופן כזה שסבירות גבוהה שיוזק חייב בדיני אדם. התוספות עונים, ששם, בשעה שקירב האדם את חברו לנחש, לא היה עדיין הארס בעולם, מה שאין כאן, שהאש כבר קיימת בזמן כיפוף הקמה<sup id="ref62"><a href="#fn62">[62]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>גמרא</strong> (כג:) מבואר שהמשיך נחש בחברו (כלומר ששם יד חברו לתוך פי הנחש) פטור מדיני אדם למרות שבסבירות גבוהה הנחש יכישו. ה<strong>תוספות</strong> (ד"ה אילימא) שואלים מה ההבדל בין דין זה, לבין הדין שבסוגייתנו, בו המקרב את החפץ הניזוק לאש באופן כזה שסבירות גבוהה שיוזק חייב בדיני אדם. התוספות עונים, ששם, בשעה שקירב האדם את חברו לנחש, לא היה עדיין הארס בעולם, מה שאין כאן, שהאש כבר קיימת בזמן כיפוף הקמה<sup id="ref62"><a href="#fn62">[62]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong> מבהיר, שאם כאשר כפף את קמת חברו לפני הדלקה, כבר היתה מנשבת רוח שאינה מצויה, חייב, שכן כל הסיבה שפטור ברוח שאינה מצויה היא משום שלא עלה על דעתו שתבוא כזו רוח פתאום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong> מבהיר, שאם כאשר כפף את קמת חברו לפני הדלקה, כבר היתה מנשבת רוח שאינה מצויה, חייב, שכן כל הסיבה שפטור ברוח שאינה מצויה היא משום שלא עלה על דעתו שתבוא כזו רוח פתאום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> כותב:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> כותב:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הכופף קומתו של חבירו לפני הדליקה <strong>כדי שתגיע בה הדליקה</strong> אם כפפה במקום שתוכל להגיע שם הדליקה ברוח מצויה חייב לשלם ואם לאו פטור מדיני אדם וחייב בדיני שמים</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הכופף קומתו של חבירו לפני הדליקה <strong>כדי שתגיע בה הדליקה</strong> אם כפפה במקום שתוכל להגיע שם הדליקה ברוח מצויה חייב לשלם ואם לאו פטור מדיני אדם וחייב בדיני שמים</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ומשמע מלשונו שהמוטיבציה של המכופף צריכה להיות יצירת נזק. ונראה שאם מדובר ברוח מצויה, חייב המכופף אף אם לא נתכוון לגרום נזק, ככל מבעיר החייב גם כשלא הזיק בכוונה, והמוטיבציה להזיק עקרונית רק לגבי רוח שאינה מצויה, שם חייב בדיני שמים, ומשמע שחייב בדיני שמים רק אם נתכוון להזיק (ועי' עוד מזה בנושא הבא)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ומשמע מלשונו שהמוטיבציה של המכופף צריכה להיות יצירת נזק. ונראה שאם מדובר ברוח מצויה, חייב המכופף אף אם לא נתכוון לגרום נזק, ככל מבעיר החייב גם כשלא הזיק בכוונה, והמוטיבציה להזיק עקרונית רק לגבי רוח שאינה מצויה, שם חייב בדיני שמים, ומשמע שחייב בדיני שמים רק אם נתכוון להזיק (ועי' עוד מזה בנושא הבא)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תיח יא) מביא את לשון הטור להלכה<sup id="ref63"><a href="#fn63">[63]</a></sup>. וה<strong>רמ"א</strong> מביא את הערתו של המגיד משנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תיח יא) מביא את לשון הטור להלכה<sup id="ref63"><a href="#fn63">[63]</a></sup>. וה<strong>רמ"א</strong> מביא את הערתו של המגיד משנה.</p>
                     
                 </div>
                 
                 <div id="topic-11-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">המזיק את חברו ע"י הטמנת חפציו קודם שישרפו</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">המזיק את חברו ע"י הטמנת חפציו קודם שישרפו</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדין שבברייתא מובא עוד הסבר בגמרא (נה:) בשם <strong>ר'</strong> <strong>אשי</strong>- לדבריו, "הכופף קמתו של חברו בפני הדליקה", הכוונה למי שטמן את קמתו של חברו כשראה דליקה מתקרבת, ובכך הזיקו, כיוון שעתה המדליק פטור על הקמה מדין טמון. ה<strong>גמרא</strong> מסבירה שישנה חשיבות מיוחדת להבהיר שחייב הטומן בדיני שמים, כיוון שהוא טוען שרצה לכסות את הקמה, ולכן ניתן היה לחשוב שיפטר אפילו מדיני שמים, ומשמיעה לנו הברייתא שהוא בכל זאת חייב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדין שבברייתא מובא עוד הסבר בגמרא (נה:) בשם <strong>ר'</strong> <strong>אשי</strong>- לדבריו, "הכופף קמתו של חברו בפני הדליקה", הכוונה למי שטמן את קמתו של חברו כשראה דליקה מתקרבת, ובכך הזיקו, כיוון שעתה המדליק פטור על הקמה מדין טמון. ה<strong>גמרא</strong> מסבירה שישנה חשיבות מיוחדת להבהיר שחייב הטומן בדיני שמים, כיוון שהוא טוען שרצה לכסות את הקמה, ולכן ניתן היה לחשוב שיפטר אפילו מדיני שמים, ומשמיעה לנו הברייתא שהוא בכל זאת חייב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "כסויי") וה<strong>רא"ש</strong> מבינים שההווה אמינא של הגמרא שיהיה הטומן פטור אפילו מדיני שמים, היא מתוך שנתכוון לטובה, ובכל זאת משמיעה לנו הברייתא שחייב בדיני שמים. ומסבירים התוספות, שאפילו אם כוונתו היתה להציל את הקמה, עדיין חייב בדיני שמים, כי היה צריך להעלות על דעתו שיזיק ולא יועיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ד"ה "כסויי") וה<strong>רא"ש</strong> מבינים שההווה אמינא של הגמרא שיהיה הטומן פטור אפילו מדיני שמים, היא מתוך שנתכוון לטובה, ובכל זאת משמיעה לנו הברייתא שחייב בדיני שמים. ומסבירים התוספות, שאפילו אם כוונתו היתה להציל את הקמה, עדיין חייב בדיני שמים, כי היה צריך להעלות על דעתו שיזיק ולא יועיל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>מאירי</strong> וה<strong>רא"ה</strong> פוסקים שחייב בדיני שמים רק אם היתה כוונתו להזיק על ידי הפקעת התשלומים. הם מפרשים שהגמרא אומרת שהיינו חושבים שפטור לגמרי לא משום שלא היתה לו כוונה להזיק, אלא משום שהזיק בצורה עקיפה מאד. על רקע זה אומרת הברייתא שחייב בדיני שמים, אפילו אם הזיק בצורה עקיפה כזו, ובלבד שיתכוון להפקיע את תשלום הנזק מחברו<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם, ה<strong>מאירי</strong> וה<strong>רא"ה</strong> פוסקים שחייב בדיני שמים רק אם היתה כוונתו להזיק על ידי הפקעת התשלומים. הם מפרשים שהגמרא אומרת שהיינו חושבים שפטור לגמרי לא משום שלא היתה לו כוונה להזיק, אלא משום שהזיק בצורה עקיפה מאד. על רקע זה אומרת הברייתא שחייב בדיני שמים, אפילו אם הזיק בצורה עקיפה כזו, ובלבד שיתכוון להפקיע את תשלום הנזק מחברו<sup id="ref64"><a href="#fn64">[64]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פסק את דינו של ר' אשי באופן ממנו לא ברור מה דעתו במחלוקת הנ"ל. וכן פסק ב<strong>שו"ע</strong> (תיח טז).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פסק את דינו של ר' אשי באופן ממנו לא ברור מה דעתו במחלוקת הנ"ל. וכן פסק ב<strong>שו"ע</strong> (תיח טז).</p>
                     
                 </div>
                 
@@ -1607,25 +1607,25 @@
             
             
             <div id="halacha-12" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>אש שעברה והזיקה את האדם וחבלה בו הרי המבעיר חייב בנזקיו ובשבתו וברפויו ובצערו ובבשתו כאילו הזיקו בידו, שאע"פ שאשו ממונו הוא הרי הוא כמי שהזיק בחציו, אבל אם הזיקה בהמתו או בורו את האדם אינו חייב אלא בנזק בלבד כמו שביארנו. </strong>
                 </div>
                 
 
                 
                 <div id="topic-12-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חיוב ד' דברים באש</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חיוב ד' דברים באש</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (כג.) מסכמת את הדיון בשאלת אישו משום חיציו או משום ממונו, בציון ההבדל בין ר' יוחנן, לפיו אישו משום חיציו וגם משום ממונו, לבין ריש לקיש לפיו אישו היא רק משום ממונו – לפי הראשון, אם האש הזיקה אדם, רואים את המצית כאילו הזיק באופן ישיר, ודינו כדין החובל בחברו, החייב לשלם לו את התשלומים המיוחדים לאדם המזיק (צער, ריפוי, שבת וכו', עי' הלכות חובל ומזיק, פרק א). לעומת זה, לפי האחרון, הדין שווה לדין ממונו של אדם שהזיק אדם אחר, שם משלם המזיק נזק בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (כג.) מסכמת את הדיון בשאלת אישו משום חיציו או משום ממונו, בציון ההבדל בין ר' יוחנן, לפיו אישו משום חיציו וגם משום ממונו, לבין ריש לקיש לפיו אישו היא רק משום ממונו – לפי הראשון, אם האש הזיקה אדם, רואים את המצית כאילו הזיק באופן ישיר, ודינו כדין החובל בחברו, החייב לשלם לו את התשלומים המיוחדים לאדם המזיק (צער, ריפוי, שבת וכו', עי' הלכות חובל ומזיק, פרק א). לעומת זה, לפי האחרון, הדין שווה לדין ממונו של אדם שהזיק אדם אחר, שם משלם המזיק נזק בלבד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"</strong><strong>י</strong> מסביר, ששונה חיוב המצית מחיוב החובל, בכך שהמצית אינו משלם בושת, וזאת על פי המקובל להלכה, שהמזיק את חברו ללא כוונה, פטור מהבושת (עי' הלכות חובל ומזיק פרק א הלכה י). רש"י מדמה את המזיק באש לנופל מהגג ברוח מצויה והזיק, הפטור מבושת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"</strong><strong>י</strong> מסביר, ששונה חיוב המצית מחיוב החובל, בכך שהמצית אינו משלם בושת, וזאת על פי המקובל להלכה, שהמזיק את חברו ללא כוונה, פטור מהבושת (עי' הלכות חובל ומזיק פרק א הלכה י). רש"י מדמה את המזיק באש לנופל מהגג ברוח מצויה והזיק, הפטור מבושת.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו ה<strong>רמב"ם </strong>מחייב את המצית אף בבושת. אמנם נראה שאף הרמב"ם לא יחייב כאשר המצית לא נתכוון להזיק, שכן אין דינו חמור מהמזיק בידיים, שגם כן פטור מבושת אם לא נתכוון להזיק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו ה<strong>רמב"ם </strong>מחייב את המצית אף בבושת. אמנם נראה שאף הרמב"ם לא יחייב כאשר המצית לא נתכוון להזיק, שכן אין דינו חמור מהמזיק בידיים, שגם כן פטור מבושת אם לא נתכוון להזיק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (תיח יז) פוסק כרמב"ם לגבי הבושת, ומוסיף, שבמקרה בו חייב המדליק משום ממונו בלבד (כמו אם הדליק בתוך שלו, ולאחר שהדליק נפלה הגדר בינו לבין חברו שלא מחמת הדליקה) אין דינו של המדליק כאדם המזיק, והוא משלם את הנזק בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (תיח יז) פוסק כרמב"ם לגבי הבושת, ומוסיף, שבמקרה בו חייב המדליק משום ממונו בלבד (כמו אם הדליק בתוך שלו, ולאחר שהדליק נפלה הגדר בינו לבין חברו שלא מחמת הדליקה) אין דינו של המדליק כאדם המזיק, והוא משלם את הנזק בלבד.</p>
                     
                 </div>
                 
@@ -1633,25 +1633,25 @@
             
             
             <div id="halacha-13" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה טז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה טז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>כל תולדות האש הרי הן כאש, כיצד, הניח אבן או סכין או משא בראש גגו ונפלו ברוח מצויה והזיקו חייב לשלם נזק שלם שכל אלו וכיוצא בהן תולדות הבערה הן, ואם נפלו ברוח שאינה מצויה והזיקו פטור. </strong>
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>בריך רחמנא דסייען.</strong>
                 </div>
                 
 
                 
                 <div id="topic-13-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תולדות האש</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תולדות האש</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (ו. ו-ג:) פוסקת שאם הניח חפץ בראש הגג, ונפל ברוח מצויה והזיק תוך כדי נפילה, חייב משום אש. המכנה המשותף בין השנים הוא ש"כח אחר מעורב בהם" (דהיינו הרוח המביאה את הנזק למקום בו הוא מזיק), הם ממונו של המזיק, וחובתו של המזיק לשומרם שלא יזיקו. ה<strong>תוספות</strong> (ג: ד"ה "וממונך") מעירים שהקריטריון של השייכות הממונית לא נאמר בדווקא, שהרי ברור שאדם המצית רכוש של אחד על ידי אש של אחר יהיה חייב. לפיכך, גם המניח חפץ שאינו שלו במקום שיכול בקלות ליפול ולהזיק חייב משום אש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (ו. ו-ג:) פוסקת שאם הניח חפץ בראש הגג, ונפל ברוח מצויה והזיק תוך כדי נפילה, חייב משום אש. המכנה המשותף בין השנים הוא ש"כח אחר מעורב בהם" (דהיינו הרוח המביאה את הנזק למקום בו הוא מזיק), הם ממונו של המזיק, וחובתו של המזיק לשומרם שלא יזיקו. ה<strong>תוספות</strong> (ג: ד"ה "וממונך") מעירים שהקריטריון של השייכות הממונית לא נאמר בדווקא, שהרי ברור שאדם המצית רכוש של אחד על ידי אש של אחר יהיה חייב. לפיכך, גם המניח חפץ שאינו שלו במקום שיכול בקלות ליפול ולהזיק חייב משום אש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק על פי הגמרא, וכמוהו ה<strong>שו"ע</strong> (תיח א).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק על פי הגמרא, וכמוהו ה<strong>שו"ע</strong> (תיח א).</p>
                     
                 </div>
                 
@@ -1659,7 +1659,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1763,6 +1763,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

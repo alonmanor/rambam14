@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות שכירות - פרק יג</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק יג)</h3>
                 <ul class="space-y-3">
@@ -978,7 +978,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -990,15 +990,15 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-10 border border-gray-200">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">הקדמה</h2>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">פרק זה מסיים את הלכות שכירות בדין איסור לא תחסום הדומה בדברים רבים לדיני אכילת פועל שנתבארו בפרק הקודם. הלכה א פותחת בחובה שיש לאדם להניח לבהמה לאכול. הבהמה אוכלת מגידולי קרקע מחוברים או תלושים שהיא עובדת בהם, ולא רק במקרה של דיש המפורש במקרא, אלא גם בהמת משא אוכלת ממשאוי שעל גבה. הראשונים נחלקו האם אכילה זו ממשא שעל גבה היא מדאורייתא או מדרבנן.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">פרק זה מסיים את הלכות שכירות בדין איסור לא תחסום הדומה בדברים רבים לדיני אכילת פועל שנתבארו בפרק הקודם. הלכה א פותחת בחובה שיש לאדם להניח לבהמה לאכול. הבהמה אוכלת מגידולי קרקע מחוברים או תלושים שהיא עובדת בהם, ולא רק במקרה של דיש המפורש במקרא, אלא גם בהמת משא אוכלת ממשאוי שעל גבה. הראשונים נחלקו האם אכילה זו ממשא שעל גבה היא מדאורייתא או מדרבנן.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ב מציגה את איסור לא תחסום וקובעת שלמרות ההבנה המילולית הצרה שבפסוק, לא החסימה כשלעצמה היא האיסור, אלא העבודה בבהמה שאינה יכולה לאכול. עוד נפסק שאם חסם אדם בהמה שכורה, חוץ מחיוב המלקות, מתחייב לשלם לבעליה את מה שמנע ממנה לאכול, וזאת משום שבתוך הסכם השכירות מובלעת ההתחייבות להניח לבהמה לאכול תוך כדי עבודתה. עוד נפסק שחסימה על ידי קול, כלומר גערת בבהמה הרוצה לאכול בשעת עבודתה, אסור ולוקים עליה. זוהי שיטת ר' יוחנן הטוען שעיקום השפתיים נחשב למעשה ולכן רואה חימה בקול כלאו שיש בו מעשה. הראשונים הציעו כמה תשובות לשאלה מה עושה את החוסם בקול לאו שיש בו מעשה, להבדיל מלאוים אחרים עליהם עוברים בדיבור ואינם מוגדרים כלאו שיש בו מעשה. הצעה אחת היא שעל ידי קולו נעשה מעשה ממשי הבא לידי ביטוי בהתנהגות הבהמה. הצעה אחרת היא שאם מדובר בדיבור המחייב הנעת שפתיים, מדובר בלאו שיש בו מעשה, להבדיל מאיסור הכרוך בדיבור, שניתן לעשותו גם ללא הנעת שפתיים. דרך שלישית היא שאיסור שבדרך כלל נעשה ע"י מעשה, נחשב כלאו שיש בו מעשה אף אם הוא נעשה במקרה מסויים ע"י דיבור.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ב מציגה את איסור לא תחסום וקובעת שלמרות ההבנה המילולית הצרה שבפסוק, לא החסימה כשלעצמה היא האיסור, אלא העבודה בבהמה שאינה יכולה לאכול. עוד נפסק שאם חסם אדם בהמה שכורה, חוץ מחיוב המלקות, מתחייב לשלם לבעליה את מה שמנע ממנה לאכול, וזאת משום שבתוך הסכם השכירות מובלעת ההתחייבות להניח לבהמה לאכול תוך כדי עבודתה. עוד נפסק שחסימה על ידי קול, כלומר גערת בבהמה הרוצה לאכול בשעת עבודתה, אסור ולוקים עליה. זוהי שיטת ר' יוחנן הטוען שעיקום השפתיים נחשב למעשה ולכן רואה חימה בקול כלאו שיש בו מעשה. הראשונים הציעו כמה תשובות לשאלה מה עושה את החוסם בקול לאו שיש בו מעשה, להבדיל מלאוים אחרים עליהם עוברים בדיבור ואינם מוגדרים כלאו שיש בו מעשה. הצעה אחת היא שעל ידי קולו נעשה מעשה ממשי הבא לידי ביטוי בהתנהגות הבהמה. הצעה אחרת היא שאם מדובר בדיבור המחייב הנעת שפתיים, מדובר בלאו שיש בו מעשה, להבדיל מאיסור הכרוך בדיבור, שניתן לעשותו גם ללא הנעת שפתיים. דרך שלישית היא שאיסור שבדרך כלל נעשה ע"י מעשה, נחשב כלאו שיש בו מעשה אף אם הוא נעשה במקרה מסויים ע"י דיבור.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכה ג קובעת שליהודי אסור לחסום פרה גם אם היא של גוי, אף מעיקר הדין המקרה ההפוך בו גוי חוסם פרה של יהודי, מותר. הגמרא מתלבטת האם אמירה לגוי שיחסום פרה של יהודי אסורה. כמה מהראשונים הבינו שהכוונה דווקא למקרה בו התבואה היא של היהודי המצווה את הגוי, אך ראשונים אחרים הבינו שהגמרא מתלבטת גם ביחס למקרה בו התבואה של הגוי ורק הפרה של היהודי. רוב הראשונים פסקו להלכה שאכן ציווי לגוי אסור, ולו מחמת הספק. עוד עוסקת ההלכה במקרים שונים בהם נמצאת הבהמה דשה ולא אוכלת מבלי שפיה נחסם באופן מובהק. בסוגית הגמרא לא נפשטו מקרים אלה ולכן נפסק בהם הדין לחומרה. מאידך, במקרה בו אכילה מהתבואה תזיק לבריאותה של הבהמה נפסק שמותר לחוסמה ממש, וזאת מתוך הבנה שאיסור לא תחסום מתמקד בטובת הבהמה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכה ג קובעת שליהודי אסור לחסום פרה גם אם היא של גוי, אף מעיקר הדין המקרה ההפוך בו גוי חוסם פרה של יהודי, מותר. הגמרא מתלבטת האם אמירה לגוי שיחסום פרה של יהודי אסורה. כמה מהראשונים הבינו שהכוונה דווקא למקרה בו התבואה היא של היהודי המצווה את הגוי, אך ראשונים אחרים הבינו שהגמרא מתלבטת גם ביחס למקרה בו התבואה של הגוי ורק הפרה של היהודי. רוב הראשונים פסקו להלכה שאכן ציווי לגוי אסור, ולו מחמת הספק. עוד עוסקת ההלכה במקרים שונים בהם נמצאת הבהמה דשה ולא אוכלת מבלי שפיה נחסם באופן מובהק. בסוגית הגמרא לא נפשטו מקרים אלה ולכן נפסק בהם הדין לחומרה. מאידך, במקרה בו אכילה מהתבואה תזיק לבריאותה של הבהמה נפסק שמותר לחוסמה ממש, וזאת מתוך הבנה שאיסור לא תחסום מתמקד בטובת הבהמה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">הלכות ד-ה מביאות מקרים נוספים בהם מותר לחסום בהמה, וזאת כאשר התבואה בה היא דשה היא תרומה או מעשר שאסור להאכילה. עם זאת, בכמה מקרים, כמו בגידולי תרומה ומעשר או תרומת מעשר שהופרשו מדמאי, התבואה אסורה מדרבנן, ולכן מותר להני לבהמה לאכול ממנה תוך כדי דישה ואסור לחוסמה. מקרים נוספים בהם מותר לחסום את הבהמה הם אם מדובר בתבואה שכבר עברה את שלב העיבוד המחייבה במעשרות או כאשר הבהמה הולכת על התבואה למטרה אחרת שאינה דישה.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">הלכות ד-ה מביאות מקרים נוספים בהם מותר לחסום בהמה, וזאת כאשר התבואה בה היא דשה היא תרומה או מעשר שאסור להאכילה. עם זאת, בכמה מקרים, כמו בגידולי תרומה ומעשר או תרומת מעשר שהופרשו מדמאי, התבואה אסורה מדרבנן, ולכן מותר להני לבהמה לאכול ממנה תוך כדי דישה ואסור לחוסמה. מקרים נוספים בהם מותר לחסום את הבהמה הם אם מדובר בתבואה שכבר עברה את שלב העיבוד המחייבה במעשרות או כאשר הבהמה הולכת על התבואה למטרה אחרת שאינה דישה.</p>
                 
-                    <p class="mb-3 leading-relaxed text-base md:text-lg">בהלכה ו נפסק שעם העובדה שחסימת בהמה אסורה, מותר לגרום לכך שבהמה תהיה פחות רעבה ע"י האכלתה מראש. באופן דומה ניתן לספק אוכל לפועל כך שלא יהיה רעב ולא יאכל הרבה מהיבול בו הוא עוסק.</p>
+                    <p class="mb-3 leading-relaxed text-base md:text-lg text-right">בהלכה ו נפסק שעם העובדה שחסימת בהמה אסורה, מותר לגרום לכך שבהמה תהיה פחות רעבה ע"י האכלתה מראש. באופן דומה ניתן לספק אוכל לפועל כך שלא יהיה רעב ולא יאכל הרבה מהיבול בו הוא עוסק.</p>
                 
             </div>
             
@@ -1006,53 +1006,53 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הבהמה אוכלת כל זמן שהיא עושה בגידולי קרקע בין במחובר בין בתלוש, ואוכלת ממשאוי שעל גבה עד שתהיה פורקת ובלבד שלא יטול בידו ויאכילנה.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אכילת בהמה ממשא שעל גבה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אכילת בהמה ממשא שעל גבה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">(המקורות לאכילת בהמה במלאכתה מובאים לעיל- עמוד 189 ושם בהמשך)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">(המקורות לאכילת בהמה במלאכתה מובאים לעיל- עמוד 189 ושם בהמשך)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (צא:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (צא:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וכולן לא אמרו אלא בשעת מלאכה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>וכולן לא אמרו אלא בשעת מלאכה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אבל משום השב אבידה לבעלים אמרו:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אבל משום השב אבידה לבעלים אמרו:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>פועלין אוכלין בהליכתן מאומן לאומן, ובחזירתן מן הגת,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>פועלין אוכלין בהליכתן מאומן לאומן, ובחזירתן מן הגת,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ובחמור כשהיא פורקת.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ובחמור כשהיא פורקת.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש החלק הראשון- תקנת אכילת הפועלים בהליכתם, נידון לעיל (עמוד 191).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פירוש החלק הראשון- תקנת אכילת הפועלים בהליכתם, נידון לעיל (עמוד 191).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מצד ההקשר, יש שתי אפשרויות עקרוניות להבין את החלק האחרון של המשנה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מצד ההקשר, יש שתי אפשרויות עקרוניות להבין את החלק האחרון של המשנה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפירוט של הקביעה "וכולן לא אמרו אלא בשעת מלאכה". כלומר, ראשית מופיעה קביעה זו, שפועלים אוכלים בשעת מלאכה. לאחר מכן, במאמר מוסגר, מלמדת המשנה שחכמים תיקנו שיהיו הפועלים אוכלים גם בשעת הליכתן מאומן לאומן וכו', ולגבי חמור, חוזרת המשנה לקביעה הראשונה ומסבירה שאכילתו היא גם כן רק בשעת מלאכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפירוט של הקביעה "וכולן לא אמרו אלא בשעת מלאכה". כלומר, ראשית מופיעה קביעה זו, שפועלים אוכלים בשעת מלאכה. לאחר מכן, במאמר מוסגר, מלמדת המשנה שחכמים תיקנו שיהיו הפועלים אוכלים גם בשעת הליכתן מאומן לאומן וכו', ולגבי חמור, חוזרת המשנה לקביעה הראשונה ומסבירה שאכילתו היא גם כן רק בשעת מלאכה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כהמשך של האכילות שתיקנו חכמים מצד "השב אבידה לבעלים".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כהמשך של האכילות שתיקנו חכמים מצד "השב אבידה לבעלים".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שיתבאר, שתי אפשרויות אלה עומדות במרכז מחלוקת המפרשים בהבנת המשנה והגמרא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שיתבאר, שתי אפשרויות אלה עומדות במרכז מחלוקת המפרשים בהבנת המשנה והגמרא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (צב.) מסבירה את הדין האחרון שבמשנה ("ובחמור כשהיא פורקת")-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (צב.) מסבירה את הדין האחרון שבמשנה ("ובחמור כשהיא פורקת")-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כשהיא פורקת מהיכן אכלה? אימא: עד שתהא פורקת.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כשהיא פורקת מהיכן אכלה? אימא: עד שתהא פורקת.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנינא להא, דתנו רבנן: חמור וגמל אוכלים ממשאוי שעל גביהן, ובלבד שלא יטול בידו ויאכילם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנינא להא, דתנו רבנן: חמור וגמל אוכלים ממשאוי שעל גביהן, ובלבד שלא יטול בידו ויאכילם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבהירה שהכוונה באכילת חמור "כשהיא פורקת", לכך שהבהמה יכולה לאכול <strong>עד</strong> הפריקה ולא עד בכלל. כך גם משתמע מברייתא האומרת שחמור וגמל אוכלים ממה שעל גביהם, עוד לפני שעת הפריקה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מבהירה שהכוונה באכילת חמור "כשהיא פורקת", לכך שהבהמה יכולה לאכול <strong>עד</strong> הפריקה ולא עד בכלל. כך גם משתמע מברייתא האומרת שחמור וגמל אוכלים ממה שעל גביהם, עוד לפני שעת הפריקה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראשונים רבים הבינו כאפשרות הראשונה דלעיל בביאור המשנה. כלומר, המשנה משמיעה לנו את הזמן בו הבהמה אוכלת מהתורה ומגדירה את "שעת מלאכתה" של בהמת משא. כך כותבים במפורש ה<strong>תוספות</strong> (צב. ד"ה "אלא אימא"). כן גם משמע מפירוש ה<strong>ראב"ד</strong>, המסביר שהגמרא מפרשת שהבהמה אוכלת "עד שתהא פורקת", ולא בשעת פריקה, כיוון שבשעת הפריקה נחשב שהבהמה כבר סיימה את מלאכתה (שהרי היא עומדת ואנשים פורקים ממנה), ואין היא זכאית לאכול מדאורייתא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשונים רבים הבינו כאפשרות הראשונה דלעיל בביאור המשנה. כלומר, המשנה משמיעה לנו את הזמן בו הבהמה אוכלת מהתורה ומגדירה את "שעת מלאכתה" של בהמת משא. כך כותבים במפורש ה<strong>תוספות</strong> (צב. ד"ה "אלא אימא"). כן גם משמע מפירוש ה<strong>ראב"ד</strong>, המסביר שהגמרא מפרשת שהבהמה אוכלת "עד שתהא פורקת", ולא בשעת פריקה, כיוון שבשעת הפריקה נחשב שהבהמה כבר סיימה את מלאכתה (שהרי היא עומדת ואנשים פורקים ממנה), ואין היא זכאית לאכול מדאורייתא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת ראשונים אלה, ה<strong>רשב"א</strong> (צב. ד"ה "ובחמור") מפרש את המשנה באופן השני, לפיו המשנה מדברת על אכילת בהמה שתיקנו חכמים, בזמן בו אינה זכאית לאכול מן התורה (בדומה לאכילת פועלים בהליכתם מאומן לאומן וכו'). לכן מסביר הרשב"א, שמעיקר הדין, אין הבהמה זכאית לאכול ממשאוי שעל גבה, כיוון שמרגע שהעמיסו עליה, נחשב הדבר כאילו כבר הגיעו הפירות לגת ונגמרה מלאכתם. וחכמים הם שתיקנו שתאכל הבהמה עד שעת הפריקה. תקנה זו ניתקנה לטובת הבהמה (בניגוד לתקנת אכילת פועל בשעת הליכתו, שניתקנה לטובת בעל הבית)<sup id="ref292"><a href="#fn292">[292]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת ראשונים אלה, ה<strong>רשב"א</strong> (צב. ד"ה "ובחמור") מפרש את המשנה באופן השני, לפיו המשנה מדברת על אכילת בהמה שתיקנו חכמים, בזמן בו אינה זכאית לאכול מן התורה (בדומה לאכילת פועלים בהליכתם מאומן לאומן וכו'). לכן מסביר הרשב"א, שמעיקר הדין, אין הבהמה זכאית לאכול ממשאוי שעל גבה, כיוון שמרגע שהעמיסו עליה, נחשב הדבר כאילו כבר הגיעו הפירות לגת ונגמרה מלאכתם. וחכמים הם שתיקנו שתאכל הבהמה עד שעת הפריקה. תקנה זו ניתקנה לטובת הבהמה (בניגוד לתקנת אכילת פועל בשעת הליכתו, שניתקנה לטובת בעל הבית)<sup id="ref292"><a href="#fn292">[292]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שלח א) כתב העתיק את דברי ה<strong>רמב"ם</strong>, שבהמה אוכלת ממשא שעל גבה, ונראה מלשונם, שדעתם שאוכלת מדאורייתא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שלח א) כתב העתיק את דברי ה<strong>רמב"ם</strong>, שבהמה אוכלת ממשא שעל גבה, ונראה מלשונם, שדעתם שאוכלת מדאורייתא.</p>
                     
                 </div>
                 
@@ -1060,117 +1060,117 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל המונע הבהמה מלאכול בשעת מלאכתה לוקה שנאמר לא תחסום שור בדישו, אחד שור ואחד כל מיני בהמה וחיה בין טמאין בין טהורין ואחד הדישה ואחד כל שאר המלאכות של גידולי קרקע ולא נאמר שור בדישו אלא בהווה, והחוסם את הפועל פטור. אחד החוסם אותה בשעת מלאכה ואחד החוסם אותה מקודם ועשה בה מלאכה והיא חסומה אפילו חסמה בקול לוקה, שכר בהמה וחסמה ודש בה לוקה ומשלם לבעלים ארבעת קבין לפרה ושלשת קבין לחמור שמשעת משיכה נתחייב במזונותיה ואינו חייב מלקות עד שידוש בה חסומה.
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">העושה מלאכה בבהמה חסומה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">העושה מלאכה בבהמה חסומה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (צ:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (צ:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בעא מיניה <strong>רבי יונתן</strong> מ<strong>רבי סימאי</strong>: חסמה מבחוץ, מהו? שור בדישו אמר רחמנא - והא לאו בדישו הוא, או דלמא לא תדוש בחסימה אמר רחמנא? –</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בעא מיניה <strong>רבי יונתן</strong> מ<strong>רבי סימאי</strong>: חסמה מבחוץ, מהו? שור בדישו אמר רחמנא - והא לאו בדישו הוא, או דלמא לא תדוש בחסימה אמר רחמנא? –</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יונתן</strong> מברר מה הדין במקרה בו אדם חסם בהמה, ורק אח"כ עבד בה, האם גם במקרה זה לוקה, או שיש להבין מלשון הכתוב "שור בדישו", שרק אם חסם תוך כדי דישה לוקה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יונתן</strong> מברר מה הדין במקרה בו אדם חסם בהמה, ורק אח"כ עבד בה, האם גם במקרה זה לוקה, או שיש להבין מלשון הכתוב "שור בדישו", שרק אם חסם תוך כדי דישה לוקה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר לו: מבית אביך אתה למד יין ושכר אל תשת אתה ובניך אתך בבאכם, בבואכם הוא דאסור, הא מישתא ומיעל - שרי? ולהבדיל בין הקדש ובין החל אמר רחמנא! אלא, מה התם - בשעת ביאה לא תהא שכרות, הכא נמי - בשעת דישה לא תהא חסימה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר לו: מבית אביך אתה למד יין ושכר אל תשת אתה ובניך אתך בבאכם, בבואכם הוא דאסור, הא מישתא ומיעל - שרי? ולהבדיל בין הקדש ובין החל אמר רחמנא! אלא, מה התם - בשעת ביאה לא תהא שכרות, הכא נמי - בשעת דישה לא תהא חסימה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' סימאי</strong> עונה ע"י אנלוגיה לאיסור עבודת כוהנים בשיכרות. כוונת הכתוב "יין ושכר אל תשת... בבואכם...", הכוונה שלא לבוא לעבוד עבודה בעת שיכרות. אף בדין לא תחסום, האיסור הוא לעשות עבודה בבהמה חסומה, שאינה יכולה לאכול מה שהיא עובדת בו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' סימאי</strong> עונה ע"י אנלוגיה לאיסור עבודת כוהנים בשיכרות. כוונת הכתוב "יין ושכר אל תשת... בבואכם...", הכוונה שלא לבוא לעבוד עבודה בעת שיכרות. אף בדין לא תחסום, האיסור הוא לעשות עבודה בבהמה חסומה, שאינה יכולה לאכול מה שהיא עובדת בו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">סימוכין לדבר מובאים גם <strong>מברייתא</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">סימוכין לדבר מובאים גם <strong>מברייתא</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: החוסם את הפרה והמזווג בכלאים - פטור, ואינו לוקה אלא דש ומנהיג בלבד.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנו רבנן: החוסם את הפרה והמזווג בכלאים - פטור, ואינו לוקה אלא דש ומנהיג בלבד.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם אדם חסם פרה ואדם אחר דש בה כאשר היא חסומה, הראשון פטור ממלקות והשני חייב, שכן מהות האיסור הוא לדוש בבהמה חסומה. בדומה, הקושר צמד כלאים (שור וחמור) למחרשה, ובא אחר וחרש בהם יחדיו, הראשון אינו לוקה, והשני כן, שכן מהות איסור חרישה בכלאיים הוא החרישה ולא קשירתם יחד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם אדם חסם פרה ואדם אחר דש בה כאשר היא חסומה, הראשון פטור ממלקות והשני חייב, שכן מהות האיסור הוא לדוש בבהמה חסומה. בדומה, הקושר צמד כלאים (שור וחמור) למחרשה, ובא אחר וחרש בהם יחדיו, הראשון אינו לוקה, והשני כן, שכן מהות איסור חרישה בכלאיים הוא החרישה ולא קשירתם יחד.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">מלקות בחסימה בקול</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">מלקות בחסימה בקול</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בסנהדרין (סג:) לומדת שישנה מחלוקת תנאים בשאלה האם לוקים על לאו שאין בו מעשה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בסנהדרין (סג:) לומדת שישנה מחלוקת תנאים בשאלה האם לוקים על לאו שאין בו מעשה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>"לא תותירו ממנו עד בקר [והנותר ממנו עד בקר באש תשרופו]" - בא הכתוב ליתן עשה אחר לא תעשה, לומר שאין לוקין עליו, דברי <strong>רבי יהודה</strong>,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>"לא תותירו ממנו עד בקר [והנותר ממנו עד בקר באש תשרופו]" - בא הכתוב ליתן עשה אחר לא תעשה, לומר שאין לוקין עליו, דברי <strong>רבי יהודה</strong>,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי יעקב</strong> אומר: לא מן השם הוא זה, אלא משום דהוה ליה לאו שאין בו מעשה, וכל לאו שאין בו מעשה אין לוקין עליו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי יעקב</strong> אומר: לא מן השם הוא זה, אלא משום דהוה ליה לאו שאין בו מעשה, וכל לאו שאין בו מעשה אין לוקין עליו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מכלל דרבי יהודה סבר לוקין עליו!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מכלל דרבי יהודה סבר לוקין עליו!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מתוך כך שהכתוב מצווה על שריפתו של הנותר מקרבן הפסח לומד <strong>ר' יהודה</strong> שהמותיר מבשר הפסח עד בוקר, אף שעבר על לאו, אינו לוקה. מולו סובר <strong>ר' יעקב</strong> שהסיבה שלא לוקים היא משום שהוֹתרה אינה מעשה אקטיבי ואין לוקים על לאו שאין בו מעשה. סוגייתנו נקוטה על פי דרכו של ר' יעקב, שאין לוקים על לאו שאין בו מעשה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מתוך כך שהכתוב מצווה על שריפתו של הנותר מקרבן הפסח לומד <strong>ר' יהודה</strong> שהמותיר מבשר הפסח עד בוקר, אף שעבר על לאו, אינו לוקה. מולו סובר <strong>ר' יעקב</strong> שהסיבה שלא לוקים היא משום שהוֹתרה אינה מעשה אקטיבי ואין לוקים על לאו שאין בו מעשה. סוגייתנו נקוטה על פי דרכו של ר' יעקב, שאין לוקים על לאו שאין בו מעשה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי הנלמד לעיל, בלאו של "לא תחסום שור בדישו", קיים מעשה, והוא הדישה בבהמה חסומה, ולכן על חסימה רגילה בוודאי לוֹקים. חלקו האמוראים (צ:) מה דין חסימה על ידי קול-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי הנלמד לעיל, בלאו של "לא תחסום שור בדישו", קיים מעשה, והוא הדישה בבהמה חסומה, ולכן על חסימה רגילה בוודאי לוֹקים. חלקו האמוראים (צ:) מה דין חסימה על ידי קול-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איתמר, חסמה בקול והנהיגה בקול, <strong>רבי יוחנן</strong> אמר: חייב, <strong>ריש לקיש</strong> אמר: פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איתמר, חסמה בקול והנהיגה בקול, <strong>רבי יוחנן</strong> אמר: חייב, <strong>ריש לקיש</strong> אמר: פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רבי יוחנן אמר: חייב, עקימת פיו הויא מעשה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רבי יוחנן אמר: חייב, עקימת פיו הויא מעשה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ריש לקיש אמר: פטור, קלא לא הוי מעשה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ריש לקיש אמר: פטור, קלא לא הוי מעשה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לדעת <strong>רבי יוחנן</strong> דיבור נחשב כמעשה, ולכן הדש בבהמה ומונע ממנה מלאכול על ידי כך שגוער בה (<strong>רש"י</strong>) חייב. לעומתו סובר <strong>ריש לקיש</strong> שְקוֹל אינו מעשה ולכן פטור, משום שלאו שאין בו מעשה אין לוקים עליו<sup id="ref293"><a href="#fn293">[293]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לדעת <strong>רבי יוחנן</strong> דיבור נחשב כמעשה, ולכן הדש בבהמה ומונע ממנה מלאכול על ידי כך שגוער בה (<strong>רש"י</strong>) חייב. לעומתו סובר <strong>ריש לקיש</strong> שְקוֹל אינו מעשה ולכן פטור, משום שלאו שאין בו מעשה אין לוקים עליו<sup id="ref293"><a href="#fn293">[293]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ר' יוחנן מקשה על ריש לקיש מהמשנה הראשונה במסכת תמורה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ר' יוחנן מקשה על ריש לקיש מהמשנה הראשונה במסכת תמורה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא שאדם רשאי להמיר, אלא שאם המיר - מומר, וסופג את הארבעים.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא שאדם רשאי להמיר, אלא שאם המיר - מומר, וסופג את הארבעים.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הממיר המדובר הוא אדם האומר שקדושה תעבור מבהמת קודשים לבהמה אחרת ובכך עובר על איסור התורה "לא יחליפנו ולא ימירנו". לאמירה זו שתי תוצאות, האחת היא <strong>ששתי</strong> הבהמות קדושות עתה, והשניה היא שהממיר חייב מלקות. זוהי דוגמה של אדם העובר על לאו בדיבור, ללא מעשה, וחייב. לדעת ר' יוחנן טעם הדבר הוא שבדומה לחסימה בקול, דיבורו של הממיר נחשב כמעשה, ולכן לוקים עליו. אך רש לקיש משיב-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הממיר המדובר הוא אדם האומר שקדושה תעבור מבהמת קודשים לבהמה אחרת ובכך עובר על איסור התורה "לא יחליפנו ולא ימירנו". לאמירה זו שתי תוצאות, האחת היא <strong>ששתי</strong> הבהמות קדושות עתה, והשניה היא שהממיר חייב מלקות. זוהי דוגמה של אדם העובר על לאו בדיבור, ללא מעשה, וחייב. לדעת ר' יוחנן טעם הדבר הוא שבדומה לחסימה בקול, דיבורו של הממיר נחשב כמעשה, ולכן לוקים עליו. אך רש לקיש משיב-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר ליה: הא מני - רבי יהודה היא, דאמר: לאו שאין בו מעשה לוקין עליו</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: הא מני - רבי יהודה היא, דאמר: לאו שאין בו מעשה לוקין עליו</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המשנה המחייבת מלקות בממיר היא כשיטת ר' יהודה, המחייב מלקות גם על לאו שאין בו מעשה. אך לפי ההלכה הנקוטה בידינו, שלאו שאין בו מעשה אין לוקים עליו, הממיר אינו לוקה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, המשנה המחייבת מלקות בממיר היא כשיטת ר' יהודה, המחייב מלקות גם על לאו שאין בו מעשה. אך לפי ההלכה הנקוטה בידינו, שלאו שאין בו מעשה אין לוקים עליו, הממיר אינו לוקה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלבד חסימה על ידי קול, קיימים בסוגיות התלמוד כמה מקרים נוספים של לאו העוברים בו ע"י דיבור. חלק ניכר ממקרים אלה מוגדרים כ<strong>לאו שאין בו מעשה</strong>. למשל, בתמורה (ג.) נאמר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלבד חסימה על ידי קול, קיימים בסוגיות התלמוד כמה מקרים נוספים של לאו העוברים בו ע"י דיבור. חלק ניכר ממקרים אלה מוגדרים כ<strong>לאו שאין בו מעשה</strong>. למשל, בתמורה (ג.) נאמר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב אידי בר אבין</strong> אמר <strong>רב עמרם</strong> אמר <strong>ר</strong><strong>'</strong><strong> יצחק</strong> אמר <strong>ר</strong><strong>'</strong><strong> יוחנן</strong> משום <strong>ר' יוסי הגלילי</strong>:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב אידי בר אבין</strong> אמר <strong>רב עמרם</strong> אמר <strong>ר</strong><strong>'</strong><strong> יצחק</strong> אמר <strong>ר</strong><strong>'</strong><strong> יוחנן</strong> משום <strong>ר' יוסי הגלילי</strong>:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כל לא תעשה שבתורה, עשה בו מעשה - לוקה, לא עשה בו מעשה - פטור;</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כל לא תעשה שבתורה, עשה בו מעשה - לוקה, לא עשה בו מעשה - פטור;</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חוץ מנשבע ומימר ומקלל חבירו בשם, אף על פי שלא עשה מעשה - חייב.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>חוץ מנשבע ומימר ומקלל חבירו בשם, אף על פי שלא עשה מעשה - חייב.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, הנשבע שבועת שוא, הממיר (ר' לעיל) והמקלל חבירו בשם, כל אלה איסורים הנעשים על ידי דיבור בלבד, ללא מעשה, ולכן אם לא היתה תורה כותבת זאת במפורש, היינו פוטרים בהם ממלקות. יש לציין שבהמשך הגמרא (שם ג:) אומר ר' יוחנן שיש להשמיט את הממיר מרשימה זו, שהוא דווקא נחשב ללאו שיש בו מעשה, משום שבדיבורו של הממיר מתפשטת קדושה מבהמה לבהמה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, הנשבע שבועת שוא, הממיר (ר' לעיל) והמקלל חבירו בשם, כל אלה איסורים הנעשים על ידי דיבור בלבד, ללא מעשה, ולכן אם לא היתה תורה כותבת זאת במפורש, היינו פוטרים בהם ממלקות. יש לציין שבהמשך הגמרא (שם ג:) אומר ר' יוחנן שיש להשמיט את הממיר מרשימה זו, שהוא דווקא נחשב ללאו שיש בו מעשה, משום שבדיבורו של הממיר מתפשטת קדושה מבהמה לבהמה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים עסקו בשאלה מה ההבדל בין חסימה בקול, שר' יוחנן הגדיר כלאו שיש בו מעשה, לבין נשבע, מקלל ואיסורים נוספים, המוגדרים גם על פי ר' יוחנן כאיסורים שאין בהם מעשה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים עסקו בשאלה מה ההבדל בין חסימה בקול, שר' יוחנן הגדיר כלאו שיש בו מעשה, לבין נשבע, מקלל ואיסורים נוספים, המוגדרים גם על פי ר' יוחנן כאיסורים שאין בהם מעשה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (צ: ד"ה "ר' יוחנן") מבארים שחסימה בקול אמנם אינה כרוכה בתנועה חוץ מתזוזת השפתיים, אך יש לה השלכה מעשית- הבהמה נמנעת מלאכול. לכן זה נחשב ללאו שיש בו מעשה. לעומת זה, הנשבע והמקלל אין אמירתם גורמת לשינוי מעשי, ולכן הם נחשבים, גם לשיטת ר' יוחנן, כלאו שאין בו מעשה. דברי ר' יוחנן, שהממיר נחשב כלאו שיש בו מעשה מוסברים על פי שיטה זו בכך שגם הממיר גורם לשינוי במציאות על ידי אמירתו- הקדושה מתפשטת מבהמה לבהמה. כדברים אלה כותב גם ה<strong>רמב"ן</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (צ: ד"ה "ר' יוחנן") מבארים שחסימה בקול אמנם אינה כרוכה בתנועה חוץ מתזוזת השפתיים, אך יש לה השלכה מעשית- הבהמה נמנעת מלאכול. לכן זה נחשב ללאו שיש בו מעשה. לעומת זה, הנשבע והמקלל אין אמירתם גורמת לשינוי מעשי, ולכן הם נחשבים, גם לשיטת ר' יוחנן, כלאו שאין בו מעשה. דברי ר' יוחנן, שהממיר נחשב כלאו שיש בו מעשה מוסברים על פי שיטה זו בכך שגם הממיר גורם לשינוי במציאות על ידי אמירתו- הקדושה מתפשטת מבהמה לבהמה. כדברים אלה כותב גם ה<strong>רמב"ן</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>ראב"ד </strong>(צ:, מובא בשטמ"ק) מסביר שכל חסימה ע"י קול דורשת תנועה כלשהי עם השפתיים, ולכן לא ניתן לעבור על האיסור כלל, מבלי שיהיה מעורב בדבר מעשה מינימלי של הזזת שפתיים. לעומת זה, במגדף או במקלל אף העושה אותם בליבו בלבד, ללא שום סימן חיצוני, מתחייב כלפי שמיא. כלומר, ניתן לעבור עליהם אף ללא מעשה, ומשום כך הם מוגדרים "לאו שאין בו מעשה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם, ה<strong>ראב"ד </strong>(צ:, מובא בשטמ"ק) מסביר שכל חסימה ע"י קול דורשת תנועה כלשהי עם השפתיים, ולכן לא ניתן לעבור על האיסור כלל, מבלי שיהיה מעורב בדבר מעשה מינימלי של הזזת שפתיים. לעומת זה, במגדף או במקלל אף העושה אותם בליבו בלבד, ללא שום סימן חיצוני, מתחייב כלפי שמיא. כלומר, ניתן לעבור עליהם אף ללא מעשה, ומשום כך הם מוגדרים "לאו שאין בו מעשה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong> כאן מעלה אפשרות נוספת הדומה במקצת לפירושו של הראב"ד. בעוד שהראב"ד חילק בין קול המעורב בתנועת שפתיים, לבין קול שאין חייב להיות מלווה בתנועת שפתיים, המגיד משנה אומר שכל איסור <strong>שיכול</strong> להיעשות על ידי מעשה, אינו יכול להיחשב ללאו שאין בו מעשה. כך, חסימה, כיוון שיכולה (ולרוב אף נעשית) ע"י מעשה ממשי, גם אם עשה אותה אדם ע"י דיבור, נחשבת ללאו שיש בו מעשה. לעומת זה, מגדף או מקלל, שאינם נעשים אלא ע"י דיבור, נחשבים כלאו שאין בו מעשה<sup id="ref294"><a href="#fn294">[294]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong> כאן מעלה אפשרות נוספת הדומה במקצת לפירושו של הראב"ד. בעוד שהראב"ד חילק בין קול המעורב בתנועת שפתיים, לבין קול שאין חייב להיות מלווה בתנועת שפתיים, המגיד משנה אומר שכל איסור <strong>שיכול</strong> להיעשות על ידי מעשה, אינו יכול להיחשב ללאו שאין בו מעשה. כך, חסימה, כיוון שיכולה (ולרוב אף נעשית) ע"י מעשה ממשי, גם אם עשה אותה אדם ע"י דיבור, נחשבת ללאו שיש בו מעשה. לעומת זה, מגדף או מקלל, שאינם נעשים אלא ע"י דיבור, נחשבים כלאו שאין בו מעשה<sup id="ref294"><a href="#fn294">[294]</a></sup>.</p>
                     
                 </div>
                 
                 <div id="topic-2-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תשלום לבעל הבהמה על חסימתה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תשלום לבעל הבהמה על חסימתה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (צא.) מביאה <strong>ברייתא</strong> הפוסקת שהחוסם ודש בפרה שאינה שלו, חוץ מזה שחייב מלקות על כך שעבר על איסור תורה, אף חייב לשלם לבעל הפרה תמורת האוכל שלא אכלה תוך כדי דישתה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (צא.) מביאה <strong>ברייתא</strong> הפוסקת שהחוסם ודש בפרה שאינה שלו, חוץ מזה שחייב מלקות על כך שעבר על איסור תורה, אף חייב לשלם לבעל הפרה תמורת האוכל שלא אכלה תוך כדי דישתה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנו רבנן: החוסם את הפרה ודש בה - לוקה, ומשלם ארבעה קבין לפרה, ושלשה קבין לחמור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנו רבנן: החוסם את הפרה ודש בה - לוקה, ומשלם ארבעה קבין לפרה, ושלשה קבין לחמור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הדבר נראה כעומד בסתירה לדין המקובל, לפיו המתחייב מלקות (או מיתה) נפטר מחיובי ממון שבאו לו תוך כדי שעשה את האיסור-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הדבר נראה כעומד בסתירה לדין המקובל, לפיו המתחייב מלקות (או מיתה) נפטר מחיובי ממון שבאו לו תוך כדי שעשה את האיסור-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והא אינו לוקה ומת, ואינו לוקה ומשלם!</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והא אינו לוקה ומת, ואינו לוקה ומשלם!</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האמוראים מציעים כמה תשובות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">האמוראים מציעים כמה תשובות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אביי</strong>: הא מני - רבי מאיר היא, דאמר לוקה ומשלם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>אביי</strong>: הא מני - רבי מאיר היא, דאמר לוקה ומשלם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> אמר: אתנן אסרה תורה ואפילו בא על אמו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> אמר: אתנן אסרה תורה ואפילו בא על אמו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רב פפא</strong> אמר: משעת משיכה איחייב לה במזונותיה, ומילקא לא לקי עד שעת חסימה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רב פפא</strong> אמר: משעת משיכה איחייב לה במזונותיה, ומילקא לא לקי עד שעת חסימה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אביי</strong> מתרץ שברייתא זו היא כשיטת ר' מאיר, לפיו חיוב מלקות אינו פוטר מתשלומין, ובאמת, כיוון שלא נפסקה הלכה כר' מאיר, כך אין הלכה כברייתא זו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אביי</strong> מתרץ שברייתא זו היא כשיטת ר' מאיר, לפיו חיוב מלקות אינו פוטר מתשלומין, ובאמת, כיוון שלא נפסקה הלכה כר' מאיר, כך אין הלכה כברייתא זו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> מתרץ שיכול אדם להתחייב במלקות או מיתה, ובמקביל להתחייב ממונית למישהו. למשל, אם אדם מתחייב לאימו שיבוא אליה ובשכרה יתן לה טלה. אם בא עליה, ונתן לה טלה, נחשב הטלה לאתנן ואסור בהקרבה. כלומר, הבועל התחייב ממונית לנבעלת, למרות שגם התחייב בנפשו במעשה זה, ובשל כך בית דין אינם יכולים להוציא ממון זה מידו אם ימאן לתנו לה. לפי דרך זו, החוסם פרה שאינה שלו ומתחייב מלקות על כך, אף שחייב לשלם מדיני שמים, אם ממאן לשלם, אין בית הדין יכולים להוציא מידו, כיוון שאין אדם לוקה ומשלם<sup id="ref295"><a href="#fn295">[295]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> מתרץ שיכול אדם להתחייב במלקות או מיתה, ובמקביל להתחייב ממונית למישהו. למשל, אם אדם מתחייב לאימו שיבוא אליה ובשכרה יתן לה טלה. אם בא עליה, ונתן לה טלה, נחשב הטלה לאתנן ואסור בהקרבה. כלומר, הבועל התחייב ממונית לנבעלת, למרות שגם התחייב בנפשו במעשה זה, ובשל כך בית דין אינם יכולים להוציא ממון זה מידו אם ימאן לתנו לה. לפי דרך זו, החוסם פרה שאינה שלו ומתחייב מלקות על כך, אף שחייב לשלם מדיני שמים, אם ממאן לשלם, אין בית הדין יכולים להוציא מידו, כיוון שאין אדם לוקה ומשלם<sup id="ref295"><a href="#fn295">[295]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב פפא </strong>אומר שכלל אין כאן מקרה של אדם המתחייב מלקות וממון כאחד, משום שהחיוב שלו בממון חל כבר משעת משיכת הבהמה, שהרי חלק מהסכם השכירות הוא שהוא צריך לדאוג לבהמה למזונותיה וסיפוק צרכיה, ובכלל זה שלא לחוסמה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב פפא </strong>אומר שכלל אין כאן מקרה של אדם המתחייב מלקות וממון כאחד, משום שהחיוב שלו בממון חל כבר משעת משיכת הבהמה, שהרי חלק מהסכם השכירות הוא שהוא צריך לדאוג לבהמה למזונותיה וסיפוק צרכיה, ובכלל זה שלא לחוסמה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פסק כברייתא וכפירושו של רב פפא, ולכן אף אדם הלוקה על חסימת בהמת חברו, יחויב בבדין הדין לשלם פיצוי לחברו על מה שלא אכלה הבהמה תוך כדי דישה. כך פסק גם ה<strong>שו"ע</strong> (שלח ד.)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פסק כברייתא וכפירושו של רב פפא, ולכן אף אדם הלוקה על חסימת בהמת חברו, יחויב בבדין הדין לשלם פיצוי לחברו על מה שלא אכלה הבהמה תוך כדי דישה. כך פסק גם ה<strong>שו"ע</strong> (שלח ד.)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהשראת הברייתא הנ"ל עולה השאלה האם החוסם פועל, למרות שפטור ממלקות, מתחייב לשלם לו פיצויים על מה שלא אכל. ה<strong>רשב"א</strong> (צב:) סובר שכן, וזאת למרות שנפסק שפועל משל שמים הוא אוכל<sup id="ref296"><a href="#fn296">[296]</a></sup>. כך גם כותב הריטב"א (פח:) וכך פוסקה <strong>ערוה"ש</strong> (שלז ב) להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהשראת הברייתא הנ"ל עולה השאלה האם החוסם פועל, למרות שפטור ממלקות, מתחייב לשלם לו פיצויים על מה שלא אכל. ה<strong>רשב"א</strong> (צב:) סובר שכן, וזאת למרות שנפסק שפועל משל שמים הוא אוכל<sup id="ref296"><a href="#fn296">[296]</a></sup>. כך גם כותב הריטב"א (פח:) וכך פוסקה <strong>ערוה"ש</strong> (שלז ב) להלכה.</p>
                     
                 </div>
                 
@@ -1178,115 +1178,115 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     ישראל הדש בפרתו של עכו"ם עובר משום בל תחסום, והעכו"ם הדש בפרתו של ישראל אינו עובר משום בל תחסום, אמר לעכו"ם חסום פרתי ודוש בה, ישב לה קוץ בפיה ודש בה והרי אינה אוכלת, הרביץ לה ארי מבחוץ או שהרביץ בנה מבחוץ, הרי שצמאה ואינו משקה אותה, פרס עור על גבי הדייש כדי שלא תאכל, כל זה וכיוצא בו אסור ואינו לוקה, היה הדבר שהיא עושה בו רע לבני מעיה ומזיקה, או שהיתה חולה ואם תאכל מזה מתרזת מותר למנעה, שלא הקפידה תורה אלא על הנאתה והרי אינה נהנית.
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">ישראל החוסם פרתו של גוי וגוי החוסם פרתו של ישראל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ישראל החוסם פרתו של גוי וגוי החוסם פרתו של ישראל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (צ.) מביאה <strong>ברייתא</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (צ.) מביאה <strong>ברייתא</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נכרי הדש בפרתו של ישראל - אינו עובר משום בל תחסום,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נכרי הדש בפרתו של ישראל - אינו עובר משום בל תחסום,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וישראל הדש בפרתו של נכרי - עובר משום בל תחסום</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>וישראל הדש בפרתו של נכרי - עובר משום בל תחסום</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המפרשים מסבירים שהחלק הראשון של הדין עוסק בחיובו של יהודי המורה לגוי לחסום ולדש בפרתו של היהודי. הברייתא אומרת שבמקרה זה אין היהודי עובר על איסור לא תחסום. החלק השני מחדש, שאף אם הבהמה שייכת לגוי, בכל זאת עובר היהודי באיסור לא תחסום אם חסמה ודש בה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המפרשים מסבירים שהחלק הראשון של הדין עוסק בחיובו של יהודי המורה לגוי לחסום ולדש בפרתו של היהודי. הברייתא אומרת שבמקרה זה אין היהודי עובר על איסור לא תחסום. החלק השני מחדש, שאף אם הבהמה שייכת לגוי, בכל זאת עובר היהודי באיסור לא תחסום אם חסמה ודש בה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מעלה הגמרא שאלה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מעלה הגמרא שאלה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איבעיא להו: מהו שיאמר אדם לנכרי חסום פרתי ודוש בה?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איבעיא להו: מהו שיאמר אדם לנכרי חסום פרתי ודוש בה?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מי אמרינן: כי אמרינן אמירה לנכרי שבות - הני מילי לענין שבת, דאיסור סקילה, אבל חסימה דאיסור לאו - לא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מי אמרינן: כי אמרינן אמירה לנכרי שבות - הני מילי לענין שבת, דאיסור סקילה, אבל חסימה דאיסור לאו - לא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>או דלמא לא שנא?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>או דלמא לא שנא?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אף שהנוכרי אינו עובר באיסור אם חסם ודש בפרתו של ישראל, נשאלת השאלה האם מותר ליהודי לצוות לנוכרי שיעשה זאת, או שכמו בשבת, אסרו גם אמירה לנוכרי. מחד, יש מקום לומר שדווקא בשבת, שהיא איסור חמור, גזרו חכמים על אמירה לגוי. מאידך ניתן לומר שבכל לאו יש מקום לגזור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אף שהנוכרי אינו עובר באיסור אם חסם ודש בפרתו של ישראל, נשאלת השאלה האם מותר ליהודי לצוות לנוכרי שיעשה זאת, או שכמו בשבת, אסרו גם אמירה לנוכרי. מחד, יש מקום לומר שדווקא בשבת, שהיא איסור חמור, גזרו חכמים על אמירה לגוי. מאידך ניתן לומר שבכל לאו יש מקום לגזור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מנסה להוכיח שאכן חכמים אסרו ציווי לגוי שיחסום, מתוך כך שגזרו חכמים שאם יהודי הערים וגרם לכך שגוי יסרס את שורו (בכך הופך השור להיות טוב יותר לחרישה), יאלץ בעל השורו למוכרו, כדי שלא ירוויח מהמעשה. אמנם <strong>רב פפא</strong> דוחה ואומר שאפשר שדין זה נאמר רק לפי דעתו של <strong>רב חידקא</strong>, לפיה גם לגויים אסור לסרס, ונמצא היהודי האומר לגוי שיסרס מכשילו באיסור, ואין הדבר דומה לחסימה שהותרה בגוי מכל וכל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מנסה להוכיח שאכן חכמים אסרו ציווי לגוי שיחסום, מתוך כך שגזרו חכמים שאם יהודי הערים וגרם לכך שגוי יסרס את שורו (בכך הופך השור להיות טוב יותר לחרישה), יאלץ בעל השורו למוכרו, כדי שלא ירוויח מהמעשה. אמנם <strong>רב פפא</strong> דוחה ואומר שאפשר שדין זה נאמר רק לפי דעתו של <strong>רב חידקא</strong>, לפיה גם לגויים אסור לסרס, ונמצא היהודי האומר לגוי שיסרס מכשילו באיסור, ואין הדבר דומה לחסימה שהותרה בגוי מכל וכל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים נחלקו ביחס לאיזה מקרה מתלבטת הגמרא האם אמירה לגוי נאסרה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים נחלקו ביחס לאיזה מקרה מתלבטת הגמרא האם אמירה לגוי נאסרה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שהמקרה הוא שיהודי אומר לגוי שיחסום את פי פרתו של היהודי, ויחרוש <strong>בתבואתו של הגוי</strong>. מדברי ה<strong>טור</strong> (שלח) נראה שמסכים עם רש"י.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שהמקרה הוא שיהודי אומר לגוי שיחסום את פי פרתו של היהודי, ויחרוש <strong>בתבואתו של הגוי</strong>. מדברי ה<strong>טור</strong> (שלח) נראה שמסכים עם רש"י.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתם, ה<strong>תוספות</strong> וה<strong>רמב"ן </strong>מפרשים שהמקרה הוא כגון שהיהודי אומר לגוי שיחסום את פי פרתו של היהודי ויחרוש <strong>בתבואתו של היהודי</strong>. ראשונים אלה מסבירים שבמקרה שמדובר בתבואתו של הגוי ברור שלא גזרו חכמים, כפי שלא גזרו חכמים על אמירה בשבת אלא במקום בו מטרת האמירה היא שגוי יבצע מלאכה עבור יהודי בשבת<sup id="ref297"><a href="#fn297">[297]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתם, ה<strong>תוספות</strong> וה<strong>רמב"ן </strong>מפרשים שהמקרה הוא כגון שהיהודי אומר לגוי שיחסום את פי פרתו של היהודי ויחרוש <strong>בתבואתו של היהודי</strong>. ראשונים אלה מסבירים שבמקרה שמדובר בתבואתו של הגוי ברור שלא גזרו חכמים, כפי שלא גזרו חכמים על אמירה בשבת אלא במקום בו מטרת האמירה היא שגוי יבצע מלאכה עבור יהודי בשבת<sup id="ref297"><a href="#fn297">[297]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בנוסף, חלקו הראשונים כיצד לפסוק להלכה. ה<strong>ראב"ד</strong> (הובא בטור) הבין שהגמרא נשארה בספק, ומתוך כך שמדובר בדין דרבנן, פוסק הוא לקולא, שאמירה לגוי בחסימה לא נאסרה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בנוסף, חלקו הראשונים כיצד לפסוק להלכה. ה<strong>ראב"ד</strong> (הובא בטור) הבין שהגמרא נשארה בספק, ומתוך כך שמדובר בדין דרבנן, פוסק הוא לקולא, שאמירה לגוי בחסימה לא נאסרה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, כותב ה<strong>רמב"ן</strong> שדחייתו של ר' פפא אינה טובה, וההוכחה מגזירת חכמים על המסרס ע"י גוי נותרת על כנה, כך שלמסקנה אמירה לגוי בחסימה אסורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, כותב ה<strong>רמב"ן</strong> שדחייתו של ר' פפא אינה טובה, וההוכחה מגזירת חכמים על המסרס ע"י גוי נותרת על כנה, כך שלמסקנה אמירה לגוי בחסימה אסורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>בעל המאור</strong> (נב: מדפי הרי"ף) כותב אף הוא שיש לאסור להלכה, אלא שלדעתו הסוגיה נשארה בספק, ויש לנקוט לחומרא ולאסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>בעל המאור</strong> (נב: מדפי הרי"ף) כותב אף הוא שיש לאסור להלכה, אלא שלדעתו הסוגיה נשארה בספק, ויש לנקוט לחומרא ולאסור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אף ה<strong>רמב"ם</strong> אסר להלכה אמירה לגוי שיחסום פרתו של יהודי, אך נקט את לשון הגמרא ולא התייחס לשאלה האם מדובר בתבואה של היהודי או של הגוי. השו"ע (שלח ו) העתיק את לשון הרמב"ם. וה<strong>רמ"א</strong> מוסיף שטעם הדבר הוא ההכרעה הרחבה, שאמירה לגוי נאסרה בכל לאו, ולא רק באיסורי שבת.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אף ה<strong>רמב"ם</strong> אסר להלכה אמירה לגוי שיחסום פרתו של יהודי, אך נקט את לשון הגמרא ולא התייחס לשאלה האם מדובר בתבואה של היהודי או של הגוי. השו"ע (שלח ו) העתיק את לשון הרמב"ם. וה<strong>רמ"א</strong> מוסיף שטעם הדבר הוא ההכרעה הרחבה, שאמירה לגוי נאסרה בכל לאו, ולא רק באיסורי שבת.</p>
                     
                 </div>
                 
                 <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חסימה בגרמא</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חסימה בגרמא</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בסוגיית הגמרא (צ:) מעלה רמי בר חמא כמה שאלות הקשורות לאופנים שונים למניעת בהמה דשה מלאכול-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בסוגיית הגמרא (צ:) מעלה רמי בר חמא כמה שאלות הקשורות לאופנים שונים למניעת בהמה דשה מלאכול-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בעי <strong>רמי בר חמא</strong>:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בעי <strong>רמי בר חמא</strong>:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הושיב לה קוץ בפיה, מהו? - הושיב לה? חסימה מעלייתא היא! אלא: ישב לה קוץ בפיה, מהו?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הושיב לה קוץ בפיה, מהו? - הושיב לה? חסימה מעלייתא היא! אלא: ישב לה קוץ בפיה, מהו?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הרביץ לה ארי מבחוץ, מהו? - הרביץ לה? חסימה מעלייתא היא! אלא: רבץ לה ארי מבחוץ, מהו?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הרביץ לה ארי מבחוץ, מהו? - הרביץ לה? חסימה מעלייתא היא! אלא: רבץ לה ארי מבחוץ, מהו?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>העמיד בנה מבחוץ, מהו?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>העמיד בנה מבחוץ, מהו?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>היתה צמאה למים, מהו?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>היתה צמאה למים, מהו?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>פרס לה קטבליא על גבי דישה, מהו?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>פרס לה קטבליא על גבי דישה, מהו?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדובר במצבים בהם הבהמה אינה יכולה לאכול, אם משום שיש קוץ בפיה, אריה או בנה מבחוץ, היא צמאה, או שיש כיסוי המונח על התבואה ומונע ממנה מלאכול. מצד אחד האדם לא חסם את הבהמה ממש כי לא עשה בה שום מעשה. מצד שני, הבהמה דשה מבלי שתוכל לאכול.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדובר במצבים בהם הבהמה אינה יכולה לאכול, אם משום שיש קוץ בפיה, אריה או בנה מבחוץ, היא צמאה, או שיש כיסוי המונח על התבואה ומונע ממנה מלאכול. מצד אחד האדם לא חסם את הבהמה ממש כי לא עשה בה שום מעשה. מצד שני, הבהמה דשה מבלי שתוכל לאכול.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מנסה ללמוד לגבי המקרה האחרון (פרס לה קטבליא), מ<strong>ברייתא</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מנסה ללמוד לגבי המקרה האחרון (פרס לה קטבליא), מ<strong>ברייתא</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רשאי בעל פרה להרעיב פרתו כדי שתאכל מן הדישה הרבה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רשאי בעל פרה להרעיב פרתו כדי שתאכל מן הדישה הרבה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ורשאי בעל הבית להתיר פקיע עמיר לפני הבהמה כדי שלא תאכל מן הדישה הרבה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ורשאי בעל הבית להתיר פקיע עמיר לפני הבהמה כדי שלא תאכל מן הדישה הרבה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא (בחלקה השני) מתירה לבעל התבואה להתיר אלומת קש לפני הבהמה בכדי שלא תאכל הרבה מהדישה. הגמרא מבינה שהברייתא מתירה לבעל התבואה לפזר את הקש על גבי התבואה, ונמצא שכמו בכיסוי קטבליא, חוצץ הקש בין הבהמה לבין התבואה, ואף לכסות את התבואה בקטבליא יהיה מותר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתא (בחלקה השני) מתירה לבעל התבואה להתיר אלומת קש לפני הבהמה בכדי שלא תאכל הרבה מהדישה. הגמרא מבינה שהברייתא מתירה לבעל התבואה לפזר את הקש על גבי התבואה, ונמצא שכמו בכיסוי קטבליא, חוצץ הקש בין הבהמה לבין התבואה, ואף לכסות את התבואה בקטבליא יהיה מותר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא דוחה את ההוכחה בשני אופנים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא דוחה את ההוכחה בשני אופנים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>שאני התם דקא אכלה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>שאני התם דקא אכלה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איבעית אימא: רשאי בעל הבית להתיר פקיע עמיר לפני בהמה מעיקרא, כדי שלא תאכל הרבה מן הדישה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איבעית אימא: רשאי בעל הבית להתיר פקיע עמיר לפני בהמה מעיקרא, כדי שלא תאכל הרבה מן הדישה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">או שנחלק ונאמר שמה שהותר זה לשים לבהמה אוכל אחר (הקש) בינה לבין התבואה, כך שהיא אוכלת תוך כדי דישה. אפשרות אחרת היא שכוונת הברייתא לומר שלפני הדישה מותר לבעל התבואה להאכיל את הבהמה בקש כדי שלא תהיה רעבה כל כך ותאכל מתבואת הדישה עצמה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">או שנחלק ונאמר שמה שהותר זה לשים לבהמה אוכל אחר (הקש) בינה לבין התבואה, כך שהיא אוכלת תוך כדי דישה. אפשרות אחרת היא שכוונת הברייתא לומר שלפני הדישה מותר לבעל התבואה להאכיל את הבהמה בקש כדי שלא תהיה רעבה כל כך ותאכל מתבואת הדישה עצמה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכיוון שהגמרא לא פשטה אף אחד מהספיקות הנ"ל, פסק ה<strong>רמב"ם</strong> לחומרא. כמו כן, הבנת הברייתא כמדברת על האכלת הבהמה בקש לפני הדישה נפסקה להלכה בהמשך (הלכה ו).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכיוון שהגמרא לא פשטה אף אחד מהספיקות הנ"ל, פסק ה<strong>רמב"ם</strong> לחומרא. כמו כן, הבנת הברייתא כמדברת על האכלת הבהמה בקש לפני הדישה נפסקה להלכה בהמשך (הלכה ו).</p>
                     
                 </div>
                 
                 <div id="topic-3-3" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חסימת בהמה כאשר אכילת התבואה אינה טובה לבריאותה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חסימת בהמה כאשר אכילת התבואה אינה טובה לבריאותה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (צ.) מספרת על שאלה שנשאל <strong>רב ששת</strong>-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (צ.) מספרת על שאלה שנשאל <strong>רב ששת</strong>-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בעו מיניה מ<strong>רב ששת</strong>: היתה אוכלת ומתרזת, מהו?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בעו מיניה מ<strong>רב ששת</strong>: היתה אוכלת ומתרזת, מהו?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>משום דמעלי לה הוא - והא לא מעלי לה,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>משום דמעלי לה הוא - והא לא מעלי לה,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>או דלמא דחזיא ומצטערא, והא חזיא ומצטערא?</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>או דלמא דחזיא ומצטערא, והא חזיא ומצטערא?</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב ששת נשאל מה הדין כאשר התבואה מזיקה לבריאותה של הבהמה. שאלה זו חושפת התלבטות מהותית בהבנת איסור לא תחסום, האם הבעייתיות באיסור היא מניעת הטוב מהבהמה או ציעורה במניעת הנאת האכילה. על פי הדרך הראשונה יש להתיר חסימה כאשר התבואה עלולה להזיק לבהמה. לעומת זה, על פי הדרך השניה, כיוון שסוף סוף הבהמה חפצה לאכול, אין לחסום אותה אפילו אם האכילה תגרום לה נזק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב ששת נשאל מה הדין כאשר התבואה מזיקה לבריאותה של הבהמה. שאלה זו חושפת התלבטות מהותית בהבנת איסור לא תחסום, האם הבעייתיות באיסור היא מניעת הטוב מהבהמה או ציעורה במניעת הנאת האכילה. על פי הדרך הראשונה יש להתיר חסימה כאשר התבואה עלולה להזיק לבהמה. לעומת זה, על פי הדרך השניה, כיוון שסוף סוף הבהמה חפצה לאכול, אין לחסום אותה אפילו אם האכילה תגרום לה נזק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רב ששת מוכיח מברייתא (פט:)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רב ששת מוכיח מברייתא (פט:)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>פרות המרכסות בתבואה  והדשות בתרומה ומעשר - אינו עובר משום בל תחסום אבל מפני מראית העין מביא בול מאותו המין ותולה לה בטרסקלין שבפיה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>פרות המרכסות בתבואה  והדשות בתרומה ומעשר - אינו עובר משום בל תחסום אבל מפני מראית העין מביא בול מאותו המין ותולה לה בטרסקלין שבפיה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי שמעון בן יוחאי</strong> אומר: מביא כרשינים ותולה לה, שהכרשינים יפות לה מן הכל.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי שמעון בן יוחאי</strong> אומר: מביא כרשינים ותולה לה, שהכרשינים יפות לה מן הכל.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא עוסקת בפרות שאינן זכאות באכילה, ולכן מותר מעיקר הדין לחוסמן (עי' בהלכה הבאה בדין זה). הברייתא מציינת שאף שמותר לחסום פרות אלה, כדי שלא יראה הדבר כאילו עובר הדש בהן על איסור לא תחסום, חובה לקשור שק לצואר הבהמה שתוכל לאכול ממנו תוך כדי עבודתה. בעוד ש<strong>תנא קמא</strong> אומר שבשק צריכה להיות תבואה מאותו המין שהבהמה דשה, <strong>רבי שמעון בר יוחאי</strong> אומר שיש לשים לה שם כרשינים, "כיוון שהכרשינים יפות לה מן הכל". כרשינים הן קטניות המשמשים למאכל בהמות ובשעת הדחק למאכל אדם, ויש להניח שהם זולים מהתבואה שהבהמה דשה. מתוך כך שרבי שמעון בר יוחאי סובר שהתולה שק עם כרשינים על צואר הבהמה ומונע ממנה מלאכול מהדישה אינו עובר על לא תחסום לומד רב ששת שהאיסור מתמקד בטובת הבהמה ולא בהנאתה<sup id="ref298"><a href="#fn298">[298]</a></sup>. מתוך כך פוסק רב ששת שאם האכילה תזיק לבהמה מותר לחסום אותה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתא עוסקת בפרות שאינן זכאות באכילה, ולכן מותר מעיקר הדין לחוסמן (עי' בהלכה הבאה בדין זה). הברייתא מציינת שאף שמותר לחסום פרות אלה, כדי שלא יראה הדבר כאילו עובר הדש בהן על איסור לא תחסום, חובה לקשור שק לצואר הבהמה שתוכל לאכול ממנו תוך כדי עבודתה. בעוד ש<strong>תנא קמא</strong> אומר שבשק צריכה להיות תבואה מאותו המין שהבהמה דשה, <strong>רבי שמעון בר יוחאי</strong> אומר שיש לשים לה שם כרשינים, "כיוון שהכרשינים יפות לה מן הכל". כרשינים הן קטניות המשמשים למאכל בהמות ובשעת הדחק למאכל אדם, ויש להניח שהם זולים מהתבואה שהבהמה דשה. מתוך כך שרבי שמעון בר יוחאי סובר שהתולה שק עם כרשינים על צואר הבהמה ומונע ממנה מלאכול מהדישה אינו עובר על לא תחסום לומד רב ששת שהאיסור מתמקד בטובת הבהמה ולא בהנאתה<sup id="ref298"><a href="#fn298">[298]</a></sup>. מתוך כך פוסק רב ששת שאם האכילה תזיק לבהמה מותר לחסום אותה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פסק כדברי רב ששת וכן העתיק השו"ע (שלח ז).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פסק כדברי רב ששת וכן העתיק השו"ע (שלח ז).</p>
                     
                 </div>
                 
@@ -1294,80 +1294,80 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ד-ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד-ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     פרה של ישראל שהיה כהן דש בה בתרומה ובתרומת מעשר של ודאי, וכן פרות הדשות במעשר שני, ופרות המהלכות על התבואה לפי שירט להן הדרך אינו עובר עליהן משום בל תחסום, אבל מפני מראית העין אם היו דשות בתרומה ומעשר שני מביא מעט מאותו המין ותולה להן בקרסטלין שבפיהן. וכן פרות הדשות וכו' עד סוף הפרק. א"א דומה שהוא מפרש פרות המרכסות בתבואה כלומר עוברות על התבואה דרך הליכתן למקום אחר כדי לקצר הליכתן והמפרשים לא כך פירשו אלא תבואה שנשרית במים ורוצה להשיר קליפתה והוא חושלא.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הדש במעשר שני של דמאי ובתרומת מעשר של דמאי ובגידולי תרומה עובר משום בל תחסום.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">בהמה הדשה בתרומה ומעשר</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">בהמה הדשה בתרומה ומעשר</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (פט:) מביאה שתי <strong>ברייתות</strong> הנראות כסותרות. האחת (הובאה גם לעיל)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (פט:) מביאה שתי <strong>ברייתות</strong> הנראות כסותרות. האחת (הובאה גם לעיל)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>פרות המרכסות בתבואה והדשות בתרומה ומעשר- אינו עובר משום בל תחסום</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>פרות המרכסות בתבואה והדשות בתרומה ומעשר- אינו עובר משום בל תחסום</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אבל מפני מראית העין מביא בול מאותו המין ותולה לה בטרסקלין שבפיה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אבל מפני מראית העין מביא בול מאותו המין ותולה לה בטרסקלין שבפיה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבי שמעון בן יוחאי</strong> אומר: מביא כרשינים ותולה לה, שהכרשינים יפות לה מן הכל.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבי שמעון בן יוחאי</strong> אומר: מביא כרשינים ותולה לה, שהכרשינים יפות לה מן הכל.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">והשניה-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">והשניה-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>פרות המרכסות בתבואה - אינו עובר משום בל תחסום,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>פרות המרכסות בתבואה - אינו עובר משום בל תחסום,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והדשות בתרומה ומעשר - עובר משום בל תחסום.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והדשות בתרומה ומעשר - עובר משום בל תחסום.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעוד שעל פי הברייתא הראשונה פרות הדשות בתרומה ובמעשר אינן זכאות באכילתם ומותר לחוסמן, על פי הברייתא השניה גם פרות הדשות בתרומה ובמעשר זכאות באכילתם ואסור לחוסמן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעוד שעל פי הברייתא הראשונה פרות הדשות בתרומה ובמעשר אינן זכאות באכילתם ומותר לחוסמן, על פי הברייתא השניה גם פרות הדשות בתרומה ובמעשר זכאות באכילתם ואסור לחוסמן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הפער שבין הברייתות בעניין תרומה מתרצת הגמרא-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי הפער שבין הברייתות בעניין תרומה מתרצת הגמרא-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כאן - בתרומה, כאן - בגידולי תרומה</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כאן - בתרומה, כאן - בגידולי תרומה</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מתרומה ממש אסור לפרה לאכול, אך גידולי תרומה, שהם גרעינים של תרומה שנזרעו וגדלה מהן תבואה שחכמים גזרו עליה שתהיה כתרומה, מהם מותר לבהמה לאכול.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מתרומה ממש אסור לפרה לאכול, אך גידולי תרומה, שהם גרעינים של תרומה שנזרעו וגדלה מהן תבואה שחכמים גזרו עליה שתהיה כתרומה, מהם מותר לבהמה לאכול.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי מעשר הגמרא מעלה כמה אפשרויות לפתור את הסתירה שבין הברייתות-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי מעשר הגמרא מעלה כמה אפשרויות לפתור את הסתירה שבין הברייתות-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא המתירה לפרות לאכול מעשר מדברת במעשר שני וכשיטת <strong>ר' יהודה</strong> הסובר שמעשר שני הוא ממון הדיוט, אלא שמותר לאוכלו רק בירושלים. בכדי להסביר את הברייתו המתירה כך, יש להעמידה (באופן דחוק משהו) באדם הדש לפנים מהחומה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתא המתירה לפרות לאכול מעשר מדברת במעשר שני וכשיטת <strong>ר' יהודה</strong> הסובר שמעשר שני הוא ממון הדיוט, אלא שמותר לאוכלו רק בירושלים. בכדי להסביר את הברייתו המתירה כך, יש להעמידה (באופן דחוק משהו) באדם הדש לפנים מהחומה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הברייתא המתירה עוסקת במעשר של דמאי, כלומר, מעשר שהופרש מספק, הנחשב מעשר רק מדברי חכמים. ואילו הברייתא האוסרת עוסקת במעשר וודאי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הברייתא המתירה עוסקת במעשר של דמאי, כלומר, מעשר שהופרש מספק, הנחשב מעשר רק מדברי חכמים. ואילו הברייתא האוסרת עוסקת במעשר וודאי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מציינת עוד שגם את ההבדל בין הברייתות לעניין תרומה ניתן להסביר על פי ההבדל שבין ודאי לבין דמאי- הברייתא האוסרת עוסקת בתרומת מעשר שהורמה ממעשר ודאי, ואילו הברייתא המתירה עוסקת בתרומת מעשר שהורמה ממעשר דמאי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מציינת עוד שגם את ההבדל בין הברייתות לעניין תרומה ניתן להסביר על פי ההבדל שבין ודאי לבין דמאי- הברייתא האוסרת עוסקת בתרומת מעשר שהורמה ממעשר ודאי, ואילו הברייתא המתירה עוסקת בתרומת מעשר שהורמה ממעשר דמאי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים דנו מדוע אסור לבהמות הדשות בתרומה ובמעשר לאכול מהדישה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים דנו מדוע אסור לבהמות הדשות בתרומה ובמעשר לאכול מהדישה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (צ. ד"ה "תרומה ומעשר") מסביר שהפסוק אינו עוסק בתבואה שהיא תרומה או מעשר משום שלרוב התבואה מתחייבת בהפרשה רק לאחר המירוח, שנעשה לאחר הדישה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (צ. ד"ה "תרומה ומעשר") מסביר שהפסוק אינו עוסק בתבואה שהיא תרומה או מעשר משום שלרוב התבואה מתחייבת בהפרשה רק לאחר המירוח, שנעשה לאחר הדישה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (שם ד"ה "והדשות") אומרים שהדבר נלמד מלשון "שור <strong>בדישו</strong>" שבפסוק, שכוונתה דיש הראוי לו, כלומר, דבר שהאדם יכול לתת לפני בהמתו אם ירצה. וכיוון שמעשר הוא ממון גבוה, ואף תרומה כהן יכול להאכיל לבהמתו רק אם מדובר במזון לבהמות, נמצא שהפסוק מוציא תרומה ומעשר מאיסור לא תחסום.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (שם ד"ה "והדשות") אומרים שהדבר נלמד מלשון "שור <strong>בדישו</strong>" שבפסוק, שכוונתה דיש הראוי לו, כלומר, דבר שהאדם יכול לתת לפני בהמתו אם ירצה. וכיוון שמעשר הוא ממון גבוה, ואף תרומה כהן יכול להאכיל לבהמתו רק אם מדובר במזון לבהמות, נמצא שהפסוק מוציא תרומה ומעשר מאיסור לא תחסום.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריטב"א</strong> (שם) מסביר באופן דומה לתוספות אך אומר שאין הדבר נלמד מהפסוק (שמשמעו, כפשטו, "בדישו- תוך כדי דישה"), אלא מסברה, שאיסור לא תחסום אינו מקנה לבהמה זכות לאכול דברים שאסור להאכילה באופן הרגיל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ריטב"א</strong> (שם) מסביר באופן דומה לתוספות אך אומר שאין הדבר נלמד מהפסוק (שמשמעו, כפשטו, "בדישו- תוך כדי דישה"), אלא מסברה, שאיסור לא תחסום אינו מקנה לבהמה זכות לאכול דברים שאסור להאכילה באופן הרגיל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק שבהמה הדשה בתרומה ומעשר ודאי אינה זכאית באכילה מהדישה ולכן מותר לחוסמה. כיוון שלדעת הרמב"ם מעשר ממון גבוה הוא (הלכות מעשר שני ג יז), שלא כר' יהודה, הרמב"ם פוסק עוד שגם פרה הדשה במעשר שני מותר לחוסמה. לגבי מעשר שהופרש מדמאי או תרומת מעשר שהופרשה ממעשר שכזה פוסק הרמב"ם על פי מסקנת הגמרא, שאין לחסום את הבהמה. כמו כן, כמו שעולה מההסבר הראשון שבגמרא, גם בהמה הדשה בגידולי תרומה אין לחוסמה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק שבהמה הדשה בתרומה ומעשר ודאי אינה זכאית באכילה מהדישה ולכן מותר לחוסמה. כיוון שלדעת הרמב"ם מעשר ממון גבוה הוא (הלכות מעשר שני ג יז), שלא כר' יהודה, הרמב"ם פוסק עוד שגם פרה הדשה במעשר שני מותר לחוסמה. לגבי מעשר שהופרש מדמאי או תרומת מעשר שהופרשה ממעשר שכזה פוסק הרמב"ם על פי מסקנת הגמרא, שאין לחסום את הבהמה. כמו כן, כמו שעולה מההסבר הראשון שבגמרא, גם בהמה הדשה בגידולי תרומה אין לחוסמה.</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">פרות המרכסות בתבואה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">פרות המרכסות בתבואה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שתי הברייתות שהובאו לעיל מתירות לחסום "פרות המרכסות בתבואה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שתי הברייתות שהובאו לעיל מתירות לחסום "פרות המרכסות בתבואה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו במה דברים אמורים ומה טעם הדין-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו במה דברים אמורים ומה טעם הדין-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שמדובר בדישה משנית, המתבצעת לאחר שהשעורים כבר הופרדו מהמוץ ונקלו בתנור, ועתה דשים אות בכדי להפריד מהם את קליפתם החיצונית שנתקשתה בקליה. כיוון שמדובר בשלב שהוא כבר אחר חיוב מעשרות, אין זכות לבהמה לאכול מהם. התוספות (פט: ד"ה "המרכסות") הולכים אף הם על פי פירוש זה, ובצירוף דעתם לגבי זכות אכילת פועל בתבואה לפני חיוב בהפרשת חלה (עי' לעיל עמוד עד מתי אוכל הפועל בתלוש193) פוסקים שאם הכוונה לעשות מאותם שעורים קלויות לחם, יש איסור לחסום את הבהמות המרכסות משום שעדיין לא התחייב היבול בחלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שמדובר בדישה משנית, המתבצעת לאחר שהשעורים כבר הופרדו מהמוץ ונקלו בתנור, ועתה דשים אות בכדי להפריד מהם את קליפתם החיצונית שנתקשתה בקליה. כיוון שמדובר בשלב שהוא כבר אחר חיוב מעשרות, אין זכות לבהמה לאכול מהם. התוספות (פט: ד"ה "המרכסות") הולכים אף הם על פי פירוש זה, ובצירוף דעתם לגבי זכות אכילת פועל בתבואה לפני חיוב בהפרשת חלה (עי' לעיל עמוד עד מתי אוכל הפועל בתלוש193) פוסקים שאם הכוונה לעשות מאותם שעורים קלויות לחם, יש איסור לחסום את הבהמות המרכסות משום שעדיין לא התחייב היבול בחלה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פירש שמדובר בבהמות ההולכות על תבואה ואכן מבצעות בה עבודת דישה מסויימת, אך הכוונה בהליכתן היא להגיע ממקום למקום (מרכסות- מלשון רכס-דרך). במקרה זה אין הליכתם נחשבת עבודה ואין הם זוכות באכילה מהתבואה, ולכן מותר לחוסמן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פירש שמדובר בבהמות ההולכות על תבואה ואכן מבצעות בה עבודת דישה מסויימת, אך הכוונה בהליכתן היא להגיע ממקום למקום (מרכסות- מלשון רכס-דרך). במקרה זה אין הליכתם נחשבת עבודה ואין הם זוכות באכילה מהתבואה, ולכן מותר לחוסמן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ריא"ז</strong> (קונטרס הראיות פט:) מבין "מרכסות" מלשון "ריכסא"-אָבַד. לדבריו מדובר בבהמות שהן כבר שבעות ואינן אוכלות לשם רעבון אלא "משליכות התבואה ומפזרת אותה בפיהן ומאבדות אותה בפיהן". כפי שנתבאר בפרק הקודם (הלכה יא) שמותר לפועל לאכול רק אם הוא רעב ואסורה לו אכילה גסה, כך גם בהמות שכאלה מותר לחוסמן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ריא"ז</strong> (קונטרס הראיות פט:) מבין "מרכסות" מלשון "ריכסא"-אָבַד. לדבריו מדובר בבהמות שהן כבר שבעות ואינן אוכלות לשם רעבון אלא "משליכות התבואה ומפזרת אותה בפיהן ומאבדות אותה בפיהן". כפי שנתבאר בפרק הקודם (הלכה יא) שמותר לפועל לאכול רק אם הוא רעב ואסורה לו אכילה גסה, כך גם בהמות שכאלה מותר לחוסמן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שנתבאר, הברייתא אומרת שבמקרים אלה בהם מותר לחסום את הבהמה, יש לתלות שק בצוארה מאותו המין (תנא קמא) או של כרשינים (ר' שמעון בר יוחאי).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שנתבאר, הברייתא אומרת שבמקרים אלה בהם מותר לחסום את הבהמה, יש לתלות שק בצוארה מאותו המין (תנא קמא) או של כרשינים (ר' שמעון בר יוחאי).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שלח ח) פסק כרמב"ם, וה<strong>רמ"א</strong> הביא את פירוש רש"י והתוספות<sup id="ref299"><a href="#fn299">[299]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שלח ח) פסק כרמב"ם, וה<strong>רמ"א</strong> הביא את פירוש רש"י והתוספות<sup id="ref299"><a href="#fn299">[299]</a></sup>.</p>
                     
                 </div>
                 
@@ -1375,31 +1375,31 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו-ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו-ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     רשאי בעל הפרה להרעיב פרתו ולסגפה כדי שתאכל הרבה מן הדייש, ורשאי השוכר להאכילה פקיעי עמיר כדי שלא תאכל הרבה מן הדייש, כיוצא בו רשאי בעה"ב להשקות פועלים יין כדי שלא יאכלו ענבים הרבה, ורשאין פועלין לטבול פתן בציר כדי שיאכלו ענבים הרבה, אבל אין הפועל רשאי לעשות מלאכתו בלילה ולהשכיר עצמו ביום או לדוש בפרתו ערבית ולהשכירה שחרית, ולא יהיה מרעיב ומסגף עצמו ומאכיל מזונותיו לבניו מפני גזל מלאכתו של בעה"ב, שהרי תשש כחו ותחלש דעתו ולא יעשה מלאכה בכח.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כדרך שמוזהר בעה"ב שלא יגזול שכר עני ולא יעכבנו כך העני מוזהר שלא יגזול מלאכת בעה"ב ויבטל מעט בכאן ומעט בכאן ומוציא כל היום במרמה אלא חייב לדקדק על עצמו בזמן שהרי הקפידו על ברכה רביעית של ברכת המזון שלא יברך אותה, וכן חייב לעבוד בכל כחו שהרי יעקב הצדיק אמר כי בכל כחי עבדתי את אביכן, לפיכך נטל שכר זאת אף בעולם הזה שנאמר ויפרץ האיש מאד מאד.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">גרימה לבהמה או לפועל להיות רעבים או שבעים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">גרימה לבהמה או לפועל להיות רעבים או שבעים</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>תוספתא</strong> (ח ג-ד)-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>תוספתא</strong> (ח ג-ד)-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רשאין פועלין לאכול פיתן בציר כדי שיאכלו ענבים הרבה ורשאי בעל הבית להשקותן יין כדי שלא יאכלו ענבים הרבה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רשאין פועלין לאכול פיתן בציר כדי שיאכלו ענבים הרבה ורשאי בעל הבית להשקותן יין כדי שלא יאכלו ענבים הרבה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רשיי בעל הבית להרעיב ולסגיף את פרתו כדי שתאכל הרבה בשעה שדשה ורשיי השוכר להאכילה פקיעי עמיר כדי שלא תאכל הרבה בשעה שדשה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רשיי בעל הבית להרעיב ולסגיף את פרתו כדי שתאכל הרבה בשעה שדשה ורשיי השוכר להאכילה פקיעי עמיר כדי שלא תאכל הרבה בשעה שדשה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">התוספתא מחדשת, שאף על פי שהתורה זיכתה לפועל ולבהמה לאכול ממלאכתם, והזהירה פועל שלא לאכול יותר מהמידה הראויה ובדרך הראויה, בכל זאת מותר לפועל או לבעל בהמה לגרום לכך שיאכלו יותר בדרכים שונות. כמו כן מותר לבעל הדישה או למעסיק לגרום לכך שהפועלים או הבהמה לא יהיו רעבים וכך יאכלו פחות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">התוספתא מחדשת, שאף על פי שהתורה זיכתה לפועל ולבהמה לאכול ממלאכתם, והזהירה פועל שלא לאכול יותר מהמידה הראויה ובדרך הראויה, בכל זאת מותר לפועל או לבעל בהמה לגרום לכך שיאכלו יותר בדרכים שונות. כמו כן מותר לבעל הדישה או למעסיק לגרום לכך שהפועלים או הבהמה לא יהיו רעבים וכך יאכלו פחות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שלח ט, שלז טו) פוסק כדברי הרמב"ם כשתי ההלכות שבתוספתא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שלח ט, שלז טו) פוסק כדברי הרמב"ם כשתי ההלכות שבתוספתא.</p>
                     
                 </div>
                 
@@ -1407,7 +1407,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1471,6 +1471,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

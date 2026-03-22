@@ -9,15 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         body { 
             font-family: 'Heebo', sans-serif; 
-            overflow-x: hidden; /* מונע גלילה אופקית מיותרת */
+            overflow-x: hidden;
         }
         strong { font-weight: 700; color: #1a202c; }
         blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
         sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
         
-        /* פתרון לקפיצה של הערות שוליים וקישורי עוגן שלא יוסתרו ע"י ה-Header */
-        [id] {
-            scroll-margin-top: 90px; 
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
         }
 
         .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
 
-    <header class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
         <div class="font-bold truncate w-3/4">הלכות גזילה ואבידה - פרק א</div>
         <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@
             <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
         </div>
         
-        <div class="flex-1 overflow-y-auto sidebar-scroll p-4">
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
             <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
                 <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק א)</h3>
                 <ul class="space-y-3">
@@ -1050,7 +1050,7 @@
         </div>
     </aside>
 
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
         <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
             
             <div class="text-center mb-8">
@@ -1063,37 +1063,37 @@
             
             
             <div id="halacha-1" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה א</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל הגוזל את חבירו שוה פרוטה עובר בלא תעשה שנאמר "לא תגזול" (ויקרא י"ט י"א), ואין לוקין על לאו זה שהרי הכתוב נתקו לעשה שאם גזל חייב להחזיר שנאמר "והשיב את הגזלה אשר גזל" (ויקרא ה' כ"ג) זו מצות עשה, ואפילו שרף הגזלה אינו לוקה שהרי הוא חייב לשלם דמיה וכל לאו שניתן לתשלומין אין לוקין עליו.
                 </div>
                 
 
                 
                 <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">אין לוקים על גזל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אין לוקים על גזל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> (טז:) דנה בדין מלקות על לאו הניתק לעשה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (טז:) דנה בדין מלקות על לאו הניתק לעשה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>תנן התם הנוטל אם על הבנים <strong>רבי יהודה</strong> אומר לוקה ואינו משלח ו<strong>חכ</strong><strong>מים</strong> אומרים משלח ואינו לוקה זה הכלל כל מצות לא תעשה שיש בה קום עשה אין חייבין עליה</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>תנן התם הנוטל אם על הבנים <strong>רבי יהודה</strong> אומר לוקה ואינו משלח ו<strong>חכ</strong><strong>מים</strong> אומרים משלח ואינו לוקה זה הכלל כל מצות לא תעשה שיש בה קום עשה אין חייבין עליה</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>א<strong>ר</strong><strong> יוחנן</strong> אין לנו אלא זאת ועוד אחרת... דתניא אונס שגירש אם ישראל הוא מחזיר ואינו לוקה ואם כהן הוא לוקה ואינו מחזיר...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>א<strong>ר</strong><strong> יוחנן</strong> אין לנו אלא זאת ועוד אחרת... דתניא אונס שגירש אם ישראל הוא מחזיר ואינו לוקה ואם כהן הוא לוקה ואינו מחזיר...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>והא איכא גזל דרחמנא אמר לא תגזולוהשיב את הגזלה...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>והא איכא גזל דרחמנא אמר לא תגזולוהשיב את הגזלה...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>התם כיון דחייב בתשלומין אין לוקה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>התם כיון דחייב בתשלומין אין לוקה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, דוגמה אחת ללאו הניתק לעשה שאין לוקין עליו היא שילוח הקן, שם הנוטל אם על הבנים, עובר משום "לא תיקח האם על הבנים", אך אינו לוקה משום שקיימת מצוות עשה לשלח את האם גם לאחר שלקחה. <strong>ר' יוחנן</strong> מוסיף שישנ עוד לאו אחד בו לא לוקים משום שניתק לעשה והוא האונס פנויה, בו נאמר ש"לו תהיה לאשה, לא יוכל לגרשה כל ימיו", וגירשה, שכיוון שיש לו מצוות עשה להחזירה אינו לוקה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, דוגמה אחת ללאו הניתק לעשה שאין לוקין עליו היא שילוח הקן, שם הנוטל אם על הבנים, עובר משום "לא תיקח האם על הבנים", אך אינו לוקה משום שקיימת מצוות עשה לשלח את האם גם לאחר שלקחה. <strong>ר' יוחנן</strong> מוסיף שישנ עוד לאו אחד בו לא לוקים משום שניתק לעשה והוא האונס פנויה, בו נאמר ש"לו תהיה לאשה, לא יוכל לגרשה כל ימיו", וגירשה, שכיוון שיש לו מצוות עשה להחזירה אינו לוקה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא שואלת מדוע איסור גזילה אינו נחשב גם כן כלאו הניתק לעשה, ומשיבה שבאיסור גזילה, "כיון דחייב בתשלומין אין לוקה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא שואלת מדוע איסור גזילה אינו נחשב גם כן כלאו הניתק לעשה, ומשיבה שבאיסור גזילה, "כיון דחייב בתשלומין אין לוקה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (ד"ה "") מבארים, שהטעם שאין לוקים בגזילה הוא משום שמדובר בלאו הניתק לעשה. בניגוד למקרים , בהם ניתן לבטל את העשה וללקות, כאן כיוון שתמיד תישאר חובת ממון, אי אפשר לבטל את העשה</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (ד"ה "") מבארים, שהטעם שאין לוקים בגזילה הוא משום שמדובר בלאו הניתק לעשה. בניגוד למקרים , בהם ניתן לבטל את העשה וללקות, כאן כיוון שתמיד תישאר חובת ממון, אי אפשר לבטל את העשה</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הריטב"א מביא את שיטת <strong>ר' מאיר הלוי</strong>, שמפרש אחרת. לדעתו, טעם הפטור ממלקות אינו משום לאו הניתק לעשה, אלא מדובר בטעם . כלומר, אם שרף את הגזילה אכן ביטל את מצוות העשה להשיב את הגזילה, ומצד כללי לאו הניתק לעשה, היה ראוי לו שילקה, אלא שכיוון שחייב גם בתשלומים, <sup id="ref1"><a href="#fn1">[1]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הריטב"א מביא את שיטת <strong>ר' מאיר הלוי</strong>, שמפרש אחרת. לדעתו, טעם הפטור ממלקות אינו משום לאו הניתק לעשה, אלא מדובר בטעם . כלומר, אם שרף את הגזילה אכן ביטל את מצוות העשה להשיב את הגזילה, ומצד כללי לאו הניתק לעשה, היה ראוי לו שילקה, אלא שכיוון שחייב גם בתשלומים, <sup id="ref1"><a href="#fn1">[1]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>רמב"ם</strong> שלפנינו ושבפירוש המשניות (מכות ג א) ניתן לדייק שאכן טעם הפטור בלאו שניתן לתשלומין אינו משום לאו הניתק לעשה, אלא מדובר בטעם עצמאי, כדברי ר' מאיר הלוי<sup id="ref2"><a href="#fn2">[2]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>רמב"ם</strong> שלפנינו ושבפירוש המשניות (מכות ג א) ניתן לדייק שאכן טעם הפטור בלאו שניתן לתשלומין אינו משום לאו הניתק לעשה, אלא מדובר בטעם עצמאי, כדברי ר' מאיר הלוי<sup id="ref2"><a href="#fn2">[2]</a></sup>.</p>
                     
                 </div>
                 
@@ -1101,100 +1101,100 @@
             
             
             <div id="halacha-2" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     <strong>ואסור לגזול כל שהוא דין תורה, אפילו גוי עובד עבודה זרה אסור לגזלו או לעשקו, ואם גזלו או עשקו יחזיר.</strong>
                 </div>
                 
 
                 
                 <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור גזל פחות משוה פרוטה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איסור גזל פחות משוה פרוטה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא בסנהדרין (נז.) מביאה <strong>ברייתא</strong> העוסקת בעבירות רצח ועבירות רכוש המתבצעות בין ישראל לגוי ובין גוי לגוי אחר:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בסנהדרין (נז.) מביאה <strong>ברייתא</strong> העוסקת בעבירות רצח ועבירות רכוש המתבצעות בין ישראל לגוי ובין גוי לגוי אחר:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>על שפיכות דמים- נכרי בנכרי ונכרי בישראל חייב ישראל בנכרי פטור.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>על שפיכות דמים- נכרי בנכרי ונכרי בישראל חייב ישראל בנכרי פטור.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>על הגזל- גנב וגזל וכן יפת תואר וכן כיוצא בהן, נכרי בנכרי ונכרי בישראל אסור וישראל בנכרי מותר.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>על הגזל- גנב וגזל וכן יפת תואר וכן כיוצא בהן, נכרי בנכרי ונכרי בישראל אסור וישראל בנכרי מותר.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מבררת למה מתייחסת לשון "וכן כיוצא בהן" שבסיפא, ממנה משמע שהכוונה לדבר שאינו גזל ממש, אך בכל זאת אסור. אחת ההצעות היא של <strong>ר</strong><strong>ב</strong><strong> פפא</strong>, שמדובר על גזל של פחות משווה פרוטה, שמצד אחד, אין זה גזל ממש כיוון שהנגזל מוחל על פחות משווה פרוטה, ואין חובת השבה. אמנם מצד שני זה בכל זאת אסור, כיוון שעדיין יש לנגזל צער.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מבררת למה מתייחסת לשון "וכן כיוצא בהן" שבסיפא, ממנה משמע שהכוונה לדבר שאינו גזל ממש, אך בכל זאת אסור. אחת ההצעות היא של <strong>ר</strong><strong>ב</strong><strong> פפא</strong>, שמדובר על גזל של פחות משווה פרוטה, שמצד אחד, אין זה גזל ממש כיוון שהנגזל מוחל על פחות משווה פרוטה, ואין חובת השבה. אמנם מצד שני זה בכל זאת אסור, כיוון שעדיין יש לנגזל צער.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק עפ"י זה, שאסור לגזול אפילו פחות משווה פרוטה מהתורה, ונראה שלדעתו גרימת הצער היא חלק מטעם האיסור מהתורה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק עפ"י זה, שאסור לגזול אפילו פחות משווה פרוטה מהתורה, ונראה שלדעתו גרימת הצער היא חלק מטעם האיסור מהתורה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחרת מפרש <strong>רש"י</strong> (שם ד"ה "צערא") הכותב אינו מהתורה, שכן הלאו של "לא תגזול" שייך רק במקום ששייך גם העשה של "והשיב את הגזילה".</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחרת מפרש <strong>רש"י</strong> (שם ד"ה "צערא") הכותב אינו מהתורה, שכן הלאו של "לא תגזול" שייך רק במקום ששייך גם העשה של "והשיב את הגזילה".</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> בדמאי (ג, ב), מדברת על אדם המוריד עלים מתוך ירקות אותם הוא סוחב בכדי להקל ממשאו. ה<strong>ירושלמי</strong> מבאר ומוסיף שני מעשים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> בדמאי (ג, ב), מדברת על אדם המוריד עלים מתוך ירקות אותם הוא סוחב בכדי להקל ממשאו. ה<strong>ירושלמי</strong> מבאר ומוסיף שני מעשים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כיצד הוא עושה נוטל מן העליון [=העלים] ומתקין ואינו אסור משום גזל.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כיצד הוא עושה נוטל מן העליון [=העלים] ומתקין ואינו אסור משום גזל.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כהדא רבי שמעון בר כהנא הוה מסמיך לרבי לעזר עברון על חד כרם אמר ליה אייתי לי חד קיס מיחצד שיניי חזר ואמר ליה לא תיתי לי כלום אמר דאין אייתי כל בר נש ובר נש מיעבד כן הא אזיל סייגא דגוברא.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כהדא רבי שמעון בר כהנא הוה מסמיך לרבי לעזר עברון על חד כרם אמר ליה אייתי לי חד קיס מיחצד שיניי חזר ואמר ליה לא תיתי לי כלום אמר דאין אייתי כל בר נש ובר נש מיעבד כן הא אזיל סייגא דגוברא.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>רבי חגיי הוה מיסמך לרבי זעירא עבר חד טעין חד מיכל דקיסין אמר ליה אייתי לי חד קיס נחצי שיניי חזר ואמר ליה לא תיתי לי כלום דאין אתי כל בר נש ובר נש מיעבד כן הא אזילא מיכלא דגוברא</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רבי חגיי הוה מיסמך לרבי זעירא עבר חד טעין חד מיכל דקיסין אמר ליה אייתי לי חד קיס נחצי שיניי חזר ואמר ליה לא תיתי לי כלום דאין אתי כל בר נש ובר נש מיעבד כן הא אזילא מיכלא דגוברא</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, גם כאשר הירקות אינם של אותו אדם המוריד מהם עלים, אין נטילת העלים שאינם אכילים מהירק אסורה משום גזל, משום שהבעלים אינם מקפידים. בהקבלה מביאה הסוגיה מעשה באחד האמוראים שהיה מהלך עם תלמידו וביקש שיביא לו קיסם מגדר חיה שהיתה שם. אותו תלמיד סירב ואמר שאם כל אחד היה עושה זאת, לא היתה נשארת גדר כלל. מעשה דומה מובא בערימת קיסמים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, גם כאשר הירקות אינם של אותו אדם המוריד מהם עלים, אין נטילת העלים שאינם אכילים מהירק אסורה משום גזל, משום שהבעלים אינם מקפידים. בהקבלה מביאה הסוגיה מעשה באחד האמוראים שהיה מהלך עם תלמידו וביקש שיביא לו קיסם מגדר חיה שהיתה שם. אותו תלמיד סירב ואמר שאם כל אחד היה עושה זאת, לא היתה נשארת גדר כלל. מעשה דומה מובא בערימת קיסמים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א </strong>(ב"ק קה.) מסיק מהירושלמי, שמעיקר הדין מותר לקחת דבר מועט שבוודאי אין הבעלים מקפידים עליו. הרשב"א מוסיף שעדיין, ממידת חסידות ראוי שלא לקחת אף דבר שכזה, מהטעם המובא בירושלמי, שלו יעשו כך רבים ייגרם נזק לבעלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"א </strong>(ב"ק קה.) מסיק מהירושלמי, שמעיקר הדין מותר לקחת דבר מועט שבוודאי אין הבעלים מקפידים עליו. הרשב"א מוסיף שעדיין, ממידת חסידות ראוי שלא לקחת אף דבר שכזה, מהטעם המובא בירושלמי, שלו יעשו כך רבים ייגרם נזק לבעלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שנט א) פוסק שאסור לגזול אף פחות משווה פרוטה, ומוסיף את דברי הרשב"א לגבי דברים שאין הבעלים מקפיד עליהם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שנט א) פוסק שאסור לגזול אף פחות משווה פרוטה, ומוסיף את דברי הרשב"א לגבי דברים שאין הבעלים מקפיד עליהם.</p>
                     
                 </div>
                 
                 <div id="topic-2-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">איסור גזל הגוי</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">איסור גזל הגוי</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בבבא קמא (קיג.) עוסקת ברשות להתחמק מהמכס, בין השאר כאשר מדובר במוכס גוי. כסיוע לאפשרות זו מובאת <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בבבא קמא (קיג.) עוסקת ברשות להתחמק מהמכס, בין השאר כאשר מדובר במוכס גוי. כסיוע לאפשרות זו מובאת <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ישראל וכנעני אנס שבאו לדין, אם אתה יכול לזכהו בדיני ישראל זכהו ואמור לו כך דינינו, בדיני כנענים זכהו ואמור לו כך דינכם ואם לאו באין עליו בעקיפין דברי <strong>ר</strong><strong>בי</strong><strong> ישמעאל</strong>.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ישראל וכנעני אנס שבאו לדין, אם אתה יכול לזכהו בדיני ישראל זכהו ואמור לו כך דינינו, בדיני כנענים זכהו ואמור לו כך דינכם ואם לאו באין עליו בעקיפין דברי <strong>ר</strong><strong>בי</strong><strong> ישמעאל</strong>.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ר</strong><strong>בי </strong><strong>ע</strong><strong>קיבא</strong> אומר אין באין עליו בעקיפין מפני קידוש השם.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>ר</strong><strong>בי </strong><strong>ע</strong><strong>קיבא</strong> אומר אין באין עליו בעקיפין מפני קידוש השם.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לדעת <strong>רבי ישמעאל</strong> ניתן לרמות גוי אנס בכדי לגרום לכך שהיהודי יגבור עליו בדין. גם <strong>רבי עקיבא</strong> שאוסר משמע שאינו אוסר מעיקר הדין אלא מפני החשש לחילול ה'.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, לדעת <strong>רבי ישמעאל</strong> ניתן לרמות גוי אנס בכדי לגרום לכך שהיהודי יגבור עליו בדין. גם <strong>רבי עקיבא</strong> שאוסר משמע שאינו אוסר מעיקר הדין אלא מפני החשש לחילול ה'.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מאידך, מביאה הגמרא ברייתא ממנה משמע שגזל הגוי אסור מהתורה ממש</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מאידך, מביאה הגמרא ברייתא ממנה משמע שגזל הגוי אסור מהתורה ממש</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר</strong><strong>בי</strong><strong> שמעון</strong> דבר זה דרש <strong>רבי עקיבא</strong> כשבא מזפירין: מנין לגזל כנעני שהוא אסור? תלמוד לומר "אחרי נמכר גאולה תהיה לו" (ויקרא כ"ה)- שלא ימשכנו ויצא. יכול יגלום עליו? <strong>תל</strong><strong>מוד לומר</strong> "וחשב עם קונהו" (ויקרא כ"ה)- ידקדק עם קונהו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>ר</strong><strong>בי</strong><strong> שמעון</strong> דבר זה דרש <strong>רבי עקיבא</strong> כשבא מזפירין: מנין לגזל כנעני שהוא אסור? תלמוד לומר "אחרי נמכר גאולה תהיה לו" (ויקרא כ"ה)- שלא ימשכנו ויצא. יכול יגלום עליו? <strong>תל</strong><strong>מוד לומר</strong> "וחשב עם קונהו" (ויקרא כ"ה)- ידקדק עם קונהו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">פירוש, כאשר פודים עבד עברי שנמכר לידי גוי (אפילו עובד ע"ז, כפי שמבואר בהמשך הגמרא) נלמד מפסוקי התורה שיש לחשב עימו הכסף כדין ואין לחטוף את העבד העברי ללא תשלום תמורתו. מכאן לומד <strong>רבי עקיבא</strong>, שגזל הגוי אסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פירוש, כאשר פודים עבד עברי שנמכר לידי גוי (אפילו עובד ע"ז, כפי שמבואר בהמשך הגמרא) נלמד מפסוקי התורה שיש לחשב עימו הכסף כדין ואין לחטוף את העבד העברי ללא תשלום תמורתו. מכאן לומד <strong>רבי עקיבא</strong>, שגזל הגוי אסור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבא</strong> פותר (שם קיג:):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבא</strong> פותר (שם קיג:):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>כאן בגזילו וכאן בהפקעת הלוואתו</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כאן בגזילו וכאן בהפקעת הלוואתו</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מפרש, שבהפקעת הלוואתו של הגוי, כלומר, כאשר אין היהודי משיב לגוי כסף שהוא חייב לו, אין מדובר על גזל ממש, ולכן כאשר אין חשש לחילול ה' מותר. לעומת זאת, גזל גמור אסור.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מפרש, שבהפקעת הלוואתו של הגוי, כלומר, כאשר אין היהודי משיב לגוי כסף שהוא חייב לו, אין מדובר על גזל ממש, ולכן כאשר אין חשש לחילול ה' מותר. לעומת זאת, גזל גמור אסור.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עוד נפסק בגמרא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד נפסק בגמרא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב ביבי בר גידל</strong> אמר <strong>ר</strong><strong>בי </strong><strong>ש</strong><strong>מעון</strong><strong> חסידא</strong> גזל כנעני אסור אבידתו מותרת</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב ביבי בר גידל</strong> אמר <strong>ר</strong><strong>בי </strong><strong>ש</strong><strong>מעון</strong><strong> חסידא</strong> גזל כנעני אסור אבידתו מותרת</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב הונא</strong> מביא עוד מקור (בנוסף לזה של רבי עקיבא שלעיל) לאיסור גזל מגוי-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב הונא</strong> מביא עוד מקור (בנוסף לזה של רבי עקיבא שלעיל) לאיסור גזל מגוי-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מנין לגזל הכנעני שהוא אסור שנאמר "ואכלת את כל העמים אשר ה' אלהיך נותן לך" (דברים ז') בזמן שהן מסורים בידך ולא בזמן שאינם מסורין בידך</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מנין לגזל הכנעני שהוא אסור שנאמר "ואכלת את כל העמים אשר ה' אלהיך נותן לך" (דברים ז') בזמן שהן מסורים בידך ולא בזמן שאינם מסורין בידך</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי אבידת הגוי נאמר ב<strong>ברייתא</strong></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי אבידת הגוי נאמר ב<strong>ברייתא</strong></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>ר</strong><strong>בי</strong><strong> פנחס בן יאיר</strong> אומר במקום שיש חילול השם אפילו אבידתו אסור</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>ר</strong><strong>בי</strong><strong> פנחס בן יאיר</strong> אומר במקום שיש חילול השם אפילו אבידתו אסור</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת הסוגיה בבבא קמא, ממנה משמע שגזל הגוי אסור, מ<strong>הברייתא</strong> שהובאה בסוגיית הגמרא בסנהדרין (נז., עי' לעיל בדברינו על הלכה א) משמע, שגזל הגוי מותר, שכך נאמר שם</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת הסוגיה בבבא קמא, ממנה משמע שגזל הגוי אסור, מ<strong>הברייתא</strong> שהובאה בסוגיית הגמרא בסנהדרין (נז., עי' לעיל בדברינו על הלכה א) משמע, שגזל הגוי מותר, שכך נאמר שם</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>על הגזל...ישראל בנכרי מותר</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>על הגזל...ישראל בנכרי מותר</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (שם ד"ה "ישראל") מפרש שהסוגיות אינן חלוקות מכל וכל, אלא הברייתא בסנהדרין דיברה על איסור תורה, שאינו אמור בגזל הגוי, ולעומת זאת הסוגיה בבבא קמא אוסרת גזל מדרבנן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (שם ד"ה "ישראל") מפרש שהסוגיות אינן חלוקות מכל וכל, אלא הברייתא בסנהדרין דיברה על איסור תורה, שאינו אמור בגזל הגוי, ולעומת זאת הסוגיה בבבא קמא אוסרת גזל מדרבנן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת רש"י שפירש שהאוסר גזל הגוי אוסר זאת מדרבנן, מה<strong>תוספות</strong> (בבא מציעא פז: ד"ה "אלא") משמע שהלימוד מהפסוקים בסוגיה בבבא קמא מורה על כך שאיסור גזל הגוי הוא איסור תורה ממש<sup id="ref3"><a href="#fn3">[3]</a></sup>. כך כותב גם ה<strong>גר"א</strong> (חו"מ שמח ח).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת רש"י שפירש שהאוסר גזל הגוי אוסר זאת מדרבנן, מה<strong>תוספות</strong> (בבא מציעא פז: ד"ה "אלא") משמע שהלימוד מהפסוקים בסוגיה בבבא קמא מורה על כך שאיסור גזל הגוי הוא איסור תורה ממש<sup id="ref3"><a href="#fn3">[3]</a></sup>. כך כותב גם ה<strong>גר"א</strong> (חו"מ שמח ח).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כך גם משמע מה<strong>סמ"ג</strong> (לאוין קנב) שכתב שהתורה הקפידה על הגזל באופן כללי, שהרי על כך לקו דור המבול, ואף המתיר בגמרא גזל הגוי לא התיר אלא במקום בו הגוי מצערו ולא רק כי הוא גוי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כך גם משמע מה<strong>סמ"ג</strong> (לאוין קנב) שכתב שהתורה הקפידה על הגזל באופן כללי, שהרי על כך לקו דור המבול, ואף המתיר בגמרא גזל הגוי לא התיר אלא במקום בו הגוי מצערו ולא רק כי הוא גוי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי מצוות ההשבה לגוי, נאמר ב<strong>תוספתא</strong> (בבא קמא י ח):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי מצוות ההשבה לגוי, נאמר ב<strong>תוספתא</strong> (בבא קמא י ח):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הגוזל את הגוי חייב להחזיר לגוי.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הגוזל את הגוי חייב להחזיר לגוי.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>חמור גזל הגוי מגזל ישראל מפני חילול השם</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>חמור גזל הגוי מגזל ישראל מפני חילול השם</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">עפ"י הדברים האלה פסק ה<strong>רמב"ם</strong> שהגוזל את הגוי חייב להשיב לו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עפ"י הדברים האלה פסק ה<strong>רמב"ם</strong> שהגוזל את הגוי חייב להשיב לו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מלשון ה<strong>שו"ע</strong> (שנט א) ניתן לדייק שהוא פוסק שגזל הגוי אסור מדאורייתא, כמו גזל ישראל. לעומת זאת, ה<strong>רמ"א</strong> פוסק (אה"ע כח א), שהמקדש בגזל עכו"ם מקודשת, שכן אין חייב להחזיר אלא מצד קידוש ה' בלבד. ומשמע שדעתו שגזל הגוי אסור מדרבנן בלבד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מלשון ה<strong>שו"ע</strong> (שנט א) ניתן לדייק שהוא פוסק שגזל הגוי אסור מדאורייתא, כמו גזל ישראל. לעומת זאת, ה<strong>רמ"א</strong> פוסק (אה"ע כח א), שהמקדש בגזל עכו"ם מקודשת, שכן אין חייב להחזיר אלא מצד קידוש ה' בלבד. ומשמע שדעתו שגזל הגוי אסור מדרבנן בלבד.</p>
                     
                 </div>
                 
@@ -1202,84 +1202,84 @@
             
             
             <div id="halacha-3" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ג-ד</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ג-ד</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     איזה הוא גוזל, זה הלוקח ממון האדם בחזקה, כגון שחטף מטלטלין מידו, או שנכנס לרשותו שלא ברצון הבעלים ונטל כלים משם, או שתקף בעבדיו ובבהמתו ונשתמש בהן, או שירד לתוך שדהו ואכל פירותיה, וכל כיוצא בזה הוא הגוזל, כענין שנאמר ויגזול את החנית מיד המצרי (שמואל ב' כ"ג כ"א).
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     איזה הוא עושק, זה שבא ממון חבירו לתוך ידו ברצון הבעלים וכיון שתבעוהו כבש הממון אצלו בחזקה ולא החזירו כגון שהיה לו ביד חבירו הלואה או פקדון או שכירות והוא תובעו ואינו יכול להוציא ממנו מפני שהוא אלם וקשה, ועל זה נאמר "לא תעשק את רעך" (ויקרא י"ט י"ג, דברים כ"ד י"ד).
                 </div>
                 
 
                 
                 <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגדרת גזילה לעומת גניבה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הגדרת גזילה לעומת גניבה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בבבא קמא (עט:) אגב עיסוקה בגדר משיכת הגניבה המגדירה גנב, מביאה את דברי <strong>ר' אלעזר</strong> (לגופם של דבריו, עי' במה שנבאר בעז"ה בהלכות גניבה ב, יז):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בבבא קמא (עט:) אגב עיסוקה בגדר משיכת הגניבה המגדירה גנב, מביאה את דברי <strong>ר' אלעזר</strong> (לגופם של דבריו, עי' במה שנבאר בעז"ה בהלכות גניבה ב, יז):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר' אלעזר</strong> ראוהו שהטמין בחורשין<sup id="ref4"><a href="#fn4">[4]</a></sup> וטבח ומכר משלם תשלומי ארבעה וחמשה</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>ר' אלעזר</strong> ראוהו שהטמין בחורשין<sup id="ref4"><a href="#fn4">[4]</a></sup> וטבח ומכר משלם תשלומי ארבעה וחמשה</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שלמרות שגנב הוא זה שעושה מעשיו בהיחבא ואילו כאן עשה מעשיו במקום גלוי כך שראוהו העדים, בכל זאת כיוון שניסה להיחבא, נחשב הוא כגנב ולא כגזלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שלמרות שגנב הוא זה שעושה מעשיו בהיחבא ואילו כאן עשה מעשיו במקום גלוי כך שראוהו העדים, בכל זאת כיוון שניסה להיחבא, נחשב הוא כגנב ולא כגזלן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי הגדרת הגזלן חלקו האמוראים-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי הגדרת הגזלן חלקו האמוראים-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' אבהו</strong> אומר שגזלן הוא העושה מעשה הדומה לגזילת החנית ע"י בניהו בן יהוידע עליו נאמר "<strong>וַיִּגְזֹל</strong> אֶת הַחֲנִית מִיַּד הַמִּצְרִי וַיַּהַרְגֵהוּ בַּחֲנִיתוֹ" (שמואל ב כג כא).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' אבהו</strong> אומר שגזלן הוא העושה מעשה הדומה לגזילת החנית ע"י בניהו בן יהוידע עליו נאמר "<strong>וַיִּגְזֹל</strong> אֶת הַחֲנִית מִיַּד הַמִּצְרִי וַיַּהַרְגֵהוּ בַּחֲנִיתוֹ" (שמואל ב כג כא).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוחנן</strong> אומר שגזלן הוא העושה מעשה הדומה למה שמסופר בבעלי שכם (שופטים ט כה) "וַיָּשִׂימוּ לוֹ בַעֲלֵי שְׁכֶם מְאָרְבִים עַל רָאשֵׁי הֶהָרִים <strong>וַיִּגְזְלוּ</strong> אֵת כָּל אֲשֶׁר יַעֲבֹר עֲלֵיהֶם בַּדָּרֶךְ"</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יוחנן</strong> אומר שגזלן הוא העושה מעשה הדומה למה שמסופר בבעלי שכם (שופטים ט כה) "וַיָּשִׂימוּ לוֹ בַעֲלֵי שְׁכֶם מְאָרְבִים עַל רָאשֵׁי הֶהָרִים <strong>וַיִּגְזְלוּ</strong> אֵת כָּל אֲשֶׁר יַעֲבֹר עֲלֵיהֶם בַּדָּרֶךְ"</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> מסבירה שר' אבהו לא רצה ללמוד מהפסוק שמביא ר' יוחנן, משום ששם התחבאו הגזלנים במארב. לעומתו מסביר ר' יוחנן שאותה התחבאות לא היתה מפני הבריות, כדרך הגנבים, אלא היתה בכדי שלא יראו אותם הנגזלים מבעוד מועד ויברחו, ולכן הם בכל זאת גזלנים ולא גנבים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> מסבירה שר' אבהו לא רצה ללמוד מהפסוק שמביא ר' יוחנן, משום ששם התחבאו הגזלנים במארב. לעומתו מסביר ר' יוחנן שאותה התחבאות לא היתה מפני הבריות, כדרך הגנבים, אלא היתה בכדי שלא יראו אותם הנגזלים מבעוד מועד ויברחו, ולכן הם בכל זאת גזלנים ולא גנבים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא ממשיכה ומביאה מספר ברייתות המסבירות שהחמירה תורה בעונשו של הגנב (המשלם כפל) יותר מאשר בעונשו של הגזלן משום שהגנב מראה שהוא חושש מבשר ודם ומה' אינו חושש.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא ממשיכה ומביאה מספר ברייתות המסבירות שהחמירה תורה בעונשו של הגנב (המשלם כפל) יותר מאשר בעונשו של הגזלן משום שהגנב מראה שהוא חושש מבשר ודם ומה' אינו חושש.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (ד"ה "וכיוון") מסביר שהגזלן הוא זה שאינו חושש לעשות את מעשהו לנגד עיני הבעלים. מדבריו משמע שמי שנוטל דבר לעיני כל העם אך חושש לנוטלו לעיני הבעלים הרי הוא גנב ולא גזלן<sup id="ref5"><a href="#fn5">[5]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (ד"ה "וכיוון") מסביר שהגזלן הוא זה שאינו חושש לעשות את מעשהו לנגד עיני הבעלים. מדבריו משמע שמי שנוטל דבר לעיני כל העם אך חושש לנוטלו לעיני הבעלים הרי הוא גנב ולא גזלן<sup id="ref5"><a href="#fn5">[5]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, מה<strong>מאירי</strong> ומה<strong>רשב"א</strong> משמע שהגנב הוא זה המנסה להיחבא מעיני כל, אך זה שעושה בגלוי ולא איכפת לו שמישהו רואה אותו הוא גזלן.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת, מה<strong>מאירי</strong> ומה<strong>רשב"א</strong> משמע שהגנב הוא זה המנסה להיחבא מעיני כל, אך זה שעושה בגלוי ולא איכפת לו שמישהו רואה אותו הוא גזלן.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ב</strong><strong>גמרא</strong> בבבא קמא (נז.) מועלית מחלוקת בין האמוראים האם ליסטים מזויין (כלומר, שודד שלא ניתן להתנגד לו כיוון שהוא מאיים בנשק) הוא גנב, כיוון שהוא מתחבא מאנשים, או גזלן<sup id="ref6"><a href="#fn6">[6]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ב</strong><strong>גמרא</strong> בבבא קמא (נז.) מועלית מחלוקת בין האמוראים האם ליסטים מזויין (כלומר, שודד שלא ניתן להתנגד לו כיוון שהוא מאיים בנשק) הוא גנב, כיוון שהוא מתחבא מאנשים, או גזלן<sup id="ref6"><a href="#fn6">[6]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק (כאן ובהלכות גניבה א, ג) שגזלן הוא העושה מעשיו בפרהסיה ובחוזק יד, ומביא את הפסוק של ר' אבהו. לגבי הגדרת הגנב כותב הרמב"ם (שם) שהגנב הוא הלוקח ממון כשאין הבעלים יודעים. אמנם בהמשך פוסק הרמב"ם שליסטים מזויין נחשב כגנב<sup id="ref7"><a href="#fn7">[7]</a></sup> אף על פי שגונב מדעת הבעלים.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק (כאן ובהלכות גניבה א, ג) שגזלן הוא העושה מעשיו בפרהסיה ובחוזק יד, ומביא את הפסוק של ר' אבהו. לגבי הגדרת הגנב כותב הרמב"ם (שם) שהגנב הוא הלוקח ממון כשאין הבעלים יודעים. אמנם בהמשך פוסק הרמב"ם שליסטים מזויין נחשב כגנב<sup id="ref7"><a href="#fn7">[7]</a></sup> אף על פי שגונב מדעת הבעלים.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>מגיד משנה</strong> מסביר שליסטים מזויין הנחשב כגנב הוא דווקא כזה שמנסה שלא יראוהו הבעלים, אך אם אינו מסתתר מהבעלים, אפילו אם הוא מסתתר מאחרים, הרי הוא גזלן, בדומה לבעלי שכם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מגיד משנה</strong> מסביר שליסטים מזויין הנחשב כגנב הוא דווקא כזה שמנסה שלא יראוהו הבעלים, אך אם אינו מסתתר מהבעלים, אפילו אם הוא מסתתר מאחרים, הרי הוא גזלן, בדומה לבעלי שכם.</p>
                     
                 </div>
                 
                 <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגדרת גזילה לעומת עושק</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הגדרת גזילה לעומת עושק</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הסוגיה בבבא מציעא (קיא:) דנה באיסור הלנת שכר שכיר, ומביאה ברייתא הלומדת מהפסוק</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הסוגיה בבבא מציעא (קיא:) דנה באיסור הלנת שכר שכיר, ומביאה ברייתא הלומדת מהפסוק</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לֹא תַעֲשֹׁק אֶת רֵעֲךָ וְלֹא תִגְזֹל לֹא תָלִין פְּעֻלַּת שָׂכִיר אִתְּךָ עַד בֹּקֶר (ויקרא יט יג)</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לֹא תַעֲשֹׁק אֶת רֵעֲךָ וְלֹא תִגְזֹל לֹא תָלִין פְּעֻלַּת שָׂכִיר אִתְּךָ עַד בֹּקֶר (ויקרא יט יג)</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">שהמלין שכר שכיר עוברבין השאר על איסור גזל ואיסור עושק.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שהמלין שכר שכיר עוברבין השאר על איסור גזל ואיסור עושק.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> ממשיכה ומנסה לברר מה ההבדל בין גזל לבין עושק. בעניין זה הועלו מספר הצעות:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> ממשיכה ומנסה לברר מה ההבדל בין גזל לבין עושק. בעניין זה הועלו מספר הצעות:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב חסדא</strong> לך ושוב לך ושוב (משלי ג') זה הוא עושק יש לך בידי ואיני נותן לך זה הוא גזל...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב חסדא</strong> לך ושוב לך ושוב (משלי ג') זה הוא עושק יש לך בידי ואיני נותן לך זה הוא גזל...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רב ששת</strong> נתתיו לך זהו עושק יש לך בידי ואיני נותן לך זה הוא גזל ...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב ששת</strong> נתתיו לך זהו עושק יש לך בידי ואיני נותן לך זה הוא גזל ...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אלא אמר <strong>אביי</strong> לא שכרתיך מעולם זה הוא עושק נתתיו לך זה הוא גזל...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא אמר <strong>אביי</strong> לא שכרתיך מעולם זה הוא עושק נתתיו לך זה הוא גזל...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote><strong>רבא</strong> אמר זה הוא עושק זהו גזל ולמה חלקן הכתוב לעבור עליו בשני לאוין.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote><strong>רבא</strong> אמר זה הוא עושק זהו גזל ולמה חלקן הכתוב לעבור עליו בשני לאוין.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>גיליון</strong> וה<strong>גר"א</strong>שנט ס"ק י, שאין כוונת הגמרא הנ"ל להגדיר גזל , שהרי כל לקיחת חפץ בחזקה ובגלוי מידי הבעלים נחשבת גזל. כוונת האמוראים היא לפרש באיזה אופן עוברים על גזל בהלנת שכר שכיר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>גיליון</strong> וה<strong>גר"א</strong>שנט ס"ק י, שאין כוונת הגמרא הנ"ל להגדיר גזל , שהרי כל לקיחת חפץ בחזקה ובגלוי מידי הבעלים נחשבת גזל. כוונת האמוראים היא לפרש באיזה אופן עוברים על גזל בהלנת שכר שכיר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> מסביר שכל האפשרויות המועלות על ידי האמוראים השונים מכוונות לכך שפירוש המילה "גזל" הוא שלקח את ממון חבירו באופן בוטה וישיר יותר מאשר ב"עושק"<sup id="ref8"><a href="#fn8">[8]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> מסביר שכל האפשרויות המועלות על ידי האמוראים השונים מכוונות לכך שפירוש המילה "גזל" הוא שלקח את ממון חבירו באופן בוטה וישיר יותר מאשר ב"עושק"<sup id="ref8"><a href="#fn8">[8]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ספרא</strong> על קדושים (פרשה ב) כותב על איסור עושק:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ספרא</strong> על קדושים (פרשה ב) כותב על איסור עושק:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מה הגזל מיוחד שהוא של ממון אף עושק דבר של ממון, ואיזה זה הכובש שכר שכיר</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מה הגזל מיוחד שהוא של ממון אף עושק דבר של ממון, ואיזה זה הכובש שכר שכיר</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מתוך הנחת הגמרא לגבי משמעות הלשונות "גזל" ו"עושק", ומתוך דברי הספרא<sup id="ref9"><a href="#fn9">[9]</a></sup>, מסביר ה<strong>רמב"ם </strong>לפנינו את ההבדל בין איסור הגזל לבין איסור העושק, שהראשון הוא לקיחת הממון בפועל, ואילו האחרון הוא סירוב לשלם ממון שבא לידיו של העושק באופן חוקי. כך כותב גם ה<strong>טור</strong> (שנט).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מתוך הנחת הגמרא לגבי משמעות הלשונות "גזל" ו"עושק", ומתוך דברי הספרא<sup id="ref9"><a href="#fn9">[9]</a></sup>, מסביר ה<strong>רמב"ם </strong>לפנינו את ההבדל בין איסור הגזל לבין איסור העושק, שהראשון הוא לקיחת הממון בפועל, ואילו האחרון הוא סירוב לשלם ממון שבא לידיו של העושק באופן חוקי. כך כותב גם ה<strong>טור</strong> (שנט).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מפשט דברי ה<strong>רמב"ם </strong>ומדבריו בספר המצוות (לא תעשה רמה, רמז) משמע שמדובר בשני איסורים שונים שהמתחייב באחד אינו מתחייב בשני.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מפשט דברי ה<strong>רמב"ם </strong>ומדבריו בספר המצוות (לא תעשה רמה, רמז) משמע שמדובר בשני איסורים שונים שהמתחייב באחד אינו מתחייב בשני.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת זאת, ה<strong>הגהות מימוניות </strong>פוסק, על פי דברי רבא בסוגייה הנ"ל, שגזל ועושק הם מצות לא תעשה אחת שעוברים עליה שני לאוים<sup id="ref10"><a href="#fn10">[10]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת זאת, ה<strong>הגהות מימוניות </strong>פוסק, על פי דברי רבא בסוגייה הנ"ל, שגזל ועושק הם מצות לא תעשה אחת שעוברים עליה שני לאוים<sup id="ref10"><a href="#fn10">[10]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שנט ז-ח) העתיק את דברי הרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שנט ז-ח) העתיק את דברי הרמב"ם.</p>
                     
                 </div>
                 
@@ -1287,40 +1287,40 @@
             
             
             <div id="halacha-4" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ה</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל הגוזל חייב להחזיר הגזלה עצמה שנ והשיב את הגזלה אשר גזל, ואם אבדה או נשתנית משלם דמיה, בין שהודה מפי עצמו בין שבאו עליו עדים שגזל הרי זה חייב לשלם הקרן בלבד, אפילו גזל קורה ובנה אותה בבירה הואיל ולא נשתנית דין תורה הוא שיהרוס את כל הבנין ויחזיר קורה לבעליה, אבל תקנו חכמים מפני תקנת השבים שיהיה נותן את דמיה ולא יפסיד הבנין, וכן כל כיוצא בזה. אפילו גזל קורה ועשה אותה בסוכת החג ובא בעל הקורה לתבוע בתוך ימי החג נותן לו את דמיה, אבל אחר החג הואיל ולא נשתנית ולא בנאה בטיט מחזיר את הקורה עצמה.
                 </div>
                 
 
                 
                 <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">יסודות דין השבת הגזילה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">יסודות דין השבת הגזילה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כפי שהתבאר לעיל בהלכה א, הגמרא בכמה מקומות מציגה את איסור הגזל כלאו הניתק לעשה, כשמצוות העשה מקורה בנאמר באשם גזילות (ויקרא ה כא-כד):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כפי שהתבאר לעיל בהלכה א, הגמרא בכמה מקומות מציגה את איסור הגזל כלאו הניתק לעשה, כשמצוות העשה מקורה בנאמר באשם גזילות (ויקרא ה כא-כד):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>נֶפֶשׁ כִּי תֶחֱטָא וּמָעֲלָה מַעַל בַּ וְכִחֵשׁ בַּעֲמִיתוֹ בְּפִקָּדוֹן אוֹ בִתְשׂוּמֶת יָד אוֹ בְגָזֵל אוֹ עָשַׁק אֶת עֲמִיתוֹ:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>נֶפֶשׁ כִּי תֶחֱטָא וּמָעֲלָה מַעַל בַּ וְכִחֵשׁ בַּעֲמִיתוֹ בְּפִקָּדוֹן אוֹ בִתְשׂוּמֶת יָד אוֹ בְגָזֵל אוֹ עָשַׁק אֶת עֲמִיתוֹ:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אוֹ מָצָא אֲבֵדָה וְכִחֶשׁ בָּהּ וְנִשְׁבַּע עַל שָׁקֶר עַל אַחַת מִכֹּל אֲשֶׁר יַעֲשֶׂה הָאָדָם לַחֲטֹא בָהֵנָּה:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אוֹ מָצָא אֲבֵדָה וְכִחֶשׁ בָּהּ וְנִשְׁבַּע עַל שָׁקֶר עַל אַחַת מִכֹּל אֲשֶׁר יַעֲשֶׂה הָאָדָם לַחֲטֹא בָהֵנָּה:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>וְהָיָה כִּי יֶחֱטָא וְאָשֵׁם <strong>וְהֵשִׁיב אֶת הַגְּזֵלָה אֲשֶׁר גָּזָל</strong> אוֹ אֶת הָעֹשֶׁק אֲשֶׁר עָשָׁק אוֹ אֶת הַפִּקָּדוֹן אֲשֶׁר הָפְקַד אִתּוֹ אוֹ אֶת הָאֲבֵדָה אֲשֶׁר מָצָא:</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>וְהָיָה כִּי יֶחֱטָא וְאָשֵׁם <strong>וְהֵשִׁיב אֶת הַגְּזֵלָה אֲשֶׁר גָּזָל</strong> אוֹ אֶת הָעֹשֶׁק אֲשֶׁר עָשָׁק אוֹ אֶת הַפִּקָּדוֹן אֲשֶׁר הָפְקַד אִתּוֹ אוֹ אֶת הָאֲבֵדָה אֲשֶׁר מָצָא:</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אוֹ מִכֹּל אֲשֶׁר יִשָּׁבַע עָלָיו לַשֶּׁקֶר וְשִׁלַּם אֹתוֹ בְּרֹאשׁוֹ וַחֲמִשִׁתָיו יֹסֵף עָלָיו לַאֲשֶׁר הוּא לוֹ יִתְּנֶנּוּ בְּיוֹם אַשְׁמָתוֹ</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אוֹ מִכֹּל אֲשֶׁר יִשָּׁבַע עָלָיו לַשֶּׁקֶר וְשִׁלַּם אֹתוֹ בְּרֹאשׁוֹ וַחֲמִשִׁתָיו יֹסֵף עָלָיו לַאֲשֶׁר הוּא לוֹ יִתְּנֶנּוּ בְּיוֹם אַשְׁמָתוֹ</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אכן, ה<strong>רמב"ם</strong> (ספר המצוות עשה קצד) ומוני מצוות נוספים מונים את מצוות השבת הגזלה כאחת מרמ"ח מצוות העשה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אכן, ה<strong>רמב"ם</strong> (ספר המצוות עשה קצד) ומוני מצוות נוספים מונים את מצוות השבת הגזלה כאחת מרמ"ח מצוות העשה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מקור חובת ההשבה לאחר שנשתנית נידונה בפרק 'מרובה' (בבא קמא סו.)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקור חובת ההשבה לאחר שנשתנית נידונה בפרק 'מרובה' (בבא קמא סו.)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבה</strong> שינוי קונה כתיבא ותנינא כתיבא 'והשיב את הגזלה אשר גזל' (ויקרא ה) מה ת"ל אשר גזל אם כעין שגזל יחזיר ואם לאו דמים בעלמא בעי שלומי...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבה</strong> שינוי קונה כתיבא ותנינא כתיבא 'והשיב את הגזלה אשר גזל' (ויקרא ה) מה ת"ל אשר גזל אם כעין שגזל יחזיר ואם לאו דמים בעלמא בעי שלומי...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאשר החפץ הנגזל קיים או לכל הפחות זהותו כפי שהיתה בשעת הגזילה, שייכת בו לשון "אשר גזל", וחייב הגזלן להשיבו בעינו, מה שאין כן אם נגנב החפץ, אבד או נשתנה, שאז משיב הגזלן את דמיו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כאשר החפץ הנגזל קיים או לכל הפחות זהותו כפי שהיתה בשעת הגזילה, שייכת בו לשון "אשר גזל", וחייב הגזלן להשיבו בעינו, מה שאין כן אם נגנב החפץ, אבד או נשתנה, שאז משיב הגזלן את דמיו.</p>
                     
                 </div>
                 
                 <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">תקנת השבים</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">תקנת השבים</h3>
                     
                 </div>
                 
@@ -1328,49 +1328,49 @@
             
             
             <div id="halacha-5" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ו</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ו</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הגוזל פחות משוה פרוטה אף על פי שעבר אינו בתורת השב גזלה, גזל שלש אגודות שוות שלש פרוטות והוזלו והרי שלשתן שוות שתי פרוטות והחזיר לו שתים חייב להחזיר השלישית הואיל ובתחלה היתה שוה פרוטה, גזל שתים שוות פרוטה והחזיר אחת גזלה אין כאן מצות השב גזלה אין כאן.
                 </div>
                 
 
                 
                 <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השבה בפחות משווה פרוטה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">השבה בפחות משווה פרוטה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>משנה</strong> בבבא קמא (קג.)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר ב<strong>משנה</strong> בבבא קמא (קג.)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הגוזל את חבירו <strong>שוה פרוטה</strong> ונשבע לו יוליכנו אחריו למדי...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הגוזל את חבירו <strong>שוה פרוטה</strong> ונשבע לו יוליכנו אחריו למדי...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">המשנה אמנם מדברת על חיוב השבה מיוחד שיש למי שכפר ממון ונשבע לשקר, אך גם בגזלן שלא נשבע לשקר, חיוב ההשבה הוא רק ביותר מפרוטה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה אמנם מדברת על חיוב השבה מיוחד שיש למי שכפר ממון ונשבע לשקר, אך גם בגזלן שלא נשבע לשקר, חיוב ההשבה הוא רק ביותר מפרוטה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (קה.) מברר <strong>רבא</strong> מה הדין בהשבת פחות משווה פרוטה כאשר בשעת הגזילה היה שווי של פרוטה:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (קה.) מברר <strong>רבא</strong> מה הדין בהשבת פחות משווה פרוטה כאשר בשעת הגזילה היה שווי של פרוטה:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>רבא</strong> גזל שלש אגודות בשלש פרוטות והוזלו ועמדו על שתים אם החזיר לו שתים חייב להחזיר לו אחרת</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבא</strong> גזל שלש אגודות בשלש פרוטות והוזלו ועמדו על שתים אם החזיר לו שתים חייב להחזיר לו אחרת</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, מדובר על גזלן שגזל שלושה חפצים שכל אחד מהם שווה פרוטה. לאחר מכן הוזלו כך שכל אחד מהם אינו שווה אלא שני שלישי הפרוטה, והשיב הגזלן שנים מהםנשאר בידו השלישירבא פוסק שלמרות אינו שווה פרוטה, עדיין יש להשיבו או להשיב את דמיו. רבא מוכיח את דבריו מכך שהגוזל חמץ ועבר עליו הפסח, מחזיר את החמץ לבעליו, למרות שכעת הוא אסור בהנאה ואינו שווה כלום. ומשמע, שאם החמץ כבר אינו בנמצא, מחזיר את דמיו כפי שהיו בשעת הגזילה. כלומר, כיוון שבשעת הגזילה היה החמץ בעל שווי, חייבים להחזירו גם כאשר הוא כבר אינו שווה אפילו פרוטה, וכמו בחמץ, אם הגזילה כבר אינה בנמצא, יש לשלם את דמיה כפי שהיתה שווה בשעת הגזילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר על גזלן שגזל שלושה חפצים שכל אחד מהם שווה פרוטה. לאחר מכן הוזלו כך שכל אחד מהם אינו שווה אלא שני שלישי הפרוטה, והשיב הגזלן שנים מהםנשאר בידו השלישירבא פוסק שלמרות אינו שווה פרוטה, עדיין יש להשיבו או להשיב את דמיו. רבא מוכיח את דבריו מכך שהגוזל חמץ ועבר עליו הפסח, מחזיר את החמץ לבעליו, למרות שכעת הוא אסור בהנאה ואינו שווה כלום. ומשמע, שאם החמץ כבר אינו בנמצא, מחזיר את דמיו כפי שהיו בשעת הגזילה. כלומר, כיוון שבשעת הגזילה היה החמץ בעל שווי, חייבים להחזירו גם כאשר הוא כבר אינו שווה אפילו פרוטה, וכמו בחמץ, אם הגזילה כבר אינה בנמצא, יש לשלם את דמיה כפי שהיתה שווה בשעת הגזילה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מכאן עובר רבא לשאלה קשה יותר-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכאן עובר רבא לשאלה קשה יותר-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>בעי רבא גזל שתי אגודות בפרוטה והחזיר לו אחת מהן מהו</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בעי רבא גזל שתי אגודות בפרוטה והחזיר לו אחת מהן מהו</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מי אמרינן השתא ליכא גזילה או דלמא הא לא הדר גזילה דהואי גביה</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מי אמרינן השתא ליכא גזילה או דלמא הא לא הדר גזילה דהואי גביה</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, כאן גזל בסך הכל פרוטה, אך השיב רק חלק מהגזילה. נשאלת השאלה האם חייב להחזיר את השאר. להבדיל מהמקרה הראשון, כאן השארית שעדיין לא השיב לא היתה שווה פרוטה מעולם. מצד אחד, ניתן לומר, שאין עתה גזילה בשווה פרוטה תחת ידיו. אמנם מצד שני, בסך הכל גזל שווה פרוטה (שתי אגודות), ועדיין לא קיים מצוות השבה בשווה פרוטה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, כאן גזל בסך הכל פרוטה, אך השיב רק חלק מהגזילה. נשאלת השאלה האם חייב להחזיר את השאר. להבדיל מהמקרה הראשון, כאן השארית שעדיין לא השיב לא היתה שווה פרוטה מעולם. מצד אחד, ניתן לומר, שאין עתה גזילה בשווה פרוטה תחת ידיו. אמנם מצד שני, בסך הכל גזל שווה פרוטה (שתי אגודות), ועדיין לא קיים מצוות השבה בשווה פרוטה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">למסקנתו של רבא,</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">למסקנתו של רבא,</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אף על פי שגזילה אין כאן, מצות השבה אין כאן.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אף על פי שגזילה אין כאן, מצות השבה אין כאן.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, הגם שאין גזילה תחת ידו של הגזלן, עדיין אין הדבר נחשב שקיים את מצוות השבת הגזילה, כיוון שמצוות ההשבה אינה רק הוצאת הגזילה מתחת ידי הגזלן, אלא השבה של רכוש ממשי לנגזל<sup id="ref11"><a href="#fn11">[11]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, הגם שאין גזילה תחת ידו של הגזלן, עדיין אין הדבר נחשב שקיים את מצוות השבת הגזילה, כיוון שמצוות ההשבה אינה רק הוצאת הגזילה מתחת ידי הגזלן, אלא השבה של רכוש ממשי לנגזל<sup id="ref11"><a href="#fn11">[11]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">רוב הראשונים מפרשים, שכוונת הדברים היא, שבכדי לצאת ידי שמים, צריך הגזלן להשיב את הנותר, אף שהוא פחות משווה פרוטה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">רוב הראשונים מפרשים, שכוונת הדברים היא, שבכדי לצאת ידי שמים, צריך הגזלן להשיב את הנותר, אף שהוא פחות משווה פרוטה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>טור</strong> (שס) מביא בשם ה<strong>רמ"ה</strong> דעה נוספת והיא שבית הדין כופים את הגזלן להשיב, אך לא מטעם ממון, אלא מדין כפייה לקיים מצוות עשה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> (שס) מביא בשם ה<strong>רמ"ה</strong> דעה נוספת והיא שבית הדין כופים את הגזלן להשיב, אך לא מטעם ממון, אלא מדין כפייה לקיים מצוות עשה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו</strong><strong>"ע</strong> (שס ב-ד)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו</strong><strong>"ע</strong> (שס ב-ד)</p>
                     
                 </div>
                 
@@ -1378,37 +1378,37 @@
             
             
             <div id="halacha-6" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ז</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הגוזל את חבירו בישוב והחזיר לו גזלתו במדבר הרשות ביד הנגזל אם רצה נוטל ואם לאו אומר לו איני נוטל אלא בישוב שמא תאנס ממני כאן והרי היא ברשות הגזלן ובאחריותו עד שיחזירנה לו בישוב וכן בדמי הגזלה.
                 </div>
                 
 
                 
                 <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">השבת הגזילה במדבר ובישוב</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">השבת הגזילה במדבר ובישוב</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ב<strong>משנה</strong> (ב"ק קיח.)</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (ב"ק קיח.)</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הגוזל את חבירו או שהלוה הימנו או שהפקיד לו בישוב לא יחזיר לו במדבר,</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הגוזל את חבירו או שהלוה הימנו או שהפקיד לו בישוב לא יחזיר לו במדבר,</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>על מנת לצאת במדבר יחזיר לו במדבר</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>על מנת לצאת במדבר יחזיר לו במדבר</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, אם הגזל היה בישוב, לא ישיב הגזלן את הגזילה במדבר, שכן במדבר יכולתו של הנגזל לשמור על החפץ קטנה יותר. עוד משמע מהמשנה, שאם הגזילה היתה במדבר, יכול להחזיר לו במדבר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם הגזל היה בישוב, לא ישיב הגזלן את הגזילה במדבר, שכן במדבר יכולתו של הנגזל לשמור על החפץ קטנה יותר. עוד משמע מהמשנה, שאם הגזילה היתה במדבר, יכול להחזיר לו במדבר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מקשה על המשנה מתוך <strong>ברייתא</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מקשה על המשנה מתוך <strong>ברייתא</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מלוה משתלמת בכל מקום אבידה ופקדון אין משתלמין אלא במקומן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מלוה משתלמת בכל מקום אבידה ופקדון אין משתלמין אלא במקומן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ממנה משמע שניתן להשיב לפחות את המלווה, בכל מקום, כולל במדבר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ממנה משמע שניתן להשיב לפחות את המלווה, בכל מקום, כולל במדבר.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>אביי</strong> עונה על ידי ביאור הברייתא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>אביי</strong> עונה על ידי ביאור הברייתא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>אביי</strong> ה"ק מלוה ניתנה ליתבע בכל מקום...</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>אביי</strong> ה"ק מלוה ניתנה ליתבע בכל מקום...</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, המלווה יכול לתבוע את הלווה לשלם לו, בכל מקום בו הם נמצאים, אך אין זה סותר את המשנה שם הלווה רוצה להחזיר במדבר והמלווה רשאי לסרב לקבל. מהברייתא משמע שאם המלווה (ומן הסתם אף הגזלן) חפץ לקבל את החוב (או את הגזילה) במדבר, יכול חבירו לתת לו במדבר ולהיפטר.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, המלווה יכול לתבוע את הלווה לשלם לו, בכל מקום בו הם נמצאים, אך אין זה סותר את המשנה שם הלווה רוצה להחזיר במדבר והמלווה רשאי לסרב לקבל. מהברייתא משמע שאם המלווה (ומן הסתם אף הגזלן) חפץ לקבל את החוב (או את הגזילה) במדבר, יכול חבירו לתת לו במדבר ולהיפטר.</p>
                     
                 </div>
                 
@@ -1416,65 +1416,65 @@
             
             
             <div id="halacha-7" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ח</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הגוזל את חבירו והבליע לו בחשבון יצא, ואם החזיר לכיסו שיש בו מעות יצא שאדם עשוי למשמש בכיסו בכל שעה והרי מנה המעות שהחזיר לו בכלל מעותיו ומנין שלא מדעת פוטר, ואם החזיר לכיס שאין בו כלום לא יצא וחייב באחריות הגזלה עד שיודיעו שהחזיר לכיס פלוני.
                 </div>
                 
 
                 
                 <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">יידוע הנגזל בהשבת הגזילה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">יידוע הנגזל בהשבת הגזילה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>משנה</strong> (ב"ק קיח.) עוסקת בגדר מעשה ההשבה המוציא את הגניבה מכלל אחריותו של הגנב:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>משנה</strong> (ב"ק קיח.) עוסקת בגדר מעשה ההשבה המוציא את הגניבה מכלל אחריותו של הגנב:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הגונב טלה מן העדר והחזירו ומת או נגנב חייב באחריותו</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הגונב טלה מן העדר והחזירו ומת או נגנב חייב באחריותו</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>לא ידעו בעלים לא בגניבתו ולא בחזירתו ומנו את הצאן ושלימה היא פטור</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא ידעו בעלים לא בגניבתו ולא בחזירתו ומנו את הצאן ושלימה היא פטור</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, לעיתים הגנב אינו נפטר מאחריות על הגניבה למרות שהחזיר אותה למקומה, עד שיודיע לבעלים שהחזיר. גם במקרה בו אין צורך בהודעה פורמלית, מצריכה המשנה שימנה בעל הצאן את צאנו וימצא שאינו חסר, בכדי שתחול השבתו של הגנב.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, לעיתים הגנב אינו נפטר מאחריות על הגניבה למרות שהחזיר אותה למקומה, עד שיודיע לבעלים שהחזיר. גם במקרה בו אין צורך בהודעה פורמלית, מצריכה המשנה שימנה בעל הצאן את צאנו וימצא שאינו חסר, בכדי שתחול השבתו של הגנב.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">האמוראים חלקו בהבנת ההבדל בין הרישא לסיפא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">האמוראים חלקו בהבנת ההבדל בין הרישא לסיפא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רב</strong> פירש ש"לדעת- צריך דעת. שלא לדעת- מנין פוטר". כלומר, אם ידע בעל הבית מהגניבה, אין נפטר הגנב עד שיחזירו לו ויודיעו בפירוש. על מקרה שכזה מדברת הרישא. לעומת זאת, אם לא ידע בעל הבית מהגניבה די שימנה את הצאן וימצא שאינו חסר. על מקרה זה דיברה הסיפא.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב</strong> פירש ש"לדעת- צריך דעת. שלא לדעת- מנין פוטר". כלומר, אם ידע בעל הבית מהגניבה, אין נפטר הגנב עד שיחזירו לו ויודיעו בפירוש. על מקרה שכזה מדברת הרישא. לעומת זאת, אם לא ידע בעל הבית מהגניבה די שימנה את הצאן וימצא שאינו חסר. על מקרה זה דיברה הסיפא.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>שמואל</strong> חולק ואומר ש"בין לדעת בין שלא לדעת, מנין פוטר". כלומר, לעולם אם השיב הגנב ולאחר מכן מנה בעל הצאן את צאנו ומצאו שלם, נפטר הגנב מאחריות, בין אם ידע בעל הבית בגניבה ובין אם לא ידע. קביעת המשנה בסיפא, כי מניית הצאן פוטרת את הגנב, מתפרשת כאמורה כלפי כל המשנה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>שמואל</strong> חולק ואומר ש"בין לדעת בין שלא לדעת, מנין פוטר". כלומר, לעולם אם השיב הגנב ולאחר מכן מנה בעל הצאן את צאנו ומצאו שלם, נפטר הגנב מאחריות, בין אם ידע בעל הבית בגניבה ובין אם לא ידע. קביעת המשנה בסיפא, כי מניית הצאן פוטרת את הגנב, מתפרשת כאמורה כלפי כל המשנה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' יוחנן</strong> מקל עוד יותר ואומר ש"לדעת- מנין פוטר. שלא לדעת- אפילו מנין נמי לא צריך". כלומר, לא רק שמניית הצאן על ידי הבעלים לאחר ההחזרה שקולה להודעה מפורשת שהגניבה הוחזרה, אלא שאם כלל לא ידע הבעלים מהגניבה ניתן להסתפק בהחזרה בלבד, ללא מנייה כלל, וכבר הגנב נפטר מאחריות, שהרי החזיר למקום ממנו נטל, והבעלים לא ידעו כלל שנטל<sup id="ref12"><a href="#fn12">[12]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' יוחנן</strong> מקל עוד יותר ואומר ש"לדעת- מנין פוטר. שלא לדעת- אפילו מנין נמי לא צריך". כלומר, לא רק שמניית הצאן על ידי הבעלים לאחר ההחזרה שקולה להודעה מפורשת שהגניבה הוחזרה, אלא שאם כלל לא ידע הבעלים מהגניבה ניתן להסתפק בהחזרה בלבד, ללא מנייה כלל, וכבר הגנב נפטר מאחריות, שהרי החזיר למקום ממנו נטל, והבעלים לא ידעו כלל שנטל<sup id="ref12"><a href="#fn12">[12]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>ר' חסדא</strong> אומר דברי הפוכים לדברי שמואל: "לדעת- מנין פוטר. שלא לדעת- צריך דעת". כלומר, דווקא כאשר לא היה בעל הבית מודע לגניבה, יש יותר צורך להודיעו על ההשבה באופן מפורש. בהמשך (קיח:) מסבירה הגמרא שדברי ר' חסדא מוגבלים לגניבת חיות, שכיוון שהגנב לימדן דרך השונה מכל הצאן, יש להן נטיה גדולה יותר לברוח מעתה, ולכן יש ליידע את בעל הבית בכך בכדי שייזהר לשומרן זהירות יתרה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>ר' חסדא</strong> אומר דברי הפוכים לדברי שמואל: "לדעת- מנין פוטר. שלא לדעת- צריך דעת". כלומר, דווקא כאשר לא היה בעל הבית מודע לגניבה, יש יותר צורך להודיעו על ההשבה באופן מפורש. בהמשך (קיח:) מסבירה הגמרא שדברי ר' חסדא מוגבלים לגניבת חיות, שכיוון שהגנב לימדן דרך השונה מכל הצאן, יש להן נטיה גדולה יותר לברוח מעתה, ולכן יש ליידע את בעל הבית בכך בכדי שייזהר לשומרן זהירות יתרה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong> (קיח. ד"ה "אלא") דן בשאלה העקרונית מה טעם הדרישה ליידע את בעל הבית בהשבת הגזילה, והרי משהשיב את הגזילה למקומה הראשון קיים מצוות השבה. הרשב"א מסביר ש"ידיעת" הבעלים הכוונה שראה במפורש את הגנב בפעולה כך שזהותו ידועה לו. במקרה כזה יש סברה להודיע בפירוש עם השבת הגזילה בכדי שיחדל בעה"ב לחשוד את הגנב. לעומת זאת, המקרה בו "לא ידעו הבעלים בגניבתו" הוא שגילו את הגניבה בספירה<sup id="ref13"><a href="#fn13">[13]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"א</strong> (קיח. ד"ה "אלא") דן בשאלה העקרונית מה טעם הדרישה ליידע את בעל הבית בהשבת הגזילה, והרי משהשיב את הגזילה למקומה הראשון קיים מצוות השבה. הרשב"א מסביר ש"ידיעת" הבעלים הכוונה שראה במפורש את הגנב בפעולה כך שזהותו ידועה לו. במקרה כזה יש סברה להודיע בפירוש עם השבת הגזילה בכדי שיחדל בעה"ב לחשוד את הגנב. לעומת זאת, המקרה בו "לא ידעו הבעלים בגניבתו" הוא שגילו את הגניבה בספירה<sup id="ref13"><a href="#fn13">[13]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מנסה להראות שמחלוקת רב מול שמואל ור' יוחנן היא מחלוקת תנאים, ומביאה שתי ברייתות. הברייתות מדברות על מקרה של אדם שגזל את חבירו, ולימים רצה להשיב לו את המעות אך התבייש ולכן כשקנה ממנו דבר מה הוסיף לו את מעות הגזילה על סכום המיקח. לפי אחת הברייתות יצא הגזלן ידי השבה ולפי השניה לא יצא עד שיודיע לנגזל בפירוש שהשיב לו את הגזילה. הגמרא מניחה שכולם מסכימים שאדם עשוי למנות את הכסף שבכיסו בכל עת, ולכן המחלוקת היא האם די שיווכח הנגזל שכספו הושב לו בעזרת מנייתו, או שיש ליידעו בפירוש, וזו הלא מחלוקת רב מול שמואל ור' יוחנן האם מנייה שקולה ליידוע.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מנסה להראות שמחלוקת רב מול שמואל ור' יוחנן היא מחלוקת תנאים, ומביאה שתי ברייתות. הברייתות מדברות על מקרה של אדם שגזל את חבירו, ולימים רצה להשיב לו את המעות אך התבייש ולכן כשקנה ממנו דבר מה הוסיף לו את מעות הגזילה על סכום המיקח. לפי אחת הברייתות יצא הגזלן ידי השבה ולפי השניה לא יצא עד שיודיע לנגזל בפירוש שהשיב לו את הגזילה. הגמרא מניחה שכולם מסכימים שאדם עשוי למנות את הכסף שבכיסו בכל עת, ולכן המחלוקת היא האם די שיווכח הנגזל שכספו הושב לו בעזרת מנייתו, או שיש ליידעו בפירוש, וזו הלא מחלוקת רב מול שמואל ור' יוחנן האם מנייה שקולה ליידוע.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא דוחה ומסבירה שניתן לפרש ששתי הברייתות סוברות שדי במנייה, וכל מחלוקת הברייתות נסובה על השאלה האם יש להניח שהנגזל מנה את הכסף שבכיסו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא דוחה ומסבירה שניתן לפרש ששתי הברייתות סוברות שדי במנייה, וכל מחלוקת הברייתות נסובה על השאלה האם יש להניח שהנגזל מנה את הכסף שבכיסו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מעלה עוד כמה אפשרויות להסביר שהברייתות בעצם לא חולקות זו על זו אלא מדברות על מקרים שונים:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מעלה עוד כמה אפשרויות להסביר שהברייתות בעצם לא חולקות זו על זו אלא מדברות על מקרים שונים:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>הא דמני ורמא ליה בכיסיה [מונה ומניח לו בכיסו] והא דמני ורמא לידיה [מונה ומניח לו בידו]</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הא דמני ורמא ליה בכיסיה [מונה ומניח לו בכיסו] והא דמני ורמא לידיה [מונה ומניח לו בידו]</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואיבעית אימא [ואם תרצה אמור]  אידי ואידי דמני ורמא בכיסיה הא דאית ליה זוזי אחריני בכיסיה [בזה מדובר שיש לו כסף אחר בכיסו]  הא דלית ליה זוזי אחריני בכיסיה [ובזה מדובר שאין לו כסף אחר בכיסו]</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואיבעית אימא [ואם תרצה אמור]  אידי ואידי דמני ורמא בכיסיה הא דאית ליה זוזי אחריני בכיסיה [בזה מדובר שיש לו כסף אחר בכיסו]  הא דלית ליה זוזי אחריני בכיסיה [ובזה מדובר שאין לו כסף אחר בכיסו]</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו בהבנת שתי הצעות אלה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בהבנת שתי הצעות אלה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי החילוק הראשון, מבאר <strong>רש"י</strong> שאם מנה הגזלן את המעות לתוך ידו של הנגזל, לא יצא ידי חובת השבה, כיוון שיש אפשרות שיניחם הנגזל בתוך תיבה ושם לא ימנם, ולא ידע שהשיב לו. מה שאין כן כאשר שם לו בכיסו בו הוא משתמש תדיר ומונה את מה שבו. כך גם מסביר ה<strong>רא"ש</strong> (סימן לג).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי החילוק הראשון, מבאר <strong>רש"י</strong> שאם מנה הגזלן את המעות לתוך ידו של הנגזל, לא יצא ידי חובת השבה, כיוון שיש אפשרות שיניחם הנגזל בתוך תיבה ושם לא ימנם, ולא ידע שהשיב לו. מה שאין כן כאשר שם לו בכיסו בו הוא משתמש תדיר ומונה את מה שבו. כך גם מסביר ה<strong>רא"ש</strong> (סימן לג).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רשב"א</strong> מסביר באופן דומה אלא שלדעתו אם מונה לו לתוך ידו, מיד משתמש הנגזל בכסף ואינו סופר אותו כלל.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב"א</strong> מסביר באופן דומה אלא שלדעתו אם מונה לו לתוך ידו, מיד משתמש הנגזל בכסף ואינו סופר אותו כלל.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומת דעות אלה, ה<strong>מאירי</strong> מסביר הפוך- שהמונה ליד חברו, בוודאי שסופרו לעיניו תוך כדי מניין, מה שאין כן אם נותנו לתוך כיס, שלעיתים לא ימנה בעל הכיס את המעות שבכיס מעצמו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומת דעות אלה, ה<strong>מאירי</strong> מסביר הפוך- שהמונה ליד חברו, בוודאי שסופרו לעיניו תוך כדי מניין, מה שאין כן אם נותנו לתוך כיס, שלעיתים לא ימנה בעל הכיס את המעות שבכיס מעצמו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לגבי החילוק השני מפרש <strong>רש"י</strong> שאם נתן לתוך כיס וישנם מטבעות אחרים בתוך הכיס, לא ידע הנגזל כמה מטבעות כבר היו שם לפני שנתן שם הגזלן את הכסף, ולכן לא ידע לייחס את הסכום העודף להחזרת הגזילה ולא יצא הגזלן ידי חובת השבה. לעומת זאת, אם בכיס לא היה כסף קודם לכן, ימנה הנגזל את המעות וידע שהשיב לו מעותיו. כך גם מפרשים ה<strong>רא"ש</strong> (שם) וה<strong>מאירי</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לגבי החילוק השני מפרש <strong>רש"י</strong> שאם נתן לתוך כיס וישנם מטבעות אחרים בתוך הכיס, לא ידע הנגזל כמה מטבעות כבר היו שם לפני שנתן שם הגזלן את הכסף, ולכן לא ידע לייחס את הסכום העודף להחזרת הגזילה ולא יצא הגזלן ידי חובת השבה. לעומת זאת, אם בכיס לא היה כסף קודם לכן, ימנה הנגזל את המעות וידע שהשיב לו מעותיו. כך גם מפרשים ה<strong>רא"ש</strong> (שם) וה<strong>מאירי</strong>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רי"ף</strong> וה<strong>רמב"ם</strong> מפרשים הפוך. לדעתם אם היה הכיס ריק לא יצא ידי חובת השבה, כיוון שאין מקבל המעות משתמש בכיס זה ולא ימנה אותן. לעומת זאת, אם היה בכיס כסף הרי שמדובר בכיס שמשתמשים בו תדיר, ולכן ימנה בעל המעות את הכסף וידע שהושבה לו הגזילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רי"ף</strong> וה<strong>רמב"ם</strong> מפרשים הפוך. לדעתם אם היה הכיס ריק לא יצא ידי חובת השבה, כיוון שאין מקבל המעות משתמש בכיס זה ולא ימנה אותן. לעומת זאת, אם היה בכיס כסף הרי שמדובר בכיס שמשתמשים בו תדיר, ולכן ימנה בעל המעות את הכסף וידע שהושבה לו הגזילה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> ()</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> ()</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>גנב לו מעות והבליע לו בחשבון ונתנם לתוך כיסו, אם יודע מנין המעות שלו, יצא, שאדם עשוי למשמש בו בכל שעה והרי מצא שהחזיר לו בכלל מעותיו. אבל אם זרקן לכיסו שאין בו כלום, לא יצא, וחייב באחריות הגזלה עד שיודיענו שהחזיר לכיס פלוני</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>גנב לו מעות והבליע לו בחשבון ונתנם לתוך כיסו, אם יודע מנין המעות שלו, יצא, שאדם עשוי למשמש בו בכל שעה והרי מצא שהחזיר לו בכלל מעותיו. אבל אם זרקן לכיסו שאין בו כלום, לא יצא, וחייב באחריות הגזלה עד שיודיענו שהחזיר לכיס פלוני</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גר"א</strong> מעיר שבדבריו מאחד השו"ע את סברותיהם של רש"י ושל הרמב"ם, שהרי הוא כותב שיצא הגזלן ידי השבה אם נתן לתוך כיס בו יודע הנגזל את מניין המעות (סברת רש"י) ושדרכו למשמש בו כי יש בו כבר כסף (סברת הרמב"ם).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גר"א</strong> מעיר שבדבריו מאחד השו"ע את סברותיהם של רש"י ושל הרמב"ם, שהרי הוא כותב שיצא הגזלן ידי השבה אם נתן לתוך כיס בו יודע הנגזל את מניין המעות (סברת רש"י) ושדרכו למשמש בו כי יש בו כבר כסף (סברת הרמב"ם).</p>
                     
                 </div>
                 
@@ -1482,66 +1482,66 @@
             
             
             <div id="halacha-8" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה ט-יב</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט-יב</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל החומד עבדו או אמתו או ביתו וכליו של חבירו או כל דבר שאפשר לו שיקנהו ממנו והכביד עליו ברעים והפציר בו עד שלקחו ממנו אף על פי שנתן לו דמים רבים הרי זה עובר בלא תעשה שנאמר "לא תחמד" (שמות כ' ט"ז), ואין לוקין על לאו זה מפני שאין בו מעשה, ואינו עובר בלאו זה עד שיקח החפץ שחמד, כענין שנאמר "לא תחמד כסף וזהב עליהם ולקחת לך" (דברים ז' כ"ה) חימוד שיש בו מעשה. כל החומד עבדו או אמתו וכו' אף על פי שנתן לו דמים יקרים. א"א ולא אמר רוצה אני.  ואין לוקין על לאו זה שאין בו מעשה. א"א לא ראיתי דבר תמה גדול מזה והיכן מעשה גדול מנטילת החפץ אבל היה לו לומר מפני שהוא חייב בתשלומין שהרי הוא כגזלן שחייב להשיב את הגזלה ולפיכך אינו לוקה וגם זה חייב להשיב את החפץ לבעליו.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל המתאוה ביתו או אשתו וכליו של חבירו וכל כיוצא בהן משאר דברים שאפשר לו לקנותן ממנו כיון שחשב בלבו היאך יקנה דבר זה ונפתה לבו בדבר עבר בלא תעשה שנאמר "לא תתאוה" (דברים ה' י"ח) ואין תאוה אלא בלב בלבד.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     התאוה מביאה לידי חימוד והחימוד מביא לידי גזל, שאם לא רצו הבעלים למכור אף על פי שהרבה להם בדמים והפציר ברעים יבא לידי גזל שנאמר וחמדו בתים וגזלו, ואם עמדו הבעלים בפניו להציל ממונם או מנעוהו לגזול יבא לידי שפיכות דמים, צא ולמד ממעשה אחאב ונבות.
                 </div>
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     הא למדת שהמתאוה עובר בלאו אחד והקונה דבר שהתאוה בהפצר שהפציר בבעלים או בבקשה מהן עובר בשני לאוין לכך נאמר לא תחמד ולא תתאוה, ואם גזל עבר בשלשה לאוין.
                 </div>
                 
 
                 
                 <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">הגדרת איסור "לא תחמוד"</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הגדרת איסור "לא תחמוד"</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>גמרא</strong> בבבא מציעא (ה:) דנה בשבועה שמשביעים שומר הטוען שהפיקדון אינו ברשותו, במקרה בו הוא ממילא חייב לשלם עליו. הגמרא מקשה- הרי אותו שומר חשוד שעבר על "לא תחמוד", ולכן כיוון שחשוד על כך יש לחושדו שגם נשבע לשקר. הגמרא מתרצת שאנשים, ובכללם אותו שומר, סבורים שעוברים על "לא תחמוד" רק אם לוקחים דבר מה ולא משלמים עליו, אך כאן, כיוון שהשומר יודע שישלם על הפיקדון שהוא אינו מחזיר, חושב הוא שאין עוון "לא תחמוד" בידו אם הוא משקר שהפיקדון אינו ברשותו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> בבבא מציעא (ה:) דנה בשבועה שמשביעים שומר הטוען שהפיקדון אינו ברשותו, במקרה בו הוא ממילא חייב לשלם עליו. הגמרא מקשה- הרי אותו שומר חשוד שעבר על "לא תחמוד", ולכן כיוון שחשוד על כך יש לחושדו שגם נשבע לשקר. הגמרא מתרצת שאנשים, ובכללם אותו שומר, סבורים שעוברים על "לא תחמוד" רק אם לוקחים דבר מה ולא משלמים עליו, אך כאן, כיוון שהשומר יודע שישלם על הפיקדון שהוא אינו מחזיר, חושב הוא שאין עוון "לא תחמוד" בידו אם הוא משקר שהפיקדון אינו ברשותו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מגמרא זו לומדים ה<strong>רמב"ם</strong> וה<strong>ראב"ד</strong>, שהמאפיין את איסור לא תחמוד והמבדילו מגזל רגיל הוא שה"נגזל" מקבל את דמי החפץ.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מגמרא זו לומדים ה<strong>רמב"ם</strong> וה<strong>ראב"ד</strong>, שהמאפיין את איסור לא תחמוד והמבדילו מגזל רגיל הוא שה"נגזל" מקבל את דמי החפץ.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>תוספות</strong> (סנהדרין כה: בתירוץ הראשון) מביעים דעה שונה. התוספות תמהים מדוע מדוע חמסנים, דהיינו אנשים הלוקחים בכח ונותנים את תמורת מה שלקחו, אינם פסולים לעדות מדאורייתא אלא רק מדרבנן, והרי הם עוברים על לא תחמוד! התוספות מתרצים, שכיוון שנתן החמסן דמים, אין כאן לאו דלא תחמוד כלל<sup id="ref14"><a href="#fn14">[14]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (סנהדרין כה: בתירוץ הראשון) מביעים דעה שונה. התוספות תמהים מדוע מדוע חמסנים, דהיינו אנשים הלוקחים בכח ונותנים את תמורת מה שלקחו, אינם פסולים לעדות מדאורייתא אלא רק מדרבנן, והרי הם עוברים על לא תחמוד! התוספות מתרצים, שכיוון שנתן החמסן דמים, אין כאן לאו דלא תחמוד כלל<sup id="ref14"><a href="#fn14">[14]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">גם בקרב הפוסקים המסכימים שאיסור לא תחמוד עוסק בכגון שהחומד נתן דמים עבור החפץ, עדיין קיימת מחלוקת מהותית בהבנת איסור "לא תחמוד":</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">גם בקרב הפוסקים המסכימים שאיסור לא תחמוד עוסק בכגון שהחומד נתן דמים עבור החפץ, עדיין קיימת מחלוקת מהותית בהבנת איסור "לא תחמוד":</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> פוסק, שהחומד הוא אדם המשכנע את חברו למכור לו דבר מה, אף שחברו התרצה לו לבסוף והסכים למכור לו<sup id="ref15"><a href="#fn15">[15]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> פוסק, שהחומד הוא אדם המשכנע את חברו למכור לו דבר מה, אף שחברו התרצה לו לבסוף והסכים למכור לו<sup id="ref15"><a href="#fn15">[15]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">לעומתו, ה<strong>ראב"ד</strong> מבין שדווקא אם לא התרצה בעל החפץ עוברים על לא תחמוד. כלומר, לא תחמוד זהה, עקרונית, לאיסור גזילה, אלא שהגזלן נותן דמים על החפץ שלקח.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>ראב"ד</strong> מבין שדווקא אם לא התרצה בעל החפץ עוברים על לא תחמוד. כלומר, לא תחמוד זהה, עקרונית, לאיסור גזילה, אלא שהגזלן נותן דמים על החפץ שלקח.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בעקבות , מסביר הרמב"ם שאיסור לא תחמוד הוא לאו שאין בו מעשה, שהרי הלאו הוא ההתאמצות לשכנע את החבר למכור לו חפץ שאין רצונו למכור. המעשה של לקיחת החפץ כבר נעשה בהיתר, שהרי אמר המוכר "רוצה אני". הראב"ד, לטעמו, חולק על קביעה זו ואומר שלא תחמוד הוא לאו שיש בו מעשה בדיוק כמו לא תגזול, והוא- לקיחת החפץ.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעקבות , מסביר הרמב"ם שאיסור לא תחמוד הוא לאו שאין בו מעשה, שהרי הלאו הוא ההתאמצות לשכנע את החבר למכור לו חפץ שאין רצונו למכור. המעשה של לקיחת החפץ כבר נעשה בהיתר, שהרי אמר המוכר "רוצה אני". הראב"ד, לטעמו, חולק על קביעה זו ואומר שלא תחמוד הוא לאו שיש בו מעשה בדיוק כמו לא תגזול, והוא- לקיחת החפץ.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ראיה מסויימת לשיטת הרמב"ם ניתן למצוא בדברי ה<strong>מכילתא דרשב"י </strong>(פרק כ), שהם המקור לדברי הרמב"ם בהלכה יא:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראיה מסויימת לשיטת הרמב"ם ניתן למצוא בדברי ה<strong>מכילתא דרשב"י </strong>(פרק כ), שהם המקור לדברי הרמב"ם בהלכה יא:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מנין התאוה אדם סופו לחמוד שנאמר לא תתאוה ולא תחמוד. מנין חמד אדם סופו לגזול שנאמר "וחמדו שדות וגזלו" (מיכה ב ב)</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מנין התאוה אדם סופו לחמוד שנאמר לא תתאוה ולא תחמוד. מנין חמד אדם סופו לגזול שנאמר "וחמדו שדות וגזלו" (מיכה ב ב)</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">על פי הרמב"ם מתפרשת המכילתא באדם אחד שהתאווה לחפץ מסויים, ולאחר מכן חמדו (כלומר, ניסה להפציר בבעלים שימכור לו, ולא הסכימו), ולבסוף גזלו. לעומתו, הראב"ד אינו יכול לפרש שמדובר על אותו חפץ שהרי לא ניתן לחמוד דבר לפי הראב"ד ואז לגוזלו, כיוון שהחומד כבר לקח את החפץ והשאיר דמים תמורתו. לפי הראב"ד יש לדחוק מעט את דברי המכילתא ולהעמידם באדם הרגיל לחמוד דברים רבים, ומתוך כך גם מגיע לגזול (דברים אחרים).</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי הרמב"ם מתפרשת המכילתא באדם אחד שהתאווה לחפץ מסויים, ולאחר מכן חמדו (כלומר, ניסה להפציר בבעלים שימכור לו, ולא הסכימו), ולבסוף גזלו. לעומתו, הראב"ד אינו יכול לפרש שמדובר על אותו חפץ שהרי לא ניתן לחמוד דבר לפי הראב"ד ואז לגוזלו, כיוון שהחומד כבר לקח את החפץ והשאיר דמים תמורתו. לפי הראב"ד יש לדחוק מעט את דברי המכילתא ולהעמידם באדם הרגיל לחמוד דברים רבים, ומתוך כך גם מגיע לגזול (דברים אחרים).</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שנט י-יב) מעתיק את לשון הרמב"ם להלכה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שנט י-יב) מעתיק את לשון הרמב"ם להלכה.</p>
                     
                 </div>
                 
                 <div id="topic-8-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">לא תחמוד מול לא תתאווה</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">לא תחמוד מול לא תתאווה</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">נאמר ב<strong>מכילתא דרשב"י</strong> (שם בהמשך):</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">נאמר ב<strong>מכילתא דרשב"י</strong> (שם בהמשך):</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>איזו היא תאוה? האומר לויי [=הלוואי] ש... . חמדה- הכובש כבושין ליטלן</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איזו היא תאוה? האומר לויי [=הלוואי] ש... . חמדה- הכובש כבושין ליטלן</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">מדברים אלה למד הרמב"ם, שאיסור לא תתאווה הוא במחשבה בלבד, לעומת לא תחמוד שהוא יישום של המחשבה. בעקבות כך מונה הרמב"ם (ספר המצוות ל"ת רסה-רסו) את מצות "לא תחמוד" ו"לא תתאווה" כשתי מצוות ל"ת שונות.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברים אלה למד הרמב"ם, שאיסור לא תתאווה הוא במחשבה בלבד, לעומת לא תחמוד שהוא יישום של המחשבה. בעקבות כך מונה הרמב"ם (ספר המצוות ל"ת רסה-רסו) את מצות "לא תחמוד" ו"לא תתאווה" כשתי מצוות ל"ת שונות.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">אחרת כותב ה<strong>יראים</strong> (קטו). לדעתו לא תחמוד ולא תתאווה הם שני שמות למעשה אחד וללאו אחד.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אחרת כותב ה<strong>יראים</strong> (קטו). לדעתו לא תחמוד ולא תתאווה הם שני שמות למעשה אחד וללאו אחד.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שם) פוסק כרמב"ם.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שם) פוסק כרמב"ם.</p>
                     
                 </div>
                 
@@ -1549,58 +1549,58 @@
             
             
             <div id="halacha-9" class="mb-12 pt-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2">הלכה יג</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יג</h2>
 
                 
-                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400">
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
                     כל הגוזל את חבירו שוה פרוטה כאילו נוטל נשמתו ממנו שנאמר "כן ארחות כל בוצע בצע את נפש בעליו יקח" (משלי א' י"ט), ואעפ"כ אם לא היתה הגזלה קיימת ורצה הגזלן לעשות תשובה ובא מאליו והחזיר דמי הגזלה, תקנת חכמים היא שאין מקבלין ממנו אלא עוזרין אותו ומוחלין לו כדי לקרב הדרך הישרה על השבים, וכל המקבל ממנו דמי הגזלה אין רוח חכמים נוחה הימנו.
                 </div>
                 
 
                 
                 <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">חומרת איסור הגזל</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">חומרת איסור הגזל</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בגמרא (ב"ק קיט.) מדבר <strong>ר' יוחנן</strong> בחומרת איסור הגזל</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (ב"ק קיט.) מדבר <strong>ר' יוחנן</strong> בחומרת איסור הגזל</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>אמר <strong>ר' </strong><strong>יוחנן</strong> כל הגוזל את חבירו שוה פרוטה כאילו נוטל נשמתו ממנו שנאמר "כן ארחות כל בוצע בצע את נפש בעליו יקח" (משלי א יט),</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>ר' </strong><strong>יוחנן</strong> כל הגוזל את חבירו שוה פרוטה כאילו נוטל נשמתו ממנו שנאמר "כן ארחות כל בוצע בצע את נפש בעליו יקח" (משלי א יט),</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואומר "ואכל קצירך ולחמך, [יאכלו] בניך ובנותיך" (ירמיהו ה יז),</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואומר "ואכל קצירך ולחמך, [יאכלו] בניך ובנותיך" (ירמיהו ה יז),</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואומר "[מצרים לשממה תהיה ואדום למדבר שממה תהיה] מחמס בני יהודה אשר שפכו דם נקי בארצם" (יואל ד יט),</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואומר "[מצרים לשממה תהיה ואדום למדבר שממה תהיה] מחמס בני יהודה אשר שפכו דם נקי בארצם" (יואל ד יט),</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>ואומר "אל שאול ואל בית הדמים על אשר המית את הגבעונים" (שמואל ב' כא א).</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ואומר "אל שאול ואל בית הדמים על אשר המית את הגבעונים" (שמואל ב' כא א).</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא מסבירה שהפסוק מירמיהו מלמד שהגוזל את חבירו לא רק שדומה כאילו נוטל נפשו, אלא כאילו נוטל את נפש בניו ובנותיו (שאין לו במה לפרנסם). הפסוק מיואל מלמד שאפילו אם נותן הגזלן דמים והרי הוא חמסן, גם כן נחשב כשופך דמים. הפסוק משמואל ב' מלמד שנחשב הגזלן כנוטל נפשות אפילו אם הגזל נגרם בגרמא<sup id="ref16"><a href="#fn16">[16]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מסבירה שהפסוק מירמיהו מלמד שהגוזל את חבירו לא רק שדומה כאילו נוטל נפשו, אלא כאילו נוטל את נפש בניו ובנותיו (שאין לו במה לפרנסם). הפסוק מיואל מלמד שאפילו אם נותן הגזלן דמים והרי הוא חמסן, גם כן נחשב כשופך דמים. הפסוק משמואל ב' מלמד שנחשב הגזלן כנוטל נפשות אפילו אם הגזל נגרם בגרמא<sup id="ref16"><a href="#fn16">[16]</a></sup>.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רמב"ם</strong> מביא רק את דרשתו הראשונה של <strong>ר' יוחנן</strong>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב"ם</strong> מביא רק את דרשתו הראשונה של <strong>ר' יוחנן</strong>.</p>
                     
                 </div>
                 
                 <div id="topic-9-2" class="mt-8 pr-2 md:pr-8 pt-2">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700">קבלת דמי הגזילה מהגזלן</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">קבלת דמי הגזילה מהגזלן</h3>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הגמרא (ב"ק צד:) מביאה <strong>ברייתא</strong> המיוחסת לתקופת <strong>רבי</strong>:</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (ב"ק צד:) מביאה <strong>ברייתא</strong> המיוחסת לתקופת <strong>רבי</strong>:</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>מעשה באדם אחד שבקש לעשות תשובה. אמרה לו אשתו ריקה, אם אתה עושה תשובה אפילו אבנט אינו שלך! ונמנע ולא עשה תשובה.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מעשה באדם אחד שבקש לעשות תשובה. אמרה לו אשתו ריקה, אם אתה עושה תשובה אפילו אבנט אינו שלך! ונמנע ולא עשה תשובה.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><blockquote>באותה שעה אמרו הגזלנין ומלוי רביות שהחזירו אין מקבלין מהם והמקבל מהם אין רוח חכמים נוחה הימנו.</blockquote></p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>באותה שעה אמרו הגזלנין ומלוי רביות שהחזירו אין מקבלין מהם והמקבל מהם אין רוח חכמים נוחה הימנו.</blockquote></p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">כלומר, בכדי להקל על גזלנים לחזור בתשובה תקנו שאין מקבלים מהם את הגזילה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, בכדי להקל על גזלנים לחזור בתשובה תקנו שאין מקבלים מהם את הגזילה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">בהמשך מובאים דברי <strong>ר</strong><strong>ב</strong><strong> נחמן</strong>, המפרש שתקנתו של רבי היתה רק על גזילה שכבר אינה קיימת בעינה, אך אם הגזילה עדיין קיימת ביד הגזלן, מקבלים אותה הימנו (אלא אם כן יש קושי מיוחד בהשבתה, כפי שמבואר לעיל בהלכה ו' לגבי "תקנת השבים").</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהמשך מובאים דברי <strong>ר</strong><strong>ב</strong><strong> נחמן</strong>, המפרש שתקנתו של רבי היתה רק על גזילה שכבר אינה קיימת בעינה, אך אם הגזילה עדיין קיימת ביד הגזלן, מקבלים אותה הימנו (אלא אם כן יש קושי מיוחד בהשבתה, כפי שמבואר לעיל בהלכה ו' לגבי "תקנת השבים").</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רש"י</strong> (ד"ה "אין רוח חכמים") מפרש, שהמקבל מהגזלן "אין רוח חכמה וחסידות בקרבו". מביטוי זה משמע שלדעתו זוהי מידת חסידות שלא לקבל מגזלן המשיב את הגזילה, ומעיקר הדין מותר לקבל ממנו.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש"י</strong> (ד"ה "אין רוח חכמים") מפרש, שהמקבל מהגזלן "אין רוח חכמה וחסידות בקרבו". מביטוי זה משמע שלדעתו זוהי מידת חסידות שלא לקבל מגזלן המשיב את הגזילה, ומעיקר הדין מותר לקבל ממנו.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">הראשונים חלקו לגבי פשר הלשון "אין מקבלים מהם", ולגבי גדר תקנתו של רבי-</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו לגבי פשר הלשון "אין מקבלים מהם", ולגבי גדר תקנתו של רבי-</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700"><strong>רבינו תם</strong> (תוד"ה "בימי") תוהה כיצד עומדת תקנת רבי מול הידוע לנו שבתי דין בכל הזמנים וגם לאחר רבי היו דנים בדיני גזילות וגובים מגזלנים. מתוך כך מסביר רבינו תם שהתקנה היתה תקנה זמנית שיועדה רק לזמנו של רבי.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבינו תם</strong> (תוד"ה "בימי") תוהה כיצד עומדת תקנת רבי מול הידוע לנו שבתי דין בכל הזמנים וגם לאחר רבי היו דנים בדיני גזילות וגובים מגזלנים. מתוך כך מסביר רבינו תם שהתקנה היתה תקנה זמנית שיועדה רק לזמנו של רבי.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>ר"י</strong> (שם בתוספות) שותף לתמיהתו של רבינו תם, ומסביר שהתקנה היא אכן לדורות, אך היא תוקנה רק לגבי אנשים שרוב עסקיהם בגזל ובריבית, שכן רק אנשים כאלה יצטרכו להחזיר את כל רכושם כשיבואו לעשות תשובה.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ר"י</strong> (שם בתוספות) שותף לתמיהתו של רבינו תם, ומסביר שהתקנה היא אכן לדורות, אך היא תוקנה רק לגבי אנשים שרוב עסקיהם בגזל ובריבית, שכן רק אנשים כאלה יצטרכו להחזיר את כל רכושם כשיבואו לעשות תשובה.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>רא"ש</strong> (סימן ב) בתירוצו הראשון מסביר שהתקנה אמורה רק לגבי גזלנים שבאים מאליהם ורוצים לעשות תשובה, אך אם הגזלן עומד במרדו והנגזל תובעו בבית דין, אין נמנעים מלכוף את הגזלן לשלם. כך גם משמע מלשון ה<strong>רמב"ם</strong> שלפנינו<sup id="ref17"><a href="#fn17">[17]</a></sup>. בתירוצו השני כותב הרא"ש כדברי הר"י.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא"ש</strong> (סימן ב) בתירוצו הראשון מסביר שהתקנה אמורה רק לגבי גזלנים שבאים מאליהם ורוצים לעשות תשובה, אך אם הגזלן עומד במרדו והנגזל תובעו בבית דין, אין נמנעים מלכוף את הגזלן לשלם. כך גם משמע מלשון ה<strong>רמב"ם</strong> שלפנינו<sup id="ref17"><a href="#fn17">[17]</a></sup>. בתירוצו השני כותב הרא"ש כדברי הר"י.</p>
                     
-                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700">ה<strong>שו"ע</strong> (שסו א) מצרף את דעת הרי"ף עם דעתם של הרמב"ם והרא"ש, וכותב שאין מקבלים מהגזלן דווקא אם בא מאליו ודווקא שמדובר באדם שהוא גזלן מפורסם שרוב עסקיו בגזל. עוד פוסק השו"ע שאם התעקש הגזלן להחזיר כדי לצאת ידי שמים, אין מוחין ביד הנגזל מלקבלו<sup id="ref18"><a href="#fn18">[18]</a></sup>.</p>
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו"ע</strong> (שסו א) מצרף את דעת הרי"ף עם דעתם של הרמב"ם והרא"ש, וכותב שאין מקבלים מהגזלן דווקא אם בא מאליו ודווקא שמדובר באדם שהוא גזלן מפורסם שרוב עסקיו בגזל. עוד פוסק השו"ע שאם התעקש הגזלן להחזיר כדי לצאת ידי שמים, אין מוחין ביד הנגזל מלקבלו<sup id="ref18"><a href="#fn18">[18]</a></sup>.</p>
                     
                 </div>
                 
@@ -1608,7 +1608,7 @@
             
 
             
-            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
                 <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
                 <ol class="list-none p-0 text-sm md:text-base text-gray-600">
                     
@@ -1722,6 +1722,18 @@
                 toggleSidebar();
             }
         }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>
