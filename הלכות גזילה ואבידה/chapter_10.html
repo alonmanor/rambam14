@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הלכות גזילה ואבידה - פרק י | הלכה ממקורה</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            overflow-x: hidden;
+        }
+        strong { font-weight: 700; color: #1a202c; }
+        blockquote { border-right: 4px solid #3182ce; padding-right: 1rem; margin: 1rem 0; color: #2b6cb0; background-color: #ebf8ff; padding: 10px; border-radius: 0.25rem; }
+        sup { color: #2b6cb0; font-weight: bold; margin-right: 2px; }
+        
+        /* הגדרת מרווח קפיצה גלובלי לכל הקישורים הפנימיים */
+        :target {
+            scroll-margin-top: 100px;
+        }
+
+        .footnote-link:target { background-color: #fefcbf; transition: background-color 0.5s; }
+        html { scroll-behavior: smooth; }
+        
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 10px; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <header id="mobile-header" class="md:hidden bg-blue-900 text-white flex justify-between items-center p-4 shadow-md sticky top-0 z-50">
+        <div class="font-bold truncate w-3/4">הלכות גזילה ואבידה - פרק י</div>
+        <button onclick="toggleSidebar()" class="focus:outline-none p-1 bg-blue-800 rounded">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden md:hidden transition-opacity" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 transform translate-x-full md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-l border-gray-200 h-full flex flex-col shadow-2xl md:shadow-lg z-[70]">
+        
+        <div class="flex justify-between items-center bg-blue-900 text-white p-4 shadow-md">
+            <a href="../index.html" class="font-bold text-xl hover:text-blue-200 transition">
+                🏠 הלכה ממקורה
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden focus:outline-none text-white hover:text-red-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex bg-blue-800 text-white text-sm">
+            <a href="../about.html" class="flex-1 text-center py-2 hover:bg-blue-700 transition border-l border-blue-700">אודות</a>
+            <a href="mailto:alon.manor@gmail.com?subject=פניה מהאתר - פרויקט הרמבם" class="flex-1 text-center py-2 hover:bg-blue-700 transition">צור קשר</a>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto sidebar-scroll p-4 text-right">
+            <div class="mb-8 bg-blue-50 p-3 rounded-lg border border-blue-100">
+                <h3 class="text-sm font-bold text-blue-800 uppercase tracking-wider mb-3">בפרק זה (פרק י)</h3>
+                <ul class="space-y-3">
+                    
+                    
+                    <li>
+                        <a href="#halacha-1" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה א-ג
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-1-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    סיקריקון שגזל קרקע מיהודי ומכרה ליהודי אחר
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-1-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    "הבא מחמת חוב ומחמת אנפרות"- גוי שאינו סיקריקון, שאנס קרקע מישראל
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-2" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ד
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-2-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    היורד לשדה חבירו שלא ברשות ונטעה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-3" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ה-ו
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-3-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    ביטול השבח והשבת המצב לקדמותו מצד המשביח- "הריני נוטל עצי ואבני"
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-3-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    ביטול השבח והשבת המצב לקדמותו מצד בעל הקרקע- "טול עציך ואבניך"
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-4" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ז
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-4-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    היורד לשדה חבירו ברשות
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#topic-4-2" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הנחשבים כיורדים ברשות אף שלא קיבלו רשות מפורשת
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-5" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ח
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-5-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    בעל קרקע המראה את רצונו בשבח על ידי מעשה
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-6" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה ט
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-6-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    הבונה בחורבתו של חבירו שלא ברשות
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-7" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה י
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-7-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    אומד סכום ההוצאות שהוציא המשביח
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-8" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יא
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-8-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    בעל השדה אומר "נתתי" והמשביח אומר "לא נטלתי"
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#halacha-9" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">
+                            הלכה יב
+                        </a>
+                        
+                        <ul class="pr-4 mt-1 space-y-1 border-r-2 border-blue-200">
+                            
+                            <li>
+                                <a href="#topic-9-1" onclick="closeSidebarOnMobile()" class="text-gray-600 hover:text-blue-600 block text-xs py-1 transition">
+                                    בעל שהוריד אריסים בנכסי אשתו, כיצד שמים להם
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="pt-2 mt-2 border-t border-blue-200">
+                        <a href="#footnotes-section" onclick="closeSidebarOnMobile()" class="font-bold text-gray-800 hover:text-blue-700 block transition text-sm">הערות שוליים</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">כל ההלכות</h3>
+                <ul class="space-y-2">
+                    
+                    <li>
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גזילה ואבידה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_10.html" 
+                                       class="text-sm block py-1 font-bold text-blue-700 bg-blue-50 rounded px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גזילה ואבידה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות גניבה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות גניבה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות חובל ומזיק</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות חובל ומזיק/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות מלוה ולוה</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_15.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_16.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק טז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_17.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_18.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_19.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_20.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_21.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_22.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_23.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_24.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_25.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_26.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות מלוה ולוה/chapter_27.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק כז
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות נזקי ממון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות נזקי ממון/chapter_14.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יד
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות רוצח ושמירת הנפש</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח'
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות רוצח ושמירת הנפש/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שאלה ופיקדון</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שאלה ופיקדון/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <details class="group" >
+                            <summary class="flex justify-between items-center font-bold text-gray-700 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                                <span>הלכות שכירות</span>
+                                <span class="transition group-open:rotate-90">▼</span>
+                            </summary>
+                            <ul class="pr-3 pb-2 border-r-2 border-gray-200 space-y-1 mt-1">
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_1.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק א
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_2.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_3.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ג
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_4.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ד
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_5.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_6.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ו
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_7.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ז
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_8.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ח
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_9.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק ט
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_10.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק י
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_11.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יא
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_12.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יב
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../הלכות שכירות/chapter_13.html" 
+                                       class="text-sm block py-1 text-gray-600 hover:text-blue-600 px-2">
+                                        פרק יג
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </details>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-xl rounded-lg border-t-4 border-blue-600">
+            
+            <div class="text-center mb-8">
+                <span class="text-gray-500 font-bold tracking-widest text-sm uppercase">הלכות גזילה ואבידה</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 text-blue-900">פרק י</h1>
+            </div>
+
+            
+
+            
+            
+            <div id="halacha-1" class="mb-12 pt-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה א-ג</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    גוי בעל זרוע שאנס נכסי ישראל וירד לתוך שדהו מחמת שהיה לו חוב על בעל השדה או מחמת שיש לו נזק ביד זה הישראלי או מחמת שהפסיד ממונו ואחר שתקף על השדה מכרה לישראל אחר אין הבעלים יכולין להוציא מיד הלוקח.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    במה דברים אמורים בשהודו הבעלים שאמת טען הגוי המוכר או יעידו עדי ישראל שאמת טען הגוי המוכר, וכן אם היה שם מלך או שר באותו מקום שיכול לכוף את הגוי שמכר לדין ולא תבעו הבעלים את הגוי אינן יכולין להוציא מיד הלוקח מן הגוי אף על פי שאינן מודין לגוי ואף על פי שאין שם עדים שאמת טען הגוי שהרי הלוקח אומר לבעלים אם גזלן הוא הגוי למה לא תבעתם אותו בדיניהם.  גוי בעל זרוע וכו' בד"א בשהודו הבעלים וכו'. א"א זה המחבר היפך וערבב התחיל בכאן בשמעתא דגיטין (נח) הבא מחמת חוב ומחמת אנפרות ולא השלים ותפס דרך אחרת שלא היתה צריכה ואח"כ חזר לסוף אותה השמועה דאמרינן אין אנפרות בבבל ואילו השלים אותה כמו שהיא באותה השמועה היה טוב ויפה והיה אדם למד מדבריו מה שאמרו הבא מחמת חוב ומחמת אנפרות אין בו משום סיקריקון שמשתבשין בה בני אדם בפירושה והוא רוצה לומר משום תקנת סיקריקון כלומר שלעולם אינו נקנה אפילו לאחר תקנת רבי שמאחר שאינו גזלן מפורסם אינה משתקעת בידו ולבסוף שידונו הבעלים עמו.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    הגוים המציקים לישראל ומבקשים להרוג אותו עד שיפדה עצמו מיד הגוי בשדהו או בביתו ויתננה למציק ואחר כך יניחנו, כשירצה המציק למכור אותה הקרקע אם יש ביד הבעלים ליקח מן המציק הן קודמין לכל אדם, ואם אין ביד הבעלים ליקח או ששהת הקרקע ביד המציק שנים עשר חדש כל הקודם ולקח מן המציק זכה ובלבד שיתן לבעלים הראשונים רביע הקרקע או שליש המעות מפני שזה המציק מוכר בזול הואיל וקרקע שאינה שלו הוא מוכר הרי זה מוכר בפחות רביע או קרוב לו וזה הרביע של בעלים שהרי מחמת שהיא שלהן מוכר בזול. לפיכך הלוקח מן המציק בשלשים נותן לבעלים עשרה או נותן להם רביע הקרקע ואחר כך יקנה הכל, ואם לא נתן הרי רביע הקרקע כגזל בידו.
+                </div>
+                
+
+                
+                <div id="topic-1-1" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">סיקריקון שגזל קרקע מיהודי ומכרה ליהודי אחר</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ב<strong>משנה</strong> (גיטין נה:):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לא היה סיקריקון ביהודה בהרוגי מלחמה, מהרוגי המלחמה ואילך יש בה סיקריקון.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כיצד?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לקח מסיקריקון וחזר ולקח מבעל הבית - מקחו בטל, מבעל הבית וחזר ולקח מסיקריקון - מקחו קיים... זו משנה ראשונה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ב"ד של אחריהם אמרו: הלוקח מסיקריקון נותן לבעלים רביע; אימתי? בזמן שאין בידן ליקח, אבל יש בידן ליקח - הן קודמין לכל אדם.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>רבי הושיב בית דין ונמנו, שאם שהתה בפני סיקריקון שנים עשר חדש - כל הקודם ליקח זכה, אבל נותן לבעלים רביע.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כמבואר בפרק הקודם, "סיקריקון" הוא גוי אנס הנוטל שדה מבעליה באיומי רצח. מהמשנה משמע שקיימת נקודת זמן אליה מתייחסת המשנה כ"הרוגי מלחמה", לפניה, ביהודה, "לא היה סיקריקון", ואחריה "יש בה סיקריקון". לאחר מכן מתארת המשנה שלושה שלבים הלכתיים-כרונולוגיים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בשלב הראשון, המכונה "משנה ראשונה", הלוקח מסיקריקון מקחו בטל, שכן הסיקריקון לא קנה את השדה אלא אנס את בעליה לעוזבה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בשלב השני ("בית דין של אחריהן אמרו...") תקנו חכמים שהלוקח מסיקריקון מקחו קיים, אלא שכיוון שהסיקריקון מוכר בזול, חייב הקונה ממנו לתת לבעלים רביע משווי העיסקה, בכדי שלא יצא נשכר על חשבון הבעלים. כמו כן, אם יש אפשרות לבעלים עצמו לפדות את שדהו מיד הסיקריקון, הוא קודם בקניין לכל אדם.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בשלב השלישי תיקן רבי שאם שהתה הקרקע ביד הסיקריקון שנה, כל הקודם לקנותה ממנו זכה, ובלבד שישלם רביע לבעלים, כמבואר בדין שלעיל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא מסבירה שהכוונה "לא היה סיקריקון" הכוונה שלא היה <strong>דין</strong> סיקריקון, כש"דין סיקריקון" הכוונה לדין על פיו הקונה מסיקריקון מקחו בטל. במילים אחרות, הגמרא מסבירה שמדובר בפועל בארבעה שלבים, כאשר <strong>לפני</strong> השלושה המפורטים לעיל, נוסף שלב שאינו מפורש במשנה, בו מפאת גזירת ההריגה שנגזרה על ישראל בארץ, היה דמם של ישראל הפקר, ולכן ישראל שהיה מקנה את שדהו לסיקריקון בכדי שלא יהרגהו היה גומר בליבו להקנות לו, והקונה מאותו סיקריקון מקחו היה קיים. מאוחר יותר, כששככה גזירת ההרג, לא היו בעלי השדות מקנים בלב שלם לאנסים, כיוון שהיו אומרים בליבם שבמהרה יקבלו עליהם לבית דין<sup id="ref174"><a href="#fn174">[174]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב</strong><strong>"א </strong>ועוד ראשונים מקשה על ביאור הגמרא- כיצד ניתן לומר שבשלב של "לפני המלחמה", היו הנגזלים מקנים את השדה בלב שלם לסיקריקון מחמת אימת המוות שעליהם, והרי כלל הוא בידינו, שהגם ש"תליוהו וזבין זביניה זביני", "תלויוהו ו<strong>יהיב</strong> לאו זביניה זביני" (עי' בסוף הפרק הקודם). במילים אחרות, להלכה אנו פוסקים שמי שאנסוהו למכור ונתנו לו דמים, מה שעשה עשוי, אך מי שאנסו לתת במתנה <strong>אין</strong> מתנתו מתנה! וכיצד זה קנה כאן הסיקריקון, אף שלא נתן דמים? הרשב"א עונה שכיוון שמדובר כאן במציאות בה הופקרו ישראל להריגה הרי שהבעלים דווקא מקבל תמורה לשדה- את חייו כשלל, ותמורה זו חשובה כדמים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בראשונים ניתן למצוא דעות שונות ביחס לשאלה מה המוטיבציה שהביאה את חז"ל (בשלב של "בית דין של אחריהם") לקיים את מכרו של הסיקריקון-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא</strong><strong>"ש</strong> (פרק חזקת הבתים סי' מא) וה<strong>תוספות</strong> (מד. ד"ה "דווקא") המפרשים שקרקע נקנית לגוזלה ביאוש בעלים (עי' בדברינו, הלכה ג בפרק הקודם), מפרשים בפשטות, שכיוון שלהוציא קרקע מיד הסיקריקון הוא דבר קשה ביותר, כיוון שהוא כרוך בסכנת חיים, מתיאשים הבעלים, ועם מכירתה של השדה על ידי הסיקריקון פוקעת בעלותם על ידי יאוש ושינוי רשות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מפרשים אחרים, הפוסקים שיאוש בעלים אינו מפקיע קרקע מיד בעליה, נדרשו להסברים אחרים:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש</strong><strong>"י</strong> (נח: ד"ה "אין בו") כותב שלמרות ששככה גזירת ההריגה, עדיין שיערו חכמים שבמידה מסויימת בעל הבית גמר בליבו להקנות את הקרקע לסיקריקון מתוך אימתו שמא יהרגו. על רקע זה תיקנו חכמים שהקונה מהסיקריקון מכרו קיים אך בכל אופן ישלם רביע לבעלים, בכדי שלא ירוויח על גבם<sup id="ref175"><a href="#fn175">[175]</a></sup>. רבי, מתוך מגמה להגן על הבעלים, קבע שיש סברה שהבעלים הקנו לסיקריקון לגמרי רק כאשר חולפת שנה, ועדיין הוא אינו מנסה להוציא מידם<sup id="ref176"><a href="#fn176">[176]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> (נה: ד"ה "ונשוב", בסוף דבריו) כותב שמגמת התקנה היתה מתוך שראו חז"ל שמרבים הגויים לגזול קרקע מיהודים, והבעלים נמנעים מלקנותה (מחוסר ממון או מחשש לחייהם), ויהודים אחרים אף הם נמנעים מלקנותה (כי חוששים שיבואו הבעלים הראשונים ויגבו מהם). המצב שנוצר הוא כזה שהארץ מנושלת בהדרגה מידיהם של ישראל. לכן תיקנו חכמים שהקונה מסיקריקון אין מוציאים מידו, ובלבד שלבעלים הראשונים תהיה זכות קדימה בקניית הקרקע מיד הסיקריקון, ואם לא קנו הם, לפחות שישלם להם הקונה רביע, בכדי שלא ירוויח על גבם. רבי המשיך באותה המגמה, ומתוך שראה שישראל ממשיכים להימנע מלקנות מיד הסיקריקון, כיוון שחוששים שיבואו הבעלים ויטענו שהיה בידם לפדות והיתה להם זכות קדימה, תיקן שזכות הקדימה של הבעלים לפדות (אם יש להם די כסף) תקפה לשנה בלבד<sup id="ref177"><a href="#fn177">[177]</a></sup>. על פי דרך זו מציין המאירי שהיו מן הגאונים שסברו שהתקנה מוגבלת לארץ ישראל בלבד, שם יש אינטרס הלכתי, מצד מצוות יישוב הארץ, שהקרקעות תהיינה בחזקת יהודים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במקביל, חלקו הראשונים בשאלה מה היחס בין תקנתו של רבי (שהקציבה שנה לבעלים לשוב ולקנות את שדהו מיד הסיקריקון) לבין תקנת "בית דין שלאחריהם" שקבעו שמה שמכר הסיקריקון מכור, ושיש זכות קדימה לבעלים הראשונים לקנות ממנו-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>טור</strong> (רלו) אינו מחלק בין מקרה בו יש בידו של הבעלים הראשונים לפדות את השדה לבין מקרה בו אין בידו, ומשמע מדבריו שלדעתו מה שחידש רבי ביטל את דברי התקנה שלפניו לפיה הבעלים הראשונים, אם "יש בידם ליקח, הם קודמים לכל אדם". הטור אף כותב שבתוך השנה אותה הקציב רבי לבעלים לקנות, תקפים דברי ה"משנה ראשונה", לפיה הקונה מהסיקריקון מכרו בטל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעומתו, ה<strong>רמב</strong><strong>"ם</strong> לא כתב כלל את דין "משנה ראשונה". כמו כן הרמב"ם כותב שאף לאחר תקנת רבי, אם אין ביד הבעלים בכדי לפדות את השדה, מה שמכר הסיקריקון לאחר מכור אף בתוך שנה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גר</strong><strong>"א</strong> (רלו ס"ק א) מצביע על מחלוקת זו ומעיר שהיא נובעת מהמחלוקת הבסיסית בהבנת מגמת התקנות המוזכרות במשנה- דעת הרמב"ם קרובה לדעת המאירי שהוזכרה לעיל, שמגמת התקנות היא שלא תילקח קרקע באופן קבוע מיד ישראל ליד הגויים<sup id="ref178"><a href="#fn178">[178]</a></sup>. לכן, אם אין ביד הבעלים לפדות, או שיש בידם אך כבר התמהמהו במשך שנה, בכדי לעודד אחרים לפדות מיד הסיקריקון, תיקנו שמה שמכר מכור. לעומת זאת, דעת הטור קרובה לדעת רש"י, לפיו התקנה היא לטובת הבעלים, ונותנת להם שנה בה יש להם זכות קדימה לקנות. מכיוון שרק כעבור שנה קיימא לן שהבעלים התייאשו סופית והקנו בליבם לסיקריקון, הרי שיהודי אחר הקונה מהסיקריקון לפני שעובר זמן זה, מקחו בטל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (נח:) חלקו האמוראים בשיעור ה"רביע" האמור במשנה-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב</strong> אומר שכאשר הסיקריקון מוכר את הקרקע, הוא מוזיל בחמישית משוויה. למשל, אם שווי הקרקע 100, מוכר אותה הסיקריקון ב 80. לכן חייב הקונה מהסיקריקון, לאחר תקנת רבי, לתת לבעלים הראשון את ה 20 שחסך "על גבו" (רבע מסכום העיסקה), או חמישית מהשדה. לפי שיטה זו, ה"רביע" שבמשנה מתייחס לסכום העיסקה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>שמואל</strong> חולק על רב וטוען שהסיקריקון מוזיל ברבע משווי הקרקע. כלומר, אם שווי הקרקע 100, מוכר אותה הסיקריקון ב 75. לכן, צריך הלוקח מהסיקריקון לתת לבעלים המקורי 25 (שליש משווי העיסקה) או רבע מהקרקע. על פי דרך זו, ה"רביע" במשנה מתייחס לקרקע עצמה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">במחלוקת זו פסקו רוב הראשונים כשמואל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו</strong><strong>"ע</strong> (רלו א) כתב את דברי הרמב"ם, שאם אין ביד הבעלים לפדות, מכרו של הסיקריקון קיים אפילו בתוך שנה, אך בהמשך (שם ס"ד) כתב את דברי הטור, שבתוך שנה מכרו של הסיקריקון בטל.</p>
+                    
+                </div>
+                
+                <div id="topic-1-2" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">"הבא מחמת חוב ומחמת אנפרות"- גוי שאינו סיקריקון, שאנס קרקע מישראל</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא (גיטין נח:) מובאת <strong>ברייתא</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>הבא מחמת חוב ומחמת אנפרות - אין בו משום סיקריקון</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מיד בהמשך מעיר <strong>רב</strong> <strong>יוסף</strong> ש"אין דין אנפרות בבבל", ומסבירה הגמרא שהמיוחד בבבל הוא שקיים מקום בשם "בית דוואר", שם ניתן לקבול על גזלנים.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בפירוש הברייתא (אם כי לאו דווקא בהלכה למעשה הנובעת ממנה):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש</strong><strong>"י</strong> מסביר שמדובר בגוי אנס שנטל שדה מישראל בטענה שזה חייב לו, או סתם ללא טענה (זו לשון "אנפרות" על פי רש"י). רש"י מסביר שהברייתא אומרת שבסתם גוי אנס שנטל שדה מיהודי שלא באיומי מוות, לא תוקנה בזה תקנת סיקריקון. כלומר, כיוון שבמקרה זה לא הסכים הנגזל בליבו להקנות את השדה לאנס, הרי שמה שמכר הגוי לאחר אינו מכור, אפילו אם שהתה בידו יותר משנה. רב יוסף אומר שבמקום בו ישנם בתי דין של המלכות, כמו בבבל, אם מכר גוי שדה שבידו, ואז מגיע הבעלים הראשון וטוען שהשדה היתה גזולה ביד הגוי, אין מוציאים מיד הלוקח, שכן מכך שלא קבל הבעלים בפני בית הדין משמע שמחל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב</strong><strong>"ם</strong>, על פי ביאורו של ה<strong>מגיד</strong> <strong>משנה</strong>, מבין שהגוי לקח את הקרקע מתוך טענה שבעליה חייב לו כסף, בגלל חוב או בגלל נזק שהזיקו (זו לשון "אנפרות" לפי הרמב"ם). הפוך מרש"י, לדעת הרמב"ם הברייתא אומרת שבמקרה זה <strong>אין</strong> מוציאים את הקרקע מיד הלוקח, ואף אין הוא צריך לתת רביע לבעלים הראשון (זו המשמעות של "אין דין אנפרות" לפי פירושו), שכן בצדק לקח הגוי את הקרקע, תמורת חוב שהיה היהודי חייב לו. אמנם הרמב"ם כותב, מסברתו, שאין מאמינים לגוי שלקח את הקרקע בצדק, אלא אם כן מודה לו היהודי, או שיש עדים כשרים המעידים לטובתו. על רקע זה מפרש הרמב"ם את דברי רב יוסף- בבבל ישנם בתי דין של גויים, ואם לא פנה אליהם היהודי יש להאמין לגוי שאכן גבה את הקרקע בצדק, אפילו אם בעל הקרקע אינו מודה לו, ואף אין עדות שמסייעת לו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בפועל, אפשר שאין הבדל רב בין דברי הרמב"ם לבין דברי רש"י, כיוון שלדעת שניהם, אם לקח אנס גוי קרקע באופן בלתי מוצדק (או שבכל אופן אינו יכול להוכיח את טענותיו), אין דין סיקריקון לו, ואם מכר את הקרקע, יוצאת היא מיד הלוקח ממנו אפילו לאחר זמן.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שיטה נוספת בראשונים, המסכימה לשיטת רש"י בפירוש הגמרא, אך חולקת ביישום הדין, היא שיטת <strong>ר</strong><strong>"י</strong> (מובא בתוס' ב"ק נח. ד"ה "אי נמי") ו<strong>רבינו</strong> <strong>גרשון</strong> (מובא שם), הסוברים שאכן הגוי האנס לא קנה, ומה שמכר אינו מכור, ובכל זאת הבעלים אינם יכולים להוציא מיד הקונה מהגוי בלי שיתנו לו את שיעור הממון בו גרם להם להנאה. כלומר, כיוון שסוף סוף שילם הקונה מהגוי כסף ובכך חילץ את הנכס מידי הגוי ואיפשר את חזרתו לידי הבעלים, צריכים הבעלים לתת לו כמה שהיה עולה להם לרצות את הגוי (או גורמים אחרים שהיו יכולים להשפיע על הגוי) בכדי שיחזיר את הנכס<sup id="ref179"><a href="#fn179">[179]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו</strong><strong>"ע</strong> (רלו ז-ט) כותב כדברי הרמב"ם וכשיטת ר"י, שיש לפצות במידת מה את הקונה מהגוי.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-2" class="mb-12 pt-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ד</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    היורד לתוך שדה חבירו שלא ברשות ונטעה אם היתה שדה העשויה ליטע אומדין כמה אדם רוצה ליתן בשדה זו ליטעה ונוטל מבעל השדה, ואם אינה עשויה ליטע שמין לו וידו על התחתונה.
+                </div>
+                
+
+                
+                <div id="topic-2-1" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">היורד לשדה חבירו שלא ברשות ונטעה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">סוגיית הגמרא בבבא מציעא (קא.) דנה ב"יורד לשדה חבירו ונטעה שלא ברשות"-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>היורד לתוך שדה חבירו ונטעה שלא ברשות,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב</strong>: שמין לו, וידו על התחתונה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ו<strong>שמואל</strong> אמר: אומדין כמה אדם רוצה ליתן בשדה זו לנוטעה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב פפא</strong>: ולא פליגי; כאן - בשדה העשויה ליטע, כאן - בשדה שאינה עשויה ליטע.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר באדם הנוטע (או משביח באופן אחר) בשדה חבירו ללא רשותו של בעל השדה. לאחר מעשה, תובע היורד מבעל השדה כיסוי או לפחות השתתפות בהשקעה שהשקיע. מצד אחד טוען היורד כי רכושו של בעל השדה השביח כתוצאה מהשקעתו, ומצד שני טוען בעל השדה שאף אחד לא ביקש מהיורד לעשות את מה שעשה והיורד הוא שהפסיד עצמו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בעניין זה אומר <strong>רב</strong> שיש לדון לרעת היורד, ו"ידו על התחתונה".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>שמואל</strong> לעומתו אומר שדנים לטובת היורד ונותנים לו שיעור גדול היותר, ע"י אומדן "כמה אדם רוצה ליתן בשדה זו לנוטעה" (בהמשך הסוגיה מכונה שיעור תשלום זה גם כ"ידו על העליונה")</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב</strong> <strong>פפא</strong> מעיר שאין מדובר במחלוקת, אלא רב אמר את דברו בשדה שאינה עשויה ליטע (אלא להיות שדה זרועה, למשל), שם שינה היורד מיעודה של השדה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הראשונים חלקו בפירוש המדוייק של דברי רב ("ידו על התחתונה") ושל דברי שמואל ("אומדין כמה אדם רוצה ליתן בשדה זו לנוטעה")-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש</strong><strong>"י</strong> ורוב הראשונים פירשו כי "ידו על התחתונה" הכוונה שנותנים ליורד את השבח שהשביח או את ההוצאה שהוציא, הנמוך מבין שניהם<sup id="ref180"><a href="#fn180">[180]</a></sup>. את האפשרות שבדברי שמואל מפרש רש"י ש"ידו על העליונה הוא - כשאר שתלי העיר, כמנהג המדינה". כלומר, למרות שבעל הבית לא שכר את היורד, צריך הוא לשלם לו כאילו שכרו לעשות את כל העבודה שעשה בשדה, וזאת אפילו אם בסופו של דבר נמצא שהשבח שהשביח נמוך מהסכום שצריך לשלם לו<sup id="ref181"><a href="#fn181">[181]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על דרך זו מקשים ה<strong>רשב</strong><strong>"א</strong> וה<strong>ריטב</strong><strong>"א</strong>- כיצד זה ייתכן שישלם בעל הבית למשביח יותר מאשר את הוצאותיו? והרי אם הגורם לתשלום הוא העובדה שהמשביח גרם להנאה לבעל השדה (בכך שחסך לו את ההוצאה שהוציא המשביח), צריך בעל השדה לשלם את ההוצאה, ולא יותר. כאשר בעל השדה משלם יותר מההוצאה שהוציא עליו המשביח מרוויח האחרון מבעל השדה וזאת בעוד שמעולם לא נקשר קשר עיסקי ביניהם! הריטב"א עונה שמדובר בכגון שידעו הבעלים ושתקו, והרי זה כאילו נעשו הדברים ברשות<sup id="ref182"><a href="#fn182">[182]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על רקע קושיה זו, מפרש <strong>בעל</strong> <strong>המאור</strong> (בבא קמא נח: מדפי הרי"ף) אחרת מרש"י. לפירושו של בעה"מ "שמים לו וידו על התחתונה" הכוונה שנותנים לו שיעור מינימלי שאדם יכול לשלם בכדי להוציא לפועל את העבודה שעשה היורד ("כמה שמזלזלין הפועלים הפחותים", כלשונו). במקרה של שדה שעשויה ליטע "ידו על העליונה", פירוש, שמשלם לו כמה שהיה לוקח קבלן לשם ביצוע העבודה מתחילה ועד סוף, שהוא שיעור גבוה יותר מההוצאה המינימלית כיוון שהוא כולל פערי תיווך של הקבלן. בכל אופן, בעל השדה משלם תמיד כשיעור ההנאה שגרם לו המשביח, שהרי אף כשמשלם לו כקבלן הרי הוא חוסך לו, בנוסף על ההוצאות הישירות (חומרי גלם, פועלים) את "כאב הראש" הלוגיסטי הכרוך בביצוע העבודה<sup id="ref183"><a href="#fn183">[183]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">שיטה דומה, הנובעת ממוטיבציה זהה היא שיטת <strong>רב</strong><strong> האי גאון</strong> (ספר המיקח והממכר שער שביעי סוף ד"ה "הדין י"ח") המפרש שבכל אופן חייב בעל השדה לשלם למשביח את הוצאותיו (ולא יותר מהן!). לשיטתו, ההבדל בין שדה העשויה ליטע לבין שדה שאינה עשויה ליטע בא לידי ביטוי כאשר השמאים השמים את הוצאותיו של המשביח אינם מסכימים זה עם זה על גובה השבח. במקרה זה, אם השדה אינה עשויה ליטע משלם בעל השדה לפי הסכום הקטן מבין כל הסכומים המוצעים עלידי השמאים, ואילו בשדה העשויה ליטע משלם בעל השדה כפי הסכום הגדול.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו</strong><strong>"ע</strong> (שעה) פסק כדעת רש"י ורוב הראשונים.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-3" class="mb-12 pt-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ה-ו</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    אמר לו בעל השדה עקור אילנך ולך שומעין לו, אמר הנוטע הריני עוקר אילני אין שומעין לו מפני שמכחיש את הקרקע.  אמר לו בעל השדה עקור אילנך ולך שומעין לו. א"א נראה לי שאין אומרין כך בארץ ישראל מפני ישוב ארץ ישראל וכן אם אומר הנוטע הריני עוקר אילני אין שומעין לו כמו שכתב הוא ואפילו בחוצה לארץ מפני שמכחיש את הקרקע וזה מוסיף הוא דאית ליה נמי משום ישוב א"י.
+                </div>
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    החצרות הרי הן ראויות לבנין ולהוסיף בהן בתים ועליות, לפיכך הורו הגאונים שהבונה בחצר חבירו שלא מדעתו הרי זה כנוטע שדה העשויה ליטע ושמין לו כמה אדם רוצה ליתן בבנין זה לבנותו, והוא שיבנה בנין המועיל הראוי לאותה חצר כמנהג אותו מקום.
+                </div>
+                
+
+                
+                <div id="topic-3-1" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ביטול השבח והשבת המצב לקדמותו מצד המשביח- "הריני נוטל עצי ואבני"</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>גמרא</strong> (בבא מציעא קא.) ממשיכה ודנה במקרה בו ישנם חילוקי דעות נוספים בין בעל השדה לבין אותו שהשביח בשדה ללא רשות-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>היורד לתוך חורבתו של חבירו ובנאה שלא ברשותו, ואמר לו: עציי ואבניי אני נוטל, <strong>רב נחמן</strong> אמר: שומעין לו, <strong>רב ששת</strong> אמר: אין שומעין לו...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מאי הוי עלה? –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רבי יעקב</strong> אמר <strong>רבי יוחנן</strong>: - בבית שומעין לו, בשדה - אין שומעין לו.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>בשדה מאי טעמא? - משום ישוב ארץ ישראל.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איכא דאמרי: משום כחשא דארעא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>מאי בינייהו? איכא בינייהו חוצה לארץ.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, מדובר במקרה בו מחמת שאין המשביח מרוצה מגובה התשלום שצריך בעל החצר לשלם לו, הוא מאיים להרוס את מה שבנה/נטע. השאלה היא האם יש לו זכות לעשות זאת כאשר בעל הקרקע מתנגד. מצד אחד, יש סברה שיש לו זכות לעשות זאת, כיוון שחומרי הגלם הם עדיין שלו עד שלא קיבל עליהם תמורה, ובידו לדורשם מבעל החצר. מצד שני ביחס למצב החצר הנתון כעת, הרי הוא מזיק לרכוש חבירו. נראה ש<strong>רב</strong> <strong>נחמן</strong> ו<strong>רב</strong> <strong>ששת</strong> נחלקו במחלוקת עקרונית זו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רבי</strong> <strong>יעקב</strong> בשם <strong>רבי</strong> <strong>יוחנן</strong> פוסק לבסוף שבאופן עקרוני, אם אכן בביטול השבח המצב חוזר לקדמותו לא ניתן למנוע מהמשביח מליטול  את עציו ואבניו" ולהרוס בכך את מה שבנה. אמנם, במקרה של "שדה", יש סיבה מיוחדת המונעת מהמשביח מלקחת את רכושו ולהשיב את המצב לקדמותו, אם משום ביטול יישוב ארץ ישראל או משום היזק לקרקעו של בעל השדה שתישאר מאחור ("כחשא דארעא").</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בהבנת המקרה של "שדה" והבעייתיות של ביטול יישוב הארץ ו/או "כחשא דארעא" נחלקו הראשונים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש</strong><strong>"י</strong> ועמו רוב הראשונים פירשו ש"בית" הכוונה לבונה בית בחורבתו של חבירו (המקרה עליו חלקו רב נחמן ורב ששת במפורש), ואילו "שדה" הכוונה לנוטע אילן בשדה של חבירו. במקרה אחרון זה אין הנוטע רשאי לעקור את העץ שנטע, אם משום שבכך הוא מבטל את מצוות יישוב ארץ ישראל, או משום שהעץ כבר הספיק ליטול חלק מהמשאבים שבקרקע ולכן אין ליטלו ללא פיצוי הולם לבעל השדה. לעומת זאת, הבונה בית בחורבתו של חבירו אין בו חששות אלה ולכן יכול הוא ליטול את אבניו<sup id="ref184"><a href="#fn184">[184]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פירוש שונה לגמרא הוא פירושו של <strong>רב</strong> <strong>האי</strong> <strong>גאון</strong> (ספר המיקח והממכר, שם) המבין ש"בית" ו"שדה" מתייחסים שניהם למקרה שהובא בתחילת המימרא- הבונה בית בתוך חורבתו של חבירו. "שדה" הכוונה לבניית בית בשדה, במקום שאין בתים אחרים, ואילו "בית" הכוונה לבניית בית במקום שיש בתים מסביב (וסביר שגם על חורבותיו של בית ישן יותר). במקרה של בניית בית בשדה, ישנה חשיבות מיוחדת לבית מצד יישוב ארץ ישראל כיוון שמדובר בנקודת התיישבות מבודדת יחסית. כמו כן, הריסתו של בית הבנוי בשדה משאיר קרקע שאולי כבר לא תצלח לגידולים חקלאיים, בעיה שאינה קיימת בהריסת בית הנמצא בית בתים צפופים, שם ממילא לא יהיה לעולם שימוש חקלאי לקרקע.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב</strong><strong>"ם</strong>, מצד אחד כותב כדברי רש"י, שהנוטע בשדה חבירו אינו יכול ליטול את אילנו, כיוון שמכחיש את הקרקע, אך מצד שני הוא כותב כדברים האלה גם בבונה בחורבתו של חבירו (בהמשך, הלכה ט), ומחלק שם בין בית לבין שדה, כדרכו של רב האי גאון<sup id="ref185"><a href="#fn185">[185]</a></sup>. ונראה שהרמב"ם הבין כרב האי גאון בפירוש הגמרא, אך פסק רק כאפשרות של "כחשא דארעא". כך, מתוך שהבין הרמב"ם שהעוקר אילן או הסותר בית, יוצר בעיה פיזית להשתמש בקרקע למטרות חקלאיות בהמשך, פסק להלכה, שבעל קרקע שיש לה פוטנציאל חקלאי רשאי לטעון שהנוטע/בונה גורם לו להיזק לקרקע בנטילת עציו/אבניו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעניין ההכרעה בין האפשרויות "ישוב ארץ ישראל" או "כחשא דארעא", הכריעו כל הראשונים כאפשרות השניה (ועי' בהמשך, בנושא הבא, שיש שהבינו ששתי האפשרויות תקפות להלכה), כך שגם בחוץ לארץ יכול בעל הקרקע להתנגד שינטלו נטיעותיו, וכן משמע מה<strong>רמב</strong><strong>"ם</strong> שלא חילק בין ארץ ישראל לבין חוצה לארץ.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עוד נקודה הדורשת ביאור היא השאלה האם יש קשר בין היותה של השדה ראויה ליטע או לא, לבין יכולתו של המשביח לדרוש בחזרה את עציו ואבניו<sup id="ref186"><a href="#fn186">[186]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא</strong><strong>"ה</strong> (מובא בשטמ"ק) כותב בזה שכיוון שבשדה המיועדת לנטיעה מקבל המשביח את כל הוצאותיו כמו בעל מלאכה, הרי שדינו כבעל מלאכה העושה בתוך של חבירו, שמתוך שמתכוון לעשות עבור חבירו, הרי כל מה שעושה נקנה לחבירו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רשב</strong><strong>"א</strong> מודה, באופן עקרוני, לרא"ה, אך מסביר שהבניין/אילן הופך להיות רכושו של בעל השדה רק כאשר זה מסכים במפורש לשלם למשביח כאשר ידו על העליונה. לאחר הסכמתו נקנים חפציו של המשביח לבעל השדה בקניין חצר, ושוב לא יכול המשביח לומר שהוא נוטל "את עציו ואת אבניו" (כי הם פשוט כבר לא עציו ואבניו).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">להלכה פוסק ה<strong>שו</strong><strong>"ע</strong> (שעה ב,ו), שעקרונית רשאי המשביח ליטול את שלו תמיד, אלא אם כן מדובר בנטיעות, שם נטילתן תכחיש את הקרקע<sup id="ref187"><a href="#fn187">[187]</a></sup>. השו"ע אינו מחלק בין שדה/חורבה העשויה ליטע/ליבנות לבין שאינה עשויה, אך ה<strong>רמ</strong><strong>"א</strong> (הלכה ו-ז) כותב שבחורבה העשויה ליבנות, אין המשביח רשאי ליטול את שלו, על בסיס שיטות הרשב"א והרא"ה.</p>
+                    
+                </div>
+                
+                <div id="topic-3-2" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">ביטול השבח והשבת המצב לקדמותו מצד בעל הקרקע- "טול עציך ואבניך"</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מקרה שלא עסקה בו הגמרא (לפחות לא במפורש) הוא המקרה בו לא המשביח הוא שרוצה להחזיר את המצב לקדמותו, אלא בעל הקרקע הוא שממאן לשלם למשביח וטוען כלפיו- "טול עציך ואבניך!".</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ראשונים אחדים (ראה בהמשך) למדו באופן עקיף על הדין במקרה זה מהמעשה המובא בהמשך הסוגיה (שם):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>ההוא דאתא לקמיה דרב, אמר ליה: זיל שום ליה! –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: לא בעינא. –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: זיל שום ליה, וידו על התחתונה. –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: לא בעינא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>לסוף חזייה דגדרה וקא מנטר לה. –</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר ליה: גלית אדעתיך דניחא לך - זיל שום ליה, וידו על העליונה</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב</strong><strong>"ן</strong> מפרש שמדובר בכגון שמדובר באדם שירד לשדה חבירו, שאין ברור אם היא עשויה ליטע או לא. ראשית אמר רב לבעל השדה, שיש לשום את ההוצאה שהוציא בה המשביח, וענה לו בעל השדה, שהוא אינו רוצה באילנות. רב הבין שכוונתו שהוא לא היה נוטע אילנות כגון אלו, מה שהופך את השדה לשדה שאינה עשויה ליטע, ולכן ציווה רב שיש להעריך את ההוצאות שהוציא המשביח, את השבח, ולשלם למשביח כשידו על התחתונה (כפי שהדין בנוטע ללא רשות בשדה שאינה עשויה ליטע). בעל השדה המשיך והבהיר את כוונתו- הוא כלל אינו רוצה באילנות, אפילו לא בדיעבד, והוא דורש שהנוטע יקח את עציו ויסתלק. רב הסכים (בשתיקה), עד שראה שבעל השדה עושה מעשים המעידים שרצונו בשימור האילנות. משראה בכך הבין שהשדה בעצם מוגדרת כשדה העשויה ליטע, ולכן חייב את בעל השדה לשלם לנוטע כשידו של האחרון על העליונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מכך שכל עוד לא הביע בעל הקרקע את רצונו בעצים, לא מנעו רב מלדרוש את עקירתם, מבין הרמב"ן שאם מדובר בשדה שאינה עשויה ליטע, יכול בעל הקרקע לדרוש מהמשביח להשיב את המצב לקדמותו, ולא לשלם לו מאומה<sup id="ref188"><a href="#fn188">[188]</a></sup>.  כמסקנה זו כותב גם ה<strong>רי"ף</strong> (נח: מדפיו) בשם ראשי הישיבות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רא</strong><strong>"ש</strong> (סי' כב) מבין את המקרה שבגמרא באופן שונה בתכלית. לדעתו, מדובר היה בשדה העשויה ליטע, ולכן אמר רב בראשית דבריו לבעל השדה, שצריך הוא לשום את הוצאות המשביח ולשלם לו כשידו של המשביח על העליונה. בעל הקרקע השיב שאין רצונו בעצים, ושהוא מעדיף לזרוע תבואה בשדה, ועל כך המשיך והציע רב (כהצעת פשרה בלבד, ולא כפסק), שאולי יסכים לשלם לו כשידו של המשביח על התחתונה, ואם יסכים המשביח לזה, לא יזדקקו להגיע לעקירת העצים. גם בזה לא נתרצה בעל הקרקע, והמשיך לדרוש שהוא לא ישלם דבר למשביח, ושהעצים יעקרו. רב לא התווכח עם דרישתו של בעל הקרקע, אך משראה, שבעצם בעל השדה רוצה בעצים, הגיע למסקנה שלמרות דבריו הנחרצים הוא בכל זאת קיבל הנאה מהמשביח, ולכן הורה לו לשלם למשביח כשידו של האחרון על העליונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">על פי הבנת הגמרא באופן כזה, יוצא שרב לא התווכח עם טענתו של בעל השדה, שהוא אינו רוצה לשלם עבור העצים ודורש את עקירתם, אלא רק ניסה להציע הצעות פשרה שונות. מכאן מסיק הרא"ש, בניגוד לרמב"ן, שאף בשדה העשויה ליטע, יכול בעל הקרקע לומר שהוא צריך את השדה לסוג אחר של חקלאות ולדרוש את פינוי העצים ללא תמורה מצידו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>בעל</strong> <strong>המאור</strong> (נח: מדפי הרי"ף) מבין הבנה שלישית ושונה את דברי הגמרא. מדבריו משמע, שבתחילה ציווה רב את בעל הקרקע לשום כמה הוצאות הוציא המשביח, משזה סירב ואמר שהוא אינו רוצה בעצים, הסיק רב מתשובתו שמדובר בשדה שאינה עשויה ליטע וחייב אותו במפורש לשלם למשביח כשידו של זה על התחתונה. בעל הקרקע המשיך לסרב לשלם, ומאוחר יותר, כשראה רב שהוא רוצה בעצים, חייב אותו לשלם כשידו של המשביח על העליונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי בעל המאור נובע שאף בשדה שאינה עשויה ליטע, וכל שכן בשדה העשויה ליטע, לא יכול בעל השדה לומר לבעל העצים "טול עציך ואבניך" ללא תמורה, אלא חייב לשלם לו, אם כשידו על העליונה או על התחתונה, לפי העניין, שכן סוף סוף ערכה של הקרקע עלה, ובכך נגרמה הנאה לבעליה. אמנם, בעל המאור מוסיף, שבמקרה שהבניה או הנטיעה שעשה המשביח היא "שלא כראוי לבעל הקרקע", כלומר, שברור שאין לו בה שום הנאה (ואולי אף להיפך), יכול בעל הקרקע לבקש את פיצוי העצים/בנין מבלי לשלם דבר. מרהיטות לשונו של ה<strong>רמב</strong><strong>"ם</strong> כאן ובהלכה ט משמע כדברי בעל המאור.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לסיכום, שלוש שיטות מדורגות לפנינו בשאלה האם יכול בעל הקרקע לדרוש את השבת המצב לקדמותו ללא תמורה למשביח- ה<strong>רא</strong><strong>"ש </strong>סובר שאפילו בשדה העשויה ליטע יכול בעל הקרקע לדרוש זאת, ה<strong>רמב</strong><strong>"ן</strong> סובר שרק בשדה שאינה עשויה ליטע, ואילו <strong>בעל</strong> <strong>המאור</strong> אומר שרק אם הבניה/נטיעה נעשתה שלא כראוי, יכול בעל הקרקע לדרוש פינוי<sup id="ref189"><a href="#fn189">[189]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעיל ראינו שכאשר <strong>המשביח</strong> רוצה ליטול את עציו ואבניו אין מניעה עקרונית בדבר, חוץ מאשר כאשר הדבר מזיק לקרקעו של בעל הקרקע, או, לפי לישנא אחרת בגמרא, כאשר הדבר פוגע ביישוב ארץ ישראל. כמובן שאם בעל הקרקע הוא שטוען כלפי המשביח "טול עציך ואבניך", אין מקום לחשש לפגיעה בקרקע, כיוון שבעל הקרקע עצמו מוחל על פגיעה זו. נותרת רק השאלה האם יש למנוע מבעל הקרקע מניעה מלדרוש את ביטול השבח, מצד הפגיעה במצוות יישוב הארץ. בנקודה זו חלקו ראשונים-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>ראב</strong><strong>"ד</strong> בהשגותיו כותב שאכן הטעם של פגיעה ביישוב ארץ ישראל נותר על כנו גם להלכה, ולכן בארץ ישראל בין המשביח ובין בעל הקרקע אינם יכולים לדרוש לעקור את הנטוע.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">אמנם, ה<strong>רמב</strong><strong>"ן</strong> טוען שכיוון שמותר לאדם לקצוץ אילן בתוך שדהו<sup id="ref190"><a href="#fn190">[190]</a></sup>, ואין אוסרים זאת מתוך השיקול של יישוב ארץ ישראל, מותר לו אף לדרוש שעצים שניטעו בשדהו ללא רשותו ייעקרו, ולא ניתן לעכב בידו מתוך השיקול של יישוב הארץ.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב</strong><strong>"ם</strong>, אם מחמת שסובר כרמב"ן ואם מחמת שסובר שלישנא זו לא נפסקה להלכה כלל, כותב שאם אמר בעל השדה שאינו רוצה בשבח, ומבקש לעוקרו/להורסו, שומעים לו תמיד.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו</strong><strong>"ע</strong> (שעה ב,ו) כותב כלשון הרמב"ם.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-4" class="mb-12 pt-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ז</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    היורד לשדה חבירו ברשות אפילו נטע שדה שאינה עשויה ליטע שמין לו וידו על העליונה, שאם היתה ההוצאה יתירה על השבח נוטל ההוצאה ואם השבח יתר על ההוצאה נוטל השבח, ובעל בנכסי אשתו והשותף בשדה שיש לו חלק בה כיורד ברשות הן ושמין להם וידם על העליונה.
+                </div>
+                
+
+                
+                <div id="topic-4-1" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">היורד לשדה חבירו ברשות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הסוגיה בבבא מציעא שהובאה לעיל, עסקה ביורד לשדה חבירו שלא ברשות. עתה מדובר ביורד לשדה חבירו והשביחה ברשות חבירו. בעניין זה נאמר ב<strong>תוספתא</strong> (בבא קמא פרק י):</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>...היורד ברשות שמין לו וידו על העליונה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>כיצד ידו על העליונה?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אם השבח יתר על ההוצאה נותן לו את השבח ואם הוצאה יתירה על השבח נותן לו את הוצאה</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מצד אחד, התוספתא אומרת שדינו של היורד לשדה חבירו ברשות הוא ש"ידו על העליונה", וזו לשון בה השתמשה הגמרא בבבא מציעא (קא) לגבי היורד לשדה חבירו שלא ברשות, בשדה העשויה ליטע (עי' לעיל עמוד 137). מצד שני, הדין על פי רהיטות לשון התוספתא הוא שאם השבח רב מההוצאה, נוטל המשביח את <strong>כל</strong> השבח, כך שבעל השדה אינו מרוויח כלל. על פי מה שראינו לעיל, זה כלל אינו הדין ביורד לשדה חבירו <strong>שלא</strong> ברשות (בשדה העשויה ליטע), בו "אומדין כמה אדם רוצה ליתן בשדה זו לנוטעה" (עי' לעיל עמוד 134), כלומר, אין בעל הקרקע נותן את כל השבח למשביח, אלא רק את השיעור שהיה מוכן להוציא בכדי שבעל מלאכה יעשה עבודה זו אצלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>מאירי</strong> (בבא בתרא מב:) וה<strong>תוספות</strong> (שם סוף ד"ה "שבח") אכן מחלקים בין הנוטע בשדה חבירו שלא ברשות, בשדה הראויה ליטע, לבין היורד לשדה חבירו ברשות חבירו ונטעה. במקרה הראשון נוטל המשביח כקבלן, כאילו שכרו בעל הקרקע לעשות את העבודה, אך מהשבח עצמו אין המשביח נוטל באופן ישיר. לעומת זאת, במקרה השני, כיוון שנתן בעל הקרקע רשות למשביח, מלבד זה שאין הבדל בין שדה העשויה ליטע לבין שדה שאינה עשויה<sup id="ref191"><a href="#fn191">[191]</a></sup>, מקבל המשביח חלקים מהשבח עצמו, כמנהג האריסים, המקבלים חלק ידוע בפירות<sup id="ref192"><a href="#fn192">[192]</a></sup>. מלשון הרמב"ם אפשר בהחלט להבין שדעתו כפוסקים אלו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">פוסקים אחרים הבינו שאין הבדל, אלא דין היורד לשדה חבירו שלא ברשות, בשדה העשויה ליטע, שווה לדין היורד לשדה חבירו ברשות. כך מפרש ה<strong>מגיד</strong> <strong>משנה</strong> (הלכה ז) את דברי הרמב"ם, וכך מפרשם אף ה<strong>גר</strong><strong>"א</strong> (סי' שעה ס"ק י)<sup id="ref193"><a href="#fn193">[193]</a></sup>. לפי פירוש זה, נטילה בשבח כאשר השבח גדול מההוצאה, כוונתה נטילה כשיעור "אומדין כמה אדם רוצה ליתן בשדה זו לנוטעה", והתוספתא מכנה שיעור זה כנטילה "בשבח", כיוון שבעקבות כך שבעל הקרקע משלם יותר מאשר את הוצאותיו של המשביח, נמצא שבאופן עקיף נוטל הוא גם חלק מהשבח.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו</strong><strong>"ע</strong> (שעה) כותב כלשון הרמב"ם להלכה, וכאמור, ניתן לפרש את הדברים בכמה דרכים.</p>
+                    
+                </div>
+                
+                <div id="topic-4-2" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הנחשבים כיורדים ברשות אף שלא קיבלו רשות מפורשת</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>בשותף</strong><strong>-</strong></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא בבבא בתרא (מב:) מביאה את דברי <strong>שמואל</strong>:</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>שמואל</strong>: שותף כיורד ברשות דמי. מאי קמ"ל? ... אמר <strong>רב נחמן</strong> אמר <strong>רבה בר אבוה</strong>: לומר, שנוטל בשבח המגיע לכתפים בשדה שאינה עשויה ליטע כשדה העשויה ליטע.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדובר בשותף העושה בחלקו ובחלקו של חבירו, והשאלה היא האם הוא מקבל משהו מהפירות שהגיעו לחלקו של חבירו. <strong>שמואל</strong> פוסק שמשלמים לאותו שותף כיורד ברשות. <strong>רב</strong> <strong>נחמן</strong> מסביר שהכוונה היא שאפילו אם מדובר בשדה שאינה עשויה ליטע, משלמים לו כיורד לשדה חבירו העשויה ליטע<sup id="ref194"><a href="#fn194">[194]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>במוציא</strong> <strong>על</strong> <strong>נכסי</strong> <strong>אשתו</strong> <strong>וגרשה</strong><strong>-</strong></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">המשנה בכתובות (עט:) עוסקת באדם שהוציא הוצאות על נכסי המילוג שהכניסה לו אשתו בחתונתם והשביחם, ועתה הוא בא לגרשה וכיוון שהנכסים נשארים אצלה, הוא תובע בחזרה את השקעתו. המשנה פוסקת שבאופן עקרוני, אם אכל מהנכסים ובמקביל הוציא עליהם הוצאות, אפילו אם אכל מעט, אין הוא מקבל פיצוי על ההוצאות שהוציא. לעומת זאת, אם לא אכל מהנכסים, אלא רק הוציא עליהם הוצאות, הרי הוא נוטל פיצוי על הוצאותיו, לאחר שישבע על גובה הוצאותיו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">הגמרא (פ.) מבררת כיצד משלמים לבעל במקרה בו לא אכל מהנכסים אלא רק הוציא עליהם-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>ר</strong><strong>ב</strong><strong> אסי</strong>: והוא, שיש שבח כנגד הוצאה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>למאי הלכתא? אמר <strong>אביי</strong>: שאם היה שבח יתר על הוצאה, נוטל את ההוצאה בלא שבועה.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>א"ל רבא: א"כ, אתי לאיערומי!</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אלא אמר <strong>רבא</strong>: שאם היתה הוצאה יתירה על השבח, אין לו אלא הוצאה שיעור שבח, ובשבועה</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, חלקו <strong>אביי</strong> ו<strong>רבא</strong> בהבנת דברי <strong>רב</strong> <strong>אסי</strong>- אביי סובר שתמיד נוטל הבעל את מלוא הוצאותיו, אלא שאם הוצאותיו מרובות מהשבח, כך שבנטילתן מפסיד הוא את האשה (ביחס לערך ההתחלתי של נכסיה), צריך הוא להשיבע לפני שנוטל. לעומת זאת, אם השבח רב מההוצאה, כך שבכל אופן מרוויחה האשה מנכסיה שהושבחו, יכול הוא ליטול את הוצאותיו מבלי להישבע. רבא חולק, וטוען שאם ההוצאה מרובה יותר מהשבח, נוטל הבעל רק את שיעור השבח, ומפסיד את ההפרש.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">משמעות הדברים היא, שעל פי רבא, שווה דינו של הבעל לדין היורד לשדה חבירו שלא ברשות, בשדה שאינה עשויה ליטע, הנוטל כשידו על התחתונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בגמרא מוסיף <strong>ר</strong><strong>' </strong><strong>יעקב</strong> בשם <strong>רב</strong> <strong>חסדא</strong>-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>המוציא הוצאות על נכסי אשתו קטנה, כמוציא על נכסי אחר דמי; מאי טעמא? עבדו בה רבנן תקנתא כי היכי דלא ניפסדינהו</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">כלומר, אם מדובר באשה שהשיאוה כשהיא קטנה, ויכולה לצאת כשתבגר על ידי מיאון, חששו חכמים שבעלה לא יטפח את נכסיה מתוך חשש שתצא מתחתיו כשתבגר. לכן תיקנו חכמים שיקבל הבעל את הוצאותיו.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>רמב</strong><strong>"ם</strong> (אישות כג ט-י) פוסק כרבא במגרש סתם, וכר' יעקב בנושא קטנה, וכותב שתקנת חכמים היא שמשלמים לבעל המשביח נכסי אשתו קטנה כאריס. הרמב"ם לפנינו כותב ש"בעל בנכסי אשתו" נחשב כיורד ברשות וידו על העליונה, אך ה<strong>מגיד</strong> <strong>משנה</strong> (הלכה יב) מפרש על פי דבריו בהלכות אישות, שהכוונה שהיורד לנכסי אשתו קטנה ידו על העליונה, אך במקרה רגיל ידו על התחתונה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-5" class="mb-12 pt-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ח</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    היורד לשדה חבירו שלא ברשות ונטע או בנה ואחר כך בא בעל השדה והשלים הבנין או ששמר הנטיעות וכיוצא באלו הדברים שמראין שדעתו נוטה למה שעשה זה וברצונו בא הדבר שמין לו וידו על העליונה.
+                </div>
+                
+
+                
+                <div id="topic-5-1" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">בעל קרקע המראה את רצונו בשבח על ידי מעשה</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' בדברינו לעיל  הל' ה-ו (עמוד 137). נוסיף כאן רק כי ה<strong>רמב</strong><strong>"ם</strong> לומד מהמעשה שבגמרא שמי שמראה שדעתו נוחה מהשבח שהשביחו בשדהו, משלם למשביח כאילו האחרון ירד ברשות, אפילו אם השדה לא היתה עשויה ליטע. לעומת זאת, על פי הסברו של ה<strong>רא</strong><strong>"ש</strong> את הדברים, ניתן להבין שאין במעשיו של בעל הקרקע בכדי לגרום לכך שהדין ישווה בשדה שאינה עשויה ליטע כבשדה העשויה ליטע, אלא למרות שבעל הקרקע מראה שרצונו בנטיעות בדיעבד, עדיין כיוון ששדה שאינה עשויה ליטע היא, משלם לנוטע כשידו של זה על התחתונה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו</strong><strong>"ע</strong> (שעה ג) כותב כדברי הרמב"ם.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-6" class="mb-12 pt-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה ט</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    היורד לתוך חרבתו של חבירו ובנאה שלא ברשות שמין לו וידו על התחתונה, ואם אמר בעל הבנין עצי ואבני אני נוטל, בבית שומעין לו, בשדה אין שומעין לו מפני שמכחיש את הקרקע, אמר לו בעל הקרקע טול מה שבנית שומעין לו.
+                </div>
+                
+
+                
+                <div id="topic-6-1" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">הבונה בחורבתו של חבירו שלא ברשות</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">עי' בדברינו לעיל על הלכות ד-ו.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-7" class="mb-12 pt-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה י</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    כל מי ששמין לו בין שהיתה ידו על העליונה בין שהיתה ידו על התחתונה אינו נוטל כלום עד שישבע בנקיטת חפץ כמה הוציא, ואם אמר יבואו הדיינים ויעשו שומת ההוצאה והרי היא גלויה לעיניהם וישערו העצים והאבנים והסיד ושכר האומנין בפחות שבשערים שומעין לו ונוטל בלא שבועה, וכן זה שנוטל השבח בלבד והיתה ידו על העליונה אינו צריך שבועה.
+                </div>
+                
+
+                
+                <div id="topic-7-1" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">אומד סכום ההוצאות שהוציא המשביח</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעיל (הלכה ז) הובא הדין של בעל היורד לנכסי אשתו, שאם רק הוציא על הנכסים, נשבע כמה הוציא ומקבל כשידו על התחתונה, כיורד לשדה חבירו שלא ברשות בשדה שאינה עשויה ליטע. מכאן לומד ה<strong>רמב</strong><strong>"ם</strong> בניין אב לכל היורדים ומשביחים בשל חברם שאם צריכים לשלם להם לפי מה שהוציאו, נוטלים בשבועה בלבד. ה<strong>רמב"ם</strong> מוסיף, שהנוטל מהשבח, ללא קשר בהוצאותיו (למשל, מי שמשלמים לו כאריס, עי' בדברינו בהלכה ז) אינו צריך להישבע כמה הוציא.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו</strong><strong>"ע</strong> (שעה ח) מעתיק את לשון הרמב"ם להלכה.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-8" class="mb-12 pt-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יא</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    כל ששמין לו ונוטל שטען בעל השדה ואמר נתתי והיורד לשדה אומר לא נטלתי, היורד נאמן ונשבע שלא נתן לו כלום ונוטל, שהרי אומרין לבעל השדה עדיין לא שמו לך ולא ידעת כמה אתה חייב ליתן היאך נתת. אבל אם שמו לו ואמרו לבעל השדה תן לו ואמר נתתי אף על פי שעדיין לא נשבע היורד הרי בעל השדה נאמן וישבע שבועת הסת שנתן ויפטר, שהקרקע בחזקת בעליה.
+                </div>
+                
+
+                
+                <div id="topic-8-1" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">בעל השדה אומר "נתתי" והמשביח אומר "לא נטלתי"</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">בדין חצר השותפים, יכול אחד השותפים לחייב את חבירו להשתתף בהוצאות בניית גדר עד ארבע אמות. לכן, הדין הוא, כפי שפוסק ה<strong>רמב</strong><strong>"ם</strong> בהלכות שכנים (פרק ג, ב), שאם אחד השותפים בנה גדר בסיסית, ותובע את חבירו להשתתף בהוצאות, וחבירו טוען שכבר שילם, צריך התובע להביא ראיה לדבריו, שכן התשלום וגובהו הינם חד-משמעיים, ולכן יש מקום להאמין שכבר שילם לו מבלי שתבעו תחילה. לעומת זאת, אם בנה האחד כותל של יותר מהשיעור הבסיסי, וחבירו צריך לשלם על התוספת משום שהוא משתמש בה (כגון שסמך לו בניין משלו), בזה אם טוען הלה שכבר שילם לפני שתבעו בבית דין, אין מאמינים לו בלא ראיה, שכן כל עוד לא נתבע, איך ידע כמה והאם לשלם? ולכן בזה, נשבע התובע ונוטל. עי' בהרחבה ממה שנכתוב בעז"ה בהלכות שכנים (שם).</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדין זה לומד ה<strong>רמב</strong><strong>"ם</strong> לכאן, למקרה בו בעל השדה אומר שכבר שילם למשביח. אם טוען ששילם לו עוד קודם שתבעו, אין מאמינים לו, כיוון שמהיכן ידע כמה לשלם לו? לעומת זאת, אם טוען ששילם לו לאחר שתבעו, יש להאמין לו, ולכן יש ביד בעל הקרקע אפשרות להישבע היסת ולהיפטר.</p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="halacha-9" class="mb-12 pt-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-800 border-b-2 border-blue-100 pb-2 text-right">הלכה יב</h2>
+
+                
+                <div class="text-lg md:text-xl leading-relaxed mb-6 bg-yellow-50 p-4 md:p-5 rounded-lg border-r-4 border-yellow-400 text-right">
+                    בעל שהוריד אריסין בנכסי אשתו ואחר כך גירשה, אם היה הבעל עצמו אריס נסתלק בעל נסתלקו אריסין שלא ירדו לה אלא על דעת הבעל ושמין להם וידם על התחתונה, ואם אין הבעל אריס על דעת הקרקע ירדו ושמין להם כאריס.
+                </div>
+                
+
+                
+                <div id="topic-9-1" class="mt-8 pr-2 md:pr-8 pt-2">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-blue-700 text-right">בעל שהוריד אריסים בנכסי אשתו, כיצד שמים להם</h3>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">לעיל, בדברינו על הלכה ז, הובאה הסוגיה בכתובות העוסקת בבעל שהוציא הוצאות על נכסי אשתו, ולבסוף גירשה, ותובע החזר על הוצאותיו. בגמרא שם (פ.) מתעורר דיון, במקרה בו הבעל לא עבד בשדה בעצמו אלא הוריד לתוכה אריסים, שעתה תובעים את חלקם-</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>איבעיא להו: בעל שהוריד אריסין תחתיו, מהו?</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אדעתא דבעל נחית, איסתליק ליה בעל איסתליקו להו,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>או דלמא אדעתא דארעא נחית, וארעא כי קיימא - לאריסי קיימא?...</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אמר <strong>רב הונא בריה דרב יהושע</strong>: חזינן, אי בעל אריס הוא, איסתלק ליה בעל אסתלקו להו,</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><blockquote>אי בעל לאו אריס הוא, ארעא לאריסי קיימא.</blockquote></p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רש</strong><strong>"י</strong> מפרש שמדובר במקרה השכיח של בעל שהוציא הוצאות על נכסי אשתו וגם אכל מהם, בו נאמר ש"מה שהוציא הוציא ומה שאכל אכל", או במילים אחרות, כפי שאינו צריך לשלם מה שאכל, כך אינו זכאי להחזר על הוצאותיו. שאלת הגמרא היא האם האריסים שהוריד בשדה, והבטיח להם חלק בפירות, דינם כמו שלו, והם יוצאים מהשדה ללא תמורה כלל.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right"><strong>רב</strong> <strong>הונא</strong> פותר, שהדבר תלוי בשאלה מה היה הבעל עושה אלמלא היה מוריד אריסים לתוך השדה. אם הבעל היה עובד בשדה בעצמו ("בעל אריס הוא"), הרי שבכך שהוריד הבעל אריסים לשדה הפסיד את האשה, כיוון שהוא עצמו בוודאי לא היה מקבל תמורה על השקעתו. לכן במקרה כזה האריסים אף הם אינם מקבלים תמורה. לעומת זאת, אם הבעל אינו חקלאי, ולא היה עובד בשדה, נמצא, שבכל אופן, אפילו היתה האשה מנהלת את הנכס, היה צורך להוריד אריסים לשדה, ולכן האריסים נחשבים כאריסיה, ומקבלים חלק בפירות.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">מדברי ה<strong>רמב</strong><strong>"ם</strong> משמע, בשונה מרש"י, שגם אם "הבעל אריס הוא", האריסים אינם יוצאים בלא תשלום כלל, אלא שמים להם וידם על התחתונה<sup id="ref195"><a href="#fn195">[195]</a></sup>.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>תוספות</strong> (שם ד"ה "איסתלק") מפנים לסוגיית הגמרא בבבא מציעא (עו.) שם נפסק שמי ששכר פועל ואמר לו שהוא אמור לעבוד עבורו, אך בפועל הטעהו והראה לו שדה של חבירו, חייב לשלם לו את שכרו המלא, למרות שלא עבד בשדהו בפועל. מכאן מסיקים התוספות, שאם אותם אריסים שהוריד הבעל לשדה, חשבו ששדה זו היא שדהו של הבעל, יש לשלם להם בכל אופן. לפיכך, כל הדיון בסוגייתנו אינו אלא על מקרה בו ידעו האריסים שהשדה שייכת לאשתו של מי שמינה אותם ולא לו, ולכן לקחו בחשבון וקיבלו עליהם את האפשרות שיגרש את אשתו ויאלץ להחזיר לה את השדה.</p>
+                    
+                    <p class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 text-right">ה<strong>שו</strong><strong>"ע</strong> (אה"ע פח, יב) כותב כלשון הרמב"ם, וה<strong>רמ</strong><strong>"א</strong> מוסיף את דברי התוספות.</p>
+                    
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="footnotes-section" class="mt-16 pt-8 border-t-2 border-gray-200 text-right">
+                <h3 class="text-xl font-semibold mb-4 text-gray-600">הערות שוליים</h3>
+                <ol class="list-none p-0 text-sm md:text-base text-gray-600">
+                    
+                    <li id="fn174" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref174" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^174</a> 
+                        זהו הרקע לשלב ה"משנה ראשונה" בו הסיקריקון והקונה ממנו לא קנו.הירושלמי (פ"ה ה"ז) מסביר את ההבדל בין התקופה של "לפני הרוגי מלחמה" לבין "לאחר הרוגי מלחמה" אחרת מאשר הבבלי:לא היה סיקריקון ביהודה כו' בראשונה גזרו שמד על יהודה שכן מסורת בידם מאבותם יהודה הרג את עשו דכתיב ידך בעורף אויביך והיו הולכין ומשעבדין בהן ונוטלין שדותיהן ומוכרין אותן לאחרים והיו בעלי בתים באין וטורפין והיתה הארץ חלוטה ביד סיקריקון נמנעו מליקח התקינו שלא יהא סיקריקון ביהודה במה דברים אמורי' בהרוגי המלחמה לפני המלחמה אבל הרוגים שנהרגו מן המלחמה והילך אין בהן משום סיקריקון כלומר, השלב של "לפני המלחמה" הוא שלב בו גזרו שמד על ישראל, והיתה קיימת תופעה נרחבת של נטילת שדות ישראל ומכירתם לאחרים, ואז היו חוזרים הבעלים וטורפים מיד אלה שקנו מהסיקריקון. מצב זה הביא לכך שיהודים נמנעו מלקנות את השדות הגזולים, "והיתה הארץ חלוטה ביד סיקריקון". לכן, לטובת מצוות ישוב ארץ ישראל, תיקנו חכמים שלא יוכלו הבעלים הראשונים לחזור ולטרוף ממי שקנה מסיקריקון (מתוך תקנת חכמים, ולא, כפי שמשמע בבבלי, משום שמפאת איומי מיתה מקנה הבעלים בליבו!). תקנתם זו היתה מוגבלת לזמן של "לפני המלחמה", אך לאחר המלחמה ביטלו חכמים את תקנתם כיוון שהתופעה של גזל השדות הצטמצמה. ההבדל המשמעותי בין פירוש הירושלמי לבין פירוש הגמרא בתלמוד הבבלי הוא שבעוד שלפי הבבלי, מעיקר הדין אדם המקנה את שדהו תחת איומי מוות מוחשיים גומר בליבו ומסכים, ולכן אם הגזל מכר הלאה כבר לא ניתן לגבות ממנו. לעומת זה, לפי הירושלמי אין הדבר כך, אלא אפילו תחת איומי מוות, אם לא שולמה תמורה לבעל השדה, אין השדה יוצאת מבעלותו.
+                    </li>
+                    
+                    <li id="fn175" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref175" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^175</a> 
+                        רש"י אינו אומר זאת במפורש, אך אפשר שעל פי דרכו, גם תקנת "בית דין שלאחריהם" וגם תקנת רבי באות לטובת הנגזל. בית דין שלאחריהם רצו שהנגזל יקבל לפחות רביע מערך הקרקע, ולכן איפשרו לאחרים לקנותה מהסיקריקון. רבי נתן שהות של שנה עד שיתברר אם אכן התייאשו הבעלים מהקרקע.
+                    </li>
+                    
+                    <li id="fn176" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref176" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^176</a> 
+                        עי' בהערה 177. על פי רש"י מצד אחד התקנה אינה מוגבלת לגבולות ארץ ישראל, אך מצד שני היא אמורה רק במקרים בהם הנגזל מבין שאפסו סיכוייו לזכות בשדה, או שברור שמחמת אימת הסיקריקון כלל לא ינסה לעשות זאת וכיוצא בכך.
+                    </li>
+                    
+                    <li id="fn177" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref177" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^177</a> 
+                        יש לשים לב שהמגמה לפירוש זה הפוכה מאשר המגמה של רש"י. בעוד שלפי רש"י תקנת רבי היא לטובת הבעלים, לתת להם ארכה לפדיון הקרקע, לפי המאירי תקנת רבי היא לטובת קניין ישראל הכללי בארץ, ולרעת הבעלים הספציפיים, שזכות הראשונים שלהם בפדיון הקרקע פוקעת לאחר שנה.
+                    </li>
+                    
+                    <li id="fn178" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref178" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^178</a> 
+                        יש לציין שהרמב"ם אינו מגביל את התקנה לארץ ישראל בלבד. ולכן, על פי דברי הגר"א, משמע שהוא סובר שבכל מקום יש אינטרנס שקרקע לא תישאר חלוטה בידי סיקריקון, ללא קשר למצוות יישוב ארץ ישראל.
+                    </li>
+                    
+                    <li id="fn179" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref179" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^179</a> 
+                        התוספות האמור דן באריכות בשאלה מתי המהנה את חבירו אינו זכאי לתגמול כלל, והוא בבחינת "מבריח ארי מחבירו", (כלומר, שאינו מהנהו ישירות אלא רק מונע מנזק להגיע אליו), מתי הוא ראוי לתגמול מינימלי, כעין תשלום בסיסי על הזמן שהקדיש, ומתי הוא ראוי לכיסוי כל הוצאותיו. בעזה"י בפרק יב מהלכות אבידה נדון יותר באריכות בשאלה זו.
+                    </li>
+                    
+                    <li id="fn180" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref180" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^180</a> 
+                        כך יוצא שלעולם אין מצב בו היורד מפסיד ובעל הבית מרוויח. אם השבח נמוך מההוצאה, היורד מפסיד, כי הוא מקבל רק את השבח, ובעל הבית אינו מרוויח ואינו מפסיד, כי הוא משלם ליורד את כל מה שהשביחו. לחילופין, אם השבח גדול מההוצאה, היורד אינו מפסיד ואינו מרוויח, כי הוא מקבל את כל מה שהשקיע, ובעל הבית מרוויח את ההפרש בין השבח לבין ההוצאה.
+                    </li>
+                    
+                    <li id="fn181" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref181" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^181</a> 
+                        כך שבעל הבית נמצא מפסיד.
+                    </li>
+                    
+                    <li id="fn182" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref182" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^182</a> 
+                        מדבריו אלה נובע להלכה, שאם עשה היורד את מעשיו לא רק ללא רשותו של בעל השדה אלא אף ללא ידיעתו, אין משלם בעל השדה בשום אופן יותר מכדי הוצאותיו של המשביח. אמנם הרמב"ם לא כתב כך, ואף השו"ע לא פסק כך, וצ"ע.
+                    </li>
+                    
+                    <li id="fn183" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref183" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^183</a> 
+                        ההיגיון של שיטת בעל המאור מבוסס על ההנחה שבעל השדה משלם בכל אופן את ההנאה שגורם לו המשביח. ההבדל בין שדה העשויה ליטע לבין שדה שאינה עשויה ליטע נובע מכך ששיעור ההנאה שגרם המשביח שונה ביניהם. בשדה שאינה עשויה ליטע, אפשר שלא היה בעל השדה עושה את כל העבודה מלכתחילה. במקרה זה, העובדה שהמשביח עשה עבורו את כל העבודה מתחילה ועד סוף כמו קבלן, וחסך לו את כל כאב הראש והדאגה הנלווים אינה משמעותית, כיוון שסיכוי סביר שלא היה בעל השדה עושה עבודה כזאת ממילא. לעומת זאת, בשדה העשויה ליטע היה בעל השדה נוטעה בעצמו בצורה כזו או אחרת, ולכן העובדה שהמשביח עשה עבורו את העבודה בצורה קלה היא בעלת משמעות, ואף על ההנאה הזו, שחסך עבורו את הטרחה הלוגיסטית, צריך בעל השדה לשלם.
+                    </li>
+                    
+                    <li id="fn184" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref184" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^184</a> 
+                        נקודה מעניינת מאד העולה מפירוש זה, היא שבעוד שיש חשש לביטול יישוב ארץ ישראל בעקירת נטיעה, אין חשש כזה בהריסת בית. משמע מכאן, שישנה הנחה מובלעת בגמרא, שמצוות יישוב ארץ ישראל באה לידי ביטוי בחקלאות יותר מאשר ביישוב אורבני. כך אומר במפורש הרא"ש (בבא מציעא פרק ט סימן לז).
+                    </li>
+                    
+                    <li id="fn185" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref185" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^185</a> 
+                        אמנם ניתן לפרש שהבית והשדה המוזכרים בהלכה ט הם בניי בית מול נטיעת אילן, אך אז הלכה ט חוזרת באופן משונה מאד על דברים שנאמרו כבר בהלכות ד-ה, ואין זו דרכו של הרמב"ם. לכן נראה שהלכות ד-ה עוסקות בנוטע בשל חבירו, בעוד שהלכה ט כולה דנה בבונה בשל חבירו.
+                    </li>
+                    
+                    <li id="fn186" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref186" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^186</a> 
+                        ביתר ביאור- ההבנה הפשוטה היא שהמקרה בו אומר המשביח "עצי ואבני אני נוטל" בו דנה הגמרא, עוסק בסיטואציה בה ידו של המשביח על התחתונה (שדה שאינה עשויה ליטע), והוא אינו מרוויח מכל העסק. בכדי להגדיל את כח המיקוח שלו (או פשוט משום שהוא חושב שהתמורה שיקבל אינה שווה אפילו את חומרי הגלם), הוא מאיים שיטול את החומרים בהם ישתמש וילך. השאלה היא האם בשדה העשויה ליטע, בה אין ידו של המשביח על התחתונה, הדין זהה?
+                    </li>
+                    
+                    <li id="fn187" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref187" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^187</a> 
+                        בפסיקתו זו מכריע השו"ע כהבנת רש"י בגמרא, ולא כהבנת רב האי גאון או הרמב"ם.
+                    </li>
+                    
+                    <li id="fn188" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref188" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^188</a> 
+                        הדבר צריך ביאור, שכן לכאורה, הסברה שיכול בעל הקרקע לבקש להחזירה למצבה הקודם זהה לסברה על פיה זכאי בעל העצים לקחת עציו. בשני המקרים יש זכות לבעל הרכוש לקחת את רכושו, בין אם מדובר ללקיחת העצים מעל גבי הקרקע או "לקיחת" הקרקע מתחת לעצים. ההסבר להבדל בין שדה העשויה ליטע לבין שאינה עשויה ביחס לדרישת בעל הקרקע "טול עציך" הוא שזכותו של המשביח שלא להסכים להתפנות ללא תמורה דורשת ממנו להוכיח בסבירות מספקת, שבמעשיו גרם הנאה לבעל הקרקע. כך, למשל, בשדה שאינה העשויה ליטע, אם בעל השדה מחליט לקיים את הנטיעה, משמעות הדבר היא שהוא נהנה מעמלו של המשביח ולכן צריך הוא לשלם על ההנאה שגרם לו המשביח. לעומת זאת, אם בעל הקרקע טוען שמעשיו של המשביח כלל לא גרמו לו הנאה, כי הוא היה מעדיף שימוש אחר בשדה, כיוון שמדובר בשדה שאינה עשויה ליטע, קשה להתווכח עם טענה שכזו, והמשביח אינו יכול לבקש ממנו תמורה, וחייב לפנות את השדה, כיוון שלא הוכיח שגרם הנאה לבעל הקרקע. ראשונים כמו הרמב"ן וסיעתו סוברים כי בשדה העשויה ליטע, אין ללמוד מהחלטתו של בעל השדה האם להשאיר את העצים או לא, על השאלה האם נגרמה לו הנאה. לדעתם, כיוון שמדובר בשימוש הסביר הקרקע, אין ספק כי מעשיו של המשביח גרמו לבעל הקרקע הנאה, אפילו אם הוא מכחיש זאת. לכן, חייב הוא לשלם על ההנאה שגרם לו המשביח, ללא קשר לתוכניותיו ביחס לעצים שניטעו בקרקעו.
+                    </li>
+                    
+                    <li id="fn189" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref189" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^189</a> 
+                        ראוי לשים לב לנקודת ההבדל בין כל שיטה, ולנקודה המשותפת של שלושתן- ההבדל בין השיטות נובע מכך שהגדרת ההנאה שונה. הרא"ש מקצה אחד, סובר שהנאה היא סובייקטיבית, ולכן תמיד יכול בעל הקרקע לטעון שהוא עצמו רצה לעשות בה דבר מה אחר, ולכן המשביח הפסיד, כי היה לו להתייעץ וליטול רשות מהבעלים לפני מעשה. מהקצה האחר טוען בעל המאור, שאם ערכו של הנכס עלה, הרי לנו הנאה, אפילו אם בעל הקרקע טוען שרצה לעשות בה דבר אחר, אלא אם כן עשה המשביח עבודה לא טובה או לא ראויה (מה שקרוב לוודאי יתן את אותותיו גם בשבח).הנקודה המשותפת בין כל השיטות היא, שברגע שהוכחה הנאה שגרם המשביח לבעל הקרקע, חייב האחרון לשלם לו עבור ההנאה, ואינו יכול לטעון שאינו רוצה לשלם כיוון שהדבר נעשה שלא ברשותו.
+                    </li>
+                    
+                    <li id="fn190" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref190" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^190</a> 
+                        כאשר מתקיימים תנאים מתאימים על פיהם אין הוא עובר בכך על איסור "לא תשחית את עצה".
+                    </li>
+                    
+                    <li id="fn191" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref191" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^191</a> 
+                        בשני המקרים שמים למשביח וידו על העליונה, ואין לחלק בין המקרים כיוון שמראש, ביורד לשדה חבירו שלא ברשות, החלוקה שבין המקרים מטרתה היתה בכדי לאמוד עד כמה מרוצה בעל הקרקע ממה שנעשה בשדהו, אך כאן, כיוון שירד ברשותו של בעל הקרקע, ברור שזה רוצה בכך.
+                    </li>
+                    
+                    <li id="fn192" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref192" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^192</a> 
+                        הסברה לחלק בין היורד לשדה חבירו העשויה ליטע שלא ברשות חבירו, לבין היורד לשדה חבירו ברשות חבירו היא שבעוד שבמקרה הראשון ברור שאין כוונה למשביח לקבל חלק ישיר (באחוזים) מהשבח שמשביח את הנכס, כיוון שהוא יודע שהנכס אינו שלו. כל כוונתו היא לקבל שכר על עמלו לפי השיעור המקובל. לעומת זאת, היורד לשדה חבירו ברשות מבין שחבירו נתן לו רשות שימוש בנכס למטרת הפקת רווחים, כאדם המלווה לחבירו מעות להתעסק בהן. במקרה זה הגיוני שיטול המשביח באופן ישיר בשבח שבא לנכס ממעשיו.
+                    </li>
+                    
+                    <li id="fn193" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref193" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^193</a> 
+                        הגר"א (שם ס"ק ט) מוסיף מסברה, שיש הבדל אחר בין היורד לשדה חבירו שלא ברשות בשדה העשויה ליטע, לבין היורד לשדה חבירו ברשות. בעוד שבמקרה השני, אם ההוצאה גדולה מהשבח, צריך בעל השדה לשלם את ההוצאה, ונמצא שהוא מפסיד, במקרה הראשון משלם בעל השדה "הוצאה שיעור שבח" בלבד, כלומר, לעולם לא ישלם בעל השדה יותר מאשר את השבח, כיוון שמחייב התשלומים אינו הסכם שנעשה ביניהם (כיוון שהמשביח ירד ללא רשות) אלא ההנאה שגרם המשביח.
+                    </li>
+                    
+                    <li id="fn194" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref194" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^194</a> 
+                        הראשונים נחלקו מה הכוונה שנוטל ב"שבח המגיע לכתפים". רבינו חננאל פירש שהכוונה שנוטל השותף שכנגדו (זה שלא עבד) אפילו במה שבא ע"י עמלו וטורחו הפיזי (מה שנשא על כתפיו) של השותף המשביח. הרשב"ם פירש שהכוונה שנוטל השותף המשביח אפילו בפירות הגמורים, כאריס, ולא מקבל שכר כפועל בלבד. הר"י מיגש (מופיע בשטמ"ק) מפרש שהכוונה להגבלה. כלומר, אם אין שבח המגיע לכתפים (שהוא שלב מסויים בגמר הפירות), אין נוטל השותף בפירות כאריס, כיוון שלא ירד בתורת אריסות, אלא מקבל את שכרו הראוי לו על הנטיעה (כפי שראינו בפירוש רש"י שהיורד לשדה חבירו העשויה ליטע, ברשות, מקבל "כשתלי העיר"), אך אם יש כבר "שבח המגיע לכתפים", יכול לקבל גם בפירות, כאריס.
+                    </li>
+                    
+                    <li id="fn195" class="mb-3 footnote-link p-2 rounded">
+                        <a href="#ref195" class="text-blue-500 hover:text-blue-700 font-bold ml-1">^195</a> 
+                        היו שהסבירו (עי' מגיד משנה) שרש"י והרמב"ם אינם חלוקים זה על זה, אלא הרמב"ם מדבר כאן על מקרה בו הבעל לא אכל מהפירות, ולכן גם לו עצמו מגיעה תמורה על הוצאותיו, כשידו על התחתונה, ולעומתו רש"י דיבר על המקרה השכיח בו הבעל אכל ולכן לא לו ולא לאריסיו (אם ירדו מכוחו ולא מכח אשתו) מגיעה תמורה כלשהי.
+                    </li>
+                    
+                </ol>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        function closeSidebarOnMobile() {
+            if (window.innerWidth < 768) {
+                toggleSidebar();
+            }
+        }
+
+        /* תיקון "בכוח" לבעיית ה-Header הנעלם בקפיצה לעוגנים */
+        window.addEventListener('hashchange', function() {
+            // המתנה של כמה מילישניות כדי לתת לדפדפן לסיים את הגלילה הטבעית
+            setTimeout(function() {
+                const mainArea = document.getElementById('main-content');
+                // אם אנחנו בנייד, נוודא שה-Header עדיין ב-top: 0
+                if (window.innerWidth < 768) {
+                    mainArea.scrollTop -= 80; // דוחף את התוכן קצת למטה כדי שה-header לא יתכסה
+                }
+            }, 10);
+        });
+    </script>
+</body>
+</html>
